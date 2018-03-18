@@ -41,7 +41,6 @@ var rfc_index;
         req.onreadystatechange = function() {
           if (req.readyState === 4) {
             rfc_index.outstanding -= 1
-            console.log("request done, " + rfc_index.outstanding + " left.")
             rfc_index[dest] = JSON.parse(req.responseText)
             if (rfc_index.outstanding == 0) {
               rfc_index.load_done()
@@ -59,12 +58,10 @@ var rfc_index;
       }
     },
     load_done: function() {
-      console.log('load done')
       this.show_tags('tag')
       this.compute_tags()
     },
     compute_tags: function() {
-      console.log('computing tags')
       for (var rfc_num in this.rfcs) {
           if (this.rfcs.hasOwnProperty(rfc_num)) {
             var rfc = this.rfcs[rfc_num];
@@ -96,7 +93,6 @@ var rfc_index;
       }
     },
     show_tags: function(type) {
-      console.log('showing tags for ' + type)
       var target_div = document.getElementById(type)
       for (var tag_name in this.tags[type]) {
         if (this.tags[type].hasOwnProperty(tag_name)) {
