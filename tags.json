@@ -1,7 +1,7 @@
 {
     "tag": {
         "http": {
-            "colour": "",
+            "colour": "#F9AA66",
             "rfcs": ["RFC7230", "RFC7231", "RFC7232", "RFC7233", "RFC7234", "RFC7235"]
         }        
     }

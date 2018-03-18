@@ -78,19 +78,19 @@ var rfc_index;
             this.tag(rfc.stream.toLowerCase(), rfc_num, "stream", '')
             // level
             var level = this.level_lookup[rfc['current-status']]
-            this.tag(level, rfc_num, "level", '')              
+            this.tag(level, rfc_num, "level", '')
           }
       }
     },
-    tag: function(name, value, type, colour) {
+    tag: function(name, value, type, bg_colour) {
       if (! this.tags[type]) {
         this.tags[type] = {}
       }
       if (! this.tags[type][name]) {
         this.tags[type][name] = {
-            "colour": colour,
+            "colour": bg_colour,
             "rfcs": []
-        }        
+        }
       }
       this.tags[type][name].rfcs.push(value)
     },
@@ -99,21 +99,22 @@ var rfc_index;
       for (var tag_name in this.tags[type]) {
         if (this.tags[type].hasOwnProperty(tag_name)) {
           var tag_data = this.tags[type][tag_name]
-          this.render_tag(tag_name, tag_data, target_div, handler)
+          this.render_tag(tag_name, tag_data, target_div, handler, tag_data['colour'])
           target_div.appendChild(document.createTextNode(" "))
         }
       }
     },
-    render_tag: function(tag_name, tag_data, target, handler) {
+    render_tag: function(tag_name, tag_data, target, handler, bg_colour) {
       var tag_span = document.createElement("span")
       var tag_content = document.createTextNode(tag_name)
       tag_span.appendChild(tag_content)
       tag_span.classList.add('tag')
-      tag_span.style.backgroundColor = "#ccc"
+      tag_span.style.backgroundColor = bg_colour || this.gen_colour()
+      tag_span.style.color = this.text_colour(tag_span.style.backgroundColor)
       if (handler) {
         tag_span.onclick = handler(tag_name, tag_data)
       }
-      target.appendChild(tag_span)     
+      target.appendChild(tag_span)
     },
     show_rfc_handler: function(tag_name, tag_data) {
       return function (event) {
@@ -135,17 +136,36 @@ var rfc_index;
         var rfc_content = document.createTextNode(rfc_name + ": " + rfc_data.title)
         rfc_span.appendChild(rfc_content)
 //        tag_span.onclick = this.click_handler(tag_name, tag_data)
-        target.appendChild(rfc_span)      
+        target.appendChild(rfc_span)
     },
     filter_rfc_handler: function(tag_name, tag_data) {
-      
+
     },
     clear: function(target) {
       while (target.firstChild) {
           target.removeChild(target.firstChild);
       }
     },
-    
+
+    gen_colour: function() {
+      var hex = '0123456789ABCDEF'
+      var colour = '#'
+      for (var i = 0; i < 6; i++) {
+        colour += hex[Math.floor(Math.random() * 16)]
+      }
+      return colour
+    },
+
+    text_colour: function(bg) {
+      var rgb = bg.match(/\d+/g)
+      var luma = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2] // ITU-R BT.709
+      if (luma < 128) {
+          return '#fff'
+      } else {
+          return '#000'
+      }
+    },
+
    /*
     * (c)2006 Dean Edwards/Matthias Miller/John Resig
     * Special thanks to Dan Webb's domready.js Prototype extension
