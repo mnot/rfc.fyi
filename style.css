@@ -1,0 +1,21 @@
+body {
+  background-color: #f9f9f9;
+  color: #111;
+  font: 12pt/14pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 1em 50px;
+  max-width: 1250px; 
+}
+
+#selector {
+  width: 300px;
+  float: left;
+  margin: 0;
+  padding: 0; 
+}
+
+#main {
+
+  float: right;
+  margin: 1em 0 0 50px;
+  padding: 0; 
+}
