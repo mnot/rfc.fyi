@@ -7,5 +7,5 @@ rfcs.json:
 	curl "https://www.rfc-editor.org/rfc-index.xml" | ./rfc-json.py > rfcs.json
 	
 .PHONY: server
-server: rfcs.json.gz
+server:
 	python -m SimpleHTTPServer
