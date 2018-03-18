@@ -118,16 +118,25 @@ var rfc_index;
     },
     show_rfc_handler: function(tag_name, tag_data) {
       return function (event) {
-        rfc_index.show_rfcs(tag_data.rfcs)
+        rfc_index.show_rfcs(tag_data.rfcs, document.getElementById("rfc-list"))
       }
     },
-    show_rfcs: function(rfcs) {
-      var rfcs_div = document.getElementById("rfc-list")
-      this.clear(rfcs_div)
+    show_rfcs: function(rfcs, target) {
+      this.clear(target)
       for (var i = 0; i < rfcs.length; i = i + 1) {
-        var rfc_name = rfcs[i]
-        var rfc_data = this.rfcs[rfc_name]
-        this.render_rfc(rfc_name, rfc_data, rfcs_div)
+        var item = rfcs[i]
+        if (typeof(item) === 'object') { // it's a sublist
+          var title_element = document.createElement("h3")
+          var title_content = document.createTextNode(item.title)
+          var sublist = document.createElement("ul")
+          title_element.append(title_content)
+          target.appendChild(title_element)
+          target.appendChild(sublist)
+          this.show_rfcs(item.rfcs, sublist)
+        } else { // it's a string RFC number
+          var rfc_data = this.rfcs[item]
+          this.render_rfc(item, rfc_data, target)          
+        }
       }
     },
     render_rfc: function(rfc_name, rfc_data, target) {
