@@ -4,6 +4,16 @@ var rfc_index;
 
   "use strict";
 
+  Set.prototype.intersection = function(setB) {
+      var intersection = new Set();
+      for (var elem of setB) {
+          if (this.has(elem)) {
+              intersection.add(elem);
+          }
+      }
+      return intersection;
+  }
+
   rfc_index = {
     level_lookup: {
       "INTERNET STANDARD": "std",
@@ -17,6 +27,7 @@ var rfc_index;
     },
     init: function() {
       this.outstanding = 0
+      this.selected_tags = []
       this.tags = {}
       this.load_json('tags.json', "tags")
       this.rfcs = []
@@ -58,16 +69,16 @@ var rfc_index;
       }
     },
     load_done: function() {
-      this.show_tags('tag', this.show_rfc_handler)
+      this.show_tags('tag', this.add_tag_handler)
       this.compute_tags()
-      this.show_tags('status', this.filter_rfc_handler)
-      this.show_tags('stream', this.filter_rfc_handler)
-      this.show_tags('level', this.filter_rfc_handler)
-      this.show_tags('wg', this.filter_rfc_handler)
+      this.show_tags('status', this.add_tag_handler)
+      this.show_tags('stream', this.add_tag_handler)
+      this.show_tags('level', this.add_tag_handler)
+      this.show_tags('wg', this.add_tag_handler)
     },
     compute_tags: function() {
       var rfc_nums = Object.keys(this.rfcs)
-      rfc_nums.sort(function (a,b) { 
+      rfc_nums.sort(function (a,b) {
         return parseInt(a.replace("RFC", "")) - parseInt(b.replace("RFC", ""))
       })
       for (var i = 0; i < rfc_nums.length; i = i + 1) {
@@ -129,6 +140,22 @@ var rfc_index;
         rfc_index.show_rfcs(tag_data.rfcs, document.getElementById("rfc-list"))
       }
     },
+    add_tag_handler: function(tag_name, tag_data) {
+      return function (event) {
+      rfc_index.selected_tags.push([tag_name, tag_data])
+      var selected_rfcs = rfc_index.filter_tags(rfc_index.selected_tags)
+      rfc_index.show_rfcs(selected_rfcs, document.getElementById("rfc-list"))
+      }
+    },
+    filter_tags: function(tag_list) {
+      var filtered_rfcs = new Set(tag_list[0][1].rfcs)
+      for (var i = 1; i < tag_list.length; i = i + 1) {
+        var rfcs = new Set(tag_list[i][1].rfcs)
+        var filtered_rfcs = filtered_rfcs.intersection(rfcs)
+      }
+      var rfc_list = Array.from(filtered_rfcs)
+      return rfc_list
+    },
     show_rfcs: function(rfcs, target) {
       this.clear(target)
       for (var i = 0; i < rfcs.length; i = i + 1) {
@@ -143,7 +170,7 @@ var rfc_index;
           this.show_rfcs(item.rfcs, sublist)
         } else { // it's a string RFC number
           var rfc_data = this.rfcs[item]
-          this.render_rfc(item, rfc_data, target)          
+          this.render_rfc(item, rfc_data, target)
         }
       }
       var count = document.createTextNode(rfcs.length)
