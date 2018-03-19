@@ -6,18 +6,21 @@ body {
   max-width: 1250px; 
 }
 
+#container {
+   display: flex;
+}
+
 #selector {
-  width: 300px;
-  float: left;
+  width: 250px;
+  height: 100%;
   margin: 0;
   padding: 0; 
 }
 
 #main {
-
-  float: right;
+  flex: 1;
   margin: 1em 0 0 50px;
-  padding: 0; 
+  padding: 0;
 }
 
 .tag {

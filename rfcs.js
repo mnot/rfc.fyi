@@ -63,23 +63,31 @@ var rfc_index;
       this.show_tags('status', this.filter_rfc_handler)
       this.show_tags('stream', this.filter_rfc_handler)
       this.show_tags('level', this.filter_rfc_handler)
+      this.show_tags('wg', this.filter_rfc_handler)
     },
     compute_tags: function() {
-      for (var rfc_num in this.rfcs) {
-          if (this.rfcs.hasOwnProperty(rfc_num)) {
-            var rfc = this.rfcs[rfc_num];
-            // current?
-            if (rfc['obsoleted-by']) {
-              this.tag("obsoleted", rfc_num, "status", '')
-            } else {
-              this.tag("current", rfc_num, "status", '')
-            }
-            // stream
-            this.tag(rfc.stream.toLowerCase(), rfc_num, "stream", '')
-            // level
-            var level = this.level_lookup[rfc['current-status']]
-            this.tag(level, rfc_num, "level", '')
-          }
+      var rfc_nums = Object.keys(this.rfcs)
+      rfc_nums.sort(function (a,b) { 
+        return parseInt(a.replace("RFC", "")) - parseInt(b.replace("RFC", ""))
+      })
+      for (var i = 0; i < rfc_nums.length; i = i + 1) {
+        var rfc_num = rfc_nums[i]
+        var rfc = this.rfcs[rfc_num]
+        // current?
+        if (rfc['obsoleted-by']) {
+          this.tag("obsoleted", rfc_num, "status", '')
+        } else {
+          this.tag("current", rfc_num, "status", '')
+        }
+        // stream
+        this.tag(rfc.stream.toLowerCase(), rfc_num, "stream", '')
+        // level
+        var level = this.level_lookup[rfc['current-status']]
+        this.tag(level, rfc_num, "level", '')
+        // wg
+        if (rfc.wg_acronym && rfc.wg_acronym != "NON WORKING GROUP") {
+          this.tag(rfc.wg_acronym, rfc_num, "wg", '')
+        }
       }
     },
     tag: function(name, value, type, bg_colour) {
@@ -138,6 +146,10 @@ var rfc_index;
           this.render_rfc(item, rfc_data, target)          
         }
       }
+      var count = document.createTextNode(rfcs.length)
+      var count_target = document.getElementById("count")
+      this.clear(count_target)
+      count_target.appendChild(count)
     },
     render_rfc: function(rfc_name, rfc_data, target) {
         var rfc_span = document.createElement("li")
@@ -148,7 +160,9 @@ var rfc_index;
         target.appendChild(rfc_span)
     },
     filter_rfc_handler: function(tag_name, tag_data) {
-
+      return function (event) {
+        rfc_index.show_rfcs(tag_data.rfcs, document.getElementById("rfc-list"))
+      }
     },
     clear: function(target) {
       while (target.firstChild) {
