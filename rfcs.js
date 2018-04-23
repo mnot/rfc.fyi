@@ -1,4 +1,6 @@
-var rfc_index;
+/* global alert, XMLHttpRequest, ActiveXObject */
+
+var rfcIndex;
 
 (function () {
   'use strict'
@@ -13,7 +15,7 @@ var rfc_index;
     return intersection
   }
 
-  rfc_index = {
+  rfcIndex = {
     level_lookup: {
       'INTERNET STANDARD': 'std',
       'DRAFT STANDARD': 'std',
@@ -50,19 +52,19 @@ var rfc_index;
       if (req) {
         req.onreadystatechange = function () {
           if (req.readyState === 4) {
-            rfc_index.outstanding -= 1
-            rfc_index[dest] = JSON.parse(req.responseText)
-            if (rfc_index.outstanding == 0) {
-              rfc_index.load_done()
+            rfcIndex.outstanding -= 1
+            rfcIndex[dest] = JSON.parse(req.responseText)
+            if (rfcIndex.outstanding === 0) {
+              rfcIndex.load_done()
             }
           }
         }
         try {
-          rfc_index.outstanding += 1
+          rfcIndex.outstanding += 1
           req.open('GET', url, true)
           req.send('')
         } catch (e3) {
-          rfc_index.outstanding -= 1
+          rfcIndex.outstanding -= 1
           alert('Request error: ' + url + ' (' + e3 + ')')
         }
       }
@@ -76,118 +78,118 @@ var rfc_index;
       this.show_tags('wg', this.add_tag_handler)
     },
     compute_tags: function () {
-      var rfc_nums = Object.keys(this.rfcs)
-      rfc_nums.sort(function (a, b) {
+      var rfcNums = Object.keys(this.rfcs)
+      rfcNums.sort(function (a, b) {
         return parseInt(a.replace('RFC', '')) - parseInt(b.replace('RFC', ''))
       })
-      for (var i = 0; i < rfc_nums.length; i = i + 1) {
-        var rfc_num = rfc_nums[i]
-        var rfc = this.rfcs[rfc_num]
+      for (var i = 0; i < rfcNums.length; i = i + 1) {
+        var rfcNum = rfcNums[i]
+        var rfc = this.rfcs[rfcNum]
         // current?
         if (rfc['obsoleted-by']) {
-          this.tag('obsoleted', rfc_num, 'status', '')
+          this.tag('obsoleted', rfcNum, 'status', '')
         } else {
-          this.tag('current', rfc_num, 'status', '')
+          this.tag('current', rfcNum, 'status', '')
         }
         // stream
-        this.tag(rfc.stream.toLowerCase(), rfc_num, 'stream', '')
+        this.tag(rfc.stream.toLowerCase(), rfcNum, 'stream', '')
         // level
         var level = this.level_lookup[rfc['current-status']]
-        this.tag(level, rfc_num, 'level', '')
+        this.tag(level, rfcNum, 'level', '')
         // wg
-        if (rfc.wg_acronym && rfc.wg_acronym != 'NON WORKING GROUP') {
-          this.tag(rfc.wg_acronym, rfc_num, 'wg', '')
+        if (rfc.wg_acronym && rfc.wg_acronym !== 'NON WORKING GROUP') {
+          this.tag(rfc.wg_acronym, rfcNum, 'wg', '')
         }
       }
     },
-    tag: function (name, value, type, bg_colour) {
+    tag: function (name, value, type, bgColour) {
       if (!this.tags[type]) {
         this.tags[type] = {}
       }
       if (!this.tags[type][name]) {
         this.tags[type][name] = {
-          'colour': bg_colour,
+          'colour': bgColour,
           'rfcs': []
         }
       }
       this.tags[type][name].rfcs.push(value)
     },
     show_tags: function (type, handler) {
-      var target_div = document.getElementById(type)
-      for (var tag_name in this.tags[type]) {
-        if (this.tags[type].hasOwnProperty(tag_name)) {
-          var tag_data = this.tags[type][tag_name]
-          this.render_tag(tag_name, tag_data, target_div, handler, tag_data['colour'])
-          target_div.appendChild(document.createTextNode(' '))
+      var targetDiv = document.getElementById(type)
+      for (var tagName in this.tags[type]) {
+        if (this.tags[type].hasOwnProperty(tagName)) {
+          var tagData = this.tags[type][tagName]
+          this.render_tag(tagName, tagData, targetDiv, handler, tagData['colour'])
+          targetDiv.appendChild(document.createTextNode(' '))
         }
       }
     },
-    render_tag: function (tag_name, tag_data, target, handler, bg_colour) {
-      var tag_span = document.createElement('span')
-      var tag_content = document.createTextNode(tag_name)
-      tag_span.appendChild(tag_content)
-      tag_span.classList.add('tag')
-      tag_span.style.backgroundColor = bg_colour || this.gen_colour()
-      tag_span.style.color = this.text_colour(tag_span.style.backgroundColor)
+    render_tag: function (tagName, tagData, target, handler, bgColour) {
+      var tagSpan = document.createElement('span')
+      var tagContent = document.createTextNode(tagName)
+      tagSpan.appendChild(tagContent)
+      tagSpan.classList.add('tag')
+      tagSpan.style.backgroundColor = bgColour || this.gen_colour()
+      tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
       if (handler) {
-        tag_span.onclick = handler(tag_name, tag_data)
+        tagSpan.onclick = handler(tagName, tagData)
       }
-      target.appendChild(tag_span)
+      target.appendChild(tagSpan)
     },
-    show_rfc_handler: function (tag_name, tag_data) {
+    show_rfc_handler: function (tagName, tagData) {
       return function (event) {
-        rfc_index.show_rfcs(tag_data.rfcs, document.getElementById('rfc-list'))
+        rfcIndex.show_rfcs(tagData.rfcs, document.getElementById('rfc-list'))
       }
     },
-    add_tag_handler: function (tag_name, tag_data) {
+    add_tag_handler: function (tagName, tagData) {
       return function (event) {
-        rfc_index.selected_tags.push([tag_name, tag_data])
-        var selected_rfcs = rfc_index.filter_tags(rfc_index.selected_tags)
-        rfc_index.show_rfcs(selected_rfcs, document.getElementById('rfc-list'))
+        rfcIndex.selected_tags.push([tagName, tagData])
+        var selectedRfcs = rfcIndex.filter_tags(rfcIndex.selected_tags)
+        rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
       }
     },
-    filter_tags: function (tag_list) {
-      var filtered_rfcs = new Set(tag_list[0][1].rfcs)
-      for (var i = 1; i < tag_list.length; i = i + 1) {
-        var rfcs = new Set(tag_list[i][1].rfcs)
-        var filtered_rfcs = filtered_rfcs.intersection(rfcs)
+    filter_tags: function (tagList) {
+      var filteredRfcs = new Set(tagList[0][1].rfcs)
+      for (var i = 1; i < tagList.length; i = i + 1) {
+        var rfcs = new Set(tagList[i][1].rfcs)
+        filteredRfcs = filteredRfcs.intersection(rfcs)
       }
-      var rfc_list = Array.from(filtered_rfcs)
-      return rfc_list
+      var rfcList = Array.from(filteredRfcs)
+      return rfcList
     },
     show_rfcs: function (rfcs, target) {
       this.clear(target)
       for (var i = 0; i < rfcs.length; i = i + 1) {
         var item = rfcs[i]
         if (typeof (item) === 'object') { // it's a sublist
-          var title_element = document.createElement('h3')
-          var title_content = document.createTextNode(item.title)
+          var titleElement = document.createElement('h3')
+          var titleContent = document.createTextNode(item.title)
           var sublist = document.createElement('ul')
-          title_element.append(title_content)
-          target.appendChild(title_element)
+          titleElement.append(titleContent)
+          target.appendChild(titleElement)
           target.appendChild(sublist)
           this.show_rfcs(item.rfcs, sublist)
         } else { // it's a string RFC number
-          var rfc_data = this.rfcs[item]
-          this.render_rfc(item, rfc_data, target)
+          var rfcData = this.rfcs[item]
+          this.render_rfc(item, rfcData, target)
         }
       }
       var count = document.createTextNode(rfcs.length)
-      var count_target = document.getElementById('count')
-      this.clear(count_target)
-      count_target.appendChild(count)
+      var countTarget = document.getElementById('count')
+      this.clear(countTarget)
+      countTarget.appendChild(count)
     },
-    render_rfc: function (rfc_name, rfc_data, target) {
-      var rfc_span = document.createElement('li')
-      rfc_span.data = rfc_data
-      var rfc_content = document.createTextNode(rfc_name + ': ' + rfc_data.title)
-      rfc_span.appendChild(rfc_content)
-      //        tag_span.onclick = this.click_handler(tag_name, tag_data)
-      target.appendChild(rfc_span)
+    render_rfc: function (rfcName, rfcData, target) {
+      var rfcSpan = document.createElement('li')
+      rfcSpan.data = rfcData
+      var rfcContent = document.createTextNode(rfcName + ': ' + rfcData.title)
+      rfcSpan.appendChild(rfcContent)
+      //        tagSpan.onclick = this.click_handler(tagName, tagData)
+      target.appendChild(rfcSpan)
     },
-    filter_rfc_handler: function (tag_name, tag_data) {
+    filter_rfc_handler: function (tagName, tagData) {
       return function (event) {
-        rfc_index.show_rfcs(tag_data.rfcs, document.getElementById('rfc-list'))
+        rfcIndex.show_rfcs(tagData.rfcs, document.getElementById('rfc-list'))
       }
     },
     clear: function (target) {
@@ -230,8 +232,8 @@ var rfc_index;
         var init = function () {
           var i = 0
           // quit if this function has already been called
-          if (rfc_index.addDOMLoadEvent.done) { return }
-          rfc_index.addDOMLoadEvent.done = true
+          if (rfcIndex.addDOMLoadEvent.done) { return }
+          rfcIndex.addDOMLoadEvent.done = true
           if (window.__load_timer) {
             clearInterval(window.__load_timer)
             window.__load_timer = null
@@ -277,5 +279,5 @@ var rfc_index;
     }
   }
 
-  rfc_index.addDOMLoadEvent(function () { rfc_index.init() })
+  rfcIndex.addDOMLoadEvent(function () { rfcIndex.init() })
 }())
