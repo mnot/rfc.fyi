@@ -15,6 +15,14 @@ var rfcIndex;
     return intersection
   }
 
+  Object.prototype.forEach = function (func) { // eslint-disable-line
+    for (var item in this) {
+      if (this.hasOwnProperty(item)) {
+        func(item)
+      }
+    }
+  }
+
   rfcIndex = {
 
     level_lookup: {
@@ -73,12 +81,12 @@ var rfcIndex;
     },
 
     load_done: function () {
-      this.show_tags('tag', this.add_tag_handler)
+      this.show_tags('tag', this.click_tag_handler)
       this.compute_tags()
-      this.show_tags('status', this.add_tag_handler)
-      this.show_tags('stream', this.add_tag_handler)
-      this.show_tags('level', this.add_tag_handler)
-      this.show_tags('wg', this.add_tag_handler)
+      this.show_tags('status', this.click_tag_handler)
+      this.show_tags('stream', this.click_tag_handler)
+      this.show_tags('level', this.click_tag_handler)
+      this.show_tags('wg', this.click_tag_handler)
     },
 
     compute_tags: function () {
@@ -123,16 +131,14 @@ var rfcIndex;
 
     show_tags: function (tagType, handler) {
       var targetDiv = document.getElementById(tagType)
-      for (var tagName in this.tags[tagType]) {
-        if (this.tags[tagType].hasOwnProperty(tagName)) {
-          var tagData = this.tags[tagType][tagName]
-          this.render_tag(tagName, tagData, targetDiv, handler, tagData['colour'])
-          targetDiv.appendChild(document.createTextNode(' '))
-        }
-      }
+      rfcIndex.tags[tagType].forEach(function (tagName) {
+        var tagData = rfcIndex.tags[tagType][tagName]
+        rfcIndex.render_tag(tagType, tagName, tagData, targetDiv, handler, tagData['colour'])
+        targetDiv.appendChild(document.createTextNode(' '))
+      })
     },
 
-    render_tag: function (tagName, tagData, target, handler, bgColour) {
+    render_tag: function (tagType, tagName, tagData, target, handler, bgColour) {
       var tagSpan = document.createElement('span')
       var tagContent = document.createTextNode(tagName)
       tagSpan.appendChild(tagContent)
@@ -140,7 +146,7 @@ var rfcIndex;
       tagSpan.style.backgroundColor = bgColour || this.gen_colour()
       tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
       if (handler) {
-        tagSpan.onclick = handler(tagName, tagData, tagSpan)
+        tagSpan.onclick = handler(tagType, tagName, tagData, tagSpan)
       }
       target.appendChild(tagSpan)
     },
@@ -151,7 +157,7 @@ var rfcIndex;
       }
     },
 
-    add_tag_handler: function (tagName, tagData, tagSpan) {
+    click_tag_handler: function (tagType, tagName, tagData, tagSpan) {
       return function (event) {
         tagData.active = !tagData.active
         if (tagData.active === true) {
@@ -159,35 +165,25 @@ var rfcIndex;
         } else {
           tagSpan.style['border-color'] = 'white'
         }
-        var selectedRfcs = rfcIndex.filter_tags()
+        var selectedRfcs = rfcIndex.list_active_rfcs()
         rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
       }
     },
 
-    all_tags: function (func) {
-      for (var tagType in this.tags) {
-        if (this.tags.hasOwnProperty(tagType)) {
-          for (var tagName in this.tags[tagType]) {
-            if (rfcIndex.tags[tagType].hasOwnProperty(tagName)) {
-              var tagData = rfcIndex.tags[tagType][tagName]
-              func(tagData)
+    list_active_rfcs: function () {
+      var filteredRfcs = new Set()
+      rfcIndex.tags.forEach(function (tagType) {
+        rfcIndex.tags[tagType].forEach(function (tagName) {
+          var tagData = rfcIndex.tags[tagType][tagName]
+          if (tagData.active === true) {
+            var rfcs = new Set(tagData.rfcs)
+            if (!filteredRfcs.size) {
+              filteredRfcs = rfcs
+            } else {
+              filteredRfcs = filteredRfcs.intersection(rfcs)
             }
           }
-        }
-      }
-    },
-
-    filter_tags: function () {
-      var filteredRfcs = new Set()
-      this.all_tags(function (tagData) {
-        if (tagData.active === true) {
-          var rfcs = new Set(tagData.rfcs)
-          if (!filteredRfcs.size) {
-            filteredRfcs = rfcs
-          } else {
-            filteredRfcs = filteredRfcs.intersection(rfcs)
-          }
-        }
+        })
       })
       var rfcList = Array.from(filteredRfcs)
       return rfcList
