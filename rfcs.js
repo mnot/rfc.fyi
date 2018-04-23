@@ -39,6 +39,7 @@ var rfcIndex;
     init: function () {
       this.outstanding = 0
       this.tags = {}
+      this.active_tags = {}
       this.load_json('tags.json', 'tags')
       this.rfcs = []
       this.load_json('rfcs.json', 'rfcs')
@@ -159,6 +160,12 @@ var rfcIndex;
 
     click_tag_handler: function (tagType, tagName, tagData, tagSpan) {
       return function (event) {
+        var alreadySelected = rfcIndex.active_tags[tagType]
+        if (alreadySelected && alreadySelected[0] !== tagName) {
+          rfcIndex.tags[tagType][alreadySelected[0]].active = false
+          alreadySelected[1].style['border-color'] = 'white'
+        }
+        rfcIndex.active_tags[tagType] = [tagName, tagSpan]
         tagData.active = !tagData.active
         if (tagData.active === true) {
           tagSpan.style['border-color'] = 'black'
