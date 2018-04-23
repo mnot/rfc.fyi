@@ -16,6 +16,7 @@ var rfcIndex;
   }
 
   rfcIndex = {
+
     level_lookup: {
       'INTERNET STANDARD': 'std',
       'DRAFT STANDARD': 'std',
@@ -26,6 +27,7 @@ var rfcIndex;
       'INFORMATIONAL': 'informational',
       'PROPOSED STANDARD': 'std'
     },
+
     init: function () {
       this.outstanding = 0
       this.selected_tags = []
@@ -34,6 +36,7 @@ var rfcIndex;
       this.rfcs = []
       this.load_json('rfcs.json', 'rfcs')
     },
+
     load_json: function (url, dest) {
       var req = false
       if (window.XMLHttpRequest) {
@@ -69,6 +72,7 @@ var rfcIndex;
         }
       }
     },
+
     load_done: function () {
       this.show_tags('tag', this.add_tag_handler)
       this.compute_tags()
@@ -77,6 +81,7 @@ var rfcIndex;
       this.show_tags('level', this.add_tag_handler)
       this.show_tags('wg', this.add_tag_handler)
     },
+
     compute_tags: function () {
       var rfcNums = Object.keys(this.rfcs)
       rfcNums.sort(function (a, b) {
@@ -102,6 +107,7 @@ var rfcIndex;
         }
       }
     },
+
     tag: function (name, value, type, bgColour) {
       if (!this.tags[type]) {
         this.tags[type] = {}
@@ -114,6 +120,7 @@ var rfcIndex;
       }
       this.tags[type][name].rfcs.push(value)
     },
+
     show_tags: function (type, handler) {
       var targetDiv = document.getElementById(type)
       for (var tagName in this.tags[type]) {
@@ -124,6 +131,7 @@ var rfcIndex;
         }
       }
     },
+
     render_tag: function (tagName, tagData, target, handler, bgColour) {
       var tagSpan = document.createElement('span')
       var tagContent = document.createTextNode(tagName)
@@ -136,11 +144,13 @@ var rfcIndex;
       }
       target.appendChild(tagSpan)
     },
+
     show_rfc_handler: function (tagName, tagData) {
       return function (event) {
         rfcIndex.show_rfcs(tagData.rfcs, document.getElementById('rfc-list'))
       }
     },
+
     add_tag_handler: function (tagName, tagData) {
       return function (event) {
         rfcIndex.selected_tags.push([tagName, tagData])
@@ -148,6 +158,7 @@ var rfcIndex;
         rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
       }
     },
+
     filter_tags: function (tagList) {
       var filteredRfcs = new Set(tagList[0][1].rfcs)
       for (var i = 1; i < tagList.length; i = i + 1) {
@@ -157,6 +168,7 @@ var rfcIndex;
       var rfcList = Array.from(filteredRfcs)
       return rfcList
     },
+
     show_rfcs: function (rfcs, target) {
       this.clear(target)
       for (var i = 0; i < rfcs.length; i = i + 1) {
@@ -179,6 +191,7 @@ var rfcIndex;
       this.clear(countTarget)
       countTarget.appendChild(count)
     },
+
     render_rfc: function (rfcName, rfcData, target) {
       var rfcSpan = document.createElement('li')
       rfcSpan.data = rfcData
@@ -187,11 +200,13 @@ var rfcIndex;
       //        tagSpan.onclick = this.click_handler(tagName, tagData)
       target.appendChild(rfcSpan)
     },
+
     filter_rfc_handler: function (tagName, tagData) {
       return function (event) {
         rfcIndex.show_rfcs(tagData.rfcs, document.getElementById('rfc-list'))
       }
     },
+
     clear: function (target) {
       while (target.firstChild) {
         target.removeChild(target.firstChild)
