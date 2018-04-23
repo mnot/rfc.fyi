@@ -9,3 +9,7 @@ rfcs.json:
 .PHONY: server
 server:
 	python -m SimpleHTTPServer
+
+.PHONY: lint
+lint:
+	standard --fix *.js
