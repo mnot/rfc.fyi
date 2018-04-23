@@ -5,7 +5,7 @@ var rfcIndex;
 (function () {
   'use strict'
 
-  Set.prototype.intersection = function (setB) {
+  Set.prototype.intersection = function (setB) { // eslint-disable-line
     var intersection = new Set()
     for (var elem of setB) {
       if (this.has(elem)) {
@@ -30,7 +30,6 @@ var rfcIndex;
 
     init: function () {
       this.outstanding = 0
-      this.selected_tags = []
       this.tags = {}
       this.load_json('tags.json', 'tags')
       this.rfcs = []
@@ -108,24 +107,25 @@ var rfcIndex;
       }
     },
 
-    tag: function (name, value, type, bgColour) {
-      if (!this.tags[type]) {
-        this.tags[type] = {}
+    tag: function (tagName, rfcNum, tagType, bgColour) {
+      if (!this.tags[tagType]) {
+        this.tags[tagType] = {}
       }
-      if (!this.tags[type][name]) {
-        this.tags[type][name] = {
+      if (!this.tags[tagType][tagName]) {
+        this.tags[tagType][tagName] = {
           'colour': bgColour,
-          'rfcs': []
+          'rfcs': [],
+          'active': false
         }
       }
-      this.tags[type][name].rfcs.push(value)
+      this.tags[tagType][tagName].rfcs.push(rfcNum)
     },
 
-    show_tags: function (type, handler) {
-      var targetDiv = document.getElementById(type)
-      for (var tagName in this.tags[type]) {
-        if (this.tags[type].hasOwnProperty(tagName)) {
-          var tagData = this.tags[type][tagName]
+    show_tags: function (tagType, handler) {
+      var targetDiv = document.getElementById(tagType)
+      for (var tagName in this.tags[tagType]) {
+        if (this.tags[tagType].hasOwnProperty(tagName)) {
+          var tagData = this.tags[tagType][tagName]
           this.render_tag(tagName, tagData, targetDiv, handler, tagData['colour'])
           targetDiv.appendChild(document.createTextNode(' '))
         }
@@ -140,7 +140,7 @@ var rfcIndex;
       tagSpan.style.backgroundColor = bgColour || this.gen_colour()
       tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
       if (handler) {
-        tagSpan.onclick = handler(tagName, tagData)
+        tagSpan.onclick = handler(tagName, tagData, tagSpan)
       }
       target.appendChild(tagSpan)
     },
@@ -151,20 +151,44 @@ var rfcIndex;
       }
     },
 
-    add_tag_handler: function (tagName, tagData) {
+    add_tag_handler: function (tagName, tagData, tagSpan) {
       return function (event) {
-        rfcIndex.selected_tags.push([tagName, tagData])
-        var selectedRfcs = rfcIndex.filter_tags(rfcIndex.selected_tags)
+        tagData.active = !tagData.active
+        if (tagData.active === true) {
+          tagSpan.style['border-color'] = 'black'
+        } else {
+          tagSpan.style['border-color'] = 'white'
+        }
+        var selectedRfcs = rfcIndex.filter_tags()
         rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
       }
     },
 
-    filter_tags: function (tagList) {
-      var filteredRfcs = new Set(tagList[0][1].rfcs)
-      for (var i = 1; i < tagList.length; i = i + 1) {
-        var rfcs = new Set(tagList[i][1].rfcs)
-        filteredRfcs = filteredRfcs.intersection(rfcs)
+    all_tags: function (func) {
+      for (var tagType in this.tags) {
+        if (this.tags.hasOwnProperty(tagType)) {
+          for (var tagName in this.tags[tagType]) {
+            if (rfcIndex.tags[tagType].hasOwnProperty(tagName)) {
+              var tagData = rfcIndex.tags[tagType][tagName]
+              func(tagData)
+            }
+          }
+        }
       }
+    },
+
+    filter_tags: function () {
+      var filteredRfcs = new Set()
+      this.all_tags(function (tagData) {
+        if (tagData.active === true) {
+          var rfcs = new Set(tagData.rfcs)
+          if (!filteredRfcs.size) {
+            filteredRfcs = rfcs
+          } else {
+            filteredRfcs = filteredRfcs.intersection(rfcs)
+          }
+        }
+      })
       var rfcList = Array.from(filteredRfcs)
       return rfcList
     },
