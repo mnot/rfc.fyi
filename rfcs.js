@@ -222,9 +222,13 @@ var rfcIndex;
     render_rfc: function (rfcName, rfcData, target) {
       var rfcSpan = document.createElement('li')
       rfcSpan.data = rfcData
-      var rfcContent = document.createTextNode(rfcName + ': ' + rfcData.title)
-      rfcSpan.appendChild(rfcContent)
-      //        tagSpan.onclick = this.click_handler(tagName, tagData)
+      var rfcNumber = document.createTextNode(rfcName + ': ')
+      rfcSpan.appendChild(rfcNumber)
+      var rfcLink = document.createElement('a')
+      rfcLink.href = 'https://tools.rfc.org/html/' + rfcName.toLowerCase()
+      rfcSpan.appendChild(rfcLink)
+      var rfcTitle = document.createTextNode(rfcData.title)
+      rfcLink.appendChild(rfcTitle)
       target.appendChild(rfcSpan)
     },
 
