@@ -225,7 +225,7 @@ var rfcIndex;
       var rfcNumber = document.createTextNode(rfcName + ': ')
       rfcSpan.appendChild(rfcNumber)
       var rfcLink = document.createElement('a')
-      rfcLink.href = 'https://tools.rfc.org/html/' + rfcName.toLowerCase()
+      rfcLink.href = 'https://tools.ietf.org/html/' + rfcName.toLowerCase()
       rfcSpan.appendChild(rfcLink)
       var rfcTitle = document.createTextNode(rfcData.title)
       rfcLink.appendChild(rfcTitle)
