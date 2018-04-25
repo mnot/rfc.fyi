@@ -1,4 +1,4 @@
-/* global alert, XMLHttpRequest, ActiveXObject */
+/* global alert, XMLHttpRequest */
 
 var rfcIndex;
 
@@ -7,7 +7,7 @@ var rfcIndex;
 
   Set.prototype.intersection = function (setB) { // eslint-disable-line
     var intersection = new Set()
-    for (var elem of setB) {
+    for (let elem of setB) {
       if (this.has(elem)) {
         intersection.add(elem)
       }
@@ -17,17 +17,17 @@ var rfcIndex;
 
   Set.prototype.union = function (setB) { // eslint-disable-line
     var union = new Set()
-    for (var elemA of this) {
+    for (let elemA of this) {
       union.add(elemA)
     }
-    for (var elemB of setB) {
+    for (let elemB of setB) {
       union.add(elemB)
     }
     return union
   }
 
   Object.prototype.forEach = function (func) { // eslint-disable-line
-    for (var item in this) {
+    for (let item in this) {
       if (this.hasOwnProperty(item)) {
         func(item)
       }
@@ -55,18 +55,10 @@ var rfcIndex;
 
     load_json: function (url, dest) {
       var req = false
-      if (window.XMLHttpRequest) {
-        try {
-          req = new XMLHttpRequest()
-        } catch (e1) {
-          req = false
-        }
-      } else if (window.ActiveXObject) {
-        try {
-          req = new ActiveXObject('Microsoft.XMLHTTP')
-        } catch (e2) {
-          req = false
-        }
+      try {
+        req = new XMLHttpRequest()
+      } catch (e1) {
+        req = false
       }
       if (req) {
         req.onreadystatechange = function () {
