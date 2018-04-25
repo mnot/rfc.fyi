@@ -92,7 +92,7 @@ var rfcIndex;
     load_done: function () {
       // this.show_tags('tag', this.click_tag_handler)
       this.compute()
-      this.tagTypes.forEach(function (tagType) {
+      this.tagTypes.forEach(tagType => {
         rfcIndex.show_tags(tagType, rfcIndex.click_tag_handler)
       })
     },
@@ -103,7 +103,7 @@ var rfcIndex;
       for (var i = 0; i < this.allRfcs.length; i = i + 1) {
         var rfcNum = this.allRfcs[i]
         var rfc = this.rfcs[rfcNum]
-        rfcIndex.tagTypes.forEach(function (tagType) {
+        rfcIndex.tagTypes.forEach(tagType => {
           var tagName = rfc[tagType]
           if (tagName) {
             if (!rfcIndex.tags[tagType]) {
@@ -127,7 +127,7 @@ var rfcIndex;
 
     show_tags: function (tagType, handler) {
       var targetDiv = document.getElementById(tagType)
-      rfcIndex.tags[tagType].forEach(function (tagName) {
+      rfcIndex.tags[tagType].forEach(tagName => {
         var tagData = rfcIndex.tags[tagType][tagName]
         rfcIndex.render_tag(tagType, tagName, tagData, targetDiv, handler, tagData['colour'])
         targetDiv.appendChild(document.createTextNode(' '))
@@ -170,8 +170,8 @@ var rfcIndex;
     list_active_rfcs: function () {
       var filteredRfcs = new Set(this.allRfcs)
       // apply selected tags
-      rfcIndex.tags.forEach(function (tagType) {
-        rfcIndex.tags[tagType].forEach(function (tagName) {
+      rfcIndex.tags.forEach(tagType => {
+        rfcIndex.tags[tagType].forEach(tagName => {
           var tagData = rfcIndex.tags[tagType][tagName]
           if (tagData.active === true) {
             var rfcs = new Set(tagData.rfcs)
@@ -180,7 +180,7 @@ var rfcIndex;
         })
       })
       // apply search words
-      rfcIndex.searchWords.forEach(function (searchWord) {
+      rfcIndex.searchWords.forEach(searchWord => {
         var wordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.words, 'title')
         var keywordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.keywords, 'keywords')
         filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
@@ -235,14 +235,14 @@ var rfcIndex;
         'level': new Set(),
         'wg': new Set()
       }
-      rfcList.forEach(function (rfcNum) {
+      rfcList.forEach(rfcNum => {
         possibleTags['status'].add(rfcIndex.rfcs[rfcNum].status)
         possibleTags['stream'].add(rfcIndex.rfcs[rfcNum].stream)
         possibleTags['level'].add(rfcIndex.rfcs[rfcNum].level)
         possibleTags['wg'].add(rfcIndex.rfcs[rfcNum].wg)
       })
-      interestingTypes.forEach(function (tagType) {
-        rfcIndex.tags[tagType].forEach(function (tagName) {
+      interestingTypes.forEach(tagType => {
+        rfcIndex.tags[tagType].forEach(tagName => {
           var active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
           rfcIndex.tags[tagType][tagName].target.style.display = active
         })
@@ -275,7 +275,7 @@ var rfcIndex;
     },
 
     search_index: function (words, inputId, destination) {
-      words.forEach(function (word) {
+      words.forEach(word => {
         word = rfcIndex.cleanString(word)
         if (word.length < rfcIndex.prefixLen) {
           return
@@ -294,11 +294,11 @@ var rfcIndex;
       var searchPrefix = searchWord.substring(0, this.prefixLen)
       var matchRfcs = new Set(index[searchPrefix])
       if (searchWord.length > this.prefixLen) {
-        matchRfcs.forEach(function (rfcNum) {
+        matchRfcs.forEach(rfcNum => {
           var fullItem = rfcIndex.rfcs[rfcNum][attr]
           if (Array.isArray(fullItem)) {
             var hit = false
-            fullItem.forEach(function (item) {
+            fullItem.forEach(item => {
               if (rfcIndex.cleanString(item).includes(searchWord)) {
                 hit = true
               }
