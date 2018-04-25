@@ -36,13 +36,17 @@ var rfcIndex;
       'PROPOSED STANDARD': 'std'
     },
 
+    prefixLen: 3,
+
     init: function () {
       this.outstanding = 0
       this.tags = {}
       this.active_tags = {}
       this.words = {}
+      this.searchWords = []
       this.load_json('tags.json', 'tags')
-      this.rfcs = []
+      this.allRfcs = [] // list of all RFC numbers
+      this.rfcs = [] // list of RFC objects
       this.load_json('rfcs.json', 'rfcs')
       this.install_search_handler()
     },
@@ -85,20 +89,20 @@ var rfcIndex;
 
     load_done: function () {
       this.show_tags('tag', this.click_tag_handler)
-      this.compute_tags()
+      this.compute()
       this.show_tags('status', this.click_tag_handler)
       this.show_tags('stream', this.click_tag_handler)
       this.show_tags('level', this.click_tag_handler)
       this.show_tags('wg', this.click_tag_handler)
     },
 
-    compute_tags: function () {
-      var rfcNums = Object.keys(this.rfcs)
-      rfcNums.sort(function (a, b) {
+    compute: function () {
+      this.allRfcs = Object.keys(this.rfcs)
+      this.allRfcs.sort(function (a, b) {
         return parseInt(a.replace('RFC', '')) - parseInt(b.replace('RFC', ''))
       })
-      for (var i = 0; i < rfcNums.length; i = i + 1) {
-        var rfcNum = rfcNums[i]
+      for (var i = 0; i < this.allRfcs.length; i = i + 1) {
+        var rfcNum = this.allRfcs[i]
         var rfc = this.rfcs[rfcNum]
         // current?
         if (rfc['obsoleted-by']) {
@@ -182,19 +186,22 @@ var rfcIndex;
     },
 
     list_active_rfcs: function () {
-      var filteredRfcs = new Set()
+      var filteredRfcs = new Set(this.allRfcs)
+      // apply selected tags
       rfcIndex.tags.forEach(function (tagType) {
         rfcIndex.tags[tagType].forEach(function (tagName) {
           var tagData = rfcIndex.tags[tagType][tagName]
           if (tagData.active === true) {
             var rfcs = new Set(tagData.rfcs)
-            if (!filteredRfcs.size) {
-              filteredRfcs = rfcs
-            } else {
-              filteredRfcs = filteredRfcs.intersection(rfcs)
-            }
+            filteredRfcs = filteredRfcs.intersection(rfcs)
           }
         })
+      })
+      // apply search words
+      rfcIndex.searchWords.forEach(function (searchWord) {
+        var searchPrefix = searchWord.toLowerCase().substring(0, rfcIndex.prefixLen)
+        var matchRfcs = rfcIndex.words[searchPrefix] || new Set()
+        filteredRfcs = filteredRfcs.intersection(matchRfcs)
       })
       var rfcList = Array.from(filteredRfcs)
       return rfcList
@@ -236,12 +243,6 @@ var rfcIndex;
       target.appendChild(rfcSpan)
     },
 
-    filter_rfc_handler: function (tagName, tagData) {
-      return function (event) {
-        rfcIndex.show_rfcs(tagData.rfcs, document.getElementById('rfc-list'))
-      }
-    },
-
     clear: function (target) {
       while (target.firstChild) {
         target.removeChild(target.firstChild)
@@ -272,13 +273,14 @@ var rfcIndex;
       words.forEach(function (word) {
         word = word.toLowerCase()
         word = word.replace(/[().,?[]"']/g, '')
-        if (word.length < 3) {
+        if (word.length < rfcIndex.prefixLen) {
           return
         }
-        if (rfcIndex.words[word]) {
-          rfcIndex.words[word].add(inputId)
+        var prefix = word.substring(0, rfcIndex.prefixLen)
+        if (rfcIndex.words[prefix]) {
+          rfcIndex.words[prefix].add(inputId)
         } else {
-          rfcIndex.words[word] = new Set([inputId])
+          rfcIndex.words[prefix] = new Set([inputId])
         }
       })
     },
@@ -286,12 +288,8 @@ var rfcIndex;
     search_input: function () {
       var searchTarget = document.getElementById('search')
       var searchText = searchTarget.value
-      var searchWords = searchText.split(' ')
-      var rfcs = rfcIndex.words[searchWords[0].toLowerCase()]
-      if (rfcs && rfcs.size > 0) {
-        var rfcList = Array.from(rfcs)
-        rfcIndex.show_rfcs(rfcList, document.getElementById('rfc-list'))
-      }
+      rfcIndex.searchWords = searchText.split(' ')
+      rfcIndex.show_rfcs(rfcIndex.list_active_rfcs(), document.getElementById('rfc-list'))
     },
 
     install_search_handler: function () {
