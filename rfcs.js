@@ -288,7 +288,7 @@ var rfcIndex;
     search_input: function () {
       var searchTarget = document.getElementById('search')
       var searchText = searchTarget.value
-      rfcIndex.searchWords = searchText.split(' ')
+      rfcIndex.searchWords = searchText.split(' ').filter(word => word)
       rfcIndex.show_rfcs(rfcIndex.list_active_rfcs(), document.getElementById('rfc-list'))
     },
 
