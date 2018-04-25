@@ -2,7 +2,7 @@
 rfcs.json.gz: rfcs.json
 	gzip -9 -k -f rfcs.json
 
-rfcs.json: rfc-index.xml
+rfcs.json: rfc-index.xml rfc-json.py
 	cat rfc-index.xml | ./rfc-json.py > rfcs.json
 
 rfc-index.xml:
