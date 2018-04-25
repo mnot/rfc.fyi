@@ -176,7 +176,8 @@ var rfcIndex;
       })
       // apply search words
       rfcIndex.searchWords.forEach(function (searchWord) {
-        var searchPrefix = searchWord.toLowerCase().substring(0, rfcIndex.prefixLen)
+        searchWord = rfcIndex.cleanString(searchWord)
+        var searchPrefix = searchWord.substring(0, rfcIndex.prefixLen)
         var matchRfcs = rfcIndex.words[searchPrefix] || new Set()
         if (searchWord.length > rfcIndex.prefixLen) {
           matchRfcs.forEach(function (rfcNum) {
