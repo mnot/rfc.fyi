@@ -2,9 +2,11 @@
 rfcs.json.gz: rfcs.json
 	gzip -9 -k -f rfcs.json
 
-.PHONY: rfcs.json
-rfcs.json:
-	curl "https://www.rfc-editor.org/rfc-index.xml" | ./rfc-json.py > rfcs.json
+rfcs.json: rfc-index.xml
+	cat rfc-index.xml | ./rfc-json.py > rfcs.json
+
+rfc-index.xml:
+	curl "https://www.rfc-editor.org/rfc-index.xml" -o rfc-index.xml
 	
 .PHONY: server
 server:
@@ -13,3 +15,7 @@ server:
 .PHONY: lint
 lint:
 	standard --fix *.js
+
+.PHONY: clean
+clean:
+	rm -f rfcs.json rfcs.json.gz

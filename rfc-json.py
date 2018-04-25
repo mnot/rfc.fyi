@@ -23,14 +23,14 @@ class RfcIndexHandler(xml.sax.handler.ContentHandler):
         self.doc_id = None
         self.entry = {}
         self.output = {}
-        xml.sax.handler.ContentHandler.__init__(self) 
-    
+        xml.sax.handler.ContentHandler.__init__(self)
+
     def startElement(self, name, attrs):
         self.tags.append(name)
-    
+
     def characters(self, content):
         self.content += content
-        
+
     def endElement(self, name):
         tag = self.tags.pop()
         assert tag == name
@@ -51,10 +51,40 @@ class RfcIndexHandler(xml.sax.handler.ContentHandler):
             self.entry[self.tags[-1]] = self.content.strip()
 
         self.content = ''
-            
 
-parser = xml.sax.make_parser()
-handler = RfcIndexHandler()
-parser.setContentHandler(handler)
-parser.parse(fh)
-print json.dumps(handler.output, indent=1)
+
+level_lookup = {
+  'INTERNET STANDARD': 'std',
+  'DRAFT STANDARD': 'std',
+  'BEST CURRENT PRACTICE': 'bcp',
+  'HISTORIC': 'historic',
+  'EXPERIMENTAL': 'experimental',
+  'UNKNOWN': 'unknown',
+  'INFORMATIONAL': 'informational',
+  'PROPOSED STANDARD': 'std'
+}
+
+def fixup(raw):
+    output = {}
+    for key, value in raw.items():
+        output[key] = {
+            "status": value.get("obsoleted-by", False) and "current" or "obsoleted",
+            "level": level_lookup[value["current-status"]],
+            "stream": value["stream"].lower(),
+            "title": value["title"]
+        }
+        if value.has_key("wg_acronym") and value["wg_acronym"] != "NON WORKING GROUP":
+            output[key]["wg"] = value["wg_acronym"]
+        if value.has_key("area"): 
+            output[key]["area"] = value["area"]
+    return output
+
+def main():
+    parser = xml.sax.make_parser()
+    handler = RfcIndexHandler()
+    parser.setContentHandler(handler)
+    parser.parse(fh)
+    print json.dumps(fixup(handler.output), indent=1)
+
+if __name__ == "__main__":
+    main()
