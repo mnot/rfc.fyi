@@ -92,11 +92,11 @@ var rfcIndex;
     compute: function () {
       this.allRfcs = Object.keys(this.rfcs)
       this.allRfcs.sort(this.rfcSort)
-      for (var i = 0; i < this.allRfcs.length; i = i + 1) {
-        var rfcNum = this.allRfcs[i]
-        var rfc = this.rfcs[rfcNum]
+      for (let i = 0; i < this.allRfcs.length; i = i + 1) {
+        let rfcNum = this.allRfcs[i]
+        let rfc = this.rfcs[rfcNum]
         rfcIndex.tagTypes.forEach(tagType => {
-          var tagName = rfc[tagType]
+          let tagName = rfc[tagType]
           if (tagName) {
             if (!rfcIndex.tags[tagType]) {
               rfcIndex.tags[tagType] = {}
@@ -120,7 +120,7 @@ var rfcIndex;
     show_tags: function (tagType, handler) {
       var targetDiv = document.getElementById(tagType)
       rfcIndex.tags[tagType].forEach(tagName => {
-        var tagData = rfcIndex.tags[tagType][tagName]
+        let tagData = rfcIndex.tags[tagType][tagName]
         rfcIndex.render_tag(tagType, tagName, tagData, targetDiv, handler, tagData['colour'])
         targetDiv.appendChild(document.createTextNode(' '))
       })
@@ -164,17 +164,17 @@ var rfcIndex;
       // apply selected tags
       rfcIndex.tags.forEach(tagType => {
         rfcIndex.tags[tagType].forEach(tagName => {
-          var tagData = rfcIndex.tags[tagType][tagName]
+          let tagData = rfcIndex.tags[tagType][tagName]
           if (tagData.active === true) {
-            var rfcs = new Set(tagData.rfcs)
+            let rfcs = new Set(tagData.rfcs)
             filteredRfcs = filteredRfcs.intersection(rfcs)
           }
         })
       })
       // apply search words
       rfcIndex.searchWords.forEach(searchWord => {
-        var wordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.words, 'title')
-        var keywordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.keywords, 'keywords')
+        let wordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.words, 'title')
+        let keywordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.keywords, 'keywords')
         filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
       })
       var rfcList = Array.from(filteredRfcs)
@@ -184,18 +184,18 @@ var rfcIndex;
 
     show_rfcs: function (rfcList, target) {
       this.clear(target)
-      for (var i = 0; i < rfcList.length; i = i + 1) {
-        var item = rfcList[i]
+      for (let i = 0; i < rfcList.length; i = i + 1) {
+        let item = rfcList[i]
         if (typeof (item) === 'object') { // it's a sublist
-          var titleElement = document.createElement('h3')
-          var titleContent = document.createTextNode(item.title)
-          var sublist = document.createElement('ul')
+          let titleElement = document.createElement('h3')
+          let titleContent = document.createTextNode(item.title)
+          let sublist = document.createElement('ul')
           titleElement.append(titleContent)
           target.appendChild(titleElement)
           target.appendChild(sublist)
           this.show_rfcs(item.rfcs, sublist)
         } else { // it's a string RFC number
-          var rfcData = this.rfcs[item]
+          let rfcData = this.rfcs[item]
           this.render_rfc(item, rfcData, target)
         }
       }
@@ -235,7 +235,7 @@ var rfcIndex;
       })
       interestingTypes.forEach(tagType => {
         rfcIndex.tags[tagType].forEach(tagName => {
-          var active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
+          let active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
           rfcIndex.tags[tagType][tagName].target.style.display = active
         })
       })
@@ -250,7 +250,7 @@ var rfcIndex;
     gen_colour: function () {
       var hex = '0123456789ABCDEF'
       var colour = '#'
-      for (var i = 0; i < 6; i++) {
+      for (let i = 0; i < 6; i++) {
         colour += hex[Math.floor(Math.random() * 16)]
       }
       return colour
@@ -287,9 +287,9 @@ var rfcIndex;
       var matchRfcs = new Set(index[searchPrefix])
       if (searchWord.length > this.prefixLen) {
         matchRfcs.forEach(rfcNum => {
-          var fullItem = rfcIndex.rfcs[rfcNum][attr]
+          let fullItem = rfcIndex.rfcs[rfcNum][attr]
           if (Array.isArray(fullItem)) {
-            var hit = false
+            let hit = false
             fullItem.forEach(item => {
               if (rfcIndex.cleanString(item).includes(searchWord)) {
                 hit = true
