@@ -39,14 +39,14 @@ var rfcIndex;
     prefixLen: 3,
 
     init: function () {
-      this.outstanding = 0
-      this.tags = {}
-      this.active_tags = {}
-      this.words = {}
-      this.searchWords = []
+      this.outstanding = 0 // outstanding fetches
+      this.tags = {} // tags and associated rfcs
+      this.active_tags = {} // what tags are active
+      this.words = {} // index of word prefixes to RFCs containing them
+      this.searchWords = [] // words the user is searching for
       this.load_json('tags.json', 'tags')
       this.allRfcs = [] // list of all RFC numbers
-      this.rfcs = [] // list of RFC objects
+      this.rfcs = {} // RFC objects
       this.load_json('rfcs.json', 'rfcs')
       this.install_search_handler()
     },
@@ -201,6 +201,14 @@ var rfcIndex;
       rfcIndex.searchWords.forEach(function (searchWord) {
         var searchPrefix = searchWord.toLowerCase().substring(0, rfcIndex.prefixLen)
         var matchRfcs = rfcIndex.words[searchPrefix] || new Set()
+        if (searchWord.length > rfcIndex.prefixLen) {
+          matchRfcs.forEach(function (rfcNum) {
+            var rfcTitle = rfcIndex.cleanString(rfcIndex.rfcs[rfcNum].title)
+            if (!rfcTitle.includes(searchWord)) {
+              matchRfcs.delete(rfcNum)
+            }
+          })
+        }
         filteredRfcs = filteredRfcs.intersection(matchRfcs)
       })
       var rfcList = Array.from(filteredRfcs)
@@ -271,8 +279,7 @@ var rfcIndex;
     search_index: function (input, inputId) {
       var words = input.split(' ')
       words.forEach(function (word) {
-        word = word.toLowerCase()
-        word = word.replace(/[().,?[]"']/g, '')
+        word = rfcIndex.cleanString(word)
         if (word.length < rfcIndex.prefixLen) {
           return
         }
@@ -286,8 +293,7 @@ var rfcIndex;
     },
 
     search_input: function () {
-      var searchTarget = document.getElementById('search')
-      var searchText = searchTarget.value
+      var searchText = document.getElementById('search').value
       rfcIndex.searchWords = searchText.split(' ').filter(word => word)
       rfcIndex.show_rfcs(rfcIndex.list_active_rfcs(), document.getElementById('rfc-list'))
     },
@@ -295,6 +301,11 @@ var rfcIndex;
     install_search_handler: function () {
       var searchTarget = document.getElementById('search')
       searchTarget.oninput = this.search_input
+    },
+
+    cleanString: function (input) {
+      var output = input.toLowerCase()
+      return output.replace(/[\]().,?"']/g, '')
     },
 
     /*
