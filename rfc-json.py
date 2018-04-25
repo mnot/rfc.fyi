@@ -68,7 +68,7 @@ def fixup(raw):
     output = {}
     for key, value in raw.items():
         output[key] = {
-            "status": value.get("obsoleted-by", False) and "current" or "obsoleted",
+            "status": value.has_key("obsoleted-by") and "obsoleted" or "current",
             "level": level_lookup[value["current-status"]],
             "stream": value["stream"].lower(),
             "title": value["title"]
