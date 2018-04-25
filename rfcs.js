@@ -137,12 +137,6 @@ var rfcIndex;
       this.tags[tagType][tagName].target = tagSpan
     },
 
-    show_rfc_handler: function (tagName, tagData) {
-      return function (event) {
-        rfcIndex.show_rfcs(tagData.rfcs, document.getElementById('rfc-list'))
-      }
-    },
-
     click_tag_handler: function (tagType, tagName, tagData, tagSpan) {
       return function (event) {
         var alreadySelected = rfcIndex.active_tags[tagType]
