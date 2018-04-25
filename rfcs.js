@@ -40,9 +40,11 @@ var rfcIndex;
       this.outstanding = 0
       this.tags = {}
       this.active_tags = {}
+      this.words = {}
       this.load_json('tags.json', 'tags')
       this.rfcs = []
       this.load_json('rfcs.json', 'rfcs')
+      this.install_search_handler()
     },
 
     load_json: function (url, dest) {
@@ -113,6 +115,8 @@ var rfcIndex;
         if (rfc.wg_acronym && rfc.wg_acronym !== 'NON WORKING GROUP') {
           this.tag(rfc.wg_acronym, rfcNum, 'wg', '')
         }
+        // index titles
+        this.search_index(rfc['title'], rfcNum)
       }
     },
 
@@ -261,6 +265,38 @@ var rfcIndex;
       } else {
         return '#000'
       }
+    },
+
+    search_index: function (input, inputId) {
+      var words = input.split(' ')
+      words.forEach(function (word) {
+        word = word.toLowerCase()
+        word = word.replace(/[().,?[]"']/g, '')
+        if (word.length < 3) {
+          return
+        }
+        if (rfcIndex.words[word]) {
+          rfcIndex.words[word].add(inputId)
+        } else {
+          rfcIndex.words[word] = new Set([inputId])
+        }
+      })
+    },
+
+    search_input: function () {
+      var searchTarget = document.getElementById('search')
+      var searchText = searchTarget.value
+      var searchWords = searchText.split(' ')
+      var rfcs = rfcIndex.words[searchWords[0].toLowerCase()]
+      if (rfcs && rfcs.size > 0) {
+        var rfcList = Array.from(rfcs)
+        rfcIndex.show_rfcs(rfcList, document.getElementById('rfc-list'))
+      }
+    },
+
+    install_search_handler: function () {
+      var searchTarget = document.getElementById('search')
+      searchTarget.oninput = this.search_input
     },
 
     /*
