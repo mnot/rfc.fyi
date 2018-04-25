@@ -15,6 +15,17 @@ var rfcIndex;
     return intersection
   }
 
+  Set.prototype.union = function (setB) { // eslint-disable-line
+    var union = new Set()
+    for (var elemA of this) {
+      union.add(elemA)
+    }
+    for (var elemB of setB) {
+      union.add(elemB)
+    }
+    return union
+  }
+
   Object.prototype.forEach = function (func) { // eslint-disable-line
     for (var item in this) {
       if (this.hasOwnProperty(item)) {
@@ -33,6 +44,7 @@ var rfcIndex;
       this.tags = {} // tags and associated rfcs
       this.active_tags = {} // what tags are active
       this.words = {} // index of word prefixes to RFCs containing them
+      this.keywords = {} // index of keyword phrases to RFCs containing them
       this.searchWords = [] // words the user is searching for
       this.load_json('tags.json', 'tags')
       this.allRfcs = [] // list of all RFC numbers
@@ -87,9 +99,7 @@ var rfcIndex;
 
     compute: function () {
       this.allRfcs = Object.keys(this.rfcs)
-      this.allRfcs.sort(function (a, b) {
-        return parseInt(a.replace('RFC', '')) - parseInt(b.replace('RFC', ''))
-      })
+      this.allRfcs.sort(this.rfcSort)
       for (var i = 0; i < this.allRfcs.length; i = i + 1) {
         var rfcNum = this.allRfcs[i]
         var rfc = this.rfcs[rfcNum]
@@ -110,7 +120,8 @@ var rfcIndex;
           }
         })
         // index titles
-        this.search_index(rfc['title'], rfcNum)
+        this.search_index(rfc['title'].split(' '), rfcNum, this.words)
+        this.search_index(rfc['keywords'], rfcNum, this.keywords)
       }
     },
 
@@ -170,20 +181,12 @@ var rfcIndex;
       })
       // apply search words
       rfcIndex.searchWords.forEach(function (searchWord) {
-        searchWord = rfcIndex.cleanString(searchWord)
-        var searchPrefix = searchWord.substring(0, rfcIndex.prefixLen)
-        var matchRfcs = new Set(rfcIndex.words[searchPrefix])
-        if (searchWord.length > rfcIndex.prefixLen) {
-          matchRfcs.forEach(function (rfcNum) {
-            var rfcTitle = rfcIndex.cleanString(rfcIndex.rfcs[rfcNum].title)
-            if (!rfcTitle.includes(searchWord)) {
-              matchRfcs.delete(rfcNum)
-            }
-          })
-        }
-        filteredRfcs = filteredRfcs.intersection(matchRfcs)
+        var wordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.words, 'title')
+        var keywordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.keywords, 'keywords')
+        filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
       })
       var rfcList = Array.from(filteredRfcs)
+      rfcList.sort(this.rfcSort)
       return rfcList
     },
 
@@ -271,20 +274,46 @@ var rfcIndex;
       }
     },
 
-    search_index: function (input, inputId) {
-      var words = input.split(' ')
+    search_index: function (words, inputId, destination) {
       words.forEach(function (word) {
         word = rfcIndex.cleanString(word)
         if (word.length < rfcIndex.prefixLen) {
           return
         }
         var prefix = word.substring(0, rfcIndex.prefixLen)
-        if (rfcIndex.words[prefix]) {
-          rfcIndex.words[prefix].add(inputId)
+        if (destination[prefix]) {
+          destination[prefix].add(inputId)
         } else {
-          rfcIndex.words[prefix] = new Set([inputId])
+          destination[prefix] = new Set([inputId])
         }
       })
+    },
+
+    search_lookup: function (searchWord, index, attr) {
+      searchWord = this.cleanString(searchWord)
+      var searchPrefix = searchWord.substring(0, this.prefixLen)
+      var matchRfcs = new Set(index[searchPrefix])
+      if (searchWord.length > this.prefixLen) {
+        matchRfcs.forEach(function (rfcNum) {
+          var fullItem = rfcIndex.rfcs[rfcNum][attr]
+          if (Array.isArray(fullItem)) {
+            var hit = false
+            fullItem.forEach(function (item) {
+              if (rfcIndex.cleanString(item).includes(searchWord)) {
+                hit = true
+              }
+            })
+            if (!hit) {
+              matchRfcs.delete(rfcNum)
+            }
+          } else {
+            if (!rfcIndex.cleanString(fullItem).includes(searchWord)) {
+              matchRfcs.delete(rfcNum)
+            }
+          }
+        })
+      }
+      return matchRfcs
     },
 
     search_input: function () {
@@ -301,6 +330,10 @@ var rfcIndex;
     cleanString: function (input) {
       var output = input.toLowerCase()
       return output.replace(/[\]().,?"']/g, '')
+    },
+
+    rfcSort: function (a, b) {
+      return parseInt(a.replace('RFC', '')) - parseInt(b.replace('RFC', ''))
     },
 
     /*

@@ -50,6 +50,12 @@ class RfcIndexHandler(xml.sax.handler.ContentHandler):
         elif tag == 'doc-id' and self.tags[-1] in self.invisible_tags:
             self.entry[self.tags[-1]] = self.content.strip()
 
+        elif tag == 'kw' and self.tags[-1] == 'keywords':
+            if self.entry.has_key('keywords'):
+                self.entry['keywords'].append(self.content.strip())
+            else:
+                self.entry['keywords'] = [self.content.strip()]
+
         self.content = ''
 
 
@@ -71,7 +77,8 @@ def fixup(raw):
             "status": value.has_key("obsoleted-by") and "obsoleted" or "current",
             "level": level_lookup[value["current-status"]],
             "stream": value["stream"].lower(),
-            "title": value["title"]
+            "title": value["title"],
+            "keywords": value.get("keywords", [])
         }
         if value.has_key("wg_acronym") and value["wg_acronym"] != "NON WORKING GROUP":
             output[key]["wg"] = value["wg_acronym"]
