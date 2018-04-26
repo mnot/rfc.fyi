@@ -403,36 +403,8 @@ var rfcIndex;
             window.__load_events[i]()
           }
           window.__load_events = null
-          // clean up the __ie_onload event
-          /* @cc_on
-         document.getElementById("__ie_onload").onreadystatechange = "";
-         @ */
         }
-        // for Mozilla/Opera9
-        if (document.addEventListener) {
-          document.addEventListener('DOMContentLoaded', init, false)
-        }
-        // for Internet Explorer
-        /* @cc_on
-       var script = document.createElement('script');
-       script.id = '__ie_onload';
-       script.setAttribute("defer", "defer");
-       document.getElementsByTagName('head')[0].appendChild(script);
-       script.onreadystatechange = function () {
-         if (this.readyState === "complete") {
-           init(); // call the onload handler
-         }
-       };
-       @ */
-        // for Safari
-        if (/WebKit/i.test(navigator.userAgent)) { // sniff
-          window.__load_timer = setInterval(function () {
-            if (/loaded|complete/.test(document.readyState)) {
-              init()
-            }
-          }, 10)
-        }
-        // for other browsers
+        document.addEventListener('DOMContentLoaded', init, false)
         window.onload = init
         window.__load_events = []
       }
