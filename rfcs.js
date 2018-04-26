@@ -222,7 +222,7 @@ var rfcIndex;
         }
       }
       this.hide_impossible_tags(rfcList)
-      var count = document.createTextNode(rfcList.length)
+      var count = document.createTextNode(rfcList.length + " RFCs")
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
       countTarget.appendChild(count)
