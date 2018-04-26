@@ -253,39 +253,38 @@
    "invalid routing prefix"
   ]
  }, 
- "RFC6154": {
+ "RFC3302": {
   "status": "current", 
-  "wg": "morg", 
+  "wg": "fax", 
   "stream": "ietf", 
-  "title": "IMAP LIST Extension for Special-Use Mailboxes", 
+  "title": "Tag Image File Format (TIFF) - image/tiff MIME Sub-type Registration", 
   "level": "std", 
   "area": "app", 
   "keywords": [
-   "IMAP", 
-   "email"
+   "TIFF", 
+   "Multipurpose", 
+   "Internet", 
+   "Mail", 
+   "extensions"
   ]
  }, 
- "RFC6155": {
+ "RFC3303": {
   "status": "current", 
-  "wg": "geopriv", 
+  "wg": "midcom", 
   "stream": "ietf", 
-  "title": "Use of Device Identity in HTTP-Enabled Location Delivery (HELD)", 
-  "level": "std", 
-  "area": "rai", 
-  "keywords": []
- }, 
- "RFC6156": {
-  "status": "current", 
-  "wg": "behave", 
-  "stream": "ietf", 
-  "title": "Traversal Using Relays around NAT (TURN) Extension for IPv6", 
-  "level": "std", 
+  "title": "Middlebox communication architecture and framework", 
+  "level": "informational", 
   "area": "tsv", 
   "keywords": [
-   "STUN", 
-   "TURN", 
-   "IPv6"
+   "midcom"
   ]
+ }, 
+ "RFC3300": {
+  "status": "obsoleted", 
+  "keywords": [], 
+  "title": "Internet Official Protocol Standards", 
+  "stream": "independent", 
+  "level": "historic"
  }, 
  "RFC3301": {
   "status": "current", 
@@ -1234,19 +1233,14 @@
   "area": "rtg", 
   "keywords": []
  }, 
- "RFC1864": {
+ "RFC7471": {
   "status": "current", 
-  "keywords": [
-   "CON-MD5", 
-   "MIME", 
-   "EMail", 
-   "Integrity", 
-   "MIC", 
-   "Digest"
-  ], 
-  "title": "The Content-MD5 Header Field", 
-  "stream": "legacy", 
-  "level": "std"
+  "wg": "ospf", 
+  "stream": "ietf", 
+  "title": "OSPF Traffic Engineering (TE) Metric Extensions", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC7472": {
   "status": "current", 
@@ -1255,25 +1249,14 @@
   "stream": "ietf", 
   "level": "std"
  }, 
- "RFC1866": {
-  "status": "obsoleted", 
-  "wg": "html", 
+ "RFC7473": {
+  "status": "current", 
+  "wg": "mpls", 
   "stream": "ietf", 
-  "title": "Hypertext Markup Language - 2.0", 
-  "level": "historic", 
-  "area": "app", 
-  "keywords": [
-   "HTML", 
-   "HTML", 
-   "SGML", 
-   "Standard", 
-   "Generalized", 
-   "Language", 
-   "WWW", 
-   "World", 
-   "Wide", 
-   "Web"
-  ]
+  "title": "Controlling State Advertisements of Non-negotiated LDP Applications", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC7474": {
   "status": "current", 
@@ -1289,43 +1272,28 @@
    "replay attacks"
   ]
  }, 
- "RFC1860": {
-  "status": "obsoleted", 
-  "keywords": [
-   "values", 
-   "IPv4", 
-   "subnets"
-  ], 
-  "title": "Variable Length Subnet Table For IPv4", 
-  "stream": "legacy", 
-  "level": "informational"
- }, 
- "RFC1863": {
-  "status": "obsoleted", 
-  "wg": "idr", 
-  "stream": "ietf", 
-  "title": "A BGP/IDRP Route Server alternative to a full mesh routing", 
-  "level": "historic", 
-  "area": "rtg", 
-  "keywords": [
-   "BGP-IDRP", 
-   "border", 
-   "gateway", 
-   "protocol", 
-   "inter-domain", 
-   "routing"
-  ]
- }, 
- "RFC1862": {
+ "RFC7475": {
   "status": "current", 
-  "keywords": [
-   "Internet", 
-   "Architecture", 
-   "Board"
-  ], 
-  "title": "Report of the IAB Workshop on Internet Information Infrastructure, October 12-14, 1994", 
-  "stream": "legacy", 
+  "keywords": [], 
+  "title": "Increasing the Number of Area Directors in an IETF Area", 
+  "stream": "ietf", 
+  "level": "bcp"
+ }, 
+ "RFC7476": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Information-Centric Networking: Baseline Scenarios", 
+  "stream": "irtf", 
   "level": "informational"
+ }, 
+ "RFC7477": {
+  "status": "current", 
+  "wg": "dnsop", 
+  "stream": "ietf", 
+  "title": "Child-to-Parent Synchronization in DNS", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": []
  }, 
  "RFC3687": {
   "status": "current", 
@@ -3873,6 +3841,59 @@
   "area": "rtg", 
   "keywords": []
  }, 
+ "RFC8350": {
+  "status": "current", 
+  "wg": "opsawg", 
+  "stream": "ietf", 
+  "title": "Alternate Tunnel Encapsulation for Data Frames in Control and Provisioning of Wireless Access Points (CAPWAP)", 
+  "level": "experimental", 
+  "area": "ops", 
+  "keywords": [
+   "Wi-Fi", 
+   "WLAN", 
+   "PMIP", 
+   "GRE"
+  ]
+ }, 
+ "RFC8352": {
+  "status": "current", 
+  "wg": "lwig", 
+  "stream": "ietf", 
+  "title": "Energy-Efficient Features of Internet of Things Protocols", 
+  "level": "informational", 
+  "area": "int", 
+  "keywords": [
+   "IoT", 
+   "Radio Duty Cycling", 
+   "6LoWPAN", 
+   "6Lo", 
+   "CoAP", 
+   "RPL"
+  ]
+ }, 
+ "RFC8354": {
+  "status": "current", 
+  "wg": "spring", 
+  "stream": "ietf", 
+  "title": "Use Cases for IPv6 Source Packet Routing in Networking (SPRING)", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": []
+ }, 
+ "RFC8355": {
+  "status": "current", 
+  "wg": "spring", 
+  "stream": "ietf", 
+  "title": "Resiliency Use Cases in Source Packet Routing in Networking (SPRING) Networks", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "SEGMENT ROUTING", 
+   "RESILIENCY", 
+   "PROTECTION", 
+   "CONVERGENCE"
+  ]
+ }, 
  "RFC8356": {
   "status": "current", 
   "wg": "pce", 
@@ -3896,19 +3917,16 @@
   "area": "int", 
   "keywords": []
  }, 
- "RFC3302": {
+ "RFC6154": {
   "status": "current", 
-  "wg": "fax", 
+  "wg": "morg", 
   "stream": "ietf", 
-  "title": "Tag Image File Format (TIFF) - image/tiff MIME Sub-type Registration", 
+  "title": "IMAP LIST Extension for Special-Use Mailboxes", 
   "level": "std", 
   "area": "app", 
   "keywords": [
-   "TIFF", 
-   "Multipurpose", 
-   "Internet", 
-   "Mail", 
-   "extensions"
+   "IMAP", 
+   "email"
   ]
  }, 
  "RFC0285": {
@@ -3918,23 +3936,27 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
- "RFC3303": {
+ "RFC6155": {
   "status": "current", 
-  "wg": "midcom", 
+  "wg": "geopriv", 
   "stream": "ietf", 
-  "title": "Middlebox communication architecture and framework", 
-  "level": "informational", 
+  "title": "Use of Device Identity in HTTP-Enabled Location Delivery (HELD)", 
+  "level": "std", 
+  "area": "rai", 
+  "keywords": []
+ }, 
+ "RFC6156": {
+  "status": "current", 
+  "wg": "behave", 
+  "stream": "ietf", 
+  "title": "Traversal Using Relays around NAT (TURN) Extension for IPv6", 
+  "level": "std", 
   "area": "tsv", 
   "keywords": [
-   "midcom"
+   "STUN", 
+   "TURN", 
+   "IPv6"
   ]
- }, 
- "RFC3300": {
-  "status": "obsoleted", 
-  "keywords": [], 
-  "title": "Internet Official Protocol Standards", 
-  "stream": "independent", 
-  "level": "historic"
  }, 
  "RFC6157": {
   "status": "current", 
@@ -7131,6 +7153,15 @@
    "fully qualified domain name"
   ]
  }, 
+ "RFC8374": {
+  "status": "current", 
+  "keywords": [
+   "Internet Routing Security"
+  ], 
+  "title": "BGPsec Design Choices and Summary of Supporting Discussions", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
  "RFC1952": {
   "status": "current", 
   "keywords": [
@@ -7264,6 +7295,18 @@
   "keywords": [
    "HTTP caching", 
    "HyperText Transfer Protocol", 
+   "HTTP"
+  ]
+ }, 
+ "RFC8336": {
+  "status": "current", 
+  "wg": "httpbis", 
+  "stream": "ietf", 
+  "title": "The ORIGIN HTTP/2 Frame", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "connection coalescing", 
    "HTTP"
   ]
  }, 
@@ -7433,6 +7476,23 @@
    "dn"
   ]
  }, 
+ "RFC8332": {
+  "status": "current", 
+  "wg": "curdle", 
+  "stream": "ietf", 
+  "title": "Use of RSA Keys with SHA-256 and SHA-512 in the Secure Shell (SSH) Protocol", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "rsa-sha2-256", 
+   "rsa-sha2-512", 
+   "ssh-rsa", 
+   "publickey", 
+   "server-sig-algs", 
+   "signature", 
+   "authentication"
+  ]
+ }, 
  "RFC7231": {
   "status": "current", 
   "wg": "httpbis", 
@@ -7475,6 +7535,15 @@
   "title": "BinaryTime: An Alternate Format for Representing Date and Time in ASN.1", 
   "stream": "ietf", 
   "level": "experimental"
+ }, 
+ "RFC8333": {
+  "status": "current", 
+  "wg": "rtgwg", 
+  "stream": "ietf", 
+  "title": "Micro-loop Prevention by Introducing a Local Convergence Delay", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC5935": {
   "status": "current", 
@@ -14482,6 +14551,18 @@
    "PW"
   ]
  }, 
+ "RFC6876": {
+  "status": "current", 
+  "wg": "nea", 
+  "stream": "ietf", 
+  "title": "A Posture Transport Protocol over TLS (PT-TLS)", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "Network Endpoint Assessment", 
+   "NEA"
+  ]
+ }, 
  "RFC4008": {
   "status": "obsoleted", 
   "keywords": [
@@ -15530,14 +15611,19 @@
    "FAQ"
   ]
  }, 
- "RFC7471": {
+ "RFC1864": {
   "status": "current", 
-  "wg": "ospf", 
-  "stream": "ietf", 
-  "title": "OSPF Traffic Engineering (TE) Metric Extensions", 
-  "level": "std", 
-  "area": "rtg", 
-  "keywords": []
+  "keywords": [
+   "CON-MD5", 
+   "MIME", 
+   "EMail", 
+   "Integrity", 
+   "MIC", 
+   "Digest"
+  ], 
+  "title": "The Content-MD5 Header Field", 
+  "stream": "legacy", 
+  "level": "std"
  }, 
  "RFC1867": {
   "status": "obsoleted", 
@@ -15557,14 +15643,25 @@
    "Extensions"
   ]
  }, 
- "RFC7473": {
-  "status": "current", 
-  "wg": "mpls", 
+ "RFC1866": {
+  "status": "obsoleted", 
+  "wg": "html", 
   "stream": "ietf", 
-  "title": "Controlling State Advertisements of Non-negotiated LDP Applications", 
-  "level": "std", 
-  "area": "rtg", 
-  "keywords": []
+  "title": "Hypertext Markup Language - 2.0", 
+  "level": "historic", 
+  "area": "app", 
+  "keywords": [
+   "HTML", 
+   "HTML", 
+   "SGML", 
+   "Standard", 
+   "Generalized", 
+   "Language", 
+   "WWW", 
+   "World", 
+   "Wide", 
+   "Web"
+  ]
  }, 
  "RFC1861": {
   "status": "current", 
@@ -15578,28 +15675,43 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
- "RFC7475": {
-  "status": "current", 
-  "keywords": [], 
-  "title": "Increasing the Number of Area Directors in an IETF Area", 
-  "stream": "ietf", 
-  "level": "bcp"
- }, 
- "RFC7476": {
-  "status": "current", 
-  "keywords": [], 
-  "title": "Information-Centric Networking: Baseline Scenarios", 
-  "stream": "irtf", 
+ "RFC1860": {
+  "status": "obsoleted", 
+  "keywords": [
+   "values", 
+   "IPv4", 
+   "subnets"
+  ], 
+  "title": "Variable Length Subnet Table For IPv4", 
+  "stream": "legacy", 
   "level": "informational"
  }, 
- "RFC7477": {
-  "status": "current", 
-  "wg": "dnsop", 
+ "RFC1863": {
+  "status": "obsoleted", 
+  "wg": "idr", 
   "stream": "ietf", 
-  "title": "Child-to-Parent Synchronization in DNS", 
-  "level": "std", 
-  "area": "ops", 
-  "keywords": []
+  "title": "A BGP/IDRP Route Server alternative to a full mesh routing", 
+  "level": "historic", 
+  "area": "rtg", 
+  "keywords": [
+   "BGP-IDRP", 
+   "border", 
+   "gateway", 
+   "protocol", 
+   "inter-domain", 
+   "routing"
+  ]
+ }, 
+ "RFC1862": {
+  "status": "current", 
+  "keywords": [
+   "Internet", 
+   "Architecture", 
+   "Board"
+  ], 
+  "title": "Report of the IAB Workshop on Internet Information Infrastructure, October 12-14, 1994", 
+  "stream": "legacy", 
+  "level": "informational"
  }, 
  "RFC7478": {
   "status": "current", 
@@ -17999,7 +18111,7 @@
   ]
  }, 
  "RFC8022": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "netmod", 
   "stream": "ietf", 
   "title": "A YANG Data Model for Routing Management", 
@@ -18341,16 +18453,17 @@
    "Stateless Translation"
   ]
  }, 
- "RFC6876": {
+ "RFC5924": {
   "status": "current", 
-  "wg": "nea", 
+  "wg": "sip", 
   "stream": "ietf", 
-  "title": "A Posture Transport Protocol over TLS (PT-TLS)", 
-  "level": "std", 
-  "area": "sec", 
+  "title": "Extended Key Usage (EKU) for Session Initiation Protocol (SIP) X.509 Certificates", 
+  "level": "experimental", 
+  "area": "rai", 
   "keywords": [
-   "Network Endpoint Assessment", 
-   "NEA"
+   "PKIX", 
+   "SIP Domain", 
+   "X.509 Certificate"
   ]
  }, 
  "RFC6875": {
@@ -37661,16 +37774,54 @@
    "interface identifiers"
   ]
  }, 
- "RFC4167": {
+ "RFC5902": {
   "status": "current", 
-  "wg": "ospf", 
-  "stream": "ietf", 
-  "title": "Graceful OSPF Restart Implementation Report", 
-  "level": "informational", 
-  "area": "rtg", 
   "keywords": [
-   "open shortest path first"
+   "NAT", 
+   "IPv6", 
+   "Transparency", 
+   "End-to-End", 
+   "Privacy", 
+   "Multihoming"
+  ], 
+  "title": "IAB Thoughts on IPv6 Network Address Translation", 
+  "stream": "iab", 
+  "level": "informational"
+ }, 
+ "RFC2557": {
+  "status": "current", 
+  "wg": "mhtml", 
+  "stream": "ietf", 
+  "title": "MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)", 
+  "level": "std", 
+  "area": "app", 
+  "keywords": [
+   "MHTML", 
+   "multipurpose", 
+   "internet", 
+   "mail", 
+   "extensions", 
+   "multimedia", 
+   "uri", 
+   "uniform", 
+   "resource", 
+   "identifiers"
   ]
+ }, 
+ "RFC5903": {
+  "status": "current", 
+  "keywords": [
+   "Elliptic Curve Cryptography", 
+   "ECC", 
+   "Internet Key Exchange", 
+   "elliptic curve", 
+   "Diffie-Hellman", 
+   "suite b", 
+   "nist curve"
+  ], 
+  "title": "Elliptic Curve Groups modulo a Prime (ECP Groups) for IKE and IKEv2", 
+  "stream": "ietf", 
+  "level": "informational"
  }, 
  "RFC3148": {
   "status": "current", 
@@ -37872,24 +38023,17 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
- "RFC2557": {
+ "RFC5905": {
   "status": "current", 
-  "wg": "mhtml", 
+  "wg": "ntp", 
   "stream": "ietf", 
-  "title": "MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)", 
+  "title": "Network Time Protocol Version 4: Protocol and Algorithms Specification", 
   "level": "std", 
-  "area": "app", 
+  "area": "int", 
   "keywords": [
-   "MHTML", 
-   "multipurpose", 
-   "internet", 
-   "mail", 
-   "extensions", 
-   "multimedia", 
-   "uri", 
-   "uniform", 
-   "resource", 
-   "identifiers"
+   "NTP", 
+   "SNTP", 
+   "Synchronization"
   ]
  }, 
  "RFC2550": {
@@ -42456,16 +42600,16 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
- "RFC1478": {
+ "RFC4118": {
   "status": "current", 
-  "wg": "idpr", 
+  "wg": "capwap", 
   "stream": "ietf", 
-  "title": "An Architecture for Inter-Domain Policy Routing", 
-  "level": "historic", 
-  "area": "rtg", 
+  "title": "Architecture Taxonomy for Control and Provisioning of Wireless Access Points (CAPWAP)", 
+  "level": "informational", 
+  "area": "ops", 
   "keywords": [
-   "IDPR-ARCH", 
-   "IDPR"
+   "IEEE 802.11", 
+   "wireless lan"
   ]
  }, 
  "RFC4119": {
@@ -42491,16 +42635,18 @@
    "internet protocol"
   ]
  }, 
- "RFC1477": {
+ "RFC4117": {
   "status": "current", 
-  "wg": "idpr", 
+  "wg": "sipping", 
   "stream": "ietf", 
-  "title": "IDPR as a Proposed Standard", 
+  "title": "Transcoding Services Invocation in the Session Initiation Protocol (SIP) Using Third Party Call Control (3pcc)", 
   "level": "informational", 
-  "area": "rtg", 
+  "area": "rai", 
   "keywords": [
-   "Routing", 
-   "Policy"
+   "deaf", 
+   "hard of hearing", 
+   "speech-impaired", 
+   "hearing-impaired"
   ]
  }, 
  "RFC4114": {
@@ -44053,6 +44199,29 @@
    "SDN", 
    "Software Defined Network", 
    "Service Orchestrator"
+  ]
+ }, 
+ "RFC8308": {
+  "status": "current", 
+  "wg": "curdle", 
+  "stream": "ietf", 
+  "title": "Extension Negotiation in the Secure Shell (SSH) Protocol", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "ext-info", 
+   "ext-info-s", 
+   "ext-info-c", 
+   "SSH_MSG_EXT_INFO", 
+   "SSH_MSG_NEWCOMPRESS", 
+   "server-sig-algs", 
+   "delay-compression", 
+   "no-flow-control", 
+   "elevation", 
+   "delay compression", 
+   "delayed compression", 
+   "flow control", 
+   "elevated"
   ]
  }, 
  "RFC2015": {
@@ -50419,6 +50588,31 @@
   "stream": "ietf", 
   "level": "std"
  }, 
+ "RFC8349": {
+  "status": "current", 
+  "wg": "netmod", 
+  "stream": "ietf", 
+  "title": "A YANG Data Model for Routing Management (NMDA Version)", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "configuration", 
+   "IPv6 Router Advertisements", 
+   "NETCONF", 
+   "RESTCONF"
+  ]
+ }, 
+ "RFC8348": {
+  "status": "current", 
+  "wg": "netmod", 
+  "stream": "ietf", 
+  "title": "A YANG Data Model for Hardware Management", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "ENTITY-MIB"
+  ]
+ }, 
  "RFC8343": {
   "status": "current", 
   "wg": "netmod", 
@@ -50464,17 +50658,17 @@
   "area": "ops", 
   "keywords": []
  }, 
- "RFC5924": {
+ "RFC8347": {
   "status": "current", 
-  "wg": "sip", 
+  "wg": "rtgwg", 
   "stream": "ietf", 
-  "title": "Extended Key Usage (EKU) for Session Initiation Protocol (SIP) X.509 Certificates", 
-  "level": "experimental", 
-  "area": "rai", 
+  "title": "A YANG Data Model for the Virtual Router Redundancy Protocol (VRRP)", 
+  "level": "std", 
+  "area": "rtg", 
   "keywords": [
-   "PKIX", 
-   "SIP Domain", 
-   "X.509 Certificate"
+   "Network Management", 
+   "Routing", 
+   "YANG"
   ]
  }, 
  "RFC8346": {
@@ -53161,33 +53355,34 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
- "RFC5902": {
+ "RFC8365": {
   "status": "current", 
-  "keywords": [
-   "NAT", 
-   "IPv6", 
-   "Transparency", 
-   "End-to-End", 
-   "Privacy", 
-   "Multihoming"
-  ], 
-  "title": "IAB Thoughts on IPv6 Network Address Translation", 
-  "stream": "iab", 
-  "level": "informational"
- }, 
- "RFC5903": {
-  "status": "current", 
-  "keywords": [
-   "Elliptic Curve Cryptography", 
-   "ECC", 
-   "Internet Key Exchange", 
-   "elliptic curve", 
-   "Diffie-Hellman", 
-   "suite b", 
-   "nist curve"
-  ], 
-  "title": "Elliptic Curve Groups modulo a Prime (ECP Groups) for IKE and IKEv2", 
+  "wg": "bess", 
   "stream": "ietf", 
+  "title": "A Network Virtualization Overlay Solution Using Ethernet VPN (EVPN)", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "EVPN Control Plane with VxLAN Encapsulation", 
+   "EVPN Control Plane with NvGRE Encapsulation"
+  ]
+ }, 
+ "RFC8364": {
+  "status": "current", 
+  "wg": "pim", 
+  "stream": "ietf", 
+  "title": "PIM Flooding Mechanism (PFM) and Source Discovery (SD)", 
+  "level": "experimental", 
+  "area": "rtg", 
+  "keywords": [
+   "Multicast"
+  ]
+ }, 
+ "RFC8367": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Wrongful Termination of Internet Protocol (IP) Packets", 
+  "stream": "independent", 
   "level": "informational"
  }, 
  "RFC5901": {
@@ -53199,26 +53394,27 @@
   "stream": "ietf", 
   "level": "std"
  }, 
- "RFC5906": {
+ "RFC8361": {
   "status": "current", 
-  "wg": "ntp", 
+  "wg": "trill", 
   "stream": "ietf", 
-  "title": "Network Time Protocol Version 4: Autokey Specification", 
-  "level": "informational", 
-  "area": "int", 
+  "title": "Transparent Interconnection of Lots of Links (TRILL): Centralized Replication for Active-Active Broadcast, Unknown Unicast, and Multicast (BUM) Traffic", 
+  "level": "std", 
+  "area": "rtg", 
   "keywords": [
-   "ntp", 
-   "ntpv4", 
-   "public key cryptography"
+   "TRILL", 
+   "RBridge", 
+   "CMT", 
+   "LAALP"
   ]
  }, 
- "RFC5907": {
+ "RFC8360": {
   "status": "current", 
-  "wg": "ntp", 
+  "wg": "sidr", 
   "stream": "ietf", 
-  "title": "Definitions of Managed Objects for Network Time Protocol Version 4 (NTPv4)", 
+  "title": "Resource Public Key Infrastructure (RPKI) Validation Reconsidered", 
   "level": "std", 
-  "area": "int", 
+  "area": "rtg", 
   "keywords": []
  }, 
  "RFC5904": {
@@ -53233,18 +53429,14 @@
   "stream": "ietf", 
   "level": "informational"
  }, 
- "RFC5905": {
+ "RFC8362": {
   "status": "current", 
-  "wg": "ntp", 
+  "wg": "ospf", 
   "stream": "ietf", 
-  "title": "Network Time Protocol Version 4: Protocol and Algorithms Specification", 
+  "title": "OSPFv3 Link State Advertisement (LSA) Extensibility", 
   "level": "std", 
-  "area": "int", 
-  "keywords": [
-   "NTP", 
-   "SNTP", 
-   "Synchronization"
-  ]
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC4378": {
   "status": "current", 
@@ -53269,6 +53461,13 @@
    "send", 
    "secure neighbor discovery"
   ]
+ }, 
+ "RFC8369": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Internationalizing IPv6 Using 128-Bit Unicode", 
+  "stream": "independent", 
+  "level": "informational"
  }, 
  "RFC6293": {
   "status": "current", 
@@ -53682,6 +53881,17 @@
   "keywords": [
    "point-to-point", 
    "protocol"
+  ]
+ }, 
+ "RFC4167": {
+  "status": "current", 
+  "wg": "ospf", 
+  "stream": "ietf", 
+  "title": "Graceful OSPF Restart Implementation Report", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "open shortest path first"
   ]
  }, 
  "RFC4426": {
@@ -57599,16 +57809,12 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
- "RFC7866": {
+ "RFC0386": {
   "status": "current", 
-  "wg": "siprec", 
-  "stream": "ietf", 
-  "title": "Session Recording Protocol", 
-  "level": "std", 
-  "area": "art", 
-  "keywords": [
-   "siprec"
-  ]
+  "keywords": [], 
+  "title": "Letter to TIP users-2", 
+  "stream": "legacy", 
+  "level": "unknown"
  }, 
  "RFC0385": {
   "status": "current", 
@@ -57645,27 +57851,12 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
- "RFC7861": {
+ "RFC0381": {
   "status": "current", 
-  "wg": "nfsv4", 
-  "stream": "ietf", 
-  "title": "Remote Procedure Call (RPC) Security Version 3", 
-  "level": "std", 
-  "area": "tsv", 
-  "keywords": [
-   "RPCSEC_GSS", 
-   "ONC", 
-   "RPC", 
-   "GSS", 
-   "GSS-API", 
-   "NFS", 
-   "authentication", 
-   "privacy", 
-   "confidentiality", 
-   "encryption", 
-   "mechanism", 
-   "context"
-  ]
+  "keywords": [], 
+  "title": "Three aids to improved network operation", 
+  "stream": "legacy", 
+  "level": "unknown"
  }, 
  "RFC7860": {
   "status": "current", 
@@ -57681,16 +57872,12 @@
    "SHA-2"
   ]
  }, 
- "RFC7869": {
-  "status": "current", 
-  "keywords": [
-   "RFB", 
-   "Remote Framebuffer", 
-   "Virtual Network Computing"
-  ], 
-  "title": "The \"vnc\" URI Scheme", 
-  "stream": "independent", 
-  "level": "informational"
+ "RFC0389": {
+  "status": "obsoleted", 
+  "keywords": [], 
+  "title": "UCLA Campus Computing Network Liaison Staff for ARPA Network", 
+  "stream": "legacy", 
+  "level": "unknown"
  }, 
  "RFC0388": {
   "status": "current", 
@@ -60846,6 +61033,28 @@
    "URI"
   ]
  }, 
+ "RFC5906": {
+  "status": "current", 
+  "wg": "ntp", 
+  "stream": "ietf", 
+  "title": "Network Time Protocol Version 4: Autokey Specification", 
+  "level": "informational", 
+  "area": "int", 
+  "keywords": [
+   "ntp", 
+   "ntpv4", 
+   "public key cryptography"
+  ]
+ }, 
+ "RFC5907": {
+  "status": "current", 
+  "wg": "ntp", 
+  "stream": "ietf", 
+  "title": "Definitions of Managed Objects for Network Time Protocol Version 4 (NTPv4)", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": []
+ }, 
  "RFC1539": {
   "status": "obsoleted", 
   "keywords": [
@@ -63526,12 +63735,16 @@
   "area": "art", 
   "keywords": []
  }, 
- "RFC0386": {
+ "RFC7866": {
   "status": "current", 
-  "keywords": [], 
-  "title": "Letter to TIP users-2", 
-  "stream": "legacy", 
-  "level": "unknown"
+  "wg": "siprec", 
+  "stream": "ietf", 
+  "title": "Session Recording Protocol", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "siprec"
+  ]
  }, 
  "RFC7865": {
   "status": "current", 
@@ -63572,23 +63785,38 @@
    "Labeled NFS"
   ]
  }, 
- "RFC0381": {
+ "RFC7861": {
   "status": "current", 
-  "keywords": [], 
-  "title": "Three aids to improved network operation", 
-  "stream": "legacy", 
-  "level": "unknown"
- }, 
- "RFC4118": {
-  "status": "current", 
-  "wg": "capwap", 
+  "wg": "nfsv4", 
   "stream": "ietf", 
-  "title": "Architecture Taxonomy for Control and Provisioning of Wireless Access Points (CAPWAP)", 
-  "level": "informational", 
-  "area": "ops", 
+  "title": "Remote Procedure Call (RPC) Security Version 3", 
+  "level": "std", 
+  "area": "tsv", 
   "keywords": [
-   "IEEE 802.11", 
-   "wireless lan"
+   "RPCSEC_GSS", 
+   "ONC", 
+   "RPC", 
+   "GSS", 
+   "GSS-API", 
+   "NFS", 
+   "authentication", 
+   "privacy", 
+   "confidentiality", 
+   "encryption", 
+   "mechanism", 
+   "context"
+  ]
+ }, 
+ "RFC1478": {
+  "status": "current", 
+  "wg": "idpr", 
+  "stream": "ietf", 
+  "title": "An Architecture for Inter-Domain Policy Routing", 
+  "level": "historic", 
+  "area": "rtg", 
+  "keywords": [
+   "IDPR-ARCH", 
+   "IDPR"
   ]
  }, 
  "RFC1479": {
@@ -63615,25 +63843,27 @@
    "Routing"
   ]
  }, 
- "RFC0389": {
-  "status": "obsoleted", 
-  "keywords": [], 
-  "title": "UCLA Campus Computing Network Liaison Staff for ARPA Network", 
-  "stream": "legacy", 
-  "level": "unknown"
- }, 
- "RFC4117": {
+ "RFC7869": {
   "status": "current", 
-  "wg": "sipping", 
-  "stream": "ietf", 
-  "title": "Transcoding Services Invocation in the Session Initiation Protocol (SIP) Using Third Party Call Control (3pcc)", 
-  "level": "informational", 
-  "area": "rai", 
   "keywords": [
-   "deaf", 
-   "hard of hearing", 
-   "speech-impaired", 
-   "hearing-impaired"
+   "RFB", 
+   "Remote Framebuffer", 
+   "Virtual Network Computing"
+  ], 
+  "title": "The \"vnc\" URI Scheme", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
+ "RFC1477": {
+  "status": "current", 
+  "wg": "idpr", 
+  "stream": "ietf", 
+  "title": "IDPR as a Proposed Standard", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "Routing", 
+   "Policy"
   ]
  }, 
  "RFC7868": {
@@ -84586,6 +84816,15 @@
    "diediedie"
   ]
  }, 
+ "RFC5955": {
+  "status": "current", 
+  "keywords": [
+   "TimeStampedData envelopes"
+  ], 
+  "title": "The application/timestamped-data Media Type", 
+  "stream": "ietf", 
+  "level": "informational"
+ }, 
  "RFC7569": {
   "status": "current", 
   "wg": "nfsv4", 
@@ -86296,6 +86535,15 @@
   "title": "RFC list by number", 
   "stream": "legacy", 
   "level": "unknown"
+ }, 
+ "RFC7921": {
+  "status": "current", 
+  "wg": "i2rs", 
+  "stream": "ietf", 
+  "title": "An Architecture for the Interface to the Routing System", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC5734": {
   "status": "current", 
@@ -94238,14 +94486,17 @@
   "area": "rtg", 
   "keywords": []
  }, 
- "RFC5955": {
+ "RFC8310": {
   "status": "current", 
-  "keywords": [
-   "TimeStampedData envelopes"
-  ], 
-  "title": "The application/timestamped-data Media Type", 
+  "wg": "dprive", 
   "stream": "ietf", 
-  "level": "informational"
+  "title": "Usage Profiles for DNS over TLS and DNS over DTLS", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "DNS", 
+   "transport"
+  ]
  }, 
  "RFC8311": {
   "status": "current", 
@@ -94584,14 +94835,21 @@
   "area": "rtg", 
   "keywords": []
  }, 
- "RFC7921": {
+ "RFC8328": {
   "status": "current", 
-  "wg": "i2rs", 
-  "stream": "ietf", 
-  "title": "An Architecture for the Interface to the Routing System", 
-  "level": "informational", 
-  "area": "rtg", 
-  "keywords": []
+  "keywords": [
+   "Information models", 
+   "YANG data models", 
+   "Event Condition Action", 
+   "policy rules", 
+   "GPIM", 
+   "EPRIM", 
+   "declarative policy", 
+   "intent-based policy"
+  ], 
+  "title": "Policy-Based Management Framework for the Simplified Use of Policy Abstractions (SUPA)", 
+  "stream": "independent", 
+  "level": "informational"
  }, 
  "RFC7928": {
   "status": "current", 
