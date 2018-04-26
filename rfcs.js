@@ -242,7 +242,6 @@ var rfcIndex;
     },
 
     hide_impossible_tags: function (rfcList) {
-      var hideableTypes = ['wg']
       var possibleTags = {
         'status': new Set(),
         'stream': new Set(),
@@ -255,8 +254,11 @@ var rfcIndex;
         possibleTags['level'].add(rfcIndex.rfcs[rfcNum].level)
         possibleTags['wg'].add(rfcIndex.rfcs[rfcNum].wg)
       })
-      hideableTypes.forEach(tagType => {
+      rfcIndex.tagTypes.forEach(tagType => {
         rfcIndex.tags[tagType].forEach(tagName => {
+          if (!rfcIndex.tags[tagType][tagName].visible) {
+            return
+          }
           let active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
           rfcIndex.tags[tagType][tagName].target.style.display = active
         })
