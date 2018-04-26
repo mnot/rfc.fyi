@@ -354,6 +354,9 @@ var rfcIndex;
         queries.push('obsolete')
       }
       rfcIndex.tags.forEach(tagType => {
+        if (tagType === 'status') {
+          return
+        }
         var activeTags = []
         rfcIndex.tags[tagType].forEach(tagName => {
           let tagData = rfcIndex.tags[tagType][tagName]
