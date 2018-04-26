@@ -375,6 +375,7 @@ var rfcIndex;
 
     load_url: function () {
       var search = rfcIndex.getParameterByName('search') || ''
+      document.getElementById('search').value = search
       rfcIndex.searchWords = search.split(' ')
       if (rfcIndex.getParameterByName('obsolete')) {
         rfcIndex.tags['status']['current'].active = true
