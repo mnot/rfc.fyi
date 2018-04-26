@@ -90,6 +90,7 @@ var rfcIndex;
       this.tagTypes.forEach(tagType => {
         rfcIndex.show_tags(tagType, rfcIndex.click_tag_handler)
       })
+      this.load_url()
     },
 
     compute: function () {
@@ -370,6 +371,38 @@ var rfcIndex;
       })
       var url = '?' + queries.join('&')
       history.pushState({}, '', url)
+    },
+
+    load_url: function () {
+      var search = rfcIndex.getParameterByName('search') || ''
+      rfcIndex.searchWords = search.split(' ')
+      if (rfcIndex.getParameterByName('obsolete')) {
+        rfcIndex.tags['status']['current'].active = true
+      }
+      rfcIndex.tagTypes.forEach(tagType => {
+        if (rfcIndex.invisibleTagTypes.includes(tagType)) {
+          return
+        }
+        var tagstring = rfcIndex.getParameterByName(tagType)
+        if (tagstring) {
+          var tags = tagstring.split(',')
+          tags.forEach(tagName => {
+            rfcIndex.tags[tagType][tagName].active = true
+          })
+        }
+      })
+      var selectedRfcs = rfcIndex.list_active_rfcs()
+      rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
+    },
+
+    getParameterByName: function (name) {
+      var url = window.location.href
+      name = name.replace(/[[\]]/g, '\\$&')
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
+      var results = regex.exec(url)
+      if (!results) return null
+      if (!results[2]) return ''
+      return decodeURIComponent(results[2].replace(/\+/g, ' '))
     },
 
     cleanString: function (input) {
