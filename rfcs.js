@@ -1,4 +1,4 @@
-/* global alert, XMLHttpRequest */
+/* global alert, history, XMLHttpRequest */
 
 var rfcIndex;
 
@@ -163,6 +163,7 @@ var rfcIndex;
         }
         var selectedRfcs = rfcIndex.list_active_rfcs()
         rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
+        rfcIndex.update_url()
       }
     },
 
@@ -174,6 +175,7 @@ var rfcIndex;
       }
       var selectedRfcs = rfcIndex.list_active_rfcs()
       rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
+      rfcIndex.update_url()
     },
 
     install_obsolete_handler: function () {
@@ -222,7 +224,7 @@ var rfcIndex;
         }
       }
       this.hide_impossible_tags(rfcList)
-      var count = document.createTextNode(rfcList.length + " RFCs")
+      var count = document.createTextNode(rfcList.length + ' RFCs')
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
       countTarget.appendChild(count)
@@ -336,11 +338,36 @@ var rfcIndex;
       var searchText = document.getElementById('search').value
       rfcIndex.searchWords = searchText.split(' ').filter(word => word)
       rfcIndex.show_rfcs(rfcIndex.list_active_rfcs(), document.getElementById('rfc-list'))
+      rfcIndex.update_url()
     },
 
     install_search_handler: function () {
       var searchTarget = document.getElementById('search')
       searchTarget.oninput = this.search_input
+    },
+
+    update_url: function () {
+      var queries = []
+      if (rfcIndex.searchWords) {
+        queries.push('search=' + rfcIndex.searchWords.join('%20'))
+      }
+      if (!rfcIndex.tags['status']['current'].active) {
+        queries.push('obsolete')
+      }
+      rfcIndex.tags.forEach(tagType => {
+        var activeTags = []
+        rfcIndex.tags[tagType].forEach(tagName => {
+          let tagData = rfcIndex.tags[tagType][tagName]
+          if (tagData.active === true) {
+            activeTags.push(tagName)
+          }
+        })
+        if (activeTags.length > 0) {
+          queries.push(tagType + '=' + activeTags.join(','))
+        }
+      })
+      var url = '?' + queries.join('&')
+      history.pushState({}, '', url)
     },
 
     cleanString: function (input) {
