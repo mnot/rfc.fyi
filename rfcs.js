@@ -38,6 +38,7 @@ var rfcIndex;
 
     prefixLen: 3,
     tagTypes: ['status', 'stream', 'level', 'wg'],
+    invisibleTagTypes: ['status'],
 
     init: function () {
       this.outstanding = 0 // outstanding fetches
@@ -51,6 +52,7 @@ var rfcIndex;
       this.rfcs = {} // RFC objects
       this.load_json('rfcs.json', 'rfcs')
       this.install_search_handler()
+      this.install_obsolete_handler()
     },
 
     load_json: function (url, dest) {
@@ -84,6 +86,7 @@ var rfcIndex;
     load_done: function () {
       // this.show_tags('tag', this.click_tag_handler)
       this.compute()
+      this.tags['status']['current'].active = true
       this.tagTypes.forEach(tagType => {
         rfcIndex.show_tags(tagType, rfcIndex.click_tag_handler)
       })
@@ -102,10 +105,12 @@ var rfcIndex;
               rfcIndex.tags[tagType] = {}
             }
             if (!rfcIndex.tags[tagType][tagName]) {
+              let visible = !rfcIndex.invisibleTagTypes.includes(tagType)
               rfcIndex.tags[tagType][tagName] = {
                 'colour': '',
                 'rfcs': [],
-                'active': false
+                'active': false,
+                'visible': visible
               }
             }
             rfcIndex.tags[tagType][tagName].rfcs.push(rfcNum)
@@ -121,6 +126,9 @@ var rfcIndex;
       var targetDiv = document.getElementById(tagType)
       rfcIndex.tags[tagType].forEach(tagName => {
         let tagData = rfcIndex.tags[tagType][tagName]
+        if (!tagData.visible) {
+          return
+        }
         rfcIndex.render_tag(tagType, tagName, tagData, targetDiv, handler, tagData['colour'])
         targetDiv.appendChild(document.createTextNode(' '))
       })
@@ -157,6 +165,21 @@ var rfcIndex;
         var selectedRfcs = rfcIndex.list_active_rfcs()
         rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
       }
+    },
+
+    show_obsolete_handler: function () {
+      if (rfcIndex.tags['status']['current'].active) {
+        rfcIndex.tags['status']['current'].active = false
+      } else {
+        rfcIndex.tags['status']['current'].active = true
+      }
+      var selectedRfcs = rfcIndex.list_active_rfcs()
+      rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
+    },
+
+    install_obsolete_handler: function () {
+      var obsoleteTarget = document.getElementById('obsolete')
+      obsoleteTarget.oninput = this.show_obsolete_handler
     },
 
     list_active_rfcs: function () {
