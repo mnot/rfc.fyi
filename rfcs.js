@@ -208,8 +208,7 @@ var rfcIndex;
 
     show_rfcs: function (rfcList, target) {
       this.clear(target)
-      for (let i = 0; i < rfcList.length; i = i + 1) {
-        let item = rfcList[i]
+      rfcList.forEach(item => {
         if (typeof (item) === 'object') { // it's a sublist
           let titleElement = document.createElement('h3')
           let titleContent = document.createTextNode(item.title)
@@ -222,7 +221,7 @@ var rfcIndex;
           let rfcData = this.rfcs[item]
           this.render_rfc(item, rfcData, target)
         }
-      }
+      })
       this.hide_impossible_tags(rfcList)
       var count = document.createTextNode(rfcList.length + ' RFCs')
       var countTarget = document.getElementById('count')
