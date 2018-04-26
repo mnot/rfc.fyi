@@ -6,7 +6,7 @@ rfcs.json: rfc-index.xml rfc-json.py
 	cat rfc-index.xml | ./rfc-json.py > rfcs.json
 
 rfc-index.xml:
-	curl "https://www.rfc-editor.org/rfc-index.xml" -o rfc-index.xml
+	curl "https://www.rfc-editor.org/rfc-index.xml" -o $@
 	
 .PHONY: server
 server:
