@@ -43,9 +43,9 @@ var rfcIndex;
     init: function () {
       this.outstanding = 0 // outstanding fetches
       this.tags = {} // tags and associated rfcs
-      this.active_tags = {} // what tags are active
-      this.words = {} // index of word prefixes to RFCs containing them
-      this.keywords = {} // index of keyword phrases to RFCs containing them
+      this.active_tags = new Map() // what tags are active
+      this.words = new Map() // index of word prefixes to RFCs containing them
+      this.keywords = new Map() // index of keyword phrases to RFCs containing them
       this.searchWords = [] // words the user is searching for
       this.load_json('tags.json', 'tags')
       this.allRfcs = [] // list of all RFC numbers
@@ -149,12 +149,12 @@ var rfcIndex;
 
     click_tag_handler: function (tagType, tagName, tagData, tagSpan) {
       return function (event) {
-        var alreadySelected = rfcIndex.active_tags[tagType]
+        var alreadySelected = rfcIndex.active_tags.get(tagType)
         if (alreadySelected && alreadySelected[0] !== tagName) {
           rfcIndex.tags[tagType][alreadySelected[0]].active = false
           alreadySelected[1].style['border-color'] = 'white'
         }
-        rfcIndex.active_tags[tagType] = [tagName, tagSpan]
+        rfcIndex.active_tags.set(tagType, [tagName, tagSpan])
         tagData.active = !tagData.active
         if (tagData.active === true) {
           tagSpan.style['border-color'] = 'black'
@@ -291,17 +291,17 @@ var rfcIndex;
       }
     },
 
-    search_index: function (words, inputId, destination) {
+    search_index: function (words, inputId, index) {
       words.forEach(word => {
         word = rfcIndex.cleanString(word)
         if (word.length < rfcIndex.prefixLen) {
           return
         }
         var prefix = word.substring(0, rfcIndex.prefixLen)
-        if (destination[prefix]) {
-          destination[prefix].add(inputId)
+        if (index.has(prefix)) {
+          index.get(prefix).add(inputId)
         } else {
-          destination[prefix] = new Set([inputId])
+          index.set(prefix, new Set([inputId]))
         }
       })
     },
@@ -309,7 +309,7 @@ var rfcIndex;
     search_lookup: function (searchWord, index, attr) {
       searchWord = this.cleanString(searchWord)
       var searchPrefix = searchWord.substring(0, this.prefixLen)
-      var matchRfcs = new Set(index[searchPrefix])
+      var matchRfcs = new Set(index.get(searchPrefix))
       if (searchWord.length > this.prefixLen) {
         matchRfcs.forEach(rfcNum => {
           let fullItem = rfcIndex.rfcs[rfcNum][attr]
