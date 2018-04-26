@@ -95,8 +95,7 @@ var rfcIndex;
     compute: function () {
       this.allRfcs = Object.keys(this.rfcs)
       this.allRfcs.sort(this.rfcSort)
-      for (let i = 0; i < this.allRfcs.length; i = i + 1) {
-        let rfcNum = this.allRfcs[i]
+      this.allRfcs.forEach(rfcNum => {
         let rfc = this.rfcs[rfcNum]
         rfcIndex.tagTypes.forEach(tagType => {
           let tagName = rfc[tagType]
@@ -119,7 +118,7 @@ var rfcIndex;
         // index titles
         this.search_index(rfc['title'].split(' '), rfcNum, this.words)
         this.search_index(rfc['keywords'], rfcNum, this.keywords)
-      }
+      })
     },
 
     show_tags: function (tagType, handler) {
