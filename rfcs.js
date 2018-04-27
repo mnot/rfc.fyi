@@ -87,6 +87,8 @@ var rfcIndex;
       obsoleteTarget.oninput = this.show_obsolete_handler
       var searchTarget = document.getElementById('search')
       searchTarget.oninput = this.search_input
+      var form = document.forms[0]
+      form.onsubmit = function () { return false }
     },
 
     load_done: function () {
