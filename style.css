@@ -35,3 +35,7 @@ body {
   border-radius: .25em;
   border: 1px solid white;
 }
+
+h2 {
+    font-size: 14pt;
+}
