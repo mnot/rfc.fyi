@@ -51,8 +51,7 @@ var rfcIndex;
       this.allRfcs = [] // list of all RFC numbers
       this.rfcs = {} // RFC objects
       this.load_json('rfcs.json', 'rfcs')
-      this.install_search_handler()
-      this.install_obsolete_handler()
+      this.install_form_handlers()
     },
 
     load_json: function (url, dest) {
@@ -81,6 +80,13 @@ var rfcIndex;
           alert('Request error: ' + url + ' (' + e3 + ')')
         }
       }
+    },
+
+    install_form_handlers: function () {
+      var obsoleteTarget = document.getElementById('obsolete')
+      obsoleteTarget.oninput = this.show_obsolete_handler
+      var searchTarget = document.getElementById('search')
+      searchTarget.oninput = this.search_input
     },
 
     load_done: function () {
@@ -177,11 +183,6 @@ var rfcIndex;
       var selectedRfcs = rfcIndex.list_active_rfcs()
       rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
       rfcIndex.update_url()
-    },
-
-    install_obsolete_handler: function () {
-      var obsoleteTarget = document.getElementById('obsolete')
-      obsoleteTarget.oninput = this.show_obsolete_handler
     },
 
     list_active_rfcs: function () {
@@ -339,11 +340,6 @@ var rfcIndex;
       rfcIndex.searchWords = searchText.split(' ').filter(word => word)
       rfcIndex.show_rfcs(rfcIndex.list_active_rfcs(), document.getElementById('rfc-list'))
       rfcIndex.update_url()
-    },
-
-    install_search_handler: function () {
-      var searchTarget = document.getElementById('search')
-      searchTarget.oninput = this.search_input
     },
 
     update_url: function () {
