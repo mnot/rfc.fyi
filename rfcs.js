@@ -137,7 +137,7 @@ var rfcIndex;
         if (!tagData.visible) {
           return
         }
-        rfcIndex.render_tag(tagType, tagName, tagData, targetDiv, clickHandler, tagData['colour'])
+        rfcIndex.render_tag(tagType, tagName, targetDiv, clickHandler, tagData['colour'])
         targetDiv.appendChild(document.createTextNode(' '))
       })
     },
@@ -163,7 +163,7 @@ var rfcIndex;
       })
     },
 
-    render_tag: function (tagType, tagName, tagData, target, handler, bgColour) {
+    render_tag: function (tagType, tagName, target, handler, bgColour) {
       var tagSpan = document.createElement('span')
       var tagContent = document.createTextNode(tagName)
       tagSpan.appendChild(tagContent)
@@ -171,13 +171,13 @@ var rfcIndex;
       tagSpan.style.backgroundColor = bgColour || this.gen_colour()
       tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
       if (handler) {
-        tagSpan.onclick = handler(tagType, tagName, tagData, tagSpan)
+        tagSpan.onclick = handler(tagType, tagName, tagSpan)
       }
       target.appendChild(tagSpan)
       this.tags[tagType][tagName].target = tagSpan
     },
 
-    click_tag_handler: function (tagType, tagName, tagData, tagSpan) {
+    click_tag_handler: function (tagType, tagName, tagSpan) {
       return function (event) {
         var alreadySelected = rfcIndex.active_tags.get(tagType)
         if (alreadySelected && alreadySelected[0] !== tagName) {
@@ -185,6 +185,7 @@ var rfcIndex;
           alreadySelected[1].style['border-color'] = 'white'
         }
         rfcIndex.active_tags.set(tagType, [tagName, tagSpan])
+        var tagData = rfcIndex.tags[tagType][tagName]
         tagData.active = !tagData.active
         if (tagData.active === true) {
           tagSpan.style['border-color'] = 'black'
