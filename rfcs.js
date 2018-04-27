@@ -130,15 +130,36 @@ var rfcIndex;
       })
     },
 
-    show_tags: function (tagType, handler) {
+    show_tags: function (tagType, clickHandler) {
       var targetDiv = document.getElementById(tagType)
       rfcIndex.tags[tagType].forEach(tagName => {
         let tagData = rfcIndex.tags[tagType][tagName]
         if (!tagData.visible) {
           return
         }
-        rfcIndex.render_tag(tagType, tagName, tagData, targetDiv, handler, tagData['colour'])
+        rfcIndex.render_tag(tagType, tagName, tagData, targetDiv, clickHandler, tagData['colour'])
         targetDiv.appendChild(document.createTextNode(' '))
+      })
+    },
+
+    show_relevant_tags: function (rfcList) {
+      var possibleTags = {}
+      rfcIndex.tagTypes.forEach(tagType => {
+        possibleTags[tagType] = new Set()
+      })
+      rfcList.forEach(rfcNum => {
+        rfcIndex.tagTypes.forEach(tagType => {
+          possibleTags[tagType].add(rfcIndex.rfcs[rfcNum][tagType])
+        })
+      })
+      rfcIndex.tagTypes.forEach(tagType => {
+        rfcIndex.tags[tagType].forEach(tagName => {
+          if (!rfcIndex.tags[tagType][tagName].visible) {
+            return
+          }
+          let active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
+          rfcIndex.tags[tagType][tagName].target.style.display = active
+        })
       })
     },
 
@@ -226,7 +247,7 @@ var rfcIndex;
           this.render_rfc(item, rfcData, target)
         }
       })
-      this.hide_impossible_tags(rfcList)
+      this.show_relevant_tags(rfcList)
       var count = document.createTextNode(rfcList.length + ' RFCs')
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
@@ -244,30 +265,6 @@ var rfcIndex;
       var rfcTitle = document.createTextNode(rfcData.title)
       rfcLink.appendChild(rfcTitle)
       target.appendChild(rfcSpan)
-    },
-
-    hide_impossible_tags: function (rfcList) {
-      var possibleTags = {
-        'status': new Set(),
-        'stream': new Set(),
-        'level': new Set(),
-        'wg': new Set()
-      }
-      rfcList.forEach(rfcNum => {
-        possibleTags['status'].add(rfcIndex.rfcs[rfcNum].status)
-        possibleTags['stream'].add(rfcIndex.rfcs[rfcNum].stream)
-        possibleTags['level'].add(rfcIndex.rfcs[rfcNum].level)
-        possibleTags['wg'].add(rfcIndex.rfcs[rfcNum].wg)
-      })
-      rfcIndex.tagTypes.forEach(tagType => {
-        rfcIndex.tags[tagType].forEach(tagName => {
-          if (!rfcIndex.tags[tagType][tagName].visible) {
-            return
-          }
-          let active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
-          rfcIndex.tags[tagType][tagName].target.style.display = active
-        })
-      })
     },
 
     clear: function (target) {
