@@ -111,12 +111,10 @@ var rfcIndex;
           if (tagName) {
             if (!rfcIndex.tags[tagType]) rfcIndex.tags[tagType] = {}
             if (!rfcIndex.tags[tagType][tagName]) {
-              let shown = !rfcIndex.unshownTagTypes.includes(tagType)
               rfcIndex.tags[tagType][tagName] = {
                 'colour': '',
                 'rfcs': [],
-                'active': false,
-                'shown': shown
+                'active': false
               }
             }
             rfcIndex.tags[tagType][tagName].rfcs.push(rfcNum)
@@ -137,25 +135,6 @@ var rfcIndex;
       })
     },
 
-    show_relevant_tags: function (rfcList) {
-      var possibleTags = {}
-      rfcIndex.tagTypes.forEach(tagType => {
-        possibleTags[tagType] = new Set()
-      })
-      rfcList.forEach(rfcNum => {
-        rfcIndex.tagTypes.forEach(tagType => {
-          possibleTags[tagType].add(rfcIndex.rfcs[rfcNum][tagType])
-        })
-      })
-      rfcIndex.tagTypes.forEach(tagType => {
-        rfcIndex.tags[tagType].forEach(tagName => {
-          if (!rfcIndex.tags[tagType][tagName].shown) return
-          let visibility = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
-          rfcIndex.tags[tagType][tagName].target.style.display = visibility
-        })
-      })
-    },
-
     render_tag: function (tagType, tagName, target, clickHandler) {
       var tagSpan = document.createElement('span')
       var tagContent = document.createTextNode(tagName)
@@ -169,6 +148,25 @@ var rfcIndex;
       }
       target.appendChild(tagSpan)
       this.tags[tagType][tagName].target = tagSpan
+    },
+
+    show_relevant_tags: function (rfcList) {
+      var possibleTags = {}
+      rfcIndex.tagTypes.forEach(tagType => {
+        possibleTags[tagType] = new Set()
+      })
+      rfcList.forEach(rfcNum => {
+        rfcIndex.tagTypes.forEach(tagType => {
+          possibleTags[tagType].add(rfcIndex.rfcs[rfcNum][tagType])
+        })
+      })
+      rfcIndex.tagTypes.forEach(tagType => {
+        if (rfcIndex.unshownTagTypes.includes(tagType)) return
+        rfcIndex.tags[tagType].forEach(tagName => {
+          let visibility = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
+          rfcIndex.tags[tagType][tagName].target.style.display = visibility
+        })
+      })
     },
 
     click_tag_handler: function (tagType, tagName, tagSpan) {
@@ -364,9 +362,7 @@ var rfcIndex;
         rfcIndex.tags['status']['current'].active = true
       }
       rfcIndex.tagTypes.forEach(tagType => {
-        if (rfcIndex.unshownTagTypes.includes(tagType)) {
-          return
-        }
+        if (rfcIndex.unshownTagTypes.includes(tagType)) return
         var tagstring = rfcIndex.getParameterByName(tagType)
         if (tagstring) {
           var tags = tagstring.split(',')
