@@ -77,7 +77,7 @@ var rfcIndex;
           req.send('')
         } catch (e3) {
           rfcIndex.outstanding -= 1
-          alert('Request error: ' + url + ' (' + e3 + ')')
+          alert(`Request error: ${url} (${e3})`)
         }
       }
     },
