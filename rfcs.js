@@ -334,7 +334,7 @@ var rfcIndex;
 
     update_url: function () {
       var queries = []
-      if (rfcIndex.searchWords) {
+      if (rfcIndex.searchWords.length > 0) {
         queries.push('search=' + rfcIndex.searchWords.join('%20'))
       }
       if (!rfcIndex.tags['status']['current'].active) {
