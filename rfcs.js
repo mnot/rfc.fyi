@@ -232,7 +232,9 @@ var rfcIndex;
       var searchedRfcs = new Set()
       var rfcList = []
       var userInput = false
-      if (rfcIndex.active_tags.size !== 0 || rfcIndex.searchWords.length !== 0) {
+      if (rfcIndex.active_tags.size !== 0 ||
+          (rfcIndex.searchWords.length !== 0 &&
+           rfcIndex.searchWords[0].length >= rfcIndex.prefixLen)) {
         userInput = true
         var taggedRfcs = rfcIndex.list_tagged_rfcs()
         searchedRfcs = rfcIndex.list_searched_rfcs()
@@ -247,7 +249,7 @@ var rfcIndex;
       var count = document.createTextNode(rfcList.length + ' RFCs')
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
-      if (userInput) countTarget.appendChild(count)
+      countTarget.appendChild(count)
       rfcIndex.set_container(rfcList.length > 0 || userInput)
     },
 
