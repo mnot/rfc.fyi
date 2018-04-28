@@ -132,7 +132,6 @@ var rfcIndex;
       if (rfcIndex.unshownTagTypes.includes(tagType)) return
       var targetDiv = document.getElementById(tagType)
       rfcIndex.tags[tagType].forEach(tagName => {
-        if (!rfcIndex.tags[tagType][tagName].shown) return
         rfcIndex.render_tag(tagType, tagName, targetDiv, clickHandler)
         targetDiv.appendChild(document.createTextNode(' '))
       })
@@ -151,8 +150,8 @@ var rfcIndex;
       rfcIndex.tagTypes.forEach(tagType => {
         rfcIndex.tags[tagType].forEach(tagName => {
           if (!rfcIndex.tags[tagType][tagName].shown) return
-          let active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
-          rfcIndex.tags[tagType][tagName].target.style.display = active
+          let visibility = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
+          rfcIndex.tags[tagType][tagName].target.style.display = visibility
         })
       })
     },
@@ -165,7 +164,6 @@ var rfcIndex;
       tagSpan.classList.add('tag')
       tagSpan.style.backgroundColor = tagData['colour'] || this.gen_colour()
       tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
-      tagSpan.style.display = tagData.shown ? 'inline' : 'none'
       if (clickHandler) {
         tagSpan.onclick = clickHandler(tagType, tagName, tagSpan)
       }
