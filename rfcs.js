@@ -345,9 +345,9 @@ var rfcIndex;
         matchRfcs.forEach(rfcNum => {
           let hit = false
           let fullItem = rfcIndex.rfcs[rfcNum][attr]
-          if (!Array.isArray(fullItem)) fullItem = [fullItem]
+          if (typeof (fullItem) === 'string') fullItem = fullItem.split(' ')
           fullItem.forEach(item => {
-            if (rfcIndex.cleanString(item).includes(searchWord)) hit = true
+            if (rfcIndex.cleanString(item).startsWith(searchWord)) hit = true
           })
           if (!hit) matchRfcs.delete(rfcNum)
         })
