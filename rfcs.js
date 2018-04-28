@@ -1,4 +1,4 @@
-/* global alert, history, XMLHttpRequest */
+/* global history, XMLHttpRequest */
 
 var rfcIndex;
 
@@ -94,7 +94,7 @@ var rfcIndex;
         req.send('')
       } catch (e3) {
         rfcIndex.outstanding -= 1
-        alert(`Request error: ${url} (${e3})`)
+        console.log(`Request error: ${url} (${e3})`)
       }
     },
 
