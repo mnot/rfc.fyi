@@ -151,30 +151,35 @@ var rfcIndex;
       tagSpan.classList.add('tag')
       tagSpan.style.backgroundColor = tagData['colour'] || this.gen_colour()
       tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
+      this.tags[tagType][tagName].target = tagSpan
       if (clickHandler) {
-        tagSpan.onclick = clickHandler(tagType, tagName, tagSpan)
+        tagSpan.onclick = clickHandler(tagType, tagName)
       }
       target.appendChild(tagSpan)
-      this.tags[tagType][tagName].target = tagSpan
     },
 
-    click_tag_handler: function (tagType, tagName, tagSpan) {
+    click_tag_handler: function (tagType, tagName) {
       return function (event) {
-        var alreadySelected = rfcIndex.active_tags.get(tagType)
-        if (alreadySelected && alreadySelected[0] !== tagName) {
-          rfcIndex.tags[tagType][alreadySelected[0]].active = false
-          alreadySelected[1].style['border-color'] = 'white'
+        var activeTag = rfcIndex.active_tags.get(tagType)
+        if (activeTag && activeTag !== tagName) {
+          let activeTagData = rfcIndex.tags[tagType][activeTag]
+          activeTagData.active = false
+          activeTagData.target.style['border-color'] = 'white'
         }
-        rfcIndex.active_tags.set(tagType, [tagName, tagSpan])
+        rfcIndex.active_tags.set(tagType, tagName)
         var tagData = rfcIndex.tags[tagType][tagName]
         tagData.active = !tagData.active
-        if (tagData.active === true) {
-          tagSpan.style['border-color'] = 'black'
-        } else {
-          tagSpan.style['border-color'] = 'white'
-        }
+        rfcIndex.set_tag_activity(tagData)
         rfcIndex.show_rfcs()
         rfcIndex.update_url()
+      }
+    },
+
+    set_tag_activity: function (tagData) {
+      if (tagData.active === true) {
+        tagData.target.style['border-color'] = 'black'
+      } else {
+        tagData.target.style['border-color'] = 'white'
       }
     },
 
