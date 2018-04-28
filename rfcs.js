@@ -38,7 +38,7 @@ var rfcIndex;
 
     prefixLen: 3,
     tagTypes: ['status', 'stream', 'level', 'wg'],
-    invisibleTagTypes: ['status'],
+    unshownTagTypes: ['status'],
 
     init: function () {
       this.outstanding = 0 // outstanding fetches
@@ -109,11 +109,9 @@ var rfcIndex;
         rfcIndex.tagTypes.forEach(tagType => {
           let tagName = rfc[tagType]
           if (tagName) {
-            if (!rfcIndex.tags[tagType]) {
-              rfcIndex.tags[tagType] = {}
-            }
+            if (!rfcIndex.tags[tagType]) rfcIndex.tags[tagType] = {}
             if (!rfcIndex.tags[tagType][tagName]) {
-              let visible = !rfcIndex.invisibleTagTypes.includes(tagType)
+              let visible = !rfcIndex.unshownTagTypes.includes(tagType)
               rfcIndex.tags[tagType][tagName] = {
                 'colour': '',
                 'rfcs': [],
@@ -131,13 +129,11 @@ var rfcIndex;
     },
 
     show_tags: function (tagType, clickHandler) {
+      if (rfcIndex.unshownTagTypes.includes(tagType)) return
       var targetDiv = document.getElementById(tagType)
       rfcIndex.tags[tagType].forEach(tagName => {
-        let tagData = rfcIndex.tags[tagType][tagName]
-        if (!tagData.visible) {
-          return
-        }
-        rfcIndex.render_tag(tagType, tagName, targetDiv, clickHandler, tagData['colour'])
+        if (!rfcIndex.tags[tagType][tagName].visible) return
+        rfcIndex.render_tag(tagType, tagName, targetDiv, clickHandler)
         targetDiv.appendChild(document.createTextNode(' '))
       })
     },
@@ -154,24 +150,24 @@ var rfcIndex;
       })
       rfcIndex.tagTypes.forEach(tagType => {
         rfcIndex.tags[tagType].forEach(tagName => {
-          if (!rfcIndex.tags[tagType][tagName].visible) {
-            return
-          }
+          if (!rfcIndex.tags[tagType][tagName].visible) return
           let active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
           rfcIndex.tags[tagType][tagName].target.style.display = active
         })
       })
     },
 
-    render_tag: function (tagType, tagName, target, handler, bgColour) {
+    render_tag: function (tagType, tagName, target, clickHandler) {
       var tagSpan = document.createElement('span')
       var tagContent = document.createTextNode(tagName)
+      var tagData = rfcIndex.tags[tagType][tagName]
       tagSpan.appendChild(tagContent)
       tagSpan.classList.add('tag')
-      tagSpan.style.backgroundColor = bgColour || this.gen_colour()
+      tagSpan.style.backgroundColor = tagData['colour'] || this.gen_colour()
       tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
-      if (handler) {
-        tagSpan.onclick = handler(tagType, tagName, tagSpan)
+      tagSpan.style.display = tagData.visible ? 'inline' : 'none'
+      if (clickHandler) {
+        tagSpan.onclick = clickHandler(tagType, tagName, tagSpan)
       }
       target.appendChild(tagSpan)
       this.tags[tagType][tagName].target = tagSpan
@@ -377,7 +373,7 @@ var rfcIndex;
         rfcIndex.tags['status']['current'].active = true
       }
       rfcIndex.tagTypes.forEach(tagType => {
-        if (rfcIndex.invisibleTagTypes.includes(tagType)) {
+        if (rfcIndex.unshownTagTypes.includes(tagType)) {
           return
         }
         var tagstring = rfcIndex.getParameterByName(tagType)
