@@ -69,7 +69,7 @@ var rfcIndex;
       this.words = new Map() // index of word prefixes to RFCs containing them
       this.keywords = new Map() // index of keyword phrases to RFCs containing them
       this.searchWords = [] // words the user is searching for
-      this.tags = {}
+      this.tags = {} // tag objects
       this.load_json('tags.json', 'tags')
       this.allRfcs = [] // list of all RFC numbers
       this.rfcs = {} // RFC objects
