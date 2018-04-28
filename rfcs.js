@@ -150,30 +150,6 @@ var rfcIndex;
       this.tags[tagType][tagName].target = tagSpan
     },
 
-    show_relevant_tags: function (rfcList) {
-      var relevantTags = {}
-      rfcIndex.tagTypes.forEach(tagType => {
-        relevantTags[tagType] = new Set()
-      })
-      rfcList.forEach(rfcNum => {
-        rfcIndex.tagTypes.forEach(tagType => {
-          let tag = rfcIndex.rfcs[rfcNum][tagType]
-          if (tag) {
-            relevantTags[tagType].add(tag)
-          }
-        })
-      })
-      rfcIndex.tagTypes.forEach(tagType => {
-        if (rfcIndex.unshownTagTypes.includes(tagType)) return
-        let header = document.getElementById(tagType + '-header')
-        header.style.display = relevantTags[tagType].size > 0 ? 'block' : 'none'
-        rfcIndex.tags[tagType].forEach(tagName => {
-          let visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
-          rfcIndex.tags[tagType][tagName].target.style.display = visibility
-        })
-      })
-    },
-
     click_tag_handler: function (tagType, tagName, tagSpan) {
       return function (event) {
         var alreadySelected = rfcIndex.active_tags.get(tagType)
@@ -255,6 +231,30 @@ var rfcIndex;
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
       countTarget.appendChild(count)
+    },
+
+    show_relevant_tags: function (rfcList) {
+      var relevantTags = {}
+      rfcIndex.tagTypes.forEach(tagType => {
+        relevantTags[tagType] = new Set()
+      })
+      rfcList.forEach(rfcNum => {
+        rfcIndex.tagTypes.forEach(tagType => {
+          let tag = rfcIndex.rfcs[rfcNum][tagType]
+          if (tag) {
+            relevantTags[tagType].add(tag)
+          }
+        })
+      })
+      rfcIndex.tagTypes.forEach(tagType => {
+        if (rfcIndex.unshownTagTypes.includes(tagType)) return
+        let header = document.getElementById(tagType + '-header')
+        header.style.display = relevantTags[tagType].size > 0 ? 'block' : 'none'
+        rfcIndex.tags[tagType].forEach(tagName => {
+          let visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
+          rfcIndex.tags[tagType][tagName].target.style.display = visibility
+        })
+      })
     },
 
     render_rfc: function (rfcName, rfcData, target) {
