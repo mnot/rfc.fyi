@@ -304,6 +304,13 @@ var rfcIndex;
       })
     },
 
+    search_input: function () {
+      var searchText = document.getElementById('search').value
+      rfcIndex.searchWords = searchText.split(' ').filter(word => word)
+      rfcIndex.show_rfcs(rfcIndex.list_active_rfcs(), document.getElementById('rfc-list'))
+      rfcIndex.update_url()
+    },
+
     search_lookup: function (searchWord, index, attr) {
       searchWord = this.cleanString(searchWord)
       var searchPrefix = searchWord.substring(0, this.prefixLen)
@@ -329,13 +336,6 @@ var rfcIndex;
         })
       }
       return matchRfcs
-    },
-
-    search_input: function () {
-      var searchText = document.getElementById('search').value
-      rfcIndex.searchWords = searchText.split(' ').filter(word => word)
-      rfcIndex.show_rfcs(rfcIndex.list_active_rfcs(), document.getElementById('rfc-list'))
-      rfcIndex.update_url()
     },
 
     update_url: function () {
