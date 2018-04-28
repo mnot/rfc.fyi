@@ -56,6 +56,7 @@ var rfcIndex;
     tagTypes: ['status', 'stream', 'level', 'wg'],
     unshownTagTypes: ['status'],
     oldTags: [
+      'status-obsoleted',
       'stream-legacy',
       'level-historic'
     ],
@@ -115,7 +116,6 @@ var rfcIndex;
     load_done: function () {
       // this.init_tags('tag', this.click_tag_handler)
       this.compute()
-      this.tags['status']['current'].active = true
       this.tagTypes.forEach(tagType => {
         rfcIndex.init_tags(tagType, rfcIndex.click_tag_handler)
       })
@@ -201,11 +201,6 @@ var rfcIndex;
     },
 
     show_obsolete_handler: function () {
-      if (rfcIndex.tags['status']['current'].active) {
-        rfcIndex.tags['status']['current'].active = false
-      } else {
-        rfcIndex.tags['status']['current'].active = true
-      }
       rfcIndex.verbose = !rfcIndex.verbose
       rfcIndex.show_rfcs()
       rfcIndex.update_url()
@@ -388,13 +383,10 @@ var rfcIndex;
       if (rfcIndex.searchWords.length > 0) {
         queries.push('search=' + rfcIndex.searchWords.join('%20'))
       }
-      if (!rfcIndex.tags['status']['current'].active) {
+      if (rfcIndex.verbose) {
         queries.push('obsolete')
       }
       rfcIndex.tags.forEach(tagType => {
-        if (tagType === 'status') {
-          return
-        }
         var activeTags = []
         rfcIndex.tags[tagType].forEach(tagName => {
           let tagData = rfcIndex.tags[tagType][tagName]
@@ -416,9 +408,11 @@ var rfcIndex;
       var search = rfcIndex.getParameterByName('search') || ''
       document.getElementById('search').value = search
       rfcIndex.searchWords = search.split(' ').filter(word => word)
-      if (rfcIndex.getParameterByName('obsolete')) {
-        rfcIndex.tags['status']['current'].active = true
+      if (rfcIndex.getParameterByName('obsolete') !== null) {
+        rfcIndex.verbose = true
       }
+      var obsoleteTarget = document.getElementById('obsolete')
+      obsoleteTarget.checked = rfcIndex.verbose
       rfcIndex.tagTypes.forEach(tagType => {
         if (rfcIndex.unshownTagTypes.includes(tagType)) return
         var tagstring = rfcIndex.getParameterByName(tagType)
