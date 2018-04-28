@@ -262,6 +262,8 @@ var rfcIndex;
       var relevantTags = {}
       rfcIndex.tagTypes.forEach(tagType => {
         relevantTags[tagType] = new Set()
+        var activeTag = rfcIndex.active_tags.get(tagType)
+        if (activeTag) relevantTags[tagType].add(activeTag)
       })
       rfcSet.forEach(rfcNum => {
         rfcIndex.tagTypes.forEach(tagType => {
