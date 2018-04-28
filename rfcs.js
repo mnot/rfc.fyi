@@ -26,6 +26,16 @@ var rfcIndex;
     return union
   }
 
+  Set.prototype.difference = function (setB) { // eslint-disable-line
+    var difference = new Set()
+    for (let elem of this) {
+      if (!setB.has(elem)) {
+        difference.add(elem)
+      }
+    }
+    return difference
+  }
+
   Object.prototype.forEach = function (func) { // eslint-disable-line
     for (let item in this) {
       if (this.hasOwnProperty(item)) {
@@ -45,11 +55,16 @@ var rfcIndex;
     prefixLen: 3,
     tagTypes: ['status', 'stream', 'level', 'wg'],
     unshownTagTypes: ['status'],
+    oldTags: [
+      'stream-legacy',
+      'level-historic'
+    ],
 
     init: function () {
       this.outstanding = 0 // outstanding fetches
       this.tags = {} // tags and associated rfcs
       this.active_tags = new Map() // what tags are active
+      this.verbose = false // whether we're showing obsolete, etc.
       this.words = new Map() // index of word prefixes to RFCs containing them
       this.keywords = new Map() // index of keyword phrases to RFCs containing them
       this.searchWords = [] // words the user is searching for
@@ -191,6 +206,7 @@ var rfcIndex;
       } else {
         rfcIndex.tags['status']['current'].active = true
       }
+      rfcIndex.verbose = !rfcIndex.verbose
       rfcIndex.show_rfcs()
       rfcIndex.update_url()
     },
@@ -200,9 +216,11 @@ var rfcIndex;
       rfcIndex.tags.forEach(tagType => {
         rfcIndex.tags[tagType].forEach(tagName => {
           let tagData = rfcIndex.tags[tagType][tagName]
+          let rfcs = new Set(tagData.rfcs)
           if (tagData.active === true) {
-            let rfcs = new Set(tagData.rfcs)
             filteredRfcs = filteredRfcs.intersection(rfcs)
+          } else if (!rfcIndex.verbose && rfcIndex.oldTags.includes(`${tagType}-${tagName}`)) {
+            filteredRfcs = filteredRfcs.difference(rfcs)
           }
         })
       })
@@ -262,9 +280,12 @@ var rfcIndex;
       })
       rfcSet.forEach(rfcNum => {
         rfcIndex.tagTypes.forEach(tagType => {
-          let tag = rfcIndex.rfcs[rfcNum][tagType]
-          if (tag) {
-            relevantTags[tagType].add(tag)
+          let tagName = rfcIndex.rfcs[rfcNum][tagType]
+          if (!rfcIndex.verbose && rfcIndex.oldTags.includes(`${tagType}-${tagName}`)) {
+            return
+          }
+          if (tagName) {
+            relevantTags[tagType].add(tagName)
           }
         })
       })
