@@ -318,21 +318,12 @@ var rfcIndex;
       if (searchWord.length > this.prefixLen) {
         matchRfcs.forEach(rfcNum => {
           let fullItem = rfcIndex.rfcs[rfcNum][attr]
-          if (Array.isArray(fullItem)) {
-            let hit = false
-            fullItem.forEach(item => {
-              if (rfcIndex.cleanString(item).includes(searchWord)) {
-                hit = true
-              }
-            })
-            if (!hit) {
-              matchRfcs.delete(rfcNum)
-            }
-          } else {
-            if (!rfcIndex.cleanString(fullItem).includes(searchWord)) {
-              matchRfcs.delete(rfcNum)
-            }
-          }
+          let hit = false
+          if (!Array.isArray(fullItem)) fullItem = [fullItem]
+          fullItem.forEach(item => {
+            if (rfcIndex.cleanString(item).includes(searchWord)) hit = true
+          })
+          if (!hit) matchRfcs.delete(rfcNum)
         })
       }
       return matchRfcs
