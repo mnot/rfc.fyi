@@ -226,19 +226,19 @@ var rfcIndex;
           this.render_rfc(item, rfcData, target)
         }
       })
-      this.show_relevant_tags(rfcList)
+      this.show_relevant_tags(searchedRfcs)
       var count = document.createTextNode(rfcList.length + ' RFCs')
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
       countTarget.appendChild(count)
     },
 
-    show_relevant_tags: function (rfcList) {
+    show_relevant_tags: function (rfcSet) {
       var relevantTags = {}
       rfcIndex.tagTypes.forEach(tagType => {
         relevantTags[tagType] = new Set()
       })
-      rfcList.forEach(rfcNum => {
+      rfcSet.forEach(rfcNum => {
         rfcIndex.tagTypes.forEach(tagType => {
           let tag = rfcIndex.rfcs[rfcNum][tagType]
           if (tag) {
