@@ -204,9 +204,8 @@ var rfcIndex;
       rfcIndex.update_url()
     },
 
-    list_active_rfcs: function () {
+    list_tagged_rfcs: function () {
       var filteredRfcs = new Set(this.allRfcs)
-      // apply selected tags
       rfcIndex.tags.forEach(tagType => {
         rfcIndex.tags[tagType].forEach(tagName => {
           let tagData = rfcIndex.tags[tagType][tagName]
@@ -216,7 +215,11 @@ var rfcIndex;
           }
         })
       })
-      // apply search words
+      return filteredRfcs
+    },
+
+    list_searched_rfcs: function () {
+      var filteredRfcs = new Set(this.allRfcs)
       rfcIndex.searchWords.forEach(searchWord => {
         if (searchWord.length >= rfcIndex.prefixLen || rfcIndex.searchWords.length === 1) {
           let wordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.words, 'title')
@@ -224,14 +227,15 @@ var rfcIndex;
           filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
         }
       })
-      var rfcList = Array.from(filteredRfcs)
-      rfcList.sort(this.rfcSort)
-      return rfcList
+      return filteredRfcs
     },
 
     show_rfcs: function (target) {
       this.clear(target)
-      var rfcList = rfcIndex.list_active_rfcs()
+      var taggedRfcs = rfcIndex.list_tagged_rfcs()
+      var searchedRfcs = rfcIndex.list_searched_rfcs()
+      var rfcList = Array.from(taggedRfcs.intersection(searchedRfcs))
+      rfcList.sort(this.rfcSort)
       rfcList.forEach(item => {
         if (typeof (item) === 'object') { // it's a sublist
           let titleElement = document.createElement('h3')
