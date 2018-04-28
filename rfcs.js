@@ -237,6 +237,7 @@ var rfcIndex;
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
       if (userInput) countTarget.appendChild(count)
+      rfcIndex.set_container(rfcList.length)
     },
 
     show_relevant_tags: function (rfcSet) {
@@ -261,6 +262,11 @@ var rfcIndex;
           rfcIndex.tags[tagType][tagName].target.style.display = visibility
         })
       })
+    },
+
+    set_container: function (hasResults) {
+      var container = document.getElementById('container')
+      container.className = hasResults ? 'results' : 'noresults'
     },
 
     render_rfc: function (rfcName, rfcData, target) {

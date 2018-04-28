@@ -17,18 +17,37 @@ body {
   padding: 0; 
 }
 
+.noresults #selector {
+  margin: 50px auto;
+  width: 600px;
+}
+
 #main {
   flex: 1;
   margin: 1em 0 0 50px;
   padding: 0;
 }
 
+.noresults #main {
+  display: none;
+  flex: 0;
+}
+
 input#search {
   width: 240px;
 }
 
+.noresults input#search {
+  width: 600px;
+  font-size: 20px;
+}
+
 .obsolete {
   font-size: 85%;
+}
+
+.noresults .obsolete {
+  display: none;
 }
 
 .tag {
