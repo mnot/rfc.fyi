@@ -78,30 +78,23 @@ var rfcIndex;
     },
 
     load_json: function (url, dest) {
-      var req = false
-      try {
-        req = new XMLHttpRequest()
-      } catch (e1) {
-        req = false
-      }
-      if (req) {
-        req.onreadystatechange = function () {
-          if (req.readyState === 4) {
-            rfcIndex.outstanding -= 1
-            rfcIndex[dest] = JSON.parse(req.responseText)
-            if (rfcIndex.outstanding === 0) {
-              rfcIndex.load_done()
-            }
+      var req = new XMLHttpRequest()
+      req.onreadystatechange = function () {
+        if (req.readyState === 4) {
+          rfcIndex.outstanding -= 1
+          rfcIndex[dest] = JSON.parse(req.responseText)
+          if (rfcIndex.outstanding === 0) {
+            rfcIndex.load_done()
           }
         }
-        try {
-          rfcIndex.outstanding += 1
-          req.open('GET', url, true)
-          req.send('')
-        } catch (e3) {
-          rfcIndex.outstanding -= 1
-          alert(`Request error: ${url} (${e3})`)
-        }
+      }
+      try {
+        rfcIndex.outstanding += 1
+        req.open('GET', url, true)
+        req.send('')
+      } catch (e3) {
+        rfcIndex.outstanding -= 1
+        alert(`Request error: ${url} (${e3})`)
       }
     },
 
