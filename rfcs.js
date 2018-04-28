@@ -92,11 +92,11 @@ var rfcIndex;
     },
 
     load_done: function () {
-      // this.show_tags('tag', this.click_tag_handler)
+      // this.init_tags('tag', this.click_tag_handler)
       this.compute()
       this.tags['status']['current'].active = true
       this.tagTypes.forEach(tagType => {
-        rfcIndex.show_tags(tagType, rfcIndex.click_tag_handler)
+        rfcIndex.init_tags(tagType, rfcIndex.click_tag_handler)
       })
       this.load_url()
     },
@@ -111,12 +111,12 @@ var rfcIndex;
           if (tagName) {
             if (!rfcIndex.tags[tagType]) rfcIndex.tags[tagType] = {}
             if (!rfcIndex.tags[tagType][tagName]) {
-              let visible = !rfcIndex.unshownTagTypes.includes(tagType)
+              let shown = !rfcIndex.unshownTagTypes.includes(tagType)
               rfcIndex.tags[tagType][tagName] = {
                 'colour': '',
                 'rfcs': [],
                 'active': false,
-                'visible': visible
+                'shown': shown
               }
             }
             rfcIndex.tags[tagType][tagName].rfcs.push(rfcNum)
@@ -128,11 +128,11 @@ var rfcIndex;
       })
     },
 
-    show_tags: function (tagType, clickHandler) {
+    init_tags: function (tagType, clickHandler) {
       if (rfcIndex.unshownTagTypes.includes(tagType)) return
       var targetDiv = document.getElementById(tagType)
       rfcIndex.tags[tagType].forEach(tagName => {
-        if (!rfcIndex.tags[tagType][tagName].visible) return
+        if (!rfcIndex.tags[tagType][tagName].shown) return
         rfcIndex.render_tag(tagType, tagName, targetDiv, clickHandler)
         targetDiv.appendChild(document.createTextNode(' '))
       })
@@ -150,7 +150,7 @@ var rfcIndex;
       })
       rfcIndex.tagTypes.forEach(tagType => {
         rfcIndex.tags[tagType].forEach(tagName => {
-          if (!rfcIndex.tags[tagType][tagName].visible) return
+          if (!rfcIndex.tags[tagType][tagName].shown) return
           let active = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
           rfcIndex.tags[tagType][tagName].target.style.display = active
         })
@@ -165,7 +165,7 @@ var rfcIndex;
       tagSpan.classList.add('tag')
       tagSpan.style.backgroundColor = tagData['colour'] || this.gen_colour()
       tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
-      tagSpan.style.display = tagData.visible ? 'inline' : 'none'
+      tagSpan.style.display = tagData.shown ? 'inline' : 'none'
       if (clickHandler) {
         tagSpan.onclick = clickHandler(tagType, tagName, tagSpan)
       }
