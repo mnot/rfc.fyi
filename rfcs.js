@@ -355,7 +355,9 @@ var rfcIndex;
           queries.push(tagType + '=' + activeTags.join(','))
         }
       })
-      var url = '?' + queries.join('&')
+      var url = './'
+      if (queries.length > 0) url += '?'
+      url += queries.join('&')
       history.pushState({}, '', url)
     },
 
