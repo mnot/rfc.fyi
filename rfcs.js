@@ -245,7 +245,7 @@ var rfcIndex;
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
       if (userInput) countTarget.appendChild(count)
-      rfcIndex.set_container(rfcList.length)
+      rfcIndex.set_container(rfcList.length > 0)
     },
 
     show_relevant_tags: function (rfcSet) {
