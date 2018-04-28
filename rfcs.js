@@ -151,19 +151,24 @@ var rfcIndex;
     },
 
     show_relevant_tags: function (rfcList) {
-      var possibleTags = {}
+      var relevantTags = {}
       rfcIndex.tagTypes.forEach(tagType => {
-        possibleTags[tagType] = new Set()
+        relevantTags[tagType] = new Set()
       })
       rfcList.forEach(rfcNum => {
         rfcIndex.tagTypes.forEach(tagType => {
-          possibleTags[tagType].add(rfcIndex.rfcs[rfcNum][tagType])
+          let tag = rfcIndex.rfcs[rfcNum][tagType]
+          if (tag) {
+            relevantTags[tagType].add(tag)
+          }
         })
       })
       rfcIndex.tagTypes.forEach(tagType => {
         if (rfcIndex.unshownTagTypes.includes(tagType)) return
+        let header = document.getElementById(tagType + '-header')
+        header.style.display = relevantTags[tagType].size > 0 ? 'block' : 'none'
         rfcIndex.tags[tagType].forEach(tagName => {
-          let visibility = possibleTags[tagType].has(tagName) ? 'inline' : 'none'
+          let visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
           rfcIndex.tags[tagType][tagName].target.style.display = visibility
         })
       })
