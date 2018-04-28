@@ -189,8 +189,7 @@ var rfcIndex;
         } else {
           tagSpan.style['border-color'] = 'white'
         }
-        var selectedRfcs = rfcIndex.list_active_rfcs()
-        rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
+        rfcIndex.show_rfcs(document.getElementById('rfc-list'))
         rfcIndex.update_url()
       }
     },
@@ -201,8 +200,7 @@ var rfcIndex;
       } else {
         rfcIndex.tags['status']['current'].active = true
       }
-      var selectedRfcs = rfcIndex.list_active_rfcs()
-      rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
+      rfcIndex.show_rfcs(document.getElementById('rfc-list'))
       rfcIndex.update_url()
     },
 
@@ -231,8 +229,9 @@ var rfcIndex;
       return rfcList
     },
 
-    show_rfcs: function (rfcList, target) {
+    show_rfcs: function (target) {
       this.clear(target)
+      var rfcList = rfcIndex.list_active_rfcs()
       rfcList.forEach(item => {
         if (typeof (item) === 'object') { // it's a sublist
           let titleElement = document.createElement('h3')
@@ -310,7 +309,7 @@ var rfcIndex;
     search_input: function () {
       var searchText = document.getElementById('search').value
       rfcIndex.searchWords = searchText.split(' ').filter(word => word)
-      rfcIndex.show_rfcs(rfcIndex.list_active_rfcs(), document.getElementById('rfc-list'))
+      rfcIndex.show_rfcs(document.getElementById('rfc-list'))
       rfcIndex.update_url()
     },
 
@@ -378,8 +377,7 @@ var rfcIndex;
           })
         }
       })
-      var selectedRfcs = rfcIndex.list_active_rfcs()
-      rfcIndex.show_rfcs(selectedRfcs, document.getElementById('rfc-list'))
+      rfcIndex.show_rfcs(document.getElementById('rfc-list'))
     },
 
     getParameterByName: function (name) {
