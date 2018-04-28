@@ -23,6 +23,14 @@ body {
   padding: 0;
 }
 
+input#search {
+  width: 240px;
+}
+
+.obsolete {
+  font-size: 85%;
+}
+
 .tag {
   display: inline;
   padding: .2em .6em .3em;
