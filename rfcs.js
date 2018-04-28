@@ -34,6 +34,12 @@ var rfcIndex;
     }
   }
 
+  Object.prototype.keys = function () { // eslint-disable-line
+    var keys = []
+    this.forEach(item => keys.push(item))
+    return keys
+  }
+
   rfcIndex = {
 
     prefixLen: 3,
@@ -129,7 +135,9 @@ var rfcIndex;
     init_tags: function (tagType, clickHandler) {
       if (rfcIndex.unshownTagTypes.includes(tagType)) return
       var targetDiv = document.getElementById(tagType)
-      rfcIndex.tags[tagType].forEach(tagName => {
+      var tags = rfcIndex.tags[tagType].keys()
+      tags.sort()
+      tags.forEach(tagName => {
         rfcIndex.render_tag(tagType, tagName, targetDiv, clickHandler)
         targetDiv.appendChild(document.createTextNode(' '))
       })
