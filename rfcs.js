@@ -219,9 +219,11 @@ var rfcIndex;
       })
       // apply search words
       rfcIndex.searchWords.forEach(searchWord => {
-        let wordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.words, 'title')
-        let keywordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.keywords, 'keywords')
-        filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
+        if (searchWord.length >= rfcIndex.prefixLen || rfcIndex.searchWords.length === 1) {
+          let wordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.words, 'title')
+          let keywordRfcs = rfcIndex.search_lookup(searchWord, rfcIndex.keywords, 'keywords')
+          filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
+        }
       })
       var rfcList = Array.from(filteredRfcs)
       rfcList.sort(this.rfcSort)
