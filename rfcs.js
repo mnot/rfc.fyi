@@ -166,20 +166,22 @@ var rfcIndex;
           activeTagData.active = false
           activeTagData.target.style['border-color'] = 'white'
         }
-        rfcIndex.active_tags.set(tagType, tagName)
         var tagData = rfcIndex.tags[tagType][tagName]
-        tagData.active = !tagData.active
-        rfcIndex.set_tag_activity(tagData)
+        rfcIndex.set_tag_activity(tagType, tagName, !tagData.active)
         rfcIndex.show_rfcs()
         rfcIndex.update_url()
       }
     },
 
-    set_tag_activity: function (tagData) {
+    set_tag_activity: function (tagType, tagName, active) {
+      var tagData = rfcIndex.tags[tagType][tagName]
+      tagData.active = active
       if (tagData.active === true) {
         tagData.target.style['border-color'] = 'black'
+        rfcIndex.active_tags.set(tagType, tagName)
       } else {
         tagData.target.style['border-color'] = 'white'
+        rfcIndex.active_tags.delete(tagType)
       }
     },
 
@@ -402,7 +404,7 @@ var rfcIndex;
         if (tagstring) {
           var tags = tagstring.split(',')
           tags.forEach(tagName => {
-            rfcIndex.tags[tagType][tagName].active = true
+            rfcIndex.set_tag_activity(tagType, tagName, true)
           })
         }
       })
