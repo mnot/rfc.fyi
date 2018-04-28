@@ -165,7 +165,7 @@ var rfcIndex;
         } else {
           tagSpan.style['border-color'] = 'white'
         }
-        rfcIndex.show_rfcs(document.getElementById('rfc-list'))
+        rfcIndex.show_rfcs()
         rfcIndex.update_url()
       }
     },
@@ -176,7 +176,7 @@ var rfcIndex;
       } else {
         rfcIndex.tags['status']['current'].active = true
       }
-      rfcIndex.show_rfcs(document.getElementById('rfc-list'))
+      rfcIndex.show_rfcs()
       rfcIndex.update_url()
     },
 
@@ -206,13 +206,15 @@ var rfcIndex;
       return filteredRfcs
     },
 
-    show_rfcs: function (target) {
+    show_rfcs: function (target = document.getElementById('rfc-list')) {
       this.clear(target)
       var searchedRfcs = new Set()
       var rfcList = []
+      var userInput = false
       if (rfcIndex.active_tags.size !== 0 || rfcIndex.searchWords.length !== 0) {
         var taggedRfcs = rfcIndex.list_tagged_rfcs()
         searchedRfcs = rfcIndex.list_searched_rfcs()
+        userInput = true
         rfcList = Array.from(taggedRfcs.intersection(searchedRfcs))
         rfcList.sort(this.rfcSort)
         rfcList.forEach(item => {
@@ -234,7 +236,7 @@ var rfcIndex;
       var count = document.createTextNode(rfcList.length + ' RFCs')
       var countTarget = document.getElementById('count')
       this.clear(countTarget)
-      countTarget.appendChild(count)
+      if (userInput) countTarget.appendChild(count)
     },
 
     show_relevant_tags: function (rfcSet) {
@@ -317,7 +319,7 @@ var rfcIndex;
     search_input: function () {
       var searchText = document.getElementById('search').value
       rfcIndex.searchWords = searchText.split(' ').filter(word => word)
-      rfcIndex.show_rfcs(document.getElementById('rfc-list'))
+      rfcIndex.show_rfcs()
       rfcIndex.update_url()
     },
 
@@ -385,7 +387,7 @@ var rfcIndex;
           })
         }
       })
-      rfcIndex.show_rfcs(document.getElementById('rfc-list'))
+      rfcIndex.show_rfcs()
     },
 
     getParameterByName: function (name) {
