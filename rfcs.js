@@ -208,24 +208,28 @@ var rfcIndex;
 
     show_rfcs: function (target) {
       this.clear(target)
-      var taggedRfcs = rfcIndex.list_tagged_rfcs()
-      var searchedRfcs = rfcIndex.list_searched_rfcs()
-      var rfcList = Array.from(taggedRfcs.intersection(searchedRfcs))
-      rfcList.sort(this.rfcSort)
-      rfcList.forEach(item => {
-        if (typeof (item) === 'object') { // it's a sublist
-          let titleElement = document.createElement('h3')
-          let titleContent = document.createTextNode(item.title)
-          let sublist = document.createElement('ul')
-          titleElement.append(titleContent)
-          target.appendChild(titleElement)
-          target.appendChild(sublist)
-          this.show_rfcs(item.rfcs, sublist)
-        } else { // it's a string RFC number
-          let rfcData = this.rfcs[item]
-          this.render_rfc(item, rfcData, target)
-        }
-      })
+      var searchedRfcs = new Set()
+      var rfcList = []
+      if (rfcIndex.active_tags.size !== 0 || rfcIndex.searchWords.length !== 0) {
+        var taggedRfcs = rfcIndex.list_tagged_rfcs()
+        searchedRfcs = rfcIndex.list_searched_rfcs()
+        rfcList = Array.from(taggedRfcs.intersection(searchedRfcs))
+        rfcList.sort(this.rfcSort)
+        rfcList.forEach(item => {
+          if (typeof (item) === 'object') { // it's a sublist
+            let titleElement = document.createElement('h3')
+            let titleContent = document.createTextNode(item.title)
+            let sublist = document.createElement('ul')
+            titleElement.append(titleContent)
+            target.appendChild(titleElement)
+            target.appendChild(sublist)
+            this.show_rfcs(item.rfcs, sublist)
+          } else { // it's a string RFC number
+            let rfcData = this.rfcs[item]
+            this.render_rfc(item, rfcData, target)
+          }
+        })
+      }
       this.show_relevant_tags(searchedRfcs)
       var count = document.createTextNode(rfcList.length + ' RFCs')
       var countTarget = document.getElementById('count')
