@@ -2,35 +2,11 @@
     "tag": {
         "http": {
             "colour": "#F9AA66",
-            "rfcs": [
-                {
-                    "title": "Core",
-                    "rfcs": ["RFC7230", "RFC7231", "RFC7232", "RFC7233", "RFC7234", "RFC7235", "RFC7540"]
-                },
-                {
-                    "title": "Methods",
-                    "rfcs": ["RFC5789"]
-                },
-                {
-                    "title": "Status Codes",
-                    "rfcs": ["RFC6585", "RFC7538", "RFC7725"]
-                },
-                {
-                    "title": "Connection Extensions",
-                    "rfcs": ["RFC7639", "RFC7838", "RFC8164"]
-                },
-                {
-                    "title": "Caching Extensions",
-                    "rfcs": ["RFC5861", "RFC8246"]
-                },
-                {
-                    "title": "Content-Related Extensions",
-                    "rfcs": ["RFC6265", "RFC6266", "RFC7694", "RFC8288"]
-                },
-                {
-                    "title": "Security-Related Extensions",
-                    "rfcs": ["RFC2818", "RFC7616", "RFC7617", "RFC7615", "RFC8188"]
-                }
+            "active": false,
+            "rfcs": ["RFC7230", "RFC7231", "RFC7232", "RFC7233", "RFC7234", "RFC7235", "RFC7540",
+                     "RFC5789", "RFC6585", "RFC7538", "RFC7725", "RFC7639", "RFC7838", "RFC8164",
+                     "RFC5861", "RFC8246", "RFC6265", "RFC6266", "RFC7694", "RFC8288", "RFC2818",
+                     "RFC7616", "RFC7617", "RFC7615", "RFC8188"
             ]
         }
     }

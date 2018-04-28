@@ -69,6 +69,7 @@ var rfcIndex;
       this.words = new Map() // index of word prefixes to RFCs containing them
       this.keywords = new Map() // index of keyword phrases to RFCs containing them
       this.searchWords = [] // words the user is searching for
+      this.tags = {}
       this.load_json('tags.json', 'tags')
       this.allRfcs = [] // list of all RFC numbers
       this.rfcs = {} // RFC objects
@@ -114,7 +115,6 @@ var rfcIndex;
     },
 
     load_done: function () {
-      // this.init_tags('tag', this.click_tag_handler)
       this.compute()
       this.tagTypes.forEach(tagType => {
         rfcIndex.init_tags(tagType, rfcIndex.click_tag_handler)
@@ -240,24 +240,14 @@ var rfcIndex;
       var rfcList = []
       var userInput = false
       if (rfcIndex.active_tags.size !== 0 || rfcIndex.searchWords.length !== 0) {
+        userInput = true
         var taggedRfcs = rfcIndex.list_tagged_rfcs()
         searchedRfcs = rfcIndex.list_searched_rfcs()
-        userInput = true
         rfcList = Array.from(taggedRfcs.intersection(searchedRfcs))
         rfcList.sort(this.rfcSort)
         rfcList.forEach(item => {
-          if (typeof (item) === 'object') { // it's a sublist
-            let titleElement = document.createElement('h3')
-            let titleContent = document.createTextNode(item.title)
-            let sublist = document.createElement('ul')
-            titleElement.append(titleContent)
-            target.appendChild(titleElement)
-            target.appendChild(sublist)
-            this.show_rfcs(item.rfcs, sublist)
-          } else { // it's a string RFC number
-            let rfcData = this.rfcs[item]
-            this.render_rfc(item, rfcData, target)
-          }
+          let rfcData = this.rfcs[item]
+          this.render_rfc(item, rfcData, target)
         })
       }
       this.show_relevant_tags(searchedRfcs)
