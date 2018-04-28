@@ -343,8 +343,8 @@ var rfcIndex;
       var matchRfcs = new Set(index.get(searchPrefix))
       if (searchWord.length > this.prefixLen) {
         matchRfcs.forEach(rfcNum => {
-          let fullItem = rfcIndex.rfcs[rfcNum][attr]
           let hit = false
+          let fullItem = rfcIndex.rfcs[rfcNum][attr]
           if (!Array.isArray(fullItem)) fullItem = [fullItem]
           fullItem.forEach(item => {
             if (rfcIndex.cleanString(item).includes(searchWord)) hit = true
