@@ -99,12 +99,12 @@ var rfcIndex;
     },
 
     install_form_handlers: function () {
-      var obsoleteTarget = document.getElementById('obsolete')
-      obsoleteTarget.oninput = this.show_obsolete_handler
-      var searchTarget = document.getElementById('search')
-      searchTarget.oninput = this.search_input
-      var form = document.forms[0]
-      form.onsubmit = function () { return false }
+      this.obsoleteTarget = document.getElementById('obsolete')
+      this.obsoleteTarget.onchange = this.show_obsolete_handler
+      this.searchTarget = document.getElementById('search')
+      this.searchTarget.oninput = this.search_input
+      this.form = document.forms[0]
+      this.form.onsubmit = function () { return false }
     },
 
     load_done: function () {
@@ -193,8 +193,8 @@ var rfcIndex;
       }
     },
 
-    show_obsolete_handler: function () {
-      rfcIndex.verbose = !rfcIndex.verbose
+    show_obsolete_handler: function (event) {
+      rfcIndex.verbose = rfcIndex.obsoleteTarget.checked
       rfcIndex.show_rfcs()
       rfcIndex.update_url()
     },
@@ -398,8 +398,7 @@ var rfcIndex;
       if (rfcIndex.getParameterByName('obsolete') !== null) {
         rfcIndex.verbose = true
       }
-      var obsoleteTarget = document.getElementById('obsolete')
-      obsoleteTarget.checked = rfcIndex.verbose
+      rfcIndex.obsoleteTarget.checked = rfcIndex.verbose
       rfcIndex.tagTypes.forEach(tagType => {
         if (rfcIndex.unshownTagTypes.includes(tagType)) return
         var tagstring = rfcIndex.getParameterByName(tagType)
