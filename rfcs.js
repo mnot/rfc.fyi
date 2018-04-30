@@ -24,7 +24,7 @@ function init () {
   installFormHandlers()
   util.onDone(loadDone)
   util.loadJson('tags.json', function (json) { tags = json })
-  util.loadJson('rfcs.json', function (json) { rfcs = json })
+  util.loadJson('rfcs.json.gz', function (json) { rfcs = json }) // use .gz for github pages
 }
 
 var obsoleteTarget
