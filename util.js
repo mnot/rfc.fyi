@@ -3,12 +3,12 @@
 var outstanding = 0 // outstanding fetches
 var doneFuncs = [] // things to do when fetching is done
 
-export function loadJson (url, dest, target) {
+export function loadJson (url, func) {
   var req = new XMLHttpRequest()
   req.onreadystatechange = function () {
     if (req.readyState === 4) {
       outstanding -= 1
-      dest[target] = JSON.parse(req.responseText)
+      func(JSON.parse(req.responseText)) // TODO: error handling
       if (outstanding === 0) {
         loadDone()
       }
