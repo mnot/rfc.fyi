@@ -336,4 +336,4 @@ function rfcSort (a, b) {
   return parseInt(a.replace('RFC', '')) - parseInt(b.replace('RFC', ''))
 }
 
-util.addDOMLoadEvent(() => init())
+util.addDOMLoadEvent(init)
