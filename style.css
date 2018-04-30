@@ -19,8 +19,13 @@ body {
 }
 
 .noresults #selector {
-  margin: 50px auto;
-  width: 66%;
+  margin: 50px 0;
+  width: 90%;
+}
+
+.noresults input#search {
+  margin: 0 15%;
+  width: 70%;
 }
 
 #main {
@@ -30,7 +35,11 @@ body {
 }
 
 ul {
-  padding-left: 0;
+  padding-left: 0.75em;
+}
+
+li {
+  padding-bottom: 0.5em;
 }
 
 .noresults #main {
