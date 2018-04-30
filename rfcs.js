@@ -132,6 +132,33 @@ function showObsoleteHandler (event) {
   updateUrl()
 }
 
+function showRfcs () {
+  var target = document.getElementById('rfc-list')
+  clear(target)
+  var searchedRfcs = new Set()
+  var rfcList = []
+  var userInput = false
+  if (activeTags.size !== 0 ||
+      (searchWords.length !== 0 &&
+       searchWords[0].length >= prefixLen)) {
+    userInput = true
+    var taggedRfcs = listTaggedRfcs()
+    searchedRfcs = listSearchedRfcs()
+    rfcList = Array.from(taggedRfcs.intersection(searchedRfcs))
+    rfcList.sort(rfcSort)
+    rfcList.forEach(item => {
+      let rfcData = rfcs[item]
+      renderRfc(item, rfcData, target)
+    })
+  }
+  showRelevantTags(searchedRfcs)
+  var count = document.createTextNode(rfcList.length + ' RFCs')
+  var countTarget = document.getElementById('count')
+  clear(countTarget)
+  countTarget.appendChild(count)
+  setContainer(rfcList.length > 0 || userInput)
+}
+
 function listTaggedRfcs () {
   var filteredRfcs = new Set(allRfcs)
   tags.forEach(tagType => {
@@ -158,33 +185,6 @@ function listSearchedRfcs () {
     }
   })
   return filteredRfcs
-}
-
-function showRfcs () {
-  var target = document.getElementById('rfc-list')
-  clear(target)
-  var searchedRfcs = new Set()
-  var rfcList = []
-  var userInput = false
-  if (activeTags.size !== 0 ||
-      (searchWords.length !== 0 &&
-       searchWords[0].length >= prefixLen)) {
-    userInput = true
-    var taggedRfcs = listTaggedRfcs()
-    searchedRfcs = listSearchedRfcs()
-    rfcList = Array.from(taggedRfcs.intersection(searchedRfcs))
-    rfcList.sort(rfcSort)
-    rfcList.forEach(item => {
-      let rfcData = rfcs[item]
-      renderRfc(item, rfcData, target)
-    })
-  }
-  showRelevantTags(searchedRfcs)
-  var count = document.createTextNode(rfcList.length + ' RFCs')
-  var countTarget = document.getElementById('count')
-  clear(countTarget)
-  countTarget.appendChild(count)
-  setContainer(rfcList.length > 0 || userInput)
 }
 
 function renderRfc (rfcName, rfcData, target) {
