@@ -187,6 +187,19 @@ function showRfcs () {
   setContainer(rfcList.length > 0 || userInput)
 }
 
+function renderRfc (rfcName, rfcData, target) {
+  var rfcSpan = document.createElement('li')
+  rfcSpan.data = rfcData
+  var rfcNumber = document.createTextNode(rfcName + ': ')
+  rfcSpan.appendChild(rfcNumber)
+  var rfcLink = document.createElement('a')
+  rfcLink.href = 'https://tools.ietf.org/html/' + rfcName.toLowerCase()
+  rfcSpan.appendChild(rfcLink)
+  var rfcTitle = document.createTextNode(rfcData.title)
+  rfcLink.appendChild(rfcTitle)
+  target.appendChild(rfcSpan)
+}
+
 function showRelevantTags (rfcSet) {
   var relevantTags = {}
   tagTypes.forEach(tagType => {
@@ -214,19 +227,6 @@ function showRelevantTags (rfcSet) {
       tags[tagType][tagName].target.style.display = visibility
     })
   })
-}
-
-function renderRfc (rfcName, rfcData, target) {
-  var rfcSpan = document.createElement('li')
-  rfcSpan.data = rfcData
-  var rfcNumber = document.createTextNode(rfcName + ': ')
-  rfcSpan.appendChild(rfcNumber)
-  var rfcLink = document.createElement('a')
-  rfcLink.href = 'https://tools.ietf.org/html/' + rfcName.toLowerCase()
-  rfcSpan.appendChild(rfcLink)
-  var rfcTitle = document.createTextNode(rfcData.title)
-  rfcLink.appendChild(rfcTitle)
-  target.appendChild(rfcSpan)
 }
 
 function searchIndex (words, inputId, index) {
