@@ -82,3 +82,16 @@ h2 {
     width: 100%;
   }
 }
+
+@media all and (min-width: 800px) {
+  #selector {
+    position: fixed;
+    overflow-y: auto;
+    height: 100%;
+  }
+  #shadow {
+    width: 250px;
+    margin-top: 1em;
+    padding: 0;
+  }
+}
