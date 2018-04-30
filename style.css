@@ -33,6 +33,17 @@ a:link, a:visited, a:active {
   width: 70%;
 }
 
+.start {
+    margin: 3em 15%;
+    width: 70%;
+    text-align: center;
+    color: #666;
+}
+
+.results .start {
+    display: none;
+}
+
 #main {
   flex: 1;
   margin: 1em 1em 0 50px;
