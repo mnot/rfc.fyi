@@ -119,4 +119,7 @@ h2 {
     margin-top: 1em;
     padding: 0;
   }
+  .noresults input#search, .start {
+    width: 90%;
+  }
 }
