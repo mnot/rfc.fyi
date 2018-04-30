@@ -44,11 +44,15 @@ export function getParameterByName (name) {
   return decodeURIComponent(results[2].replace(/\+/g, ' '))
 }
 
-export function genColour () {
-  var hex = '0123456789ABCDEF'
+export function genColour (str) {
+  var hash = 0
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash)
+  }
   var colour = '#'
-  for (let i = 0; i < 6; i++) {
-    colour += hex[Math.floor(Math.random() * 16)]
+  for (let i = 0; i < 3; i++) {
+    let value = (hash >> (i * 8)) & 0xFF
+    colour += ('00' + value.toString(16)).substr(-2)
   }
   return colour
 }

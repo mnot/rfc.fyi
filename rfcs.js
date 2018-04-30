@@ -90,7 +90,7 @@ function renderTag (tagType, tagName, target, clickHandler) {
   var tagData = tags[tagType][tagName]
   tagSpan.appendChild(tagContent)
   tagSpan.classList.add('tag')
-  tagSpan.style.backgroundColor = tagData['colour'] || util.genColour()
+  tagSpan.style.backgroundColor = tagData['colour'] || util.genColour(tagName)
   tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor)
   tags[tagType][tagName].target = tagSpan
   if (clickHandler) {
