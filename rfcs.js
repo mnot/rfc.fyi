@@ -1,54 +1,11 @@
-/* global history, XMLHttpRequest */
+/* global history */
+
+import * as util from './util.js'
 
 var rfcIndex;
 
 (function () {
   'use strict'
-
-  Set.prototype.intersection = function (setB) { // eslint-disable-line
-    var intersection = new Set()
-    for (let elem of setB) {
-      if (this.has(elem)) {
-        intersection.add(elem)
-      }
-    }
-    return intersection
-  }
-
-  Set.prototype.union = function (setB) { // eslint-disable-line
-    var union = new Set()
-    for (let elemA of this) {
-      union.add(elemA)
-    }
-    for (let elemB of setB) {
-      union.add(elemB)
-    }
-    return union
-  }
-
-  Set.prototype.difference = function (setB) { // eslint-disable-line
-    var difference = new Set()
-    for (let elem of this) {
-      if (!setB.has(elem)) {
-        difference.add(elem)
-      }
-    }
-    return difference
-  }
-
-  Object.prototype.forEach = function (func) { // eslint-disable-line
-    for (let item in this) {
-      if (this.hasOwnProperty(item)) {
-        func(item)
-      }
-    }
-  }
-
-  Object.prototype.keys = function () { // eslint-disable-line
-    var keys = []
-    this.forEach(item => keys.push(item))
-    return keys
-  }
 
   rfcIndex = {
 
@@ -62,40 +19,19 @@ var rfcIndex;
     ],
 
     init: function () {
-      this.outstanding = 0 // outstanding fetches
       this.tags = {} // tags and associated rfcs
       this.active_tags = new Map() // what tags are active
       this.verbose = false // whether we're showing obsolete, etc.
       this.words = new Map() // index of word prefixes to RFCs containing them
       this.keywords = new Map() // index of keyword phrases to RFCs containing them
       this.searchWords = [] // words the user is searching for
-      this.tags = {} // tag objects
-      this.load_json('tags.json', 'tags')
       this.allRfcs = [] // list of all RFC numbers
-      this.rfcs = {} // RFC objects
-      this.load_json('rfcs.json', 'rfcs')
       this.install_form_handlers()
-    },
-
-    load_json: function (url, dest) {
-      var req = new XMLHttpRequest()
-      req.onreadystatechange = function () {
-        if (req.readyState === 4) {
-          rfcIndex.outstanding -= 1
-          rfcIndex[dest] = JSON.parse(req.responseText)
-          if (rfcIndex.outstanding === 0) {
-            rfcIndex.load_done()
-          }
-        }
-      }
-      try {
-        rfcIndex.outstanding += 1
-        req.open('GET', url, true)
-        req.send('')
-      } catch (e3) {
-        rfcIndex.outstanding -= 1
-        console.log(`Request error: ${url} (${e3})`)
-      }
+      util.onDone(this.load_done)
+      this.tags = {} // tag objects
+      util.loadJson('tags.json', this, 'tags')
+      this.rfcs = {} // RFC objects
+      util.loadJson('rfcs.json', this, 'rfcs')
     },
 
     install_form_handlers: function () {
@@ -108,11 +44,11 @@ var rfcIndex;
     },
 
     load_done: function () {
-      this.compute()
-      this.tagTypes.forEach(tagType => {
+      rfcIndex.compute()
+      rfcIndex.tagTypes.forEach(tagType => {
         rfcIndex.init_tags(tagType, rfcIndex.click_tag_handler)
       })
-      this.load_url()
+      rfcIndex.load_url()
     },
 
     compute: function () {
@@ -157,8 +93,8 @@ var rfcIndex;
       var tagData = rfcIndex.tags[tagType][tagName]
       tagSpan.appendChild(tagContent)
       tagSpan.classList.add('tag')
-      tagSpan.style.backgroundColor = tagData['colour'] || this.gen_colour()
-      tagSpan.style.color = this.text_colour(tagSpan.style.backgroundColor)
+      tagSpan.style.backgroundColor = tagData['colour'] || util.genColour()
+      tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor)
       this.tags[tagType][tagName].target = tagSpan
       if (clickHandler) {
         tagSpan.onclick = clickHandler(tagType, tagName)
@@ -282,11 +218,6 @@ var rfcIndex;
       })
     },
 
-    set_container: function (hasResults) {
-      var container = document.getElementById('container')
-      container.className = hasResults ? 'results' : 'noresults'
-    },
-
     render_rfc: function (rfcName, rfcData, target) {
       var rfcSpan = document.createElement('li')
       rfcSpan.data = rfcData
@@ -298,31 +229,6 @@ var rfcIndex;
       var rfcTitle = document.createTextNode(rfcData.title)
       rfcLink.appendChild(rfcTitle)
       target.appendChild(rfcSpan)
-    },
-
-    clear: function (target) {
-      while (target.firstChild) {
-        target.removeChild(target.firstChild)
-      }
-    },
-
-    gen_colour: function () {
-      var hex = '0123456789ABCDEF'
-      var colour = '#'
-      for (let i = 0; i < 6; i++) {
-        colour += hex[Math.floor(Math.random() * 16)]
-      }
-      return colour
-    },
-
-    text_colour: function (bg) {
-      var rgb = bg.match(/\d+/g)
-      var luma = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2] // ITU-R BT.709
-      if (luma < 128) {
-        return '#fff'
-      } else {
-        return '#000'
-      }
     },
 
     search_index: function (words, inputId, index) {
@@ -392,16 +298,16 @@ var rfcIndex;
     },
 
     load_url: function () {
-      var search = rfcIndex.getParameterByName('search') || ''
+      var search = util.getParameterByName('search') || ''
       document.getElementById('search').value = search
       rfcIndex.searchWords = search.split(' ').filter(word => word)
-      if (rfcIndex.getParameterByName('obsolete') !== null) {
+      if (util.getParameterByName('obsolete') !== null) {
         rfcIndex.verbose = true
       }
       rfcIndex.obsoleteTarget.checked = rfcIndex.verbose
       rfcIndex.tagTypes.forEach(tagType => {
         if (rfcIndex.unshownTagTypes.includes(tagType)) return
-        var tagstring = rfcIndex.getParameterByName(tagType)
+        var tagstring = util.getParameterByName(tagType)
         if (tagstring) {
           var tags = tagstring.split(',')
           tags.forEach(tagName => {
@@ -412,14 +318,15 @@ var rfcIndex;
       rfcIndex.show_rfcs()
     },
 
-    getParameterByName: function (name) {
-      var url = window.location.href
-      name = name.replace(/[[\]]/g, '\\$&')
-      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
-      var results = regex.exec(url)
-      if (!results) return null
-      if (!results[2]) return ''
-      return decodeURIComponent(results[2].replace(/\+/g, ' '))
+    clear: function (target) {
+      while (target.firstChild) {
+        target.removeChild(target.firstChild)
+      }
+    },
+
+    set_container: function (hasResults) {
+      var container = document.getElementById('container')
+      container.className = hasResults ? 'results' : 'noresults'
     },
 
     cleanString: function (input) {
@@ -429,41 +336,8 @@ var rfcIndex;
 
     rfcSort: function (a, b) {
       return parseInt(a.replace('RFC', '')) - parseInt(b.replace('RFC', ''))
-    },
-
-    /*
-    * (c)2006 Dean Edwards/Matthias Miller/John Resig
-    * Special thanks to Dan Webb's domready.js Prototype extension
-    * and Simon Willison's addLoadEvent
-    *
-    * For more info, see:
-    * http://dean.edwards.name/weblog/2006/06/again/
-    *
-    * Thrown together by Jesse Skinner (http://www.thefutureoftheweb.com/)
-    */
-    addDOMLoadEvent: function (func) {
-      if (!window.__load_events) {
-        var init = function () {
-          var i = 0
-          // quit if this function has already been called
-          if (rfcIndex.addDOMLoadEvent.done) { return }
-          rfcIndex.addDOMLoadEvent.done = true
-          if (window.__load_timer) {
-            clearInterval(window.__load_timer)
-            window.__load_timer = null
-          }
-          for (i; i < window.__load_events.length; i += 1) {
-            window.__load_events[i]()
-          }
-          window.__load_events = null
-        }
-        document.addEventListener('DOMContentLoaded', init, false)
-        window.onload = init
-        window.__load_events = []
-      }
-      window.__load_events.push(func)
     }
   }
 
-  rfcIndex.addDOMLoadEvent(function () { rfcIndex.init() })
+  util.addDOMLoadEvent(() => rfcIndex.init())
 }())
