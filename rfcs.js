@@ -126,12 +126,6 @@ function setTagActivity (tagType, tagName, active) {
   }
 }
 
-function showObsoleteHandler (event) {
-  verbose = obsoleteTarget.checked
-  showRfcs()
-  updateUrl()
-}
-
 function showRfcs () {
   var target = document.getElementById('rfc-list')
   clear(target)
@@ -267,6 +261,12 @@ function searchLookup (searchWord, index, attr) {
     })
   }
   return matchRfcs
+}
+
+function showObsoleteHandler (event) {
+  verbose = obsoleteTarget.checked
+  showRfcs()
+  updateUrl()
 }
 
 function updateUrl () {
