@@ -2,8 +2,8 @@ body {
   background-color: #f9f9f9;
   color: #111;
   font: 12pt/14pt "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 1em 50px;
-  width: 100%;
+  margin: 1em 5%;
+  width: 90%;
   max-width: 1200px;
 }
 
@@ -20,7 +20,7 @@ body {
 
 .noresults #selector {
   margin: 50px auto;
-  width: 600px;
+  width: 66%;
 }
 
 #main {
@@ -39,7 +39,7 @@ ul {
 }
 
 input#search {
-  width: 90%;
+  width: 100%;
   font-size: 20px;
 }
 
@@ -79,6 +79,6 @@ h2 {
   }
 
   #selector {
-    width: 90%;
+    width: 100%;
   }
 }
