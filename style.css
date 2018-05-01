@@ -90,8 +90,21 @@ input#search {
 }
 
 h2 {
-    font-size: 14pt;
-    display: none;
+  font-size: 14pt;
+  display: none;
+}
+
+#delete {
+  position: absolute;
+  top: 5px;
+  right: 5%;
+  z-index: 100;
+  cursor: pointer;
+  color: #c99;
+}
+
+.noresults #delete {
+  right: 16%;
 }
 
 @media all and (max-width: 800px) {
@@ -108,6 +121,14 @@ h2 {
   }
   .noresults input#search, .start {
     width: 90%;
+  }
+  #delete {
+    top: 38px;
+    right: 7%;
+  }
+  .noresults #delete {
+    top: 72px;
+    right: 12%;
   }
 }
 

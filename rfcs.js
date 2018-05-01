@@ -29,6 +29,7 @@ function init () {
 
 var obsoleteTarget
 var searchTarget
+var deleteTarget
 var form
 
 function installFormHandlers () {
@@ -36,6 +37,8 @@ function installFormHandlers () {
   obsoleteTarget.onchange = showObsoleteHandler
   searchTarget = document.getElementById('search')
   searchTarget.oninput = searchInput
+  deleteTarget = document.getElementById('delete')
+  deleteTarget.onclick = deleteHandler
   form = document.forms[0]
   form.onsubmit = function () { return false }
 }
@@ -112,6 +115,13 @@ function clickTagHandler (tagType, tagName) {
     showRfcs()
     updateUrl()
   }
+}
+
+function deleteHandler () {
+    searchTarget.value = ""
+    searchWords = []
+    showRfcs()
+    updateUrl()
 }
 
 function setTagActivity (tagType, tagName, active) {
