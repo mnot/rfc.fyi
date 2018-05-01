@@ -23,6 +23,10 @@ a:link, a:visited, a:active {
   padding: 0;
 }
 
+#form {
+  position: relative;
+}
+
 .noresults #selector {
   margin: 50px 0;
   width: 90%;
@@ -102,16 +106,16 @@ h2 {
 
 #delete {
   position: absolute;
-  top: 88px;
-  right: 5%;
+  top: 6px;
+  right: 4%;
   z-index: 100;
   cursor: pointer;
   color: #c99;
 }
 
 .noresults #delete {
-  top: 85px;
-  right: 16%;
+  top: 4px;
+  right: 15.8%;
 }
 
 @media all and (max-width: 800px) {
@@ -131,12 +135,11 @@ h2 {
     margin: 0 5%;
   }
   #delete {
-    top: 120px;
-    right: 7%;
+    top: 6px;
+    right: 2%;
   }
   .noresults #delete {
-    top: 152px;
-    right: 19%;
+    right: 7%;
   }
 }
 
