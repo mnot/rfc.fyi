@@ -46,7 +46,7 @@ a:link, a:visited, a:active {
 
 #main {
   flex: 1;
-  margin: 1em 1em 0 50px;
+  margin: 6em 1em 0 50px;
   padding: 0;
 }
 
@@ -89,6 +89,12 @@ input#search {
   border: 1.5px solid white;
 }
 
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 1em 0;
+}
+
 h2 {
   font-size: 14pt;
   display: none;
@@ -96,7 +102,7 @@ h2 {
 
 #delete {
   position: absolute;
-  top: 5px;
+  top: 88px;
   right: 5%;
   z-index: 100;
   cursor: pointer;
@@ -104,6 +110,7 @@ h2 {
 }
 
 .noresults #delete {
+  top: 85px;
   right: 16%;
 }
 
@@ -113,7 +120,7 @@ h2 {
   }
 
   #main {
-    margin-left: 0;
+    margin: 2em 0 0 0;
   }
 
   #selector {
@@ -121,14 +128,15 @@ h2 {
   }
   .noresults input#search, .start {
     width: 90%;
+    margin: 0 5%;
   }
   #delete {
-    top: 38px;
+    top: 120px;
     right: 7%;
   }
   .noresults #delete {
-    top: 72px;
-    right: 12%;
+    top: 152px;
+    right: 19%;
   }
 }
 
