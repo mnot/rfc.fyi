@@ -344,7 +344,7 @@ function cleanString (input) {
 }
 
 function rfcSort (a, b) {
-  return parseInt(a.replace('RFC', '')) - parseInt(b.replace('RFC', ''))
+  return parseInt(b.replace('RFC', '')) - parseInt(a.replace('RFC', ''))
 }
 
 util.addDOMLoadEvent(init)
