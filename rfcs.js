@@ -37,6 +37,7 @@ function installFormHandlers () {
   obsoleteTarget.onchange = showObsoleteHandler
   searchTarget = document.getElementById('search')
   searchTarget.oninput = searchInput
+  searchTarget.focus()
   deleteTarget = document.getElementById('delete')
   deleteTarget.onclick = deleteHandler
   form = document.forms[0]
