@@ -67,6 +67,11 @@ li {
   flex: 0;
 }
 
+.noresults #tag {
+  width: 60%;
+  margin: 0 auto;
+}
+
 input#search {
   width: 100%;
   font-size: 20px;
@@ -130,9 +135,13 @@ h2 {
   #selector {
     width: 100%;
   }
-  .noresults input#search, .start {
+  .noresults input#search {
     width: 100%;
     margin: 0;
+  }
+  .start, .noresults #tag {
+    width: 100%;
+    margin: 1em 0;
   }
   #delete {
     top: 6px;

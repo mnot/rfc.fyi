@@ -3,7 +3,7 @@
 import * as util from './util.js'
 
 const prefixLen = 3
-const tagTypes = ['status', 'stream', 'level', 'wg']
+const tagTypes = ['tag', 'status', 'stream', 'level', 'wg']
 const unshownTagTypes = ['status']
 const oldTags = [
   'status-obsoleted',
@@ -119,10 +119,10 @@ function clickTagHandler (tagType, tagName) {
 }
 
 function deleteHandler () {
-    searchTarget.value = ""
-    searchWords = []
-    showRfcs()
-    updateUrl()
+  searchTarget.value = ''
+  searchWords = []
+  showRfcs()
+  updateUrl()
 }
 
 function setTagActivity (tagType, tagName, active) {
@@ -149,14 +149,22 @@ function showRfcs () {
     userInput = true
     var taggedRfcs = listTaggedRfcs()
     searchedRfcs = listSearchedRfcs()
-    rfcList = Array.from(taggedRfcs.intersection(searchedRfcs))
+    var relevantRfcs = taggedRfcs.intersection(searchedRfcs)
+    rfcList = Array.from(relevantRfcs)
     rfcList.sort(rfcSort)
     rfcList.forEach(item => {
       let rfcData = rfcs[item]
       renderRfc(item, rfcData, target)
     })
   }
-  showRelevantTags(searchedRfcs)
+  if (!userInput) {
+    let relevantTags = {'tag': new Set(tags['tag'].keys())}
+    showTags(relevantTags, false)
+  } else if (activeTags.has('tag')) {
+    showRelevantTags(relevantRfcs)
+  } else {
+    showRelevantTags(searchedRfcs)
+  }
   var count = document.createTextNode(rfcList.length + ' 📄s')
   var countTarget = document.getElementById('count')
   clear(countTarget)
@@ -223,10 +231,19 @@ function showRelevantTags (rfcSet) {
       }
     })
   })
+  showTags(relevantTags)
+}
+
+function showTags (relevantTags, showHeader = true) {
   tagTypes.forEach(tagType => {
     if (unshownTagTypes.includes(tagType)) return
-    let header = document.getElementById(tagType + '-header')
-    header.style.display = relevantTags[tagType].size > 0 ? 'block' : 'none'
+    if (!relevantTags[tagType]) {
+      relevantTags[tagType] = new Set()
+    }
+    if (showHeader) {
+      let header = document.getElementById(tagType + '-header')
+      header.style.display = relevantTags[tagType].size > 0 ? 'block' : 'none'
+    }
     tags[tagType].forEach(tagName => {
       let visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
       tags[tagType][tagName].target.style.display = visibility
