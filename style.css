@@ -67,7 +67,7 @@ li {
   flex: 0;
 }
 
-.noresults #tag {
+.noresults #collection {
   width: 60%;
   margin: 0 auto;
 }
@@ -139,7 +139,7 @@ h2 {
     width: 100%;
     margin: 0;
   }
-  .start, .noresults #tag {
+  .start, .noresults #collection {
     width: 100%;
     margin: 1em 0;
   }

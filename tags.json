@@ -1,6 +1,6 @@
 {
-    "tag": {
-        "http": {
+    "collection": {
+        "HTTP": {
             "colour": "#F9AA66",
             "active": false,
             "rfcs": ["RFC7230", "RFC7231", "RFC7232", "RFC7233", "RFC7234", "RFC7235", "RFC7540",
@@ -8,6 +8,21 @@
                      "RFC5861", "RFC8246", "RFC6265", "RFC6266", "RFC7694", "RFC8288", "RFC2818",
                      "RFC7616", "RFC7617", "RFC7615", "RFC8188"
             ]
+        },
+        "DNS": {
+            
+        },
+        "IETF Process": {
+            
+        },
+        "TLS": {
+            
+        },
+        "TCP": {
+            
+        },
+        "Protocol Design": {
+            
         }
     }
 }

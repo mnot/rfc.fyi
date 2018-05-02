@@ -3,7 +3,7 @@
 import * as util from './util.js'
 
 const prefixLen = 3
-const tagTypes = ['tag', 'status', 'stream', 'level', 'wg']
+const tagTypes = ['collection', 'status', 'stream', 'level', 'wg']
 const unshownTagTypes = ['status']
 const oldTags = [
   'status-obsoleted',
@@ -158,9 +158,9 @@ function showRfcs () {
     })
   }
   if (!userInput) {
-    let relevantTags = {'tag': new Set(tags['tag'].keys())}
+    let relevantTags = {'collection': new Set(tags['collection'].keys())}
     showTags(relevantTags, false)
-  } else if (activeTags.has('tag')) {
+  } else if (activeTags.has('collection')) {
     showRelevantTags(relevantRfcs)
   } else {
     showRelevantTags(searchedRfcs)
