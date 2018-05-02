@@ -337,15 +337,12 @@ function loadUrl () {
   obsoleteTarget.checked = verbose
   tagTypes.forEach(tagType => {
     if (unshownTagTypes.includes(tagType)) return
+    activeTags.delete(tagType)
     var tagstring = util.getParameterByName(tagType)
-    if (tagstring) {
-      var tags = tagstring.split(',')
-      tags.forEach(tagName => {
-        setTagActivity(tagType, tagName, true)
-      })
-    } else {
-      activeTags.delete(tagType)
-    }
+    var urlTagNames = new Set(tagstring ? tagstring.split(',') : [])
+    tags[tagType].forEach(tagName => {
+      setTagActivity(tagType, tagName, urlTagNames.has(tagName))
+    })
   })
   showRfcs()
 }
