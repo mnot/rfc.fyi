@@ -50,6 +50,12 @@ function loadDone () {
     initTags(tagType, clickTagHandler)
   })
   loadUrl()
+  window.onpopstate = back
+}
+
+function back (...args) {
+  loadUrl()
+  showRfcs()
 }
 
 function compute () {
@@ -337,6 +343,8 @@ function loadUrl () {
       tags.forEach(tagName => {
         setTagActivity(tagType, tagName, true)
       })
+    } else {
+      activeTags.delete(tagType)
     }
   })
   showRfcs()
