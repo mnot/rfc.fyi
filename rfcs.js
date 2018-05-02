@@ -240,10 +240,8 @@ function showTags (relevantTags, showHeader = true) {
     if (!relevantTags[tagType]) {
       relevantTags[tagType] = new Set()
     }
-    if (showHeader) {
-      let header = document.getElementById(tagType + '-header')
-      header.style.display = relevantTags[tagType].size > 0 ? 'block' : 'none'
-    }
+    let header = document.getElementById(tagType + '-header')
+    header.style.display = showHeader && relevantTags[tagType].size > 0 ? 'block' : 'none'
     tags[tagType].forEach(tagName => {
       let visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
       tags[tagType][tagName].target.style.display = visibility
