@@ -7141,6 +7141,19 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
+ "RFC8372": {
+  "status": "current", 
+  "wg": "mpls", 
+  "stream": "ietf", 
+  "title": "MPLS Flow Identification Considerations", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "OAM", 
+   "performance monitoring", 
+   "flow identification"
+  ]
+ }, 
  "RFC4701": {
   "status": "current", 
   "wg": "dnsext", 
@@ -7161,6 +7174,18 @@
   "title": "BGPsec Design Choices and Summary of Supporting Discussions", 
   "stream": "independent", 
   "level": "informational"
+ }, 
+ "RFC8378": {
+  "status": "current", 
+  "wg": "lisp", 
+  "stream": "ietf", 
+  "title": "Signal-Free Locator/ID Separation Protocol (LISP) Multicast", 
+  "level": "experimental", 
+  "area": "rtg", 
+  "keywords": [
+   "LISP", 
+   "deployment"
+  ]
  }, 
  "RFC1952": {
   "status": "current", 
