@@ -126,8 +126,7 @@ h2 {
 .footer {
   position: absolute;
   bottom: 100px;
-  margin: 0 auto;
-  width: 60%;
+  width: 100%;
   text-align: center;
 }
 
