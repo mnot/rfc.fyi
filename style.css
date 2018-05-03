@@ -123,6 +123,18 @@ h2 {
   right: 15.8%;
 }
 
+.footer {
+  position: absolute;
+  bottom: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.octicon {
+  fill: #aaa;
+}
+
 @media all and (max-width: 800px) {
   #container {
     flex-direction: column;
