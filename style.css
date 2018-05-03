@@ -163,6 +163,9 @@ h2 {
   .noresults #delete {
     right: 2%;
   }
+  .footer {
+    bottom: 25px;
+  }
   .results .footer {
     display: none;
   }
