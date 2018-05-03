@@ -127,9 +127,13 @@ h2 {
 
 .footer {
   position: absolute;
-  bottom: 100px;
+  bottom: 25px;
   width: 100%;
   text-align: center;
+}
+
+.noresults .footer {
+  bottom: 100px;
 }
 
 .octicon {
@@ -148,24 +152,26 @@ h2 {
   #selector {
     width: 100%;
   }
+
   .noresults input#search {
     width: 100%;
     margin: 0;
   }
+
   .start, .noresults #collection {
     width: 100%;
     margin: 1em 0;
   }
+
   #delete {
     top: 6px;
     right: 2%;
   }
+
   .noresults #delete {
     right: 2%;
   }
-  .footer {
-    bottom: 25px;
-  }
+
   .results .footer {
     display: none;
   }
@@ -177,6 +183,7 @@ h2 {
     overflow-y: auto;
     height: 100%;
   }
+
   #shadow {
     width: 250px;
     margin-top: 1em;
