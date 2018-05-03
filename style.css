@@ -13,8 +13,10 @@ a:link, a:visited, a:active {
 }
 
 #container {
-   display: flex;
-   flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
 }
 
 #selector {
