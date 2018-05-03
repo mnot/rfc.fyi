@@ -7,7 +7,8 @@ We welcome contributions from the community.
 everyRFC is a single HTML page using JavaScript; it loads RFCs as a compressed JSON file, and so we
 try to keep the size of that (and other) files down as much as possible.
 
-`json-rfc.py` creates the JSON from the RFC Editor's index.
+`json-rfc.py` creates the JSON from the RFC Editor's index. Try `make rfc-index.xml; make
+rfcs.json.gz`.
 
 JavaScript should be formatted according to
 [standard](https://github.com/standard/standard); try `make standard`.
