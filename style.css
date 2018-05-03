@@ -162,6 +162,9 @@ h2 {
   .noresults #delete {
     right: 2%;
   }
+  .results .footer {
+    display: none;
+  }
 }
 
 @media all and (min-width: 800px) {
