@@ -2,6 +2,7 @@
     "collection": {
         "HTTP": {
             "colour": "#F9AA66",
+            "maintainers": ["mnot"],
             "rfcs": [
                 "RFC7230",
                 "RFC7231",
