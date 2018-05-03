@@ -113,6 +113,7 @@ h2 {
 
 #delete {
   position: absolute;
+  font-size: 18px;
   top: 6px;
   right: 4%;
   z-index: 100;
