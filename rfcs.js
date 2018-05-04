@@ -163,12 +163,14 @@ function showRfcs () {
       renderRfc(item, rfcData, target)
     })
   }
-  if (!userInput) {
+  if (!userInput) { // default screen
     let relevantTags = {'collection': new Set(tags['collection'].keys())}
     showTags(relevantTags, false)
-  } else if (activeTags.has('collection')) {
+  } else if (activeTags.has('collection')) { // show a collection
     showRelevantTags(relevantRfcs)
-  } else {
+  } else if (searchWords.length === 0) { // just tags
+    showRelevantTags(taggedRfcs)
+  } else { // search (and possibly tags), but only worry about search terms
     showRelevantTags(searchedRfcs)
   }
   var count = document.createTextNode(rfcList.length + ' 📄s')
