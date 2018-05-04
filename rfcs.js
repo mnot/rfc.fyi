@@ -20,6 +20,12 @@ var searchWords = [] // words the user is searching for
 var allRfcs = [] // list of all RFC numbers
 var rfcs = {} // RFC objects
 
+var tagColours = {
+  'stream': '#678',
+  'level': '#a33',
+  'wg': '#753'
+}
+
 function init () {
   installFormHandlers()
   util.onDone(loadDone)
@@ -100,7 +106,7 @@ function renderTag (tagType, tagName, target, clickHandler) {
   var tagData = tags[tagType][tagName]
   tagSpan.appendChild(tagContent)
   tagSpan.classList.add('tag')
-  tagSpan.style.backgroundColor = tagData['colour'] || util.genColour(tagName)
+  tagSpan.style.backgroundColor = tagData['colour'] || tagColours[tagType] || util.genColour(tagName)
   tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor)
   tags[tagType][tagName].target = tagSpan
   if (clickHandler) {
@@ -132,13 +138,14 @@ function deleteHandler () {
 }
 
 function setTagActivity (tagType, tagName, active) {
+  var change = tagType !== 'collection'
   var tagData = tags[tagType][tagName]
   tagData.active = active
   if (tagData.active === true) {
-    tagData.target.className = 'tag-active'
+    if (change) tagData.target.className = 'tag-active'
     activeTags.set(tagType, tagName)
   } else {
-    tagData.target.className = 'tag'
+    if (change) tagData.target.className = 'tag'
     activeTags.delete(tagType)
   }
 }
