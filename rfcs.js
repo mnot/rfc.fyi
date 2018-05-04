@@ -119,9 +119,7 @@ function clickTagHandler (tagType, tagName) {
   return function (event) {
     var activeTag = activeTags.get(tagType)
     if (activeTag && activeTag !== tagName) {
-      let activeTagData = tags[tagType][activeTag]
-      activeTagData.active = false
-      activeTagData.target.className = 'tag'
+      setTagActivity(tagType, activeTag, false)
     }
     var tagData = tags[tagType][tagName]
     setTagActivity(tagType, tagName, !tagData.active)
@@ -157,8 +155,7 @@ function showRfcs () {
   var rfcList = []
   var userInput = false
   if (activeTags.size !== 0 ||
-      (searchWords.length !== 0 &&
-       searchWords[0].length >= prefixLen)) {
+      (searchWords.length !== 0 && searchWords[0].length >= prefixLen)) {
     userInput = true
     var taggedRfcs = listTaggedRfcs()
     searchedRfcs = listSearchedRfcs()
@@ -170,6 +167,7 @@ function showRfcs () {
       renderRfc(item, rfcData, target)
     })
   }
+  // tags
   if (!userInput) { // default screen
     let relevantTags = {'collection': new Set(tags['collection'].keys())}
     showTags(relevantTags, false)
@@ -180,6 +178,7 @@ function showRfcs () {
   } else { // search (and possibly tags), but only worry about search terms
     showRelevantTags(searchedRfcs)
   }
+  // count
   var count = document.createTextNode(rfcList.length + ' 📄s')
   var countTarget = document.getElementById('count')
   clear(countTarget)
@@ -319,15 +318,15 @@ function updateUrl () {
     queries.push('obsolete')
   }
   tags.forEach(tagType => {
-    var activeTags = []
+    var urlTags = []
     tags[tagType].forEach(tagName => {
       let tagData = tags[tagType][tagName]
       if (tagData.active === true) {
-        activeTags.push(tagName)
+        urlTags.push(tagName)
       }
     })
-    if (activeTags.length > 0) {
-      queries.push(tagType + '=' + activeTags.join(','))
+    if (urlTags.length > 0) {
+      queries.push(tagType + '=' + urlTags.join(','))
     }
   })
   var url = './'
