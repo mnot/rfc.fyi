@@ -115,7 +115,7 @@ function clickTagHandler (tagType, tagName) {
     if (activeTag && activeTag !== tagName) {
       let activeTagData = tags[tagType][activeTag]
       activeTagData.active = false
-      activeTagData.target.style['border-color'] = 'white'
+      activeTagData.target.className = 'tag'
     }
     var tagData = tags[tagType][tagName]
     setTagActivity(tagType, tagName, !tagData.active)
@@ -135,10 +135,10 @@ function setTagActivity (tagType, tagName, active) {
   var tagData = tags[tagType][tagName]
   tagData.active = active
   if (tagData.active === true) {
-    tagData.target.style['border-color'] = 'black'
+    tagData.target.className = 'tag-active'
     activeTags.set(tagType, tagName)
   } else {
-    tagData.target.style['border-color'] = 'white'
+    tagData.target.className = 'tag'
     activeTags.delete(tagType)
   }
 }
