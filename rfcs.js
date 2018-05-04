@@ -351,6 +351,9 @@ function loadUrl () {
     tags[tagType].forEach(tagName => {
       setTagActivity(tagType, tagName, urlTagNames.has(tagName))
     })
+    if (urlTagNames.size > 0) {
+      activeTags.set(tagType, urlTagNames.keys().next().value)
+    }
   })
   showRfcs()
 }
