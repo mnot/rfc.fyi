@@ -1,10 +1,10 @@
-# Contributing to everyRFC
+# Contributing to EveryRFC
 
 We welcome contributions from the community. 
 
 ## Code Contributions
 
-everyRFC is a single HTML page using JavaScript; it loads RFCs as a compressed JSON file, and so we
+EveryRFC is a single HTML page using JavaScript; it loads RFCs as a compressed JSON file, and so we
 try to keep the size of that (and other) files down as much as possible.
 
 `json-rfc.py` creates the JSON from the RFC Editor's index. Try `make rfcs.json.gz`.
