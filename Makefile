@@ -1,4 +1,6 @@
 
+traceur := /usr/local/bin/traceur
+
 rfcs.json.gz: rfcs.json
 	gzip -9 -k -f rfcs.json
 
@@ -8,7 +10,10 @@ rfcs.json: rfc-index.xml rfc-json.py
 .PHONY: rfc-index.xml
 rfc-index.xml:
 	curl "https://www.rfc-editor.org/rfc-index.xml" -o $@
-	
+
+rfcs-es5.js: rfcs.js util.js
+	$(traceur) --out rfcs-es5.js rfcs.js
+
 .PHONY: server
 server:
 	python -m SimpleHTTPServer
