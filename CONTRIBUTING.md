@@ -2,16 +2,6 @@
 
 We welcome contributions from the community. 
 
-## Code Contributions
-
-EveryRFC is a single HTML page using JavaScript; it loads RFCs as a compressed JSON file, and so we
-try to keep the size of that (and other) files down as much as possible.
-
-`json-rfc.py` creates the JSON from the RFC Editor's index. Try `make rfcs.json.gz`.
-
-JavaScript should be formatted according to
-[standard](https://github.com/standard/standard); try `make standard`.
-
 
 ## Adding and Maintaining Collections
 
@@ -28,3 +18,16 @@ high-quality and focused.
 
 Collections are maintained in `tags.json`; see that file for the (hopefully obvious) format. In the
 future, they might be moved to discrete files, if this becomes unwieldy.
+
+
+
+## Code Contributions
+
+EveryRFC is a single HTML page using JavaScript; it loads RFCs as a compressed JSON file, and so we
+try to keep the size of that (and other) files down as much as possible.
+
+`json-rfc.py` creates the JSON from the RFC Editor's index. Try `make rfcs.json.gz`.
+
+JavaScript should be formatted according to
+[standard](https://github.com/standard/standard); try `make standard`.
+
