@@ -18,9 +18,8 @@ JavaScript should be formatted according to
 Collections (the tags you see on the front page) are intended to be useful sets
 of RFCs that cover a particular topic.
 
-New collections and modifications to existing ones can be proposed by [opening an
-issue](https://github.com/EveryRFC/everyRFC/issues/new). Please do **not** propose new collections
-using pull requests.
+New collections an be proposed by [opening an
+issue](https://github.com/EveryRFC/everyRFC/issues/new?template=Custom.md).
 
 Each collection has one or more maintainers; they're responsible for curating that collection to
 meet its purpose. Note that proposing a collection doesn't mean that you'll automatically be
