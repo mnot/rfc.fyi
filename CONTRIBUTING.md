@@ -1,6 +1,6 @@
 # Contributing to EveryRFC
 
-We welcome contributions from the community. 
+We welcome contributions from the community.
 
 
 ## Adding and Maintaining Collections

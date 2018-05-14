@@ -82,7 +82,7 @@ def fixup(raw):
         }
         if value.has_key("wg_acronym") and value["wg_acronym"] != "NON WORKING GROUP":
             output[key]["wg"] = value["wg_acronym"]
-        if value.has_key("area"): 
+        if value.has_key("area"):
             output[key]["area"] = value["area"]
     return output
 
