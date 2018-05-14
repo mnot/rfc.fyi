@@ -19,8 +19,8 @@ server:
 	python -m SimpleHTTPServer
 
 .PHONY: lint
-lint:
-	standard --fix *.js
+lint: rfcs.js util.js
+	standard --fix rfcs.js util.js
 
 .PHONY: clean
 clean:
