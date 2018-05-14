@@ -259,7 +259,6 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     'wg': '#753'
   };
   function init() {
-    installFormHandlers();
     util.onDone(loadDone);
     util.loadJson('tags.json', function(json) {
       tags = json;
@@ -267,6 +266,22 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     util.loadJson('rfcs.json', function(json) {
       rfcs = json;
     });
+  }
+  function loadDone() {
+    compute();
+    tagTypes.forEach(function(tagType) {
+      initTags(tagType, clickTagHandler);
+    });
+    installFormHandlers();
+    loadUrl();
+    window.onpopstate = back;
+  }
+  function back() {
+    for (var args = [],
+        $__1 = 0; $__1 < arguments.length; $__1++)
+      args[$__1] = arguments[$__1];
+    loadUrl();
+    showRfcs();
   }
   var obsoleteTarget;
   var searchTarget;
@@ -277,6 +292,7 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     obsoleteTarget = document.getElementById('obsolete');
     obsoleteTarget.onchange = showObsoleteHandler;
     searchTarget = document.getElementById('search');
+    searchTarget.placeholder = 'Search titles & keywords';
     searchTarget.oninput = searchInput;
     searchTarget.focus();
     deleteTarget = document.getElementById('delete');
@@ -289,21 +305,6 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     title.onclick = function() {
       window.location = '/';
     };
-  }
-  function loadDone() {
-    compute();
-    tagTypes.forEach(function(tagType) {
-      initTags(tagType, clickTagHandler);
-    });
-    loadUrl();
-    window.onpopstate = back;
-  }
-  function back() {
-    for (var args = [],
-        $__1 = 0; $__1 < arguments.length; $__1++)
-      args[$__1] = arguments[$__1];
-    loadUrl();
-    showRfcs();
   }
   function compute() {
     allRfcs = Object.keys(rfcs);
