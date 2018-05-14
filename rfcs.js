@@ -59,6 +59,7 @@ function installFormHandlers () {
   searchTarget = document.getElementById('search')
   searchTarget.placeholder = 'Search titles & keywords'
   searchTarget.oninput = searchInput
+  searchTarget.disabled = false
   searchTarget.focus()
   deleteTarget = document.getElementById('delete')
   deleteTarget.onclick = deleteHandler
