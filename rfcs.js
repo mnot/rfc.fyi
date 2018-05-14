@@ -27,10 +27,24 @@ var tagColours = {
 }
 
 function init () {
-  installFormHandlers()
   util.onDone(loadDone)
   util.loadJson('tags.json', function (json) { tags = json })
   util.loadJson('rfcs.json', function (json) { rfcs = json })
+}
+
+function loadDone () {
+  compute()
+  tagTypes.forEach(tagType => {
+    initTags(tagType, clickTagHandler)
+  })
+  installFormHandlers()
+  loadUrl()
+  window.onpopstate = back
+}
+
+function back (...args) {
+  loadUrl()
+  showRfcs()
 }
 
 var obsoleteTarget
@@ -43,6 +57,7 @@ function installFormHandlers () {
   obsoleteTarget = document.getElementById('obsolete')
   obsoleteTarget.onchange = showObsoleteHandler
   searchTarget = document.getElementById('search')
+  searchTarget.placeholder = 'Search titles & keywords'
   searchTarget.oninput = searchInput
   searchTarget.focus()
   deleteTarget = document.getElementById('delete')
@@ -53,20 +68,6 @@ function installFormHandlers () {
   title.onclick = function () {
     window.location = '/'
   }
-}
-
-function loadDone () {
-  compute()
-  tagTypes.forEach(tagType => {
-    initTags(tagType, clickTagHandler)
-  })
-  loadUrl()
-  window.onpopstate = back
-}
-
-function back (...args) {
-  loadUrl()
-  showRfcs()
 }
 
 function compute () {
