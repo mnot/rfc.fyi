@@ -37,6 +37,7 @@ var obsoleteTarget
 var searchTarget
 var deleteTarget
 var form
+var title
 
 function installFormHandlers () {
   obsoleteTarget = document.getElementById('obsolete')
@@ -48,6 +49,10 @@ function installFormHandlers () {
   deleteTarget.onclick = deleteHandler
   form = document.forms[0]
   form.onsubmit = function () { return false }
+  title = document.getElementById('title')
+  title.onclick = function () {
+    window.location = '/'
+  }
 }
 
 function loadDone () {
