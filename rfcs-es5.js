@@ -272,6 +272,7 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
   var searchTarget;
   var deleteTarget;
   var form;
+  var title;
   function installFormHandlers() {
     obsoleteTarget = document.getElementById('obsolete');
     obsoleteTarget.onchange = showObsoleteHandler;
@@ -283,6 +284,10 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     form = document.forms[0];
     form.onsubmit = function() {
       return false;
+    };
+    title = document.getElementById('title');
+    title.onclick = function() {
+      window.location = '/';
     };
   }
   function loadDone() {
