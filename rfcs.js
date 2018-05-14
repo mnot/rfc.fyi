@@ -210,7 +210,9 @@ function listTaggedRfcs () {
 function listSearchedRfcs () {
   var filteredRfcs = new Set(allRfcs)
   searchWords.forEach(searchWord => {
-    if (searchWord.length >= prefixLen || searchWords.length === 1) {
+    if (`RFC${searchWord}` in rfcs) {
+      filteredRfcs = new Set([`RFC${searchWord}`])
+    } else if (searchWord.length >= prefixLen || searchWords.length === 1) {
       let wordRfcs = searchLookup(searchWord, words, 'title')
       let keywordRfcs = searchLookup(searchWord, keywords, 'keywords')
       filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
