@@ -110,6 +110,8 @@ h1 {
   width: 100%;
   text-align: center;
   margin: 1em 0;
+  cursor: pointer;
+  user-select:none;
 }
 
 h2 {
