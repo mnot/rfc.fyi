@@ -98,6 +98,7 @@ input#search {
   vertical-align: baseline;
   border-radius: 5px;
   user-select: none;
+  cursor: pointer;
   filter: none;
 }
 
