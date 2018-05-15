@@ -102,7 +102,8 @@ function initTags (tagType, clickHandler) {
   var tagList = tags[tagType].keys()
   tagList.sort()
   tagList.forEach(tagName => {
-    renderTag(tagType, tagName, targetDiv, clickHandler)
+    let tagSpan = renderTag(tagType, tagName, targetDiv, clickHandler)
+    tags[tagType][tagName].target = tagSpan
     targetDiv.appendChild(document.createTextNode(' '))
   })
 }
@@ -115,13 +116,13 @@ function renderTag (tagType, tagName, target, clickHandler) {
   tagSpan.classList.add('tag')
   tagSpan.style.backgroundColor = tagData['colour'] || tagColours[tagType] || util.genColour(tagName)
   tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor)
-  tags[tagType][tagName].target = tagSpan
   if (clickHandler) {
     tagSpan.onclick = clickHandler(tagType, tagName)
   } else {
     tagSpan.style.cursor = 'default'
   }
   target.appendChild(tagSpan)
+  return tagSpan
 }
 
 function clickTagHandler (tagType, tagName) {
