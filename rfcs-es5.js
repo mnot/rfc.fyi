@@ -419,7 +419,7 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     } else {
       showRelevantTags(searchedRfcs);
     }
-    var count = document.createTextNode(rfcList.length + ' 📄s');
+    var count = document.createTextNode(rfcList.length + ' RFCs');
     var countTarget = document.getElementById('count');
     clear(countTarget);
     countTarget.appendChild(count);
