@@ -353,6 +353,8 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     tags[tagType][tagName].target = tagSpan;
     if (clickHandler) {
       tagSpan.onclick = clickHandler(tagType, tagName);
+    } else {
+      tagSpan.style.cursor = 'default';
     }
     target.appendChild(tagSpan);
   }
@@ -460,6 +462,12 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     rfcSpan.appendChild(rfcLink);
     var rfcTitle = document.createTextNode(rfcData.title);
     rfcLink.appendChild(rfcTitle);
+    if (rfcs[rfcName].stream && rfcs[rfcName].stream !== 'ietf') {
+      renderTag('stream', rfcs[rfcName].stream, rfcSpan);
+    }
+    if (rfcs[rfcName].level && rfcs[rfcName].level !== 'std') {
+      renderTag('level', rfcs[rfcName].level, rfcSpan);
+    }
     target.appendChild(rfcSpan);
   }
   function showRelevantTags(rfcSet) {
