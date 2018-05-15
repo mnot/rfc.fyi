@@ -23,6 +23,7 @@ a:link, a:visited, a:active {
   width: 250px;
   margin-top: 1em;
   padding: 0;
+  line-height: 1.55em;
 }
 
 #form {
@@ -89,10 +90,9 @@ input#search {
 
 .tag, .tag-active {
   display: inline;
-  padding: .2em .6em .3em;
+  padding: .25em .6em;
   font-size: 75%;
   font-weight: 500;
-  line-height: 2.25em;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -106,6 +106,9 @@ input#search {
   filter: hue-rotate(180deg);
 }
 
+li .tag {
+  margin: 0 0 0 .5em;
+}
 
 h1 {
   width: 100%;

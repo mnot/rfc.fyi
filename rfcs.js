@@ -118,6 +118,8 @@ function renderTag (tagType, tagName, target, clickHandler) {
   tags[tagType][tagName].target = tagSpan
   if (clickHandler) {
     tagSpan.onclick = clickHandler(tagType, tagName)
+  } else {
+    tagSpan.style.cursor = 'default'
   }
   target.appendChild(tagSpan)
 }
@@ -233,6 +235,12 @@ function renderRfc (rfcName, rfcData, target) {
   rfcSpan.appendChild(rfcLink)
   var rfcTitle = document.createTextNode(rfcData.title)
   rfcLink.appendChild(rfcTitle)
+  if (rfcs[rfcName].stream && rfcs[rfcName].stream !== 'ietf') {
+    renderTag('stream', rfcs[rfcName].stream, rfcSpan)
+  }
+  if (rfcs[rfcName].level && rfcs[rfcName].level !== 'std') {
+    renderTag('level', rfcs[rfcName].level, rfcSpan)
+  }
   target.appendChild(rfcSpan)
 }
 
