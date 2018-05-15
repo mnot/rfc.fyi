@@ -189,7 +189,7 @@ function showRfcs () {
     showRelevantTags(searchedRfcs)
   }
   // count
-  var count = document.createTextNode(rfcList.length + ' 📄s')
+  var count = document.createTextNode(rfcList.length + ' RFCs')
   var countTarget = document.getElementById('count')
   clear(countTarget)
   countTarget.appendChild(count)
