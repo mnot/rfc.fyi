@@ -338,7 +338,8 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     var tagList = tags[tagType].keys();
     tagList.sort();
     tagList.forEach(function(tagName) {
-      renderTag(tagType, tagName, targetDiv, clickHandler);
+      var tagSpan = renderTag(tagType, tagName, targetDiv, clickHandler);
+      tags[tagType][tagName].target = tagSpan;
       targetDiv.appendChild(document.createTextNode(' '));
     });
   }
@@ -350,13 +351,13 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
     tagSpan.classList.add('tag');
     tagSpan.style.backgroundColor = tagData['colour'] || tagColours[tagType] || util.genColour(tagName);
     tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor);
-    tags[tagType][tagName].target = tagSpan;
     if (clickHandler) {
       tagSpan.onclick = clickHandler(tagType, tagName);
     } else {
       tagSpan.style.cursor = 'default';
     }
     target.appendChild(tagSpan);
+    return tagSpan;
   }
   function clickTagHandler(tagType, tagName) {
     return function(event) {
