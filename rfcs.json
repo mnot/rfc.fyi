@@ -3871,6 +3871,18 @@
    "RPL"
   ]
  }, 
+ "RFC8353": {
+  "status": "current", 
+  "wg": "kitten", 
+  "stream": "ietf", 
+  "title": "Generic Security Service API Version 2: Java Bindings Update", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "JGSS", 
+   "GSS-API"
+  ]
+ }, 
  "RFC8354": {
   "status": "current", 
   "wg": "spring", 
@@ -6858,6 +6870,15 @@
   "area": "rtg", 
   "keywords": []
  }, 
+ "RFC6253": {
+  "status": "obsoleted", 
+  "wg": "hip", 
+  "stream": "ietf", 
+  "title": "Host Identity Protocol Certificates", 
+  "level": "experimental", 
+  "area": "int", 
+  "keywords": []
+ }, 
  "RFC6110": {
   "status": "current", 
   "wg": "netmod", 
@@ -7187,6 +7208,20 @@
   "title": "BGPsec Design Choices and Summary of Supporting Discussions", 
   "stream": "independent", 
   "level": "informational"
+ }, 
+ "RFC8375": {
+  "status": "current", 
+  "wg": "homenet", 
+  "stream": "ietf", 
+  "title": "Special-Use Domain 'home.arpa.'", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "Homenet", 
+   "TLD", 
+   "RFC6761", 
+   ".home.arpa"
+  ]
  }, 
  "RFC8378": {
   "status": "current", 
@@ -12986,20 +13021,6 @@
   "title": "PKCS #5: Password-Based Cryptography Specification Version 2.0", 
   "stream": "legacy", 
   "level": "informational"
- }, 
- "RFC6326": {
-  "status": "obsoleted", 
-  "wg": "isis", 
-  "stream": "ietf", 
-  "title": "Transparent Interconnection of Lots of Links (TRILL) Use of IS-IS", 
-  "level": "std", 
-  "area": "rtg", 
-  "keywords": [
-   "TRILL", 
-   "RBridge", 
-   "IS-IS", 
-   "ISIS"
-  ]
  }, 
  "RFC6447": {
   "status": "current", 
@@ -33800,7 +33821,7 @@
   ]
  }, 
  "RFC5653": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "kitten", 
   "stream": "ietf", 
   "title": "Generic Security Service API Version 2: Java Bindings Update", 
@@ -46806,20 +46827,24 @@
    "dynamic host configuration protocol"
   ]
  }, 
- "RFC2305": {
-  "status": "obsoleted", 
-  "wg": "fax", 
-  "stream": "ietf", 
-  "title": "A Simple Mode of Facsimile Using Internet Mail", 
-  "level": "std", 
-  "area": "app", 
+ "RFC3167": {
+  "status": "current", 
   "keywords": [
-   "SMFAX-IM", 
-   "data", 
-   "file", 
-   "format", 
-   "e-mail"
-  ]
+   "BGP4/IDRP", 
+   "Internet", 
+   "Inter-Domain", 
+   "Routing", 
+   "Protocol", 
+   "Border", 
+   "Gateway", 
+   "Open", 
+   "Shortest", 
+   "Path", 
+   "First"
+  ], 
+  "title": "Request to Move RFC 1745 to Historic Status", 
+  "stream": "legacy", 
+  "level": "informational"
  }, 
  "RFC2304": {
   "status": "obsoleted", 
@@ -57256,24 +57281,47 @@
   "area": "int", 
   "keywords": []
  }, 
- "RFC3167": {
+ "RFC8388": {
   "status": "current", 
+  "wg": "bess", 
+  "stream": "ietf", 
+  "title": "Usage and Applicability of BGP MPLS-Based Ethernet VPN", 
+  "level": "informational", 
+  "area": "rtg", 
   "keywords": [
-   "BGP4/IDRP", 
-   "Internet", 
-   "Inter-Domain", 
-   "Routing", 
-   "Protocol", 
-   "Border", 
-   "Gateway", 
-   "Open", 
-   "Shortest", 
-   "Path", 
-   "First"
-  ], 
-  "title": "Request to Move RFC 1745 to Historic Status", 
-  "stream": "legacy", 
-  "level": "informational"
+   "EVPN"
+  ]
+ }, 
+ "RFC8387": {
+  "status": "current", 
+  "wg": "lwig", 
+  "stream": "ietf", 
+  "title": "Practical Considerations and Implementation Experiences in Securing Smart Object Networks", 
+  "level": "informational", 
+  "area": "int", 
+  "keywords": [
+   "IoT", 
+   "security", 
+   "integrity", 
+   "signing", 
+   "ECC", 
+   "CoAP", 
+   "asymmetric", 
+   "cryptography"
+  ]
+ }, 
+ "RFC8386": {
+  "status": "current", 
+  "wg": "intarea", 
+  "stream": "ietf", 
+  "title": "Privacy Considerations for Protocols Relying on IP Broadcast or Multicast", 
+  "level": "informational", 
+  "area": "int", 
+  "keywords": [
+   "IP broadcasts", 
+   "multicast", 
+   "privacy considerations"
+  ]
  }, 
  "RFC3164": {
   "status": "obsoleted", 
@@ -57288,6 +57336,30 @@
    "distribution", 
    "transmission", 
    "messages"
+  ]
+ }, 
+ "RFC8381": {
+  "status": "current", 
+  "wg": "trill", 
+  "stream": "ietf", 
+  "title": "Transparent Interconnection of Lots of Links (TRILL): Vendor-Specific RBridge Channel Protocol", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "OUI", 
+   "CID"
+  ]
+ }, 
+ "RFC8380": {
+  "status": "current", 
+  "wg": "trill", 
+  "stream": "ietf", 
+  "title": "Directory-Assisted Transparent Interconnection of Lots of Links (TRILL) Encapsulation", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "Directory", 
+   "Nickname"
   ]
  }, 
  "RFC3165": {
@@ -63625,14 +63697,12 @@
   "stream": "ietf", 
   "level": "informational"
  }, 
- "RFC6253": {
-  "status": "obsoleted", 
-  "wg": "hip", 
+ "RFC6701": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Sanctions Available for Application to Violators of IETF IPR Policy", 
   "stream": "ietf", 
-  "title": "Host Identity Protocol Certificates", 
-  "level": "experimental", 
-  "area": "int", 
-  "keywords": []
+  "level": "informational"
  }, 
  "RFC6252": {
   "status": "current", 
@@ -89195,18 +89265,18 @@
    "Adjacency"
   ]
  }, 
- "RFC6454": {
-  "status": "current", 
-  "wg": "websec", 
+ "RFC6326": {
+  "status": "obsoleted", 
+  "wg": "isis", 
   "stream": "ietf", 
-  "title": "The Web Origin Concept", 
+  "title": "Transparent Interconnection of Lots of Links (TRILL) Use of IS-IS", 
   "level": "std", 
-  "area": "app", 
+  "area": "rtg", 
   "keywords": [
-   "same-origin", 
-   "policy", 
-   "security", 
-   "cross-origin"
+   "TRILL", 
+   "RBridge", 
+   "IS-IS", 
+   "ISIS"
   ]
  }, 
  "RFC7208": {
@@ -91916,6 +91986,21 @@
    "Window Scale", 
    "PAWS", 
    "TCP options"
+  ]
+ }, 
+ "RFC2305": {
+  "status": "obsoleted", 
+  "wg": "fax", 
+  "stream": "ietf", 
+  "title": "A Simple Mode of Facsimile Using Internet Mail", 
+  "level": "std", 
+  "area": "app", 
+  "keywords": [
+   "SMFAX-IM", 
+   "data", 
+   "file", 
+   "format", 
+   "e-mail"
   ]
  }, 
  "RFC3075": {
@@ -95463,12 +95548,19 @@
    "websocket"
   ]
  }, 
- "RFC6701": {
+ "RFC6454": {
   "status": "current", 
-  "keywords": [], 
-  "title": "Sanctions Available for Application to Violators of IETF IPR Policy", 
+  "wg": "websec", 
   "stream": "ietf", 
-  "level": "informational"
+  "title": "The Web Origin Concept", 
+  "level": "std", 
+  "area": "app", 
+  "keywords": [
+   "same-origin", 
+   "policy", 
+   "security", 
+   "cross-origin"
+  ]
  }, 
  "RFC6457": {
   "status": "current", 
