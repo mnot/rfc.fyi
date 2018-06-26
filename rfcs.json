@@ -2134,7 +2134,7 @@
   "keywords": [], 
   "title": "Service mappings", 
   "stream": "legacy", 
-  "level": "unknown"
+  "level": "historic"
  }, 
  "RFC0796": {
   "status": "current", 
@@ -2419,6 +2419,18 @@
   ], 
   "title": "The Naming of Hosts", 
   "stream": "legacy", 
+  "level": "informational"
+ }, 
+ "RFC8439": {
+  "status": "current", 
+  "keywords": [
+   "CHACHA", 
+   "CHACHA20", 
+   "POLY1305", 
+   "AEAD"
+  ], 
+  "title": "ChaCha20 and Poly1305 for IETF Protocols", 
+  "stream": "irtf", 
   "level": "informational"
  }, 
  "RFC2109": {
@@ -18119,7 +18131,7 @@
   ]
  }, 
  "RFC7539": {
-  "status": "current", 
+  "status": "obsoleted", 
   "keywords": [
    "AEAD"
   ], 
@@ -20653,7 +20665,7 @@
   "wg": "bier", 
   "stream": "ietf", 
   "title": "Multicast Using Bit Index Explicit Replication (BIER)", 
-  "level": "experimental", 
+  "level": "std", 
   "area": "rtg", 
   "keywords": [
    "Multicast"
@@ -30934,7 +30946,7 @@
   "wg": "bier", 
   "stream": "ietf", 
   "title": "Encapsulation for Bit Index Explicit Replication (BIER) in MPLS and Non-MPLS Networks", 
-  "level": "experimental", 
+  "level": "std", 
   "area": "rtg", 
   "keywords": [
    "Multicast"
@@ -36948,6 +36960,15 @@
    "wavelength", 
    "rapid setup"
   ]
+ }, 
+ "RFC8405": {
+  "status": "current", 
+  "wg": "rtgwg", 
+  "stream": "ietf", 
+  "title": "Shortest Path First (SPF) Back-Off Delay Algorithm for Link-State IGPs", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC3377": {
   "status": "obsoleted", 
@@ -47079,6 +47100,21 @@
    "negative"
   ]
  }, 
+ "RFC3164": {
+  "status": "obsoleted", 
+  "wg": "syslog", 
+  "stream": "ietf", 
+  "title": "The BSD Syslog Protocol", 
+  "level": "informational", 
+  "area": "sec", 
+  "keywords": [
+   "berkeley", 
+   "software", 
+   "distribution", 
+   "transmission", 
+   "messages"
+  ]
+ }, 
  "RFC1649": {
   "status": "current", 
   "wg": "x400ops", 
@@ -49322,12 +49358,26 @@
    "Label"
   ]
  }, 
- "RFC0556": {
+ "RFC8400": {
   "status": "current", 
-  "keywords": [], 
-  "title": "Traffic Statistics (July 1973)", 
-  "stream": "legacy", 
-  "level": "unknown"
+  "wg": "teas", 
+  "stream": "ietf", 
+  "title": "Extensions to RSVP-TE for Label Switched Path (LSP) Egress Protection", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "FRR", 
+   "Fast Reroute"
+  ]
+ }, 
+ "RFC8401": {
+  "status": "current", 
+  "wg": "bier", 
+  "stream": "ietf", 
+  "title": "Bit Index Explicit Replication (BIER) Support via IS-IS", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC0789": {
   "status": "current", 
@@ -49370,6 +49420,16 @@
    "TRILL", 
    "native"
   ]
+ }, 
+ "RFC8406": {
+  "status": "current", 
+  "keywords": [
+   "Network Coding", 
+   "Taxonomy"
+  ], 
+  "title": "Taxonomy of Coding Techniques for Efficient Network Communications", 
+  "stream": "irtf", 
+  "level": "informational"
  }, 
  "RFC0557": {
   "status": "current", 
@@ -57431,6 +57491,19 @@
    "privacy considerations"
   ]
  }, 
+ "RFC8385": {
+  "status": "current", 
+  "wg": "trill", 
+  "stream": "ietf", 
+  "title": "Transparent Interconnection of Lots of Links (TRILL) Transparent Transport over MPLS", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "VPLS", 
+   "VPTS", 
+   "TIR"
+  ]
+ }, 
  "RFC8383": {
   "status": "current", 
   "wg": "trill", 
@@ -57445,19 +57518,15 @@
    "FGL"
   ]
  }, 
- "RFC3164": {
-  "status": "obsoleted", 
-  "wg": "syslog", 
+ "RFC8382": {
+  "status": "current", 
+  "wg": "rmcat", 
   "stream": "ietf", 
-  "title": "The BSD Syslog Protocol", 
-  "level": "informational", 
-  "area": "sec", 
+  "title": "Shared Bottleneck Detection for Coupled Congestion Control for RTP Media", 
+  "level": "experimental", 
+  "area": "tsv", 
   "keywords": [
-   "berkeley", 
-   "software", 
-   "distribution", 
-   "transmission", 
-   "messages"
+   "SBD"
   ]
  }, 
  "RFC8381": {
@@ -90893,6 +90962,13 @@
   "status": "current", 
   "keywords": [], 
   "title": "NYU, ANL, and LBL Joining the Net", 
+  "stream": "legacy", 
+  "level": "unknown"
+ }, 
+ "RFC0556": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Traffic Statistics (July 1973)", 
   "stream": "legacy", 
   "level": "unknown"
  }, 
