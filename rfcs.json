@@ -3860,6 +3860,13 @@
    "GRE"
   ]
  }, 
+ "RFC8351": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "The PKCS #8 EncryptedPrivateKeyInfo Media Type", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
  "RFC8352": {
   "status": "current", 
   "wg": "lwig", 
@@ -10969,6 +10976,15 @@
    "NVO3", 
    "VDP"
   ]
+ }, 
+ "RFC8395": {
+  "status": "current", 
+  "wg": "bess", 
+  "stream": "ietf", 
+  "title": "Extensions to BGP-Signaled Pseudowires to Support Flow-Aware Transport Labels", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC8397": {
   "status": "current", 
@@ -42205,7 +42221,7 @@
   ], 
   "title": "The RC4-HMAC Kerberos Encryption Types Used by Microsoft Windows", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC6662": {
   "status": "current", 
@@ -57504,6 +57520,18 @@
    "TIR"
   ]
  }, 
+ "RFC8384": {
+  "status": "current", 
+  "wg": "trill", 
+  "stream": "ietf", 
+  "title": "Transparent Interconnection of Lots of Links (TRILL) Smart Endnodes", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "TRILL", 
+   "Smart Endnode"
+  ]
+ }, 
  "RFC8383": {
   "status": "current", 
   "wg": "trill", 
@@ -63160,7 +63188,7 @@
   "wg": "tls", 
   "stream": "ietf", 
   "title": "TLS Elliptic Curve Cipher Suites with SHA-256/384 and AES Galois Counter Mode (GCM)", 
-  "level": "informational", 
+  "level": "std", 
   "area": "sec", 
   "keywords": [
    "transport layer security", 
@@ -96548,6 +96576,39 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
+ "RFC8413": {
+  "status": "current", 
+  "wg": "teas", 
+  "stream": "ietf", 
+  "title": "Framework for Scheduled Use of Resources", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "Traffic Engineering", 
+   "TE", 
+   "Label Switched Path", 
+   "LSP", 
+   "MPLS", 
+   "Path Computation Element", 
+   "PCE", 
+   "Software Defined Networking", 
+   "SDN"
+  ]
+ }, 
+ "RFC8412": {
+  "status": "current", 
+  "wg": "sacm", 
+  "stream": "ietf", 
+  "title": "Software Inventory Message and Attributes (SWIMA) for PA-TNC", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "SWID", 
+   "PA-TNC", 
+   "NEA", 
+   "Software inventory"
+  ]
+ }, 
  "RFC7954": {
   "status": "current", 
   "wg": "lisp", 
@@ -96557,6 +96618,24 @@
   "area": "rtg", 
   "keywords": []
  }, 
+ "RFC8417": {
+  "status": "current", 
+  "wg": "secevent", 
+  "stream": "ietf", 
+  "title": "Security Event Token (SET)", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "Identity", 
+   "Security", 
+   "Event", 
+   "Token", 
+   "Claims", 
+   "JSON", 
+   "JSON Web Token", 
+   "JWT"
+  ]
+ }, 
  "RFC0727": {
   "status": "current", 
   "keywords": [
@@ -96565,6 +96644,27 @@
   "title": "Telnet logout option", 
   "stream": "legacy", 
   "level": "std"
+ }, 
+ "RFC8414": {
+  "status": "current", 
+  "wg": "oauth", 
+  "stream": "ietf", 
+  "title": "OAuth 2.0 Authorization Server Metadata", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "OAuth", 
+   "Discovery", 
+   "Metadata", 
+   "Discovery Metadata", 
+   "Configuration Information", 
+   "Authorization Server", 
+   "WebFinger", 
+   "JavaScript Object Notation", 
+   "JSON", 
+   "JSON Web Token", 
+   "JWT"
+  ]
  }, 
  "RFC7148": {
   "status": "current", 
