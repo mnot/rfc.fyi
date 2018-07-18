@@ -29,5 +29,5 @@ try to keep the size of that (and other) files down as much as possible.
 `json-rfc.py` creates the JSON from the RFC Editor's index. Try `make rfcs.json.gz`.
 
 JavaScript should be formatted according to
-[standard](https://github.com/standard/standard); try `make standard`.
+[standard](https://github.com/standard/standard); try `make lint`.
 
