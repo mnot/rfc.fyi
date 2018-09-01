@@ -2433,6 +2433,19 @@
   "stream": "irtf", 
   "level": "informational"
  }, 
+ "RFC8438": {
+  "status": "current", 
+  "wg": "extra", 
+  "stream": "ietf", 
+  "title": "IMAP Extension for STATUS=SIZE", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "imap", 
+   "status", 
+   "size"
+  ]
+ }, 
  "RFC2109": {
   "status": "obsoleted", 
   "wg": "http", 
@@ -4294,12 +4307,14 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
- "RFC0782": {
+ "RFC8409": {
   "status": "current", 
-  "keywords": [], 
-  "title": "Virtual Terminal management model", 
-  "stream": "legacy", 
-  "level": "unknown"
+  "keywords": [
+   "REFEDS"
+  ], 
+  "title": "The Entity Category Security Assertion Markup Language (SAML) Attribute Types", 
+  "stream": "independent", 
+  "level": "informational"
  }, 
  "RFC0781": {
   "status": "current", 
@@ -17703,6 +17718,17 @@
   "stream": "ietf", 
   "level": "informational"
  }, 
+ "RFC8435": {
+  "status": "current", 
+  "wg": "nfsv4", 
+  "stream": "ietf", 
+  "title": "Parallel NFS (pNFS) Flexible File Layout", 
+  "level": "std", 
+  "area": "tsv", 
+  "keywords": [
+   "NFSv4"
+  ]
+ }, 
  "RFC6059": {
   "status": "current", 
   "wg": "dna", 
@@ -17727,6 +17753,45 @@
    "mobility"
   ]
  }, 
+ "RFC8434": {
+  "status": "current", 
+  "wg": "nfsv4", 
+  "stream": "ietf", 
+  "title": "Requirements for Parallel NFS (pNFS) Layout Types", 
+  "level": "std", 
+  "area": "tsv", 
+  "keywords": [
+   "NFSv4"
+  ]
+ }, 
+ "RFC8437": {
+  "status": "current", 
+  "wg": "extra", 
+  "stream": "ietf", 
+  "title": "IMAP UNAUTHENTICATE Extension for Connection Reuse", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "IMAP", 
+   "unauthenticate", 
+   "SASL", 
+   "login", 
+   "authenticate", 
+   "authentication"
+  ]
+ }, 
+ "RFC8436": {
+  "status": "current", 
+  "wg": "tsvwg", 
+  "stream": "ietf", 
+  "title": "Update to IANA Registration Procedures for Pool 3 Values in the Differentiated Services Field Codepoints (DSCP) Registry", 
+  "level": "std", 
+  "area": "tsv", 
+  "keywords": [
+   "Diffserv", 
+   "DSCP"
+  ]
+ }, 
  "RFC6058": {
   "status": "current", 
   "wg": "mipshop", 
@@ -17746,6 +17811,24 @@
    "single radio handover", 
    "transient binding cache entry"
   ]
+ }, 
+ "RFC8433": {
+  "status": "current", 
+  "keywords": [
+   "Alert-Info", 
+   "audio signals", 
+   "call signaling", 
+   "call transfer", 
+   "resolution", 
+   "signaling", 
+   "signals", 
+   "SIP", 
+   "URN", 
+   "visual signals"
+  ], 
+  "title": "A Simpler Method for Resolving Alert-Info URNs", 
+  "stream": "independent", 
+  "level": "informational"
  }, 
  "RFC7049": {
   "status": "current", 
@@ -27386,7 +27469,7 @@
   "level": "informational"
  }, 
  "RFC4492": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "tls", 
   "stream": "ietf", 
   "title": "Elliptic Curve Cryptography (ECC) Cipher Suites for Transport Layer Security (TLS)", 
@@ -28075,16 +28158,16 @@
   "stream": "iab", 
   "level": "informational"
  }, 
- "RFC6387": {
-  "status": "current", 
-  "wg": "ccamp", 
+ "RFC6439": {
+  "status": "obsoleted", 
+  "wg": "trill", 
   "stream": "ietf", 
-  "title": "GMPLS Asymmetric Bandwidth Bidirectional Label Switched Paths (LSPs)", 
+  "title": "Routing Bridges (RBridges): Appointed Forwarders", 
   "level": "std", 
-  "area": "rtg", 
+  "area": "int", 
   "keywords": [
-   "rsvp", 
-   "resource reservation protocol"
+   "trill", 
+   "TRansparent Interconnection of Lots of Links"
   ]
  }, 
  "RFC6438": {
@@ -28132,6 +28215,18 @@
    "transmission", 
    "control", 
    "protocol"
+  ]
+ }, 
+ "RFC8422": {
+  "status": "current", 
+  "wg": "tls", 
+  "stream": "ietf", 
+  "title": "Elliptic Curve Cryptography (ECC) Cipher Suites for Transport Layer Security (TLS) Versions 1.2 and Earlier", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "ECDSA", 
+   "EdDSA"
   ]
  }, 
  "RFC3154": {
@@ -28427,6 +28522,17 @@
    "internet", 
    "mail", 
    "extensions"
+  ]
+ }, 
+ "RFC8424": {
+  "status": "current", 
+  "wg": "teas", 
+  "stream": "ietf", 
+  "title": "Extensions to RSVP-TE for Label Switched Path (LSP) Ingress Fast Reroute (FRR) Protection", 
+  "level": "experimental", 
+  "area": "rtg", 
+  "keywords": [
+   "Head Protection"
   ]
  }, 
  "RFC1908": {
@@ -35060,7 +35166,7 @@
   ], 
   "title": "Suite B in Secure/Multipurpose Internet Mail Extensions (S/MIME)", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC0833": {
   "status": "obsoleted", 
@@ -39231,7 +39337,7 @@
   ], 
   "title": "Suite B Cryptographic Suites for IPsec", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC0546": {
   "status": "current", 
@@ -41826,7 +41932,7 @@
   ], 
   "title": "Suite B Profile of Certificate Management over CMS", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC3160": {
   "status": "obsoleted", 
@@ -42675,42 +42781,41 @@
    "Extending LISP"
   ]
  }, 
- "RFC8110": {
+ "RFC8446": {
   "status": "current", 
-  "keywords": [
-   "opportunistic encryption wireless"
-  ], 
-  "title": "Opportunistic Wireless Encryption", 
+  "wg": "tls", 
   "stream": "ietf", 
-  "level": "informational"
- }, 
- "RFC8111": {
-  "status": "current", 
-  "wg": "lisp", 
-  "stream": "ietf", 
-  "title": "Locator/ID Separation Protocol Delegated Database Tree (LISP-DDT)", 
-  "level": "experimental", 
-  "area": "rtg", 
+  "title": "The Transport Layer Security (TLS) Protocol Version 1.3", 
+  "level": "std", 
+  "area": "sec", 
   "keywords": [
-   "LISP", 
-   "DDT", 
-   "EID", 
-   "Locator", 
-   "Mapping System", 
-   "Map-Server", 
-   "Map-Referral", 
-   "Referral"
+   "international data algorithm", 
+   "symmetric", 
+   "transport protocol layer", 
+   "authentication", 
+   "privacy"
   ]
  }, 
- "RFC8116": {
+ "RFC8447": {
   "status": "current", 
-  "wg": "manet", 
+  "wg": "tls", 
   "stream": "ietf", 
-  "title": "Security Threats to the Optimized Link State Routing Protocol Version 2 (OLSRv2)", 
-  "level": "informational", 
-  "area": "rtg", 
+  "title": "IANA Registry Updates for TLS and DTLS", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": []
+ }, 
+ "RFC8440": {
+  "status": "current", 
+  "wg": "extra", 
+  "stream": "ietf", 
+  "title": "IMAP4 Extension for Returning MYRIGHTS Information in Extended LIST", 
+  "level": "std", 
+  "area": "art", 
   "keywords": [
-   "MANET"
+   "IMAP4", 
+   "LIST", 
+   "MYRIGHTS"
   ]
  }, 
  "RFC8117": {
@@ -42755,32 +42860,21 @@
    "Source-Specific Multicast"
   ]
  }, 
- "RFC8115": {
+ "RFC8443": {
   "status": "current", 
-  "wg": "softwire", 
+  "wg": "stir", 
   "stream": "ietf", 
-  "title": "DHCPv6 Option for IPv4-Embedded Multicast and Unicast IPv6 Prefixes", 
+  "title": "Personal Assertion Token (PASSporT) Extension for Resource Priority Authorization", 
   "level": "std", 
-  "area": "int", 
+  "area": "art", 
   "keywords": [
-   "PREFIX64", 
-   "SSM", 
-   "ASM", 
-   "Prefix Discovery", 
-   "IPv4-Converted IPv6 Addresses", 
-   "IPv4 service continuity", 
-   "IPv6 Address Synthesis", 
-   "Any-Source Multicast", 
-   "Source-Specific Multicast", 
-   "PIM", 
-   "IPv4-IPv6 interconnection", 
-   "IPv4  over IPv6", 
-   "A+P", 
-   "MAP", 
-   "MAP-E", 
-   "address-sharing", 
-   "CGN", 
-   "NAT64"
+   "SIP Resource-Priority", 
+   "Resource Priority Header (rph)", 
+   "JSON Web Token Claim", 
+   "Identity header", 
+   "Authentication Service", 
+   "Assertion", 
+   "Verification Service"
   ]
  }, 
  "RFC8118": {
@@ -42801,6 +42895,20 @@
   "title": "SIP \"cause\" URI Parameter for Service Number Translation", 
   "stream": "ietf", 
   "level": "informational"
+ }, 
+ "RFC8449": {
+  "status": "current", 
+  "wg": "tls", 
+  "stream": "ietf", 
+  "title": "Record Size Limit Extension for TLS", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "TLS", 
+   "record", 
+   "IoT", 
+   "encryption"
+  ]
  }, 
  "RFC8426": {
   "status": "current", 
@@ -44716,6 +44824,13 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
+ "RFC0782": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Virtual Terminal management model", 
+  "stream": "legacy", 
+  "level": "unknown"
+ }, 
  "RFC3065": {
   "status": "obsoleted", 
   "wg": "idr", 
@@ -44749,7 +44864,7 @@
   ], 
   "title": "Suite B Profile for Transport Layer Security (TLS)", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC3101": {
   "status": "current", 
@@ -49225,6 +49340,15 @@
   "stream": "ietf", 
   "level": "informational"
  }, 
+ "RFC7954": {
+  "status": "current", 
+  "wg": "lisp", 
+  "stream": "ietf", 
+  "title": "Locator/ID Separation Protocol (LISP) Endpoint Identifier (EID) Block", 
+  "level": "experimental", 
+  "area": "rtg", 
+  "keywords": []
+ }, 
  "RFC0553": {
   "status": "current", 
   "keywords": [], 
@@ -51817,7 +51941,7 @@
   "keywords": [], 
   "title": "Suite B in Secure/Multipurpose Internet Mail Extensions (S/MIME)", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC6319": {
   "status": "current", 
@@ -52304,33 +52428,36 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
- "RFC2115": {
+ "RFC8423": {
   "status": "current", 
-  "wg": "ion", 
-  "stream": "ietf", 
-  "title": "Management Information Base for Frame Relay DTEs Using SMIv2", 
-  "level": "std", 
-  "area": "int", 
   "keywords": [
-   "FRAME-MIB", 
-   "MIB"
-  ]
+   "x.509 v3 certificates", 
+   "x.509 v2 certificate revocation lists", 
+   "crl", 
+   "UI suites", 
+   "user interface suites", 
+   "elliptic curve", 
+   "ike", 
+   "cryptographic algorithm policy", 
+   "security application", 
+   "suite b cryptography", 
+   "cmc", 
+   "suite b x.509 public key certificates", 
+   "cryptographic algorithm policy", 
+   "nsa"
+  ], 
+  "title": "Reclassification of Suite B Documents to Historic Status", 
+  "stream": "ietf", 
+  "level": "informational"
  }, 
- "RFC2116": {
+ "RFC8420": {
   "status": "current", 
-  "wg": "ids", 
+  "wg": "ipsecme", 
   "stream": "ietf", 
-  "title": "X.500 Implementations Catalog-96", 
-  "level": "informational", 
-  "area": "app", 
-  "keywords": [
-   "Directory", 
-   "Services", 
-   "DSA", 
-   "DUA", 
-   "Agent", 
-   "Interfaces"
-  ]
+  "title": "Using the Edwards-Curve Digital Signature Algorithm (EdDSA) in the Internet Key Exchange Protocol Version 2 (IKEv2)", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": []
  }, 
  "RFC8421": {
   "status": "current", 
@@ -52393,6 +52520,18 @@
   "area": "int", 
   "keywords": []
  }, 
+ "RFC8428": {
+  "status": "current", 
+  "wg": "core", 
+  "stream": "ietf", 
+  "title": "Sensor Measurement Lists (SenML)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "IoT", 
+   "data model"
+  ]
+ }, 
  "RFC2118": {
   "status": "current", 
   "wg": "pppext", 
@@ -52445,7 +52584,7 @@
   ]
  }, 
  "RFC6961": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "tls", 
   "stream": "ietf", 
   "title": "The Transport Layer Security (TLS) Multiple Certificate Status Request Extension", 
@@ -54809,7 +54948,7 @@
   ], 
   "title": "Suite B Cryptographic Suites for IPsec", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC1814": {
   "status": "current", 
@@ -56152,7 +56291,7 @@
   ]
  }, 
  "RFC5246": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "tls", 
   "stream": "ietf", 
   "title": "The Transport Layer Security (TLS) Protocol Version 1.2", 
@@ -61503,6 +61642,72 @@
    "NAT"
   ]
  }, 
+ "RFC8110": {
+  "status": "current", 
+  "keywords": [
+   "opportunistic encryption wireless"
+  ], 
+  "title": "Opportunistic Wireless Encryption", 
+  "stream": "ietf", 
+  "level": "informational"
+ }, 
+ "RFC8111": {
+  "status": "current", 
+  "wg": "lisp", 
+  "stream": "ietf", 
+  "title": "Locator/ID Separation Protocol Delegated Database Tree (LISP-DDT)", 
+  "level": "experimental", 
+  "area": "rtg", 
+  "keywords": [
+   "LISP", 
+   "DDT", 
+   "EID", 
+   "Locator", 
+   "Mapping System", 
+   "Map-Server", 
+   "Map-Referral", 
+   "Referral"
+  ]
+ }, 
+ "RFC8116": {
+  "status": "current", 
+  "wg": "manet", 
+  "stream": "ietf", 
+  "title": "Security Threats to the Optimized Link State Routing Protocol Version 2 (OLSRv2)", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "MANET"
+  ]
+ }, 
+ "RFC8115": {
+  "status": "current", 
+  "wg": "softwire", 
+  "stream": "ietf", 
+  "title": "DHCPv6 Option for IPv4-Embedded Multicast and Unicast IPv6 Prefixes", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "PREFIX64", 
+   "SSM", 
+   "ASM", 
+   "Prefix Discovery", 
+   "IPv4-Converted IPv6 Addresses", 
+   "IPv4 service continuity", 
+   "IPv6 Address Synthesis", 
+   "Any-Source Multicast", 
+   "Source-Specific Multicast", 
+   "PIM", 
+   "IPv4-IPv6 interconnection", 
+   "IPv4  over IPv6", 
+   "A+P", 
+   "MAP", 
+   "MAP-E", 
+   "address-sharing", 
+   "CGN", 
+   "NAT64"
+  ]
+ }, 
  "RFC7565": {
   "status": "current", 
   "wg": "appsawg", 
@@ -62722,7 +62927,7 @@
   "status": "current", 
   "keywords": [], 
   "title": "Cooperative Agreement Between the ISOC/IETF and ISO/IEC Joint Technical Committee 1/Sub Committee 6 (JTC1/SC6) on IS-IS Routing Protocol Development", 
-  "stream": "independent", 
+  "stream": "ietf", 
   "level": "informational"
  }, 
  "RFC3560": {
@@ -66156,7 +66361,7 @@
   ], 
   "title": "Suite B Certificate and Certificate Revocation List (CRL) Profile", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC5758": {
   "status": "current", 
@@ -67053,6 +67258,24 @@
   "title": "London Node Is Now Up", 
   "stream": "legacy", 
   "level": "unknown"
+ }, 
+ "RFC3679": {
+  "status": "current", 
+  "wg": "dhc", 
+  "stream": "ietf", 
+  "title": "Unused Dynamic Host Configuration Protocol (DHCP) Option Codes", 
+  "level": "informational", 
+  "area": "int", 
+  "keywords": [
+   "dynamic", 
+   "host", 
+   "configuration", 
+   "protocol", 
+   "internet", 
+   "assigned", 
+   "numbers", 
+   "authority"
+  ]
  }, 
  "RFC8208": {
   "status": "current", 
@@ -75274,7 +75497,7 @@
   "keywords": [], 
   "title": "Suite B Cryptographic Suites for Secure Shell (SSH)", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC6238": {
   "status": "current", 
@@ -76464,6 +76687,18 @@
   "area": "rtg", 
   "keywords": []
  }, 
+ "RFC2115": {
+  "status": "current", 
+  "wg": "ion", 
+  "stream": "ietf", 
+  "title": "Management Information Base for Frame Relay DTEs Using SMIv2", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "FRAME-MIB", 
+   "MIB"
+  ]
+ }, 
  "RFC3678": {
   "status": "current", 
   "wg": "magma", 
@@ -76480,22 +76715,20 @@
    "output"
   ]
  }, 
- "RFC3679": {
+ "RFC2116": {
   "status": "current", 
-  "wg": "dhc", 
+  "wg": "ids", 
   "stream": "ietf", 
-  "title": "Unused Dynamic Host Configuration Protocol (DHCP) Option Codes", 
+  "title": "X.500 Implementations Catalog-96", 
   "level": "informational", 
-  "area": "int", 
+  "area": "app", 
   "keywords": [
-   "dynamic", 
-   "host", 
-   "configuration", 
-   "protocol", 
-   "internet", 
-   "assigned", 
-   "numbers", 
-   "authority"
+   "Directory", 
+   "Services", 
+   "DSA", 
+   "DUA", 
+   "Agent", 
+   "Interfaces"
   ]
  }, 
  "RFC7214": {
@@ -82842,7 +83075,7 @@
   ]
  }, 
  "RFC5077": {
-  "status": "current", 
+  "status": "obsoleted", 
   "keywords": [], 
   "title": "Transport Layer Security (TLS) Session Resumption without Server-Side State", 
   "stream": "ietf", 
@@ -86001,7 +86234,7 @@
   ], 
   "title": "Suite B Profile for Internet Protocol Security (IPsec)", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC6383": {
   "status": "current", 
@@ -86062,16 +86295,16 @@
    "NAT64"
   ]
  }, 
- "RFC6439": {
-  "status": "obsoleted", 
-  "wg": "trill", 
+ "RFC6387": {
+  "status": "current", 
+  "wg": "ccamp", 
   "stream": "ietf", 
-  "title": "Routing Bridges (RBridges): Appointed Forwarders", 
+  "title": "GMPLS Asymmetric Bandwidth Bidirectional Label Switched Paths (LSPs)", 
   "level": "std", 
-  "area": "int", 
+  "area": "rtg", 
   "keywords": [
-   "trill", 
-   "TRansparent Interconnection of Lots of Links"
+   "rsvp", 
+   "resource reservation protocol"
   ]
  }, 
  "RFC6386": {
@@ -93083,6 +93316,19 @@
    "SPF"
   ]
  }, 
+ "RFC8416": {
+  "status": "current", 
+  "wg": "sidr", 
+  "stream": "ietf", 
+  "title": "Simplified Local Internet Number Resource Management with the RPKI (SLURM)", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "RPKI", 
+   "Local Trust Anchor", 
+   "BGPsec"
+  ]
+ }, 
  "RFC1957": {
   "status": "current", 
   "keywords": [
@@ -94428,6 +94674,18 @@
   "keywords": [
    "Mobile IPv6", 
    "Security"
+  ]
+ }, 
+ "RFC8453": {
+  "status": "current", 
+  "wg": "teas", 
+  "stream": "ietf", 
+  "title": "Framework for Abstraction and Control of TE Networks (ACTN)", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "SDN", 
+   "Orchestration"
   ]
  }, 
  "RFC4469": {
@@ -96712,7 +96970,7 @@
   ], 
   "title": "Suite B Profile for Transport Layer Security (TLS)", 
   "stream": "ietf", 
-  "level": "informational"
+  "level": "historic"
  }, 
  "RFC0276": {
   "status": "current", 
@@ -96720,6 +96978,24 @@
   "title": "NIC course", 
   "stream": "legacy", 
   "level": "unknown"
+ }, 
+ "RFC8419": {
+  "status": "current", 
+  "wg": "curdle", 
+  "stream": "ietf", 
+  "title": "Use of Edwards-Curve Digital Signature Algorithm (EdDSA) Signatures in the Cryptographic Message Syntax (CMS)", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": []
+ }, 
+ "RFC8418": {
+  "status": "current", 
+  "wg": "curdle", 
+  "stream": "ietf", 
+  "title": "Use of the Elliptic Curve Diffie-Hellman Key Agreement Algorithm with X25519 and X448 in the Cryptographic Message Syntax (CMS)", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": []
  }, 
  "RFC8413": {
   "status": "current", 
@@ -96754,14 +97030,38 @@
    "Software inventory"
   ]
  }, 
- "RFC7954": {
+ "RFC8411": {
   "status": "current", 
-  "wg": "lisp", 
+  "wg": "curdle", 
   "stream": "ietf", 
-  "title": "Locator/ID Separation Protocol (LISP) Endpoint Identifier (EID) Block", 
-  "level": "experimental", 
-  "area": "rtg", 
+  "title": "IANA Registration for the Cryptographic Algorithm Object Identifier Range", 
+  "level": "informational", 
+  "area": "sec", 
   "keywords": []
+ }, 
+ "RFC8410": {
+  "status": "current", 
+  "wg": "curdle", 
+  "stream": "ietf", 
+  "title": "Algorithm Identifiers for Ed25519, Ed448, X25519, and X448 for Use in the Internet X.509 Public Key Infrastructure", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "Elliptic Curve Cryptography", 
+   "Curve25519", 
+   "Curve448", 
+   "Goldilocks", 
+   "X.509", 
+   "PKIX", 
+   "PKI", 
+   "OID", 
+   "ASN.1", 
+   "EdDSA", 
+   "Ed25519", 
+   "Ed448", 
+   "X25519", 
+   "X448"
+  ]
  }, 
  "RFC8417": {
   "status": "current", 
