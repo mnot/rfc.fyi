@@ -7,7 +7,6 @@ const tagTypes = ['collection', 'status', 'stream', 'level', 'wg']
 const unshownTagTypes = ['status']
 const oldTags = [
   'status-obsoleted',
-  'stream-legacy',
   'level-historic'
 ]
 
