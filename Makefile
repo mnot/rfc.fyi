@@ -8,16 +8,16 @@ rfcs.json: rfc-index.xml rfc-json.py
 rfc-index.xml:
 	curl "https://www.rfc-editor.org/rfc-index.xml" -o $@
 
-rfcs-es5.js: rfcs.js util.js
-	$(traceur) --out rfcs-es5.js rfcs.js
+client-es5.js: client.js util.js
+	$(traceur) --out client-es5.js client.js
 
 .PHONY: server
 server:
 	python -m SimpleHTTPServer
 
 .PHONY: lint
-lint: rfcs.js util.js
-	standard --fix rfcs.js util.js
+lint: client.js util.js
+	standard --fix client.js util.js
 
 .PHONY: clean
 clean:
