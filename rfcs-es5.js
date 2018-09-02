@@ -244,7 +244,7 @@ $traceurRuntime.registerModule("rfcs.js", [], function() {
   var prefixLen = 3;
   var tagTypes = ['collection', 'status', 'stream', 'level', 'wg'];
   var unshownTagTypes = ['status'];
-  var oldTags = ['status-obsoleted', 'stream-legacy', 'level-historic'];
+  var oldTags = ['status-obsoleted', 'level-historic'];
   var tags = {};
   var activeTags = new Map();
   var verbose = false;
