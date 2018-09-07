@@ -42827,38 +42827,14 @@
   "area": "int", 
   "keywords": []
  }, 
- "RFC8114": {
+ "RFC8442": {
   "status": "current", 
-  "wg": "softwire", 
+  "wg": "tls", 
   "stream": "ietf", 
-  "title": "Delivery of IPv4 Multicast Services to IPv4 Clients over an IPv6 Multicast Network", 
+  "title": "ECDHE_PSK with AES-GCM and AES-CCM Cipher Suites for TLS 1.2 and DTLS 1.2", 
   "level": "std", 
-  "area": "int", 
-  "keywords": [
-   "Multicast", 
-   "DS-Lite", 
-   "IPv4-IPv6 Interconnection", 
-   "PREFIX64", 
-   "SSM", 
-   "ASM", 
-   "IPv4 service continuity", 
-   "Multicast service continuity", 
-   "IPv6-only", 
-   "IPv6-only multicast", 
-   "PIM", 
-   "MLD", 
-   "IGMP", 
-   "A+P", 
-   "MAP", 
-   "MAP-E", 
-   "address-sharing", 
-   "CGN", 
-   "NAT64", 
-   "IPv4 over IPv6", 
-   "IPv6 Address Synthesis", 
-   "Any-Source Multicast", 
-   "Source-Specific Multicast"
-  ]
+  "area": "sec", 
+  "keywords": []
  }, 
  "RFC8443": {
   "status": "current", 
@@ -51058,6 +51034,20 @@
    "mib", 
    "management information base", 
    "scsi-mib"
+  ]
+ }, 
+ "RFC8105": {
+  "status": "current", 
+  "wg": "6lo", 
+  "stream": "ietf", 
+  "title": "Transmission of IPv6 Packets over Digital Enhanced Cordless Telecommunications (DECT) Ultra Low Energy (ULE)", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "6LoWPAN", 
+   "ETSI", 
+   "IoT", 
+   "and Internet of Things"
   ]
  }, 
  "RFC5928": {
@@ -61678,6 +61668,39 @@
   "area": "rtg", 
   "keywords": [
    "MANET"
+  ]
+ }, 
+ "RFC8114": {
+  "status": "current", 
+  "wg": "softwire", 
+  "stream": "ietf", 
+  "title": "Delivery of IPv4 Multicast Services to IPv4 Clients over an IPv6 Multicast Network", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "Multicast", 
+   "DS-Lite", 
+   "IPv4-IPv6 Interconnection", 
+   "PREFIX64", 
+   "SSM", 
+   "ASM", 
+   "IPv4 service continuity", 
+   "Multicast service continuity", 
+   "IPv6-only", 
+   "IPv6-only multicast", 
+   "PIM", 
+   "MLD", 
+   "IGMP", 
+   "A+P", 
+   "MAP", 
+   "MAP-E", 
+   "address-sharing", 
+   "CGN", 
+   "NAT64", 
+   "IPv4 over IPv6", 
+   "IPv6 Address Synthesis", 
+   "Any-Source Multicast", 
+   "Source-Specific Multicast"
   ]
  }, 
  "RFC8115": {
@@ -90164,18 +90187,15 @@
    "cryptology"
   ]
  }, 
- "RFC8105": {
+ "RFC8457": {
   "status": "current", 
-  "wg": "6lo", 
+  "wg": "extra", 
   "stream": "ietf", 
-  "title": "Transmission of IPv6 Packets over Digital Enhanced Cordless Telecommunications (DECT) Ultra Low Energy (ULE)", 
+  "title": "IMAP \"$Important\" Keyword and \"\\Important\" Special-Use Attribute", 
   "level": "std", 
-  "area": "int", 
+  "area": "art", 
   "keywords": [
-   "6LoWPAN", 
-   "ETSI", 
-   "IoT", 
-   "and Internet of Things"
+   "IMAP attributes"
   ]
  }, 
  "RFC8104": {
@@ -94656,6 +94676,15 @@
   "title": "Announcement of a Mail Facility at UCSB", 
   "stream": "legacy", 
   "level": "unknown"
+ }, 
+ "RFC8454": {
+  "status": "current", 
+  "wg": "teas", 
+  "stream": "ietf", 
+  "title": "Information Model for Abstraction and Control of TE Networks (ACTN)", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC0432": {
   "status": "current", 
