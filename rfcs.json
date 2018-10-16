@@ -17792,6 +17792,27 @@
    "DSCP"
   ]
  }, 
+ "RFC8431": {
+  "status": "current", 
+  "wg": "i2rs", 
+  "stream": "ietf", 
+  "title": "A YANG Data Model for the Routing Information Base (RIB)", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
+ }, 
+ "RFC8430": {
+  "status": "current", 
+  "wg": "i2rs", 
+  "stream": "ietf", 
+  "title": "RIB Information Model", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "RIB", 
+   "info model"
+  ]
+ }, 
  "RFC6058": {
   "status": "current", 
   "wg": "mipshop", 
@@ -32074,7 +32095,7 @@
   "keywords": []
  }, 
  "RFC3188": {
-  "status": "current", 
+  "status": "obsoleted", 
   "keywords": [
    "urn", 
    "nbn", 
@@ -41855,16 +41876,14 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
- "RFC3166": {
+ "RFC6406": {
   "status": "current", 
-  "keywords": [
-   "BGP-OSPF", 
-   "Border gateway protocol", 
-   "Open shortest path first routing"
-  ], 
-  "title": "Request to Move RFC 1403 to Historic Status", 
-  "stream": "legacy", 
-  "level": "informational"
+  "wg": "speermint", 
+  "stream": "ietf", 
+  "title": "Session PEERing for Multimedia INTerconnect (SPEERMINT) Architecture", 
+  "level": "informational", 
+  "area": "rai", 
+  "keywords": []
  }, 
  "RFC6407": {
   "status": "current", 
@@ -45926,6 +45945,99 @@
    "SIMPLE", 
    "presence", 
    "IM"
+  ]
+ }, 
+ "RFC8466": {
+  "status": "current", 
+  "wg": "l2sm", 
+  "stream": "ietf", 
+  "title": "A YANG Data Model for Layer 2 Virtual Private Network (L2VPN) Service Delivery", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "L2SM", 
+   "Service Model", 
+   "L2VPN SM", 
+   "L2VPN Service Model"
+  ]
+ }, 
+ "RFC8467": {
+  "status": "current", 
+  "wg": "dprive", 
+  "stream": "ietf", 
+  "title": "Padding Policies for Extension Mechanisms for DNS (EDNS(0))", 
+  "level": "experimental", 
+  "area": "int", 
+  "keywords": [
+   "security"
+  ]
+ }, 
+ "RFC8464": {
+  "status": "current", 
+  "keywords": [
+   "MEID", 
+   "instance ID", 
+   "IMS"
+  ], 
+  "title": "A URN Namespace for Device Identity and Mobile Equipment Identity (MEID)", 
+  "stream": "ietf", 
+  "level": "informational"
+ }, 
+ "RFC8465": {
+  "status": "current", 
+  "keywords": [
+   "MEID", 
+   "instance ID", 
+   "IMS"
+  ], 
+  "title": "Using the Mobile Equipment Identity (MEID) URN as an Instance ID", 
+  "stream": "ietf", 
+  "level": "informational"
+ }, 
+ "RFC8462": {
+  "status": "current", 
+  "keywords": [
+   "Networks"
+  ], 
+  "title": "Report from the IAB Workshop on Managing Radio Networks in an Encrypted World (MaRNEW)", 
+  "stream": "iab", 
+  "level": "informational"
+ }, 
+ "RFC8463": {
+  "status": "current", 
+  "wg": "dcrup", 
+  "stream": "ietf", 
+  "title": "A New Cryptographic Signature Method for DomainKeys Identified Mail (DKIM)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "DKIM", 
+   "ed25519", 
+   "cryptography"
+  ]
+ }, 
+ "RFC8460": {
+  "status": "current", 
+  "wg": "uta", 
+  "stream": "ietf", 
+  "title": "SMTP TLS Reporting", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "DANE", 
+   "MTA-STS"
+  ]
+ }, 
+ "RFC8461": {
+  "status": "current", 
+  "wg": "uta", 
+  "stream": "ietf", 
+  "title": "SMTP MTA Strict Transport Security (MTA-STS)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "SMTP STARTTLS", 
+   "Mail Security"
   ]
  }, 
  "RFC7159": {
@@ -51190,6 +51302,29 @@
   "level": "std", 
   "area": "ops", 
   "keywords": []
+ }, 
+ "RFC8103": {
+  "status": "current", 
+  "wg": "curdle", 
+  "stream": "ietf", 
+  "title": "Using ChaCha20-Poly1305 Authenticated Encryption in the Cryptographic Message Syntax (CMS)", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": []
+ }, 
+ "RFC8102": {
+  "status": "current", 
+  "wg": "rtgwg", 
+  "stream": "ietf", 
+  "title": "Remote-LFA Node Protection and Manageability", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "LFA", 
+   "Remote-LFA", 
+   "IGP", 
+   "Node Protection"
+  ]
  }, 
  "RFC7979": {
   "status": "current", 
@@ -57654,14 +57789,16 @@
   "stream": "independent", 
   "level": "informational"
  }, 
- "RFC6406": {
+ "RFC3166": {
   "status": "current", 
-  "wg": "speermint", 
-  "stream": "ietf", 
-  "title": "Session PEERing for Multimedia INTerconnect (SPEERMINT) Architecture", 
-  "level": "informational", 
-  "area": "rai", 
-  "keywords": []
+  "keywords": [
+   "BGP-OSPF", 
+   "Border gateway protocol", 
+   "Open shortest path first routing"
+  ], 
+  "title": "Request to Move RFC 1403 to Historic Status", 
+  "stream": "legacy", 
+  "level": "informational"
  }, 
  "RFC7652": {
   "status": "current", 
@@ -61668,6 +61805,17 @@
   "area": "rtg", 
   "keywords": [
    "MANET"
+  ]
+ }, 
+ "RFC8441": {
+  "status": "current", 
+  "wg": "httpbis", 
+  "stream": "ietf", 
+  "title": "Bootstrapping WebSockets with HTTP/2", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "CONNECT SETTINGS"
   ]
  }, 
  "RFC8114": {
@@ -89955,6 +90103,18 @@
    "6rd"
   ]
  }, 
+ "RFC8481": {
+  "status": "current", 
+  "wg": "sidrops", 
+  "stream": "ietf", 
+  "title": "Clarifications to BGP Origin Validation Based on Resource Public Key Infrastructure (RPKI)", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "security", 
+   "routing"
+  ]
+ }, 
  "RFC6323": {
   "status": "current", 
   "wg": "dccp", 
@@ -89995,6 +90155,13 @@
   "keywords": [
    "ancp"
   ]
+ }, 
+ "RFC8485": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Vectors of Trust", 
+  "stream": "ietf", 
+  "level": "std"
  }, 
  "RFC0488": {
   "status": "current", 
@@ -90264,27 +90431,29 @@
    "MPLS Short Pipe"
   ]
  }, 
- "RFC8103": {
+ "RFC8451": {
   "status": "current", 
-  "wg": "curdle", 
+  "wg": "xrblock", 
   "stream": "ietf", 
-  "title": "Using ChaCha20-Poly1305 Authenticated Encryption in the Cryptographic Message Syntax (CMS)", 
-  "level": "std", 
-  "area": "sec", 
-  "keywords": []
- }, 
- "RFC8102": {
-  "status": "current", 
-  "wg": "rtgwg", 
-  "stream": "ietf", 
-  "title": "Remote-LFA Node Protection and Manageability", 
-  "level": "std", 
-  "area": "rtg", 
+  "title": "Considerations for Selecting RTP Control Protocol (RTCP) Extended Report (XR) Metrics for the WebRTC Statistics API", 
+  "level": "informational", 
+  "area": "art", 
   "keywords": [
-   "LFA", 
-   "Remote-LFA", 
-   "IGP", 
-   "Node Protection"
+   "Web real-time communication"
+  ]
+ }, 
+ "RFC8450": {
+  "status": "current", 
+  "wg": "payload", 
+  "stream": "ietf", 
+  "title": "RTP Payload Format for VC-2 High Quality (HQ) Profile", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "rtp", 
+   "vc-2", 
+   "VC2", 
+   "dirac"
   ]
  }, 
  "RFC8109": {
@@ -90304,6 +90473,37 @@
   "level": "std", 
   "area": "art", 
   "keywords": []
+ }, 
+ "RFC8459": {
+  "status": "current", 
+  "wg": "sfc", 
+  "stream": "ietf", 
+  "title": "Hierarchical Service Function Chaining (hSFC)", 
+  "level": "experimental", 
+  "area": "rtg", 
+  "keywords": [
+   "Scalability", 
+   "SFC-enabled domain", 
+   "multiple control domains", 
+   "SFC complexity", 
+   "Hierarchy", 
+   "service delivery", 
+   "service complications", 
+   "service offering", 
+   "differentiated services", 
+   "large scale network"
+  ]
+ }, 
+ "RFC8458": {
+  "status": "current", 
+  "keywords": [
+   "Network Working Group", 
+   "National bibliography numbers", 
+   "Uniform resource names"
+  ], 
+  "title": "Using National Bibliography Numbers as Uniform Resource Names", 
+  "stream": "ietf", 
+  "level": "informational"
  }, 
  "RFC7104": {
   "status": "current", 
@@ -93575,6 +93775,110 @@
    "denial of service", 
    "IP spoofing"
   ]
+ }, 
+ "RFC8471": {
+  "status": "current", 
+  "wg": "tokbind", 
+  "stream": "ietf", 
+  "title": "The Token Binding Protocol Version 1.0", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "Token", 
+   "cookie", 
+   "TLS", 
+   "export", 
+   "replay"
+  ]
+ }, 
+ "RFC8470": {
+  "status": "current", 
+  "wg": "httpbis", 
+  "stream": "ietf", 
+  "title": "Using Early Data in HTTP", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "HTTP", 
+   "TLS", 
+   "replay", 
+   "retry", 
+   "0-RTT", 
+   "early data", 
+   "status code"
+  ]
+ }, 
+ "RFC8473": {
+  "status": "current", 
+  "wg": "tokbind", 
+  "stream": "ietf", 
+  "title": "Token Binding over HTTP", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "Cookie", 
+   "TLS", 
+   "OAuth", 
+   "export", 
+   "replay"
+  ]
+ }, 
+ "RFC8472": {
+  "status": "current", 
+  "wg": "tokbind", 
+  "stream": "ietf", 
+  "title": "Transport Layer Security (TLS) Extension for Token Binding Protocol Negotiation", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "Cookie", 
+   "TLS", 
+   "export", 
+   "replay"
+  ]
+ }, 
+ "RFC8475": {
+  "status": "current", 
+  "wg": "v6ops", 
+  "stream": "ietf", 
+  "title": "Using Conditional Router Advertisements for Enterprise Multihoming", 
+  "level": "informational", 
+  "area": "ops", 
+  "keywords": [
+   "ipv6"
+  ]
+ }, 
+ "RFC8474": {
+  "status": "current", 
+  "wg": "extra", 
+  "stream": "ietf", 
+  "title": "IMAP Extension for Object Identifiers", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "IMAP", 
+   "email"
+  ]
+ }, 
+ "RFC8479": {
+  "status": "current", 
+  "keywords": [
+   "private keys", 
+   "validation parameters", 
+   "PKCS#8"
+  ], 
+  "title": "Storing Validation Parameters in PKCS#8", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
+ "RFC8478": {
+  "status": "current", 
+  "keywords": [
+   "Compression"
+  ], 
+  "title": "Zstandard Compression and the application/zstd Media Type", 
+  "stream": "ietf", 
+  "level": "informational"
  }, 
  "RFC6578": {
   "status": "current", 
