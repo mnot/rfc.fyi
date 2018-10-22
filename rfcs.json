@@ -17851,6 +17851,20 @@
   "stream": "independent", 
   "level": "informational"
  }, 
+ "RFC8432": {
+  "status": "current", 
+  "wg": "ccamp", 
+  "stream": "ietf", 
+  "title": "A Framework for Management and Control of Microwave and Millimeter Wave Interface Parameters", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "Microwave", 
+   "millimeter waves", 
+   "YANG Model", 
+   "interface management"
+  ]
+ }, 
  "RFC7049": {
   "status": "current", 
   "keywords": [
@@ -49740,12 +49754,18 @@
   "stream": "irtf", 
   "level": "informational"
  }, 
- "RFC0557": {
+ "RFC8407": {
   "status": "current", 
-  "keywords": [], 
-  "title": "REVELATIONS IN NETWORK HOST MEASUREMENTS", 
-  "stream": "legacy", 
-  "level": "unknown"
+  "wg": "netmod", 
+  "stream": "ietf", 
+  "title": "Guidelines for Authors and Reviewers of Documents Containing YANG Data Models", 
+  "level": "bcp", 
+  "area": "ops", 
+  "keywords": [
+   "NETMOD", 
+   "NETCONF", 
+   "RESTCONF"
+  ]
  }, 
  "RFC0555": {
   "status": "current", 
@@ -61630,6 +61650,20 @@
   "title": "Internet Printing Protocol/1.1: Encoding and Transport", 
   "stream": "ietf", 
   "level": "std"
+ }, 
+ "RFC2356": {
+  "status": "current", 
+  "wg": "mobileip", 
+  "stream": "ietf", 
+  "title": "Sun's SKIP Firewall Traversal for Mobile IP", 
+  "level": "informational", 
+  "area": "int", 
+  "keywords": [
+   "Internet", 
+   "Protocol", 
+   "security", 
+   "traffic"
+  ]
  }, 
  "RFC7678": {
   "status": "current", 
@@ -90136,6 +90170,17 @@
   "stream": "ietf", 
   "level": "informational"
  }, 
+ "RFC8483": {
+  "status": "current", 
+  "keywords": [
+   "Root Server", 
+   "DNSSEC", 
+   "IPv6"
+  ], 
+  "title": "Yeti DNS Testbed", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
  "RFC6321": {
   "status": "current", 
   "keywords": [
@@ -90144,6 +90189,19 @@
   "title": "xCal: The XML Format for iCalendar", 
   "stream": "ietf", 
   "level": "std"
+ }, 
+ "RFC8484": {
+  "status": "current", 
+  "wg": "doh", 
+  "stream": "ietf", 
+  "title": "DNS Queries over HTTPS (DoH)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "DNS", 
+   "HTTP", 
+   "DoH"
+  ]
  }, 
  "RFC6320": {
   "status": "current", 
@@ -91544,7 +91602,7 @@
   ]
  }, 
  "RFC6087": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "netmod", 
   "stream": "ietf", 
   "title": "Guidelines for Authors and Reviewers of YANG Data Model Documents", 
@@ -91744,19 +91802,12 @@
   "stream": "legacy", 
   "level": "std"
  }, 
- "RFC2356": {
+ "RFC0557": {
   "status": "current", 
-  "wg": "mobileip", 
-  "stream": "ietf", 
-  "title": "Sun's SKIP Firewall Traversal for Mobile IP", 
-  "level": "informational", 
-  "area": "int", 
-  "keywords": [
-   "Internet", 
-   "Protocol", 
-   "security", 
-   "traffic"
-  ]
+  "keywords": [], 
+  "title": "REVELATIONS IN NETWORK HOST MEASUREMENTS", 
+  "stream": "legacy", 
+  "level": "unknown"
  }, 
  "RFC2357": {
   "status": "current", 
@@ -93859,6 +93910,15 @@
    "IMAP", 
    "email"
   ]
+ }, 
+ "RFC8477": {
+  "status": "current", 
+  "keywords": [
+   "data model"
+  ], 
+  "title": "Report from the Internet of Things (IoT) Semantic Interoperability (IOTSI) Workshop 2016", 
+  "stream": "iab", 
+  "level": "informational"
  }, 
  "RFC8479": {
   "status": "current", 
