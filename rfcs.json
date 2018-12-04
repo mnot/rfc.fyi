@@ -10596,7 +10596,7 @@
   ]
  }, 
  "RFC7083": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "dhc", 
   "stream": "ietf", 
   "title": "Modification to Default Values of SOL_MAX_RT and INF_MAX_RT", 
@@ -24278,21 +24278,17 @@
   "area": "tsv", 
   "keywords": []
  }, 
- "RFC8253": {
+ "RFC8521": {
   "status": "current", 
-  "wg": "pce", 
+  "wg": "regext", 
   "stream": "ietf", 
-  "title": "PCEPS: Usage of TLS to Provide a Secure Transport for the Path Computation Element Communication Protocol (PCEP)", 
-  "level": "std", 
-  "area": "rtg", 
+  "title": "Registration Data Access Protocol (RDAP) Object Tagging", 
+  "level": "bcp", 
+  "area": "art", 
   "keywords": [
-   "PCE", 
-   "PCEP", 
-   "PCEPS", 
-   "security", 
-   "authentication", 
-   "encryption", 
-   "TLS"
+   "RDAP", 
+   "Entity", 
+   "Bootstrap"
   ]
  }, 
  "RFC8252": {
@@ -25497,7 +25493,7 @@
   "keywords": []
  }, 
  "RFC7550": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "dhc", 
   "stream": "ietf", 
   "title": "Issues and Recommendations with Multiple Stateful DHCPv6 Options", 
@@ -27321,6 +27317,20 @@
    "ipv4"
   ]
  }, 
+ "RFC8501": {
+  "status": "current", 
+  "wg": "dnsop", 
+  "stream": "ietf", 
+  "title": "Reverse DNS in IPv6 for Internet Service Providers", 
+  "level": "informational", 
+  "area": "ops", 
+  "keywords": [
+   "IPv6", 
+   "PTR", 
+   "rDNS", 
+   "Reverse DNS"
+  ]
+ }, 
  "RFC5404": {
   "status": "current", 
   "wg": "avt", 
@@ -27331,6 +27341,17 @@
   "keywords": [
    "ITU-T", 
    "g.719 full-band codec"
+  ]
+ }, 
+ "RFC8505": {
+  "status": "current", 
+  "wg": "6lo", 
+  "stream": "ietf", 
+  "title": "Registration Extensions for IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Neighbor Discovery", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "Wi-Fi"
   ]
  }, 
  "RFC0088": {
@@ -44833,6 +44854,23 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
+ "RFC8253": {
+  "status": "current", 
+  "wg": "pce", 
+  "stream": "ietf", 
+  "title": "PCEPS: Usage of TLS to Provide a Secure Transport for the Path Computation Element Communication Protocol (PCEP)", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "PCE", 
+   "PCEP", 
+   "PCEPS", 
+   "security", 
+   "authentication", 
+   "encryption", 
+   "TLS"
+  ]
+ }, 
  "RFC0782": {
   "status": "current", 
   "keywords": [], 
@@ -45959,6 +45997,23 @@
    "SIMPLE", 
    "presence", 
    "IM"
+  ]
+ }, 
+ "RFC8469": {
+  "status": "current", 
+  "wg": "pals", 
+  "stream": "ietf", 
+  "title": "Recommendation to Use the Ethernet Control Word", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "pseudowire", 
+   "PW", 
+   "CW", 
+   "ECMP", 
+   "MAC address", 
+   "out of order", 
+   "ordering"
   ]
  }, 
  "RFC8466": {
@@ -47126,7 +47181,7 @@
   "level": "unknown"
  }, 
  "RFC3315": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "dhc", 
   "stream": "ietf", 
   "title": "Dynamic Host Configuration Protocol for IPv6 (DHCPv6)", 
@@ -51097,6 +51152,13 @@
   "stream": "independent", 
   "level": "informational"
  }, 
+ "RFC0483": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Cancellation of the resource notebook framework meeting", 
+  "stream": "legacy", 
+  "level": "unknown"
+ }, 
  "RFC4456": {
   "status": "current", 
   "wg": "idr", 
@@ -51181,6 +51243,28 @@
    "IoT", 
    "and Internet of Things"
   ]
+ }, 
+ "RFC8104": {
+  "status": "current", 
+  "wg": "pals", 
+  "stream": "ietf", 
+  "title": "Pseudowire (PW) Endpoint Fast Failure Protection", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "pseudowire", 
+   "PW", 
+   "protection", 
+   "local repair", 
+   "fast reroute"
+  ]
+ }, 
+ "RFC8107": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Advertising Digital Identifier (Ad-ID) URN Namespace Definition", 
+  "stream": "ietf", 
+  "level": "informational"
  }, 
  "RFC5928": {
   "status": "current", 
@@ -52675,6 +52759,18 @@
   "keywords": [
    "IoT", 
    "data model"
+  ]
+ }, 
+ "RFC8429": {
+  "status": "current", 
+  "wg": "curdle", 
+  "stream": "ietf", 
+  "title": "Deprecate Triple-DES (3DES) and RC4 in Kerberos", 
+  "level": "bcp", 
+  "area": "sec", 
+  "keywords": [
+   "GSS-API", 
+   "GSS"
   ]
  }, 
  "RFC2118": {
@@ -61792,6 +61888,15 @@
   "stream": "ietf", 
   "level": "informational"
  }, 
+ "RFC8444": {
+  "status": "current", 
+  "wg": "bier", 
+  "stream": "ietf", 
+  "title": "OSPFv2 Extensions for Bit Index Explicit Replication (BIER)", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
+ }, 
  "RFC8445": {
   "status": "current", 
   "wg": "ice", 
@@ -63374,7 +63479,7 @@
   "level": "informational"
  }, 
  "RFC7283": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "dhc", 
   "stream": "ietf", 
   "title": "Handling Unknown DHCPv6 Messages", 
@@ -69815,7 +69920,7 @@
   "level": "informational"
  }, 
  "RFC3633": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "dhc", 
   "stream": "ietf", 
   "title": "IPv6 Prefix Options for Dynamic Host Configuration Protocol (DHCP) version 6", 
@@ -80564,6 +80669,13 @@
    "RSVP-TE"
   ]
  }, 
+ "RFC8493": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "The BagIt File Packaging Format (V1.0)", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
  "RFC1599": {
   "status": "current", 
   "keywords": [
@@ -80786,6 +80898,24 @@
   "level": "informational", 
   "area": "rtg", 
   "keywords": []
+ }, 
+ "RFC8495": {
+  "status": "current", 
+  "wg": "regext", 
+  "stream": "ietf", 
+  "title": "Allocation Token Extension for the Extensible Provisioning Protocol (EPP)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": []
+ }, 
+ "RFC8494": {
+  "status": "current", 
+  "keywords": [
+   "P_MUL"
+  ], 
+  "title": "Multicast Email (MULE) over Allied Communications Publication (ACP) 142", 
+  "stream": "independent", 
+  "level": "informational"
  }, 
  "RFC8167": {
   "status": "current", 
@@ -82017,6 +82147,20 @@
    "Architecture"
   ]
  }, 
+ "RFC8491": {
+  "status": "current", 
+  "wg": "lsr", 
+  "stream": "ietf", 
+  "title": "Signaling Maximum SID Depth (MSD) Using IS-IS", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "BGP-LS", 
+   "SID", 
+   "MSD", 
+   "IS-IS"
+  ]
+ }, 
  "RFC4729": {
   "status": "current", 
   "keywords": [
@@ -82164,6 +82308,22 @@
   "level": "std", 
   "area": "int", 
   "keywords": []
+ }, 
+ "RFC8497": {
+  "status": "current", 
+  "wg": "insipid", 
+  "stream": "ietf", 
+  "title": "Marking SIP Messages to Be Logged", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "SIP", 
+   "logme", 
+   "troubleshooting", 
+   "debug", 
+   "debugging", 
+   "logging"
+  ]
  }, 
  "RFC7229": {
   "status": "current", 
@@ -82338,6 +82498,15 @@
    "Provider Backbone Bridging Provider Edges", 
    "PBB-EVPN"
   ]
+ }, 
+ "RFC8496": {
+  "status": "current", 
+  "keywords": [
+   "p-header"
+  ], 
+  "title": "P-Charge-Info: A Private Header Field (P-Header) Extension to the Session Initiation Protocol (SIP)", 
+  "stream": "ietf", 
+  "level": "informational"
  }, 
  "RFC7349": {
   "status": "current", 
@@ -82787,7 +82956,7 @@
   ]
  }, 
  "RFC3736": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "dhc", 
   "stream": "ietf", 
   "title": "Stateless Dynamic Host Configuration Protocol (DHCP) Service for IPv6", 
@@ -83855,6 +84024,22 @@
   "title": "Scheduling Extensions to CalDAV", 
   "stream": "ietf", 
   "level": "std"
+ }, 
+ "RFC8468": {
+  "status": "current", 
+  "wg": "ippm", 
+  "stream": "ietf", 
+  "title": "IPv4, IPv6, and IPv4-IPv6 Coexistence: Updates for the IP Performance Metrics (IPPM) Framework", 
+  "level": "informational", 
+  "area": "tsv", 
+  "keywords": [
+   "Measurement", 
+   "Methodology", 
+   "Standard-Formed Packet", 
+   "Type-P", 
+   "Minimal Packet", 
+   "IPv6 Transition"
+  ]
  }, 
  "RFC7757": {
   "status": "current", 
@@ -87993,7 +88178,8 @@
   "area": "sec", 
   "keywords": [
    "KERBEROS", 
-   "CAT,Security"
+   "CAT", 
+   "Security"
   ]
  }, 
  "RFC4129": {
@@ -90124,6 +90310,19 @@
    "TRILL"
   ]
  }, 
+ "RFC8480": {
+  "status": "current", 
+  "wg": "6tisch", 
+  "stream": "ietf", 
+  "title": "6TiSCH Operation Sublayer (6top) Protocol (6P)", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "schedule management", 
+   "distributed scheduling", 
+   "time synchronized channel hopping scheduling"
+  ]
+ }, 
  "RFC6324": {
   "status": "current", 
   "wg": "v6ops", 
@@ -90235,6 +90434,18 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
+ "RFC8486": {
+  "status": "current", 
+  "wg": "codec", 
+  "stream": "ietf", 
+  "title": "Ambisonics in an Ogg Opus Container", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "spatial audio", 
+   "lossy compression"
+  ]
+ }, 
  "RFC0480": {
   "status": "current", 
   "keywords": [], 
@@ -90249,12 +90460,20 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
- "RFC0483": {
+ "RFC8487": {
   "status": "current", 
-  "keywords": [], 
-  "title": "Cancellation of the resource notebook framework meeting", 
-  "stream": "legacy", 
-  "level": "unknown"
+  "wg": "mboned", 
+  "stream": "ietf", 
+  "title": "Mtrace Version 2: Traceroute Facility for IP Multicast", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "multicast", 
+   "mtrace", 
+   "mtrace2", 
+   "traceroute", 
+   "PIM"
+  ]
  }, 
  "RFC0485": {
   "status": "current", 
@@ -90423,27 +90642,23 @@
    "IMAP attributes"
   ]
  }, 
- "RFC8104": {
+ "RFC8456": {
   "status": "current", 
-  "wg": "pals", 
+  "wg": "bmwg", 
   "stream": "ietf", 
-  "title": "Pseudowire (PW) Endpoint Fast Failure Protection", 
-  "level": "std", 
-  "area": "rtg", 
-  "keywords": [
-   "pseudowire", 
-   "PW", 
-   "protection", 
-   "local repair", 
-   "fast reroute"
-  ]
+  "title": "Benchmarking Methodology for Software-Defined Networking (SDN) Controller Performance", 
+  "level": "informational", 
+  "area": "ops", 
+  "keywords": []
  }, 
- "RFC8107": {
+ "RFC8455": {
   "status": "current", 
-  "keywords": [], 
-  "title": "Advertising Digital Identifier (Ad-ID) URN Namespace Definition", 
+  "wg": "bmwg", 
   "stream": "ietf", 
-  "level": "informational"
+  "title": "Terminology for Benchmarking Software-Defined Networking (SDN) Controller Performance", 
+  "level": "informational", 
+  "area": "ops", 
+  "keywords": []
  }, 
  "RFC8106": {
   "status": "current", 
@@ -91028,7 +91243,7 @@
   ]
  }, 
  "RFC4242": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "dhc", 
   "stream": "ietf", 
   "title": "Information Refresh Time Option for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)", 
@@ -97482,6 +97697,19 @@
   "title": "Telnet logout option", 
   "stream": "legacy", 
   "level": "std"
+ }, 
+ "RFC8415": {
+  "status": "current", 
+  "wg": "dhc", 
+  "stream": "ietf", 
+  "title": "Dynamic Host Configuration Protocol for IPv6 (DHCPv6)", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "DHCPv6", 
+   "IPv6", 
+   "DHCP"
+  ]
  }, 
  "RFC8414": {
   "status": "current", 
