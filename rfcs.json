@@ -5643,17 +5643,20 @@
   "area": "rtg", 
   "keywords": []
  }, 
- "RFC6977": {
+ "RFC4188": {
   "status": "current", 
-  "wg": "dhc", 
+  "wg": "bridge", 
   "stream": "ietf", 
-  "title": "Triggering DHCPv6 Reconfiguration from Relay Agents", 
+  "title": "Definitions of Managed Objects for Bridges", 
   "level": "std", 
-  "area": "int", 
+  "area": "ops", 
   "keywords": [
-   "Reconfigure-Request", 
-   "Reconfigure-Reply", 
-   "Link Address Option"
+   "BRIDGE-MIB", 
+   "SNMP", 
+   "MIB", 
+   "standard", 
+   "standards", 
+   "management information base"
   ]
  }, 
  "RFC6974": {
@@ -12588,6 +12591,18 @@
    "mail", 
    "extensions", 
    "mime"
+  ]
+ }, 
+ "RFC8499": {
+  "status": "current", 
+  "wg": "dnsop", 
+  "stream": "ietf", 
+  "title": "DNS Terminology", 
+  "level": "bcp", 
+  "area": "ops", 
+  "keywords": [
+   "vocabulary", 
+   "domain name system"
   ]
  }, 
  "RFC2169": {
@@ -24269,14 +24284,14 @@
   "area": "art", 
   "keywords": []
  }, 
- "RFC8250": {
+ "RFC8522": {
   "status": "current", 
-  "wg": "ippm", 
-  "stream": "ietf", 
-  "title": "IPv6 Performance and Diagnostic Metrics (PDM) Destination Option", 
-  "level": "std", 
-  "area": "tsv", 
-  "keywords": []
+  "keywords": [
+   "Looking Glass"
+  ], 
+  "title": "Looking Glass Command Set", 
+  "stream": "independent", 
+  "level": "informational"
  }, 
  "RFC8521": {
   "status": "current", 
@@ -27343,6 +27358,41 @@
    "g.719 full-band codec"
   ]
  }, 
+ "RFC8503": {
+  "status": "current", 
+  "wg": "bess", 
+  "stream": "ietf", 
+  "title": "BGP/MPLS Layer 3 VPN Multicast Management Information Base", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "MVPN", 
+   "PE router", 
+   "P-tunnel", 
+   "PMSI", 
+   "MIB", 
+   "SNMP", 
+   "monitor"
+  ]
+ }, 
+ "RFC8502": {
+  "status": "current", 
+  "wg": "bess", 
+  "stream": "ietf", 
+  "title": "L2L3 VPN Multicast MIB", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "MVPN", 
+   "BGP", 
+   "MPLS", 
+   "P-tunnel", 
+   "PMSI Tunnel attribute", 
+   "SNMP", 
+   "monitor", 
+   "management"
+  ]
+ }, 
  "RFC8505": {
   "status": "current", 
   "wg": "6lo", 
@@ -27353,6 +27403,58 @@
   "keywords": [
    "Wi-Fi"
   ]
+ }, 
+ "RFC8504": {
+  "status": "current", 
+  "wg": "6man", 
+  "stream": "ietf", 
+  "title": "IPv6 Node Requirements", 
+  "level": "bcp", 
+  "area": "int", 
+  "keywords": [
+   "IPv6", 
+   "Internet Protocol Version 6", 
+   "Internet Protocol", 
+   "IP"
+  ]
+ }, 
+ "RFC8507": {
+  "status": "current", 
+  "keywords": [
+   "IPv6", 
+   "IPng"
+  ], 
+  "title": "Simple Internet Protocol (SIP) Specification", 
+  "stream": "independent", 
+  "level": "historic"
+ }, 
+ "RFC8509": {
+  "status": "current", 
+  "wg": "dnsop", 
+  "stream": "ietf", 
+  "title": "A Root Key Trust Anchor Sentinel for DNSSEC", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "DNSSEC", 
+   "KSK", 
+   "RFC5011", 
+   "DNS", 
+   "rollover", 
+   "root-key-sentinel-is-ta-", 
+   "root-key-sentinel-not-ta-", 
+   "root key", 
+   "security"
+  ]
+ }, 
+ "RFC8508": {
+  "status": "current", 
+  "wg": "extra", 
+  "stream": "ietf", 
+  "title": "IMAP REPLACE Extension", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": []
  }, 
  "RFC0088": {
   "status": "obsoleted", 
@@ -38948,20 +39050,16 @@
   "stream": "legacy", 
   "level": "unknown"
  }, 
- "RFC4188": {
+ "RFC3457": {
   "status": "current", 
-  "wg": "bridge", 
+  "wg": "ipsra", 
   "stream": "ietf", 
-  "title": "Definitions of Managed Objects for Bridges", 
-  "level": "std", 
-  "area": "ops", 
+  "title": "Requirements for IPsec Remote Access Scenarios", 
+  "level": "informational", 
+  "area": "sec", 
   "keywords": [
-   "BRIDGE-MIB", 
-   "SNMP", 
-   "MIB", 
-   "standard", 
-   "standards", 
-   "management information base"
+   "ipsra", 
+   "common remote access scenarios"
   ]
  }, 
  "RFC0847": {
@@ -42926,6 +43024,15 @@
   "stream": "ietf", 
   "level": "informational"
  }, 
+ "RFC8448": {
+  "status": "current", 
+  "wg": "tls", 
+  "stream": "ietf", 
+  "title": "Example Handshake Traces for TLS 1.3", 
+  "level": "informational", 
+  "area": "sec", 
+  "keywords": []
+ }, 
  "RFC8449": {
   "status": "current", 
   "wg": "tls", 
@@ -44853,6 +44960,15 @@
   "title": "TERENA'S Incident Object Description and Exchange Format Requirements", 
   "stream": "legacy", 
   "level": "informational"
+ }, 
+ "RFC8250": {
+  "status": "current", 
+  "wg": "ippm", 
+  "stream": "ietf", 
+  "title": "IPv6 Performance and Diagnostic Metrics (PDM) Destination Option", 
+  "level": "std", 
+  "area": "tsv", 
+  "keywords": []
  }, 
  "RFC8253": {
   "status": "current", 
@@ -57925,6 +58041,18 @@
   "area": "int", 
   "keywords": []
  }, 
+ "RFC8389": {
+  "status": "current", 
+  "wg": "softwire", 
+  "stream": "ietf", 
+  "title": "Definitions of Managed Objects for Mapping of Address and Port with Encapsulation (MAP-E)", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "IPv6", 
+   "MAP"
+  ]
+ }, 
  "RFC8388": {
   "status": "current", 
   "wg": "bess", 
@@ -63402,6 +63530,19 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
+ "RFC8488": {
+  "status": "current", 
+  "wg": "sidrops", 
+  "stream": "ietf", 
+  "title": "RIPE NCC's Implementation of Resource Public Key Infrastructure (RPKI) Certificate Tree Validation", 
+  "level": "informational", 
+  "area": "ops", 
+  "keywords": [
+   "RPKI", 
+   "validation", 
+   "RRDP"
+  ]
+ }, 
  "RFC2178": {
   "status": "obsoleted", 
   "wg": "ospf", 
@@ -65062,18 +65203,6 @@
    "dkim", 
    "spf", 
    "authentication"
-  ]
- }, 
- "RFC6558": {
-  "status": "current", 
-  "wg": "sieve", 
-  "stream": "ietf", 
-  "title": "Sieve Extension for Converting Messages before Delivery", 
-  "level": "std", 
-  "area": "app", 
-  "keywords": [
-   "Sieve", 
-   "CONVERT"
   ]
  }, 
  "RFC2216": {
@@ -77965,16 +78094,16 @@
   "stream": "ietf", 
   "level": "bcp"
  }, 
- "RFC3457": {
+ "RFC6558": {
   "status": "current", 
-  "wg": "ipsra", 
+  "wg": "sieve", 
   "stream": "ietf", 
-  "title": "Requirements for IPsec Remote Access Scenarios", 
-  "level": "informational", 
-  "area": "sec", 
+  "title": "Sieve Extension for Converting Messages before Delivery", 
+  "level": "std", 
+  "area": "app", 
   "keywords": [
-   "ipsra", 
-   "common remote access scenarios"
+   "Sieve", 
+   "CONVERT"
   ]
  }, 
  "RFC6559": {
@@ -78761,6 +78890,108 @@
   "keywords": [
    "domain namespace"
   ]
+ }, 
+ "RFC8516": {
+  "status": "current", 
+  "wg": "core", 
+  "stream": "ietf", 
+  "title": "\"Too Many Requests\" Response Code for the Constrained Application Protocol", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "CoAP"
+  ]
+ }, 
+ "RFC8517": {
+  "status": "current", 
+  "keywords": [
+   "address sharing", 
+   "NAT", 
+   "firewall", 
+   "Service Function", 
+   "transport", 
+   "service delivery", 
+   "Internet architecture", 
+   "TCP QUIC", 
+   "Path Layer UDP Substrate"
+  ], 
+  "title": "An Inventory of Transport-Centric Functions Provided by Middleboxes: An Operator Perspective", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
+ "RFC8514": {
+  "status": "current", 
+  "wg": "extra", 
+  "stream": "ietf", 
+  "title": "Internet Message Access Protocol (IMAP) - SAVEDATE Extension", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "imap", 
+   "savedate"
+  ]
+ }, 
+ "RFC8512": {
+  "status": "current", 
+  "wg": "opsawg", 
+  "stream": "ietf", 
+  "title": "A YANG Module for Network Address Translation (NAT) and Network Prefix Translation (NPT)", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "address sharing", 
+   "address depletion", 
+   "IPv4 service continuity", 
+   "NETCONF", 
+   "programmability", 
+   "automation", 
+   "service automation", 
+   "NPTv6", 
+   "SIIT", 
+   "NAT64", 
+   "CLAT", 
+   "Destination NAT", 
+   "Port Restricted NAT", 
+   "Port Range"
+  ]
+ }, 
+ "RFC8513": {
+  "status": "current", 
+  "wg": "softwire", 
+  "stream": "ietf", 
+  "title": "A YANG Data Model for Dual-Stack Lite (DS-Lite)", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "IPv4 service continuity", 
+   "IPv4 address exhaustion", 
+   "Service Availability", 
+   "Address sharing", 
+   "IPv6", 
+   "Reliability", 
+   "IPv4 over IPv6"
+  ]
+ }, 
+ "RFC8510": {
+  "status": "current", 
+  "wg": "lsr", 
+  "stream": "ietf", 
+  "title": "OSPF Link-Local Signaling (LLS) Extensions for Local Interface ID Advertisement", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "IGP", 
+   "OSPF"
+  ]
+ }, 
+ "RFC8511": {
+  "status": "current", 
+  "wg": "tcpm", 
+  "stream": "ietf", 
+  "title": "TCP Alternative Backoff with ECN (ABE)", 
+  "level": "experimental", 
+  "area": "tsv", 
+  "keywords": []
  }, 
  "RFC1231": {
   "status": "obsoleted", 
@@ -85501,7 +85732,7 @@
   ]
  }, 
  "RFC7719": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "dnsop", 
   "stream": "ietf", 
   "title": "DNS Terminology", 
@@ -86737,7 +86968,7 @@
   ]
  }, 
  "RFC6434": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "6man", 
   "stream": "ietf", 
   "title": "IPv6 Node Requirements", 
@@ -90360,6 +90591,21 @@
    "TFRC", 
    "CCID-3", 
    "CCID-4"
+  ]
+ }, 
+ "RFC8482": {
+  "status": "current", 
+  "wg": "dnsop", 
+  "stream": "ietf", 
+  "title": "Providing Minimal-Sized Responses to DNS Queries That Have QTYPE=ANY", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "DNS", 
+   "ANY", 
+   "REFUSE", 
+   "DDOS", 
+   "ABUSE"
   ]
  }, 
  "RFC6322": {
@@ -94135,6 +94381,20 @@
   "stream": "iab", 
   "level": "informational"
  }, 
+ "RFC8476": {
+  "status": "current", 
+  "wg": "lsr", 
+  "stream": "ietf", 
+  "title": "Signaling Maximum SID Depth (MSD) Using OSPF", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "BGP-LS", 
+   "SID", 
+   "MSD", 
+   "OSPF"
+  ]
+ }, 
  "RFC8479": {
   "status": "current", 
   "keywords": [
@@ -95313,6 +95573,19 @@
   "title": "Mail priority", 
   "stream": "legacy", 
   "level": "unknown"
+ }, 
+ "RFC6977": {
+  "status": "current", 
+  "wg": "dhc", 
+  "stream": "ietf", 
+  "title": "Triggering DHCPv6 Reconfiguration from Relay Agents", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "Reconfigure-Request", 
+   "Reconfigure-Reply", 
+   "Link Address Option"
+  ]
  }, 
  "RFC3112": {
   "status": "current", 
