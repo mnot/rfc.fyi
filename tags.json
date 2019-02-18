@@ -229,9 +229,11 @@
         "Writing RFCs": {
             "rfcs": [
                 "RFC2119",
+                "RFC2277",
                 "RFC3552",
                 "RFC5378",
                 "RFC7322",
+                "RFC7841",
                 "RFC7991",
                 "RFC7997",
                 "RFC8126",
