@@ -23355,7 +23355,7 @@
   ]
  }, 
  "RFC7810": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "isis", 
   "stream": "ietf", 
   "title": "IS-IS Traffic Engineering (TE) Metric Extensions", 
@@ -24227,36 +24227,24 @@
    "wimax"
   ]
  }, 
- "RFC8255": {
+ "RFC8527": {
   "status": "current", 
-  "wg": "slim", 
+  "wg": "netconf", 
   "stream": "ietf", 
-  "title": "Multiple Language Content Type", 
+  "title": "RESTCONF Extensions to Support the Network Management Datastore Architecture", 
   "level": "std", 
-  "area": "art", 
-  "keywords": [
-   "multiple", 
-   "language", 
-   "multi", 
-   "lingual", 
-   "content", 
-   "type", 
-   "email", 
-   "mime"
-  ]
+  "area": "ops", 
+  "keywords": []
  }, 
- "RFC8254": {
+ "RFC8526": {
   "status": "current", 
-  "wg": "urnbis", 
+  "wg": "netconf", 
   "stream": "ietf", 
-  "title": "Uniform Resource Name (URN) Namespace Registration Transition", 
+  "title": "NETCONF Extensions to Support the Network Management Datastore Architecture", 
   "level": "std", 
-  "area": "art", 
+  "area": "ops", 
   "keywords": [
-   "ISBN", 
-   "ISSN", 
-   "NBN", 
-   "national bibliography number"
+   "NMDA"
   ]
  }, 
  "RFC8257": {
@@ -24323,14 +24311,18 @@
    "Bootstrap"
   ]
  }, 
- "RFC8252": {
+ "RFC8520": {
   "status": "current", 
-  "wg": "oauth", 
+  "wg": "opsawg", 
   "stream": "ietf", 
-  "title": "OAuth 2.0 for Native Apps", 
-  "level": "bcp", 
-  "area": "sec", 
-  "keywords": []
+  "title": "Manufacturer Usage Description Specification", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "MUD", 
+   "IoT Security", 
+   "Access Policy"
+  ]
  }, 
  "RFC8259": {
   "status": "current", 
@@ -24352,6 +24344,28 @@
    "OSPF-TE", 
    "GMPLS"
   ]
+ }, 
+ "RFC8529": {
+  "status": "current", 
+  "wg": "rtgwg", 
+  "stream": "ietf", 
+  "title": "YANG Data Model for Network Instances", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "VRF", 
+   "VSI", 
+   "VPN"
+  ]
+ }, 
+ "RFC8528": {
+  "status": "current", 
+  "wg": "netmod", 
+  "stream": "ietf", 
+  "title": "YANG Schema Mount", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": []
  }, 
  "RFC0062": {
   "status": "current", 
@@ -27444,6 +27458,18 @@
   "title": "Simple Internet Protocol (SIP) Specification", 
   "stream": "independent", 
   "level": "historic"
+ }, 
+ "RFC8506": {
+  "status": "current", 
+  "wg": "dime", 
+  "stream": "ietf", 
+  "title": "Diameter Credit-Control Application", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "Diameter", 
+   "charging"
+  ]
  }, 
  "RFC8509": {
   "status": "current", 
@@ -34627,6 +34653,39 @@
    "Framework"
   ]
  }, 
+ "RFC8545": {
+  "status": "current", 
+  "wg": "ippm", 
+  "stream": "ietf", 
+  "title": "Well-Known Port Assignments for the One-Way Active Measurement Protocol (OWAMP) and the Two-Way Active Measurement Protocol (TWAMP)", 
+  "level": "std", 
+  "area": "tsv", 
+  "keywords": [
+   "OWAMP", 
+   "TWAMP"
+  ]
+ }, 
+ "RFC8541": {
+  "status": "current", 
+  "wg": "rtgwg", 
+  "stream": "ietf", 
+  "title": "Impact of Shortest Path First (SPF) Trigger and Delay Strategies on IGP Micro-loops", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "IS-IS", 
+   "OSPF"
+  ]
+ }, 
+ "RFC8540": {
+  "status": "current", 
+  "wg": "tsvwg", 
+  "stream": "ietf", 
+  "title": "Stream Control Transmission Protocol: Errata and Issues in RFC 4960", 
+  "level": "informational", 
+  "area": "tsv", 
+  "keywords": []
+ }, 
  "RFC5324": {
   "status": "current", 
   "wg": "imss", 
@@ -36470,7 +36529,7 @@
   "level": "unknown"
  }, 
  "RFC7895": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "netconf", 
   "stream": "ietf", 
   "title": "YANG Module Library", 
@@ -40633,14 +40692,12 @@
    "source"
   ]
  }, 
- "RFC7270": {
+ "RFC0550": {
   "status": "current", 
-  "keywords": [
-   "IPFIX"
-  ], 
-  "title": "Cisco-Specific Information Elements Reused in IP Flow Information Export (IPFIX)", 
-  "stream": "ietf", 
-  "level": "informational"
+  "keywords": [], 
+  "title": "NIC NCP experiment", 
+  "stream": "legacy", 
+  "level": "unknown"
  }, 
  "RFC0551": {
   "status": "current", 
@@ -44956,6 +45013,49 @@
    "object-oriented"
   ]
  }, 
+ "RFC8255": {
+  "status": "current", 
+  "wg": "slim", 
+  "stream": "ietf", 
+  "title": "Multiple Language Content Type", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "multiple", 
+   "language", 
+   "multi", 
+   "lingual", 
+   "content", 
+   "type", 
+   "email", 
+   "mime"
+  ]
+ }, 
+ "RFC8254": {
+  "status": "current", 
+  "wg": "urnbis", 
+  "stream": "ietf", 
+  "title": "Uniform Resource Name (URN) Namespace Registration Transition", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "ISBN", 
+   "ISSN", 
+   "NBN", 
+   "national bibliography number"
+  ]
+ }, 
+ "RFC8525": {
+  "status": "current", 
+  "wg": "netconf", 
+  "stream": "ietf", 
+  "title": "YANG Library", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "NMDA"
+  ]
+ }, 
  "RFC3067": {
   "status": "current", 
   "keywords": [
@@ -44992,6 +45092,15 @@
    "encryption", 
    "TLS"
   ]
+ }, 
+ "RFC8252": {
+  "status": "current", 
+  "wg": "oauth", 
+  "stream": "ietf", 
+  "title": "OAuth 2.0 for Native Apps", 
+  "level": "bcp", 
+  "area": "sec", 
+  "keywords": []
  }, 
  "RFC0782": {
   "status": "current", 
@@ -54642,6 +54751,15 @@
   "stream": "legacy", 
   "level": "std"
  }, 
+ "RFC8242": {
+  "status": "current", 
+  "wg": "i2rs", 
+  "stream": "ietf", 
+  "title": "Interface to the Routing System (I2RS) Ephemeral State Requirements", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": []
+ }, 
  "RFC8240": {
   "status": "current", 
   "keywords": [
@@ -63599,6 +63717,15 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
+ "RFC7270": {
+  "status": "current", 
+  "keywords": [
+   "IPFIX"
+  ], 
+  "title": "Cisco-Specific Information Elements Reused in IP Flow Information Export (IPFIX)", 
+  "stream": "ietf", 
+  "level": "informational"
+ }, 
  "RFC7287": {
   "status": "current", 
   "wg": "multimob", 
@@ -65973,6 +66100,21 @@
   "title": "Mesh of Multiple DAG servers - Results from TISDAG", 
   "stream": "legacy", 
   "level": "informational"
+ }, 
+ "RFC8500": {
+  "status": "current", 
+  "wg": "lsr", 
+  "stream": "ietf", 
+  "title": "IS-IS Routing with Reverse Metric", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "IGP", 
+   "IS-IS", 
+   "Metric", 
+   "Reverse-Metric", 
+   "IIH"
+  ]
  }, 
  "RFC2965": {
   "status": "obsoleted", 
@@ -74784,14 +74926,16 @@
    "e.164"
   ]
  }, 
- "RFC8242": {
+ "RFC8534": {
   "status": "current", 
-  "wg": "i2rs", 
+  "wg": "bess", 
   "stream": "ietf", 
-  "title": "Interface to the Routing System (I2RS) Ephemeral State Requirements", 
-  "level": "informational", 
+  "title": "Explicit Tracking with Wildcard Routes in Multicast VPN", 
+  "level": "std", 
   "area": "rtg", 
-  "keywords": []
+  "keywords": [
+   "Multicast MVPN"
+  ]
  }, 
  "RFC8243": {
   "status": "current", 
@@ -74896,6 +75040,37 @@
   "level": "std", 
   "area": "rtg", 
   "keywords": []
+ }, 
+ "RFC8538": {
+  "status": "current", 
+  "wg": "idr", 
+  "stream": "ietf", 
+  "title": "Notification Message Support for BGP Graceful Restart", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "IDR", 
+   "BGP"
+  ]
+ }, 
+ "RFC8539": {
+  "status": "current", 
+  "wg": "dhc", 
+  "stream": "ietf", 
+  "title": "Softwire Provisioning Using DHCPv4 over DHCPv6", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "Provisioning", 
+   "Softwire", 
+   "DHCP 4o6", 
+   "IPv4 over IPv6", 
+   "IPv4 service continuity", 
+   "IPv4 address depletion", 
+   "IPv4 over IPv6", 
+   "MAP", 
+   "Lightweight 4over6"
+  ]
  }, 
  "RFC6517": {
   "status": "current", 
@@ -78937,6 +79112,34 @@
    "domain namespace"
   ]
  }, 
+ "RFC8518": {
+  "status": "current", 
+  "wg": "rtgwg", 
+  "stream": "ietf", 
+  "title": "Selection of Loop-Free Alternates for Multi-Homed Prefixes", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "LFA", 
+   "Multi-homed Prefix", 
+   "IGP"
+  ]
+ }, 
+ "RFC8519": {
+  "status": "current", 
+  "wg": "netmod", 
+  "stream": "ietf", 
+  "title": "YANG Data Model for Network Access Control Lists (ACLs)", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "ACE", 
+   "ACL", 
+   "Firewall", 
+   "PBR", 
+   "NMDA"
+  ]
+ }, 
  "RFC8516": {
   "status": "current", 
   "wg": "core", 
@@ -78976,6 +79179,17 @@
    "imap", 
    "savedate"
   ]
+ }, 
+ "RFC8515": {
+  "status": "current", 
+  "keywords": [
+   "YANG", 
+   "NETCONF", 
+   "RESTCONF"
+  ], 
+  "title": "URN Namespace for ETSI Documents", 
+  "stream": "ietf", 
+  "level": "informational"
  }, 
  "RFC8512": {
   "status": "current", 
@@ -80974,6 +81188,18 @@
    "point"
   ]
  }, 
+ "RFC8492": {
+  "status": "current", 
+  "keywords": [
+   "Password Authenticated Key Exchange", 
+   "Dictionary Attack", 
+   "Authentication", 
+   "TLS"
+  ], 
+  "title": "Secure Password Ciphersuites for Transport Layer Security (TLS)", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
  "RFC1595": {
   "status": "obsoleted", 
   "wg": "atommib", 
@@ -82461,6 +82687,15 @@
    "object-oriented"
   ]
  }, 
+ "RFC8490": {
+  "status": "current", 
+  "wg": "dnsop", 
+  "stream": "ietf", 
+  "title": "DNS Stateful Operations", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": []
+ }, 
  "RFC5641": {
   "status": "current", 
   "wg": "l2tpext", 
@@ -82790,6 +83025,27 @@
   "wg": "mpls", 
   "stream": "ietf", 
   "title": "LDP Hello Cryptographic Authentication", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
+ }, 
+ "RFC8570": {
+  "status": "current", 
+  "wg": "lsr", 
+  "stream": "ietf", 
+  "title": "IS-IS Traffic Engineering (TE) Metric Extensions", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "IGP", 
+   "IS-IS"
+  ]
+ }, 
+ "RFC8571": {
+  "status": "current", 
+  "wg": "idr", 
+  "stream": "ietf", 
+  "title": "BGP - Link State (BGP-LS) Advertisement of IGP Traffic Engineering Performance Metric Extensions", 
   "level": "std", 
   "area": "rtg", 
   "keywords": []
@@ -85809,6 +86065,44 @@
    "security", 
    "program", 
    "interface"
+  ]
+ }, 
+ "RFC8552": {
+  "status": "current", 
+  "wg": "dnsop", 
+  "stream": "ietf", 
+  "title": "Scoped Interpretation of DNS Resource Records through \"Underscored\" Naming of Attribute Leaves", 
+  "level": "bcp", 
+  "area": "ops", 
+  "keywords": [
+   "DNS", 
+   "Domain Name System"
+  ]
+ }, 
+ "RFC8553": {
+  "status": "current", 
+  "wg": "dnsop", 
+  "stream": "ietf", 
+  "title": "DNS Attrleaf Changes: Fixing Specifications That Use Underscored Node Names", 
+  "level": "bcp", 
+  "area": "ops", 
+  "keywords": [
+   "DNS", 
+   "Domain Name System"
+  ]
+ }, 
+ "RFC8555": {
+  "status": "current", 
+  "wg": "acme", 
+  "stream": "ietf", 
+  "title": "Automatic Certificate Management Environment (ACME)", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "certificate", 
+   "HTTPS", 
+   "PKI", 
+   "X.509"
   ]
  }, 
  "RFC2848": {
@@ -92142,13 +92436,6 @@
   "stream": "ietf", 
   "level": "std"
  }, 
- "RFC0550": {
-  "status": "current", 
-  "keywords": [], 
-  "title": "NIC NCP experiment", 
-  "stream": "legacy", 
-  "level": "unknown"
- }, 
  "RFC0556": {
   "status": "current", 
   "keywords": [], 
@@ -92565,6 +92852,19 @@
    "mode", 
    "available", 
    "bit rate"
+  ]
+ }, 
+ "RFC8530": {
+  "status": "current", 
+  "wg": "rtgwg", 
+  "stream": "ietf", 
+  "title": "YANG Model for Logical Network Elements", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "VRF", 
+   "VSI", 
+   "VPN"
   ]
  }, 
  "RFC2616": {
@@ -93137,7 +93437,7 @@
   ]
  }, 
  "RFC4006": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "aaa", 
   "stream": "ietf", 
   "title": "Diameter Credit-Control Application", 
