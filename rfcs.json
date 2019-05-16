@@ -31195,6 +31195,13 @@
    "RTP"
   ]
  }, 
+ "RFC8568": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Network Virtualization Research Challenges", 
+  "stream": "irtf", 
+  "level": "informational"
+ }, 
  "RFC8291": {
   "status": "current", 
   "wg": "webpush", 
@@ -38012,6 +38019,23 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
+ "RFC8560": {
+  "status": "current", 
+  "wg": "bess", 
+  "stream": "ietf", 
+  "title": "Seamless Integration of Ethernet VPN (EVPN) with Virtual Private LAN Service (VPLS) and Their Provider Backbone Bridge (PBB) Equivalents", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "EVPN", 
+   "VPLS", 
+   "PBB-EVPN", 
+   "PBB-VPLS", 
+   "Ethernet Virtual Private Networks", 
+   "Virtual Private LAN Services", 
+   "Provider Backbone Bridging"
+  ]
+ }, 
  "RFC4988": {
   "status": "current", 
   "wg": "mip4", 
@@ -41253,6 +41277,15 @@
   "stream": "ietf", 
   "level": "std"
  }, 
+ "RFC8588": {
+  "status": "current", 
+  "wg": "stir", 
+  "stream": "ietf", 
+  "title": "Personal Assertion Token (PaSSporT) Extension for Signature-based Handling of Asserted information using toKENs (SHAKEN)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": []
+ }, 
  "RFC3120": {
   "status": "current", 
   "keywords": [
@@ -41267,16 +41300,66 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
- "RFC4863": {
+ "RFC8580": {
   "status": "current", 
-  "wg": "pwe3", 
+  "wg": "extra", 
   "stream": "ietf", 
-  "title": "Wildcard Pseudowire Type", 
+  "title": "Sieve Extension: File Carbon Copy (FCC)", 
   "level": "std", 
-  "area": "int", 
+  "area": "art", 
   "keywords": [
-   "pw type", 
-   "pw"
+   "Sieve", 
+   "Vacation", 
+   "Notify"
+  ]
+ }, 
+ "RFC8585": {
+  "status": "current", 
+  "wg": "v6ops", 
+  "stream": "ietf", 
+  "title": "Requirements for IPv6 Customer Edge Routers to Support IPv4-as-a-Service", 
+  "level": "informational", 
+  "area": "ops", 
+  "keywords": [
+   "IPv6 transition", 
+   "CE requirements", 
+   "IPv4aaS"
+  ]
+ }, 
+ "RFC8584": {
+  "status": "current", 
+  "wg": "bess", 
+  "stream": "ietf", 
+  "title": "Framework for Ethernet VPN Designated Forwarder Election Extensibility", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
+ }, 
+ "RFC8587": {
+  "status": "current", 
+  "wg": "nfsv4", 
+  "stream": "ietf", 
+  "title": "NFS Version 4.0 Trunking Update", 
+  "level": "std", 
+  "area": "tsv", 
+  "keywords": [
+   "NFSv4.0", 
+   "migration", 
+   "replication", 
+   "trunking", 
+   "fs_locations", 
+   "transparent state migration"
+  ]
+ }, 
+ "RFC8586": {
+  "status": "current", 
+  "wg": "httpbis", 
+  "stream": "ietf", 
+  "title": "Loop Detection in Content Delivery Networks (CDNs)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "CDN-Loop,"
   ]
  }, 
  "RFC3760": {
@@ -59813,6 +59896,23 @@
   "stream": "legacy", 
   "level": "informational"
  }, 
+ "RFC8603": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Commercial National Security Algorithm (CNSA) Suite Certificate and Certificate Revocation List (CRL) Profile", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
+ "RFC8605": {
+  "status": "current", 
+  "keywords": [
+   "RDAP", 
+   "vCard"
+  ], 
+  "title": "vCard Format Extensions: ICANN Extensions for the Registration Data Access Protocol (RDAP)", 
+  "stream": "ietf", 
+  "level": "informational"
+ }, 
  "RFC1766": {
   "status": "obsoleted", 
   "wg": "mailext", 
@@ -64523,6 +64623,18 @@
    "user service"
   ]
  }, 
+ "RFC4863": {
+  "status": "current", 
+  "wg": "pwe3", 
+  "stream": "ietf", 
+  "title": "Wildcard Pseudowire Type", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": [
+   "pw type", 
+   "pw"
+  ]
+ }, 
  "RFC1285": {
   "status": "current", 
   "wg": "fddimib", 
@@ -66957,7 +67069,7 @@
   ]
  }, 
  "RFC5751": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "smime", 
   "stream": "ietf", 
   "title": "Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 3.2 Message Specification", 
@@ -66973,7 +67085,7 @@
   ]
  }, 
  "RFC5750": {
-  "status": "current", 
+  "status": "obsoleted", 
   "wg": "smime", 
   "stream": "ietf", 
   "title": "Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 3.2 Certificate Handling", 
@@ -83108,6 +83220,33 @@
   "area": "rtg", 
   "keywords": []
  }, 
+ "RFC8578": {
+  "status": "current", 
+  "wg": "detnet", 
+  "stream": "ietf", 
+  "title": "Deterministic Networking Use Cases", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": [
+   "DetNet", 
+   "AVB", 
+   "TSN", 
+   "SRP"
+  ]
+ }, 
+ "RFC8579": {
+  "status": "current", 
+  "wg": "extra", 
+  "stream": "ietf", 
+  "title": "Sieve Email Filtering: Delivering to Special-Use Mailboxes", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "sieve", 
+   "mailbox", 
+   "special-use"
+  ]
+ }, 
  "RFC8570": {
   "status": "current", 
   "wg": "lsr", 
@@ -83129,6 +83268,20 @@
   "area": "rtg", 
   "keywords": []
  }, 
+ "RFC8572": {
+  "status": "current", 
+  "wg": "netconf", 
+  "stream": "ietf", 
+  "title": "Secure Zero Touch Provisioning (SZTP)", 
+  "level": "std", 
+  "area": "ops", 
+  "keywords": [
+   "zerotouch", 
+   "bootstrap", 
+   "sztp", 
+   "ztp"
+  ]
+ }, 
  "RFC8574": {
   "status": "current", 
   "keywords": [
@@ -83138,6 +83291,46 @@
   "title": "cite-as: A Link Relation to Convey a Preferred URI for Referencing", 
   "stream": "independent", 
   "level": "informational"
+ }, 
+ "RFC8575": {
+  "status": "current", 
+  "wg": "tictoc", 
+  "stream": "ietf", 
+  "title": "YANG Data Model for the Precision Time Protocol (PTP)", 
+  "level": "std", 
+  "area": "int", 
+  "keywords": []
+ }, 
+ "RFC8576": {
+  "status": "current", 
+  "keywords": [
+   "IoT", 
+   "Internet of Things", 
+   "M2M", 
+   "Machine-to-machine", 
+   "Machine-type communication", 
+   "MTC", 
+   "Security", 
+   "Privacy", 
+   "Trustworthy", 
+   "Lifecycle"
+  ], 
+  "title": "Internet of Things (IoT) Security: State of the Art and Challenges", 
+  "stream": "irtf", 
+  "level": "informational"
+ }, 
+ "RFC8577": {
+  "status": "current", 
+  "wg": "mpls", 
+  "stream": "ietf", 
+  "title": "Signaling RSVP-TE Tunnels on a Shared MPLS Forwarding Plane", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "Segment Routed RSVP-TE tunnels", 
+   "TE link labels", 
+   "RSVP-TE shared labels"
+  ]
  }, 
  "RFC8286": {
   "status": "current", 
@@ -86180,6 +86373,28 @@
    "Domain Name System"
   ]
  }, 
+ "RFC8550": {
+  "status": "current", 
+  "wg": "lamps", 
+  "stream": "ietf", 
+  "title": "Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 4.0 Certificate Handling", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "S/MIME"
+  ]
+ }, 
+ "RFC8551": {
+  "status": "current", 
+  "wg": "lamps", 
+  "stream": "ietf", 
+  "title": "Secure/Multipurpose Internet Mail Extensions (S/MIME) Version 4.0 Message Specification", 
+  "level": "std", 
+  "area": "sec", 
+  "keywords": [
+   "S/MIME"
+  ]
+ }, 
  "RFC8556": {
   "status": "current", 
   "wg": "bier", 
@@ -86190,6 +86405,17 @@
   "keywords": [
    "Multicast"
   ]
+ }, 
+ "RFC8554": {
+  "status": "current", 
+  "keywords": [
+   "LMS", 
+   "HSS", 
+   "stateful"
+  ], 
+  "title": "Leighton-Micali Hash-Based Signatures", 
+  "stream": "irtf", 
+  "level": "informational"
  }, 
  "RFC8555": {
   "status": "current", 
@@ -88752,6 +88978,19 @@
   "title": "Hypertext Jeopardy Protocol (HTJP/1.0)", 
   "stream": "independent", 
   "level": "informational"
+ }, 
+ "RFC8564": {
+  "status": "current", 
+  "wg": "trill", 
+  "stream": "ietf", 
+  "title": "Support of Point-to-Multipoint Bidirectional Forwarding Detection (BFD) in Transparent Interconnection of Lots of Links (TRILL)", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": [
+   "data center network", 
+   "switch", 
+   "multicast"
+  ]
  }, 
  "RFC5278": {
   "status": "current", 
@@ -92958,6 +93197,72 @@
    "Point", 
    "Synchronous Optical Network Digital Heirarchy"
   ]
+ }, 
+ "RFC8597": {
+  "status": "current", 
+  "keywords": [
+   "SDN", 
+   "Control", 
+   "Programmability", 
+   "Intelligence", 
+   "Transport", 
+   "Service", 
+   "Flexibility", 
+   "Cooperation"
+  ], 
+  "title": "Cooperating Layered Architecture for Software-Defined Networking (CLAS)", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
+ "RFC8594": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "The Sunset HTTP Header Field", 
+  "stream": "ietf", 
+  "level": "informational"
+ }, 
+ "RFC8592": {
+  "status": "current", 
+  "keywords": [
+   "Timestamp", 
+   "Timestamping", 
+   "QoS", 
+   "service chain"
+  ], 
+  "title": "Key Performance Indicator (KPI) Stamping for the Network Service Header (NSH)", 
+  "stream": "independent", 
+  "level": "informational"
+ }, 
+ "RFC8593": {
+  "status": "current", 
+  "wg": "rmcat", 
+  "stream": "ietf", 
+  "title": "Video Traffic Models for RTP Congestion Control Evaluations", 
+  "level": "informational", 
+  "area": "tsv", 
+  "keywords": [
+   "Multimedia", 
+   "Congestion Control"
+  ]
+ }, 
+ "RFC8590": {
+  "status": "current", 
+  "wg": "regext", 
+  "stream": "ietf", 
+  "title": "Change Poll Extension for the Extensible Provisioning Protocol (EPP)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": []
+ }, 
+ "RFC8591": {
+  "status": "current", 
+  "keywords": [
+   "MSRP", 
+   "CPIM"
+  ], 
+  "title": "SIP-Based Messaging with S/MIME", 
+  "stream": "ietf", 
+  "level": "std"
  }, 
  "RFC3135": {
   "status": "current", 
