@@ -164,6 +164,7 @@ function showRfcs () {
   var rfcList = []
   var userInput = false
   if (activeTags.size !== 0 ||
+      (searchWords.length !== 0 && !isNaN(parseInt(searchWords[0]))) ||
       (searchWords.length !== 0 && searchWords[0].length >= prefixLen)) {
     userInput = true
     var taggedRfcs = listTaggedRfcs()
@@ -214,8 +215,9 @@ function listTaggedRfcs () {
 function listSearchedRfcs () {
   var filteredRfcs = new Set(allRfcs)
   searchWords.forEach(searchWord => {
-    if (`RFC${searchWord}` in rfcs) {
-      filteredRfcs = new Set([`RFC${searchWord}`])
+    var padded = `RFC${searchWord.padStart(4, '0')}`
+    if (padded in rfcs) {
+      filteredRfcs = new Set([padded])
     } else if (searchWord.length >= prefixLen || searchWords.length === 1) {
       let wordRfcs = searchLookup(searchWord, words, 'title')
       let keywordRfcs = searchLookup(searchWord, keywords, 'keywords')
