@@ -8915,6 +8915,13 @@
   "stream": "legacy", 
   "level": "experimental"
  }, 
+ "RFC8615": {
+  "status": "current", 
+  "keywords": [], 
+  "title": "Well-Known Uniform Resource Identifiers (URIs)", 
+  "stream": "ietf", 
+  "level": "std"
+ }, 
  "RFC1779": {
   "status": "obsoleted", 
   "wg": "asid", 
@@ -34682,6 +34689,18 @@
    "epp organization mapping extension"
   ]
  }, 
+ "RFC8547": {
+  "status": "current", 
+  "wg": "tcpinc", 
+  "stream": "ietf", 
+  "title": "TCP-ENO: Encryption Negotiation Option", 
+  "level": "experimental", 
+  "area": "tsv", 
+  "keywords": [
+   "tcp", 
+   "encryption"
+  ]
+ }, 
  "RFC8546": {
   "status": "current", 
   "keywords": [], 
@@ -34745,6 +34764,18 @@
    "community", 
    "BGP", 
    "IPFIX"
+  ]
+ }, 
+ "RFC8548": {
+  "status": "current", 
+  "wg": "tcpinc", 
+  "stream": "ietf", 
+  "title": "Cryptographic Protection of TCP Streams (tcpcrypt)", 
+  "level": "experimental", 
+  "area": "tsv", 
+  "keywords": [
+   "tcp", 
+   "encryption"
   ]
  }, 
  "RFC2859": {
@@ -41277,6 +41308,18 @@
   "stream": "ietf", 
   "level": "std"
  }, 
+ "RFC8589": {
+  "status": "current", 
+  "keywords": [
+   "Frogans", 
+   "leaptofrogans", 
+   "OP3FT", 
+   "URI scheme"
+  ], 
+  "title": "The 'leaptofrogans' URI Scheme", 
+  "stream": "ietf", 
+  "level": "informational"
+ }, 
  "RFC8588": {
   "status": "current", 
   "wg": "stir", 
@@ -42879,12 +42922,14 @@
   "area": "rtg", 
   "keywords": []
  }, 
- "RFC1106": {
-  "status": "obsoleted", 
-  "keywords": [], 
-  "title": "TCP big window and NAK options", 
-  "stream": "legacy", 
-  "level": "historic"
+ "RFC4426": {
+  "status": "current", 
+  "wg": "ccamp", 
+  "stream": "ietf", 
+  "title": "Generalized Multi-Protocol Label Switching (GMPLS) Recovery Functional Specification", 
+  "level": "std", 
+  "area": "rtg", 
+  "keywords": []
  }, 
  "RFC1107": {
   "status": "current", 
@@ -55079,14 +55124,12 @@
    "open shortest path first"
   ]
  }, 
- "RFC4426": {
-  "status": "current", 
-  "wg": "ccamp", 
-  "stream": "ietf", 
-  "title": "Generalized Multi-Protocol Label Switching (GMPLS) Recovery Functional Specification", 
-  "level": "std", 
-  "area": "rtg", 
-  "keywords": []
+ "RFC1106": {
+  "status": "obsoleted", 
+  "keywords": [], 
+  "title": "TCP big window and NAK options", 
+  "stream": "legacy", 
+  "level": "historic"
  }, 
  "RFC4427": {
   "status": "current", 
@@ -86406,6 +86449,15 @@
    "Multicast"
   ]
  }, 
+ "RFC8557": {
+  "status": "current", 
+  "wg": "detnet", 
+  "stream": "ietf", 
+  "title": "Deterministic Networking Problem Statement", 
+  "level": "informational", 
+  "area": "rtg", 
+  "keywords": []
+ }, 
  "RFC8554": {
   "status": "current", 
   "keywords": [
@@ -93280,6 +93332,19 @@
    "protocol"
   ]
  }, 
+ "RFC8599": {
+  "status": "current", 
+  "wg": "sipcore", 
+  "stream": "ietf", 
+  "title": "Push Notification with the Session Initiation Protocol (SIP)", 
+  "level": "std", 
+  "area": "art", 
+  "keywords": [
+   "SIP", 
+   "Push", 
+   "Notification"
+  ]
+ }, 
  "RFC3134": {
   "status": "current", 
   "wg": "bmwg", 
@@ -98285,7 +98350,7 @@
   ]
  }, 
  "RFC5785": {
-  "status": "current", 
+  "status": "obsoleted", 
   "keywords": [
    "well-known locations"
   ], 
