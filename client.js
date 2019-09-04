@@ -230,8 +230,14 @@ function listSearchedRfcs () {
 function renderRfc (rfcName, rfcData, target) {
   var rfcSpan = document.createElement('li')
   rfcSpan.data = rfcData
-  var rfcNumber = document.createTextNode(rfcName + ': ')
-  rfcSpan.appendChild(rfcNumber)
+  var rfcRef = document.createElement('a')
+  rfcRef.className = 'reference'
+  var rfcNum = rfcName.substring(3).padStart(4, '0')
+  rfcRef.href = `https://www.rfc-editor.org/refs/bibxml/reference.RFC.${rfcNum}.xml`
+  rfcRef.appendChild(document.createTextNode(rfcName))
+  rfcSpan.appendChild(rfcRef)
+  var sep = document.createTextNode(': ')
+  rfcSpan.appendChild(sep)
   var rfcLink = document.createElement('a')
   rfcLink.href = 'https://tools.ietf.org/html/' + rfcName.toLowerCase()
   rfcSpan.appendChild(rfcLink)

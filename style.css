@@ -154,6 +154,10 @@ h2 {
   fill: #aaa;
 }
 
+.reference {
+  color: black;
+}
+
 @media all and (max-width: 800px) {
   #container {
     flex-direction: column;
