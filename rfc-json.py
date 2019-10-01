@@ -44,14 +44,14 @@ class RfcIndexHandler(xml.sax.handler.ContentHandler):
             if tag == 'doc-id':
                 self.doc_id = self.content.strip()
             elif tag in self.interesting_tags:
-                assert not self.entry.has_key(tag)
+                assert tag not in self.entry
                 self.entry[tag] = self.content.strip()
 
         elif tag == 'doc-id' and self.tags[-1] in self.invisible_tags:
             self.entry[self.tags[-1]] = self.content.strip()
 
         elif tag == 'kw' and self.tags[-1] == 'keywords':
-            if self.entry.has_key('keywords'):
+            if 'keywords' in self.entry:
                 self.entry['keywords'].append(self.content.strip())
             else:
                 self.entry['keywords'] = [self.content.strip()]
@@ -72,17 +72,17 @@ level_lookup = {
 
 def fixup(raw):
     output = {}
-    for key, value in raw.items():
+    for key, value in list(raw.items()):
         output[key] = {
-            "status": value.has_key("obsoleted-by") and "obsoleted" or "current",
+            "status": "obsoleted-by" in value and "obsoleted" or "current",
             "level": level_lookup[value["current-status"]],
             "stream": value["stream"].lower(),
             "title": value["title"],
             "keywords": value.get("keywords", [])
         }
-        if value.has_key("wg_acronym") and value["wg_acronym"] != "NON WORKING GROUP":
+        if "wg_acronym" in value and value["wg_acronym"] != "NON WORKING GROUP":
             output[key]["wg"] = value["wg_acronym"]
-        if value.has_key("area"):
+        if "area" in value:
             output[key]["area"] = value["area"]
     return output
 
@@ -91,7 +91,7 @@ def main():
     handler = RfcIndexHandler()
     parser.setContentHandler(handler)
     parser.parse(fh)
-    print json.dumps(fixup(handler.output), indent=1)
+    print(json.dumps(fixup(handler.output), indent=1))
 
 if __name__ == "__main__":
     main()
