@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Check to see if it has changed.
+# This script is for CI updates
+
+# Check to see if it has changed
 git status --short rfcs.json | grep -s "M" || exit 0
 
 # setup
