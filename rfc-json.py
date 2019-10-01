@@ -8,18 +8,20 @@ rfc_index_ns = "http://www.rfc-editor.org/rfc-index"
 
 try:
     filename = sys.argv[2]
-    fh = open(filename, 'r')
+    fh = open(filename, "r")
 except IndexError:
     fh = sys.stdin
 
+
 class RfcIndexHandler(xml.sax.handler.ContentHandler):
-    entry_tags = ['rfc-entry']
-    interesting_tags = ['title', 'current-status', 'stream', 'area', 'wg_acronym']
-    invisible_tags = ['obsoleted-by', 'is-also']
+    entry_tags = ["rfc-entry"]
+    interesting_tags = ["title", "current-status", "stream", "area", "wg_acronym"]
+    invisible_tags = ["obsoleted-by", "is-also"]
+
     def __init__(self):
         self.feature_namespaces = True
         self.tags = []
-        self.content = ''
+        self.content = ""
         self.doc_id = None
         self.entry = {}
         self.output = {}
@@ -41,34 +43,35 @@ class RfcIndexHandler(xml.sax.handler.ContentHandler):
 
         elif len(self.tags) > 1 and self.tags[-1] in self.entry_tags:
             # We're at the top level of an entry.
-            if tag == 'doc-id':
+            if tag == "doc-id":
                 self.doc_id = self.content.strip()
             elif tag in self.interesting_tags:
                 assert tag not in self.entry
                 self.entry[tag] = self.content.strip()
 
-        elif tag == 'doc-id' and self.tags[-1] in self.invisible_tags:
+        elif tag == "doc-id" and self.tags[-1] in self.invisible_tags:
             self.entry[self.tags[-1]] = self.content.strip()
 
-        elif tag == 'kw' and self.tags[-1] == 'keywords':
-            if 'keywords' in self.entry:
-                self.entry['keywords'].append(self.content.strip())
+        elif tag == "kw" and self.tags[-1] == "keywords":
+            if "keywords" in self.entry:
+                self.entry["keywords"].append(self.content.strip())
             else:
-                self.entry['keywords'] = [self.content.strip()]
+                self.entry["keywords"] = [self.content.strip()]
 
-        self.content = ''
+        self.content = ""
 
 
 level_lookup = {
-  'INTERNET STANDARD': 'std',
-  'DRAFT STANDARD': 'std',
-  'BEST CURRENT PRACTICE': 'bcp',
-  'HISTORIC': 'historic',
-  'EXPERIMENTAL': 'experimental',
-  'UNKNOWN': 'unknown',
-  'INFORMATIONAL': 'informational',
-  'PROPOSED STANDARD': 'std'
+    "INTERNET STANDARD": "std",
+    "DRAFT STANDARD": "std",
+    "BEST CURRENT PRACTICE": "bcp",
+    "HISTORIC": "historic",
+    "EXPERIMENTAL": "experimental",
+    "UNKNOWN": "unknown",
+    "INFORMATIONAL": "informational",
+    "PROPOSED STANDARD": "std",
 }
+
 
 def fixup(raw):
     output = {}
@@ -78,7 +81,7 @@ def fixup(raw):
             "level": level_lookup[value["current-status"]],
             "stream": value["stream"].lower(),
             "title": value["title"],
-            "keywords": value.get("keywords", [])
+            "keywords": value.get("keywords", []),
         }
         if "wg_acronym" in value and value["wg_acronym"] != "NON WORKING GROUP":
             output[key]["wg"] = value["wg_acronym"]
@@ -86,12 +89,14 @@ def fixup(raw):
             output[key]["area"] = value["area"]
     return output
 
+
 def main():
     parser = xml.sax.make_parser()
     handler = RfcIndexHandler()
     parser.setContentHandler(handler)
     parser.parse(fh)
     print(json.dumps(fixup(handler.output), indent=1))
+
 
 if __name__ == "__main__":
     main()
