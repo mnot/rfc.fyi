@@ -100305,5 +100305,18 @@
   ],
   "wg": "lamps",
   "area": "sec"
+ },
+ "RFC8651": {
+  "status": "current",
+  "level": "std",
+  "stream": "ietf",
+  "title": "Dynamic Link Exchange Protocol (DLEP) Control-Plane-Based Pause Extension",
+  "keywords": [
+   "DLEP",
+   "Flow control",
+   "Pause"
+  ],
+  "wg": "manet",
+  "area": "rtg"
  }
 }
