@@ -95,7 +95,7 @@ def main():
     handler = RfcIndexHandler()
     parser.setContentHandler(handler)
     parser.parse(fh)
-    print(json.dumps(fixup(handler.output), indent=1))
+    print(json.dumps(fixup(handler.output), indent=1, sort_keys=True))
 
 
 if __name__ == "__main__":
