@@ -100319,6 +100319,15 @@
   "title": "Dynamic Link Exchange Protocol (DLEP) Control-Plane-Based Pause Extension",
   "wg": "manet"
  },
+ "RFC8653": {
+  "area": "int",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "On-Demand Mobility Management",
+  "wg": "dmm"
+ },
  "RFC8654": {
   "area": "rtg",
   "keywords": [
@@ -100345,5 +100354,14 @@
   "stream": "ietf",
   "title": "Deterministic Networking Architecture",
   "wg": "detnet"
+ },
+ "RFC8672": {
+  "keywords": [
+   "transport layer security"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "independent",
+  "title": "TLS Server Identity Pinning with Tickets"
  }
 }
