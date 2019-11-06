@@ -100319,6 +100319,24 @@
   "title": "Dynamic Link Exchange Protocol (DLEP) Control-Plane-Based Pause Extension",
   "wg": "manet"
  },
+ "RFC8652": {
+  "area": "rtg",
+  "keywords": [
+   "YANG",
+   "IGMP",
+   "MLD",
+   "multicast",
+   "data model",
+   "ietf-igmp-mld",
+   "network management",
+   "routing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for the Internet Group Management Protocol (IGMP)\nand\u00a0Multicast Listener Discovery (MLD)",
+  "wg": "pim"
+ },
  "RFC8653": {
   "area": "int",
   "keywords": [],
@@ -100354,6 +100372,17 @@
   "stream": "ietf",
   "title": "Deterministic Networking Architecture",
   "wg": "detnet"
+ },
+ "RFC8671": {
+  "area": "ops",
+  "keywords": [
+   "adj-rib-out"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Support for Adj-RIB-Out in the BGP Monitoring Protocol (BMP)",
+  "wg": "grow"
  },
  "RFC8672": {
   "keywords": [
