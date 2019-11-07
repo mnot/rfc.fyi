@@ -100334,7 +100334,7 @@
   "level": "std",
   "status": "current",
   "stream": "ietf",
-  "title": "A YANG Data Model for the Internet Group Management Protocol (IGMP)\nand\u00a0Multicast Listener Discovery (MLD)",
+  "title": "A YANG Data Model for the Internet Group Management Protocol (IGMP) and Multicast Listener Discovery (MLD)",
   "wg": "pim"
  },
  "RFC8653": {
