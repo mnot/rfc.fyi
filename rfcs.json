@@ -100373,6 +100373,25 @@
   "title": "Deterministic Networking Architecture",
   "wg": "detnet"
  },
+ "RFC8658": {
+  "area": "int",
+  "keywords": [
+   "IPv6 Transition",
+   "MAP-E",
+   "MAP-T",
+   "Lightweight 4over6",
+   "RADIUS",
+   "address sharing",
+   "authorization",
+   "AAA",
+   "provisioning"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RADIUS Attributes for Softwire Mechanisms Based on Address plus Port (A+P)",
+  "wg": "softwire"
+ },
  "RFC8671": {
   "area": "ops",
   "keywords": [
