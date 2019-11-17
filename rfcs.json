@@ -100411,5 +100411,42 @@
   "status": "current",
   "stream": "independent",
   "title": "TLS Server Identity Pinning with Tickets"
+ },
+ "RFC8675": {
+  "area": "int",
+  "keywords": [
+   "softwire",
+   "Augment tunnel",
+   "tunnel management",
+   "tunnel provisioning",
+   "tunnel activation",
+   "tunnel automation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Tunnel Interface Types",
+  "wg": "softwire"
+ },
+ "RFC8676": {
+  "area": "int",
+  "keywords": [
+   "A+P",
+   "address sharing",
+   "port set",
+   "Port range",
+   "IPv4 service continuity",
+   "NETCONF",
+   "RESTCONF",
+   "Programmability",
+   "Dynamic provisioning",
+   "automation",
+   "IPv6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Modules for IPv4-in-IPv6 Address plus Port (A\u2060+P) Softwires",
+  "wg": "softwire"
  }
 }
