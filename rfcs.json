@@ -100306,6 +100306,17 @@
   "title": "Hash Of Root Key Certificate Extension",
   "wg": "lamps"
  },
+ "RFC8650": {
+  "area": "ops",
+  "keywords": [
+   "YANG-Push"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Subscription to YANG Events and Datastores over RESTCONF",
+  "wg": "netconf"
+ },
  "RFC8651": {
   "area": "rtg",
   "keywords": [
