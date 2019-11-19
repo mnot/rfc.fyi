@@ -100459,5 +100459,26 @@
   "stream": "ietf",
   "title": "YANG Modules for IPv4-in-IPv6 Address plus Port (A\u2060+P) Softwires",
   "wg": "softwire"
+ },
+ "RFC8677": {
+  "keywords": [
+   "service function",
+   "SF",
+   "SFF",
+   "nSFF",
+   "SFC",
+   "SFP",
+   "NSH",
+   "FQDN",
+   "5G",
+   "NSSAI",
+   "CCNF",
+   "NSSF",
+   "3GPP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Name-Based Service Function Forwarder (nSFF) Component within a\nService Function Chaining (SFC) Framework"
  }
 }
