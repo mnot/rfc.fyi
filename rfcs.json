@@ -78616,7 +78616,7 @@
    "PKIX"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "DNS Certification Authority Authorization (CAA) Resource Record",
   "wg": "pkix"
@@ -100384,6 +100384,15 @@
   "title": "Deterministic Networking Architecture",
   "wg": "detnet"
  },
+ "RFC8657": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Certification Authority Authorization (CAA) Record Extensions for\nAccount URI and Automatic Certificate Management Environment (ACME)\nMethod Binding",
+  "wg": "acme"
+ },
  "RFC8658": {
   "area": "int",
   "keywords": [
@@ -100402,6 +100411,22 @@
   "stream": "ietf",
   "title": "RADIUS Attributes for Softwire Mechanisms Based on Address plus Port (A+P)",
   "wg": "softwire"
+ },
+ "RFC8659": {
+  "area": "sec",
+  "keywords": [
+   "certificate",
+   "ca",
+   "pki",
+   "issue",
+   "issuance",
+   "wildcard"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Certification Authority Authorization (CAA) Resource Record",
+  "wg": "lamps"
  },
  "RFC8671": {
   "area": "ops",
