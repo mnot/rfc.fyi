@@ -100390,7 +100390,7 @@
   "level": "std",
   "status": "current",
   "stream": "ietf",
-  "title": "Certification Authority Authorization (CAA) Record Extensions for\nAccount URI and Automatic Certificate Management Environment (ACME)\nMethod Binding",
+  "title": "Certification Authority Authorization (CAA) Record Extensions for Account URI and Automatic Certificate Management Environment (ACME) Method Binding",
   "wg": "acme"
  },
  "RFC8658": {
@@ -100482,7 +100482,7 @@
   "level": "std",
   "status": "current",
   "stream": "ietf",
-  "title": "YANG Modules for IPv4-in-IPv6 Address plus Port (A\u2060+P) Softwires",
+  "title": "YANG Modules for IPv4-in-IPv6 Address plus Port (A+P) Softwires",
   "wg": "softwire"
  },
  "RFC8677": {
@@ -100504,6 +100504,24 @@
   "level": "informational",
   "status": "current",
   "stream": "independent",
-  "title": "Name-Based Service Function Forwarder (nSFF) Component within a\nService Function Chaining (SFC) Framework"
+  "title": "Name-Based Service Function Forwarder (nSFF) Component within a Service Function Chaining (SFC) Framework"
+ },
+ "RFC8683": {
+  "area": "ops",
+  "keywords": [
+   "IPv6",
+   "DNSSEC",
+   "NAT64",
+   "DNS64",
+   "464XLAT",
+   "CLAT",
+   "NAT46",
+   "PLAT"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Additional Deployment Guidelines for NAT64/464XLAT in Operator and Enterprise Networks",
+  "wg": "v6ops"
  }
 }
