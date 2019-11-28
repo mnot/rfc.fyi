@@ -100448,6 +100448,21 @@
   "stream": "independent",
   "title": "TLS Server Identity Pinning with Tickets"
  },
+ "RFC8673": {
+  "area": "art",
+  "keywords": [
+   "http",
+   "range",
+   "unit",
+   "live",
+   "aggregation"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP Random Access and Live Content",
+  "wg": "httpbis"
+ },
  "RFC8675": {
   "area": "int",
   "keywords": [
@@ -100523,5 +100538,31 @@
   "stream": "ietf",
   "title": "Additional Deployment Guidelines for NAT64/464XLAT in Operator and Enterprise Networks",
   "wg": "v6ops"
+ },
+ "RFC8687": {
+  "area": "rtg",
+  "keywords": [
+   "OSPF",
+   "IPv4",
+   "IPv6",
+   "TE",
+   "MPLS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Routing with Cross-Address Family Traffic Engineering Tunnels",
+  "wg": "lsr"
+ },
+ "RFC8689": {
+  "area": "art",
+  "keywords": [
+   "SMTP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "SMTP Require TLS Option",
+  "wg": "uta"
  }
 }
