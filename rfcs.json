@@ -100463,6 +100463,17 @@
   "title": "HTTP Random Access and Live Content",
   "wg": "httpbis"
  },
+ "RFC8674": {
+  "keywords": [
+   "safe",
+   "preference",
+   "child-protection"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "The \"safe\" HTTP Preference"
+ },
  "RFC8675": {
   "area": "int",
   "keywords": [
@@ -100553,6 +100564,19 @@
   "stream": "ietf",
   "title": "OSPF Routing with Cross-Address Family Traffic Engineering Tunnels",
   "wg": "lsr"
+ },
+ "RFC8688": {
+  "area": "art",
+  "keywords": [
+   "STIR",
+   "SIPCORE",
+   "IANA"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Session Initiation Protocol (SIP) Response Code for Rejected Calls",
+  "wg": "sipcore"
  },
  "RFC8689": {
   "area": "art",
