@@ -100428,6 +100428,153 @@
   "title": "DNS Certification Authority Authorization (CAA) Resource Record",
   "wg": "lamps"
  },
+ "RFC8660": {
+  "area": "rtg",
+  "keywords": [
+   "SR",
+   "SR-MPLS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing with the MPLS Data Plane",
+  "wg": "spring"
+ },
+ "RFC8661": {
+  "area": "rtg",
+  "keywords": [
+   "SR-MPLS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing MPLS Interworking with LDP",
+  "wg": "spring"
+ },
+ "RFC8662": {
+  "area": "rtg",
+  "keywords": [
+   "Flow-aware load balancing",
+   "ECMP (equal-cost multipath)"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Entropy Label for Source Packet Routing in Networking (SPRING) Tunnels",
+  "wg": "mpls"
+ },
+ "RFC8663": {
+  "area": "rtg",
+  "keywords": [
+   "SR-MPLS",
+   "MPLS-in-UDP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "MPLS Segment Routing over IP",
+  "wg": "mpls"
+ },
+ "RFC8664": {
+  "area": "rtg",
+  "keywords": [
+   "SR",
+   "Traffic-Engineering",
+   "PCE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Segment Routing",
+  "wg": "pce"
+ },
+ "RFC8665": {
+  "area": "rtg",
+  "keywords": [
+   "MPLS",
+   "SID",
+   "IGP",
+   "OSPF",
+   "Label advertisement",
+   "Segment Routing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Extensions for Segment Routing",
+  "wg": "ospf"
+ },
+ "RFC8666": {
+  "area": "rtg",
+  "keywords": [
+   "MPLS",
+   "SID",
+   "IGP",
+   "OSPF",
+   "Label advertisement",
+   "Segment Routing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPFv3 Extensions for Segment Routing",
+  "wg": "lsr"
+ },
+ "RFC8667": {
+  "area": "rtg",
+  "keywords": [
+   "MPLS",
+   "SID",
+   "IGP",
+   "IS-IS",
+   "Label advertisement",
+   "Segment Routing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IS-IS Extensions for Segment Routing",
+  "wg": "lsr"
+ },
+ "RFC8668": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Advertising Layer 2 Bundle Member Link Attributes in IS-IS",
+  "wg": "isis"
+ },
+ "RFC8669": {
+  "area": "rtg",
+  "keywords": [
+   "SR",
+   "MPLS",
+   "BGP",
+   "Prefix-SID",
+   "Label-Index",
+   "SRGB"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing Prefix Segment Identifier Extensions for BGP",
+  "wg": "idr"
+ },
+ "RFC8670": {
+  "area": "rtg",
+  "keywords": [
+   "SR",
+   "MSDC",
+   "DC",
+   "SRGB"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Prefix Segment in Large-Scale Data Centers",
+  "wg": "spring"
+ },
  "RFC8671": {
   "area": "ops",
   "keywords": [
@@ -100531,6 +100678,19 @@
   "status": "current",
   "stream": "independent",
   "title": "Name-Based Service Function Forwarder (nSFF) Component within a Service Function Chaining (SFC) Framework"
+ },
+ "RFC8679": {
+  "area": "rtg",
+  "keywords": [
+   "fast reroute",
+   "egress protection",
+   "local repair"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "MPLS Egress Protection Framework",
+  "wg": "mpls"
  },
  "RFC8683": {
   "area": "ops",
