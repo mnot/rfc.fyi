@@ -100748,5 +100748,29 @@
   "stream": "ietf",
   "title": "SMTP Require TLS Option",
   "wg": "uta"
+ },
+ "RFC8690": {
+  "area": "rtg",
+  "keywords": [
+   "mpls"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clarification of Segment ID Sub-TLV Length for RFC 8287",
+  "wg": "mpls"
+ },
+ "RFC8692": {
+  "area": "sec",
+  "keywords": [
+   "SHAKE in X.509",
+   "SHAKEs in PKIX",
+   "certificates with SHAKE hashes"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet X.509 Public Key Infrastructure: Additional Algorithm Identifiers for RSASSA-PSS and ECDSA Using SHAKEs",
+  "wg": "lamps"
  }
 }
