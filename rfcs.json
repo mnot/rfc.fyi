@@ -100720,7 +100720,7 @@
   "level": "std",
   "status": "current",
   "stream": "ietf",
-  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for\u00a0the\u00a0Hierarchical Path Computation Element (H-PCE) Architecture",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for the Hierarchical Path Computation Element (H-PCE) Architecture",
   "wg": "pce"
  },
  "RFC8687": {
