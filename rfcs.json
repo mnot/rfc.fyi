@@ -100679,6 +100679,15 @@
   "stream": "independent",
   "title": "Name-Based Service Function Forwarder (nSFF) Component within a Service Function Chaining (SFC) Framework"
  },
+ "RFC8678": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Enterprise Multihoming using Provider-Assigned IPv6 Addresses without Network Prefix Translation: Requirements and Solutions",
+  "wg": "rtgwg"
+ },
  "RFC8679": {
   "area": "rtg",
   "keywords": [
@@ -100784,6 +100793,26 @@
   "status": "current",
   "stream": "ietf",
   "title": "Internet X.509 Public Key Infrastructure: Additional Algorithm Identifiers for RSASSA-PSS and ECDSA Using SHAKEs",
+  "wg": "lamps"
+ },
+ "RFC8694": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Applicability of the Path Computation Element to Inter-area and Inter-AS MPLS and GMPLS Traffic Engineering",
+  "wg": "pce"
+ },
+ "RFC8696": {
+  "area": "sec",
+  "keywords": [
+   "quantum-resistant"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using Pre-Shared Key (PSK) in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
  }
 }
