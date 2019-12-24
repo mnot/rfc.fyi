@@ -100814,5 +100814,16 @@
   "stream": "ietf",
   "title": "Using Pre-Shared Key (PSK) in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
+ },
+ "RFC8700": {
+  "keywords": [
+   "History",
+   "RFC Series",
+   "Retrospective"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Fifty Years of RFCs"
  }
 }
