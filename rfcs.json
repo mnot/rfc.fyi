@@ -100782,6 +100782,19 @@
   "title": "Clarification of Segment ID Sub-TLV Length for RFC 8287",
   "wg": "mpls"
  },
+ "RFC8691": {
+  "area": "int",
+  "keywords": [
+   "IPv6 over 802.11p",
+   "OCB",
+   "IPv6 over 802.11-OCB"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Basic Support for IPv6 Networks Operating Outside the Context of a Basic Service Set over IEEE Std 802.11",
+  "wg": "ipwave"
+ },
  "RFC8692": {
   "area": "sec",
   "keywords": [
