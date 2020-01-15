@@ -100701,6 +100701,45 @@
   "title": "MPLS Egress Protection Framework",
   "wg": "mpls"
  },
+ "RFC8680": {
+  "area": "tsv",
+  "keywords": [
+   "FEC",
+   "FECFRAME",
+   "packet loss recovery",
+   "RLC",
+   "Sliding Window FEC Codes"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Forward Error Correction (FEC) Framework Extension to Sliding Window Codes",
+  "wg": "tsvwg"
+ },
+ "RFC8681": {
+  "area": "tsv",
+  "keywords": [
+   "RLC",
+   "FEC",
+   "FECFRAME",
+   "packet loss recovery",
+   "reliability"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Sliding Window Random Linear Code (RLC) Forward Erasure Correction (FEC) Schemes for FECFRAME",
+  "wg": "tsvwg"
+ },
+ "RFC8682": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TinyMT32 Pseudorandom Number Generator (PRNG)",
+  "wg": "tsvwg"
+ },
  "RFC8683": {
   "area": "ops",
   "keywords": [
