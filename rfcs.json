@@ -100847,6 +100847,25 @@
   "title": "Internet X.509 Public Key Infrastructure: Additional Algorithm Identifiers for RSASSA-PSS and ECDSA Using SHAKEs",
   "wg": "lamps"
  },
+ "RFC8693": {
+  "area": "sec",
+  "keywords": [
+   "JSON Web Token",
+   "JWT",
+   "Delegation",
+   "Impersonation",
+   "STS",
+   "Security Token Service",
+   "Exchange",
+   "Token",
+   "OAuth"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Token Exchange",
+  "wg": "oauth"
+ },
  "RFC8694": {
   "area": "rtg",
   "keywords": [],
