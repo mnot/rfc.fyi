@@ -100886,6 +100886,31 @@
   "title": "Using Pre-Shared Key (PSK) in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
  },
+ "RFC8697": {
+  "area": "rtg",
+  "keywords": [
+   "PCE",
+   "PCEP",
+   "Association",
+   "Group"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Establishing Relationships between Sets of Label Switched Paths (LSPs)",
+  "wg": "pce"
+ },
+ "RFC8699": {
+  "area": "tsv",
+  "keywords": [
+   "tcp"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Coupled Congestion Control for RTP Media",
+  "wg": "rmcat"
+ },
  "RFC8700": {
   "keywords": [
    "History",
@@ -100908,5 +100933,18 @@
   "stream": "ietf",
   "title": "Applying Generate Random Extensions And Sustain Extensibility (GREASE) to TLS Extensibility",
   "wg": "tls"
+ },
+ "RFC8702": {
+  "area": "sec",
+  "keywords": [
+   "SHAKEs in CMS",
+   "SHAKE",
+   "CMS with SHAKEs"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the SHAKE One-Way Hash Functions in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
  }
 }
