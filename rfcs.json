@@ -100971,5 +100971,26 @@
   "stream": "ietf",
   "title": "Use of the SHAKE One-Way Hash Functions in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
+ },
+ "RFC8704": {
+  "area": "ops",
+  "keywords": [
+   "BGP",
+   "source address spoofing",
+   "source address validation",
+   "SAV",
+   "Reverse Path Forwarding",
+   "RPF",
+   "unicast RPF",
+   "uRPF",
+   "DDoS mitigation",
+   "BCP 38",
+   "BCP 84"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Enhanced Feasible-Path Unicast Reverse Path Forwarding",
+  "wg": "opsec"
  }
 }
