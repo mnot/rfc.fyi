@@ -49431,7 +49431,7 @@
    "spoofing",
    "phishing"
   ],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "SMTP Service Extension for Indicating the Responsible Submitter of an E-Mail Message"
@@ -49442,7 +49442,7 @@
    "spam",
    "spoofing"
   ],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "Sender ID: Authenticating E-Mail"
@@ -49452,7 +49452,7 @@
    "pra",
    "purported responsible address"
   ],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "Purported Responsible Address in E-Mail Messages"
@@ -100781,7 +100781,7 @@
   "level": "std",
   "status": "current",
   "stream": "ietf",
-  "title": "Application-Layer Traffic Optimization (ALTO) Cross\u2011Domain Server Discovery",
+  "title": "Application-Layer Traffic Optimization (ALTO) Cross-Domain Server Discovery",
   "wg": "alto"
  },
  "RFC8687": {
@@ -100971,6 +100971,20 @@
   "stream": "ietf",
   "title": "Use of the SHAKE One-Way Hash Functions in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
+ },
+ "RFC8703": {
+  "area": "rtg",
+  "keywords": [
+   "DLEP",
+   "MANET",
+   "Link-Aware",
+   "Radio-Aware"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Link Exchange Protocol (DLEP) Link Identifier Extension",
+  "wg": "manet"
  },
  "RFC8704": {
   "area": "ops",
