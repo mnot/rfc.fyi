@@ -101006,5 +101006,17 @@
   "stream": "ietf",
   "title": "Enhanced Feasible-Path Unicast Reverse Path Forwarding",
   "wg": "opsec"
+ },
+ "RFC8708": {
+  "area": "sec",
+  "keywords": [
+   "digital signature",
+   "message content"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the HSS/LMS Hash-Based Signature Algorithm in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
  }
 }
