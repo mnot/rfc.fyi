@@ -101018,5 +101018,40 @@
   "stream": "ietf",
   "title": "Use of the HSS/LMS Hash-Based Signature Algorithm in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
+ },
+ "RFC8725": {
+  "area": "sec",
+  "keywords": [
+   "JSON Web Token",
+   "JWT",
+   "JSON Object Signing and Encryption",
+   "JOSE",
+   "JSON Web Signature",
+   "JWS",
+   "JSON Web Encryption",
+   "JWE",
+   "attacks",
+   "Claims",
+   "Security",
+   "Cryptography"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSON Web Token Best Current Practices",
+  "wg": "oauth"
+ },
+ "RFC8742": {
+  "area": "art",
+  "keywords": [
+   "binary format",
+   "data interchange format",
+   "JSON"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Binary Object Representation (CBOR) Sequences",
+  "wg": "cbor"
  }
 }
