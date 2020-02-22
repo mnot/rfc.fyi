@@ -66200,7 +66200,7 @@
    "ICE"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Traversal Using Relays around NAT (TURN): Relay Extensions to Session Traversal Utilities for NAT (STUN)",
   "wg": "behave"
@@ -70784,7 +70784,7 @@
    "IPv6"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Traversal Using Relays around NAT (TURN) Extension for IPv6",
   "wg": "behave"
@@ -98519,6 +98519,17 @@
   "title": "RIPE NCC's Implementation of Resource Public Key Infrastructure (RPKI) Certificate Tree Validation",
   "wg": "sidrops"
  },
+ "RFC8489": {
+  "area": "tsv",
+  "keywords": [
+   "SIPs"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Session Traversal Utilities for NAT (STUN)",
+  "wg": "tram"
+ },
  "RFC8490": {
   "area": "ops",
   "keywords": [],
@@ -100384,6 +100395,20 @@
   "title": "Deterministic Networking Architecture",
   "wg": "detnet"
  },
+ "RFC8656": {
+  "area": "tsv",
+  "keywords": [
+   "NAT",
+   "TURN",
+   "STUN",
+   "ICE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Traversal Using Relays around NAT (TURN): Relay Extensions to Session Traversal Utilities for NAT (STUN)",
+  "wg": "tram"
+ },
  "RFC8657": {
   "area": "sec",
   "keywords": [],
@@ -100888,6 +100913,23 @@
   "title": "Applicability of the Path Computation Element to Inter-area and Inter-AS MPLS and GMPLS Traffic Engineering",
   "wg": "pce"
  },
+ "RFC8695": {
+  "area": "rtg",
+  "keywords": [
+   "YANG",
+   "RIP",
+   "RIPng",
+   "data model",
+   "ietf-rip",
+   "network management",
+   "routing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for the Routing Information Protocol (RIP)",
+  "wg": "rtgwg"
+ },
  "RFC8696": {
   "area": "sec",
   "keywords": [
@@ -101040,6 +101082,16 @@
   "stream": "ietf",
   "title": "JSON Web Token Best Current Practices",
   "wg": "oauth"
+ },
+ "RFC8734": {
+  "keywords": [
+   "TLS",
+   "Elliptic Curve Cryptography"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Elliptic Curve Cryptography (ECC) Brainpool Curves for Transport Layer Security (TLS) Version 1.3"
  },
  "RFC8742": {
   "area": "art",
