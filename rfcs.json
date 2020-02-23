@@ -60300,7 +60300,7 @@
    "Routing"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Restart Signaling for IS-IS",
   "wg": "isis"
@@ -61365,7 +61365,7 @@
    "VOIP"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Session Traversal Utilities for NAT (STUN)",
   "wg": "behave"
@@ -101049,6 +101049,18 @@
   "title": "Enhanced Feasible-Path Unicast Reverse Path Forwarding",
   "wg": "opsec"
  },
+ "RFC8706": {
+  "area": "rtg",
+  "keywords": [
+   "IGP",
+   "graceful restart"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Restart Signaling for IS-IS",
+  "wg": "lsr"
+ },
  "RFC8708": {
   "area": "sec",
   "keywords": [
@@ -101092,6 +101104,19 @@
   "status": "current",
   "stream": "independent",
   "title": "Elliptic Curve Cryptography (ECC) Brainpool Curves for Transport Layer Security (TLS) Version 1.3"
+ },
+ "RFC8740": {
+  "area": "art",
+  "keywords": [
+   "HTTP",
+   "renegotiation",
+   "post-handshake client authentication"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using TLS 1.3 with HTTP/2",
+  "wg": "httpbis"
  },
  "RFC8742": {
   "area": "art",
