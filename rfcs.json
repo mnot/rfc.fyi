@@ -101073,6 +101073,15 @@
   "title": "Use of the HSS/LMS Hash-Based Signature Algorithm in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
  },
+ "RFC8709": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Ed25519 and Ed448 Public Key Algorithms for the Secure Shell (SSH) Protocol",
+  "wg": "curdle"
+ },
  "RFC8725": {
   "area": "sec",
   "keywords": [
@@ -101094,6 +101103,19 @@
   "stream": "ietf",
   "title": "JSON Web Token Best Current Practices",
   "wg": "oauth"
+ },
+ "RFC8733": {
+  "area": "rtg",
+  "keywords": [
+   "Bandwidth optimization",
+   "PCEP Overwhelm",
+   "LSP re-optimization"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for MPLS-TE Label Switched Path (LSP) Auto-Bandwidth Adjustment with Stateful PCE",
+  "wg": "pce"
  },
  "RFC8734": {
   "keywords": [
