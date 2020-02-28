@@ -18392,7 +18392,7 @@
    "Force"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IETF-ISOC relationship",
   "wg": "poised95"
@@ -41140,10 +41140,10 @@
  },
  "RFC3716": {
   "keywords": [],
-  "level": "informational",
+  "level": "historic",
   "status": "current",
   "stream": "iab",
-  "title": "The IETF in the Large:  Administration and Execution"
+  "title": "IETF in the Large:  Administration and Execution"
  },
  "RFC3717": {
   "area": "subip",
@@ -45230,7 +45230,7 @@
    "iad"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Structure of the IETF Administrative Support Activity (IASA)"
  },
@@ -48579,7 +48579,7 @@
    "ietf administrative director"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "The IETF Administrative Oversight Committee (IAOC) Member Selection Guidelines and Process"
  },
@@ -49039,7 +49039,7 @@
  "RFC4371": {
   "keywords": [],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "BCP 101 Update for IPR Trust"
  },
@@ -54723,7 +54723,7 @@
    "technical publisher"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "The RFC Series and RFC Editor"
  },
@@ -61202,7 +61202,7 @@
    "outbound rights"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Advice to the Trustees of the IETF Trust on Rights to Be Granted in IETF Documents",
   "wg": "ipr"
@@ -71490,7 +71490,7 @@
  "RFC6220": {
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "Defining the Role and Function of IETF Protocol Parameter Registry Operators"
  },
@@ -75283,7 +75283,7 @@
    "Independent Stream Editor"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "Independent Submission Editor Model"
  },
@@ -76262,7 +76262,7 @@
    "RFC Series Oversight Committee"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "RFC Editor Model (Version 2)"
  },
@@ -85410,7 +85410,7 @@
    "IAOC"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IAB, IESG, and IAOC Selection, Confirmation, and Recall Process: Operation of the Nominating and Recall Committees"
  },
@@ -86144,7 +86144,7 @@
  "RFC7500": {
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "Principles for Operation of Internet Assigned Numbers Authority (IANA) Registries"
  },
@@ -88562,7 +88562,7 @@
  "RFC7691": {
   "keywords": [],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Updating the Term Dates of IETF Administrative Oversight Committee (IAOC) Members"
  },
@@ -96419,7 +96419,7 @@
    "IAOC"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IAB, IESG, and IAOC Selection, Confirmation, and Recall Process: IAOC Advisor for the Nominating Committee"
  },
@@ -101082,6 +101082,147 @@
   "title": "Ed25519 and Ed448 Public Key Algorithms for the Secure Shell (SSH) Protocol",
   "wg": "curdle"
  },
+ "RFC8711": {
+  "area": "gen",
+  "keywords": [
+   "IASA",
+   "IASA2"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Structure of the IETF Administrative Support Activity, Version 2.0",
+  "wg": "iasa2"
+ },
+ "RFC8712": {
+  "area": "gen",
+  "keywords": [
+   "IASA"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The IETF-ISOC Relationship",
+  "wg": "iasa2"
+ },
+ "RFC8713": {
+  "area": "gen",
+  "keywords": [
+   "IASA",
+   "IASA 2.0",
+   "IASA2"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IAB, IESG, IETF Trust, and IETF LLC Selection, Confirmation, and Recall Process: Operation of the IETF Nominating and Recall Committees",
+  "wg": "iasa2"
+ },
+ "RFC8714": {
+  "area": "gen",
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Update to the Process for Selection of Trustees for the IETF Trust",
+  "wg": "iasa2"
+ },
+ "RFC8715": {
+  "area": "gen",
+  "keywords": [
+   "IETF administration",
+   "intellectual property",
+   "leadership selection",
+   "IASA"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IETF Administrative Support Activity 2.0: Update to the Process for Selection of Trustees for the IETF Trust",
+  "wg": "iasa2"
+ },
+ "RFC8716": {
+  "area": "gen",
+  "keywords": [
+   "Harassment",
+   "Ombudsteam",
+   "IAOC",
+   "IETF Administration LLC"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Update to the IETF Anti-Harassment Procedures for the Replacement of the IETF Administrative Oversight Committee (IAOC) with the IETF Administration LLC",
+  "wg": "iasa2"
+ },
+ "RFC8717": {
+  "area": "gen",
+  "keywords": [
+   "IASA",
+   "IASA2"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IETF Administrative Support Activity 2.0: Consolidated Updates to IETF Administrative Terminology",
+  "wg": "iasa2"
+ },
+ "RFC8718": {
+  "area": "gen",
+  "keywords": [
+   "Meeting Venues",
+   "Meeting selection process",
+   "IASA"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IETF Plenary Meeting Venue Selection Process",
+  "wg": "mtgvenue"
+ },
+ "RFC8719": {
+  "area": "gen",
+  "keywords": [
+   "geographic distribution location",
+   "IASA"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "High-Level Guidance for the Meeting Policy of the IETF",
+  "wg": "mtgvenue"
+ },
+ "RFC8720": {
+  "keywords": [
+   "IASA"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Principles for Operation of Internet Assigned Numbers Authority (IANA) Registries"
+ },
+ "RFC8721": {
+  "area": "gen",
+  "keywords": [
+   "IASA",
+   "Trust"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Advice to the Trustees of the IETF Trust on Rights to Be Granted in IETF Documents",
+  "wg": "iasa2"
+ },
+ "RFC8722": {
+  "keywords": [
+   "IANA",
+   "Governance"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Defining the Role and Function of IETF Protocol Parameter Registry Operators"
+ },
  "RFC8725": {
   "area": "sec",
   "keywords": [
@@ -101103,6 +101244,44 @@
   "stream": "ietf",
   "title": "JSON Web Token Best Current Practices",
   "wg": "oauth"
+ },
+ "RFC8728": {
+  "keywords": [
+   "IAB",
+   "IASA",
+   "RSOC",
+   "RSE",
+   "IASA",
+   "IASA2"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "RFC Editor Model (Version 2)"
+ },
+ "RFC8729": {
+  "keywords": [
+   "IASA",
+   "IASA2",
+   "technical publisher"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "The RFC Series and RFC Editor"
+ },
+ "RFC8730": {
+  "keywords": [
+   "ISE",
+   "RSE",
+   "LLC",
+   "IAB",
+   "IASA"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Independent Submission Editor Model"
  },
  "RFC8733": {
   "area": "rtg",
