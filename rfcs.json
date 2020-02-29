@@ -70889,7 +70889,7 @@
    "Protocol Independent Multicast"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "A Registry for PIM Message Types",
   "wg": "pim"
@@ -101049,6 +101049,30 @@
   "title": "Enhanced Feasible-Path Unicast Reverse Path Forwarding",
   "wg": "opsec"
  },
+ "RFC8705": {
+  "area": "sec",
+  "keywords": [
+   "JSON Web Token",
+   "JWT",
+   "MTLS",
+   "Mutual TLS",
+   "proof-of-possession",
+   "proof-of-possession access token",
+   "key confirmed access token",
+   "certificate-bound access token",
+   "client certificate",
+   "X.509 Client Certificate Authentication",
+   "key confirmation",
+   "confirmation method",
+   "holder-of-key",
+   "OAuth"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access\u00a0Tokens",
+  "wg": "oauth"
+ },
  "RFC8706": {
   "area": "rtg",
   "keywords": [
@@ -101060,6 +101084,19 @@
   "stream": "ietf",
   "title": "Restart Signaling for IS-IS",
   "wg": "lsr"
+ },
+ "RFC8707": {
+  "area": "sec",
+  "keywords": [
+   "OAuth",
+   "Resource",
+   "Audience"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Resource Indicators for OAuth 2.0",
+  "wg": "oauth"
  },
  "RFC8708": {
   "area": "sec",
@@ -101081,6 +101118,18 @@
   "stream": "ietf",
   "title": "Ed25519 and Ed448 Public Key Algorithms for the Secure Shell (SSH) Protocol",
   "wg": "curdle"
+ },
+ "RFC8710": {
+  "area": "art",
+  "keywords": [
+   "CoAP",
+   "Multipart Content-Format"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multipart Content-Format for the Constrained Application Protocol (CoAP)",
+  "wg": "core"
  },
  "RFC8711": {
   "area": "gen",
@@ -101283,6 +101332,32 @@
   "stream": "iab",
   "title": "Independent Submission Editor Model"
  },
+ "RFC8731": {
+  "area": "sec",
+  "keywords": [
+   "Elliptic",
+   "Curve",
+   "Diffie",
+   "Hellman",
+   "ECDH"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Secure Shell (SSH) Key Exchange Method Using Curve25519 and Curve448",
+  "wg": "curdle"
+ },
+ "RFC8732": {
+  "area": "sec",
+  "keywords": [
+   "SSH"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Generic Security Service Application Program Interface (GSS-API) Key Exchange with SHA-2",
+  "wg": "curdle"
+ },
  "RFC8733": {
   "area": "rtg",
   "keywords": [
@@ -101305,6 +101380,50 @@
   "status": "current",
   "stream": "independent",
   "title": "Elliptic Curve Cryptography (ECC) Brainpool Curves for Transport Layer Security (TLS) Version 1.3"
+ },
+ "RFC8735": {
+  "area": "rtg",
+  "keywords": [
+   "CCDR",
+   "Traffic Engineering"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Scenarios and Simulation Results of PCE in a Native IP Network",
+  "wg": "teas"
+ },
+ "RFC8736": {
+  "area": "rtg",
+  "keywords": [
+   "Multicast"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PIM Message Type Space Extension and Reserved Bits",
+  "wg": "pim"
+ },
+ "RFC8737": {
+  "area": "sec",
+  "keywords": [
+   "acme",
+   "pki"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automated Certificate Management Environment (ACME) TLS Application\u2011Layer Protocol Negotiation (ALPN) Challenge Extension",
+  "wg": "acme"
+ },
+ "RFC8738": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automated Certificate Management Environment (ACME) IP Identifier Validation Extension",
+  "wg": "acme"
  },
  "RFC8740": {
   "area": "art",
@@ -101330,6 +101449,19 @@
   "status": "current",
   "stream": "ietf",
   "title": "Concise Binary Object Representation (CBOR) Sequences",
+  "wg": "cbor"
+ },
+ "RFC8746": {
+  "area": "art",
+  "keywords": [
+   "binary format",
+   "data interchange format",
+   "JSON"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Binary Object Representation (CBOR) Tags for Typed Arrays",
   "wg": "cbor"
  }
 }
