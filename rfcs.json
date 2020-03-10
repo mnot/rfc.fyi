@@ -101438,6 +101438,15 @@
   "title": "Using TLS 1.3 with HTTP/2",
   "wg": "httpbis"
  },
+ "RFC8741": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Ability for a Stateful Path Computation Element (PCE) to Request and Obtain Control of a Label Switched Path (LSP)",
+  "wg": "pce"
+ },
  "RFC8742": {
   "area": "art",
   "keywords": [
@@ -101463,5 +101472,19 @@
   "stream": "ietf",
   "title": "Concise Binary Object Representation (CBOR) Tags for Typed Arrays",
   "wg": "cbor"
+ },
+ "RFC8747": {
+  "area": "sec",
+  "keywords": [
+   "CBOR Web Token",
+   "CWT",
+   "Proof-of-Possession",
+   "Holder-of-Key"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Proof-of-Possession Key Semantics for CBOR Web Tokens (CWTs)",
+  "wg": "ace"
  }
 }
