@@ -101425,6 +101425,19 @@
   "title": "Automated Certificate Management Environment (ACME) IP Identifier Validation Extension",
   "wg": "acme"
  },
+ "RFC8739": {
+  "area": "sec",
+  "keywords": [
+   "OCSP",
+   "CRL",
+   "revocation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Support for Short-Term, Automatically Renewed (STAR) Certificates in the Automated Certificate Management Environment (ACME)",
+  "wg": "acme"
+ },
  "RFC8740": {
   "area": "art",
   "keywords": [
@@ -101486,5 +101499,33 @@
   "stream": "ietf",
   "title": "Proof-of-Possession Key Semantics for CBOR Web Tokens (CWTs)",
   "wg": "ace"
+ },
+ "RFC8750": {
+  "area": "sec",
+  "keywords": [
+   "IKE",
+   "IPsec",
+   "GCM",
+   "CCM",
+   "ChaCha20"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Implicit Initialization Vector (IV) for Counter-Based Ciphers in Encapsulating Security Payload (ESP)",
+  "wg": "ipsecme"
+ },
+ "RFC8752": {
+  "keywords": [
+   "web",
+   "security",
+   "origin",
+   "packaging",
+   "bundle"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Report from the IAB Workshop on Exploring Synergy between Content Aggregation and the Publisher Ecosystem (ESCAPE)"
  }
 }
