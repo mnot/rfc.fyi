@@ -101500,6 +101500,15 @@
   "title": "Proof-of-Possession Key Semantics for CBOR Web Tokens (CWTs)",
   "wg": "ace"
  },
+ "RFC8748": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registry Fee Extension for the Extensible Provisioning Protocol (EPP)",
+  "wg": "regext"
+ },
  "RFC8750": {
   "area": "sec",
   "keywords": [
@@ -101527,5 +101536,18 @@
   "status": "current",
   "stream": "iab",
   "title": "Report from the IAB Workshop on Exploring Synergy between Content Aggregation and the Publisher Ecosystem (ESCAPE)"
+ },
+ "RFC8754": {
+  "area": "int",
+  "keywords": [
+   "SRv6",
+   "source-routing",
+   "network-programming"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Segment Routing Header (SRH)",
+  "wg": "6man"
  }
 }
