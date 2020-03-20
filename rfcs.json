@@ -101550,6 +101550,18 @@
   "title": "IPv6 Segment Routing Header (SRH)",
   "wg": "6man"
  },
+ "RFC8755": {
+  "keywords": [
+   "NSA",
+   "CNSA",
+   "NSS",
+   "smime"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Using Commercial National Security Algorithm Suite Algorithms in Secure/Multipurpose Internet Mail Extensions"
+ },
  "RFC8759": {
   "area": "art",
   "keywords": [
@@ -101566,5 +101578,25 @@
   "stream": "ietf",
   "title": "RTP Payload for Timed Text Markup Language (TTML)",
   "wg": "avtcore"
+ },
+ "RFC8760": {
+  "area": "art",
+  "keywords": [
+   "Digest Auth"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Session Initiation Protocol (SIP) Digest Access Authentication Scheme",
+  "wg": "sipcore"
+ },
+ "RFC8762": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Simple Two-Way Active Measurement Protocol",
+  "wg": "ippm"
  }
 }
