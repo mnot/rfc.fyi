@@ -101598,5 +101598,36 @@
   "stream": "ietf",
   "title": "Simple Two-Way Active Measurement Protocol",
   "wg": "ippm"
+ },
+ "RFC8768": {
+  "area": "art",
+  "keywords": [
+   "security",
+   "mitigation",
+   "service delivery",
+   "connectivity",
+   "anti-DDoS",
+   "automation",
+   "cooperation",
+   "Resilience",
+   "Filtering",
+   "Security Center",
+   "Mitigator",
+   "Scrubbing",
+   "dynamic service protection",
+   "dynamic mitigation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Constrained Application Protocol (CoAP) Hop-Limit Option",
+  "wg": "core"
+ },
+ "RFC8769": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Cryptographic Message Syntax (CMS) Content Types for Concise Binary Object Representation (CBOR)"
  }
 }
