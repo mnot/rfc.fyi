@@ -49751,7 +49751,7 @@
    "dns",
    "domain name space"
   ],
-  "level": "informational",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "The DNSSEC Lookaside Validation (DLV) DNS Resource Record"
@@ -57427,7 +57427,7 @@
    "dns security",
    "trust anchors"
   ],
-  "level": "informational",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "DNSSEC Lookaside Validation (DLV)"
@@ -101472,6 +101472,26 @@
   "stream": "ietf",
   "title": "Concise Binary Object Representation (CBOR) Sequences",
   "wg": "cbor"
+ },
+ "RFC8743": {
+  "keywords": [
+   "Integration",
+   "Aggregation",
+   "Switching",
+   "MPTCP",
+   "MPQUIC",
+   "GMA",
+   "5G",
+   "LTE",
+   "Wi-Fi",
+   "Ethernet",
+   "Edge",
+   "Proxy"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Multiple Access Management Services Multi-Access Management Services (MAMS)"
  },
  "RFC8746": {
   "area": "art",
