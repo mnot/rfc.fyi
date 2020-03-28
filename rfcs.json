@@ -101529,6 +101529,19 @@
   "title": "Registry Fee Extension for the Extensible Provisioning Protocol (EPP)",
   "wg": "regext"
  },
+ "RFC8749": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "DNSSEC",
+   "DLV"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Moving DNSSEC Lookaside Validation (DLV) to Historic Status",
+  "wg": "dnsop"
+ },
  "RFC8750": {
   "area": "sec",
   "keywords": [
@@ -101581,6 +101594,30 @@
   "status": "current",
   "stream": "independent",
   "title": "Using Commercial National Security Algorithm Suite Algorithms in Secure/Multipurpose Internet Mail Extensions"
+ },
+ "RFC8756": {
+  "keywords": [
+   "NSA",
+   "CNSA",
+   "NSS",
+   "certificate",
+   "enrollment"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Commercial National Security Algorithm (CNSA) Suite Profile of Certificate Management over CMS"
+ },
+ "RFC8757": {
+  "area": "rtg",
+  "keywords": [
+   "MANET"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Link Exchange Protocol (DLEP) Latency Range Extension",
+  "wg": "manet"
  },
  "RFC8759": {
   "area": "art",
