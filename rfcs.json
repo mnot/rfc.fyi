@@ -101493,6 +101493,17 @@
   "stream": "independent",
   "title": "Multiple Access Management Services Multi-Access Management Services (MAMS)"
  },
+ "RFC8745": {
+  "area": "rtg",
+  "keywords": [
+   "PCEP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Associating Working and Protection Label Switched Paths (LSPs) with Stateful PCE",
+  "wg": "pce"
+ },
  "RFC8746": {
   "area": "art",
   "keywords": [
@@ -101686,5 +101697,14 @@
   "status": "current",
   "stream": "ietf",
   "title": "Cryptographic Message Syntax (CMS) Content Types for Concise Binary Object Representation (CBOR)"
+ },
+ "RFC8773": {
+  "area": "sec",
+  "keywords": [],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TLS 1.3 Extension for Certificate-Based Authentication with an External Pre-Shared Key",
+  "wg": "tls"
  }
 }
