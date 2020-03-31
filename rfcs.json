@@ -78415,7 +78415,7 @@
   "area": "tsv",
   "keywords": [],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "TCP Extensions for Multipath Operation with Multiple Addresses",
   "wg": "mptcp"
@@ -100782,6 +100782,21 @@
   "stream": "ietf",
   "title": "Additional Deployment Guidelines for NAT64/464XLAT in Operator and Enterprise Networks",
   "wg": "v6ops"
+ },
+ "RFC8684": {
+  "area": "tsv",
+  "keywords": [
+   "tcp",
+   "extensions",
+   "multipath",
+   "multihomed",
+   "subflow"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TCP Extensions for Multipath Operation with Multiple Addresses",
+  "wg": "mptcp"
  },
  "RFC8685": {
   "area": "rtg",
