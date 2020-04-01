@@ -101583,6 +101583,15 @@
   "title": "Implicit Initialization Vector (IV) for Counter-Based Ciphers in Encapsulating Security Payload (ESP)",
   "wg": "ipsecme"
  },
+ "RFC8751": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Hierarchical Stateful Path Computation Element (PCE)",
+  "wg": "pce"
+ },
  "RFC8752": {
   "keywords": [
    "web",
@@ -101681,6 +101690,21 @@
   "stream": "ietf",
   "title": "Simple Two-Way Active Measurement Protocol",
   "wg": "ippm"
+ },
+ "RFC8767": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "DDoS",
+   "Resiliency",
+   "Denial-of-Service",
+   "Expired"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Serving Stale Data to Improve DNS Resiliency",
+  "wg": "dnsop"
  },
  "RFC8768": {
   "area": "art",
