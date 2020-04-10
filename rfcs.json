@@ -101737,6 +101737,17 @@
   "stream": "ietf",
   "title": "Cryptographic Message Syntax (CMS) Content Types for Concise Binary Object Representation (CBOR)"
  },
+ "RFC8770": {
+  "area": "rtg",
+  "keywords": [
+   "non-transit"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Host Router Support for OSPFv2",
+  "wg": "lsr"
+ },
  "RFC8771": {
   "keywords": [],
   "level": "experimental",
