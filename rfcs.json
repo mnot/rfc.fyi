@@ -101774,5 +101774,17 @@
   "status": "current",
   "stream": "independent",
   "title": "The Quantum Bug"
+ },
+ "RFC8778": {
+  "area": "sec",
+  "keywords": [
+   "digital signature",
+   "HSS/LMS Hash-based Signature Algorithm"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the HSS/LMS Hash-Based Signature Algorithm with CBOR Object Signing and Encryption (COSE)",
+  "wg": "cose"
  }
 }
