@@ -101287,6 +101287,50 @@
   "stream": "iab",
   "title": "Defining the Role and Function of IETF Protocol Parameter Registry Operators"
  },
+ "RFC8724": {
+  "area": "int",
+  "keywords": [
+   "header compression",
+   "compression",
+   "fragmentation",
+   "static context",
+   "rule-based",
+   "LPWAN",
+   "LPWANs",
+   "low power",
+   "low-power",
+   "6LoWPAN",
+   "6lo",
+   "LoWPAN",
+   "LoWPANs",
+   "LLN",
+   "LLNs",
+   "LTN",
+   "LTE",
+   "LTE-M",
+   "Sigfox",
+   "LoRaWAN",
+   "NB-IOT",
+   "5G",
+   "IoT",
+   "Internet of Things",
+   "adaptation layer",
+   "UDP",
+   "IPv6",
+   "WSN",
+   "Sensor network",
+   "wireless sensor network",
+   "802.15.4",
+   "contrained network",
+   "constrained node",
+   "constrained-node network"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "SCHC: Generic Framework for Static Context Header Compression and Fragmentation",
+  "wg": "lpwan"
+ },
  "RFC8725": {
   "area": "sec",
   "keywords": [
@@ -101604,6 +101648,19 @@
   "status": "current",
   "stream": "iab",
   "title": "Report from the IAB Workshop on Exploring Synergy between Content Aggregation and the Publisher Ecosystem (ESCAPE)"
+ },
+ "RFC8753": {
+  "keywords": [
+   "IDNA2008",
+   "IDN",
+   "Unicode Algorithmic Review",
+   "Unicode Code Point Review",
+   "IDNA Designated Expert"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internationalized Domain Names for Applications (IDNA) Review for New Unicode Versions"
  },
  "RFC8754": {
   "area": "int",
