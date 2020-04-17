@@ -101739,6 +101739,21 @@
   "title": "The Session Initiation Protocol (SIP) Digest Access Authentication Scheme",
   "wg": "sipcore"
  },
+ "RFC8761": {
+  "area": "art",
+  "keywords": [
+   "NETVC",
+   "evaluation",
+   "requirements",
+   "compression performance",
+   "video coding applications"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Video Codec Requirements and Evaluation Methodology",
+  "wg": "netvc"
+ },
  "RFC8762": {
   "area": "tsv",
   "keywords": [],
@@ -101747,6 +101762,23 @@
   "stream": "ietf",
   "title": "Simple Two-Way Active Measurement Protocol",
   "wg": "ippm"
+ },
+ "RFC8763": {
+  "keywords": [
+   "routing",
+   "Content Delivery Network (CDN)",
+   "overlay",
+   "underlay",
+   "virtual",
+   "virtualization",
+   "naming",
+   "NFV",
+   "SDN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Deployment Considerations for Information-Centric Networking (ICN)"
  },
  "RFC8767": {
   "area": "ops",
