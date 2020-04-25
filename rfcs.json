@@ -101875,6 +101875,30 @@
   "title": "PIM Designated Router Load Balancing",
   "wg": "pim"
  },
+ "RFC8777": {
+  "area": "ops",
+  "keywords": [
+   "DRIAD",
+   "DRYAD",
+   "AMT",
+   "IGMPv3",
+   "MLDv2",
+   "SSM",
+   "amt gateway",
+   "amt relay",
+   "multicast",
+   "multicast replication",
+   "multicast encapsulation",
+   "amt relay discovery",
+   "amt discovery",
+   "AMTRELAY"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Reverse IP Automatic Multicast Tunneling (AMT) Discovery",
+  "wg": "mboned"
+ },
  "RFC8778": {
   "area": "sec",
   "keywords": [
@@ -101886,5 +101910,14 @@
   "stream": "ietf",
   "title": "Use of the HSS/LMS Hash-Based Signature Algorithm with CBOR Object Signing and Encryption (COSE)",
   "wg": "cose"
+ },
+ "RFC8781": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Discovering PREF64 in Router Advertisements",
+  "wg": "6man"
  }
 }
