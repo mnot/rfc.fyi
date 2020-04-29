@@ -101711,6 +101711,15 @@
   "title": "Dynamic Link Exchange Protocol (DLEP) Latency Range Extension",
   "wg": "manet"
  },
+ "RFC8758": {
+  "area": "sec",
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecating RC4 in Secure Shell (SSH)",
+  "wg": "curdle"
+ },
  "RFC8759": {
   "area": "art",
   "keywords": [
