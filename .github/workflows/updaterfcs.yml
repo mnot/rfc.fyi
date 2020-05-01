@@ -3,9 +3,9 @@ name: Update rfcs
 on:
   push:
     paths:
-    - '*'
-    - '!rfc-index.xml'
-    - '!rfcs.json'
+    - '*.py'
+    - 'Makefile'
+    - 'update.sh'
   schedule:
     - cron: '41 9 * * *'
 
