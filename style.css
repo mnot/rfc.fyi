@@ -112,6 +112,7 @@ li .tag {
 
 h1 {
   width: 100%;
+  font-size: 125%;
   text-align: center;
   margin: 1em 0;
   cursor: pointer;
