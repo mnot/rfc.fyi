@@ -101287,6 +101287,21 @@
   "stream": "iab",
   "title": "Defining the Role and Function of IETF Protocol Parameter Registry Operators"
  },
+ "RFC8723": {
+  "area": "art",
+  "keywords": [
+   "PERC",
+   "SRTP",
+   "RTP",
+   "conferencing",
+   "encryption"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Double Encryption Procedures for the Secure Real-Time Transport Protocol (SRTP)",
+  "wg": "perc"
+ },
  "RFC8724": {
   "area": "int",
   "keywords": [
