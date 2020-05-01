@@ -118,11 +118,11 @@ h1 {
   user-select:none;
 }
 
-h1.dot {
+h1 .dot {
   color: #c9bc38;
 }
 
-h1.fyi {
+h1 .fyi {
   color: #b4b4b4;
 }
 
