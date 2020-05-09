@@ -101487,7 +101487,7 @@
   "level": "std",
   "status": "current",
   "stream": "ietf",
-  "title": "Automated Certificate Management Environment (ACME) TLS Application\u2011Layer Protocol Negotiation (ALPN) Challenge Extension",
+  "title": "Automated Certificate Management Environment (ACME) TLS Application-Layer Protocol Negotiation (ALPN) Challenge Extension",
   "wg": "acme"
  },
  "RFC8738": {
