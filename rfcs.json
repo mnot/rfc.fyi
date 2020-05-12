@@ -101868,6 +101868,18 @@
   "stream": "independent",
   "title": "The Internationalized Deliberately Unreadable Network NOtation (I-DUNNO)"
  },
+ "RFC8772": {
+  "keywords": [
+   "CUPS",
+   "CUSP",
+   "BRAS",
+   "BBRAS"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "The China Mobile, Huawei, and ZTE Broadband Network Gateway (BNG) Simple Control and User Plane Separation Protocol (S-CUSP)"
+ },
  "RFC8773": {
   "area": "sec",
   "keywords": [],
