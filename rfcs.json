@@ -101955,5 +101955,14 @@
   "stream": "ietf",
   "title": "Discovering PREF64 in Router Advertisements",
   "wg": "6man"
+ },
+ "RFC8788": {
+  "keywords": [
+   "nomcom"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Eligibility for the 2020-2021 Nominating Committee"
  }
 }
