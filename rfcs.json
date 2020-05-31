@@ -101956,6 +101956,53 @@
   "title": "Discovering PREF64 in Router Advertisements",
   "wg": "6man"
  },
+ "RFC8782": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "mitigation",
+   "service delivery",
+   "connectivity",
+   "anti-DDoS",
+   "automation",
+   "cooperation",
+   "resilience",
+   "filtering",
+   "security center",
+   "mitigator",
+   "scrubbing",
+   "dynamic service protection",
+   "dynamic mitigation",
+   "cooperative networking",
+   "protective networking"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel Specification",
+  "wg": "dots"
+ },
+ "RFC8783": {
+  "area": "sec",
+  "keywords": [
+   "DOTS",
+   "Automation",
+   "Security",
+   "Mitigation",
+   "Scrubbing",
+   "Anti-DDoS",
+   "Mitigator",
+   "Security Center",
+   "Filtering",
+   "Resilience",
+   "RESTCONF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Data Channel Specification",
+  "wg": "dots"
+ },
  "RFC8788": {
   "keywords": [
    "nomcom"
