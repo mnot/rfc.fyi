@@ -102003,6 +102003,33 @@
   "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Data Channel Specification",
   "wg": "dots"
  },
+ "RFC8786": {
+  "area": "rtg",
+  "keywords": [
+   "PCEP",
+   "Path Computation Element",
+   "Stateful PCE",
+   "Flags"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updated Rules for Processing Stateful PCE Request Parameters Flags",
+  "wg": "pce"
+ },
+ "RFC8787": {
+  "area": "art",
+  "keywords": [
+   "Emergency",
+   "Call",
+   "Location"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Location Source Parameter for the SIP Geolocation Header Field",
+  "wg": "sipcore"
+ },
  "RFC8788": {
   "keywords": [
    "nomcom"
