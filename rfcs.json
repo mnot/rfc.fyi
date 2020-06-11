@@ -101911,6 +101911,23 @@
   "title": "PIM Designated Router Load Balancing",
   "wg": "pim"
  },
+ "RFC8776": {
+  "area": "rtg",
+  "keywords": [
+   "TE Tunnel",
+   "TE Model",
+   "TE Types",
+   "TE YANG",
+   "TE Topology",
+   "TE Interfaces",
+   "TE LSP Model"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Common YANG Data Types for Traffic Engineering",
+  "wg": "teas"
+ },
  "RFC8777": {
   "area": "ops",
   "keywords": [
