@@ -102055,5 +102055,36 @@
   "status": "current",
   "stream": "ietf",
   "title": "Eligibility for the 2020-2021 Nominating Committee"
+ },
+ "RFC8789": {
+  "keywords": [
+   "process",
+   "publication"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IETF Stream Documents Require IETF Rough Consensus"
+ },
+ "RFC8791": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Structure Extensions",
+  "wg": "netmod"
+ },
+ "RFC8793": {
+  "keywords": [
+   "content routing",
+   "content caching",
+   "content distribution networks",
+   "data-centric security"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Information-Centric Networking (ICN): Content-Centric Networking (CCNx) and Named Data Networking (NDN) Terminology"
  }
 }
