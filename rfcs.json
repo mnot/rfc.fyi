@@ -88746,7 +88746,7 @@
   "area": "ops",
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Decreasing Access Time to Root Servers by Running One on Loopback",
   "wg": "dnsop"
@@ -102086,5 +102086,17 @@
   "status": "current",
   "stream": "irtf",
   "title": "Information-Centric Networking (ICN): Content-Centric Networking (CCNx) and Named Data Networking (NDN) Terminology"
+ },
+ "RFC8806": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "local-root"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Running a Root Server Local to a Resolver",
+  "wg": "dnsop"
  }
 }
