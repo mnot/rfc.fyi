@@ -101804,6 +101804,44 @@
   "stream": "irtf",
   "title": "Deployment Considerations for Information-Centric Networking (ICN)"
  },
+ "RFC8764": {
+  "keywords": [
+   "Async",
+   "Asynchronous",
+   "Change Notification",
+   "Push Notification"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Apple's DNS Long-Lived Queries Protocol"
+ },
+ "RFC8765": {
+  "area": "int",
+  "keywords": [
+   "dns",
+   "update",
+   "push",
+   "notification"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Push Notifications",
+  "wg": "dnssd"
+ },
+ "RFC8766": {
+  "area": "int",
+  "keywords": [
+   "Multicast DNS",
+   "DNS-Based Service Discovery"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Discovery Proxy for Multicast DNS-Based Service Discovery",
+  "wg": "dnssd"
+ },
  "RFC8767": {
   "area": "ops",
   "keywords": [
