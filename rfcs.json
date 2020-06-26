@@ -102125,6 +102125,32 @@
   "stream": "irtf",
   "title": "Information-Centric Networking (ICN): Content-Centric Networking (CCNx) and Named Data Networking (NDN) Terminology"
  },
+ "RFC8797": {
+  "area": "tsv",
+  "keywords": [
+   "NFS-over-RDMA"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Remote Direct Memory Access - Connection Manager (RDMA-CM) Private Data for RPC-over-RDMA Version 1",
+  "wg": "nfsv4"
+ },
+ "RFC8798": {
+  "area": "art",
+  "keywords": [
+   "Internet of Things (IoT)",
+   "data model",
+   "quantities and units",
+   "International System of Units (SI)",
+   "International System of Quantities (ISQ)"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Additional Units for Sensor Measurement Lists (SenML)",
+  "wg": "core"
+ },
  "RFC8806": {
   "area": "ops",
   "keywords": [
