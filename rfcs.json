@@ -102058,6 +102058,19 @@
   "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Data Channel Specification",
   "wg": "dots"
  },
+ "RFC8785": {
+  "keywords": [
+   "JSON",
+   "ECMAScript",
+   "Signatures",
+   "Cryptography",
+   "Canonicalization"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "JSON Canonicalization Scheme (JCS)"
+ },
  "RFC8786": {
   "area": "rtg",
   "keywords": [
@@ -102111,6 +102124,18 @@
   "status": "current",
   "stream": "ietf",
   "title": "YANG Data Structure Extensions",
+  "wg": "netmod"
+ },
+ "RFC8792": {
+  "area": "ops",
+  "keywords": [
+   "sourcecode",
+   "artwork"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Handling Long Lines in Content of Internet-Drafts and RFCs",
   "wg": "netmod"
  },
  "RFC8793": {
