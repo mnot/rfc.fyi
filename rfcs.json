@@ -84018,7 +84018,7 @@
    "URI structure"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "URI Design and Ownership",
   "wg": "appsawg"
@@ -102058,6 +102058,23 @@
   "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Data Channel Specification",
   "wg": "dots"
  },
+ "RFC8784": {
+  "area": "sec",
+  "keywords": [
+   "internet key exchange",
+   "quantum computer",
+   "post quantum",
+   "post-quantum",
+   "quantum safe",
+   "quantum secure",
+   "quantum resistant"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Mixing Preshared Keys in the Internet Key Exchange Protocol Version 2 (IKEv2) for Post-quantum Security",
+  "wg": "ipsecme"
+ },
  "RFC8785": {
   "keywords": [
    "JSON",
@@ -102116,6 +102133,19 @@
   "status": "current",
   "stream": "ietf",
   "title": "IETF Stream Documents Require IETF Rough Consensus"
+ },
+ "RFC8790": {
+  "area": "art",
+  "keywords": [
+   "CoAP",
+   "IoT",
+   "data model"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "FETCH and PATCH with Sensor Measurement Lists (SenML)",
+  "wg": "core"
  },
  "RFC8791": {
   "area": "ops",
@@ -102187,5 +102217,14 @@
   "stream": "ietf",
   "title": "Running a Root Server Local to a Resolver",
   "wg": "dnsop"
+ },
+ "RFC8820": {
+  "keywords": [
+   "URI structure"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "URI Design and Ownership"
  }
 }
