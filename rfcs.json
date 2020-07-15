@@ -102180,6 +102180,15 @@
   "stream": "irtf",
   "title": "Information-Centric Networking (ICN): Content-Centric Networking (CCNx) and Named Data Networking (NDN) Terminology"
  },
+ "RFC8796": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RSVP-TE Summary Fast Reroute Extensions for Label Switched Path (LSP) Tunnels",
+  "wg": "mpls"
+ },
  "RFC8797": {
   "area": "tsv",
   "keywords": [
