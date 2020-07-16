@@ -102215,6 +102215,13 @@
   "title": "Additional Units for Sensor Measurement Lists (SenML)",
   "wg": "core"
  },
+ "RFC8799": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Limited Domains and Internet Protocols"
+ },
  "RFC8806": {
   "area": "ops",
   "keywords": [
