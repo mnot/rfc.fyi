@@ -102002,6 +102002,32 @@
   "title": "Use of the HSS/LMS Hash-Based Signature Algorithm with CBOR Object Signing and Encryption (COSE)",
   "wg": "cose"
  },
+ "RFC8779": {
+  "area": "rtg",
+  "keywords": [
+   "RSVP-TE",
+   "GMPLS",
+   "PCE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for GMPLS",
+  "wg": "pce"
+ },
+ "RFC8780": {
+  "area": "rtg",
+  "keywords": [
+   "Wavelength Allocation",
+   "Transparent Optical Networks",
+   "Fixed DWDM Grid"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Path Computation Element Communication Protocol (PCEP) Extension for Wavelength Switched Optical Network (WSON) Routing and Wavelength Assignment (RWA)",
+  "wg": "pce"
+ },
  "RFC8781": {
   "area": "int",
   "keywords": [],
