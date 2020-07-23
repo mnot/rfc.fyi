@@ -102206,6 +102206,22 @@
   "stream": "irtf",
   "title": "Information-Centric Networking (ICN): Content-Centric Networking (CCNx) and Named Data Networking (NDN) Terminology"
  },
+ "RFC8794": {
+  "area": "art",
+  "keywords": [
+   "cellar",
+   "binary",
+   "storage",
+   "xml",
+   "matroska",
+   "webm"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensible Binary Meta Language",
+  "wg": "cellar"
+ },
  "RFC8796": {
   "area": "rtg",
   "keywords": [],
