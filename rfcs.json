@@ -102286,6 +102286,34 @@
   "title": "Path Computation Element Communication Protocol (PCEP) Extension for Label Switched Path (LSP) Diversity Constraint Signaling",
   "wg": "pce"
  },
+ "RFC8801": {
+  "area": "int",
+  "keywords": [
+   "IPv6",
+   "Provisioning",
+   "DHCP",
+   "PvD"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Discovering Provisioning Domain Names and Data",
+  "wg": "intarea"
+ },
+ "RFC8802": {
+  "keywords": [
+   "quality measurement",
+   "measurement protocol",
+   "latency",
+   "jitter",
+   "bandwidth",
+   "packet-loss"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "The Quality for Service (Q4S) Protocol"
+ },
  "RFC8803": {
   "area": "tsv",
   "keywords": [
