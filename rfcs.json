@@ -101368,6 +101368,19 @@
   "title": "JSON Web Token Best Current Practices",
   "wg": "oauth"
  },
+ "RFC8727": {
+  "area": "sec",
+  "keywords": [
+   "CBOR",
+   "JSON",
+   "IODEF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSON Binding of the Incident Object Description Exchange Format",
+  "wg": "mile"
+ },
  "RFC8728": {
   "keywords": [
    "IAB",
