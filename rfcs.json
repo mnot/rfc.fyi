@@ -102385,6 +102385,27 @@
   "title": "Running a Root Server Local to a Resolver",
   "wg": "dnsop"
  },
+ "RFC8807": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Login Security Extension for the Extensible Provisioning Protocol (EPP)",
+  "wg": "regext"
+ },
+ "RFC8809": {
+  "keywords": [
+   "webauthn",
+   "attestation",
+   "extensions",
+   "registry"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registries for Web Authentication (WebAuthn)"
+ },
  "RFC8820": {
   "keywords": [
    "URI structure"
