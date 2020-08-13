@@ -102406,6 +102406,33 @@
   "stream": "ietf",
   "title": "Registries for Web Authentication (WebAuthn)"
  },
+ "RFC8813": {
+  "area": "sec",
+  "keywords": [
+   "PKIX",
+   "X.509",
+   "ECC"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clarifications for Elliptic Curve Cryptography Subject Public Key Information",
+  "wg": "lamps"
+ },
+ "RFC8814": {
+  "area": "rtg",
+  "keywords": [
+   "BGP-LS",
+   "SID",
+   "MSD",
+   "SR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Signaling Maximum SID Depth (MSD) Using the Border Gateway Protocol - Link State",
+  "wg": "idr"
+ },
  "RFC8820": {
   "keywords": [
    "URI structure"
