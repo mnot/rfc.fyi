@@ -102406,6 +102406,28 @@
   "stream": "ietf",
   "title": "Registries for Web Authentication (WebAuthn)"
  },
+ "RFC8812": {
+  "area": "sec",
+  "keywords": [
+   "Cryptography",
+   "Digital Signature",
+   "Encryption",
+   "W3C",
+   "World Wide Web Consortium",
+   "WebAuthn",
+   "Web Authentication",
+   "FIDO Alliance",
+   "FIDO",
+   "FIDO2",
+   "CTAP",
+   "CTAP2"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE) and JSON Object Signing and Encryption (JOSE) Registrations for Web Authentication (WebAuthn) Algorithms",
+  "wg": "cose"
+ },
  "RFC8813": {
   "area": "sec",
   "keywords": [
