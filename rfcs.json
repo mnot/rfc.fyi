@@ -64891,7 +64891,7 @@
    "Storage Cluster"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Network File System (NFS) Version 4 Minor Version 1 Protocol",
   "wg": "nfsv4"
@@ -102406,6 +102406,26 @@
   "stream": "ietf",
   "title": "Registries for Web Authentication (WebAuthn)"
  },
+ "RFC8810": {
+  "area": "rtg",
+  "keywords": [
+   "IDR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Revision to Capability Codes Registration Procedures",
+  "wg": "idr"
+ },
+ "RFC8811": {
+  "area": "sec",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DDoS Open Threat Signaling (DOTS) Architecture",
+  "wg": "dots"
+ },
  "RFC8812": {
   "area": "sec",
   "keywords": [
@@ -102455,6 +102475,28 @@
   "title": "Signaling Maximum SID Depth (MSD) Using the Border Gateway Protocol - Link State",
   "wg": "idr"
  },
+ "RFC8817": {
+  "area": "art",
+  "keywords": [
+   "MELP",
+   "MELPe",
+   "TSVCIS",
+   "NRLVDR",
+   "Naval Research Laboratory",
+   "NRL",
+   "NATO",
+   "TSVWG",
+   "Department of Defense",
+   "DoD",
+   "NSA",
+   "MIL-STD"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Payload Format for Tactical Secure Voice Cryptographic Interoperability Specification (TSVCIS) Codec",
+  "wg": "avtcore"
+ },
  "RFC8820": {
   "keywords": [
    "URI structure"
@@ -102463,5 +102505,14 @@
   "status": "current",
   "stream": "ietf",
   "title": "URI Design and Ownership"
+ },
+ "RFC8881": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Network File System (NFS) Version 4 Minor Version 1 Protocol",
+  "wg": "nfsv4"
  }
 }
