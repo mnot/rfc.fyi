@@ -102514,5 +102514,19 @@
   "stream": "ietf",
   "title": "Network File System (NFS) Version 4 Minor Version 1 Protocol",
   "wg": "nfsv4"
+ },
+ "RFC8889": {
+  "area": "tsv",
+  "keywords": [
+   "Clustered Alternate Marking",
+   "Multipoint Marking Method",
+   "Multipoint Coloring Technique",
+   "Network Clustering"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multipoint Alternate-Marking Method for Passive and Hybrid Performance Monitoring",
+  "wg": "ippm"
  }
 }
