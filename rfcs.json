@@ -102475,6 +102475,27 @@
   "title": "Signaling Maximum SID Depth (MSD) Using the Border Gateway Protocol - Link State",
   "wg": "idr"
  },
+ "RFC8815": {
+  "area": "ops",
+  "keywords": [
+   "ASM",
+   "Deprecate",
+   "Deprecation",
+   "Interdomain",
+   "Intradomain",
+   "PIM-SM",
+   "PIM-SSM",
+   "SSM",
+   "MSDP",
+   "MBONE",
+   "Multicast"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecating Any-Source Multicast (ASM) for Interdomain Multicast",
+  "wg": "mboned"
+ },
  "RFC8817": {
   "area": "art",
   "keywords": [
@@ -102506,6 +102527,30 @@
   "stream": "ietf",
   "title": "URI Design and Ownership"
  },
+ "RFC8874": {
+  "area": "gen",
+  "keywords": [
+   "git",
+   "version control",
+   "working group",
+   "document",
+   "editing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Working Group GitHub Usage Guidance",
+  "wg": "git"
+ },
+ "RFC8875": {
+  "area": "gen",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Working Group GitHub Administration",
+  "wg": "git"
+ },
  "RFC8881": {
   "area": "tsv",
   "keywords": [],
@@ -102514,6 +102559,15 @@
   "stream": "ietf",
   "title": "Network File System (NFS) Version 4 Minor Version 1 Protocol",
   "wg": "nfsv4"
+ },
+ "RFC8887": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A JSON Meta Application Protocol (JMAP) Subprotocol for WebSocket",
+  "wg": "jmap"
  },
  "RFC8889": {
   "area": "tsv",
@@ -102528,5 +102582,14 @@
   "stream": "ietf",
   "title": "Multipoint Alternate-Marking Method for Passive and Hybrid Performance Monitoring",
   "wg": "ippm"
+ },
+ "RFC8890": {
+  "keywords": [
+   "stakeholder"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "The Internet is for End Users"
  }
 }
