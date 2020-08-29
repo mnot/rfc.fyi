@@ -102591,5 +102591,16 @@
   "status": "current",
   "stream": "iab",
   "title": "The Internet is for End Users"
+ },
+ "RFC8892": {
+  "keywords": [
+   "ifType",
+   "tunnelType",
+   "Transmission Number"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines and Registration Procedures for Interface Types and Tunnel Types"
  }
 }
