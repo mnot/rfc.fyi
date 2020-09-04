@@ -102622,5 +102622,14 @@
   "status": "current",
   "stream": "ietf",
   "title": "Guidelines and Registration Procedures for Interface Types and Tunnel Types"
+ },
+ "RFC8897": {
+  "area": "ops",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Requirements for Resource Public Key Infrastructure (RPKI) Relying Parties",
+  "wg": "sidrops"
  }
 }
