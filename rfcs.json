@@ -102580,6 +102580,18 @@
   "title": "Network File System (NFS) Version 4 Minor Version 1 Protocol",
   "wg": "nfsv4"
  },
+ "RFC8882": {
+  "area": "int",
+  "keywords": [
+   "Multicast DNS",
+   "mDNS"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS-Based Service Discovery (DNS-SD) Privacy and Security Requirements",
+  "wg": "dnssd"
+ },
  "RFC8887": {
   "area": "art",
   "keywords": [],
@@ -102623,6 +102635,13 @@
   "stream": "ietf",
   "title": "Guidelines and Registration Procedures for Interface Types and Tunnel Types"
  },
+ "RFC8894": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Simple Certificate Enrolment Protocol"
+ },
  "RFC8897": {
   "area": "ops",
   "keywords": [],
@@ -102631,5 +102650,18 @@
   "stream": "ietf",
   "title": "Requirements for Resource Public Key Infrastructure (RPKI) Relying Parties",
   "wg": "sidrops"
+ },
+ "RFC8898": {
+  "area": "art",
+  "keywords": [
+   "SIP OAuth",
+   "3rd party authentication",
+   "Third party authentication"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Third-Party Token-Based Authentication and Authorization for Session Initiation Protocol (SIP)",
+  "wg": "sipcore"
  }
 }
