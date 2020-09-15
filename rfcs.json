@@ -102624,6 +102624,16 @@
   "stream": "iab",
   "title": "The Internet is for End Users"
  },
+ "RFC8891": {
+  "keywords": [
+   "Magma",
+   "Block Cipher"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "GOST R 34.12-2015: Block Cipher \"Magma\""
+ },
  "RFC8892": {
   "keywords": [
    "ifType",
