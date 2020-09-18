@@ -102700,5 +102700,16 @@
   "stream": "ietf",
   "title": "IP Fragmentation Considered Fragile",
   "wg": "intarea"
+ },
+ "RFC8904": {
+  "keywords": [
+   "DNSWL",
+   "EMAIL",
+   "Authentication-Results"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "DNS Whitelist (DNSWL) Email Authentication Method Extension"
  }
 }
