@@ -88795,7 +88795,7 @@
  "RFC7710": {
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Captive-Portal Identification Using DHCP or Router Advertisements (RAs)"
  },
@@ -102711,5 +102711,28 @@
   "status": "current",
   "stream": "independent",
   "title": "DNS Whitelist (DNSWL) Email Authentication Method Extension"
+ },
+ "RFC8908": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Captive Portal API",
+  "wg": "capport"
+ },
+ "RFC8910": {
+  "area": "art",
+  "keywords": [
+   "Captive Portal",
+   "Walled Garden",
+   "Coffee-shop",
+   "Hotel"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Captive-Portal Identification in DHCP and Router Advertisements (RAs)",
+  "wg": "capport"
  }
 }
