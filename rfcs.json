@@ -102362,6 +102362,15 @@
   "title": "0-RTT TCP Convert Protocol",
   "wg": "tcpm"
  },
+ "RFC8804": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Content Delivery Network Interconnection (CDNI) Request Routing Extensions",
+  "wg": "cdni"
+ },
  "RFC8805": {
   "keywords": [
    "geo-location",
@@ -102573,6 +102582,17 @@
   "title": "Non-interactive Emergency Calls",
   "wg": "ecrit"
  },
+ "RFC8877": {
+  "area": "int",
+  "keywords": [
+   "Timestamps"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines for Defining Packet Timestamps",
+  "wg": "ntp"
+ },
  "RFC8880": {
   "keywords": [
    "IPv6",
@@ -102604,6 +102624,22 @@
   "stream": "ietf",
   "title": "DNS-Based Service Discovery (DNS-SD) Privacy and Security Requirements",
   "wg": "dnssd"
+ },
+ "RFC8886": {
+  "area": "ops",
+  "keywords": [
+   "autoboot",
+   "auto-boot",
+   "autoinstall",
+   "tftp",
+   "install",
+   "bunny"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Secure Device Install",
+  "wg": "opsawg"
  },
  "RFC8887": {
   "area": "art",
