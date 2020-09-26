@@ -102707,6 +102707,19 @@
   "stream": "ietf",
   "title": "Guidelines and Registration Procedures for Interface Types and Tunnel Types"
  },
+ "RFC8893": {
+  "area": "ops",
+  "keywords": [
+   "routing",
+   "security",
+   "RPKI"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Resource Public Key Infrastructure (RPKI) Origin Validation for BGP Export",
+  "wg": "sidrops"
+ },
  "RFC8894": {
   "keywords": [],
   "level": "informational",
