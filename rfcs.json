@@ -102791,6 +102791,18 @@
   "title": "Multi-Signer DNSSEC Models",
   "wg": "dnsop"
  },
+ "RFC8902": {
+  "keywords": [
+   "TLS",
+   "Intelligent Transport System (ITS) Certificates",
+   "IEEE",
+   "ETSI"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "independent",
+  "title": "TLS Authentication Using Intelligent Transport System (ITS) Certificates"
+ },
  "RFC8904": {
   "keywords": [
    "DNSWL",
@@ -102814,6 +102826,18 @@
   "title": "A Common Operational Problem in DNS Servers: Failure to Communicate",
   "wg": "dnsop"
  },
+ "RFC8907": {
+  "area": "ops",
+  "keywords": [
+   "TACACS+",
+   "Protocol"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Terminal Access Controller Access-Control System Plus (TACACS+) Protocol",
+  "wg": "opsawg"
+ },
  "RFC8908": {
   "area": "art",
   "keywords": [],
@@ -102836,6 +102860,20 @@
   "stream": "ietf",
   "title": "Captive-Portal Identification in DHCP and Router Advertisements (RAs)",
   "wg": "capport"
+ },
+ "RFC8915": {
+  "area": "int",
+  "keywords": [
+   "Integrity",
+   "Authentication",
+   "NTP",
+   "Security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Network Time Security for the Network Time Protocol",
+  "wg": "ntp"
  },
  "RFC8918": {
   "area": "rtg",
