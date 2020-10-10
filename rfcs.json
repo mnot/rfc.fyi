@@ -102638,6 +102638,23 @@
   "title": "ICMPv6 Errors for Discarding Packets Due to Processing Limits",
   "wg": "6man"
  },
+ "RFC8885": {
+  "area": "int",
+  "keywords": [
+   "PMIPv6",
+   "anchor",
+   "session continuity",
+   "address reachability",
+   "HNP",
+   "CMD",
+   "MAAR"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Proxy Mobile IPv6 Extensions for Distributed Mobility Management",
+  "wg": "dmm"
+ },
  "RFC8886": {
   "area": "ops",
   "keywords": [
@@ -102886,5 +102903,31 @@
   "stream": "ietf",
   "title": "Invalid TLV Handling in IS-IS",
   "wg": "lsr"
+ },
+ "RFC8924": {
+  "area": "rtg",
+  "keywords": [
+   "SFC",
+   "OAM",
+   "Framework"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Service Function Chaining (SFC) Operations, Administration, and Maintenance (OAM) Framework",
+  "wg": "sfc"
+ },
+ "RFC8933": {
+  "area": "sec",
+  "keywords": [
+   "digitally sign",
+   "authenticate",
+   "algorithm identifier integrity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Update to the Cryptographic Message Syntax (CMS) for Algorithm Identifier Protection",
+  "wg": "lamps"
  }
 }
