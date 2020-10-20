@@ -102536,6 +102536,22 @@
   "title": "RTP Payload Format for Tactical Secure Voice Cryptographic Interoperability Specification (TSVCIS) Codec",
   "wg": "avtcore"
  },
+ "RFC8818": {
+  "area": "int",
+  "keywords": [
+   "anchor",
+   "address continuity",
+   "reachability",
+   "continuity",
+   "PMIPv6",
+   "MIPv6"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Distributed Mobility Anchoring",
+  "wg": "dmm"
+ },
  "RFC8820": {
   "keywords": [
    "URI structure"
