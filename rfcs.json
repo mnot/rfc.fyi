@@ -102920,6 +102920,46 @@
   "title": "Invalid TLV Handling in IS-IS",
   "wg": "lsr"
  },
+ "RFC8921": {
+  "keywords": [
+   "SDN",
+   "Order Request Handling",
+   "Automation",
+   "Dynamic Provisioning",
+   "CDN",
+   "Interconnection",
+   "Service Delivery",
+   "Service Activation"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Dynamic Service Negotiation: The Connectivity Provisioning Negotiation Protocol (CPNP)"
+ },
+ "RFC8922": {
+  "area": "tsv",
+  "keywords": [
+   "Transport Protocols",
+   "Transport Security"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Survey of the Interaction between Security Protocols and Transport Services",
+  "wg": "taps"
+ },
+ "RFC8923": {
+  "area": "tsv",
+  "keywords": [
+   "taps",
+   "transport services"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Minimal Set of Transport Services for End Systems",
+  "wg": "taps"
+ },
  "RFC8924": {
   "area": "rtg",
   "keywords": [
