@@ -102908,6 +102908,21 @@
   "title": "Network Time Security for the Network Time Protocol",
   "wg": "ntp"
  },
+ "RFC8917": {
+  "keywords": [
+   "location",
+   "LoST",
+   "emergency",
+   "emergency services",
+   "ecrf",
+   "lvf",
+   "i3"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The LoST-Validation Straightforward-Naming Authority PoinTeR (S-NAPTR) Application Service Tag"
+ },
  "RFC8918": {
   "area": "rtg",
   "keywords": [
@@ -102918,6 +102933,24 @@
   "status": "current",
   "stream": "ietf",
   "title": "Invalid TLV Handling in IS-IS",
+  "wg": "lsr"
+ },
+ "RFC8919": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IS-IS Application-Specific Link Attributes",
+  "wg": "lsr"
+ },
+ "RFC8920": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Application-Specific Link Attributes",
   "wg": "lsr"
  },
  "RFC8921": {
