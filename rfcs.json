@@ -102654,6 +102654,15 @@
   "title": "ICMPv6 Errors for Discarding Packets Due to Processing Limits",
   "wg": "6man"
  },
+ "RFC8884": {
+  "keywords": [
+   "ICN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Research Directions for Using Information-Centric Networking (ICN) in Disaster Scenarios"
+ },
  "RFC8885": {
   "area": "int",
   "keywords": [
@@ -102894,6 +102903,15 @@
   "title": "Captive-Portal Identification in DHCP and Router Advertisements (RAs)",
   "wg": "capport"
  },
+ "RFC8914": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extended DNS Errors",
+  "wg": "dnsop"
+ },
  "RFC8915": {
   "area": "int",
   "keywords": [
@@ -103015,6 +103033,17 @@
   "title": "IPv6-Only Preferred Option for DHCPv4",
   "wg": "dhc"
  },
+ "RFC8932": {
+  "area": "int",
+  "keywords": [
+   "DNS"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Recommendations for DNS Privacy Service Operators",
+  "wg": "dprive"
+ },
  "RFC8933": {
   "area": "sec",
   "keywords": [
@@ -103038,5 +103067,24 @@
   "status": "current",
   "stream": "irtf",
   "title": "Randomness Improvements for Security Protocols"
+ },
+ "RFC8940": {
+  "area": "sec",
+  "keywords": [
+   "EAP",
+   "PEAP",
+   "EAP-AKA",
+   "EAP-SIM",
+   "ERP",
+   "FILS",
+   "Session-ID",
+   "fast reconnect",
+   "TLS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensible Authentication Protocol (EAP) Session-Id Derivation for EAP Subscriber Identity Module (EAP-SIM), EAP Authentication and Key Agreement (EAP-AKA), and Protected EAP (PEAP)",
+  "wg": "emu"
  }
 }
