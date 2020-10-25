@@ -102856,6 +102856,15 @@
   "stream": "independent",
   "title": "DNS Whitelist (DNSWL) Email Authentication Method Extension"
  },
+ "RFC8905": {
+  "keywords": [
+   "payments"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "The 'payto' URI Scheme for Payments"
+ },
  "RFC8906": {
   "area": "ops",
   "keywords": [
