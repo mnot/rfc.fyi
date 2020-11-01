@@ -102935,6 +102935,18 @@
   "title": "Network Time Security for the Network Time Protocol",
   "wg": "ntp"
  },
+ "RFC8916": {
+  "area": "rtg",
+  "keywords": [
+   "MSDP",
+   "YANG"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for the Multicast Source Discovery Protocol (MSDP)",
+  "wg": "pim"
+ },
  "RFC8917": {
   "keywords": [
    "location",
@@ -103065,6 +103077,17 @@
   "stream": "ietf",
   "title": "Update to the Cryptographic Message Syntax (CMS) for Algorithm Identifier Protection",
   "wg": "lamps"
+ },
+ "RFC8934": {
+  "area": "rtg",
+  "keywords": [
+   "Path Computation Element"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PCE Communication Protocol (PCEP) Extensions for Label Switched Path (LSP) Scheduling with Stateful PCE",
+  "wg": "pce"
  },
  "RFC8937": {
   "keywords": [
