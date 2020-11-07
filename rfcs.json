@@ -102769,6 +102769,26 @@
   "stream": "ietf",
   "title": "Simple Certificate Enrolment Protocol"
  },
+ "RFC8895": {
+  "area": "tsv",
+  "keywords": [
+   "ALTO"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Application-Layer Traffic Optimization (ALTO) Incremental Updates Using Server-Sent Events (SSE)",
+  "wg": "alto"
+ },
+ "RFC8896": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Application-Layer Traffic Optimization (ALTO) Cost Calendar",
+  "wg": "alto"
+ },
  "RFC8897": {
   "area": "ops",
   "keywords": [],
@@ -103053,6 +103073,36 @@
   "stream": "ietf",
   "title": "IPv6-Only Preferred Option for DHCPv4",
   "wg": "dhc"
+ },
+ "RFC8926": {
+  "area": "rtg",
+  "keywords": [
+   "overlay",
+   "tunnel",
+   "extensible",
+   "variable",
+   "metadata",
+   "options",
+   "endpoint",
+   "transit"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Geneve: Generic Network Virtualization Encapsulation",
+  "wg": "nvo3"
+ },
+ "RFC8927": {
+  "keywords": [
+   "data interchange format",
+   "description language",
+   "schema language",
+   "tree grammar"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "independent",
+  "title": "JSON Type Definition"
  },
  "RFC8932": {
   "area": "int",
