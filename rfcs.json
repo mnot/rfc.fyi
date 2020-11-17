@@ -102918,6 +102918,18 @@
   "title": "Captive Portal API",
   "wg": "capport"
  },
+ "RFC8909": {
+  "area": "art",
+  "keywords": [
+   "data escrow",
+   "registry"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registry Data Escrow Specification",
+  "wg": "regext"
+ },
  "RFC8910": {
   "area": "art",
   "keywords": [
@@ -103168,5 +103180,14 @@
   "stream": "ietf",
   "title": "Extensible Authentication Protocol (EAP) Session-Id Derivation for EAP Subscriber Identity Module (EAP-SIM), EAP Authentication and Key Agreement (EAP-AKA), and Protected EAP (PEAP)",
   "wg": "emu"
+ },
+ "RFC8944": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Layer 2 Network Topologies",
+  "wg": "i2rs"
  }
 }
