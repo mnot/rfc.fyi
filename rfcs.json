@@ -63368,7 +63368,7 @@
    "IPv4"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Advertising IPv4 Network Layer Reachability Information with an IPv6 Next Hop",
   "wg": "softwire"
@@ -101368,6 +101368,17 @@
   "title": "JSON Web Token Best Current Practices",
   "wg": "oauth"
  },
+ "RFC8726": {
+  "keywords": [
+   "IANA",
+   "Independent Submissions Stream",
+   "ISE"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "How Requests for IANA Action Will Be Handled on the Independent Stream"
+ },
  "RFC8727": {
   "area": "sec",
   "keywords": [
@@ -103189,5 +103200,44 @@
   "stream": "ietf",
   "title": "A YANG Data Model for Layer 2 Network Topologies",
   "wg": "i2rs"
+ },
+ "RFC8950": {
+  "area": "rtg",
+  "keywords": [
+   "bgp",
+   "mvpn",
+   "vpnv4",
+   "vpnv6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Advertising IPv4 Network Layer Reachability Information (NLRI) with an IPv6 Next Hop",
+  "wg": "bess"
+ },
+ "RFC8951": {
+  "area": "sec",
+  "keywords": [
+   "CSRattributes",
+   "BRSKI",
+   "RFC7030"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clarification of Enrollment over Secure Transport (EST): Transfer Encodings and ASN.1",
+  "wg": "lamps"
+ },
+ "RFC8954": {
+  "area": "sec",
+  "keywords": [
+   "OCSP Nonce Length",
+   "OCSP Nonce Randomness"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
+  "wg": "lamps"
  }
 }
