@@ -103192,6 +103192,20 @@
   "title": "Extensible Authentication Protocol (EAP) Session-Id Derivation for EAP Subscriber Identity Module (EAP-SIM), EAP Authentication and Key Agreement (EAP-AKA), and Protected EAP (PEAP)",
   "wg": "emu"
  },
+ "RFC8943": {
+  "area": "art",
+  "keywords": [
+   "Compact Binary Object Representation",
+   "CBOR",
+   "Tag",
+   "Date"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Binary Object Representation (CBOR) Tags for Date",
+  "wg": "cbor"
+ },
  "RFC8944": {
   "area": "rtg",
   "keywords": [],
