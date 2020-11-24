@@ -103127,6 +103127,60 @@
   "stream": "independent",
   "title": "JSON Type Definition"
  },
+ "RFC8928": {
+  "area": "int",
+  "keywords": [
+   "Address registration",
+   "Network Overlay",
+   "host to router interface"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Address-Protected Neighbor Discovery for Low-Power and Lossy Networks",
+  "wg": "6lo"
+ },
+ "RFC8929": {
+  "area": "int",
+  "keywords": [
+   "ND Proxy",
+   "Routing Proxy",
+   "Bridging Proxy",
+   "proxy ND",
+   "proxy-ND"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Backbone Router",
+  "wg": "6lo"
+ },
+ "RFC8930": {
+  "area": "int",
+  "keywords": [
+   "6LoWPAN",
+   "Fragment"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "On Forwarding 6LoWPAN Fragments over a Multi-Hop IPv6 Network",
+  "wg": "6lo"
+ },
+ "RFC8931": {
+  "area": "int",
+  "keywords": [
+   "LLN",
+   "Route-Over",
+   "mesh",
+   "IoT"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Selective Fragment Recovery",
+  "wg": "6lo"
+ },
  "RFC8932": {
   "area": "int",
   "keywords": [
@@ -103253,5 +103307,19 @@
   "stream": "ietf",
   "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
   "wg": "lamps"
+ },
+ "RFC8961": {
+  "area": "tsv",
+  "keywords": [
+   "retransmission timeout",
+   "packet loss",
+   "loss detection",
+   "requirements"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Requirements for Time-Based Loss Detection",
+  "wg": "tcpm"
  }
 }
