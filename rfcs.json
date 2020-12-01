@@ -29915,7 +29915,6 @@
  "RFC2845": {
   "area": "int",
   "keywords": [
-   "TSIG",
    "domain",
    "name",
    "system",
@@ -29923,7 +29922,7 @@
    "signature"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Secret Key Transaction Authentication for DNS (TSIG)",
   "wg": "dnsext"
@@ -52190,7 +52189,7 @@
    "cmac"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "HMAC SHA (Hashed Message Authentication Code, Secure Hash Algorithm) TSIG Algorithm Identifiers",
   "wg": "dnsext"
@@ -103216,6 +103215,40 @@
   "title": "PCE Communication Protocol (PCEP) Extensions for Label Switched Path (LSP) Scheduling with Stateful PCE",
   "wg": "pce"
  },
+ "RFC8935": {
+  "area": "sec",
+  "keywords": [
+   "JSON Web Token",
+   "JWT",
+   "Security Event Token",
+   "SET",
+   "Delivery",
+   "JavaScript Object Notation",
+   "JSON"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Push-Based Security Event Token (SET) Delivery Using HTTP",
+  "wg": "secevent"
+ },
+ "RFC8936": {
+  "area": "sec",
+  "keywords": [
+   "JSON Web Token",
+   "JWT",
+   "Security Event Token",
+   "SET",
+   "Delivery",
+   "JavaScript Object Notation",
+   "JSON"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Poll-Based Security Event Token (SET) Delivery Using HTTP",
+  "wg": "secevent"
+ },
  "RFC8937": {
   "keywords": [
    "Security",
@@ -103226,6 +103259,29 @@
   "status": "current",
   "stream": "irtf",
   "title": "Randomness Improvements for Security Protocols"
+ },
+ "RFC8938": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Data Plane Framework",
+  "wg": "detnet"
+ },
+ "RFC8939": {
+  "area": "rtg",
+  "keywords": [
+   "Application",
+   "Endpoint",
+   "Service Sub-layer",
+   "Forwarding Sub-layer"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Data Plane: IP",
+  "wg": "detnet"
  },
  "RFC8940": {
   "area": "sec",
@@ -103269,6 +103325,15 @@
   "title": "A YANG Data Model for Layer 2 Network Topologies",
   "wg": "i2rs"
  },
+ "RFC8945": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Secret Key Transaction Authentication for DNS (TSIG)",
+  "wg": "dnsop"
+ },
  "RFC8950": {
   "area": "rtg",
   "keywords": [
@@ -103295,6 +103360,24 @@
   "stream": "ietf",
   "title": "Clarification of Enrollment over Secure Transport (EST): Transfer Encodings and ASN.1",
   "wg": "lamps"
+ },
+ "RFC8952": {
+  "area": "art",
+  "keywords": [
+   "Captive Portal",
+   "Architecture",
+   "Wifi",
+   "Wi-Fi",
+   "Wireless",
+   "Roaming",
+   "Mobile",
+   "API"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Captive Portal Architecture",
+  "wg": "capport"
  },
  "RFC8954": {
   "area": "sec",
