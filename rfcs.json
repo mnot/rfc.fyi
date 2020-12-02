@@ -102619,6 +102619,19 @@
   "title": "Guidelines for Defining Packet Timestamps",
   "wg": "ntp"
  },
+ "RFC8879": {
+  "area": "sec",
+  "keywords": [
+   "zlib",
+   "brotli",
+   "zstd"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TLS Certificate Compression",
+  "wg": "tls"
+ },
  "RFC8880": {
   "keywords": [
    "IPv6",
@@ -103333,6 +103346,31 @@
   "stream": "ietf",
   "title": "Secret Key Transaction Authentication for DNS (TSIG)",
   "wg": "dnsop"
+ },
+ "RFC8947": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Link-Layer Address Assignment Mechanism for DHCPv6",
+  "wg": "dhc"
+ },
+ "RFC8948": {
+  "area": "int",
+  "keywords": [
+   "IEEE 802c",
+   "ELI",
+   "SAI",
+   "AAI",
+   "MAC address",
+   "LLADDR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Structured Local Address Plan (SLAP) Quadrant Selection Option for DHCPv6",
+  "wg": "dhc"
  },
  "RFC8950": {
   "area": "rtg",
