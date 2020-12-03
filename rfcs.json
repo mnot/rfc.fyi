@@ -1,4 +1,11 @@
 {
+ "BCP0065": {
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration Rules for URI.ARPA"
+ },
  "RFC0001": {
   "keywords": [],
   "level": "unknown",
@@ -103428,6 +103435,13 @@
   "stream": "ietf",
   "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
   "wg": "lamps"
+ },
+ "RFC8958": {
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updated Registration Rules for URI.ARPA"
  },
  "RFC8961": {
   "area": "tsv",
