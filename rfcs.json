@@ -80833,7 +80833,7 @@
    "JSON"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Concise Binary Object Representation (CBOR)"
  },
@@ -103378,6 +103378,22 @@
   "stream": "ietf",
   "title": "Structured Local Address Plan (SLAP) Quadrant Selection Option for DHCPv6",
   "wg": "dhc"
+ },
+ "RFC8949": {
+  "area": "art",
+  "keywords": [
+   "parser",
+   "decoder",
+   "encoder",
+   "binary format",
+   "data interchange format",
+   "JSON"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Binary Object Representation (CBOR)",
+  "wg": "cbor"
  },
  "RFC8950": {
   "area": "rtg",
