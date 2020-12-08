@@ -1,11 +1,4 @@
 {
- "BCP0065": {
-  "keywords": [],
-  "level": "bcp",
-  "status": "current",
-  "stream": "ietf",
-  "title": "Registration Rules for URI.ARPA"
- },
  "RFC0001": {
   "keywords": [],
   "level": "unknown",
