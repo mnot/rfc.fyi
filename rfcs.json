@@ -103465,5 +103465,17 @@
   "stream": "ietf",
   "title": "Requirements for Time-Based Loss Detection",
   "wg": "tcpm"
+ },
+ "RFC8971": {
+  "area": "rtg",
+  "keywords": [
+   "BFD",
+   "BFD for VXLAN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bidirectional Forwarding Detection (BFD) for Virtual eXtensible Local Area Network (VXLAN)",
+  "wg": "bfd"
  }
 }
