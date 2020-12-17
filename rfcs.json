@@ -103433,6 +103433,18 @@
   "title": "Captive Portal Architecture",
   "wg": "capport"
  },
+ "RFC8953": {
+  "keywords": [
+   "Network Management",
+   "Attack Response",
+   "CARIS",
+   "Incident"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Coordinating Attack Response at Internet Scale 2 (CARIS2) Workshop Report"
+ },
  "RFC8954": {
   "area": "sec",
   "keywords": [
