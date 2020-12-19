@@ -103464,6 +103464,20 @@
   "stream": "ietf",
   "title": "Updated Registration Rules for URI.ARPA"
  },
+ "RFC8960": {
+  "area": "rtg",
+  "keywords": [
+   "MPLS YANG Data Model",
+   "MPLS Model",
+   "MPLS RIB",
+   "MPLS Routing Information Base"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for MPLS Base",
+  "wg": "mpls"
+ },
  "RFC8961": {
   "area": "tsv",
   "keywords": [
@@ -103477,6 +103491,19 @@
   "stream": "ietf",
   "title": "Requirements for Time-Based Loss Detection",
   "wg": "tcpm"
+ },
+ "RFC8970": {
+  "area": "art",
+  "keywords": [
+   "IMAP4",
+   "FETCH",
+   "PREVIEW"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IMAP4 Extension: Message Preview Generation",
+  "wg": "extra"
  },
  "RFC8971": {
   "area": "rtg",
