@@ -63710,7 +63710,7 @@
    "Filter"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Dissemination of Flow Specification Rules",
   "wg": "idr"
@@ -88362,7 +88362,7 @@
    "flowspec"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Clarification of the Flowspec Redirect Extended Community",
   "wg": "idr"
@@ -103456,6 +103456,27 @@
   "stream": "ietf",
   "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
   "wg": "lamps"
+ },
+ "RFC8955": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dissemination of Flow Specification Rules",
+  "wg": "idr"
+ },
+ "RFC8956": {
+  "area": "rtg",
+  "keywords": [
+   "BGP Flow Specification",
+   "V6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dissemination of Flow Specification Rules for IPv6",
+  "wg": "idr"
  },
  "RFC8958": {
   "keywords": [],
