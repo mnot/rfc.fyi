@@ -102562,18 +102562,6 @@
   "title": "Distributed Mobility Anchoring",
   "wg": "dmm"
  },
- "RFC8819": {
-  "area": "ops",
-  "keywords": [
-   "YANG",
-   "tags"
-  ],
-  "level": "std",
-  "status": "current",
-  "stream": "ietf",
-  "title": "YANG Module Tags",
-  "wg": "netmod"
- },
  "RFC8820": {
   "keywords": [
    "URI structure"
