@@ -94995,7 +94995,7 @@
    "shutdown"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "BGP Administrative Shutdown Communication",
   "wg": "idr"
@@ -103549,5 +103549,30 @@
   "stream": "ietf",
   "title": "Bidirectional Forwarding Detection (BFD) for Virtual eXtensible Local Area Network (VXLAN)",
   "wg": "bfd"
+ },
+ "RFC8974": {
+  "area": "art",
+  "keywords": [
+   "6tisch",
+   "minimal-security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extended Tokens and Stateless Clients in the Constrained Application Protocol (CoAP)",
+  "wg": "core"
+ },
+ "RFC9003": {
+  "area": "rtg",
+  "keywords": [
+   "BGP",
+   "cease",
+   "shutdown"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extended BGP Administrative Shutdown Communication",
+  "wg": "idr"
  }
 }
