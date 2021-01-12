@@ -70411,7 +70411,7 @@
  "RFC6126": {
   "keywords": [],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "independent",
   "title": "The Babel Routing Protocol"
  },
@@ -83769,7 +83769,7 @@
    "applied cryptography"
   ],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "independent",
   "title": "Babel Hashed Message Authentication Code (HMAC) Cryptographic Authentication"
  },
@@ -86867,7 +86867,7 @@
    "sub-TLV"
   ],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "independent",
   "title": "Extension Mechanism for the Babel Routing Protocol"
  },
@@ -103524,6 +103524,62 @@
   "stream": "ietf",
   "title": "Requirements for Time-Based Loss Detection",
   "wg": "tcpm"
+ },
+ "RFC8965": {
+  "area": "rtg",
+  "keywords": [
+   "distance-vector",
+   "loop",
+   "starvation",
+   "Bellman-Ford",
+   "routing",
+   "routing protocol",
+   "wireless",
+   "mesh network",
+   "IGP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Applicability of the Babel Routing Protocol",
+  "wg": "babel"
+ },
+ "RFC8966": {
+  "area": "rtg",
+  "keywords": [
+   "Bellman-Ford",
+   "IGP",
+   "loop-avoidance",
+   "mesh network"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Babel Routing Protocol",
+  "wg": "babel"
+ },
+ "RFC8967": {
+  "area": "rtg",
+  "keywords": [
+   "routing protocol",
+   "authentication",
+   "replay",
+   "replay protection"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "MAC Authentication for the Babel Routing Protocol",
+  "wg": "babel"
+ },
+ "RFC8968": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Babel Routing Protocol over Datagram Transport Layer Security",
+  "wg": "babel"
  },
  "RFC8970": {
   "area": "art",
