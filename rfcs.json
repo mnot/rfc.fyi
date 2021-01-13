@@ -103606,6 +103606,24 @@
   "title": "Bidirectional Forwarding Detection (BFD) for Virtual eXtensible Local Area Network (VXLAN)",
   "wg": "bfd"
  },
+ "RFC8973": {
+  "area": "sec",
+  "keywords": [
+   "Automation",
+   "Provisioning",
+   "Configuration",
+   "Location",
+   "Deployment",
+   "Multihoming",
+   "DDoS",
+   "Security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DDoS Open Threat Signaling (DOTS) Agent Discovery",
+  "wg": "dots"
+ },
  "RFC8974": {
   "area": "art",
   "keywords": [
