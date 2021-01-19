@@ -72885,7 +72885,7 @@
   "area": "rai",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IANA Registry for Interactive Connectivity Establishment (ICE) Options",
   "wg": "mmusic"
@@ -102582,6 +102582,438 @@
   "status": "current",
   "stream": "ietf",
   "title": "URI Design and Ownership"
+ },
+ "RFC8825": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Overview: Real-Time Protocols for Browser-Based Applications",
+  "wg": "rtcweb"
+ },
+ "RFC8826": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Security Considerations for WebRTC",
+  "wg": "rtcweb"
+ },
+ "RFC8827": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "WebRTC Security Architecture",
+  "wg": "rtcweb"
+ },
+ "RFC8828": {
+  "area": "art",
+  "keywords": [
+   "WebRTC",
+   "privacy",
+   "private",
+   "IP address",
+   "routing",
+   "proxy",
+   "peer",
+   "mode"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "WebRTC IP Address Handling Requirements",
+  "wg": "rtcweb"
+ },
+ "RFC8830": {
+  "area": "art",
+  "keywords": [
+   "MediaStreamTrack"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "WebRTC MediaStream Identification in the Session Description Protocol",
+  "wg": "mmusic"
+ },
+ "RFC8831": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "WebRTC Data Channels",
+  "wg": "rtcweb"
+ },
+ "RFC8832": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "WebRTC Data Channel Establishment Protocol",
+  "wg": "rtcweb"
+ },
+ "RFC8833": {
+  "area": "art",
+  "keywords": [
+   "ALPN",
+   "Protocol",
+   "Identifier"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Application-Layer Protocol Negotiation (ALPN) for WebRTC",
+  "wg": "rtcweb"
+ },
+ "RFC8834": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Media Transport and Use of RTP in WebRTC",
+  "wg": "rtcweb"
+ },
+ "RFC8835": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Transports for WebRTC",
+  "wg": "rtcweb"
+ },
+ "RFC8836": {
+  "area": "tsv",
+  "keywords": [
+   "Interactive multimedia",
+   "webrtc",
+   "video communication",
+   "RTP/RTCP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Congestion Control Requirements for Interactive Real-Time Media",
+  "wg": "rmcat"
+ },
+ "RFC8837": {
+  "area": "tsv",
+  "keywords": [
+   "Diffserv",
+   "rtcweb"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Differentiated Services Code Point (DSCP) Packet Markings for WebRTC QoS",
+  "wg": "tsvwg"
+ },
+ "RFC8838": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Trickle ICE: Incremental Provisioning of Candidates for the Interactive Connectivity Establishment (ICE) Protocol",
+  "wg": "ice"
+ },
+ "RFC8839": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Session Description Protocol (SDP) Offer/Answer Procedures for Interactive Connectivity Establishment (ICE)",
+  "wg": "mmusic"
+ },
+ "RFC8840": {
+  "area": "art",
+  "keywords": [
+   "ICE",
+   "trickle",
+   "SIP",
+   "SDP",
+   "NAT"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Session Initiation Protocol (SIP) Usage for Incremental Provisioning of Candidates for the Interactive Connectivity Establishment (Trickle ICE)",
+  "wg": "mmusic"
+ },
+ "RFC8841": {
+  "area": "art",
+  "keywords": [
+   "SCTP,SDP,DTLS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Session Description Protocol (SDP) Offer/Answer Procedures for Stream Control Transmission Protocol (SCTP) over Datagram Transport Layer Security (DTLS) Transport",
+  "wg": "mmusic"
+ },
+ "RFC8842": {
+  "area": "art",
+  "keywords": [
+   "SDP",
+   "DTLS",
+   "tls-id"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Session Description Protocol (SDP) Offer/Answer Considerations for Datagram Transport Layer Security (DTLS) and Transport Layer Security (TLS)",
+  "wg": "mmusic"
+ },
+ "RFC8844": {
+  "area": "art",
+  "keywords": [
+   "Unknown Key-Share Attack",
+   "SDP",
+   "DTLS-SRTP",
+   "WebRTC",
+   "SIP identity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Unknown Key-Share Attacks on Uses of TLS with the Session Description Protocol (SDP)",
+  "wg": "mmusic"
+ },
+ "RFC8845": {
+  "area": "art",
+  "keywords": [
+   "Telepresence",
+   "Conferencing",
+   "Video-Conferencing",
+   "MCU"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Framework for Telepresence Multi-Streams",
+  "wg": "clue"
+ },
+ "RFC8846": {
+  "area": "art",
+  "keywords": [
+   "CLUE",
+   "Telepresence",
+   "Data Model",
+   "Framework"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An XML Schema for the Controlling Multiple Streams for Telepresence (CLUE) Data Model",
+  "wg": "clue"
+ },
+ "RFC8847": {
+  "area": "art",
+  "keywords": [
+   "Telepresence",
+   "Protocol",
+   "Framework"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Protocol for Controlling Multiple Streams for Telepresence (CLUE)",
+  "wg": "clue"
+ },
+ "RFC8848": {
+  "area": "art",
+  "keywords": [],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Session Signaling for Controlling Multiple Streams for Telepresence (CLUE)",
+  "wg": "clue"
+ },
+ "RFC8849": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Mapping RTP Streams to Controlling Multiple Streams for Telepresence (CLUE) Media Captures",
+  "wg": "clue"
+ },
+ "RFC8850": {
+  "area": "art",
+  "keywords": [
+   "SIP",
+   "SDP",
+   "DTLS",
+   "SCTP",
+   "DATA",
+   "CHANNEL",
+   "DCEP",
+   "DATA_CHANNEL_OPEN",
+   "DATA_CHANNEL_ACK",
+   "PPID",
+   "TELEPRESENCE",
+   "RTCWEB",
+   "WEBRTC"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Controlling Multiple Streams for Telepresence (CLUE) Protocol Data Channel",
+  "wg": "clue"
+ },
+ "RFC8858": {
+  "area": "art",
+  "keywords": [
+   "RTP",
+   "RTCP",
+   "SDP",
+   "OFFER",
+   "ANSWER",
+   "MUX",
+   "MULTIPLEX",
+   "RTCWEB",
+   "WebRTC",
+   "JSEP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Indicating Exclusive Support of RTP and RTP Control Protocol (RTCP) Multiplexing Using the Session Description Protocol (SDP)",
+  "wg": "mmusic"
+ },
+ "RFC8859": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Framework for Session Description Protocol (SDP) Attributes When Multiplexing",
+  "wg": "mmusic"
+ },
+ "RFC8860": {
+  "area": "art",
+  "keywords": [
+   "Real-time",
+   "Multiplexing",
+   "Bundle"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Sending Multiple Types of Media in a Single RTP Session",
+  "wg": "avtcore"
+ },
+ "RFC8861": {
+  "area": "art",
+  "keywords": [
+   "RGRP",
+   "SDES",
+   "XR",
+   "Reporting",
+   "Group"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Sending Multiple RTP Streams in a Single RTP Session: Grouping RTP Control Protocol (RTCP) Reception Statistics and Other Feedback",
+  "wg": "avtcore"
+ },
+ "RFC8862": {
+  "area": "art",
+  "keywords": [
+   "SIP",
+   "RTP",
+   "security"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Best Practices for Securing RTP Media Signaled with SIP",
+  "wg": "sipbrandy"
+ },
+ "RFC8863": {
+  "area": "art",
+  "keywords": [
+   "ICE",
+   "PAC",
+   "Candidate"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Interactive Connectivity Establishment Patiently Awaiting Connectivity (ICE PAC)",
+  "wg": "ice"
+ },
+ "RFC8869": {
+  "area": "tsv",
+  "keywords": [
+   "Cellular Network",
+   "Wi-Fi Network",
+   "Congestion Control",
+   "RTP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Evaluation Test Cases for Interactive Real-Time Media over Wireless Networks",
+  "wg": "rmcat"
+ },
+ "RFC8870": {
+  "area": "art",
+  "keywords": [
+   "PERC",
+   "SRTP",
+   "RTP",
+   "conferencing",
+   "encryption"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Encrypted Key Transport for DTLS and Secure RTP",
+  "wg": "perc"
+ },
+ "RFC8871": {
+  "area": "art",
+  "keywords": [
+   "PERC",
+   "Private Media Framework",
+   "conferencing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Solution Framework for Private Media in Privacy-Enhanced RTP Conferencing (PERC)",
+  "wg": "perc"
+ },
+ "RFC8872": {
+  "area": "art",
+  "keywords": [
+   "Simulcast"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines for Using the Multiplexing Features of RTP to Support Multiple Media Streams",
+  "wg": "avtcore"
+ },
+ "RFC8873": {
+  "area": "art",
+  "keywords": [
+   "webrtc"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Message Session Relay Protocol (MSRP) over Data Channels",
+  "wg": "mmusic"
  },
  "RFC8874": {
   "area": "gen",
