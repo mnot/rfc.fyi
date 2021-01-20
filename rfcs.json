@@ -51367,7 +51367,7 @@
    "internet addresses syntax"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "SDP: Session Description Protocol",
   "wg": "mmusic"
@@ -51564,7 +51564,7 @@
    "conference"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The Binary Floor Control Protocol (BFCP)",
   "wg": "xcon"
@@ -51575,7 +51575,7 @@
    "bfcp stream"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Session Description Protocol (SDP) Format for Binary Floor Control Protocol (BFCP) Streams",
   "wg": "mmusic"
@@ -102868,6 +102868,82 @@
   "title": "Controlling Multiple Streams for Telepresence (CLUE) Protocol Data Channel",
   "wg": "clue"
  },
+ "RFC8851": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Payload Format Restrictions",
+  "wg": "mmusic"
+ },
+ "RFC8852": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Stream Identifier Source Description (SDES)",
+  "wg": "avtext"
+ },
+ "RFC8853": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using Simulcast in Session Description Protocol (SDP) and RTP Sessions",
+  "wg": "mmusic"
+ },
+ "RFC8854": {
+  "area": "art",
+  "keywords": [
+   "RTP",
+   "FEC"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "WebRTC Forward Error Correction Requirements",
+  "wg": "rtcweb"
+ },
+ "RFC8855": {
+  "area": "art",
+  "keywords": [
+   "floor control",
+   "conference"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Binary Floor Control Protocol (BFCP)",
+  "wg": "bfcpbis"
+ },
+ "RFC8856": {
+  "area": "art",
+  "keywords": [
+   "floor control",
+   "BFCP",
+   "SDP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Session Description Protocol (SDP) Format for Binary Floor Control Protocol (BFCP) Streams",
+  "wg": "bfcpbis"
+ },
+ "RFC8857": {
+  "area": "art",
+  "keywords": [
+   "BFCP",
+   "WebSocket"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The WebSocket Protocol as a Transport for the Binary Floor Control Protocol (BFCP)",
+  "wg": "bfcpbis"
+ },
  "RFC8858": {
   "area": "art",
   "keywords": [
@@ -102950,6 +103026,78 @@
   "stream": "ietf",
   "title": "Interactive Connectivity Establishment Patiently Awaiting Connectivity (ICE PAC)",
   "wg": "ice"
+ },
+ "RFC8864": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Negotiation Data Channels Using the Session Description Protocol (SDP)",
+  "wg": "mmusic"
+ },
+ "RFC8865": {
+  "area": "art",
+  "keywords": [
+   "SDP",
+   "ITU-T",
+   "T.140",
+   "Data Channel",
+   "WebRTC",
+   "real-time text"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "T.140 Real-Time Text Conversation over WebRTC Data Channels",
+  "wg": "mmusic"
+ },
+ "RFC8866": {
+  "area": "art",
+  "keywords": [
+   "Multimedia",
+   "conferencing",
+   "session setup",
+   "signaling",
+   "media",
+   "SIP",
+   "RTSP",
+   "voip",
+   "audio",
+   "video",
+   "streaming"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "SDP: Session Description Protocol",
+  "wg": "mmusic"
+ },
+ "RFC8867": {
+  "area": "tsv",
+  "keywords": [
+   "Multimedia",
+   "Test cases",
+   "Congestion Control"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Test Cases for Evaluating Congestion Control for Interactive Real-Time Media",
+  "wg": "rmcat"
+ },
+ "RFC8868": {
+  "area": "tsv",
+  "keywords": [
+   "RTP",
+   "RTCP",
+   "Congestion Control"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Evaluating Congestion Control for Interactive Real-Time Media",
+  "wg": "rmcat"
  },
  "RFC8869": {
   "area": "tsv",
@@ -103171,6 +103319,20 @@
   "stream": "ietf",
   "title": "A JSON Meta Application Protocol (JMAP) Subprotocol for WebSocket",
   "wg": "jmap"
+ },
+ "RFC8888": {
+  "area": "art",
+  "keywords": [
+   "Congestion control",
+   "feedback message",
+   "RTP",
+   "RTCP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Control Protocol (RTCP) Feedback for Congestion Control",
+  "wg": "avtcore"
  },
  "RFC8889": {
   "area": "tsv",
