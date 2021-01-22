@@ -104240,6 +104240,18 @@
   "title": "Bidirectional Forwarding Detection (BFD) for Virtual eXtensible Local Area Network (VXLAN)",
   "wg": "bfd"
  },
+ "RFC8972": {
+  "area": "tsv",
+  "keywords": [
+   "IPPM",
+   "Performance Measurement"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Simple Two-Way Active Measurement Protocol Optional Extensions",
+  "wg": "ippm"
+ },
  "RFC8973": {
   "area": "sec",
   "keywords": [
