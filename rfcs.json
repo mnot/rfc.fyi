@@ -104124,6 +104124,19 @@
   "title": "Dissemination of Flow Specification Rules for IPv6",
   "wg": "idr"
  },
+ "RFC8957": {
+  "area": "rtg",
+  "keywords": [
+   "MPLS",
+   "Flow",
+   "Label"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Synonymous Flow Label Framework",
+  "wg": "mpls"
+ },
  "RFC8958": {
   "keywords": [],
   "level": "bcp",
@@ -104158,6 +104171,34 @@
   "stream": "ietf",
   "title": "Requirements for Time-Based Loss Detection",
   "wg": "tcpm"
+ },
+ "RFC8963": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Evaluation of a Sample of RFCs Produced in 2018"
+ },
+ "RFC8964": {
+  "area": "rtg",
+  "keywords": [
+   "detnet",
+   "mpls",
+   "preof",
+   "pref",
+   "peof",
+   "prf",
+   "pef",
+   "pof",
+   "protection",
+   "replication",
+   "elimination"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Data Plane: MPLS",
+  "wg": "detnet"
  },
  "RFC8965": {
   "area": "rtg",
@@ -104214,6 +104255,22 @@
   "stream": "ietf",
   "title": "Babel Routing Protocol over Datagram Transport Layer Security",
   "wg": "babel"
+ },
+ "RFC8969": {
+  "area": "ops",
+  "keywords": [
+   "Model Driven",
+   "YANG Data Model",
+   "automation",
+   "service delivery",
+   "notification",
+   "SDN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Framework for Automating Service and Network Management with YANG",
+  "wg": "opsawg"
  },
  "RFC8970": {
   "area": "art",
@@ -104281,6 +104338,29 @@
   "stream": "ietf",
   "title": "Extended Tokens and Stateless Clients in the Constrained Application Protocol (CoAP)",
   "wg": "core"
+ },
+ "RFC8975": {
+  "keywords": [
+   "SATCOM",
+   "coding techniques"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Network Coding for Satellite Systems"
+ },
+ "RFC8977": {
+  "area": "art",
+  "keywords": [
+   "RDAP",
+   "Sorting",
+   "Paging"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration Data Access Protocol (RDAP) Query Parameters for Result Sorting and Paging",
+  "wg": "regext"
  },
  "RFC9003": {
   "area": "rtg",
