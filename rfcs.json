@@ -104144,6 +104144,16 @@
   "stream": "ietf",
   "title": "Updated Registration Rules for URI.ARPA"
  },
+ "RFC8959": {
+  "keywords": [
+   "bearer token",
+   "token scanning"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The \"secret-token\" URI Scheme"
+ },
  "RFC8960": {
   "area": "rtg",
   "keywords": [
