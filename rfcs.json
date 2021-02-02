@@ -21237,7 +21237,7 @@
    "authentication",
    "privacy"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "obsoleted",
   "stream": "ietf",
   "title": "The TLS Protocol Version 1.0",
@@ -48721,7 +48721,7 @@
  "RFC4346": {
   "area": "sec",
   "keywords": [],
-  "level": "std",
+  "level": "historic",
   "status": "obsoleted",
   "stream": "ietf",
   "title": "The Transport Layer Security (TLS) Protocol Version 1.1",
@@ -48731,7 +48731,7 @@
   "keywords": [
    "dtls"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "obsoleted",
   "stream": "ietf",
   "title": "Datagram Transport Layer Security"
@@ -62368,7 +62368,7 @@
    "data encryption standard",
    "international data encryption algorithm"
   ],
-  "level": "informational",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "DES and IDEA Cipher Suites for Transport Layer Security (TLS)",
