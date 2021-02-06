@@ -104372,6 +104372,38 @@
   "title": "Registration Data Access Protocol (RDAP) Query Parameters for Result Sorting and Paging",
   "wg": "regext"
  },
+ "RFC8979": {
+  "area": "rtg",
+  "keywords": [
+   "subscriber policy",
+   "policy enforcement",
+   "subscriber",
+   "policy",
+   "quota",
+   "identification",
+   "implicit identification",
+   "service chain",
+   "service function chain",
+   "sfc",
+   "SFP",
+   "service function path",
+   "classification",
+   "5G",
+   "traffic steering"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Subscriber and Performance Policy Identifier Context Headers in the Network Service Header (NSH)",
+  "wg": "sfc"
+ },
+ "RFC8989": {
+  "keywords": [],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Additional Criteria for Nominating Committee Eligibility"
+ },
  "RFC9003": {
   "area": "rtg",
   "keywords": [
