@@ -103961,6 +103961,29 @@
   "title": "Extensible Authentication Protocol (EAP) Session-Id Derivation for EAP Subscriber Identity Module (EAP-SIM), EAP Authentication and Key Agreement (EAP-AKA), and Protected EAP (PEAP)",
   "wg": "emu"
  },
+ "RFC8941": {
+  "area": "art",
+  "keywords": [
+   "trailer",
+   "header"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Structured Field Values for HTTP",
+  "wg": "httpbis"
+ },
+ "RFC8942": {
+  "area": "art",
+  "keywords": [
+   "Content Negotiation"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP Client Hints",
+  "wg": "httpbis"
+ },
  "RFC8943": {
   "area": "art",
   "keywords": [
