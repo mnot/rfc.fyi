@@ -98392,7 +98392,7 @@
    "Compression"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Zstandard Compression and the application/zstd Media Type"
  },
@@ -103251,6 +103251,15 @@
   "title": "Guidelines for Defining Packet Timestamps",
   "wg": "ntp"
  },
+ "RFC8878": {
+  "keywords": [
+   "compression"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Zstandard Compression and the 'application/zstd' Media Type"
+ },
  "RFC8879": {
   "area": "sec",
   "keywords": [
@@ -104382,6 +104391,21 @@
   "stream": "irtf",
   "title": "Network Coding for Satellite Systems"
  },
+ "RFC8976": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "DNSSEC",
+   "Checksum",
+   "Hash",
+   "Zone Transfer"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Message Digest for DNS Zones",
+  "wg": "dnsop"
+ },
  "RFC8977": {
   "area": "art",
   "keywords": [
@@ -104419,6 +104443,18 @@
   "stream": "ietf",
   "title": "Subscriber and Performance Policy Identifier Context Headers in the Network Service Header (NSH)",
   "wg": "sfc"
+ },
+ "RFC8982": {
+  "area": "art",
+  "keywords": [
+   "RDAP",
+   "Partial response"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration Data Access Protocol (RDAP) Partial Response",
+  "wg": "regext"
  },
  "RFC8989": {
   "keywords": [],
