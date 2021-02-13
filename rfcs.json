@@ -102524,6 +102524,17 @@
   "title": "Deprecating Any-Source Multicast (ASM) for Interdomain Multicast",
   "wg": "mboned"
  },
+ "RFC8816": {
+  "area": "art",
+  "keywords": [
+   "SIP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Secure Telephone Identity Revisited (STIR) Out-of-Band Architecture and Use Cases",
+  "wg": "stir"
+ },
  "RFC8817": {
   "area": "art",
   "keywords": [
@@ -104025,6 +104036,19 @@
   "title": "Secret Key Transaction Authentication for DNS (TSIG)",
   "wg": "dnsop"
  },
+ "RFC8946": {
+  "area": "art",
+  "keywords": [
+   "SIP",
+   "STIR",
+   "Identity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Personal Assertion Token (PASSporT) Extension for Diverted Calls",
+  "wg": "stir"
+ },
  "RFC8947": {
   "area": "int",
   "keywords": [],
@@ -104455,6 +104479,25 @@
   "stream": "ietf",
   "title": "Registration Data Access Protocol (RDAP) Partial Response",
   "wg": "regext"
+ },
+ "RFC8983": {
+  "area": "sec",
+  "keywords": [
+   "IPv4 service continuity",
+   "VoLTE",
+   "Handover",
+   "Service continuity",
+   "3GPP",
+   "IPv6 transition",
+   "TS.24302",
+   "PDP context",
+   "PDP type"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet Key Exchange Protocol Version 2 (IKEv2) Notification Status Types for IPv4/IPv6 Coexistence",
+  "wg": "ipsecme"
  },
  "RFC8989": {
   "keywords": [],
