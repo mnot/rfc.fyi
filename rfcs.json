@@ -104519,6 +104519,19 @@
   "title": "The RACK-TLP Loss Detection Algorithm for TCP",
   "wg": "tcpm"
  },
+ "RFC8986": {
+  "area": "rtg",
+  "keywords": [
+   "SRv6",
+   "Segment Routing",
+   "IPv6 Segment Routing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing over IPv6 (SRv6) Network Programming",
+  "wg": "spring"
+ },
  "RFC8989": {
   "keywords": [],
   "level": "experimental",
