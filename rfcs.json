@@ -55828,7 +55828,7 @@
    "crypto-based address changing"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Privacy Extensions for Stateless Address Autoconfiguration in IPv6",
   "wg": "ipv6"
@@ -104475,6 +104475,20 @@
   "stream": "iab",
   "title": "Report from the IAB Workshop on Design Expectations vs. Deployment Reality in Protocol Development"
  },
+ "RFC8981": {
+  "area": "int",
+  "keywords": [
+   "privacy",
+   "anonymity",
+   "unlinkability",
+   "crypto-based address changing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Temporary Address Extensions for Stateless Address Autoconfiguration in IPv6",
+  "wg": "6man"
+ },
  "RFC8982": {
   "area": "art",
   "keywords": [
@@ -104531,6 +104545,21 @@
   "stream": "ietf",
   "title": "Segment Routing over IPv6 (SRv6) Network Programming",
   "wg": "spring"
+ },
+ "RFC8987": {
+  "area": "int",
+  "keywords": [
+   "Prefix Delegation",
+   "DHCPv6 relay",
+   "Delegating router",
+   "Requesting router",
+   "Delegating relay"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DHCPv6 Prefix Delegating Relay Requirements",
+  "wg": "dhc"
  },
  "RFC8989": {
   "keywords": [],
