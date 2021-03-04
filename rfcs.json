@@ -38562,7 +38562,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Internet Content Adaptation Protocol (ICAP)"
  },
  "RFC3508": {
