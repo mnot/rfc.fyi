@@ -104443,6 +104443,15 @@
   "title": "Registration Data Access Protocol (RDAP) Query Parameters for Result Sorting and Paging",
   "wg": "regext"
  },
+ "RFC8978": {
+  "area": "ops",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Reaction of IPv6 Stateless Address Autoconfiguration (SLAAC) to Flash-Renumbering Events",
+  "wg": "v6ops"
+ },
  "RFC8979": {
   "area": "rtg",
   "keywords": [
@@ -104567,6 +104576,18 @@
   "status": "current",
   "stream": "ietf",
   "title": "Additional Criteria for Nominating Committee Eligibility"
+ },
+ "RFC8998": {
+  "keywords": [
+   "cryptography",
+   "encryption",
+   "authentication",
+   "network security"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "ShangMi (SM) Cipher Suites for TLS 1.3"
  },
  "RFC9003": {
   "area": "rtg",
