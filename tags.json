@@ -176,7 +176,7 @@
                 "RFC7686",
                 "RFC7706",
                 "RFC7719",
-                "RFC7766"
+                "RFC7766",
                 "RFC7793",
                 "RFC7816",
                 "RFC7828",
@@ -211,7 +211,7 @@
                 "RFC8914",
                 "RFC8932",
                 "RFC8945",
-                "RFC8976",
+                "RFC8976"
             ]
         },
         "IETF Standards Process": {
