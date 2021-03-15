@@ -410,7 +410,10 @@ $traceurRuntime.registerModule("client.js", [], function() {
       });
     }
     if (!userInput) {
-      var relevantTags = {'collection': new Set(tags['collection'].keys())};
+      var relevantTags = {
+        'collection': new Set(tags['collection'].keys()),
+        'stream': new Set(tags['stream'].keys())
+      };
       showTags(relevantTags, false);
     } else if (activeTags.has('collection')) {
       showRelevantTags(relevantRfcs);
