@@ -70,9 +70,9 @@ li {
   flex: 0;
 }
 
-.noresults #collection {
+.noresults .tags {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 1em auto;
 }
 
 input#search {
@@ -185,7 +185,7 @@ h2 {
     margin: 0;
   }
 
-  .start, .noresults #collection {
+  .start, .noresults .tags {
     width: 100%;
     margin: 1em 0;
   }

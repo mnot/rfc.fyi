@@ -179,7 +179,10 @@ function showRfcs () {
   }
   // tags
   if (!userInput) { // default screen
-    let relevantTags = {'collection': new Set(tags['collection'].keys())}
+    let relevantTags = {
+      'collection': new Set(tags['collection'].keys()),
+      'stream': new Set(tags['stream'].keys())
+    }
     showTags(relevantTags, false)
   } else if (activeTags.has('collection')) { // show a collection
     showRelevantTags(relevantRfcs)
