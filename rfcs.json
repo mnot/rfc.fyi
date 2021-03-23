@@ -104601,5 +104601,19 @@
   "stream": "ietf",
   "title": "Extended BGP Administrative Shutdown Communication",
   "wg": "idr"
+ },
+ "RFC9007": {
+  "area": "art",
+  "keywords": [
+   "JMAP",
+   "JSON",
+   "email",
+   "MDN"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Handling Message Disposition Notification with the JSON Meta Application Protocol (JMAP)",
+  "wg": "jmap"
  }
 }
