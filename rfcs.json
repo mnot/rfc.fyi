@@ -40451,7 +40451,7 @@
    "post office protocol",
    "internet message access"
   ],
-  "level": "historic",
+  "level": "experimental",
   "status": "current",
   "stream": "independent",
   "title": "The Mailbox Update (MUPDATE) Distributed Mailbox Database Protocol"
@@ -51016,7 +51016,7 @@
   "keywords": [
    "midcom"
   ],
-  "level": "historic",
+  "level": "experimental",
   "status": "current",
   "stream": "independent",
   "title": "NEC's Simple Middlebox Configuration (SIMCO) Protocol Version 3.0"
@@ -56790,7 +56790,7 @@
  },
  "RFC5024": {
   "keywords": [],
-  "level": "historic",
+  "level": "informational",
   "status": "current",
   "stream": "independent",
   "title": "ODETTE File Transfer Protocol 2.0"
@@ -62203,7 +62203,7 @@
    "voip",
    "voice over internet protocol"
   ],
-  "level": "historic",
+  "level": "informational",
   "status": "current",
   "stream": "independent",
   "title": "IAX: Inter-Asterisk eXchange Version 2"
@@ -69410,7 +69410,7 @@
    "access control",
    "certificates"
   ],
-  "level": "historic",
+  "level": "informational",
   "status": "current",
   "stream": "independent",
   "title": "Transport Layer Security (TLS) Authorization Using KeyNote"
@@ -86921,7 +86921,7 @@
    "SupplementalData",
    "DTCP"
   ],
-  "level": "historic",
+  "level": "informational",
   "status": "current",
   "stream": "independent",
   "title": "Transport Layer Security (TLS) Authorization Using Digital Transmission Content Protection (DTCP) Certificates"
