@@ -104625,6 +104625,27 @@
   "title": "Extended BGP Administrative Shutdown Communication",
   "wg": "idr"
  },
+ "RFC9006": {
+  "area": "int",
+  "keywords": [
+   "constrained node networks",
+   "CNNs",
+   "HTTP",
+   "CoAP",
+   "MQTT",
+   "6LoWPAN",
+   "6Lo",
+   "IEEE 802.15.4",
+   "Bluetooth Low Energy",
+   "Contiki",
+   "uIP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TCP Usage Guidance in the Internet of Things (IoT)",
+  "wg": "lwig"
+ },
  "RFC9007": {
   "area": "art",
   "keywords": [
