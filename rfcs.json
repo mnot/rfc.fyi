@@ -104625,6 +104625,18 @@
   "title": "Extended BGP Administrative Shutdown Communication",
   "wg": "idr"
  },
+ "RFC9005": {
+  "area": "rtg",
+  "keywords": [
+   "Association",
+   "Policy"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extension for Associating Policies and Label Switched Paths (LSPs)",
+  "wg": "pce"
+ },
  "RFC9006": {
   "area": "int",
   "keywords": [
