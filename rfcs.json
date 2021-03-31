@@ -104671,5 +104671,17 @@
   "stream": "ietf",
   "title": "Handling Message Disposition Notification with the JSON Meta Application Protocol (JMAP)",
   "wg": "jmap"
+ },
+ "RFC9016": {
+  "area": "rtg",
+  "keywords": [
+   "DetNet",
+   "Flow and Service Information Model"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Flow and Service Information Model for Deterministic Networking (DetNet)",
+  "wg": "detnet"
  }
 }
