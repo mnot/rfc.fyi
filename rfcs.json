@@ -102594,6 +102594,18 @@
   "stream": "ietf",
   "title": "URI Design and Ownership"
  },
+ "RFC8821": {
+  "area": "rtg",
+  "keywords": [
+   "Centralized Control Dynamic Routing",
+   "CCDR"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PCE-Based Traffic Engineering (TE) in Native IP Networks",
+  "wg": "teas"
+ },
  "RFC8825": {
   "area": "art",
   "keywords": [],
@@ -104690,5 +104702,17 @@
   "stream": "ietf",
   "title": "Flow and Service Information Model for Deterministic Networking (DetNet)",
   "wg": "detnet"
+ },
+ "RFC9018": {
+  "area": "ops",
+  "keywords": [
+   "Client",
+   "Hash"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Interoperable Domain Name System (DNS) Server Cookies",
+  "wg": "dnsop"
  }
 }
