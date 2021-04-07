@@ -62369,7 +62369,7 @@
    "international data encryption algorithm"
   ],
   "level": "historic",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "DES and IDEA Cipher Suites for Transport Layer Security (TLS)",
   "wg": "tls"
@@ -70195,7 +70195,7 @@
    "bot remediation",
    "bot notification"
   ],
-  "level": "informational",
+  "level": "historic",
   "status": "current",
   "stream": "independent",
   "title": "Comcast's Web Notification System Design"
@@ -86215,7 +86215,7 @@
   "area": "sec",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "TLS Fallback Signaling Cipher Suite Value (SCSV) for Preventing Protocol Downgrade Attacks",
   "wg": "tls"
@@ -102594,6 +102594,18 @@
   "stream": "ietf",
   "title": "URI Design and Ownership"
  },
+ "RFC8821": {
+  "area": "rtg",
+  "keywords": [
+   "Centralized Control Dynamic Routing",
+   "CCDR"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PCE-Based Traffic Engineering (TE) in Native IP Networks",
+  "wg": "teas"
+ },
  "RFC8825": {
   "area": "art",
   "keywords": [],
@@ -104238,6 +104250,13 @@
   "title": "Requirements for Time-Based Loss Detection",
   "wg": "tcpm"
  },
+ "RFC8962": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Establishing the Protocol Police"
+ },
  "RFC8963": {
   "keywords": [],
   "level": "informational",
@@ -104577,6 +104596,29 @@
   "stream": "ietf",
   "title": "Additional Criteria for Nominating Committee Eligibility"
  },
+ "RFC8996": {
+  "area": "sec",
+  "keywords": [
+   "TLS",
+   "deprecate",
+   "TLSv1.0",
+   "TLSv1.1"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecating TLS 1.0 and TLS 1.1",
+  "wg": "tls"
+ },
+ "RFC8997": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecation of TLS 1.1 for Email Submission and Access",
+  "wg": "uta"
+ },
  "RFC8998": {
   "keywords": [
    "cryptography",
@@ -104601,5 +104643,76 @@
   "stream": "ietf",
   "title": "Extended BGP Administrative Shutdown Communication",
   "wg": "idr"
+ },
+ "RFC9005": {
+  "area": "rtg",
+  "keywords": [
+   "Association",
+   "Policy"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extension for Associating Policies and Label Switched Paths (LSPs)",
+  "wg": "pce"
+ },
+ "RFC9006": {
+  "area": "int",
+  "keywords": [
+   "constrained node networks",
+   "CNNs",
+   "HTTP",
+   "CoAP",
+   "MQTT",
+   "6LoWPAN",
+   "6Lo",
+   "IEEE 802.15.4",
+   "Bluetooth Low Energy",
+   "Contiki",
+   "uIP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TCP Usage Guidance in the Internet of Things (IoT)",
+  "wg": "lwig"
+ },
+ "RFC9007": {
+  "area": "art",
+  "keywords": [
+   "JMAP",
+   "JSON",
+   "email",
+   "MDN"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Handling Message Disposition Notification with the JSON Meta Application Protocol (JMAP)",
+  "wg": "jmap"
+ },
+ "RFC9016": {
+  "area": "rtg",
+  "keywords": [
+   "DetNet",
+   "Flow and Service Information Model"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Flow and Service Information Model for Deterministic Networking (DetNet)",
+  "wg": "detnet"
+ },
+ "RFC9018": {
+  "area": "ops",
+  "keywords": [
+   "Client",
+   "Hash"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Interoperable Domain Name System (DNS) Server Cookies",
+  "wg": "dnsop"
  }
 }
