@@ -242,7 +242,7 @@ function renderRfc (rfcName, rfcData, target) {
   var sep = document.createTextNode(': ')
   rfcSpan.appendChild(sep)
   var rfcLink = document.createElement('a')
-  rfcLink.href = 'https://tools.ietf.org/html/' + rfcName.toLowerCase()
+  rfcLink.href = `https://www.rfc-editor.org/rfc/${rfcName.toLowerCase()}.html`
   rfcSpan.appendChild(rfcLink)
   var rfcTitle = document.createTextNode(rfcData.title)
   rfcLink.appendChild(rfcTitle)
