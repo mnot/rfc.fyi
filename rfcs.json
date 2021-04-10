@@ -104691,6 +104691,47 @@
   "title": "Handling Message Disposition Notification with the JSON Meta Application Protocol (JMAP)",
   "wg": "jmap"
  },
+ "RFC9008": {
+  "area": "rtg",
+  "keywords": [
+   "RPL Option",
+   "6LoWPAN",
+   "RFC 6553"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using RPI Option Type, Routing Header for Source Routes, and IPv6-in-IPv6 Encapsulation in the RPL Data Plane",
+  "wg": "roll"
+ },
+ "RFC9009": {
+  "area": "rtg",
+  "keywords": [
+   "NPDAO",
+   "DCO",
+   "no-path",
+   "route",
+   "cleanup"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Efficient Route Invalidation",
+  "wg": "roll"
+ },
+ "RFC9010": {
+  "area": "rtg",
+  "keywords": [
+   "IPv6",
+   "ND",
+   "Redistribution"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Routing for RPL (Routing Protocol for Low-Power and Lossy Networks) Leaves",
+  "wg": "roll"
+ },
  "RFC9016": {
   "area": "rtg",
   "keywords": [
@@ -104702,6 +104743,21 @@
   "stream": "ietf",
   "title": "Flow and Service Information Model for Deterministic Networking (DetNet)",
   "wg": "detnet"
+ },
+ "RFC9017": {
+  "area": "rtg",
+  "keywords": [
+   "MPLS",
+   "Extended Special-Purpose Label",
+   "Base Special-Purpose Label",
+   "Reserved Label",
+   "Entropy Label Indicator"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Special-Purpose Label Terminology",
+  "wg": "mpls"
  },
  "RFC9018": {
   "area": "ops",
