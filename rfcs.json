@@ -102606,6 +102606,19 @@
   "title": "PCE-Based Traffic Engineering (TE) in Native IP Networks",
   "wg": "teas"
  },
+ "RFC8822": {
+  "keywords": [
+   "PPPoE",
+   "W-AGF",
+   "QFI",
+   "RQI",
+   "WWC"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "5G Wireless Wireline Convergence User Plane Encapsulation (5WE)"
+ },
  "RFC8825": {
   "area": "art",
   "keywords": [],
@@ -104770,5 +104783,17 @@
   "stream": "ietf",
   "title": "Interoperable Domain Name System (DNS) Server Cookies",
   "wg": "dnsop"
+ },
+ "RFC9026": {
+  "area": "rtg",
+  "keywords": [
+   "BFD",
+   "P2MP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multicast VPN Fast Upstream Failover",
+  "wg": "bess"
  }
 }
