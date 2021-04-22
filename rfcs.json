@@ -102619,6 +102619,18 @@
   "stream": "ietf",
   "title": "5G Wireless Wireline Convergence User Plane Encapsulation (5WE)"
  },
+ "RFC8823": {
+  "area": "sec",
+  "keywords": [
+   "ACME",
+   "S/MIME"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensions to Automatic Certificate Management Environment for End-User S/MIME Certificates",
+  "wg": "acme"
+ },
  "RFC8825": {
   "area": "art",
   "keywords": [],
