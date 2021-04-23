@@ -104757,6 +104757,39 @@
   "title": "Routing for RPL (Routing Protocol for Low-Power and Lossy Networks) Leaves",
   "wg": "roll"
  },
+ "RFC9011": {
+  "area": "int",
+  "keywords": [
+   "header compression",
+   "compression",
+   "fragmentation",
+   "static context",
+   "rule-based",
+   "LPWAN",
+   "LPWANs",
+   "low power",
+   "low-power",
+   "LoRa",
+   "LoRaWAN",
+   "IoT",
+   "Internet of Things",
+   "adaptation layer",
+   "UDP",
+   "IPv6",
+   "sensor network",
+   "wireless sensor network",
+   "802.15.4",
+   "constrained network",
+   "constrained node",
+   "constrained-node network",
+   "SCHC"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Static Context Header Compression and Fragmentation (SCHC) over LoRaWAN",
+  "wg": "lpwan"
+ },
  "RFC9016": {
   "area": "rtg",
   "keywords": [
