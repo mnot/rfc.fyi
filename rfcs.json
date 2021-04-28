@@ -62900,7 +62900,7 @@
    "6over4"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The BGP Encapsulation Subsequent Address Family Identifier (SAFI) and the BGP Tunnel Encapsulation Attribute",
   "wg": "softwire"
@@ -63592,7 +63592,7 @@
    "subsequent address family identifier"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "BGP IPsec Tunnel Encapsulation Attribute",
   "wg": "softwire"
@@ -104789,6 +104789,28 @@
   "stream": "ietf",
   "title": "Static Context Header Compression and Fragmentation (SCHC) over LoRaWAN",
   "wg": "lpwan"
+ },
+ "RFC9012": {
+  "area": "rtg",
+  "keywords": [
+   "BGP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The BGP Tunnel Encapsulation Attribute",
+  "wg": "idr"
+ },
+ "RFC9013": {
+  "area": "rtg",
+  "keywords": [
+   "BGP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Advertisement of Tunnel Encapsulations",
+  "wg": "ospf"
  },
  "RFC9016": {
   "area": "rtg",
