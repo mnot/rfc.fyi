@@ -104851,6 +104851,32 @@
   "title": "Interoperable Domain Name System (DNS) Server Cookies",
   "wg": "dnsop"
  },
+ "RFC9019": {
+  "area": "sec",
+  "keywords": [
+   "IoT",
+   "update",
+   "software",
+   "firmware",
+   "constrained",
+   "Secure",
+   "Boot"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Firmware Update Architecture for Internet of Things",
+  "wg": "suit"
+ },
+ "RFC9025": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Data Plane: MPLS over UDP/IP",
+  "wg": "detnet"
+ },
  "RFC9026": {
   "area": "rtg",
   "keywords": [
@@ -104862,5 +104888,20 @@
   "stream": "ietf",
   "title": "Multicast VPN Fast Upstream Failover",
   "wg": "bess"
+ },
+ "RFC9035": {
+  "area": "rtg",
+  "keywords": [
+   "IoT",
+   "Header Compression",
+   "Source Routing Header",
+   "Hop-by-Hop Header",
+   "RPL artifacts"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Routing Protocol for Low-Power and Lossy Networks (RPL) Destination-Oriented Directed Acyclic Graph (DODAG) Configuration Option for the 6LoWPAN Routing Header",
+  "wg": "roll"
  }
 }
