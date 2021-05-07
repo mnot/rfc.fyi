@@ -97005,7 +97005,10 @@
  "RFC8366": {
   "area": "ops",
   "keywords": [
-   "voucher"
+   "voucher",
+   "autonomic networking",
+   "autonomous operation",
+   "self-management"
   ],
   "level": "std",
   "status": "current",
@@ -97022,7 +97025,11 @@
  },
  "RFC8368": {
   "area": "ops",
-  "keywords": [],
+  "keywords": [
+   "autonomic networking",
+   "autonomous operation",
+   "self-management"
+  ],
   "level": "informational",
   "status": "current",
   "stream": "ietf",
