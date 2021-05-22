@@ -104628,6 +104628,120 @@
   "stream": "ietf",
   "title": "Additional Criteria for Nominating Committee Eligibility"
  },
+ "RFC8990": {
+  "area": "ops",
+  "keywords": [
+   "autonomic networking",
+   "autonomous operation",
+   "self-management"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "GeneRic Autonomic Signaling Protocol (GRASP)",
+  "wg": "anima"
+ },
+ "RFC8991": {
+  "area": "ops",
+  "keywords": [
+   "Autonomic Networking",
+   "Autonomous Operation",
+   "Self-Management"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "GeneRic Autonomic Signaling Protocol Application Program Interface (GRASP API)",
+  "wg": "anima"
+ },
+ "RFC8992": {
+  "area": "ops",
+  "keywords": [
+   "Autonomic Networking",
+   "Prefix Management"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Autonomic IPv6 Edge Prefix Management in Large-Scale Networks",
+  "wg": "anima"
+ },
+ "RFC8993": {
+  "area": "ops",
+  "keywords": [
+   "autonomic networking",
+   "autonomous operation",
+   "self-management",
+   "infrastructure",
+   "intent",
+   "autonomic control plane"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Reference Model for Autonomic Networking",
+  "wg": "anima"
+ },
+ "RFC8994": {
+  "area": "ops",
+  "keywords": [
+   "addressing-scheme",
+   "ANI",
+   "autonomic networking",
+   "autonomous operation",
+   "BRSKI",
+   "certificate",
+   "Data-Plane",
+   "domain",
+   "DTLS",
+   "DULL",
+   "EST",
+   "GRASP",
+   "IDevID",
+   "inband",
+   "IPsec",
+   "IPv6",
+   "LDevID",
+   "loopback-interface",
+   "NOC",
+   "OAM",
+   "out-of-band",
+   "registrar",
+   "renewal",
+   "RPL",
+   "secure",
+   "self-management",
+   "ULA",
+   "VPN",
+   "VRF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Autonomic Control Plane (ACP)",
+  "wg": "anima"
+ },
+ "RFC8995": {
+  "area": "ops",
+  "keywords": [
+   "Autonomic Networking",
+   "Autonomous Operation",
+   "Self-Management",
+   "voucher-request",
+   "onboarding",
+   "zero-touch",
+   "voucher",
+   "RFC8366 voucher",
+   "IoT-onboarding",
+   "IoT-zero-touch",
+   "network-join"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bootstrapping Remote Secure Key Infrastructure (BRSKI)",
+  "wg": "anima"
+ },
  "RFC8996": {
   "area": "sec",
   "keywords": [
