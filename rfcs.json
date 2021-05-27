@@ -104790,6 +104790,19 @@
   "title": "Extended BGP Administrative Shutdown Communication",
   "wg": "idr"
  },
+ "RFC9004": {
+  "area": "ops",
+  "keywords": [
+   "Buffer size",
+   "Buffer delay",
+   "Correction Factor"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates for the Back-to-Back Frame Benchmark in RFC 2544",
+  "wg": "bmwg"
+ },
  "RFC9005": {
   "area": "rtg",
   "keywords": [
@@ -104933,6 +104946,21 @@
   "title": "OSPF Advertisement of Tunnel Encapsulations",
   "wg": "ospf"
  },
+ "RFC9014": {
+  "area": "rtg",
+  "keywords": [
+   "DCI",
+   "UMR",
+   "Unknown MAC Route",
+   "I-ES",
+   "I-ESI"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Interconnect Solution for Ethernet VPN (EVPN) Overlay Networks",
+  "wg": "bess"
+ },
  "RFC9016": {
   "area": "rtg",
   "keywords": [
@@ -104988,6 +105016,17 @@
   "stream": "ietf",
   "title": "A Firmware Update Architecture for Internet of Things",
   "wg": "suit"
+ },
+ "RFC9020": {
+  "area": "rtg",
+  "keywords": [
+   "mpls"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for Segment Routing",
+  "wg": "spring"
  },
  "RFC9025": {
   "area": "rtg",
