@@ -103598,6 +103598,15 @@
   "stream": "independent",
   "title": "TLS Authentication Using Intelligent Transport System (ITS) Certificates"
  },
+ "RFC8903": {
+  "area": "sec",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use Cases for DDoS Open Threat Signaling",
+  "wg": "dots"
+ },
  "RFC8904": {
   "keywords": [
    "DNSWL",
@@ -104777,6 +104786,71 @@
   "stream": "independent",
   "title": "ShangMi (SM) Cipher Suites for TLS 1.3"
  },
+ "RFC8999": {
+  "area": "tsv",
+  "keywords": [
+   "crypto",
+   "next generation",
+   "protocol",
+   "secure",
+   "transport",
+   "UDP",
+   "invariants"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Version-Independent Properties of QUIC",
+  "wg": "quic"
+ },
+ "RFC9000": {
+  "area": "tsv",
+  "keywords": [
+   "multipath",
+   "next generations",
+   "protocol",
+   "sctp++",
+   "secure",
+   "smart",
+   "tcp/2",
+   "tcpng",
+   "transport",
+   "transport-ng"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "QUIC: A UDP-Based Multiplexed and Secure Transport",
+  "wg": "quic"
+ },
+ "RFC9001": {
+  "area": "tsv",
+  "keywords": [
+   "crypto",
+   "opportunistic encryption",
+   "plaintext quic"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using TLS to Secure QUIC",
+  "wg": "quic"
+ },
+ "RFC9002": {
+  "area": "tsv",
+  "keywords": [
+   "bbr",
+   "delay-sensitive congestion control",
+   "fec",
+   "loss-tolerant congestion control",
+   "next generation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "QUIC Loss Detection and Congestion Control",
+  "wg": "quic"
+ },
  "RFC9003": {
   "area": "rtg",
   "keywords": [
@@ -105027,6 +105101,16 @@
   "stream": "ietf",
   "title": "YANG Data Model for Segment Routing",
   "wg": "spring"
+ },
+ "RFC9021": {
+  "keywords": [
+   "COSE",
+   "WalnutDSA"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Use of the Walnut Digital Signature Algorithm with CBOR Object Signing and Encryption (COSE)"
  },
  "RFC9025": {
   "area": "rtg",
