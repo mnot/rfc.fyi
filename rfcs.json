@@ -105112,6 +105112,20 @@
   "stream": "independent",
   "title": "Use of the Walnut Digital Signature Algorithm with CBOR Object Signing and Encryption (COSE)"
  },
+ "RFC9022": {
+  "area": "art",
+  "keywords": [
+   "data escrow",
+   "registry",
+   "domain name",
+   "domain name registration data"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Domain Name Registration Data (DNRD) Objects Mapping",
+  "wg": "regext"
+ },
  "RFC9025": {
   "area": "rtg",
   "keywords": [],
