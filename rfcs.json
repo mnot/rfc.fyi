@@ -105147,6 +105147,60 @@
   "title": "Multicast VPN Fast Upstream Failover",
   "wg": "bess"
  },
+ "RFC9030": {
+  "area": "int",
+  "keywords": [
+   "deterministic wireless",
+   "radio",
+   "mesh"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Architecture for IPv6 over the Time-Slotted Channel Hopping Mode of IEEE 802.15.4 (6TiSCH)",
+  "wg": "6tisch"
+ },
+ "RFC9031": {
+  "area": "int",
+  "keywords": [
+   "bootstrapping",
+   "onboarding",
+   "oscore"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Constrained Join Protocol (CoJP) for 6TiSCH",
+  "wg": "6tisch"
+ },
+ "RFC9032": {
+  "area": "int",
+  "keywords": [
+   "BRSKI",
+   "enroll",
+   "zero-touch",
+   "DODAG balancing",
+   "LLN balancing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Encapsulation of 6TiSCH Join and Enrollment Information Elements",
+  "wg": "6tisch"
+ },
+ "RFC9033": {
+  "area": "int",
+  "keywords": [
+   "TSCH",
+   "communication schedule",
+   "6P"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "6TiSCH Minimal Scheduling Function (MSF)",
+  "wg": "6tisch"
+ },
  "RFC9035": {
   "area": "rtg",
   "keywords": [
@@ -105161,5 +105215,26 @@
   "stream": "ietf",
   "title": "A Routing Protocol for Low-Power and Lossy Networks (RPL) Destination-Oriented Directed Acyclic Graph (DODAG) Configuration Option for the 6LoWPAN Routing Header",
   "wg": "roll"
+ },
+ "RFC9038": {
+  "area": "art",
+  "keywords": [
+   "login",
+   "greeting",
+   "URI",
+   "namespace",
+   "response",
+   "general",
+   "poll",
+   "object-level",
+   "command-response",
+   "signal",
+   "signaling"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensible Provisioning Protocol (EPP) Unhandled Namespaces",
+  "wg": "regext"
  }
 }
