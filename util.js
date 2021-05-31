@@ -1,10 +1,10 @@
 /* global XMLHttpRequest */
 
-var outstanding = 0 // outstanding fetches
-var doneFuncs = [] // things to do when fetching is done
+let outstanding = 0 // outstanding fetches
+const doneFuncs = [] // things to do when fetching is done
 
 export function loadJson (url, func) {
-  var req = new XMLHttpRequest()
+  const req = new XMLHttpRequest()
   req.onreadystatechange = function () {
     if (req.readyState === 4) {
       outstanding -= 1
@@ -35,31 +35,31 @@ function loadDone () {
 }
 
 export function getParameterByName (name) {
-  var url = window.location.href
+  const url = window.location.href
   name = name.replace(/[[\]]/g, '\\$&')
-  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
-  var results = regex.exec(url)
+  const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
+  const results = regex.exec(url)
   if (!results) return null
   if (!results[2]) return ''
   return decodeURIComponent(results[2].replace(/\+/g, ' '))
 }
 
 export function genColour (str) {
-  var hash = 0
+  let hash = 0
   for (let i = 0; i < str.length; i++) {
     hash = str.charCodeAt(i) + ((hash << 5) - hash)
   }
-  var colour = '#'
+  let colour = '#'
   for (let i = 0; i < 3; i++) {
-    let value = (hash >> (i * 8)) & 0xFF
+    const value = (hash >> (i * 8)) & 0xFF
     colour += ('00' + value.toString(16)).substr(-2)
   }
   return colour
 }
 
 export function revColour (inColour) {
-  var rgb = inColour.match(/\d+/g)
-  var luma = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2] // ITU-R BT.709
+  const rgb = inColour.match(/\d+/g)
+  const luma = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2] // ITU-R BT.709
   if (luma < 128) {
     return '#fff'
   } else {
@@ -68,8 +68,8 @@ export function revColour (inColour) {
 }
 
 Set.prototype.intersection = function (setB) { // eslint-disable-line
-  var intersection = new Set()
-  for (let elem of setB) {
+  const intersection = new Set()
+  for (const elem of setB) {
     if (this.has(elem)) {
       intersection.add(elem)
     }
@@ -78,19 +78,19 @@ Set.prototype.intersection = function (setB) { // eslint-disable-line
 }
 
 Set.prototype.union = function (setB) { // eslint-disable-line
-  var union = new Set()
-  for (let elemA of this) {
+  const union = new Set()
+  for (const elemA of this) {
     union.add(elemA)
   }
-  for (let elemB of setB) {
+  for (const elemB of setB) {
     union.add(elemB)
   }
   return union
 }
 
 Set.prototype.difference = function (setB) { // eslint-disable-line
-  var difference = new Set()
-  for (let elem of this) {
+  const difference = new Set()
+  for (const elem of this) {
     if (!setB.has(elem)) {
       difference.add(elem)
     }
@@ -99,15 +99,15 @@ Set.prototype.difference = function (setB) { // eslint-disable-line
 }
 
 Object.prototype.forEach = function (func) { // eslint-disable-line
-  for (let item in this) {
-    if (this.hasOwnProperty(item)) {
+  for (const item in this) {
+    if (this.hasOwnProperty(item)) { // eslint-disable-line
       func(item)
     }
   }
 }
 
 Object.prototype.keys = function () { // eslint-disable-line
-  var keys = []
+  const keys = []
   this.forEach(item => keys.push(item))
   return keys
 }
@@ -124,8 +124,8 @@ Object.prototype.keys = function () { // eslint-disable-line
 */
 export function addDOMLoadEvent (func) {
   if (!window.__load_events) {
-    var init = function () {
-      var i = 0
+    const init = function () {
+      let i = 0
       // quit if this function has already been called
       if (addDOMLoadEvent.done) { return }
       addDOMLoadEvent.done = true
