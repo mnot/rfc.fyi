@@ -298,8 +298,8 @@ $traceurRuntime.registerModule("client.js", [], function() {
   function compute() {
     allRfcs = Object.keys(rfcs);
     allRfcs.sort(rfcSort);
-    allRfcs.forEach(function(rfcNum) {
-      var rfc = rfcs[rfcNum];
+    allRfcs.forEach(function(rfcName) {
+      var rfc = rfcs[rfcName];
       tagTypes.forEach(function(tagType) {
         var tagName = rfc[tagType];
         if (tagName) {
@@ -312,11 +312,11 @@ $traceurRuntime.registerModule("client.js", [], function() {
               active: false
             };
           }
-          tags[tagType][tagName].rfcs.push(rfcNum);
+          tags[tagType][tagName].rfcs.push(rfcName);
         }
       });
-      searchIndex(rfc.title.split(' '), rfcNum, words);
-      searchIndex(rfc.keywords, rfcNum, keywords);
+      searchIndex(rfc.title.split(' '), rfcName, words);
+      searchIndex(rfc.keywords, rfcName, keywords);
     });
   }
   function initTags(tagType, clickHandler) {
@@ -448,26 +448,27 @@ $traceurRuntime.registerModule("client.js", [], function() {
     return filteredRfcs;
   }
   function renderRfc(rfcName, rfcData, target) {
+    var rfcNum = parseInt(rfcName.substring(3));
+    var rfcNumPad = rfcNum.toString().padStart(4, '0');
     var rfcSpan = document.createElement('li');
     rfcSpan.data = rfcData;
     var rfcRef = document.createElement('a');
     rfcRef.className = 'reference';
-    var rfcNum = rfcName.substring(3).padStart(4, '0');
-    rfcRef.href = ("https://www.rfc-editor.org/refs/bibxml/reference.RFC." + rfcNum + ".xml");
+    rfcRef.href = ("https://www.rfc-editor.org/refs/bibxml/reference.RFC." + rfcNumPad + ".xml");
     rfcRef.appendChild(document.createTextNode(rfcName));
     rfcSpan.appendChild(rfcRef);
     var sep = document.createTextNode(': ');
     rfcSpan.appendChild(sep);
     var rfcLink = document.createElement('a');
-    rfcLink.href = ("https://www.rfc-editor.org/rfc/" + rfcName.toLowerCase() + ".html");
+    rfcLink.href = ("https://www.rfc-editor.org/rfc/rfc" + rfcNum + ".html");
     rfcSpan.appendChild(rfcLink);
     var rfcTitle = document.createTextNode(rfcData.title);
     rfcLink.appendChild(rfcTitle);
-    if (rfcs[rfcName].stream && rfcs[rfcName].stream !== 'ietf') {
-      renderTag('stream', rfcs[rfcName].stream, rfcSpan);
+    if (rfcData.stream !== 'ietf') {
+      renderTag('stream', rfcData.stream, rfcSpan);
     }
-    if (rfcs[rfcName].level && rfcs[rfcName].level !== 'std') {
-      renderTag('level', rfcs[rfcName].level, rfcSpan);
+    if (rfcData.level !== 'std') {
+      renderTag('level', rfcData.level, rfcSpan);
     }
     target.appendChild(rfcSpan);
   }
@@ -479,9 +480,9 @@ $traceurRuntime.registerModule("client.js", [], function() {
       if (activeTag)
         relevantTags[tagType].add(activeTag);
     });
-    rfcSet.forEach(function(rfcNum) {
+    rfcSet.forEach(function(rfcName) {
       tagTypes.forEach(function(tagType) {
-        var tagName = rfcs[rfcNum][tagType];
+        var tagName = rfcs[rfcName][tagType];
         if (!verbose && oldTags.includes((tagType + "-" + tagName))) {
           return;
         }
@@ -535,9 +536,9 @@ $traceurRuntime.registerModule("client.js", [], function() {
     var searchPrefix = searchWord.substring(0, prefixLen);
     var matchRfcs = new Set(index.get(searchPrefix));
     if (searchWord.length > prefixLen) {
-      matchRfcs.forEach(function(rfcNum) {
+      matchRfcs.forEach(function(rfcName) {
         var hit = false;
-        var fullItem = rfcs[rfcNum][attr];
+        var fullItem = rfcs[rfcName][attr];
         if (typeof(fullItem) === 'string')
           fullItem = fullItem.split(' ');
         fullItem.forEach(function(item) {
@@ -545,7 +546,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
             hit = true;
         });
         if (!hit)
-          matchRfcs.delete(rfcNum);
+          matchRfcs.delete(rfcName);
       });
     }
     return matchRfcs;
