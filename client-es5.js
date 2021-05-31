@@ -590,7 +590,8 @@ $traceurRuntime.registerModule("client.js", [], function() {
     }, immediate ? 0 : historyDelay * 1000);
   }
   function loadUrl() {
-    var params = new URLSearchParams(window.location.href);
+    var url = new URL(window.location.href);
+    var params = new URLSearchParams(url.search);
     var search = params.get('search') || '';
     document.getElementById('search').value = search;
     searchWords = search.split(' ').filter(function(word) {
@@ -599,6 +600,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
     if (params.has('obsolete')) {
       verbose = true;
     }
+    console.log(("Loading URL: " + searchWords));
     obsoleteTarget.checked = verbose;
     tagTypes.forEach(function(tagType) {
       if (unshownTagTypes.includes(tagType))

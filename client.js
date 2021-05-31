@@ -375,13 +375,15 @@ function updateUrl (immediate = false) {
 }
 
 function loadUrl () {
-  const params = new URLSearchParams(window.location.href)
+  const url = new URL(window.location.href)
+  const params = new URLSearchParams(url.search)
   const search = params.get('search') || ''
   document.getElementById('search').value = search
   searchWords = search.split(' ').filter(word => word)
   if (params.has('obsolete')) {
     verbose = true
   }
+  console.log(`Loading URL: ${searchWords}`)
   obsoleteTarget.checked = verbose
   tagTypes.forEach(tagType => {
     if (unshownTagTypes.includes(tagType)) return
