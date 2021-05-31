@@ -245,6 +245,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
   var tagTypes = ['collection', 'status', 'stream', 'level', 'wg'];
   var unshownTagTypes = ['status'];
   var oldTags = ['status-obsoleted', 'level-historic'];
+  var historyDelay = 1.5;
   var tags = {};
   var activeTags = new Map();
   var verbose = false;
@@ -253,10 +254,11 @@ $traceurRuntime.registerModule("client.js", [], function() {
   var searchWords = [];
   var allRfcs = [];
   var rfcs = {};
+  var historyTimer = 0;
   var tagColours = {
-    'stream': '#678',
-    'level': '#a33',
-    'wg': '#753'
+    stream: '#678',
+    level: '#a33',
+    wg: '#753'
   };
   function init() {
     util.onDone(loadDone);
@@ -319,16 +321,16 @@ $traceurRuntime.registerModule("client.js", [], function() {
             tags[tagType] = {};
           if (!tags[tagType][tagName]) {
             tags[tagType][tagName] = {
-              'colour': '',
-              'rfcs': [],
-              'active': false
+              colour: '',
+              rfcs: [],
+              active: false
             };
           }
           tags[tagType][tagName].rfcs.push(rfcNum);
         }
       });
-      searchIndex(rfc['title'].split(' '), rfcNum, words);
-      searchIndex(rfc['keywords'], rfcNum, keywords);
+      searchIndex(rfc.title.split(' '), rfcNum, words);
+      searchIndex(rfc.keywords, rfcNum, keywords);
     });
   }
   function initTags(tagType, clickHandler) {
@@ -349,7 +351,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
     var tagData = tags[tagType][tagName];
     tagSpan.appendChild(tagContent);
     tagSpan.classList.add('tag');
-    tagSpan.style.backgroundColor = tagData['colour'] || tagColours[tagType] || util.genColour(tagName);
+    tagSpan.style.backgroundColor = tagData.colour || tagColours[tagType] || util.genColour(tagName);
     tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor);
     if (clickHandler) {
       tagSpan.onclick = clickHandler(tagType, tagName);
@@ -395,13 +397,15 @@ $traceurRuntime.registerModule("client.js", [], function() {
     var target = document.getElementById('rfc-list');
     clear(target);
     var searchedRfcs = new Set();
+    var taggedRfcs = new Set();
+    var relevantRfcs = new Set();
     var rfcList = [];
     var userInput = false;
     if (activeTags.size !== 0 || (searchWords.length !== 0 && !isNaN(parseInt(searchWords[0]))) || (searchWords.length !== 0 && searchWords[0].length >= prefixLen)) {
       userInput = true;
-      var taggedRfcs = listTaggedRfcs();
+      taggedRfcs = listTaggedRfcs();
       searchedRfcs = listSearchedRfcs();
-      var relevantRfcs = taggedRfcs.intersection(searchedRfcs);
+      relevantRfcs = taggedRfcs.intersection(searchedRfcs);
       rfcList = Array.from(relevantRfcs);
       rfcList.sort(rfcSort);
       rfcList.forEach(function(item) {
@@ -411,8 +415,8 @@ $traceurRuntime.registerModule("client.js", [], function() {
     }
     if (!userInput) {
       var relevantTags = {
-        'collection': new Set(tags['collection'].keys()),
-        'stream': new Set(tags['stream'].keys())
+        collection: new Set(tags.collection.keys()),
+        stream: new Set(tags.stream.keys())
       };
       showTags(relevantTags, false);
     } else if (activeTags.has('collection')) {
@@ -589,7 +593,13 @@ $traceurRuntime.registerModule("client.js", [], function() {
     if (queries.length > 0)
       url += '?';
     url += queries.join('&');
-    history.pushState({}, '', url);
+    if (historyTimer > 0) {
+      window.clearTimeout(historyTimer);
+    }
+    historyTimer = window.setTimeout(function() {
+      var title = searchWords.join(' ');
+      history.pushState({}, ("rfc.fyi: " + title), url);
+    }, historyDelay * 1000);
   }
   function loadUrl() {
     var search = util.getParameterByName('search') || '';
