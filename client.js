@@ -9,7 +9,7 @@ const oldTags = [
   'status-obsoleted',
   'level-historic'
 ]
-const historyDelay = 1.5 // seconds of inactivity before history is updated
+const historyDelay = 1 // seconds of inactivity before history is updated
 
 let tags = {} // tags and associated rfcs
 const activeTags = new Map() // what tags are active
@@ -135,7 +135,7 @@ function clickTagHandler (tagType, tagName) {
     const tagData = tags[tagType][tagName]
     setTagActivity(tagType, tagName, !tagData.active)
     showRfcs()
-    updateUrl()
+    updateUrl(true)
   }
 }
 
@@ -143,7 +143,7 @@ function deleteHandler () {
   searchTarget.value = ''
   searchWords = []
   showRfcs()
-  updateUrl()
+  updateUrl(true)
 }
 
 function setTagActivity (tagType, tagName, active) {
@@ -338,10 +338,10 @@ function searchLookup (searchWord, index, attr) {
 function showObsoleteHandler (event) {
   verbose = obsoleteTarget.checked
   showRfcs()
-  updateUrl()
+  updateUrl(true)
 }
 
-function updateUrl () {
+function updateUrl (immediate = false) {
   const queries = []
   if (searchWords.length > 0) {
     queries.push('search=' + searchWords.join('%20'))
@@ -370,7 +370,7 @@ function updateUrl () {
   historyTimer = window.setTimeout(function () {
     const title = searchWords.join(' ')
     history.pushState({}, `rfc.fyi: ${title}`, url)
-  }, historyDelay * 1000)
+  }, immediate ? 0 : historyDelay * 1000)
 }
 
 function loadUrl () {
