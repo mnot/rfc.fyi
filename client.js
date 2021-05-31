@@ -364,11 +364,11 @@ function updateUrl (immediate = false) {
   let url = './'
   if (queries.length > 0) url += '?'
   url += queries.join('&')
+  const title = searchWords.join(' ')
   if (historyTimer > 0) {
     window.clearTimeout(historyTimer)
   }
   historyTimer = window.setTimeout(function () {
-    const title = searchWords.join(' ')
     history.pushState({}, `rfc.fyi: ${title}`, url)
   }, immediate ? 0 : historyDelay * 1000)
 }
