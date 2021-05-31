@@ -9,7 +9,6 @@ const oldTags = [
   'status-obsoleted',
   'level-historic'
 ]
-const historyDelay = 1 // seconds of inactivity before history is updated
 
 let tags = {} // tags and associated rfcs
 const activeTags = new Map() // what tags are active
@@ -19,7 +18,6 @@ const keywords = new Map() // index of keyword phrases to RFCs containing them
 let searchWords = [] // words the user is searching for
 let allRfcs = [] // list of all RFC numbers
 let rfcs = {} // RFC objects
-let historyTimer = 0 // holds timeout event for history update
 
 const tagColours = {
   stream: '#678',
@@ -65,7 +63,7 @@ function installFormHandlers () {
   deleteTarget = document.getElementById('delete')
   deleteTarget.onclick = deleteHandler
   form = document.forms[0]
-  form.onsubmit = function () { return false }
+  form.onsubmit = searchSubmit
   title = document.getElementById('title')
   title.onclick = function () {
     window.location = '/'
@@ -135,7 +133,7 @@ function clickTagHandler (tagType, tagName) {
     const tagData = tags[tagType][tagName]
     setTagActivity(tagType, tagName, !tagData.active)
     showRfcs()
-    updateUrl(true)
+    updateUrl()
   }
 }
 
@@ -143,7 +141,7 @@ function deleteHandler () {
   searchTarget.value = ''
   searchWords = []
   showRfcs()
-  updateUrl(true)
+  updateUrl()
 }
 
 function setTagActivity (tagType, tagName, active) {
@@ -318,6 +316,11 @@ function searchInput () {
   updateUrl()
 }
 
+function searchSubmit () {
+  updateUrl(true)
+  return false
+}
+
 function searchLookup (searchWord, index, attr) {
   searchWord = cleanString(searchWord)
   const searchPrefix = searchWord.substring(0, prefixLen)
@@ -339,10 +342,10 @@ function searchLookup (searchWord, index, attr) {
 function showObsoleteHandler (event) {
   verbose = obsoleteTarget.checked
   showRfcs()
-  updateUrl(true)
+  updateUrl()
 }
 
-function updateUrl (immediate = false) {
+function updateUrl (inHistory = false) {
   const queries = []
   if (searchWords.length > 0) {
     queries.push('search=' + searchWords.join('%20'))
@@ -365,13 +368,12 @@ function updateUrl (immediate = false) {
   let url = './'
   if (queries.length > 0) url += '?'
   url += queries.join('&')
-  const title = searchWords.join(' ')
-  if (historyTimer > 0) {
-    window.clearTimeout(historyTimer)
+  const title = `rfc.fyi: ${searchWords.join(' ')}`
+  if (inHistory) {
+    history.pushState({}, title, url)
+  } else {
+    history.replaceState({}, title, url)
   }
-  historyTimer = window.setTimeout(function () {
-    history.pushState({}, `rfc.fyi: ${title}`, url)
-  }, immediate ? 0 : historyDelay * 1000)
 }
 
 function loadUrl () {
@@ -383,7 +385,6 @@ function loadUrl () {
   if (params.has('obsolete')) {
     verbose = true
   }
-  console.log(`Loading URL: ${searchWords}`)
   obsoleteTarget.checked = verbose
   tagTypes.forEach(tagType => {
     if (unshownTagTypes.includes(tagType)) return
