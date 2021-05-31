@@ -31,17 +31,6 @@ $traceurRuntime.registerModule("util.js", [], function() {
       func();
     });
   }
-  function getParameterByName(name) {
-    var url = window.location.href;
-    name = name.replace(/[[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
-    var results = regex.exec(url);
-    if (!results)
-      return null;
-    if (!results[2])
-      return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-  }
   function genColour(str) {
     var hash = 0;
     for (var i = 0; i < str.length; i++) {
@@ -222,9 +211,6 @@ $traceurRuntime.registerModule("util.js", [], function() {
     },
     get onDone() {
       return onDone;
-    },
-    get getParameterByName() {
-      return getParameterByName;
     },
     get genColour() {
       return genColour;
@@ -602,12 +588,13 @@ $traceurRuntime.registerModule("client.js", [], function() {
     }, historyDelay * 1000);
   }
   function loadUrl() {
-    var search = util.getParameterByName('search') || '';
+    var params = new URLSearchParams(window.location.href);
+    var search = params.get('search') || '';
     document.getElementById('search').value = search;
     searchWords = search.split(' ').filter(function(word) {
       return word;
     });
-    if (util.getParameterByName('obsolete') !== null) {
+    if (params.has('obsolete')) {
       verbose = true;
     }
     obsoleteTarget.checked = verbose;
@@ -615,7 +602,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
       if (unshownTagTypes.includes(tagType))
         return;
       activeTags.delete(tagType);
-      var tagstring = util.getParameterByName(tagType);
+      var tagstring = params.get(tagType);
       var urlTagNames = new Set(tagstring ? tagstring.split(',') : []);
       tags[tagType].forEach(function(tagName) {
         setTagActivity(tagType, tagName, urlTagNames.has(tagName));
