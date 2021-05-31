@@ -231,7 +231,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
   var tagTypes = ['collection', 'status', 'stream', 'level', 'wg'];
   var unshownTagTypes = ['status'];
   var oldTags = ['status-obsoleted', 'level-historic'];
-  var historyDelay = 1.5;
+  var historyDelay = 1;
   var tags = {};
   var activeTags = new Map();
   var verbose = false;
@@ -356,14 +356,14 @@ $traceurRuntime.registerModule("client.js", [], function() {
       var tagData = tags[tagType][tagName];
       setTagActivity(tagType, tagName, !tagData.active);
       showRfcs();
-      updateUrl();
+      updateUrl(true);
     };
   }
   function deleteHandler() {
     searchTarget.value = '';
     searchWords = [];
     showRfcs();
-    updateUrl();
+    updateUrl(true);
   }
   function setTagActivity(tagType, tagName, active) {
     var change = tagType !== 'collection';
@@ -553,9 +553,10 @@ $traceurRuntime.registerModule("client.js", [], function() {
   function showObsoleteHandler(event) {
     verbose = obsoleteTarget.checked;
     showRfcs();
-    updateUrl();
+    updateUrl(true);
   }
   function updateUrl() {
+    var immediate = arguments[0] !== (void 0) ? arguments[0] : false;
     var queries = [];
     if (searchWords.length > 0) {
       queries.push('search=' + searchWords.join('%20'));
@@ -585,7 +586,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
     historyTimer = window.setTimeout(function() {
       var title = searchWords.join(' ');
       history.pushState({}, ("rfc.fyi: " + title), url);
-    }, historyDelay * 1000);
+    }, immediate ? 0 : historyDelay * 1000);
   }
   function loadUrl() {
     var params = new URLSearchParams(window.location.href);
