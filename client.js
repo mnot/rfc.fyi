@@ -75,8 +75,8 @@ function installFormHandlers () {
 function compute () {
   allRfcs = Object.keys(rfcs)
   allRfcs.sort(rfcSort)
-  allRfcs.forEach(rfcNum => {
-    const rfc = rfcs[rfcNum]
+  allRfcs.forEach(rfcName => {
+    const rfc = rfcs[rfcName]
     tagTypes.forEach(tagType => {
       const tagName = rfc[tagType]
       if (tagName) {
@@ -88,12 +88,12 @@ function compute () {
             active: false
           }
         }
-        tags[tagType][tagName].rfcs.push(rfcNum)
+        tags[tagType][tagName].rfcs.push(rfcName)
       }
     })
     // index titles
-    searchIndex(rfc.title.split(' '), rfcNum, words)
-    searchIndex(rfc.keywords, rfcNum, keywords)
+    searchIndex(rfc.title.split(' '), rfcName, words)
+    searchIndex(rfc.keywords, rfcName, keywords)
   })
 }
 
@@ -235,26 +235,27 @@ function listSearchedRfcs () {
 }
 
 function renderRfc (rfcName, rfcData, target) {
+  const rfcNum = parseInt(rfcName.substring(3))
+  const rfcNumPad = rfcNum.toString().padStart(4, '0')
   const rfcSpan = document.createElement('li')
   rfcSpan.data = rfcData
   const rfcRef = document.createElement('a')
   rfcRef.className = 'reference'
-  const rfcNum = rfcName.substring(3).padStart(4, '0')
-  rfcRef.href = `https://www.rfc-editor.org/refs/bibxml/reference.RFC.${rfcNum}.xml`
+  rfcRef.href = `https://www.rfc-editor.org/refs/bibxml/reference.RFC.${rfcNumPad}.xml`
   rfcRef.appendChild(document.createTextNode(rfcName))
   rfcSpan.appendChild(rfcRef)
   const sep = document.createTextNode(': ')
   rfcSpan.appendChild(sep)
   const rfcLink = document.createElement('a')
-  rfcLink.href = `https://www.rfc-editor.org/rfc/${rfcName.toLowerCase()}.html`
+  rfcLink.href = `https://www.rfc-editor.org/rfc/rfc${rfcNum}.html`
   rfcSpan.appendChild(rfcLink)
   const rfcTitle = document.createTextNode(rfcData.title)
   rfcLink.appendChild(rfcTitle)
-  if (rfcs[rfcName].stream && rfcs[rfcName].stream !== 'ietf') {
-    renderTag('stream', rfcs[rfcName].stream, rfcSpan)
+  if (rfcData.stream !== 'ietf') {
+    renderTag('stream', rfcData.stream, rfcSpan)
   }
-  if (rfcs[rfcName].level && rfcs[rfcName].level !== 'std') {
-    renderTag('level', rfcs[rfcName].level, rfcSpan)
+  if (rfcData.level !== 'std') {
+    renderTag('level', rfcData.level, rfcSpan)
   }
   target.appendChild(rfcSpan)
 }
@@ -266,9 +267,9 @@ function showRelevantTags (rfcSet) {
     const activeTag = activeTags.get(tagType)
     if (activeTag) relevantTags[tagType].add(activeTag)
   })
-  rfcSet.forEach(rfcNum => {
+  rfcSet.forEach(rfcName => {
     tagTypes.forEach(tagType => {
-      const tagName = rfcs[rfcNum][tagType]
+      const tagName = rfcs[rfcName][tagType]
       if (!verbose && oldTags.includes(`${tagType}-${tagName}`)) {
         return
       }
@@ -322,14 +323,14 @@ function searchLookup (searchWord, index, attr) {
   const searchPrefix = searchWord.substring(0, prefixLen)
   const matchRfcs = new Set(index.get(searchPrefix))
   if (searchWord.length > prefixLen) {
-    matchRfcs.forEach(rfcNum => {
+    matchRfcs.forEach(rfcName => {
       let hit = false
-      let fullItem = rfcs[rfcNum][attr]
+      let fullItem = rfcs[rfcName][attr]
       if (typeof (fullItem) === 'string') fullItem = fullItem.split(' ')
       fullItem.forEach(item => {
         if (cleanString(item).startsWith(searchWord)) hit = true
       })
-      if (!hit) matchRfcs.delete(rfcNum)
+      if (!hit) matchRfcs.delete(rfcName)
     })
   }
   return matchRfcs
