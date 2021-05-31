@@ -9,6 +9,7 @@ const oldTags = [
   'status-obsoleted',
   'level-historic'
 ]
+const historyDelay = 1.5 // seconds of inactivity before history is updated
 
 var tags = {} // tags and associated rfcs
 var activeTags = new Map() // what tags are active
@@ -18,6 +19,7 @@ var keywords = new Map() // index of keyword phrases to RFCs containing them
 var searchWords = [] // words the user is searching for
 var allRfcs = [] // list of all RFC numbers
 var rfcs = {} // RFC objects
+var historyTimer = 0 // holds timeout event for history update
 
 var tagColours = {
   'stream': '#678',
@@ -360,7 +362,13 @@ function updateUrl () {
   var url = './'
   if (queries.length > 0) url += '?'
   url += queries.join('&')
-  history.pushState({}, '', url)
+  if (historyTimer > 0) {
+    window.clearTimeout(historyTimer)
+  }
+  historyTimer = window.setTimeout(function () {
+    var title = searchWords.join(' ')
+    history.pushState({}, `rfc.fyi: ${title}`, url)
+  }, historyDelay * 1000)
 }
 
 function loadUrl () {
