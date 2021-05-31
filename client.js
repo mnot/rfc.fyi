@@ -374,17 +374,18 @@ function updateUrl () {
 }
 
 function loadUrl () {
-  const search = util.getParameterByName('search') || ''
+  const params = new URLSearchParams(window.location.href)
+  const search = params.get('search') || ''
   document.getElementById('search').value = search
   searchWords = search.split(' ').filter(word => word)
-  if (util.getParameterByName('obsolete') !== null) {
+  if (params.has('obsolete')) {
     verbose = true
   }
   obsoleteTarget.checked = verbose
   tagTypes.forEach(tagType => {
     if (unshownTagTypes.includes(tagType)) return
     activeTags.delete(tagType)
-    const tagstring = util.getParameterByName(tagType)
+    const tagstring = params.get(tagType)
     const urlTagNames = new Set(tagstring ? tagstring.split(',') : [])
     tags[tagType].forEach(tagName => {
       setTagActivity(tagType, tagName, urlTagNames.has(tagName))
