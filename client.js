@@ -24,7 +24,7 @@ const inRefs = {} // inbound reference counts
 const tagColours = {
   stream: '#678',
   level: '#a33',
-  wg: '#753'
+  wg: '#ccc'
 }
 
 function init () {
