@@ -105216,6 +105216,18 @@
   "title": "A Routing Protocol for Low-Power and Lossy Networks (RPL) Destination-Oriented Directed Acyclic Graph (DODAG) Configuration Option for the 6LoWPAN Routing Header",
   "wg": "roll"
  },
+ "RFC9037": {
+  "area": "rtg",
+  "keywords": [
+   "sub-network",
+   "flow mapping"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Data Plane: MPLS over IEEE 802.1 Time-Sensitive Networking (TSN)",
+  "wg": "detnet"
+ },
  "RFC9038": {
   "area": "art",
   "keywords": [
