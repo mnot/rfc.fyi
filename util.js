@@ -102,6 +102,14 @@ Object.prototype.keys = function () { // eslint-disable-line
   return keys
 }
 
+Object.prototype.get = function (key, backstop) { // eslint-disable-line
+  if (this.hasOwnProperty(key)) {  // eslint-disable-line
+    return this[key]
+  } else {
+    return backstop
+  }
+}
+
 /*
 * (c)2006 Dean Edwards/Matthias Miller/John Resig
 * Special thanks to Dan Webb's domready.js Prototype extension

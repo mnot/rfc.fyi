@@ -3,7 +3,7 @@
 # This script is for CI updates
 
 # Check to see if it has changed
-git status --short rfcs.json | grep -s "M" || exit 0
+git status --short rfcs.json refs.json | grep -s "M" || exit 0
 
 # setup
 git config user.email mnot@mnot.net
@@ -14,5 +14,6 @@ git checkout -B main origin/master
 # Push the changes
 git add rfc-index.xml
 git add rfcs.json
+git add refs.json
 git commit -m "update rfcs"
 git push origin main

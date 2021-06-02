@@ -18,6 +18,8 @@ const keywords = new Map() // index of keyword phrases to RFCs containing them
 let searchWords = [] // words the user is searching for
 let allRfcs = [] // list of all RFC numbers
 let rfcs = {} // RFC objects
+let refs = {} // references
+const inRefs = {} // inbound reference counts
 
 const tagColours = {
   stream: '#678',
@@ -29,12 +31,24 @@ function init () {
   util.onDone(loadDone)
   util.loadJson('tags.json', function (json) { tags = json })
   util.loadJson('rfcs.json', function (json) { rfcs = json })
+  util.loadJson('refs.json', function (json) { refs = json })
 }
 
 function loadDone () {
   compute()
   tagTypes.forEach(tagType => {
     initTags(tagType, clickTagHandler)
+  })
+  refs.forEach(rfc => {
+    const rfcRefs = refs.get(rfc, {})
+    rfcRefs.get('normative', []).forEach(ref => {
+      const rfcName = `RFC${ref.padStart(4, '0')}`
+      inRefs[rfcName] = inRefs.get(rfcName, 0) + 1
+    })
+    rfcRefs.get('informative', []).forEach(ref => {
+      const rfcName = `RFC${ref.padStart(4, '0')}`
+      inRefs[rfcName] = inRefs.get(rfcName, 0) + 1
+    })
   })
   installFormHandlers()
   loadUrl()
@@ -255,6 +269,14 @@ function renderRfc (rfcName, rfcData, target) {
   if (rfcData.level !== 'std') {
     renderTag('level', rfcData.level, rfcSpan)
   }
+  if (rfcData.wg) {
+    renderTag('wg', rfcData.wg, rfcSpan)
+  }
+  const refSpan = document.createElement('span')
+  refSpan.className = 'refcount'
+  const refCount = document.createTextNode(`${inRefs.get(rfcName, 0)} refs`)
+  refSpan.appendChild(refCount)
+  rfcSpan.appendChild(refSpan)
   target.appendChild(rfcSpan)
 }
 
@@ -418,7 +440,7 @@ function cleanString (input) {
 }
 
 function rfcSort (a, b) {
-  return parseInt(b.replace('RFC', '')) - parseInt(a.replace('RFC', ''))
+  return inRefs.get(b, 0) - inRefs.get(a, 0)
 }
 
 util.addDOMLoadEvent(init)

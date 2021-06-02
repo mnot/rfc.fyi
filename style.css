@@ -167,6 +167,13 @@ h2 {
   color: black;
 }
 
+.refcount {
+  color: #999;
+  font-size: 75%;
+  margin-left: 1em;
+  white-space: nowrap;
+}
+
 @media all and (max-width: 800px) {
   #container {
     flex-direction: column;
