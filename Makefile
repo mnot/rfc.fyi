@@ -17,7 +17,7 @@ server:
 
 .PHONY: lint
 lint: client.js util.js
-	standard --fix client.js util.js
+	standard --fix $^
 
 .PHONY: clean
 clean:

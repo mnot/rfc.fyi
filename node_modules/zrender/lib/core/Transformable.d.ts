@@ -1,0 +1,32 @@
+import * as matrix from './matrix';
+import * as vector from './vector';
+declare class Transformable {
+    parent: Transformable;
+    x: number;
+    y: number;
+    scaleX: number;
+    scaleY: number;
+    rotation: number;
+    originX: number;
+    originY: number;
+    globalScaleRatio: number;
+    transform: matrix.MatrixArray;
+    invTransform: matrix.MatrixArray;
+    setPosition(arr: number[]): void;
+    setScale(arr: number[]): void;
+    setOrigin(arr: number[]): void;
+    needLocalTransform(): boolean;
+    updateTransform(): void;
+    private _resolveGlobalScaleRatio;
+    getLocalTransform(m?: matrix.MatrixArray): matrix.MatrixArray;
+    getComputedTransform(): matrix.MatrixArray;
+    setLocalTransform(m: vector.VectorArray): void;
+    decomposeTransform(): void;
+    getGlobalScale(out?: vector.VectorArray): vector.VectorArray;
+    transformCoordToLocal(x: number, y: number): number[];
+    transformCoordToGlobal(x: number, y: number): number[];
+    getLineScale(): number;
+    static getLocalTransform(target: Transformable, m?: matrix.MatrixArray): matrix.MatrixArray;
+    private static initDefaultProps;
+}
+export default Transformable;

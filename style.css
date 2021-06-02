@@ -57,6 +57,11 @@ a:link, a:visited, a:active {
   padding: 0;
 }
 
+#graph {
+  width: 900px;
+  height: 900px;
+}
+
 ul {
   padding-left: 0.75em;
 }

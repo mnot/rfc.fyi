@@ -1,6 +1,7 @@
 /* global history */
 
 import * as util from './util.js'
+import { graphRfcs } from './graph.js'
 
 const prefixLen = 3
 const tagTypes = ['collection', 'status', 'stream', 'level', 'wg']
@@ -18,6 +19,7 @@ const keywords = new Map() // index of keyword phrases to RFCs containing them
 let searchWords = [] // words the user is searching for
 let allRfcs = [] // list of all RFC numbers
 let rfcs = {} // RFC objects
+let rfcRefs = {} // reference db
 
 const tagColours = {
   stream: '#678',
@@ -29,6 +31,7 @@ function init () {
   util.onDone(loadDone)
   util.loadJson('tags.json', function (json) { tags = json })
   util.loadJson('rfcs.json', function (json) { rfcs = json })
+  util.loadJson('refs.json', function (json) { rfcRefs = json })
 }
 
 function loadDone () {
@@ -174,10 +177,10 @@ function showRfcs () {
     relevantRfcs = taggedRfcs.intersection(searchedRfcs)
     rfcList = Array.from(relevantRfcs)
     rfcList.sort(rfcSort)
-    rfcList.forEach(item => {
-      const rfcData = rfcs[item]
-      renderRfc(item, rfcData, target)
-    })
+    //    rfcList.forEach(item => {
+    //      const rfcData = rfcs[item]
+    //      renderRfc(item, rfcData, target)
+    graphRfcs(rfcList, rfcs, rfcRefs)
   }
   // tags
   if (!userInput) { // default screen
