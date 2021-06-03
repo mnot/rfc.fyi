@@ -57,6 +57,15 @@ a:link, a:visited, a:active {
   padding: 0;
 }
 
+#count {
+  color: #999;
+  font-size: 75%;
+}
+
+#rfc-list {
+  padding-bottom: 6em;
+}
+
 ul {
   padding-left: 0.75em;
 }
@@ -107,7 +116,7 @@ input#search {
 }
 
 li .tag {
-  margin: 0 0 0 .5em;
+  margin: 0 0 0 .75em;
 }
 
 h1 {
