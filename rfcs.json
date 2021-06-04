@@ -105126,6 +105126,17 @@
   "title": "Domain Name Registration Data (DNRD) Objects Mapping",
   "wg": "regext"
  },
+ "RFC9024": {
+  "area": "rtg",
+  "keywords": [
+   "interconnecting TSN networks"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Data Plane: IEEE 802.1 Time-Sensitive Networking over MPLS",
+  "wg": "detnet"
+ },
  "RFC9025": {
   "area": "rtg",
   "keywords": [],
@@ -105146,6 +105157,19 @@
   "stream": "ietf",
   "title": "Multicast VPN Fast Upstream Failover",
   "wg": "bess"
+ },
+ "RFC9027": {
+  "area": "art",
+  "keywords": [
+   "rph",
+   "PASSport",
+   "esnet"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Assertion Values for Resource Priority Header and SIP Priority Header Claims in Support of Emergency Services Networks",
+  "wg": "stir"
  },
  "RFC9030": {
   "area": "int",
@@ -105215,6 +105239,15 @@
   "stream": "ietf",
   "title": "A Routing Protocol for Low-Power and Lossy Networks (RPL) Destination-Oriented Directed Acyclic Graph (DODAG) Configuration Option for the 6LoWPAN Routing Header",
   "wg": "roll"
+ },
+ "RFC9036": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Changing the Location-to-Service Translation (LoST) Location Profiles Registry Policy",
+  "wg": "ecrit"
  },
  "RFC9037": {
   "area": "rtg",
