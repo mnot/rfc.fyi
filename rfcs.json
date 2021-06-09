@@ -105035,6 +105035,27 @@
   "title": "Interconnect Solution for Ethernet VPN (EVPN) Overlay Networks",
   "wg": "bess"
  },
+ "RFC9015": {
+  "area": "rtg",
+  "keywords": [
+   "Service Function Chaining",
+   "Service Function Chain",
+   "Network Service Header",
+   "Service Function",
+   "Service Function Forwarder",
+   "Service Function Path",
+   "Service Function Path Route",
+   "Service Function Instance",
+   "Service Function Instance Route",
+   "Service Function Type",
+   "Control Plane"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Control Plane for the Network Service Header in Service Function Chaining",
+  "wg": "bess"
+ },
  "RFC9016": {
   "area": "rtg",
   "keywords": [
@@ -105126,6 +105147,15 @@
   "title": "Domain Name Registration Data (DNRD) Objects Mapping",
   "wg": "regext"
  },
+ "RFC9023": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Data Plane: IP over IEEE 802.1 Time-Sensitive Networking (TSN)",
+  "wg": "detnet"
+ },
  "RFC9024": {
   "area": "rtg",
   "keywords": [
@@ -105170,6 +105200,18 @@
   "stream": "ietf",
   "title": "Assertion Values for Resource Priority Header and SIP Priority Header Claims in Support of Emergency Services Networks",
   "wg": "stir"
+ },
+ "RFC9029": {
+  "area": "rtg",
+  "keywords": [
+   "BGP-LS",
+   "IANA"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to the Allocation Policy for the Border Gateway Protocol - Link State (BGP-LS) Parameters Registries",
+  "wg": "idr"
  },
  "RFC9030": {
   "area": "int",
@@ -105281,5 +105323,30 @@
   "stream": "ietf",
   "title": "Extensible Provisioning Protocol (EPP) Unhandled Namespaces",
   "wg": "regext"
+ },
+ "RFC9044": {
+  "area": "sec",
+  "keywords": [
+   "Authentication",
+   "Message Authentication Code"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using the AES-GMAC Algorithm with the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
+ },
+ "RFC9045": {
+  "area": "sec",
+  "keywords": [
+   "Authentication",
+   "Message Authentication Code",
+   "Password-Based Message Authentication Code"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Algorithm Requirements Update to the Internet X.509 Public Key Infrastructure Certificate Request Message Format (CRMF)",
+  "wg": "lamps"
  }
 }
