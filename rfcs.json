@@ -105267,6 +105267,18 @@
   "title": "6TiSCH Minimal Scheduling Function (MSF)",
   "wg": "6tisch"
  },
+ "RFC9034": {
+  "area": "int",
+  "keywords": [
+   "Routing header",
+   "Timestamp"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Packet Delivery Deadline Time in the Routing Header for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)",
+  "wg": "6lo"
+ },
  "RFC9035": {
   "area": "rtg",
   "keywords": [
