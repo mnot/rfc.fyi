@@ -85908,7 +85908,7 @@
    "WHOIS"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Registration Data Access Protocol (RDAP) Query Format",
   "wg": "weirds"
@@ -85919,7 +85919,7 @@
    "WHOIS"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "JSON Responses for the Registration Data Access Protocol (RDAP)",
   "wg": "weirds"
@@ -105360,5 +105360,23 @@
   "stream": "ietf",
   "title": "Algorithm Requirements Update to the Internet X.509 Public Key Infrastructure Certificate Request Message Format (CRMF)",
   "wg": "lamps"
+ },
+ "RFC9082": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration Data Access Protocol (RDAP) Query Format",
+  "wg": "regext"
+ },
+ "RFC9083": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSON Responses for the Registration Data Access Protocol (RDAP)",
+  "wg": "regext"
  }
 }
