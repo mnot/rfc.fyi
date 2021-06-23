@@ -105361,6 +105361,42 @@
   "title": "Algorithm Requirements Update to the Internet X.509 Public Key Infrastructure Certificate Request Message Format (CRMF)",
   "wg": "lamps"
  },
+ "RFC9047": {
+  "area": "rtg",
+  "keywords": [
+   "proxy-ARP",
+   "proxy-ND",
+   "proxy-ARP/ND",
+   "ARP/ND extended community"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Propagation of ARP/ND Flags in an Ethernet Virtual Private Network (EVPN)",
+  "wg": "bess"
+ },
+ "RFC9057": {
+  "keywords": [
+   "domain",
+   "email",
+   "security",
+   "messaging",
+   "dkim",
+   "spf",
+   "authentication",
+   "reporting",
+   "conformance",
+   "author",
+   "origination",
+   "original",
+   "from",
+   "sender"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "independent",
+  "title": "Email Author Header Field"
+ },
  "RFC9082": {
   "area": "art",
   "keywords": [],
