@@ -105397,6 +105397,19 @@
   "stream": "independent",
   "title": "Email Author Header Field"
  },
+ "RFC9059": {
+  "area": "rtg",
+  "keywords": [
+   "RSVP-TE LSP",
+   "Co-routed LSP",
+   "Reverse LSP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Associated Bidirectional Label Switched Paths (LSPs)",
+  "wg": "pce"
+ },
  "RFC9082": {
   "area": "art",
   "keywords": [],
