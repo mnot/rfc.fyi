@@ -105375,6 +105375,27 @@
   "title": "Propagation of ARP/ND Flags in an Ethernet Virtual Private Network (EVPN)",
   "wg": "bess"
  },
+ "RFC9049": {
+  "keywords": [
+   "PAN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Path Aware Networking: Obstacles to Deployment (A Bestiary of Roads Not Taken)"
+ },
+ "RFC9055": {
+  "area": "rtg",
+  "keywords": [
+   "DetNet",
+   "security"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Security Considerations",
+  "wg": "detnet"
+ },
  "RFC9057": {
   "keywords": [
    "domain",
