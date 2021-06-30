@@ -102638,6 +102638,26 @@
   "title": "Extensions to Automatic Certificate Management Environment for End-User S/MIME Certificates",
   "wg": "acme"
  },
+ "RFC8824": {
+  "area": "int",
+  "keywords": [
+   "header compression",
+   "fragmentation",
+   "IoT",
+   "constrained networks",
+   "LPWAN",
+   "sensor network",
+   "constrained node",
+   "wireless sensor network",
+   "core",
+   "OSCORE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Static Context Header Compression (SCHC) for the Constrained Application Protocol (CoAP)",
+  "wg": "lpwan"
+ },
  "RFC8825": {
   "area": "art",
   "keywords": [],
