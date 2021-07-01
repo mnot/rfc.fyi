@@ -105356,6 +105356,35 @@
   "title": "Extensible Provisioning Protocol (EPP) Unhandled Namespaces",
   "wg": "regext"
  },
+ "RFC9039": {
+  "area": "art",
+  "keywords": [
+   "URN",
+   "device identifier",
+   "IMEI",
+   "1-Wire",
+   "MAC address",
+   "EUI-48",
+   "EUI-64"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Uniform Resource Names for Device Identifiers",
+  "wg": "core"
+ },
+ "RFC9042": {
+  "area": "art",
+  "keywords": [
+   "sieve",
+   "email"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Sieve Email Filtering: Delivery by MAILBOXID",
+  "wg": "extra"
+ },
  "RFC9044": {
   "area": "sec",
   "keywords": [
@@ -105380,6 +105409,17 @@
   "stream": "ietf",
   "title": "Algorithm Requirements Update to the Internet X.509 Public Key Infrastructure Certificate Request Message Format (CRMF)",
   "wg": "lamps"
+ },
+ "RFC9046": {
+  "area": "rtg",
+  "keywords": [
+   "Babel"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Babel Information Model",
+  "wg": "babel"
  },
  "RFC9047": {
   "area": "rtg",
@@ -105438,6 +105478,17 @@
   "stream": "independent",
   "title": "Email Author Header Field"
  },
+ "RFC9058": {
+  "keywords": [
+   "authenticated encryption",
+   "mode of operation",
+   "AEAD"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Multilinear Galois Mode (MGM)"
+ },
  "RFC9059": {
   "area": "rtg",
   "keywords": [
@@ -105450,6 +105501,31 @@
   "stream": "ietf",
   "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Associated Bidirectional Label Switched Paths (LSPs)",
   "wg": "pce"
+ },
+ "RFC9062": {
+  "area": "rtg",
+  "keywords": [
+   "PBB-EVPN",
+   "fault management",
+   "performance management"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Framework and Requirements for Ethernet VPN (EVPN) Operations, Administration, and Maintenance (OAM)",
+  "wg": "bess"
+ },
+ "RFC9064": {
+  "keywords": [
+   "ICN",
+   "QoS",
+   "congestion control",
+   "admission control"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Considerations in the Development of a QoS Architecture for CCNx-Like Information-Centric Networking Protocols"
  },
  "RFC9082": {
   "area": "art",
