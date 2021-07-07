@@ -105527,6 +105527,19 @@
   "stream": "irtf",
   "title": "Considerations in the Development of a QoS Architecture for CCNx-Like Information-Centric Networking Protocols"
  },
+ "RFC9071": {
+  "area": "art",
+  "keywords": [
+   "conference",
+   "bridge",
+   "SIP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP-Mixer Formatting of Multiparty Real-Time Text",
+  "wg": "avtcore"
+ },
  "RFC9082": {
   "area": "art",
   "keywords": [],
