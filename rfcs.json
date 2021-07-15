@@ -105502,6 +105502,19 @@
   "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Associated Bidirectional Label Switched Paths (LSPs)",
   "wg": "pce"
  },
+ "RFC9061": {
+  "area": "sec",
+  "keywords": [
+   "NSF",
+   "SDN",
+   "IPsec"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for IPsec Flow Protection Based on Software-Defined Networking (SDN)",
+  "wg": "i2nsf"
+ },
  "RFC9062": {
   "area": "rtg",
   "keywords": [
@@ -105526,6 +105539,18 @@
   "status": "current",
   "stream": "irtf",
   "title": "Considerations in the Development of a QoS Architecture for CCNx-Like Information-Centric Networking Protocols"
+ },
+ "RFC9065": {
+  "area": "tsv",
+  "keywords": [
+   "transport design",
+   "operations and management"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Considerations around Transport Header Confidentiality, Network Operations, and the Evolution of Internet Transport Protocols",
+  "wg": "tsvwg"
  },
  "RFC9071": {
   "area": "art",
