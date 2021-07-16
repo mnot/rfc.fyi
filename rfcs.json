@@ -49662,7 +49662,7 @@
   "area": "int",
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Host Identity Protocol (HIP) Architecture",
   "wg": "hip"
@@ -105221,6 +105221,19 @@
   "title": "Assertion Values for Resource Priority Header and SIP Priority Header Claims in Support of Emergency Services Networks",
   "wg": "stir"
  },
+ "RFC9028": {
+  "area": "int",
+  "keywords": [
+   "HIP",
+   "NAT",
+   "NAT traversal"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Native NAT Traversal Mode for the Host Identity Protocol",
+  "wg": "hip"
+ },
  "RFC9029": {
   "area": "rtg",
   "keywords": [
@@ -105444,6 +105457,19 @@
   "stream": "irtf",
   "title": "Path Aware Networking: Obstacles to Deployment (A Bestiary of Roads Not Taken)"
  },
+ "RFC9050": {
+  "area": "rtg",
+  "keywords": [
+   "SDN",
+   "CCI",
+   "Central Control"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Procedures and Extensions for Using the PCE as a Central Controller (PCECC) of LSPs",
+  "wg": "pce"
+ },
  "RFC9055": {
   "area": "rtg",
   "keywords": [
@@ -105528,6 +105554,30 @@
   "title": "Framework and Requirements for Ethernet VPN (EVPN) Operations, Administration, and Maintenance (OAM)",
   "wg": "bess"
  },
+ "RFC9063": {
+  "area": "int",
+  "keywords": [
+   "cryptographic identity",
+   "cryptographic namespace",
+   "identifier-locator split",
+   "mobility",
+   "multihoming",
+   "NAT traversal",
+   "IPsec",
+   "ESP",
+   "IPv6",
+   "end-to-end security",
+   "end-to-end connectivity",
+   "endpoint identity",
+   "leap of faith",
+   "rendezvous"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Host Identity Protocol Architecture",
+  "wg": "hip"
+ },
  "RFC9064": {
   "keywords": [
    "ICN",
@@ -105565,6 +105615,18 @@
   "title": "RTP-Mixer Formatting of Multiparty Real-Time Text",
   "wg": "avtcore"
  },
+ "RFC9072": {
+  "area": "rtg",
+  "keywords": [
+   "IDR",
+   "BGP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extended Optional Parameters Length for BGP OPEN Message",
+  "wg": "idr"
+ },
  "RFC9082": {
   "area": "art",
   "keywords": [],
@@ -105582,5 +105644,20 @@
   "stream": "ietf",
   "title": "JSON Responses for the Registration Data Access Protocol (RDAP)",
   "wg": "regext"
+ },
+ "RFC9090": {
+  "area": "art",
+  "keywords": [
+   "binary format",
+   "data interchange format",
+   "ASN.1",
+   "OID",
+   "Object Identifier"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Binary Object Representation (CBOR) Tags for Object Identifiers",
+  "wg": "cbor"
  }
 }
