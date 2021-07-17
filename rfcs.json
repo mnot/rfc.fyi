@@ -104609,6 +104609,22 @@
   "title": "Internet Key Exchange Protocol Version 2 (IKEv2) Notification Status Types for IPv4/IPv6 Coexistence",
   "wg": "ipsecme"
  },
+ "RFC8984": {
+  "area": "art",
+  "keywords": [
+   "JSON",
+   "iCalendar",
+   "calendar",
+   "events",
+   "date",
+   "time"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSCalendar: A JSON Representation of Calendar Data",
+  "wg": "calext"
+ },
  "RFC8985": {
   "area": "tsv",
   "keywords": [
