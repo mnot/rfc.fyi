@@ -87736,7 +87736,7 @@
    "Domain Name System"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "DNS Privacy Considerations",
   "wg": "dprive"
@@ -105642,6 +105642,46 @@
   "stream": "ietf",
   "title": "Extended Optional Parameters Length for BGP OPEN Message",
   "wg": "idr"
+ },
+ "RFC9075": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Report from the IAB COVID-19 Network Impacts Workshop 2020"
+ },
+ "RFC9076": {
+  "area": "int",
+  "keywords": [
+   "DNS"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Privacy Considerations",
+  "wg": "dprive"
+ },
+ "RFC9077": {
+  "area": "ops",
+  "keywords": [
+   "DNSSEC",
+   "negative cache",
+   "Denial of Existence"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "NSEC and NSEC3: TTLs and Aggressive Use",
+  "wg": "dnsop"
+ },
+ "RFC9081": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Interoperation between Multicast Virtual Private Network (MVPN) and Multicast Source Directory Protocol (MSDP) Source-Active Routes",
+  "wg": "bess"
  },
  "RFC9082": {
   "area": "art",
