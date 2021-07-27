@@ -105402,6 +105402,15 @@
   "title": "Uniform Resource Names for Device Identifiers",
   "wg": "core"
  },
+ "RFC9041": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updating the MPLS Label Switched Paths (LSPs) Ping Parameters IANA Registry",
+  "wg": "mpls"
+ },
  "RFC9042": {
   "area": "art",
   "keywords": [
@@ -105715,5 +105724,27 @@
   "stream": "ietf",
   "title": "Concise Binary Object Representation (CBOR) Tags for Object Identifiers",
   "wg": "cbor"
+ },
+ "RFC9091": {
+  "area": "art",
+  "keywords": [
+   "DMARC",
+   "email authentication",
+   "TLD"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Experimental Domain-Based Message Authentication, Reporting, and Conformance (DMARC) Extension for Public Suffix Domains",
+  "wg": "dmarc"
+ },
+ "RFC9092": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Finding and Using Geofeed Data",
+  "wg": "opsawg"
  }
 }
