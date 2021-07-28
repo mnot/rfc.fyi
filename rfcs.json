@@ -19852,7 +19852,7 @@
  "RFC2140": {
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "legacy",
   "title": "TCP Control Block Interdependence"
  },
@@ -105402,6 +105402,15 @@
   "title": "Uniform Resource Names for Device Identifiers",
   "wg": "core"
  },
+ "RFC9040": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TCP Control Block Interdependence",
+  "wg": "tcpm"
+ },
  "RFC9041": {
   "area": "rtg",
   "keywords": [],
@@ -105746,5 +105755,14 @@
   "stream": "ietf",
   "title": "Finding and Using Geofeed Data",
   "wg": "opsawg"
+ },
+ "RFC9095": {
+  "keywords": [
+   "IDN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Extensible Provisioning\tProtocol (EPP) Domain Name Mapping Extension for Strict Bundling Registration"
  }
 }
