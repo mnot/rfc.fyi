@@ -105661,6 +105661,32 @@
   "title": "Extended Optional Parameters Length for BGP OPEN Message",
   "wg": "idr"
  },
+ "RFC9073": {
+  "area": "art",
+  "keywords": [
+   "iCalendar",
+   "properties"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Event Publishing Extensions to iCalendar",
+  "wg": "calext"
+ },
+ "RFC9074": {
+  "area": "art",
+  "keywords": [
+   "alarms",
+   "calendaring",
+   "iCalendar",
+   "CalDAV"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "\"VALARM\" Extensions for iCalendar",
+  "wg": "calext"
+ },
  "RFC9075": {
   "keywords": [],
   "level": "informational",
@@ -105691,6 +105717,25 @@
   "stream": "ietf",
   "title": "NSEC and NSEC3: TTLs and Aggressive Use",
   "wg": "dnsop"
+ },
+ "RFC9078": {
+  "keywords": [
+   "reaction",
+   "emoji",
+   "social networking",
+   "email",
+   "affect",
+   "messaging",
+   "emoticon",
+   "smileys",
+   "like",
+   "mime",
+   "reply"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Reaction: Indicating Summary Reaction to a Message"
  },
  "RFC9081": {
   "area": "rtg",
