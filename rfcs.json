@@ -105809,5 +105809,14 @@
   "status": "current",
   "stream": "independent",
   "title": "Extensible Provisioning Protocol (EPP) Domain Name Mapping Extension for Strict Bundling Registration"
+ },
+ "RFC9105": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Terminal Access Controller Access-Control System Plus (TACACS+)",
+  "wg": "opsawg"
  }
 }
