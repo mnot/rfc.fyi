@@ -105764,6 +105764,35 @@
   "title": "JSON Responses for the Registration Data Access Protocol (RDAP)",
   "wg": "regext"
  },
+ "RFC9084": {
+  "area": "rtg",
+  "keywords": [
+   "OSPF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Prefix Originator Extensions",
+  "wg": "lsr"
+ },
+ "RFC9085": {
+  "area": "rtg",
+  "keywords": [
+   "BGP-LS",
+   "Segment Routing",
+   "SID",
+   "MPLS",
+   "Label advertisement",
+   "IS-IS",
+   "OSPF",
+   "OSPFv3"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Border Gateway Protocol - Link State (BGP-LS) Extensions for Segment Routing",
+  "wg": "idr"
+ },
  "RFC9090": {
   "area": "art",
   "keywords": [
@@ -105801,6 +105830,24 @@
   "title": "Finding and Using Geofeed Data",
   "wg": "opsawg"
  },
+ "RFC9093": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Layer 0 Types",
+  "wg": "ccamp"
+ },
+ "RFC9094": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Wavelength Switched Optical Networks (WSONs)",
+  "wg": "ccamp"
+ },
  "RFC9095": {
   "keywords": [
    "IDN"
@@ -105809,6 +105856,19 @@
   "status": "current",
   "stream": "independent",
   "title": "Extensible Provisioning Protocol (EPP) Domain Name Mapping Extension for Strict Bundling Registration"
+ },
+ "RFC9099": {
+  "area": "ops",
+  "keywords": [
+   "IPv6",
+   "Security",
+   "Operational Security"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operational Security Considerations for IPv6 Networks",
+  "wg": "opsec"
  },
  "RFC9102": {
   "keywords": [],
