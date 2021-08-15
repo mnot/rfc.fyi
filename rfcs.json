@@ -105793,6 +105793,46 @@
   "title": "Border Gateway Protocol - Link State (BGP-LS) Extensions for Segment Routing",
   "wg": "idr"
  },
+ "RFC9086": {
+  "area": "rtg",
+  "keywords": [
+   "BGP",
+   "BGP-LS",
+   "Segment Routing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Border Gateway Protocol - Link State (BGP-LS) Extensions for Segment Routing BGP Egress Peer Engineering",
+  "wg": "idr"
+ },
+ "RFC9087": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing Centralized BGP Egress Peer Engineering",
+  "wg": "spring"
+ },
+ "RFC9088": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Signaling Entropy Label Capability and Entropy Readable Label Depth Using IS-IS",
+  "wg": "lsr"
+ },
+ "RFC9089": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Signaling Entropy Label Capability and Entropy Readable Label Depth Using OSPF",
+  "wg": "lsr"
+ },
  "RFC9090": {
   "area": "art",
   "keywords": [
