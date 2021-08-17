@@ -105910,6 +105910,20 @@
   "title": "Operational Security Considerations for IPv6 Networks",
   "wg": "opsec"
  },
+ "RFC9100": {
+  "area": "art",
+  "keywords": [
+   "Internet of Things (IoT)",
+   "Internet of Things",
+   "IOT",
+   "data model"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Sensor Measurement Lists (SenML) Features and Versions",
+  "wg": "core"
+ },
  "RFC9102": {
   "keywords": [],
   "level": "experimental",
