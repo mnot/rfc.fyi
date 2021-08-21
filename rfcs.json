@@ -105924,6 +105924,28 @@
   "title": "Sensor Measurement Lists (SenML) Features and Versions",
   "wg": "core"
  },
+ "RFC9101": {
+  "area": "sec",
+  "keywords": [
+   "Assertion",
+   "Claim",
+   "Security Token",
+   "OAuth",
+   "JavaScript Object Notation",
+   "JSON",
+   "JSON Web Token",
+   "JWT",
+   "JSON Web Signature",
+   "JWS",
+   "JSON Web Encryption",
+   "JWE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The OAuth 2.0 Authorization Framework: JWT-Secured Authorization Request (JAR)",
+  "wg": "oauth"
+ },
  "RFC9102": {
   "keywords": [],
   "level": "experimental",
