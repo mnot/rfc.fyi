@@ -38482,7 +38482,7 @@
    "imapv4rev1"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "INTERNET MESSAGE ACCESS PROTOCOL - VERSION 4rev1"
  },
@@ -105432,6 +105432,20 @@
   "title": "Sieve Email Filtering: Delivery by MAILBOXID",
   "wg": "extra"
  },
+ "RFC9043": {
+  "area": "art",
+  "keywords": [
+   "video preservation",
+   "storage",
+   "ffmpeg",
+   "lossless compression"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "FFV1 Video Coding Format Versions 0, 1, and 3",
+  "wg": "cellar"
+ },
  "RFC9044": {
   "area": "sec",
   "keywords": [
@@ -105503,6 +105517,18 @@
   "stream": "ietf",
   "title": "Path Computation Element Communication Protocol (PCEP) Procedures and Extensions for Using the PCE as a Central Controller (PCECC) of LSPs",
   "wg": "pce"
+ },
+ "RFC9051": {
+  "area": "art",
+  "keywords": [
+   "IMAP4rev2",
+   "imap"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet Message Access Protocol (IMAP) - Version 4rev2",
+  "wg": "extra"
  },
  "RFC9055": {
   "area": "rtg",
@@ -105953,6 +105979,19 @@
   "stream": "independent",
   "title": "TLS DNSSEC Chain Extension"
  },
+ "RFC9103": {
+  "area": "int",
+  "keywords": [
+   "DNS",
+   "operations",
+   "privacy"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Zone Transfer over TLS",
+  "wg": "dprive"
+ },
  "RFC9104": {
   "area": "rtg",
   "keywords": [
@@ -105972,5 +106011,50 @@
   "stream": "ietf",
   "title": "A YANG Data Model for Terminal Access Controller Access-Control System Plus (TACACS+)",
   "wg": "opsawg"
+ },
+ "RFC9107": {
+  "area": "rtg",
+  "keywords": [
+   "IDR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Optimal Route Reflection (BGP ORR)",
+  "wg": "idr"
+ },
+ "RFC9109": {
+  "area": "int",
+  "keywords": [
+   "security",
+   "transport protocols"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Network Time Protocol Version 4: Port Randomization",
+  "wg": "ntp"
+ },
+ "RFC9117": {
+  "area": "rtg",
+  "keywords": [
+   "BGP flowspec"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Revised Validation Procedure for BGP Flow Specifications",
+  "wg": "idr"
+ },
+ "RFC9118": {
+  "area": "art",
+  "keywords": [
+   "X.509 Certificate Extension"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Enhanced JSON Web Token (JWT) Claim Constraints for Secure Telephone Identity Revisited (STIR) Certificates",
+  "wg": "stir"
  }
 }
