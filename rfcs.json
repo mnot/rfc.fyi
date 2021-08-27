@@ -105763,6 +105763,36 @@
   "stream": "ietf",
   "title": "Reaction: Indicating Summary Reaction to a Message"
  },
+ "RFC9079": {
+  "area": "rtg",
+  "keywords": [
+   "SADR",
+   "source address-dependent routing",
+   "source address",
+   "multihoming",
+   "multihoming with multiple addresses",
+   "multiple addresses",
+   "source address selection",
+   "multiple routes",
+   "multipath",
+   "disjoint routes",
+   "route diversity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Source-Specific Routing in the Babel Routing Protocol",
+  "wg": "babel"
+ },
+ "RFC9080": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Homenet Profile of the Babel Routing Protocol",
+  "wg": "homenet"
+ },
  "RFC9081": {
   "area": "rtg",
   "keywords": [],
