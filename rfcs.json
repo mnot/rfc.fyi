@@ -106086,5 +106086,18 @@
   "stream": "ietf",
   "title": "Enhanced JSON Web Token (JWT) Claim Constraints for Secure Telephone Identity Revisited (STIR) Certificates",
   "wg": "stir"
+ },
+ "RFC9125": {
+  "area": "rtg",
+  "keywords": [
+   "SR",
+   "GW",
+   "BGP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Gateway Auto-Discovery and Route Advertisement for Site Interconnection Using Segment Routing",
+  "wg": "bess"
  }
 }
