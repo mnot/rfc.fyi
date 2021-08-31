@@ -105953,6 +105953,23 @@
   "stream": "independent",
   "title": "Extensible Provisioning Protocol (EPP) Domain Name Mapping Extension for Strict Bundling Registration"
  },
+ "RFC9096": {
+  "area": "ops",
+  "keywords": [
+   "IPv6",
+   "problem",
+   "address",
+   "prefix delegation",
+   "DHCPv6",
+   "stale prefixes",
+   "old prefixes"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Improving the Reaction of Customer Edge Routers to IPv6 Renumbering Events",
+  "wg": "v6ops"
+ },
  "RFC9099": {
   "area": "ops",
   "keywords": [
