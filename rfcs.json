@@ -102097,7 +102097,7 @@
    "protective networking"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel Specification",
   "wg": "dots"
@@ -106116,5 +106116,51 @@
   "stream": "ietf",
   "title": "Gateway Auto-Discovery and Route Advertisement for Site Interconnection Using Segment Routing",
   "wg": "bess"
+ },
+ "RFC9132": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "mitigation",
+   "service delivery",
+   "connectivity",
+   "anti-DDoS",
+   "automation",
+   "cooperation",
+   "resilience",
+   "filtering",
+   "security center",
+   "mitigator",
+   "scrubbing",
+   "dynamic service protection",
+   "dynamic mitigation",
+   "cooperative networking",
+   "protective networking"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel Specification",
+  "wg": "dots"
+ },
+ "RFC9133": {
+  "area": "sec",
+  "keywords": [
+   "Mitigation",
+   "Automation",
+   "Filtering",
+   "Protective Networking",
+   "Protected Networks",
+   "Security",
+   "Anti-DDoS",
+   "Reactive",
+   "Collaborative Networking",
+   "Collaborative Security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Controlling Filtering Rules Using Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel",
+  "wg": "dots"
  }
 }
