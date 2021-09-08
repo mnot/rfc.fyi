@@ -106059,6 +106059,21 @@
   "title": "A YANG Data Model for Terminal Access Controller Access-Control System Plus (TACACS+)",
   "wg": "opsawg"
  },
+ "RFC9106": {
+  "keywords": [
+   "Argon2d",
+   "Argon2i",
+   "Argon2id",
+   "KDF",
+   "Cryptocurrency",
+   "Time-Space Trade-Off Attacks",
+   "Security"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Argon2 Memory-Hard Function for Password Hashing and Proof-of-Work Applications"
+ },
  "RFC9107": {
   "area": "rtg",
   "keywords": [
