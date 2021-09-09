@@ -106085,6 +106085,18 @@
   "title": "BGP Optimal Route Reflection (BGP ORR)",
   "wg": "idr"
  },
+ "RFC9108": {
+  "area": "ops",
+  "keywords": [
+   "IANA registry",
+   "DNS Parameters"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Types for DNS Classes and Resource Record Types",
+  "wg": "dnsop"
+ },
  "RFC9109": {
   "area": "int",
   "keywords": [
