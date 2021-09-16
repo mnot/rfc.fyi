@@ -105970,6 +105970,15 @@
   "title": "Improving the Reaction of Customer Edge Routers to IPv6 Renumbering Events",
   "wg": "v6ops"
  },
+ "RFC9098": {
+  "area": "ops",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operational Implications of IPv6 Packets with Extension Headers",
+  "wg": "v6ops"
+ },
  "RFC9099": {
   "area": "ops",
   "keywords": [
@@ -106143,6 +106152,18 @@
   "stream": "ietf",
   "title": "Gateway Auto-Discovery and Route Advertisement for Site Interconnection Using Segment Routing",
   "wg": "bess"
+ },
+ "RFC9126": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "oauth2"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Pushed Authorization Requests",
+  "wg": "oauth"
  },
  "RFC9132": {
   "area": "sec",
