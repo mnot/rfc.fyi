@@ -105588,6 +105588,22 @@
   "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Associated Bidirectional Label Switched Paths (LSPs)",
   "wg": "pce"
  },
+ "RFC9060": {
+  "area": "art",
+  "keywords": [
+   "SIP",
+   "Secure Origin Identification",
+   "Communication Security",
+   "Certificates",
+   "Public Key Infrastructure",
+   "Real-Time Communication"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Secure Telephone Identity Revisited (STIR) Certificate Delegation",
+  "wg": "stir"
+ },
  "RFC9061": {
   "area": "sec",
   "keywords": [
