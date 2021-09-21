@@ -106134,6 +106134,18 @@
   "title": "Network Time Protocol Version 4: Port Randomization",
   "wg": "ntp"
  },
+ "RFC9115": {
+  "area": "sec",
+  "keywords": [
+   "Content Delivery Network",
+   "CDN"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Automatic Certificate Management Environment (ACME) Profile for Generating Delegated Certificates",
+  "wg": "acme"
+ },
  "RFC9117": {
   "area": "rtg",
   "keywords": [
