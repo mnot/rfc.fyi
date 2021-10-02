@@ -106193,6 +106193,20 @@
   "title": "OAuth 2.0 Pushed Authorization Requests",
   "wg": "oauth"
  },
+ "RFC9131": {
+  "area": "int",
+  "keywords": [
+   "IPv6",
+   "SLAAC",
+   "stateless address autoconfiguration",
+   "neighbor advertisement"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Gratuitous Neighbor Discovery: Creating Neighbor Cache Entries on First-Hop Routers",
+  "wg": "6man"
+ },
  "RFC9132": {
   "area": "sec",
   "keywords": [
