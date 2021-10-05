@@ -105542,6 +105542,18 @@
   "title": "Deterministic Networking (DetNet) Security Considerations",
   "wg": "detnet"
  },
+ "RFC9056": {
+  "area": "rtg",
+  "keywords": [
+   "sub-network",
+   "subnetwork"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Data Plane: IP over MPLS",
+  "wg": "detnet"
+ },
  "RFC9057": {
   "keywords": [
    "domain",
