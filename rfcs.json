@@ -106180,6 +106180,22 @@
   "title": "Enhanced JSON Web Token (JWT) Claim Constraints for Secure Telephone Identity Revisited (STIR) Certificates",
   "wg": "stir"
  },
+ "RFC9119": {
+  "area": "ops",
+  "keywords": [
+   "Multicast",
+   "IEEE 802 Wireless Multicast",
+   "Broadcast",
+   "BUM",
+   "wifi",
+   "wireless"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multicast Considerations over IEEE 802 Wireless Media",
+  "wg": "mboned"
+ },
  "RFC9125": {
   "area": "rtg",
   "keywords": [
