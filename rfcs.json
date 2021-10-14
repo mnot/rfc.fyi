@@ -106290,6 +106290,36 @@
   "title": "Controlling Filtering Rules Using Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel",
   "wg": "dots"
  },
+ "RFC9135": {
+  "area": "rtg",
+  "keywords": [
+   "IRB",
+   "inter-subnet-forwarding",
+   "symmetric",
+   "asymmetric",
+   "mobility"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Integrated Routing and Bridging in Ethernet VPN (EVPN)",
+  "wg": "bess"
+ },
+ "RFC9136": {
+  "area": "rtg",
+  "keywords": [
+   "RT5",
+   "RT-5",
+   "Type-5",
+   "Interface-less",
+   "Interface-ful"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IP Prefix Advertisement in Ethernet VPN (EVPN)",
+  "wg": "bess"
+ },
  "RFC9137": {
   "area": "gen",
   "keywords": [
