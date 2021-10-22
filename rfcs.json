@@ -105699,6 +105699,20 @@
   "title": "A YANG Data Model for Routing Policy",
   "wg": "rtgwg"
  },
+ "RFC9068": {
+  "area": "sec",
+  "keywords": [
+   "OAuth",
+   "Resource",
+   "Access token",
+   "JWT"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSON Web Token (JWT) Profile for OAuth 2.0 Access Tokens",
+  "wg": "oauth"
+ },
  "RFC9071": {
   "area": "art",
   "keywords": [
@@ -106229,6 +106243,22 @@
   "stream": "ietf",
   "title": "OAuth 2.0 Pushed Authorization Requests",
   "wg": "oauth"
+ },
+ "RFC9127": {
+  "area": "rtg",
+  "keywords": [
+   "Liveliness check",
+   "BGP",
+   "OSPF",
+   "IS-IS",
+   "TCP-AO",
+   "MD5"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for Bidirectional Forwarding Detection (BFD)",
+  "wg": "bfd"
  },
  "RFC9131": {
   "area": "int",
