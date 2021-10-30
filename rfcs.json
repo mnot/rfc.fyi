@@ -105496,6 +105496,20 @@
   "title": "Propagation of ARP/ND Flags in an Ethernet Virtual Private Network (EVPN)",
   "wg": "bess"
  },
+ "RFC9048": {
+  "area": "sec",
+  "keywords": [
+   "EAP",
+   "AKA",
+   "AKA'",
+   "3GPP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Improved Extensible Authentication Protocol Method for 3GPP Mobile Network Authentication and Key Agreement (EAP-AKA')",
+  "wg": "emu"
+ },
  "RFC9049": {
   "keywords": [
    "PAN"
@@ -106218,6 +106232,20 @@
   "stream": "ietf",
   "title": "Multicast Considerations over IEEE 802 Wireless Media",
   "wg": "mboned"
+ },
+ "RFC9120": {
+  "keywords": [
+   "root zone",
+   "IANA",
+   "top-level domain",
+   "root nameservers",
+   "DNS",
+   "ARPA"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Nameservers for the Address and Routing Parameter Area (\"arpa\") Domain"
  },
  "RFC9125": {
   "area": "rtg",
