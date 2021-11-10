@@ -106035,6 +106035,20 @@
   "title": "Improving the Reaction of Customer Edge Routers to IPv6 Renumbering Events",
   "wg": "v6ops"
  },
+ "RFC9097": {
+  "area": "tsv",
+  "keywords": [
+   "IP Layer",
+   "Performance",
+   "Speed",
+   "Access"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Metrics and Methods for One-Way IP Capacity",
+  "wg": "ippm"
+ },
  "RFC9098": {
   "area": "ops",
   "keywords": [],
