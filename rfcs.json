@@ -103706,6 +103706,37 @@
   "title": "Captive-Portal Identification in DHCP and Router Advertisements (RAs)",
   "wg": "capport"
  },
+ "RFC8911": {
+  "area": "tsv",
+  "keywords": [
+   "IPPM",
+   "Loss",
+   "Delay"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registry for Performance Metrics",
+  "wg": "ippm"
+ },
+ "RFC8912": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Initial Performance Metrics Registry Entries",
+  "wg": "ippm"
+ },
+ "RFC8913": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Two-Way Active Measurement Protocol (TWAMP) YANG Data Model",
+  "wg": "ippm"
+ },
  "RFC8914": {
   "area": "ops",
   "keywords": [],
