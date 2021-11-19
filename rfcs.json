@@ -90139,7 +90139,7 @@
   "area": "ops",
   "keywords": [],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "DNS Query Name Minimisation to Improve Privacy",
   "wg": "dnsop"
@@ -106454,5 +106454,23 @@
   "stream": "ietf",
   "title": "Considerations for Cancellation of IETF Meetings",
   "wg": "shmoo"
+ },
+ "RFC9141": {
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updating References to the IETF FTP Service"
+ },
+ "RFC9156": {
+  "area": "ops",
+  "keywords": [
+   "QNAME"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Query Name Minimisation to Improve Privacy",
+  "wg": "dnsop"
  }
 }
