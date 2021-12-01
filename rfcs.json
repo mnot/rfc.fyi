@@ -106455,6 +106455,27 @@
   "title": "Considerations for Cancellation of IETF Meetings",
   "wg": "shmoo"
  },
+ "RFC9138": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Design Considerations for Name Resolution Service in Information-Centric Networking (ICN)"
+ },
+ "RFC9139": {
+  "keywords": [
+   "Content-Centric Networking (CCNx)",
+   "Named Data Networking (NDN)",
+   "header compression",
+   "fragmentation",
+   "6LoWPAN",
+   "Internet of Things (IoT)"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Information-Centric Networking (ICN) Adaptation to Low-Power Wireless Personal Area Networks (LoWPANs)"
+ },
  "RFC9141": {
   "keywords": [],
   "level": "std",
@@ -106472,5 +106493,28 @@
   "stream": "ietf",
   "title": "DNS Query Name Minimisation to Improve Privacy",
   "wg": "dnsop"
+ },
+ "RFC9157": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Revised IANA Considerations for DNSSEC",
+  "wg": "dnsop"
+ },
+ "RFC9158": {
+  "area": "sec",
+  "keywords": [
+   "Certificate Request Message Format",
+   "CRMF",
+   "CRMF Registration Controls",
+   "Alternate Certificate Formats"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Update to the Object Identifier Registry for the PKIX Working Group",
+  "wg": "lamps"
  }
 }
