@@ -20216,7 +20216,7 @@
  "RFC2169": {
   "area": "app",
   "keywords": [],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "A Trivial Convention for using HTTP in URN Resolution",
@@ -22005,7 +22005,7 @@
    "Resource",
    "Locators"
   ],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "HTTP Remote Variant Selection Algorithm -- RVSA/1.0",
@@ -22202,7 +22202,7 @@
    "transfer",
    "protocol"
   ],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "The Safe Response Header Field",
@@ -27381,7 +27381,7 @@
    "http",
    "authentication"
   ],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "The Secure HyperText Transfer Protocol",
@@ -28979,7 +28979,7 @@
    "transfer",
    "protocol"
   ],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "legacy",
   "title": "An HTTP Extension Framework"
@@ -79863,7 +79863,7 @@
    "TLS certificates"
   ],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Certificate Transparency"
  },
@@ -94530,7 +94530,7 @@
    "Opportunistic Security",
    "HTTP"
   ],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "Opportunistic Security for HTTP/2",
@@ -105735,6 +105735,23 @@
   "title": "Considerations around Transport Header Confidentiality, Network Operations, and the Evolution of Internet Transport Protocols",
   "wg": "tsvwg"
  },
+ "RFC9066": {
+  "area": "sec",
+  "keywords": [
+   "Automation",
+   "Anti-DDoS Automation",
+   "DDoS Mitigation",
+   "Collaborative Networking",
+   "Protective Networking",
+   "Security",
+   "Scrubbing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel Call Home",
+  "wg": "dots"
+ },
  "RFC9067": {
   "area": "rtg",
   "keywords": [],
@@ -106516,5 +106533,21 @@
   "stream": "ietf",
   "title": "Update to the Object Identifier Registry for the PKIX Working Group",
   "wg": "lamps"
+ },
+ "RFC9162": {
+  "area": "sec",
+  "keywords": [
+   "certificates",
+   "pkix",
+   "tls",
+   "website",
+   "webpki",
+   "browsers"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Certificate Transparency Version 2.0",
+  "wg": "trans"
  }
 }
