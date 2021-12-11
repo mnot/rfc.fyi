@@ -106500,6 +106500,19 @@
   "stream": "ietf",
   "title": "Updating References to the IETF FTP Service"
  },
+ "RFC9144": {
+  "area": "ops",
+  "keywords": [
+   "Troubleshooting",
+   "YANG RPC",
+   "YANG Data Model"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Comparison of Network Management Datastore Architecture (NMDA) Datastores",
+  "wg": "netmod"
+ },
  "RFC9156": {
   "area": "ops",
   "keywords": [
