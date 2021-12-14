@@ -106513,6 +106513,24 @@
   "title": "Comparison of Network Management Datastore Architecture (NMDA) Datastores",
   "wg": "netmod"
  },
+ "RFC9145": {
+  "area": "rtg",
+  "keywords": [
+   "Security",
+   "Resilience",
+   "Automation",
+   "Service delivery",
+   "Providers",
+   "Differentiated services",
+   "Traffic Engineering",
+   "Attack mitigation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Integrity Protection for the Network Service Header (NSH) and Encryption of Sensitive Context Headers",
+  "wg": "sfc"
+ },
  "RFC9156": {
   "area": "ops",
   "keywords": [
@@ -106547,6 +106565,23 @@
   "title": "Update to the Object Identifier Registry for the PKIX Working Group",
   "wg": "lamps"
  },
+ "RFC9159": {
+  "area": "int",
+  "keywords": [
+   "Bluetooth Low Energy",
+   "mesh networks",
+   "6lowpan",
+   "IPv6",
+   "Low power",
+   "IoT",
+   "Internet of Things"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Mesh over BLUETOOTH(R) Low Energy Using the Internet Protocol Support Profile (IPSP)",
+  "wg": "6lo"
+ },
  "RFC9162": {
   "area": "sec",
   "keywords": [
@@ -106562,5 +106597,19 @@
   "stream": "ietf",
   "title": "Certificate Transparency Version 2.0",
   "wg": "trans"
+ },
+ "RFC9164": {
+  "area": "art",
+  "keywords": [
+   "binary format",
+   "data interchange format",
+   "interface address",
+   "zone identifier"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Binary Object Representation (CBOR) Tags for IPv4 and IPv6 Addresses and Prefixes",
+  "wg": "cbor"
  }
 }
