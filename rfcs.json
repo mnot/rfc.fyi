@@ -106582,6 +106582,24 @@
   "title": "IPv6 Mesh over BLUETOOTH(R) Low Energy Using the Internet Protocol Support Profile (IPSP)",
   "wg": "6lo"
  },
+ "RFC9160": {
+  "area": "ops",
+  "keywords": [
+   "control plane migration",
+   "traffic monitoring",
+   "traffic accounting",
+   "OSPF",
+   "IS-IS",
+   "BGP Prefix-SID",
+   "PCE",
+   "PCEP SR"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Export of MPLS Segment Routing Label Type Information in IP Flow Information Export (IPFIX)",
+  "wg": "opsawg"
+ },
  "RFC9162": {
   "area": "sec",
   "keywords": [
