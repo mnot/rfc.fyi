@@ -106531,6 +106531,17 @@
   "title": "Integrity Protection for the Network Service Header (NSH) and Encryption of Sensitive Context Headers",
   "wg": "sfc"
  },
+ "RFC9155": {
+  "area": "sec",
+  "keywords": [
+   "tls"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecating MD5 and SHA-1 Signature Hashes in TLS 1.2 and DTLS 1.2",
+  "wg": "tls"
+ },
  "RFC9156": {
   "area": "ops",
   "keywords": [
