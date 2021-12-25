@@ -106640,5 +106640,32 @@
   "stream": "ietf",
   "title": "Concise Binary Object Representation (CBOR) Tags for IPv4 and IPv6 Addresses and Prefixes",
   "wg": "cbor"
+ },
+ "RFC9165": {
+  "area": "art",
+  "keywords": [
+   "binary format",
+   "data interchange format",
+   "description language",
+   "schema language",
+   "tree grammar",
+   "ABNF",
+   "Augmented BNF",
+   "feature indication"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Additional Control Operators for the Concise Data Definition Language (CDDL)",
+  "wg": "cbor"
+ },
+ "RFC9167": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registry Maintenance Notification for the Extensible Provisioning Protocol (EPP)",
+  "wg": "regext"
  }
 }
