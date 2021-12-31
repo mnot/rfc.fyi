@@ -106493,6 +106493,21 @@
   "stream": "irtf",
   "title": "Information-Centric Networking (ICN) Adaptation to Low-Power Wireless Personal Area Networks (LoWPANs)"
  },
+ "RFC9140": {
+  "area": "sec",
+  "keywords": [
+   "IoT security",
+   "cybersecurity",
+   "network access authorization",
+   "Extensible Authentication Protocol",
+   "key exchange"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Nimble Out-of-Band Authentication for EAP (EAP-NOOB)",
+  "wg": "emu"
+ },
  "RFC9141": {
   "keywords": [],
   "level": "std",
@@ -106530,6 +106545,23 @@
   "stream": "ietf",
   "title": "Integrity Protection for the Network Service Header (NSH) and Encryption of Sensitive Context Headers",
   "wg": "sfc"
+ },
+ "RFC9154": {
+  "area": "art",
+  "keywords": [
+   "EPP",
+   "authinfo",
+   "random",
+   "short-lived",
+   "strong",
+   "storing",
+   "securely"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensible Provisioning Protocol (EPP) Secure Authorization Information for Transfer",
+  "wg": "regext"
  },
  "RFC9155": {
   "area": "sec",
@@ -106667,5 +106699,26 @@
   "stream": "ietf",
   "title": "Registry Maintenance Notification for the Extensible Provisioning Protocol (EPP)",
   "wg": "regext"
+ },
+ "RFC9169": {
+  "keywords": [
+   "LTANS",
+   "long-term archive"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "New ASN.1 Modules for the Evidence Record Syntax (ERS)"
+ },
+ "RFC9170": {
+  "keywords": [
+   "Extensions",
+   "versions",
+   "grease"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Long-Term Viability of Protocol Extension Mechanisms"
  }
 }
