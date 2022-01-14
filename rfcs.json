@@ -106515,6 +106515,49 @@
   "stream": "ietf",
   "title": "Updating References to the IETF FTP Service"
  },
+ "RFC9142": {
+  "area": "sec",
+  "keywords": [
+   "3DES",
+   "AES",
+   "Advanced Encryption Standard",
+   "Curve25519",
+   "Curve448",
+   "DH",
+   "Diffie-Hellman",
+   "Digital Encryption Standard",
+   "ECC",
+   "ECDH",
+   "Elliptic Curve Cryptography",
+   "Elliptic Curve Diffie-Hellman",
+   "FFC",
+   "Finite Field Cryptography",
+   "IFC",
+   "Integer Factorization Cryptography",
+   "MODP",
+   "MTI",
+   "Mandatory to Implement",
+   "Modular Exponential",
+   "Public Key Exchange",
+   "RSA",
+   "SHA-2",
+   "Secure Shell Key Exchange",
+   "Secure Shell",
+   "Security Strength",
+   "Triple-DES",
+   "sha1",
+   "sha256",
+   "sha384",
+   "sha512",
+   "SHA-1",
+   "Modular Exponentiation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Key Exchange (KEX) Method Updates and Recommendations for Secure Shell (SSH)",
+  "wg": "curdle"
+ },
  "RFC9144": {
   "area": "ops",
   "keywords": [
@@ -106642,6 +106685,15 @@
   "stream": "ietf",
   "title": "Export of MPLS Segment Routing Label Type Information in IP Flow Information Export (IPFIX)",
   "wg": "opsawg"
+ },
+ "RFC9161": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operational Aspects of Proxy ARP/ND in Ethernet Virtual Private Networks",
+  "wg": "bess"
  },
  "RFC9162": {
   "area": "sec",
