@@ -106309,6 +106309,18 @@
   "stream": "iab",
   "title": "Nameservers for the Address and Routing Parameter Area (\"arpa\") Domain"
  },
+ "RFC9124": {
+  "area": "sec",
+  "keywords": [
+   "computer security",
+   "smart objects"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Manifest Information Model for Firmware Updates in Internet of Things (IoT) Devices",
+  "wg": "suit"
+ },
  "RFC9125": {
   "area": "rtg",
   "keywords": [
@@ -106751,6 +106763,19 @@
   "stream": "ietf",
   "title": "Registry Maintenance Notification for the Extensible Provisioning Protocol (EPP)",
   "wg": "regext"
+ },
+ "RFC9168": {
+  "area": "rtg",
+  "keywords": [
+   "PCE",
+   "FlowSpec",
+   "Flow Spec"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extension for Flow Specification",
+  "wg": "pce"
  },
  "RFC9169": {
   "keywords": [
