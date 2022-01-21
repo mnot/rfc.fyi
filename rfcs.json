@@ -106797,5 +106797,16 @@
   "status": "current",
   "stream": "iab",
   "title": "Long-Term Viability of Protocol Extension Mechanisms"
+ },
+ "RFC9184": {
+  "area": "rtg",
+  "keywords": [
+   "IANA"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Extended Community Registries Update",
+  "wg": "idr"
  }
 }
