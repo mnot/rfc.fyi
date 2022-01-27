@@ -106808,5 +106808,17 @@
   "stream": "ietf",
   "title": "BGP Extended Community Registries Update",
   "wg": "idr"
+ },
+ "RFC9186": {
+  "area": "rtg",
+  "keywords": [
+   "PIM-SM",
+   "BFD"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Fast Failover in Protocol Independent Multicast - Sparse Mode (PIM-SM) Using Bidirectional Forwarding Detection (BFD) for Multipoint Networks",
+  "wg": "pim"
  }
 }
