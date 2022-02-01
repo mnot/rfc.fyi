@@ -106755,6 +106755,24 @@
   "title": "Additional Control Operators for the Concise Data Definition Language (CDDL)",
   "wg": "cbor"
  },
+ "RFC9166": {
+  "area": "rtg",
+  "keywords": [
+   "YANG",
+   "IGMP Snooping",
+   "MLD Snooping",
+   "multicast",
+   "data model",
+   "ietf-igmp-mld-snooping",
+   "network management",
+   "routing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Internet Group Management Protocol (IGMP) and Multicast Listener Discovery (MLD) Snooping",
+  "wg": "pim"
+ },
  "RFC9167": {
   "area": "art",
   "keywords": [],
@@ -106798,6 +106816,55 @@
   "stream": "iab",
   "title": "Long-Term Viability of Protocol Extension Mechanisms"
  },
+ "RFC9171": {
+  "area": "tsv",
+  "keywords": [
+   "Delay-tolerant networking",
+   "disruption-tolerant networking"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bundle Protocol Version 7",
+  "wg": "dtn"
+ },
+ "RFC9172": {
+  "area": "tsv",
+  "keywords": [
+   "security",
+   "bundle",
+   "integrity",
+   "confidentiality"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bundle Protocol Security (BPSec)",
+  "wg": "dtn"
+ },
+ "RFC9173": {
+  "area": "tsv",
+  "keywords": [
+   "security",
+   "bundle",
+   "integrity",
+   "confidentiality"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Default Security Contexts for Bundle Protocol Security (BPSec)",
+  "wg": "dtn"
+ },
+ "RFC9174": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Delay-Tolerant Networking TCP Convergence-Layer Protocol Version 4",
+  "wg": "dtn"
+ },
  "RFC9184": {
   "area": "rtg",
   "keywords": [
@@ -106820,5 +106887,12 @@
   "stream": "ietf",
   "title": "Fast Failover in Protocol Independent Multicast - Sparse Mode (PIM-SM) Using Bidirectional Forwarding Detection (BFD) for Multipoint Networks",
   "wg": "pim"
+ },
+ "RFC9187": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Sequence Number Extension for Windowed Protocols"
  }
 }
