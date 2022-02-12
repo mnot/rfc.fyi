@@ -106876,6 +106876,17 @@
   "title": "Delay-Tolerant Networking TCP Convergence-Layer Protocol Version 4",
   "wg": "dtn"
  },
+ "RFC9179": {
+  "area": "ops",
+  "keywords": [
+   "geolocation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Grouping for Geographic Locations",
+  "wg": "netmod"
+ },
  "RFC9183": {
   "keywords": [
    "aggregated"
