@@ -107010,5 +107010,16 @@
   "stream": "ietf",
   "title": "Handling Large Certificates and Long Certificate Chains in TLS-Based EAP Methods",
   "wg": "emu"
+ },
+ "RFC9192": {
+  "keywords": [
+   "NSH",
+   "Context Header",
+   "timestamp"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Network Service Header (NSH) Fixed-Length Context Header Allocation"
  }
 }
