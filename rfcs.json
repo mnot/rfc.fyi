@@ -102881,7 +102881,7 @@
    "Browser"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Negotiating Media Multiplexing Using the Session Description Protocol (SDP)",
   "wg": "mmusic"
@@ -106584,6 +106584,27 @@
   "title": "Key Exchange (KEX) Method Updates and Recommendations for Secure Shell (SSH)",
   "wg": "curdle"
  },
+ "RFC9143": {
+  "area": "art",
+  "keywords": [
+   "RTP",
+   "SDP",
+   "Bundle",
+   "Multiplexing",
+   "RTCWEB",
+   "CLUE",
+   "RTCWEB",
+   "MMUSIC",
+   "AVT",
+   "WEB",
+   "Browser"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Negotiating Media Multiplexing Using the Session Description Protocol (SDP)",
+  "wg": "mmusic"
+ },
  "RFC9144": {
   "area": "ops",
   "keywords": [
@@ -107021,5 +107042,27 @@
   "status": "current",
   "stream": "independent",
   "title": "Network Service Header (NSH) Fixed-Length Context Header Allocation"
+ },
+ "RFC9195": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A File Format for YANG Instance Data",
+  "wg": "netmod"
+ },
+ "RFC9196": {
+  "area": "ops",
+  "keywords": [
+   "NMDA",
+   "NETCONF",
+   "RESTCONF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Modules Describing Capabilities for Systems and Datastore Update Notifications",
+  "wg": "netconf"
  }
 }
