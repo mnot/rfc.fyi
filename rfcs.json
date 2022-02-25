@@ -106911,6 +106911,27 @@
   "title": "Delay-Tolerant Networking TCP Convergence-Layer Protocol Version 4",
   "wg": "dtn"
  },
+ "RFC9175": {
+  "area": "art",
+  "keywords": [
+   "OSCORE",
+   "block-wise",
+   "DTLS",
+   "freshness",
+   "delay",
+   "denial-of-service",
+   "amplification",
+   "Message Body Integrity",
+   "Concurrent Block-Wise",
+   "Request-Response Binding",
+   "Token Reuse"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Constrained Application Protocol (CoAP): Echo, Request-Tag, and Token Processing",
+  "wg": "core"
+ },
  "RFC9179": {
   "area": "ops",
   "keywords": [
@@ -106921,6 +106942,17 @@
   "stream": "ietf",
   "title": "A YANG Grouping for Geographic Locations",
   "wg": "netmod"
+ },
+ "RFC9180": {
+  "keywords": [
+   "public-key encryption",
+   "key encapsulation",
+   "post-quantum public-key encryption"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Hybrid Public Key Encryption"
  },
  "RFC9181": {
   "area": "ops",
