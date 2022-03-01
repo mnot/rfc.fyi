@@ -107096,5 +107096,16 @@
   "stream": "ietf",
   "title": "YANG Modules Describing Capabilities for Systems and Datastore Update Notifications",
   "wg": "netconf"
+ },
+ "RFC9206": {
+  "keywords": [
+   "post quantum",
+   "quantum resistant",
+   "NSA"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Commercial National Security Algorithm (CNSA) Suite Cryptography for Internet Protocol Security (IPsec)"
  }
 }
