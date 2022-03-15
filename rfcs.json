@@ -105789,6 +105789,19 @@
   "title": "Support for Local RIB in the BGP Monitoring Protocol (BMP)",
   "wg": "grow"
  },
+ "RFC9070": {
+  "area": "rtg",
+  "keywords": [
+   "MPLS",
+   "LDP",
+   "YANG"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for MPLS LDP",
+  "wg": "mpls"
+ },
  "RFC9071": {
   "area": "art",
   "keywords": [
@@ -107039,6 +107052,17 @@
   "stream": "independent",
   "title": "Generic Multi-Access (GMA) Encapsulation Protocol"
  },
+ "RFC9189": {
+  "keywords": [
+   "GOST",
+   "cipher suite",
+   "TLS"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "GOST Cipher Suites for Transport Layer Security (TLS) Protocol Version 1.2"
+ },
  "RFC9190": {
   "area": "sec",
   "keywords": [],
@@ -107097,6 +107121,21 @@
   "title": "YANG Modules Describing Capabilities for Systems and Datastore Update Notifications",
   "wg": "netconf"
  },
+ "RFC9199": {
+  "keywords": [
+   "Routing",
+   "DNS",
+   "Anycast",
+   "Domain",
+   "Name",
+   "System",
+   "BGP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Considerations for Large Authoritative DNS Server Operators"
+ },
  "RFC9206": {
   "keywords": [
    "post quantum",
@@ -107107,5 +107146,15 @@
   "status": "current",
   "stream": "independent",
   "title": "Commercial National Security Algorithm (CNSA) Suite Cryptography for Internet Protocol Security (IPsec)"
+ },
+ "RFC9212": {
+  "keywords": [
+   "NSS",
+   "remote administration"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Commercial National Security Algorithm (CNSA) Suite Cryptography for Secure Shell (SSH)"
  }
 }
