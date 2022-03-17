@@ -107156,5 +107156,12 @@
   "status": "current",
   "stream": "independent",
   "title": "Commercial National Security Algorithm (CNSA) Suite Cryptography for Secure Shell (SSH)"
+ },
+ "RFC9217": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Current Open Questions in Path-Aware Networking"
  }
 }
