@@ -106649,6 +106649,17 @@
   "title": "Integrity Protection for the Network Service Header (NSH) and Encryption of Sensitive Context Headers",
   "wg": "sfc"
  },
+ "RFC9146": {
+  "area": "sec",
+  "keywords": [
+   "NAT rebinding"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Connection Identifier for DTLS 1.2",
+  "wg": "tls"
+ },
  "RFC9153": {
   "area": "int",
   "keywords": [
@@ -107146,6 +107157,18 @@
   "status": "current",
   "stream": "independent",
   "title": "Commercial National Security Algorithm (CNSA) Suite Cryptography for Internet Protocol Security (IPsec)"
+ },
+ "RFC9207": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "oauth2"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Authorization Server Issuer Identification",
+  "wg": "oauth"
  },
  "RFC9212": {
   "keywords": [
