@@ -106956,6 +106956,29 @@
   "title": "Constrained Application Protocol (CoAP): Echo, Request-Tag, and Token Processing",
   "wg": "core"
  },
+ "RFC9177": {
+  "area": "art",
+  "keywords": [
+   "Quick-Block",
+   "Robust-Block",
+   "R-Block",
+   "Tough-Block",
+   "Resilient-Block",
+   "Fast-Block",
+   "Resilience",
+   "Filtering",
+   "Faster transmission",
+   "Large amounts of data",
+   "Less packet interchange",
+   "Fast recovery",
+   "DOTS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Constrained Application Protocol (CoAP) Block-Wise Transfer Options Supporting Robust Transmission",
+  "wg": "core"
+ },
  "RFC9179": {
   "area": "ops",
   "keywords": [
@@ -107169,6 +107192,18 @@
   "stream": "ietf",
   "title": "OAuth 2.0 Authorization Server Issuer Identification",
   "wg": "oauth"
+ },
+ "RFC9210": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "TCP"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Transport over TCP - Operational Requirements",
+  "wg": "dnsop"
  },
  "RFC9212": {
   "keywords": [
