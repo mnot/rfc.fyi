@@ -19165,7 +19165,7 @@
    "Protocol"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "legacy",
   "title": "IMAP4 QUOTA extension"
  },
@@ -85936,7 +85936,7 @@
    "JSON"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Finding the Authoritative Registration Data (RDAP) Service",
   "wg": "weirds"
@@ -107193,6 +107193,15 @@
   "title": "OAuth 2.0 Authorization Server Issuer Identification",
   "wg": "oauth"
  },
+ "RFC9208": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IMAP QUOTA Extension",
+  "wg": "extra"
+ },
  "RFC9210": {
   "area": "ops",
   "keywords": [
@@ -107231,5 +107240,68 @@
   "status": "current",
   "stream": "irtf",
   "title": "Current Open Questions in Path-Aware Networking"
+ },
+ "RFC9221": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Unreliable Datagram Extension to QUIC",
+  "wg": "quic"
+ },
+ "RFC9222": {
+  "area": "ops",
+  "keywords": [
+   "GRASP",
+   "autonomous",
+   "autonomic function",
+   "self-management"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines for Autonomic Service Agents",
+  "wg": "anima"
+ },
+ "RFC9224": {
+  "area": "art",
+  "keywords": [
+   "whois",
+   "bootstrap",
+   "domain",
+   "IDN",
+   "DNS",
+   "AS",
+   "IPv4",
+   "IPv6",
+   "JSON"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Finding the Authoritative Registration Data Access Protocol (RDAP) Service",
+  "wg": "regext"
+ },
+ "RFC9227": {
+  "keywords": [
+   "AEAD",
+   "MGM"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Using GOST Ciphers in the Encapsulating Security Payload (ESP) and Internet Key Exchange Version 2 (IKEv2) Protocols"
+ },
+ "RFC9233": {
+  "keywords": [
+   "IDN",
+   "IDNA",
+   "IDNA2008"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internationalized Domain Names for Applications 2008 (IDNA2008) and Unicode 12.0.0"
  }
 }
