@@ -107283,6 +107283,22 @@
   "title": "Finding the Authoritative Registration Data Access Protocol (RDAP) Service",
   "wg": "regext"
  },
+ "RFC9225": {
+  "keywords": [
+   "bugs"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Software Defects Considered Harmful"
+ },
+ "RFC9226": {
+  "keywords": [],
+  "level": "experimental",
+  "status": "current",
+  "stream": "independent",
+  "title": "Bioctal: Hexadecimal 2.0"
+ },
  "RFC9227": {
   "keywords": [
    "AEAD",
