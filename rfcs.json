@@ -107241,6 +107241,18 @@
   "stream": "irtf",
   "title": "Current Open Questions in Path-Aware Networking"
  },
+ "RFC9219": {
+  "area": "art",
+  "keywords": [
+   "JMAP",
+   "S/MIME"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "S/MIME Signature Verification Extension to the JSON Meta Application Protocol (JMAP)",
+  "wg": "jmap"
+ },
  "RFC9221": {
   "area": "tsv",
   "keywords": [],
