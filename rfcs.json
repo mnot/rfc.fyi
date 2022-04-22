@@ -72998,7 +72998,7 @@
    "dtls protocol"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Datagram Transport Layer Security Version 1.2",
   "wg": "tls"
@@ -106660,6 +106660,28 @@
   "title": "Connection Identifier for DTLS 1.2",
   "wg": "tls"
  },
+ "RFC9147": {
+  "area": "sec",
+  "keywords": [
+   "Communication Security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Datagram Transport Layer Security (DTLS) Protocol Version 1.3",
+  "wg": "tls"
+ },
+ "RFC9150": {
+  "keywords": [
+   "HMAC",
+   "IoT",
+   "constrained devices"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "TLS 1.3 Authentication and Integrity-Only Cipher Suites"
+ },
  "RFC9153": {
   "area": "int",
   "keywords": [
@@ -107245,6 +107267,30 @@
   "stream": "independent",
   "title": "Using GOST R 34.10-2012 and GOST R 34.11-2012 Algorithms with the Internet X.509 Public Key Infrastructure"
  },
+ "RFC9216": {
+  "area": "sec",
+  "keywords": [
+   "pkix",
+   "encryption",
+   "security",
+   "authentication",
+   "S/MIME",
+   "smime",
+   "email",
+   "mail",
+   "confidentiality",
+   "certificate",
+   "pkcs8",
+   "pkcs12",
+   "x509",
+   "\"test vector\""
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "S/MIME Example Keys and Certificates",
+  "wg": "lamps"
+ },
  "RFC9217": {
   "keywords": [],
   "level": "informational",
@@ -107360,5 +107406,16 @@
   "status": "current",
   "stream": "ietf",
   "title": "Internationalized Domain Names for Applications 2008 (IDNA2008) and Unicode 12.0.0"
+ },
+ "RFC9236": {
+  "keywords": [
+   "Information-Centric Networking",
+   "Name Resolution Service",
+   "Name to location mapping"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Architectural Considerations of Information-Centric Networking (ICN) Using a Name Resolution Service"
  }
 }
