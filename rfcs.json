@@ -106671,6 +106671,27 @@
   "title": "The Datagram Transport Layer Security (DTLS) Protocol Version 1.3",
   "wg": "tls"
  },
+ "RFC9148": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "EST-coaps: Enrollment over Secure Transport with the Secure Constrained Application Protocol",
+  "wg": "ace"
+ },
+ "RFC9149": {
+  "area": "sec",
+  "keywords": [
+   "TLS",
+   "Tickets"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TLS Ticket Requests",
+  "wg": "tls"
+ },
  "RFC9150": {
   "keywords": [
    "HMAC",
@@ -106681,6 +106702,13 @@
   "status": "current",
   "stream": "independent",
   "title": "TLS 1.3 Authentication and Integrity-Only Cipher Suites"
+ },
+ "RFC9151": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Commercial National Security Algorithm (CNSA) Suite Profile for TLS and DTLS 1.2 and 1.3"
  },
  "RFC9153": {
   "area": "int",
@@ -106978,6 +107006,20 @@
   "title": "Constrained Application Protocol (CoAP): Echo, Request-Tag, and Token Processing",
   "wg": "core"
  },
+ "RFC9176": {
+  "area": "art",
+  "keywords": [
+   "CoRE",
+   "Web Linking",
+   "Resource Discovery",
+   "Resource Directory"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Constrained RESTful Environments (CoRE) Resource Directory",
+  "wg": "core"
+ },
  "RFC9177": {
   "area": "art",
   "keywords": [
@@ -107081,6 +107123,24 @@
   "stream": "ietf",
   "title": "BGP Extended Community Registries Update",
   "wg": "idr"
+ },
+ "RFC9185": {
+  "area": "art",
+  "keywords": [
+   "PERC",
+   "SRTP",
+   "RTP",
+   "DTLS",
+   "DTLS-SRTP",
+   "DTLS tunnel",
+   "conferencing",
+   "security"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DTLS Tunnel between a Media Distributor and Key Distributor to Facilitate Key Exchange",
+  "wg": "perc"
  },
  "RFC9186": {
   "area": "rtg",
