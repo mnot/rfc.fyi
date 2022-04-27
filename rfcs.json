@@ -106710,6 +106710,16 @@
   "stream": "independent",
   "title": "Commercial National Security Algorithm (CNSA) Suite Profile for TLS and DTLS 1.2 and 1.3"
  },
+ "RFC9152": {
+  "keywords": [
+   "CNSA",
+   "NSS"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Secure Object Delivery Protocol (SODP) Server Interfaces: NSA's Profile for Delivery of Certificates, Certificate Revocation Lists (CRLs), and Symmetric Keys to Clients"
+ },
  "RFC9153": {
   "area": "int",
   "keywords": [
