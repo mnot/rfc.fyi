@@ -5053,7 +5053,6 @@
  },
  "RFC0768": {
   "keywords": [
-   "UDP",
    "UDP"
   ],
   "level": "std",
@@ -5259,7 +5258,6 @@
  },
  "RFC0793": {
   "keywords": [
-   "TCP",
    "TCP"
   ],
   "level": "std",
@@ -5827,7 +5825,6 @@
  },
  "RFC0869": {
   "keywords": [
-   "HMP",
    "HMP"
   ],
   "level": "historic",
@@ -6648,7 +6645,7 @@
  },
  "RFC0977": {
   "keywords": [
-   "NNTP]"
+   "NNTP"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -9508,7 +9505,6 @@
   "area": "app",
   "keywords": [
    "NETFAX",
-   "netfax",
    "TIFF",
    "facsimile"
   ],
@@ -9623,7 +9619,8 @@
    "PAWS",
    "window",
    "scale",
-   "window"
+   "window scale",
+   "Protect Against Wrapped Sequence numbers"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -11456,7 +11453,6 @@
  "RFC1479": {
   "area": "rtg",
   "keywords": [
-   "IDPR",
    "IDPR"
   ],
   "level": "historic",
@@ -11803,7 +11799,8 @@
   "area": "sec",
   "keywords": [
    "KERBEROS",
-   "CAT,Security"
+   "CAT",
+   "Security"
   ],
   "level": "historic",
   "status": "obsoleted",
@@ -11905,7 +11902,7 @@
  },
  "RFC1519": {
   "keywords": [
-   "CIDR-STRA]"
+   "CIDR-STRA"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -48528,7 +48525,7 @@
    "subtype"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Scripting Media Types"
  },
@@ -106505,19 +106502,6 @@
   "title": "IP Prefix Advertisement in Ethernet VPN (EVPN)",
   "wg": "bess"
  },
- "RFC9137": {
-  "area": "gen",
-  "keywords": [
-   "virtualize",
-   "postpone",
-   "move"
-  ],
-  "level": "bcp",
-  "status": "current",
-  "stream": "ietf",
-  "title": "Considerations for Cancellation of IETF Meetings",
-  "wg": "shmoo"
- },
  "RFC9138": {
   "keywords": [],
   "level": "informational",
@@ -107487,6 +107471,22 @@
   "stream": "independent",
   "title": "Delivered-To Email Header Field"
  },
+ "RFC9229": {
+  "area": "rtg",
+  "keywords": [
+   "routing",
+   "transition",
+   "IPv6 transition",
+   "double-stack",
+   "dual-stack",
+   "glorious IPv6-only future"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv4 Routes with an IPv6 Next Hop in the Babel Routing Protocol",
+  "wg": "babel"
+ },
  "RFC9233": {
   "keywords": [
    "IDN",
@@ -107498,6 +107498,19 @@
   "stream": "ietf",
   "title": "Internationalized Domain Names for Applications 2008 (IDNA2008) and Unicode 12.0.0"
  },
+ "RFC9234": {
+  "area": "rtg",
+  "keywords": [
+   "BGP",
+   "Route leak",
+   "BGP Role"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Route Leak Prevention and Detection Using Roles in UPDATE and OPEN Messages",
+  "wg": "idr"
+ },
  "RFC9236": {
   "keywords": [
    "Information-Centric Networking",
@@ -107508,5 +107521,22 @@
   "status": "current",
   "stream": "irtf",
   "title": "Architectural Considerations of Information-Centric Networking (ICN) Using a Name Resolution Service"
+ },
+ "RFC9239": {
+  "area": "art",
+  "keywords": [
+   "JavaScript",
+   "ECMAScript",
+   "MIME type",
+   "Content-Type",
+   "modules",
+   "TC39",
+   "ESM"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to ECMAScript Media Types",
+  "wg": "dispatch"
  }
 }
