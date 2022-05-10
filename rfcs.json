@@ -13997,7 +13997,17 @@
   "area": "int",
   "keywords": [
    "SIP-MIB",
-   "Standard,MIB,Network,Management,Switched,Multimegabit,Data,Service,Informatiom,Base,SMDS"
+   "Standard",
+   "MIB",
+   "Network",
+   "Management",
+   "Switched",
+   "Multimegabit",
+   "Data",
+   "Service",
+   "Information",
+   "Base",
+   "SMDS"
   ],
   "level": "std",
   "status": "current",
@@ -39477,7 +39487,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "independent",
+  "stream": "ietf",
   "title": "RADIUS (Remote Authentication Dial In User Service) Support For Extensible Authentication Protocol (EAP)"
  },
  "RFC3580": {
