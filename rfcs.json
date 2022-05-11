@@ -13242,9 +13242,8 @@
  },
  "RFC1630": {
   "keywords": [
-   "World",
-   "Wide",
-   "Web",
+   "WWW",
+   "World Wide Web",
    "URI"
   ],
   "level": "informational",
@@ -15216,13 +15215,9 @@
  },
  "RFC1791": {
   "keywords": [
-   "Transmission",
-   "Control",
-   "Protocol",
-   "User",
-   "Datagram",
-   "Maxium",
-   "Unit"
+   "Transmission Control Protocol",
+   "User Datagram",
+   "Maximum Transmission Unit"
   ],
   "level": "experimental",
   "status": "current",
@@ -15687,7 +15682,7 @@
    "AH",
    "Message",
    "Digest",
-   "5",
+   "MD5",
    "Security"
   ],
   "level": "historic",
@@ -15740,7 +15735,7 @@
  "RFC1831": {
   "area": "tsv",
   "keywords": [
-   "RPC]",
+   "RPC",
    "ONC",
    "Open",
    "Network",
@@ -16172,15 +16167,12 @@
   "area": "app",
   "keywords": [
    "HTML",
-   "HTML",
    "SGML",
    "Standard",
    "Generalized",
    "Language",
    "WWW",
-   "World",
-   "Wide",
-   "Web"
+   "World Wide Web"
   ],
   "level": "historic",
   "status": "obsoleted",
@@ -16665,8 +16657,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "historic",
   "status": "current",
@@ -16680,8 +16671,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -16695,8 +16685,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -16710,8 +16699,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -16726,8 +16714,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -16742,8 +16729,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -16758,8 +16744,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -16774,8 +16759,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -16790,8 +16774,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "historic",
   "status": "current",
@@ -16805,8 +16788,7 @@
    "Network",
    "Management",
    "Protocol",
-   "Version",
-   "2"
+   "Version 2"
   ],
   "level": "historic",
   "status": "current",
@@ -17154,7 +17136,6 @@
  },
  "RFC1939": {
   "keywords": [
-   "POP3",
    "POP3"
   ],
   "level": "std",
