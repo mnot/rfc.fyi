@@ -18118,7 +18118,7 @@
  },
  "RFC2013": {
   "keywords": [
-   "MIB-UDP]",
+   "MIB-UDP",
    "Simple",
    "Network",
    "Management",
@@ -19468,7 +19468,8 @@
    "Markup",
    "Language",
    "Multipurpose",
-   "Internet,Mail",
+   "Internet",
+   "Mail",
    "Extensions"
   ],
   "level": "std",
@@ -107529,5 +107530,20 @@
   "stream": "ietf",
   "title": "Updates to ECMAScript Media Types",
   "wg": "dispatch"
+ },
+ "RFC9250": {
+  "area": "int",
+  "keywords": [
+   "DNS",
+   "QUIC",
+   "DNS over QUIC",
+   "Encrypted DNS",
+   "DoQ"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS over Dedicated QUIC Connections",
+  "wg": "dprive"
  }
 }
