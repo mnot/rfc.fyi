@@ -107503,6 +107503,20 @@
   "title": "Route Leak Prevention and Detection Using Roles in UPDATE and OPEN Messages",
   "wg": "idr"
  },
+ "RFC9235": {
+  "area": "tsv",
+  "keywords": [
+   "TCP",
+   "authentication",
+   "option",
+   "test vector"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TCP Authentication Option (TCP-AO) Test Vectors",
+  "wg": "tcpm"
+ },
  "RFC9236": {
   "keywords": [
    "Information-Centric Networking",
@@ -107513,6 +107527,17 @@
   "status": "current",
   "stream": "irtf",
   "title": "Architectural Considerations of Information-Centric Networking (ICN) Using a Name Resolution Service"
+ },
+ "RFC9238": {
+  "keywords": [
+   "RLA",
+   "ISOIEC189004",
+   "ANSI MH10.8.2"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Loading Manufacturer Usage Description (MUD) URLs from QR Codes"
  },
  "RFC9239": {
   "area": "art",
