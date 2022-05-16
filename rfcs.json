@@ -20175,7 +20175,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Service Location Protocol",
-  "wg": "svrloc"
+  "wg": "vgmib"
  },
  "RFC2166": {
   "keywords": [],
@@ -20661,7 +20661,7 @@
   "wg": "rsvp"
  },
  "RFC2206": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
    "RSVP-MIB"
   ],
@@ -20669,10 +20669,10 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Management Information Base using SMIv2",
-  "wg": "rsvp"
+  "wg": "vgmib"
  },
  "RFC2207": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
    "RSVP-IPSEC",
    "resource",
@@ -20685,7 +20685,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Extensions for IPSEC Data Flows",
-  "wg": "rsvp"
+  "wg": "vgmib"
  },
  "RFC2208": {
   "area": "tsv",
