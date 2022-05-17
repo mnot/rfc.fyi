@@ -20949,9 +20949,8 @@
  "RFC2227": {
   "area": "app",
   "keywords": [
-   "Hypertext",
-   "Transfer",
-   "Protocol",
+   "HTTP",
+   "Hypertext Transfer Protocol",
    "extension"
   ],
   "level": "std",
@@ -20964,9 +20963,7 @@
   "area": "sec",
   "keywords": [
    "FTPSECEXT",
-   "file",
-   "transfer",
-   "protocol",
+   "file transfer protocol",
    "authentication",
    "encoding"
   ],
@@ -21011,7 +21008,7 @@
  "RFC2231": {
   "keywords": [
    "MIME-EXT",
-   "Mail",
+   "Multipurpose Internet Mail Extensions",
    "Multimedia",
    "EMail"
   ],
@@ -21024,14 +21021,11 @@
   "area": "rtg",
   "keywords": [
    "DLUR-MIB",
-   "Management",
-   "Information Base",
+   "Management Information Base",
    "MIB",
    "Dependent LU Requester",
    "APPN",
-   "Advanced",
-   "Peek",
-   "to Peek Networking"
+   "Advanced Peer-to-Peer Networking"
   ],
   "level": "std",
   "status": "current",
@@ -21115,13 +21109,8 @@
   "area": "rtg",
   "keywords": [
    "HPR-MIB",
-   "MIB",
-   "Management",
-   "Information",
-   "Base",
-   "high",
-   "performance",
-   "routing"
+   "Management Information Base",
+   "high performance routing"
   ],
   "level": "std",
   "status": "current",
@@ -21153,7 +21142,8 @@
   "area": "int",
   "keywords": [
    "DHCP-NDS",
-   "NDS"
+   "Dynamic Host Configuration Protocol",
+   "Novell Directory Services"
   ],
   "level": "std",
   "status": "current",
@@ -21165,7 +21155,9 @@
   "area": "int",
   "keywords": [
    "NETWAREIP",
-   "DHCP"
+   "DHCP",
+   "Dynamic Host Configuration Protocol",
+   "NetWare/IP"
   ],
   "level": "std",
   "status": "current",
@@ -21177,9 +21169,8 @@
   "area": "sec",
   "keywords": [
    "OTP-ER",
-   "One",
-   "Time",
-   "Password"
+   "One Time Password",
+   "Extended Responses"
   ],
   "level": "std",
   "status": "current",
@@ -21191,10 +21182,9 @@
   "area": "app",
   "keywords": [
    "ACAP",
+   "Application Configuration Access Protocol",
    "URL",
-   "Uniform",
-   "Resource",
-   "Locator"
+   "Uniform Resource Locator"
   ],
   "level": "std",
   "status": "current",
@@ -21235,14 +21225,10 @@
  "RFC2247": {
   "area": "app",
   "keywords": [
-   "lightweight",
-   "directory",
-   "access",
-   "protocol",
+   "LDAP",
+   "lightweight directory access protocol",
    "DNS",
-   "Domain",
-   "name",
-   "system"
+   "domain name system"
   ],
   "level": "std",
   "status": "current",
@@ -21290,9 +21276,7 @@
   "area": "rai",
   "keywords": [
    "RTP-MPEG",
-   "Real-Time",
-   "Transport",
-   "Protocol",
+   "Real-Time Transport Protocol",
    "Audio",
    "System",
    "Streams"
@@ -21307,7 +21291,7 @@
   "area": "app",
   "keywords": [
    "LDAPV3",
-   "LDAv3",
+   "Lightweight Directory Access Protocol",
    "x.500"
   ],
   "level": "std",
@@ -21543,9 +21527,7 @@
   "area": "int",
   "keywords": [
    "MIB",
-   "Management",
-   "Information",
-   "Base"
+   "Management Information Base"
   ],
   "level": "std",
   "status": "current",
@@ -21852,10 +21834,9 @@
   "area": "app",
   "keywords": [
    "SLM-APP",
+   "System-Level Managed Objects for Applications",
    "mib",
-   "management",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -21880,7 +21861,7 @@
   "area": "sec",
   "keywords": [
    "ONE-PASS",
-   "authentication",
+   "one-time password authentication system",
    "OTP",
    "replay",
    "attach"
@@ -21894,11 +21875,12 @@
  "RFC2290": {
   "area": "int",
   "keywords": [
-   "Internet",
-   "protocol",
-   "point-to-point",
-   "control",
-   "address"
+   "Mobile-IPv4",
+   "address",
+   "PPP",
+   "Point-to-Point Protocol",
+   "IPCP",
+   "Internet Protocol Control Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -21940,7 +21922,8 @@
    "SUBTABLE",
    "mapping",
    "distinguished",
-   "name"
+   "name",
+   "X.500"
   ],
   "level": "std",
   "status": "current",
@@ -21952,9 +21935,11 @@
   "area": "app",
   "keywords": [
    "OR-ADD",
+   "O/R address",
    "routing",
    "mapping",
-   "dit"
+   "X.500",
+   "Directory Information Tree"
   ],
   "level": "std",
   "status": "current",
@@ -21966,14 +21951,10 @@
   "area": "app",
   "keywords": [
    "TCN-HTTP",
-   "Hyper",
-   "Text",
-   "Transfer",
-   "protocol",
+   "Transparent Content Negotiation",
+   "Hypertext Transfer Protocol",
    "URL",
-   "Uniform",
-   "Resource",
-   "Locators"
+   "Uniform Resource Locators"
   ],
   "level": "experimental",
   "status": "current",
@@ -22144,10 +22125,8 @@
  "RFC2307": {
   "keywords": [
    "LDAP-NIS",
-   "lightweight",
-   "directory",
-   "access",
-   "protocol",
+   "lightweight directory access protocol",
+   "Network Information Service",
    "unix",
    "mapping"
   ],
@@ -22160,10 +22139,9 @@
   "area": "int",
   "keywords": [
    "DNS-NCACHE",
-   "Domain",
-   "Name",
-   "System",
-   "negative"
+   "Domain Name System",
+   "negative",
+   "queries"
   ],
   "level": "std",
   "status": "current",
