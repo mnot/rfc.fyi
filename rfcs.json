@@ -22304,16 +22304,12 @@
   "area": "int",
   "keywords": [
    "IPOA-MIB",
-   "management",
-   "information",
-   "base",
-   "internet",
-   "protocol",
+   "Classical IP and ARP over ATM",
+   "management information base",
+   "internet protocol",
    "address",
    "resolution",
-   "asynchronous",
-   "transfer",
-   "mode"
+   "asynchronous transfer mode"
   ],
   "level": "std",
   "status": "current",
@@ -22386,12 +22382,13 @@
   "area": "rai",
   "keywords": [
    "RTSP",
+   "Real Time Streaming Protocol",
    "audio",
    "video",
    "data",
    "delivery",
    "application",
-   "level,"
+   "level"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -22419,13 +22416,9 @@
   "area": "rtg",
   "keywords": [
    "OSPF2",
-   "Open",
-   "Shortest",
-   "Path",
-   "First",
+   "Open Shortest Path First",
    "routing",
-   "Autonomous",
-   "system",
+   "Autonomous system",
    "AS"
   ],
   "level": "std",
@@ -22466,11 +22459,11 @@
   "area": "int",
   "keywords": [
    "UNI-SIG",
-   "asynchronous",
-   "transfer",
-   "mode",
-   "internet",
-   "protocol"
+   "signalling",
+   "ATM",
+   "asynchronous transfer mode",
+   "IP",
+   "internet protocol"
   ],
   "level": "std",
   "status": "current",
@@ -22482,14 +22475,15 @@
   "area": "int",
   "keywords": [
    "NHRP",
+   "Next Hop Resolution Protocol",
    "internetworking",
    "layer",
    "address",
    "subnetwork",
    "multiprotocol",
+   "NBMA",
    "non-broadcast",
-   "multiple",
-   "access"
+   "multiple-access"
   ],
   "level": "std",
   "status": "current",
@@ -22500,13 +22494,15 @@
  "RFC2333": {
   "area": "int",
   "keywords": [
-   "next",
-   "hop",
-   "resolution",
-   "protocol",
+   "NHRP",
+   "next hop resolution protocol",
    "routing",
-   "internet",
-   "protocol"
+   "IP",
+   "internet protocol",
+   "NBMA",
+   "non-broadcast",
+   "multiple-access",
+   "internetworking"
   ],
   "level": "std",
   "status": "current",
@@ -22518,14 +22514,11 @@
   "area": "int",
   "keywords": [
    "SCSP",
-   "cache",
-   "synchronization",
+   "Server Cache Synchronization Protocol",
    "replication",
    "NBMA",
-   "non",
-   "broadcast",
-   "multiple",
-   "access"
+   "non-broadcast",
+   "multiple access"
   ],
   "level": "std",
   "status": "current",
@@ -22537,14 +22530,8 @@
   "area": "int",
   "keywords": [
    "NHRP-SCSP",
-   "next",
-   "hop",
-   "resolution",
-   "protocol",
-   "server",
-   "cache",
-   "sychronization",
-   "protocol"
+   "next hop resolution protocol",
+   "server cache synchronization protocol"
   ],
   "level": "std",
   "status": "current",
@@ -22564,11 +22551,12 @@
  "RFC2337": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
-   "asynchronous",
-   "transfer",
-   "mode"
+   "IP",
+   "internet protocol",
+   "ATM",
+   "asynchronous transfer mode",
+   "PIM",
+   "Protocol Independent Multicast"
   ],
   "level": "experimental",
   "status": "current",
@@ -22626,6 +22614,8 @@
  "RFC2341": {
   "keywords": [
    "L2F",
+   "Layer Two Forwarding",
+   "protocol",
    "tunneling",
    "dial-up",
    "network"
@@ -22638,10 +22628,8 @@
  "RFC2342": {
   "keywords": [
    "IMAP4NAME",
-   "internet",
-   "message",
-   "access",
-   "protocol",
+   "internet message access protocol",
+   "namespace",
    "mailbox"
   ],
   "level": "std",
@@ -22653,9 +22641,7 @@
   "area": "rai",
   "keywords": [
    "RTP-MPEG",
-   "real-time",
-   "transport",
-   "protocol",
+   "real-time transport protocol",
    "audio",
    "video"
   ],
@@ -22691,7 +22677,8 @@
    "mapping",
    "service",
    "whois",
-   "dns"
+   "dns",
+   "domain name system"
   ],
   "level": "experimental",
   "status": "current",
@@ -22713,9 +22700,8 @@
  "RFC2347": {
   "keywords": [
    "TFTP-Ext",
-   "trivial",
-   "file",
-   "transfer",
+   "trivial file transfer protocol",
+   "extension",
    "booting",
    "client",
    "server"
@@ -22728,9 +22714,7 @@
  "RFC2348": {
   "keywords": [
    "TFTP-Blk",
-   "trivial",
-   "file",
-   "transfer",
+   "trivial file transfer protocol",
    "booting",
    "client",
    "server",
@@ -22744,9 +22728,7 @@
  "RFC2349": {
   "keywords": [
    "TFTP-Opt",
-   "trivial",
-   "file",
-   "transfer",
+   "trivial file transfer protocol",
    "booting",
    "client",
    "server",
@@ -22772,9 +22754,8 @@
  },
  "RFC2351": {
   "keywords": [
-   "",
-   "internet",
-   "protocol",
+   "IP",
+   "internet protocol",
    "encapsulation",
    "transactional",
    "traffic",
@@ -22925,7 +22906,8 @@
  "RFC2362": {
   "area": "rtg",
   "keywords": [
-   "PIM-SM]",
+   "PIM-SM",
+   "Protocol Independent Multicast-Sparse Mode",
    "routing",
    "message",
    "type",
@@ -22942,16 +22924,10 @@
   "area": "int",
   "keywords": [
    "PPP-FUNI",
-   "point-to-point",
-   "protocol",
-   "atm",
-   "synchronous",
-   "transfer",
-   "mode",
-   "frame",
-   "user",
-   "network",
-   "interface"
+   "point-to-point protocol",
+   "Frame User Interface",
+   "ATM",
+   "asynchronous transfer mode"
   ],
   "level": "std",
   "status": "current",
@@ -22963,8 +22939,8 @@
   "area": "int",
   "keywords": [
    "PPP-AAL",
-   "point-to-point",
-   "protocol",
+   "point-to-point protocol",
+   "ATM Adaption Layer 5",
    "link",
    "control",
    "network-layer",
@@ -23028,9 +23004,7 @@
  "RFC2368": {
   "keywords": [
    "URLMAILTO",
-   "uniform",
-   "resource",
-   "locator",
+   "uniform resource locator",
    "electronic",
    "mail",
    "addresses"
@@ -23042,9 +23016,8 @@
  },
  "RFC2369": {
   "keywords": [
-   "uniform",
-   "resource",
-   "locator",
+   "URL",
+   "uniform resource locator",
    "email",
    "header",
    "fields"
@@ -23057,7 +23030,7 @@
  "RFC2370": {
   "area": "rtg",
   "keywords": [
-   "OSPF-LSA]",
+   "OSPF-LSA",
    "open shortest path first",
    "link state advertisement"
   ],
@@ -23071,9 +23044,8 @@
   "area": "app",
   "keywords": [
    "TIPV3",
-   "TIP",
+   "Transaction Internet Protocol",
    "commit",
-   "protocol",
    "electronic",
    "commerce"
   ],
@@ -23117,8 +23089,9 @@
  "RFC2374": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv6",
+   "internet protocol",
+   "address",
    "architecture",
    "routing"
   ],
@@ -23211,12 +23184,10 @@
  "RFC2380": {
   "area": "tsv",
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
-   "asynchronous",
-   "transfer",
-   "mode",
+   "RSVP",
+   "resource reservation protocol",
+   "ATM",
+   "asynchronous transfer mode",
    "switched",
    "circuits"
   ],
@@ -23229,9 +23200,8 @@
  "RFC2381": {
   "area": "tsv",
   "keywords": [
-   "asynchronous",
-   "transfer",
-   "mode",
+   "ATM",
+   "asynchronous transfer mode",
    "mapping",
    "traffic",
    "parameters"
@@ -23268,11 +23238,8 @@
  "RFC2384": {
   "keywords": [
    "POP-URL",
-   "post",
-   "office",
-   "protocol",
-   "uniform",
-   "resource",
+   "post office protocol",
+   "uniform resource locator",
    "identifier",
    "string",
    "encapsulation"
@@ -23285,11 +23252,10 @@
  "RFC2385": {
   "area": "rtg",
   "keywords": [
-   "border",
-   "gateway",
-   "protocol",
-   "transmission",
-   "control",
+   "BGP",
+   "border gateway protocol",
+   "TCP",
+   "transmission control protocol",
    "message",
    "digest",
    "algorithm"
@@ -23317,10 +23283,7 @@
   "area": "app",
   "keywords": [
    "MIME-RELAT",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
+   "multipurpose internet mail extensions",
    "body",
    "parts",
    "media-type"
@@ -23334,10 +23297,8 @@
  "RFC2388": {
   "keywords": [
    "media-type",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions"
+   "MIME",
+   "multipurpose internet mail extensions"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -23348,6 +23309,7 @@
   "area": "app",
   "keywords": [
    "FTP",
+   "File Transfer Protocol",
    "catalogue"
   ],
   "level": "std",
@@ -23360,7 +23322,7 @@
   "area": "int",
   "keywords": [
    "IARP",
-   "iarp",
+   "Inverse Address Resolution Protocol",
    "hardware",
    "frame",
    "relay"
@@ -23387,12 +23349,12 @@
   "area": "app",
   "keywords": [
    "CIDMID-URL",
-   "Hyper",
-   "Text",
-   "Markup",
-   "Language",
+   "HTML",
+   "Hypertext Markup Language",
    "URL",
-   "MIME"
+   "Uniform Resource Locator",
+   "MIME",
+   "Multipurpose Internet Mail Extensions"
   ],
   "level": "std",
   "status": "current",
@@ -23461,11 +23423,9 @@
  "RFC2397": {
   "keywords": [
    "DATA-URL",
-   "uniform",
-   "resource",
+   "uniform resource locator",
    "identifiers",
-   "media",
-   "type"
+   "media type"
   ],
   "level": "std",
   "status": "current",
@@ -23544,11 +23504,15 @@
  "RFC2403": {
   "area": "sec",
   "keywords": [
-   "ipsec",
-   "authentication",
+   "HMAC",
+   "MD5",
+   "IPSEC",
+   "Internet Protocol Security",
+   "AH",
+   "Authentication Header",
+   "ESP",
+   "Encapsulating Security Payload",
    "mechanism",
-   "header",
-   "security",
    "architecture"
   ],
   "level": "std",
@@ -23578,9 +23542,9 @@
   "area": "sec",
   "keywords": [
    "ESPDES-CBC",
-   "ipsec",
-   "payload",
-   "security",
+   "IPSEC",
+   "Internet Protocol Security",
+   "Encapsulating Security Payload",
    "architecture",
    "encryption"
   ],
@@ -23663,12 +23627,10 @@
   "area": "sec",
   "keywords": [
    "ipsec",
-   "internet",
-   "protocol",
-   "security",
+   "internet protocol security",
    "esp",
-   "encapsulating",
-   "payload"
+   "encapsulating security payload",
+   "NULL"
   ],
   "level": "std",
   "status": "current",
@@ -23764,12 +23726,9 @@
  "RFC2417": {
   "keywords": [
    "MIB",
-   "management",
-   "information",
-   "base",
-   "asynchronous",
-   "transfer",
-   "mode"
+   "management information base",
+   "ATM",
+   "asynchronous transfer mode"
   ],
   "level": "std",
   "status": "current",
@@ -23795,10 +23754,11 @@
   "area": "int",
   "keywords": [
    "DESE-bis",
-   "point-to-point",
-   "protocol",
-   "ecp",
-   "control"
+   "PPP",
+   "point-to-point protocol",
+   "DES Encryption Protocol",
+   "ECP",
+   "PPP Encryption Control Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -23810,10 +23770,10 @@
   "area": "int",
   "keywords": [
    "3DESE",
-   "point-to-point",
-   "protocol",
+   "PPP Triple-DES Encryption Protocol",
+   "point-to-point protocol",
    "ecp",
-   "control"
+   "PPP Encryption Control Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -23849,11 +23809,8 @@
  "RFC2423": {
   "keywords": [
    "MIME-VPIM",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
-   "profiles"
+   "multipurpose internet mail extensions",
+   "Voice Profile for Internet Mail"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -23879,10 +23836,8 @@
   "area": "app",
   "keywords": [
    "TXT-DIR",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
+   "MIME",
+   "multipurpose internet mail extensions",
    "profiles"
   ],
   "level": "std",
@@ -23895,10 +23850,7 @@
   "area": "app",
   "keywords": [
    "MIME-VCARD",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
+   "multipurpose internet mail extensions",
    "white-pages",
    "electronic",
    "business",
@@ -23914,10 +23866,10 @@
   "area": "int",
   "keywords": [
    "IP-FR",
-   "standard",
-   "standards",
-   "IP",
-   "over"
+   "Internet Protocol",
+   "Frame Relay",
+   "bridging",
+   "routing"
   ],
   "level": "std",
   "status": "current",
@@ -23928,13 +23880,13 @@
  "RFC2428": {
   "area": "app",
   "keywords": [
-   "file",
-   "transfer",
-   "protocol",
-   "internet",
-   "network",
-   "address",
-   "translators"
+   "FTP",
+   "file transfer protocol",
+   "IPv6",
+   "internet protocol version 6",
+   "NATs",
+   "network address translators",
+   "extensions"
   ],
   "level": "std",
   "status": "current",
@@ -23983,11 +23935,10 @@
  "RFC2431": {
   "area": "rai",
   "keywords": [
-   "real",
-   "time",
-   "transport",
-   "protocol",
-   "itu",
+   "RTP",
+   "real-time transport protocol",
+   "ITU",
+   "International Telecommunication Union",
    "multicast",
    "unicast"
   ],
