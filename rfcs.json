@@ -23996,14 +23996,10 @@
  "RFC2435": {
   "area": "rai",
   "keywords": [
-   "Real",
-   "Time",
-   "Transport",
-   "Protocol",
-   "Joint",
-   "Photographic",
-   "Experts",
-   "Group"
+   "RTP",
+   "Real-Time Transport Protocol",
+   "JPEG",
+   "Joint Photographic Experts Group"
   ],
   "level": "std",
   "status": "current",
@@ -24055,12 +24051,10 @@
  "RFC2439": {
   "area": "rtg",
   "keywords": [
-   "Border",
-   "Gateway",
-   "Protocol",
+   "BGP",
+   "Border Gateway Protocol",
    "IDRP",
-   "Internet-Domain",
-   "Routing"
+   "Internet-Domain Routing Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -24071,9 +24065,8 @@
  "RFC2440": {
   "area": "sec",
   "keywords": [
-   "pretty",
-   "good",
-   "privacy",
+   "PGP",
+   "pretty good privacy",
    "encryption",
    "authentication"
   ],
@@ -24113,14 +24106,9 @@
   "area": "int",
   "keywords": [
    "MARS-SCSP",
-   "server",
-   "cache",
-   "syncronization",
-   "protocol",
-   "atm",
-   "asynchronous",
-   "transfer",
-   "mode"
+   "server cache synchronization protocol",
+   "ATM",
+   "asynchronous transfer mode"
   ],
   "level": "experimental",
   "status": "current",
@@ -24132,11 +24120,8 @@
   "area": "sec",
   "keywords": [
    "OTP-SASL",
-   "otp",
-   "simple",
-   "authentication",
-   "security",
-   "layer"
+   "One-Time Password",
+   "simple authentication security layer"
   ],
   "level": "std",
   "status": "current",
@@ -24148,12 +24133,9 @@
   "area": "app",
   "keywords": [
    "ICALENDAR",
-   "internet",
    "interoperable",
    "mime",
-   "multipurpose",
-   "mail",
-   "extensions"
+   "multipurpose internet mail extensions"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -24165,9 +24147,9 @@
   "area": "app",
   "keywords": [
    "ITIP",
+   "iCalendar Transport-Independent Interoperability Protocol",
    "internet",
-   "systems",
-   "interoperability"
+   "systems"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -24179,6 +24161,7 @@
   "area": "app",
   "keywords": [
    "IMIP",
+   "iCalendar Message-Based Interoperability Protocol",
    "internet",
    "electronic",
    "mail",
@@ -24204,10 +24187,9 @@
  "RFC2449": {
   "keywords": [
    "POP3-EXT",
-   "post",
-   "office",
-   "protocol",
-   "server"
+   "post office protocol",
+   "server",
+   "extension"
   ],
   "level": "std",
   "status": "current",
@@ -24235,10 +24217,10 @@
  "RFC2451": {
   "area": "sec",
   "keywords": [
+   "ESP",
+   "encapsulating security payload",
    "ipsec",
-   "encapsulating",
-   "security",
-   "payload"
+   "Internet Protocol Security"
   ],
   "level": "std",
   "status": "current",
@@ -24265,7 +24247,8 @@
   "area": "rtg",
   "keywords": [
    "RIP2",
-   "RIP-2"
+   "RIP-2",
+   "Routing Information Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -24276,11 +24259,12 @@
  "RFC2454": {
   "area": "int",
   "keywords": [
-   "mib",
-   "internet",
-   "protocol",
-   "udp",
-   "ipv6"
+   "MIB",
+   "management information base",
+   "ipv6",
+   "internet protocol",
+   "UDP",
+   "User Datagram Protocol"
   ],
   "level": "historic",
   "status": "obsoleted",
@@ -24292,13 +24276,9 @@
   "area": "rtg",
   "keywords": [
    "APPN-MIB",
-   "mib",
-   "management",
-   "information",
-   "base",
-   "advanced",
-   "peer-to-peer",
-   "networking"
+   "Advanced Peer-to-Peer Networking",
+   "MIB",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -24309,13 +24289,10 @@
  "RFC2456": {
   "area": "rtg",
   "keywords": [
-   "mib",
-   "management",
-   "information",
-   "base",
-   "advanced",
-   "peer-to-peer",
-   "networking"
+   "MIB",
+   "management information base",
+   "APPN",
+   "advanced peer-to-peer networking"
   ],
   "level": "std",
   "status": "current",
@@ -24327,11 +24304,8 @@
   "area": "rtg",
   "keywords": [
    "EBN-MIB",
-   "mib",
-   "management",
-   "information",
-   "base",
-   "ebn"
+   "Extended Border Node",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -24411,8 +24385,7 @@
   "area": "int",
   "keywords": [
    "ICMPv6",
-   "internet",
-   "protocol",
+   "Internet Control Message Protocol",
    "link-local",
    "autoconfigured",
    "addresses"
@@ -24426,8 +24399,8 @@
  "RFC2464": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv6",
+   "internet protocol",
    "link-local",
    "autoconfigured",
    "addresses"
@@ -24470,11 +24443,13 @@
  "RFC2467": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv6",
+   "internet protocol",
    "link-local",
    "addresses",
-   "autoconfiguration"
+   "autoconfiguration",
+   "FDDI",
+   "Fiber Distributed Data Interface"
   ],
   "level": "std",
   "status": "current",
@@ -24507,8 +24482,8 @@
  "RFC2470": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv6",
+   "internet protocol",
    "frame",
    "format",
    "link-local",
@@ -24523,9 +24498,9 @@
  "RFC2471": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
-   "protocotype",
+   "IPv6",
+   "internet protocol",
+   "protocol type",
    "software",
    "architecture"
   ],
@@ -24553,8 +24528,8 @@
  "RFC2473": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv6",
+   "internet protocol",
    "encapsulation"
   ],
   "level": "std",
@@ -24580,11 +24555,12 @@
  "RFC2475": {
   "area": "tsv",
   "keywords": [
-   "DIFFSRV]",
+   "DIFFSRV",
+   "Differentiated Services",
    "scalability",
    "IP",
-   "internet",
-   "protocol"
+   "internet protocol",
+   "architecture"
   ],
   "level": "informational",
   "status": "current",
@@ -24594,11 +24570,8 @@
  },
  "RFC2476": {
   "keywords": [
-   "smtp",
-   "simple",
-   "mail",
-   "transfer",
-   "protocol",
+   "SMTP",
+   "simple mail transfer protocol",
    "user",
    "agent"
   ],
@@ -24653,10 +24626,8 @@
  },
  "RFC2480": {
   "keywords": [
-   "mutltipurpose",
-   "internet",
-   "mail",
-   "extensions"
+   "MIME",
+   "multipurpose internet mail extensions"
   ],
   "level": "std",
   "status": "current",
@@ -24692,10 +24663,10 @@
  "RFC2483": {
   "area": "app",
   "keywords": [
-   "uniform",
-   "resource",
-   "identifier",
-   "names",
+   "URI",
+   "uniform resource identifier",
+   "URN",
+   "uniform resource names",
    "locators",
    "characteristics"
   ],
@@ -24708,10 +24679,10 @@
  "RFC2484": {
   "area": "int",
   "keywords": [
-   "point-to-point",
-   "protocol",
-   "link",
-   "control",
+   "PPP",
+   "point-to-point protocol",
+   "LCP",
+   "Link Control Protocol",
    "authentication"
   ],
   "level": "std",
@@ -24723,10 +24694,10 @@
  "RFC2485": {
   "area": "int",
   "keywords": [
-   "dynamic",
-   "host",
-   "configuration",
-   "UAP"
+   "DHCP",
+   "dynamic host configuration protocol",
+   "UAP",
+   "User Authentication Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -24808,8 +24779,8 @@
   "area": "int",
   "keywords": [
    "IPv6-NBMA",
-   "internet",
-   "protocol",
+   "internet protocol",
+   "Non-Broadcast Multiple Access",
    "routing",
    "host"
   ],
@@ -24823,11 +24794,9 @@
   "area": "int",
   "keywords": [
    "IPv6ATMNET",
-   "internet",
-   "protocol",
-   "asynchronous",
-   "transfer",
-   "mode",
+   "internet protocol",
+   "ATM",
+   "asynchronous transfer mode",
    "host"
   ],
   "level": "std",
@@ -24853,9 +24822,8 @@
  "RFC2494": {
   "area": "int",
   "keywords": [
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -24893,8 +24861,8 @@
  "RFC2497": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv6",
+   "internet protocol",
    "frame",
    "format",
    "link-local"
@@ -25026,11 +24994,10 @@
  "RFC2507": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IP",
+   "internet protocol",
    "tcp",
-   "transmission",
-   "control",
+   "transmission control protocol",
    "bandwidth"
   ],
   "level": "std",
@@ -25042,11 +25009,12 @@
  "RFC2508": {
   "area": "rai",
   "keywords": [
-   "internet",
-   "protocol",
-   "user",
-   "datagram",
-   "real-timetransport",
+   "IP",
+   "internet protocol",
+   "UDP",
+   "user datagram protocol",
+   "RTP",
+   "real-time transport protocol",
    "interoperability"
   ],
   "level": "std",
@@ -25104,12 +25072,9 @@
   "area": "ops",
   "keywords": [
    "mib",
-   "management",
-   "information",
-   "base",
-   "autonomous",
-   "transfer",
-   "mode"
+   "management information base",
+   "ATM",
+   "autonomous transfer mode"
   ],
   "level": "std",
   "status": "current",
@@ -25121,9 +25086,7 @@
   "area": "ops",
   "keywords": [
    "mib",
-   "management",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -25135,13 +25098,9 @@
   "area": "ops",
   "keywords": [
    "ATM-TC-OID",
-   "asynchronous",
-   "transfer",
-   "mode",
+   "asynchronous transfer mode",
    "MIB",
-   "management",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -25153,13 +25112,9 @@
   "area": "ops",
   "keywords": [
    "ATM-MIBMAN",
-   "asynchronous",
-   "transfer",
-   "mode",
+   "asynchronous transfer mode",
    "MIB",
-   "management",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -25235,10 +25190,7 @@
   "area": "int",
   "keywords": [
    "NHRP-MNHCS",
-   "next",
-   "hop",
-   "resolution",
-   "protocol",
+   "next hop resolution protocol",
    "authentication",
    "extension"
   ],
@@ -25251,11 +25203,9 @@
  "RFC2521": {
   "keywords": [
    "ICMP-SEC",
-   "internet",
-   "control",
-   "message",
-   "protocol",
-   "ip"
+   "internet control message protocol",
+   "ip",
+   "security"
   ],
   "level": "experimental",
   "status": "current",
@@ -25266,8 +25216,7 @@
   "keywords": [
    "PHOTURIS-S",
    "ip",
-   "internet",
-   "protocol",
+   "internet protocol",
    "ah",
    "esp"
   ],
