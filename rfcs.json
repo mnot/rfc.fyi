@@ -25218,7 +25218,8 @@
    "ip",
    "internet protocol",
    "ah",
-   "esp"
+   "esp",
+   "encapsulating security payload"
   ],
   "level": "experimental",
   "status": "current",
@@ -25229,8 +25230,7 @@
   "keywords": [
    "PHOTURIS-E",
    "ip",
-   "internet",
-   "protocol",
+   "internet protocol",
    "security"
   ],
   "level": "experimental",
@@ -25267,8 +25267,8 @@
  "RFC2526": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv6",
+   "internet protocol",
    "routing",
    "architecture"
   ],
@@ -25308,12 +25308,12 @@
  "RFC2529": {
   "area": "int",
   "keywords": [
+   "IPv6",
    "link-local",
    "link",
    "local",
    "addresses",
-   "internet",
-   "protocol",
+   "internet protocol",
    "ip"
   ],
   "level": "std",
@@ -25325,11 +25325,10 @@
  "RFC2530": {
   "area": "app",
   "keywords": [
-   "message",
-   "disposition",
-   "notification",
-   "delivery",
-   "status"
+   "DSN",
+   "MDN",
+   "message disposition notification",
+   "delivery status notification"
   ],
   "level": "std",
   "status": "current",
@@ -25409,9 +25408,8 @@
  "RFC2536": {
   "area": "sec",
   "keywords": [
-   "digital",
-   "signature",
-   "algorithm",
+   "DSA",
+   "digital signature algorithm",
    "signatures",
    "cryptology"
   ],
@@ -25453,6 +25451,8 @@
   "area": "sec",
   "keywords": [
    "DHK-DNS",
+   "Diffie-Hellman Keys",
+   "Domain Name System",
    "cryptology",
    "authentication",
    "security",
@@ -25469,6 +25469,7 @@
   "area": "sec",
   "keywords": [
    "DNS-INFO",
+   "Domain Name System",
    "security",
    "digital",
    "signatures",
@@ -25544,12 +25545,11 @@
  "RFC2545": {
   "area": "rtg",
   "keywords": [
-   "border",
-   "gateway",
-   "protocol",
+   "BGP-4",
+   "border gateway protocol",
    "idr",
-   "internet",
-   "routing"
+   "Inter-Domain Routing",
+   "internet"
   ],
   "level": "std",
   "status": "current",
@@ -25719,15 +25719,12 @@
   "area": "app",
   "keywords": [
    "MHTML",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
+   "Hypertext Markup Language",
+   "MIME",
+   "multipurpose internet mail extensions",
    "multimedia",
    "uri",
-   "uniform",
-   "resource",
-   "identifiers"
+   "uniform resource identifiers"
   ],
   "level": "std",
   "status": "current",
@@ -25751,9 +25748,11 @@
  "RFC2559": {
   "area": "sec",
   "keywords": [
-   "X.500",
+   "X.509",
    "LDAP",
-   "lightweight directory protocol"
+   "lightweight directory access protocol",
+   "IPKI",
+   "Internet X.509 Public Key Infrastructure"
   ],
   "level": "historic",
   "status": "obsoleted",
@@ -25765,6 +25764,8 @@
   "area": "sec",
   "keywords": [
    "PKIX",
+   "Public Key Infrastructure",
+   "X.509",
    "digital",
    "security"
   ],
@@ -25779,9 +25780,7 @@
   "keywords": [
    "MIB",
    "management",
-   "information",
-   "base",
-   "structure",
+   "information base structure",
    "telnet"
   ],
   "level": "std",
@@ -25795,9 +25794,7 @@
   "keywords": [
    "TN2370E-RT-MIB",
    "MIB",
-   "management",
-   "information",
-   "base",
+   "management information base",
    "structure",
    "telnet"
   ],
