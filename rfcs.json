@@ -25807,10 +25807,8 @@
  "RFC2563": {
   "area": "int",
   "keywords": [
-   "dynamic",
-   "host",
-   "configuration",
-   "protocol",
+   "DHCP",
+   "dynamic host configuration protocol",
    "internet",
    "address"
   ],
@@ -25824,9 +25822,8 @@
   "area": "app",
   "keywords": [
    "APP-MIB",
-   "management",
-   "information",
-   "base"
+   "application",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -25869,11 +25866,9 @@
   "area": "app",
   "keywords": [
    "IPP-DG",
-   "IPP",
+   "Internet Printing Protocol",
    "application",
-   "media-type",
-   "media",
-   "type"
+   "media type"
   ],
   "level": "experimental",
   "status": "current",
@@ -25885,11 +25880,9 @@
   "area": "app",
   "keywords": [
    "IPP-RAT",
-   "IPP",
+   "Internet Printing Protocol",
    "application",
-   "media-type",
-   "media",
-   "type"
+   "media type"
   ],
   "level": "experimental",
   "status": "current",
@@ -25900,16 +25893,12 @@
  "RFC2569": {
   "area": "app",
   "keywords": [
+   "IPP",
+   "Internet Printing Protocol",
    "application",
-   "media-type",
-   "media",
-   "type",
-   "internet",
-   "printing",
-   "protocol",
-   "line",
-   "printer",
-   "daemon"
+   "media type",
+   "LPD",
+   "line printer daemon"
   ],
   "level": "experimental",
   "status": "current",
@@ -26044,12 +26033,9 @@
  "RFC2578": {
   "keywords": [
    "SMIv2",
-   "Simple",
-   "Network",
-   "Management",
-   "Protocol",
-   "Version",
-   "2"
+   "Structure of Management Information Version 2",
+   "SNMP",
+   "Simple Network Management Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -26059,12 +26045,11 @@
  "RFC2579": {
   "keywords": [
    "CONV-MIB",
-   "Simple",
-   "Network",
-   "Management",
-   "Protocol",
-   "Version",
-   "2"
+   "Management Information Base",
+   "SMIv2",
+   "Structure of Management Information Version 2",
+   "SNMPv2",
+   "Simple Network Management Protocol Version 2"
   ],
   "level": "std",
   "status": "current",
@@ -26074,12 +26059,9 @@
  "RFC2580": {
   "keywords": [
    "CONF-MIB",
-   "simple",
-   "Network",
-   "Management",
-   "Protocol",
-   "Version",
-   "2"
+   "Management Information Base",
+   "SNMPv2",
+   "Simple Network Management Protocol Version 2"
   ],
   "level": "std",
   "status": "current",
@@ -26089,7 +26071,9 @@
  "RFC2581": {
   "area": "tsv",
   "keywords": [
-   "TCP-CC"
+   "TCP-CC",
+   "Transmission Control Protocol",
+   "Congestion Control"
   ],
   "level": "std",
   "status": "obsoleted",
