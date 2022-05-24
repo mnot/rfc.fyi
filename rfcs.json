@@ -26112,15 +26112,14 @@
  "RFC2584": {
   "area": "rtg",
   "keywords": [
-   "internet",
-   "protocol",
+   "IP",
+   "internet protocol",
    "MIB",
-   "management",
-   "information",
-   "base",
-   "high",
-   "performance",
-   "routing"
+   "management information base",
+   "APPN",
+   "Advanced Peer-to-Peer Network",
+   "HPR",
+   "high performance routing"
   ],
   "level": "std",
   "status": "current",
@@ -26131,10 +26130,13 @@
  "RFC2585": {
   "area": "sec",
   "keywords": [
-   "file",
-   "transfer",
-   "hypertext",
-   "PKI"
+   "X.509",
+   "FTP",
+   "file transfer protocol",
+   "HTTP",
+   "hypertext transfer protocol",
+   "PKI",
+   "Public Key Infrastructure"
   ],
   "level": "std",
   "status": "current",
@@ -26191,6 +26193,7 @@
   "area": "app",
   "keywords": [
    "LDAPv3",
+   "Lightweight Directory Access Protocol",
    "request",
    "response",
    "operations"
@@ -26204,8 +26207,8 @@
  "RFC2590": {
   "area": "int",
   "keywords": [
-   "internet",
-   "Protocol",
+   "IPv6",
+   "internet Protocol",
    "format",
    "link-local"
   ],
@@ -26258,13 +26261,10 @@
  "RFC2594": {
   "area": "app",
   "keywords": [
-   "management",
-   "information",
-   "base",
-   "mib",
-   "world",
-   "wide",
-   "web"
+   "MIB",
+   "management information base",
+   "WWW",
+   "world wide web"
   ],
   "level": "std",
   "status": "current",
@@ -26274,14 +26274,12 @@
  },
  "RFC2595": {
   "keywords": [
-   "application",
-   "configuration",
-   "access",
-   "protocol",
-   "post",
-   "office",
-   "internet",
-   "message",
+   "ACAP",
+   "application configuration access protocol",
+   "POP3",
+   "post office protocol",
+   "IMAP",
+   "internet message access protocol",
    "transport",
    "layer",
    "security"
@@ -26309,12 +26307,12 @@
  "RFC2597": {
   "area": "tsv",
   "keywords": [
+   "PHB",
    "per-hop-behaviour",
-   "differentiated",
-   "services",
-   "af",
-   "assumed",
-   "forwarding"
+   "DS",
+   "differentiated services",
+   "AF",
+   "assured forwarding"
   ],
   "level": "std",
   "status": "current",
@@ -26325,11 +26323,12 @@
  "RFC2598": {
   "area": "tsv",
   "keywords": [
-   "per-hop-forwarding",
-   "behavior",
-   "differentiated",
-   "services",
-   "ef"
+   "PHB",
+   "per-hop-forwarding behavior",
+   "DS",
+   "differentiated services",
+   "EF",
+   "Expedited Forwarding"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -26359,16 +26358,10 @@
  "RFC2601": {
   "area": "int",
   "keywords": [
-   "integrated",
-   "local",
-   "management",
-   "interface",
-   "asynchronous",
-   "transfer",
-   "mode",
-   "address",
-   "resolution",
-   "protocol"
+   "ILMI",
+   "integrated local management interface",
+   "ATMARP",
+   "asynchronous transfer mode address resolution protocol"
   ],
   "level": "std",
   "status": "current",
@@ -26379,16 +26372,12 @@
  "RFC2602": {
   "area": "int",
   "keywords": [
-   "integrated",
-   "local",
-   "management",
-   "interface",
-   "asynchronous",
-   "transfer",
-   "mode",
-   "address",
-   "resolution",
-   "protocol"
+   "ILMI",
+   "integrated local management interface",
+   "ATM",
+   "asynchronous transfer mode",
+   "MARS",
+   "Multicast Address Resolution Server"
   ],
   "level": "std",
   "status": "current",
@@ -26399,14 +26388,10 @@
  "RFC2603": {
   "area": "int",
   "keywords": [
-   "integrated",
-   "local",
-   "management",
-   "interface",
-   "next",
-   "hop",
-   "resolution",
-   "protocol"
+   "ILMI",
+   "integrated local management interface",
+   "NHRP",
+   "next hop resolution protocol"
   ],
   "level": "std",
   "status": "current",
@@ -26431,6 +26416,7 @@
  "RFC2605": {
   "area": "app",
   "keywords": [
+   "MIB",
    "management information base",
    "network",
    "services"
@@ -26486,29 +26472,24 @@
  "RFC2609": {
   "area": "int",
   "keywords": [
-   "service",
-   "location",
-   "protocol",
-   "slp",
-   "url",
-   "universal",
-   "resource",
-   "locator"
+   "SLP",
+   "service location protocol",
+   "URL",
+   "universal resource locator"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Service Templates and Service: Schemes",
-  "wg": "svrloc"
+  "wg": "vgmib"
  },
  "RFC2610": {
   "area": "int",
   "keywords": [
-   "slp",
-   "dynamic",
-   "host",
-   "configuration",
-   "protocol"
+   "DHCP",
+   "dynamic host configuration protocol",
+   "SLP",
+   "Service Location Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -26545,9 +26526,8 @@
   "area": "ops",
   "keywords": [
    "smon",
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -26572,12 +26552,11 @@
  "RFC2615": {
   "area": "int",
   "keywords": [
+   "PPP",
    "point-to-point protocol",
-   "synchronous",
-   "optical",
-   "network",
-   "digital",
-   "heirarchy"
+   "SONET/SDH",
+   "synchronous optical network",
+   "synchronous digital hierarchy"
   ],
   "level": "std",
   "status": "current",
@@ -26589,6 +26568,7 @@
   "area": "app",
   "keywords": [
    "HTTP",
+   "Hypertext Transfer Protocol",
    "World Wide Web",
    "WWW",
    "hypermedia"
@@ -26602,11 +26582,10 @@
  "RFC2617": {
   "area": "app",
   "keywords": [
+   "HTTP",
    "security",
    "encryption",
-   "hypertext",
-   "transfer",
-   "protocol"
+   "hypertext transfer protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -26617,15 +26596,11 @@
  "RFC2618": {
   "area": "ops",
   "keywords": [
-   "management",
-   "information",
-   "base",
-   "security",
-   "remote",
-   "access",
-   "dialin",
-   "user",
-   "service"
+   "RADIUS",
+   "Remote Authentication Dial-In User Service",
+   "MIB",
+   "management information base",
+   "security"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -26693,6 +26668,7 @@
   "area": "ops",
   "keywords": [
    "RPSL",
+   "Routing Policy Specification Language",
    "internet",
    "policy",
    "hierarchy",
@@ -26708,12 +26684,10 @@
  "RFC2623": {
   "area": "tsv",
   "keywords": [
-   "network",
-   "file",
-   "system",
-   "remote",
-   "procedure",
-   "call",
+   "NFSV4",
+   "network file system version 4",
+   "RPC",
+   "remote procedure call",
    "architecture"
   ],
   "level": "std",
@@ -26738,10 +26712,10 @@
  "RFC2625": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocal",
-   "address",
-   "resolution"
+   "IP",
+   "internet protocol",
+   "ARP",
+   "address resolution protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -26811,6 +26785,7 @@
  "RFC2631": {
   "area": "sec",
   "keywords": [
+   "Diffie-Hellman",
    "encryption",
    "management",
    "certificate"
@@ -26857,11 +26832,9 @@
  "RFC2634": {
   "area": "sec",
   "keywords": [
+   "S/MIME",
    "secure",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
+   "multipurpose internet mail extensions",
    "encryption"
   ],
   "level": "std",
@@ -26941,6 +26914,7 @@
   "area": "app",
   "keywords": [
    "ftp",
+   "File Transfer Protocol",
    "character sets",
    "languages"
   ],
@@ -27004,9 +26978,8 @@
  "RFC2645": {
   "keywords": [
    "ODMR-SMTP",
-   "simple mail",
-   "transfer",
-   "protocol",
+   "On-Demand Mail Relay",
+   "simple mail transfer protocol",
    "internet"
   ],
   "level": "std",
@@ -27061,9 +27034,8 @@
  "RFC2649": {
   "area": "app",
   "keywords": [
-   "lightweight",
-   "directory",
-   "access protocol",
+   "LDAP",
+   "lightweight directory access protocol",
    "client",
    "server"
   ],
@@ -27093,6 +27065,7 @@
   "area": "app",
   "keywords": [
    "CIP",
+   "Common Indexing Protocol",
    "query",
    "routing",
    "database",
@@ -27107,11 +27080,11 @@
  "RFC2652": {
   "area": "app",
   "keywords": [
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
-   "database"
+   "MIME",
+   "multipurpose internet mail extensions",
+   "database",
+   "CIP",
+   "Common Indexing Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -27122,7 +27095,8 @@
  "RFC2653": {
   "area": "app",
   "keywords": [
-   "common indexing",
+   "CIP",
+   "common indexing protocol",
    "message",
    "formats"
   ],
@@ -27136,6 +27110,7 @@
   "area": "app",
   "keywords": [
    "CIP",
+   "Common Indexing Protocol",
    "information",
    "servers",
    "database"
@@ -27149,13 +27124,10 @@
  "RFC2655": {
   "area": "app",
   "keywords": [
-   "summary",
-   "object",
-   "interchange",
-   "format",
-   "common",
-   "indexing",
-   "protocol"
+   "CIP",
+   "SOIF",
+   "summary object interchange format",
+   "common indexing protocol"
   ],
   "level": "experimental",
   "status": "current",
@@ -27166,10 +27138,8 @@
  "RFC2656": {
   "area": "app",
   "keywords": [
-   "summary",
-   "object",
-   "interchange",
-   "format",
+   "SOIF",
+   "summary object interchange format",
    "stream"
   ],
   "level": "experimental",
@@ -27181,13 +27151,10 @@
  "RFC2657": {
   "area": "app",
   "keywords": [
-   "lightweight",
-   "directory",
-   "access",
-   "protocol",
+   "LDAPv2",
+   "lightweight directory access protocol version 2",
    "CIP",
-   "common",
-   "indexing"
+   "common indexing protocol"
   ],
   "level": "experimental",
   "status": "current",
@@ -27197,9 +27164,8 @@
  },
  "RFC2658": {
   "keywords": [
-   "real-time",
-   "transport",
-   "protocol",
+   "RTP",
+   "real-time transport protocol",
    "packet",
    "end-to-end"
   ],
@@ -27211,8 +27177,8 @@
  "RFC2659": {
   "area": "sec",
   "keywords": [
-   "hyper-text",
-   "markup language",
+   "HTML",
+   "hyper-text markup language",
    "cryptology"
   ],
   "level": "experimental",
@@ -27239,6 +27205,7 @@
   "area": "int",
   "keywords": [
    "L2TP",
+   "Layer Two Tunneling Protocol",
    "ppp",
    "point-to-point",
    "protocol",
@@ -27254,8 +27221,9 @@
   "area": "ops",
   "keywords": [
    "MIB",
-   "management information",
-   "base"
+   "management information base",
+   "ADSL",
+   "Asymmetric Bit-Rate DSL"
   ],
   "level": "std",
   "status": "current",
@@ -106353,6 +106321,19 @@
   "title": "IP Prefix Advertisement in Ethernet VPN (EVPN)",
   "wg": "bess"
  },
+ "RFC9137": {
+  "area": "gen",
+  "keywords": [
+   "virtualize",
+   "postpone",
+   "move"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Considerations for Cancellation of IETF Meetings",
+  "wg": "shmoo"
+ },
  "RFC9138": {
   "keywords": [],
   "level": "informational",
@@ -107088,6 +107069,34 @@
   "stream": "ietf",
   "title": "YANG Modules Describing Capabilities for Systems and Datastore Update Notifications",
   "wg": "netconf"
+ },
+ "RFC9197": {
+  "area": "tsv",
+  "keywords": [
+   "inband",
+   "Telemetry",
+   "Tracing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Data Fields for In Situ Operations, Administration, and Maintenance (IOAM)",
+  "wg": "ippm"
+ },
+ "RFC9198": {
+  "area": "tsv",
+  "keywords": [
+   "Performance",
+   "Metrics",
+   "IPPM",
+   "path",
+   "parallel paths"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Advanced Unidirectional Route Assessment (AURA)",
+  "wg": "ippm"
  },
  "RFC9199": {
   "keywords": [
