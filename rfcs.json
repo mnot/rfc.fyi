@@ -27879,9 +27879,10 @@
  "RFC2711": {
   "area": "int",
   "keywords": [
+   "IPv6",
    "internet protocol",
    "datagram",
-   "routher",
+   "router",
    "hop-by-hop"
   ],
   "level": "std",
@@ -27894,6 +27895,7 @@
   "area": "sec",
   "keywords": [
    "TLS",
+   "Transport Layer Security",
    "authentication",
    "cryptography"
   ],
@@ -27944,9 +27946,15 @@
  "RFC2716": {
   "area": "int",
   "keywords": [
-   "point-to-point",
-   "link control compression",
-   "extensible",
+   "PPP",
+   "point-to-point protocol",
+   "EAP",
+   "Extensible Authentication Protocol",
+   "LCP",
+   "link control protocol",
+   "CCP",
+   "compression control protocol",
+   "TLS",
    "transport level security"
   ],
   "level": "experimental",
@@ -28003,9 +28011,8 @@
  "RFC2720": {
   "area": "tsv",
   "keywords": [
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -28058,7 +28065,8 @@
  "RFC2724": {
   "area": "tsv",
   "keywords": [
-   "real-time",
+   "RTFM",
+   "real-time traffic flow measurement",
    "network"
   ],
   "level": "experimental",
@@ -28071,6 +28079,9 @@
   "area": "ops",
   "keywords": [
    "RPSL",
+   "Routing Policy Specification Language",
+   "system",
+   "security",
    "database",
    "registry",
    "authentication"
@@ -28084,8 +28095,8 @@
  "RFC2726": {
   "area": "ops",
   "keywords": [
-   "pretty good",
-   "privacy",
+   "PGP",
+   "pretty good privacy",
    "security",
    "digital",
    "signatures"
@@ -28115,9 +28126,10 @@
  "RFC2728": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
-   "IPVBI"
+   "IP",
+   "internet protocol",
+   "IPVBI",
+   "IP Over the Vertical Blanking Interval of Television Signal"
   ],
   "level": "std",
   "status": "current",
@@ -28143,7 +28155,7 @@
   "area": "tsv",
   "keywords": [
    "MADCAP",
-   "client",
+   "Multicast Address Dynamic Client Allocation Protocol",
    "server",
    "scope",
    "zone",
@@ -28189,8 +28201,9 @@
   "area": "rai",
   "keywords": [
    "FEC",
-   "real-time",
-   "protocol",
+   "Forward Error Correction",
+   "RTP",
+   "real-time protocol",
    "stream"
   ],
   "level": "std",
@@ -28202,15 +28215,17 @@
  "RFC2734": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv4",
+   "internet protocol",
    "datagrams",
    "packet",
    "encapsulation",
    "ARP",
    "address",
    "resolution",
-   "multicast"
+   "multicast",
+   "IEEE",
+   "Institute of Electrical and Electronics Engineers"
   ],
   "level": "std",
   "status": "current",
@@ -28221,10 +28236,10 @@
  "RFC2735": {
   "area": "int",
   "keywords": [
-   "next hop",
-   "resolution",
-   "protocol",
+   "NHRP",
+   "next hop resolution protocol",
    "VPN",
+   "Virtual Private Network",
    "addresses"
   ],
   "level": "std",
@@ -28271,8 +28286,8 @@
   "area": "app",
   "keywords": [
    "FEC",
-   "real-time",
-   "protocol",
+   "Forward Error Correction",
+   "real-time protocol",
    "stream"
   ],
   "level": "std",
@@ -28284,10 +28299,9 @@
  "RFC2739": {
   "area": "app",
   "keywords": [
-   "lightweight",
-   "directory",
-   "access",
-   "protocol"
+   "LDAP",
+   "lightweight directory access protocol",
+   "calendar"
   ],
   "level": "std",
   "status": "current",
@@ -28298,10 +28312,10 @@
  "RFC2740": {
   "area": "rtg",
   "keywords": [
-   "internet",
-   "protocol",
-   "open shortest",
-   "path first"
+   "IPv6",
+   "internet protocol",
+   "OSPF",
+   "open shortest path first"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -28313,9 +28327,7 @@
   "area": "ops",
   "keywords": [
    "SNMP",
-   "simple",
-   "network",
-   "management"
+   "simple network management protocol"
   ],
   "level": "std",
   "status": "current",
@@ -28327,12 +28339,9 @@
   "area": "ops",
   "keywords": [
    "SNMP",
-   "management",
-   "information",
-   "base",
-   "simple",
-   "network",
-   "protocol"
+   "Simple Network Management Protocol",
+   "MIB",
+   "Management Information Base"
   ],
   "level": "std",
   "status": "current",
@@ -28344,8 +28353,7 @@
   "area": "sec",
   "keywords": [
    "GSS-API",
-   "portability",
-   "application",
+   "Generic Security Service Application Program Interface",
    "authentication",
    "cryptology"
   ],
@@ -28359,6 +28367,7 @@
   "area": "sec",
   "keywords": [
    "GSS-API",
+   "Generic Security Service Application Program Interface",
    "cryptology",
    "authentication"
   ],
@@ -28369,11 +28378,10 @@
   "wg": "cat"
  },
  "RFC2745": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
+   "RSVP",
+   "resource reservation protocol",
    "network",
    "management"
   ],
@@ -28381,40 +28389,40 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Diagnostic Messages",
-  "wg": "rsvp"
+  "wg": "vgmib"
  },
  "RFC2746": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
-   "internet"
+   "RSVP",
+   "resource reservation protocol",
+   "IP",
+   "internet protocol"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Operation Over IP Tunnels",
-  "wg": "rsvp"
+  "wg": "vgmib"
  },
  "RFC2747": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
+   "RSVP",
+   "resource reservation protocol",
    "security"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Cryptographic Authentication",
-  "wg": "rsvp"
+  "wg": "vgmib"
  },
  "RFC2748": {
   "area": "ops",
   "keywords": [
    "COPS",
+   "Common Open Policy Service",
    "qos",
    "quality of service",
    "signaling"
@@ -28428,12 +28436,10 @@
  "RFC2749": {
   "area": "ops",
   "keywords": [
-   "common",
-   "open",
-   "policy",
-   "resource",
-   "reservation",
-   "protocol"
+   "COPS",
+   "common open policy service",
+   "RSVP",
+   "resource reservation protocol"
   ],
   "level": "std",
   "status": "current",
@@ -28444,9 +28450,8 @@
  "RFC2750": {
   "area": "ops",
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
+   "RSVP",
+   "resource reservation protocol",
    "admission"
   ],
   "level": "std",
@@ -28532,8 +28537,9 @@
  "RFC2756": {
   "keywords": [
    "HTCP",
-   "hypertext",
-   "transfer protocol",
+   "Hyper Text Cashing Protocol",
+   "HTTP",
+   "hypertext transfer protocol",
    "caches",
    "data"
   ],
@@ -28561,10 +28567,9 @@
  "RFC2758": {
   "keywords": [
    "MIB",
-   "management",
-   "information",
-   "base",
-   "SLAs"
+   "management information base",
+   "SLAs",
+   "Service Level Agreements"
   ],
   "level": "experimental",
   "status": "current",
@@ -28619,9 +28624,8 @@
  "RFC2762": {
   "area": "rai",
   "keywords": [
-   "real-time",
-   "transport",
-   "protocol",
+   "RTP",
+   "real-time transport protocol",
    "packets"
   ],
   "level": "experimental",
@@ -28659,10 +28663,9 @@
   "area": "ops",
   "keywords": [
    "SIIT",
-   "internet",
-   "protocol",
-   "control",
-   "message",
+   "Stateless IP/ICMP Translation Algorithm",
+   "internet protocol",
+   "internet control message protocol",
    "IPv4",
    "IPv6"
   ],
@@ -28716,8 +28719,9 @@
   "area": "ops",
   "keywords": [
    "RPSL",
-   "database",
-   "language"
+   "Routing Policy Specification Language",
+   "Routing Policy System Security",
+   "database"
   ],
   "level": "std",
   "status": "current",
@@ -28768,7 +28772,9 @@
  "RFC2773": {
   "area": "sec",
   "keywords": [
+   "KEA",
    "key exchange algorithm",
+   "SKIPJACK",
    "symmetric"
   ],
   "level": "experimental",
@@ -28803,6 +28809,7 @@
   "area": "ops",
   "keywords": [
    "MZAP",
+   "Multicast-Scope Zone Announcement Protocol",
    "packets",
    "addresses",
    "service",
@@ -28890,11 +28897,10 @@
   "area": "int",
   "keywords": [
    "DNS-SRV",
-   "domain",
-   "name",
-   "system",
-   "resource",
-   "record"
+   "domain name system",
+   "service",
+   "RR",
+   "resource record"
   ],
   "level": "std",
   "status": "current",
@@ -28917,6 +28923,7 @@
  "RFC2784": {
   "keywords": [
    "GRE",
+   "Generic Routing Encapsulation",
    "packet",
    "size",
    "payload"
@@ -28943,10 +28950,11 @@
  "RFC2786": {
   "keywords": [
    "mib",
+   "management information base",
    "security",
    "user-based",
    "model",
-   "Hellman"
+   "Diffie-Hellman"
   ],
   "level": "experimental",
   "status": "current",
@@ -28956,9 +28964,10 @@
  "RFC2787": {
   "area": "rtg",
   "keywords": [
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base",
+   "VRRP",
+   "Virtual Router Redundancy Protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -28969,9 +28978,8 @@
  "RFC2788": {
   "area": "app",
   "keywords": [
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -28982,9 +28990,10 @@
  "RFC2789": {
   "area": "app",
   "keywords": [
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base",
+   "mail",
+   "monitoring"
   ],
   "level": "std",
   "status": "current",
@@ -28994,9 +29003,10 @@
  },
  "RFC2790": {
   "keywords": [
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base",
+   "host",
+   "resources"
   ],
   "level": "std",
   "status": "current",
@@ -29042,9 +29052,10 @@
  "RFC2794": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
-   "NAI"
+   "IPv4",
+   "internet protocol",
+   "NAI",
+   "Network Access Identifier"
   ],
   "level": "std",
   "status": "current",
@@ -29066,9 +29077,8 @@
  "RFC2796": {
   "area": "rtg",
   "keywords": [
-   "border",
-   "gateway",
-   "protocol"
+   "BGP",
+   "border gateway protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -29079,8 +29089,9 @@
  "RFC2797": {
   "area": "sec",
   "keywords": [
-   "certificate",
-   "management",
+   "CMS",
+   "CMC",
+   "certificate management",
    "protocol",
    "cryptology",
    "syntax"
@@ -29291,10 +29302,12 @@
  "RFC2814": {
   "area": "tsv",
   "keywords": [
+   "SBM",
+   "Subnet Bandwidth Manager",
    "LAN",
-   "local area",
-   "resource",
-   "reservation"
+   "local area network",
+   "RSVP",
+   "resource reservation protocol"
   ],
   "level": "std",
   "status": "current",
@@ -29306,7 +29319,7 @@
   "area": "tsv",
   "keywords": [
    "LAN",
-   "local area",
+   "local area network",
    "resource",
    "reservation"
   ],
