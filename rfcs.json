@@ -31058,9 +31058,9 @@
  },
  "RFC2943": {
   "keywords": [
-   "digital",
-   "signature",
-   "algorithm"
+   "TELNET",
+   "DSA",
+   "digital signature algorithm"
   ],
   "level": "std",
   "status": "current",
@@ -31069,10 +31069,9 @@
  },
  "RFC2944": {
   "keywords": [
-   "secure",
-   "remote",
-   "password",
-   "protocol"
+   "Telnet",
+   "SRP",
+   "secure remote password protocol"
   ],
   "level": "std",
   "status": "current",
@@ -31081,10 +31080,8 @@
  },
  "RFC2945": {
   "keywords": [
-   "secure",
-   "remote",
-   "password",
-   "protocol"
+   "SRP",
+   "secure remote password protocol"
   ],
   "level": "std",
   "status": "current",
@@ -31093,6 +31090,7 @@
  },
  "RFC2946": {
   "keywords": [
+   "Telnet",
    "stream",
    "authentication"
   ],
@@ -31103,9 +31101,9 @@
  },
  "RFC2947": {
   "keywords": [
-   "data",
-   "encryption",
-   "standard"
+   "Telnet",
+   "Triple-DES",
+   "data encryption standard"
   ],
   "level": "std",
   "status": "current",
@@ -31114,9 +31112,9 @@
  },
  "RFC2948": {
   "keywords": [
-   "data",
-   "encryption",
-   "standard"
+   "Telnet",
+   "DES",
+   "data encryption standard"
   ],
   "level": "std",
   "status": "current",
@@ -31125,6 +31123,9 @@
  },
  "RFC2949": {
   "keywords": [
+   "CAST-128",
+   "Telnet",
+   "encryption",
    "algorithm",
    "option"
   ],
@@ -31135,6 +31136,9 @@
  },
  "RFC2950": {
   "keywords": [
+   "CAST-128",
+   "Telnet",
+   "encryption",
    "algorithm",
    "option"
   ],
@@ -31180,10 +31184,8 @@
   "area": "int",
   "keywords": [
    "FR-MIB",
-   "mib",
-   "management",
-   "information",
-   "base"
+   "Frame Relay Service",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -31194,16 +31196,12 @@
  "RFC2955": {
   "area": "int",
   "keywords": [
-   "asynchronous",
-   "transfer",
-   "mode",
-   "permanent",
-   "virtual",
-   "connections",
+   "ATM",
+   "asynchronous transfer mode",
+   "PVC",
+   "permanent virtual connections",
    "MIB",
-   "management",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -31254,7 +31252,9 @@
   "area": "rai",
   "keywords": [
    "RTP",
-   "MIB"
+   "Real-Time Transport Protocol",
+   "MIB",
+   "Management Information Base"
   ],
   "level": "std",
   "status": "current",
@@ -31279,18 +31279,17 @@
   "wg": "sigtran"
  },
  "RFC2961": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
+   "RSVP",
+   "resource reservation protocol",
    "messages"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Refresh Overhead Reduction Extensions",
-  "wg": "rsvp"
+  "wg": "vgmib"
  },
  "RFC2962": {
   "area": "tsv",
@@ -31335,9 +31334,8 @@
  "RFC2965": {
   "area": "app",
   "keywords": [
-   "hypertext",
-   "transfer",
-   "protocol"
+   "HTTP",
+   "hypertext transfer protocol"
   ],
   "level": "historic",
   "status": "obsoleted",
@@ -31419,10 +31417,8 @@
  },
  "RFC2971": {
   "keywords": [
-   "internet",
-   "message",
-   "access",
-   "protocol",
+   "IMAP4",
+   "internet message access protocol",
    "client",
    "server"
   ],
@@ -31458,7 +31454,8 @@
  "RFC2974": {
   "area": "rai",
   "keywords": [
-   "SAP"
+   "SAP",
+   "Session Announcement Protocol"
   ],
   "level": "experimental",
   "status": "current",
@@ -31482,9 +31479,8 @@
  "RFC2976": {
   "area": "rai",
   "keywords": [
-   "session",
-   "initiation",
-   "protocol",
+   "SIP",
+   "session initiation protocol",
    "information",
    "extension"
   ],
@@ -31550,9 +31546,9 @@
  "RFC2981": {
   "area": "ops",
   "keywords": [
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base",
+   "Event"
   ],
   "level": "std",
   "status": "current",
@@ -31563,8 +31559,9 @@
  "RFC2982": {
   "area": "ops",
   "keywords": [
-   "information",
-   "base"
+   "MIB",
+   "management information base",
+   "Distributed Management Expression"
   ],
   "level": "std",
   "status": "current",
@@ -31588,9 +31585,9 @@
  "RFC2984": {
   "area": "sec",
   "keywords": [
-   "cryptographic",
-   "message",
-   "syntax",
+   "CAST-128",
+   "CMS",
+   "cryptographic message syntax",
    "security",
    "cipher"
   ],
@@ -31636,8 +31633,8 @@
  },
  "RFC2987": {
   "keywords": [
-   "character",
-   "sets",
+   "Charset",
+   "character sets",
    "human",
    "languages",
    "devices"
@@ -31650,9 +31647,8 @@
  "RFC2988": {
   "area": "tsv",
   "keywords": [
-   "transmission",
-   "control",
-   "protocol",
+   "TCP",
+   "transmission control protocol",
    "algorithm"
   ],
   "level": "std",
@@ -31750,9 +31746,8 @@
  "RFC2996": {
   "area": "tsv",
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
+   "RSVP",
+   "resource reservation protocol",
    "QoS",
    "Quality of Service"
   ],
@@ -31765,9 +31760,8 @@
  "RFC2997": {
   "area": "tsv",
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
+   "RSVP",
+   "resource reservation protocol",
    "QoS",
    "Quality of Service"
   ],
@@ -31830,11 +31824,10 @@
  },
  "RFC3003": {
   "keywords": [
+   "audio/mpeg",
    "MIME",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions"
+   "multipurpose internet mail extensions",
+   "Media Type"
   ],
   "level": "std",
   "status": "current",
@@ -31844,10 +31837,8 @@
  "RFC3004": {
   "area": "int",
   "keywords": [
-   "dynamic",
-   "host",
-   "configuration",
-   "protocol"
+   "DHCP",
+   "dynamic host configuration protocol"
   ],
   "level": "std",
   "status": "current",
@@ -31889,7 +31880,8 @@
    "security",
    "authentication",
    "validation",
-   "DNSSEC"
+   "DNSSEC",
+   "Domain Name System"
   ],
   "level": "std",
   "status": "current",
@@ -31915,11 +31907,10 @@
  "RFC3009": {
   "area": "rai",
   "keywords": [
-   "media-type",
-   "multimedia",
-   "internet",
-   "mail",
-   "extensions"
+   "parityfec",
+   "media type",
+   "MIME",
+   "multimedia internet mail extensions"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -31944,11 +31935,10 @@
  "RFC3011": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
-   "dynamic",
-   "host",
-   "configuration"
+   "IPv4",
+   "internet protocol",
+   "DHCP",
+   "dynamic host configuration protocol"
   ],
   "level": "std",
   "status": "current",
@@ -31985,9 +31975,9 @@
  "RFC3014": {
   "area": "ops",
   "keywords": [
-   "management",
-   "information",
-   "base"
+   "MIB",
+   "management information base",
+   "Notification Log"
   ],
   "level": "std",
   "status": "current",
@@ -32013,9 +32003,9 @@
  "RFC3016": {
   "area": "rai",
   "keywords": [
-   "real-time transport",
-   "protocol",
-   "media-type"
+   "RTP",
+   "real-time transport protocol",
+   "media type"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -32026,12 +32016,10 @@
  "RFC3017": {
   "area": "ops",
   "keywords": [
-   "extensible",
-   "markup",
-   "language",
-   "document",
-   "type",
-   "declaration"
+   "XML",
+   "extensible markup language",
+   "DTD",
+   "document type declaration"
   ],
   "level": "std",
   "status": "current",
@@ -32042,8 +32030,9 @@
  "RFC3018": {
   "keywords": [
    "UMSP",
+   "Unified Memory Space Protocol",
    "network",
-   "connection-oriented"
+   "connection oriented"
   ],
   "level": "experimental",
   "status": "current",
@@ -32054,8 +32043,11 @@
   "area": "int",
   "keywords": [
    "IPv6",
+   "Internet Protocol",
    "MIB",
-   "MLD"
+   "Management Information Base",
+   "MLD",
+   "Multicast Listener Discovery Protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -32067,9 +32059,7 @@
   "area": "int",
   "keywords": [
    "MIB",
-   "management",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -32079,8 +32069,8 @@
  },
  "RFC3021": {
   "keywords": [
-   "internet",
-   "protocol",
+   "IPv4",
+   "internet protocol",
    "addresses",
    "subnet masks"
   ],
@@ -32105,14 +32095,13 @@
  },
  "RFC3023": {
   "keywords": [
-   "extensible",
-   "markup",
-   "language",
+   "XML",
+   "extensible markup language",
    "web",
    "authority",
-   "hypertext",
-   "transfer",
-   "protocol"
+   "HTTP",
+   "hypertext transfer protocol",
+   "media type"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -32122,8 +32111,8 @@
  "RFC3024": {
   "area": "int",
   "keywords": [
-   "internet",
-   "protocol",
+   "Mobile IP",
+   "internet protocol",
    "node",
    "care-of-address"
   ],
@@ -32179,6 +32168,7 @@
  },
  "RFC3028": {
   "keywords": [
+   "Sieve",
    "client",
    "server"
   ],
@@ -32190,7 +32180,11 @@
  "RFC3029": {
   "area": "sec",
   "keywords": [
+   "X.509",
+   "PKI",
+   "Public Key Infrastructure",
    "DVCS",
+   "Data Validation and Certification Server",
    "TTP",
    "trusted third party"
   ],
@@ -32202,12 +32196,10 @@
  },
  "RFC3030": {
   "keywords": [
-   "simple",
-   "mail",
-   "transfer",
-   "protocol",
+   "SMTP",
+   "simple mail transfer protocol",
    "multipurpose",
-   "interent"
+   "internet"
   ],
   "level": "std",
   "status": "current",
@@ -32217,7 +32209,8 @@
  "RFC3031": {
   "area": "rtg",
   "keywords": [
-   "MPLS"
+   "MPLS",
+   "Multiprotocol Label Switching"
   ],
   "level": "std",
   "status": "current",
@@ -32228,9 +32221,8 @@
  "RFC3032": {
   "area": "rtg",
   "keywords": [
-   "multi-protocol",
-   "label",
-   "switching"
+   "MPLS",
+   "multi-protocol label switching"
   ],
   "level": "std",
   "status": "current",
@@ -32241,7 +32233,8 @@
  "RFC3033": {
   "area": "rtg",
   "keywords": [
-   "IP"
+   "IP",
+   "Internet Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32253,7 +32246,7 @@
   "area": "rtg",
   "keywords": [
    "MPLS",
-   "multi-protocol"
+   "multi-protocol label switching"
   ],
   "level": "std",
   "status": "current",
@@ -32264,14 +32257,12 @@
  "RFC3035": {
   "area": "rtg",
   "keywords": [
-   "multi-protocol",
-   "label",
-   "switching",
-   "asynchronous",
-   "transfer",
-   "mode",
-   "distribution",
-   "protocol"
+   "MPLS",
+   "multi-protocol label switching",
+   "ATM",
+   "asynchronous transfer mode",
+   "LDP",
+   "label distribution protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32308,12 +32299,12 @@
  "RFC3038": {
   "area": "rtg",
   "keywords": [
-   "asynchronous",
-   "transfer",
-   "mode",
-   "label",
-   "distribution",
-   "protocol"
+   "VCID",
+   "Virtual Connection Identifier",
+   "ATM",
+   "asynchronous transfer mode",
+   "LDP",
+   "label distribution protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32363,9 +32354,8 @@
  "RFC3042": {
   "area": "tsv",
   "keywords": [
-   "transmission",
-   "control",
-   "protocol"
+   "TCP",
+   "transmission control protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32411,10 +32401,8 @@
  "RFC3046": {
   "area": "int",
   "keywords": [
-   "dynamic",
-   "host",
-   "configuration",
-   "protocol"
+   "DHCP",
+   "dynamic host configuration protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32425,12 +32413,10 @@
  "RFC3047": {
   "area": "rai",
   "keywords": [
-   "international",
-   "telecommunication",
-   "union",
-   "real-time",
-   "transport",
-   "protocol"
+   "ITU-T",
+   "international telecommunication union",
+   "RTP",
+   "real-time transport protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -32454,7 +32440,8 @@
  "RFC3049": {
   "area": "app",
   "keywords": [
-   "SLP"
+   "SLP",
+   "Service Location Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32529,8 +32516,9 @@
   "area": "tsv",
   "keywords": [
    "MIB",
-   "PSTN/Internet",
-   "interworking"
+   "Management Information Base",
+   "PINT",
+   "PSTN/Internet Interworking Services Architecture"
   ],
   "level": "std",
   "status": "current",
@@ -32541,10 +32529,11 @@
  "RFC3056": {
   "area": "ops",
   "keywords": [
-   "internet",
-   "protocol",
-   "wide area",
-   "network",
+   "IPv6",
+   "IPv4",
+   "internet protocol",
+   "WAN",
+   "wide area network",
    "unicast",
    "point-to-point"
   ],
@@ -32590,6 +32579,7 @@
  "RFC3059": {
   "keywords": [
    "SLPv2",
+   "Service Location Protocol",
    "messages",
    "user agent"
   ],
@@ -32602,7 +32592,7 @@
   "area": "ops",
   "keywords": [
    "CIM",
-   "common",
+   "common information model",
    "schema",
    "object-oriented"
   ],
@@ -32626,10 +32616,8 @@
  },
  "RFC3062": {
   "keywords": [
-   "lightweight",
-   "directory",
-   "access",
-   "protocol"
+   "LDAP",
+   "lightweight directory access protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32639,9 +32627,8 @@
  "RFC3063": {
   "area": "rtg",
   "keywords": [
-   "multiprotocol",
-   "label",
-   "switching",
+   "MPLS",
+   "multiprotocol label switching",
    "path",
    "LSPs"
   ],
@@ -32666,10 +32653,8 @@
   "area": "rtg",
   "keywords": [
    "BGP-ASC",
-   "AS",
-   "border",
-   "gateway",
-   "protocol"
+   "Autonomous System Confederations",
+   "border gateway protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -32700,12 +32685,11 @@
  "RFC3068": {
   "area": "ops",
   "keywords": [
-   "exterior",
-   "gateway",
-   "protocol",
-   "interior",
+   "6to4",
+   "exterior gateway protocol",
+   "EGP",
    "IGP",
-   "EGP"
+   "interior"
   ],
   "level": "historic",
   "status": "obsoleted",
@@ -32731,12 +32715,13 @@
   "area": "int",
   "keywords": [
    "L2TP-FR",
+   "Layer Two Tunneling Protocol",
+   "Frame Relay",
    "point-to-point",
-   "virtual",
-   "switched",
-   "circuits",
    "PVCs",
-   "SVCs"
+   "Permanent Virtual Circuits",
+   "SVCs",
+   "Switched Virtual Circuits"
   ],
   "level": "std",
   "status": "current",
@@ -32782,9 +32767,8 @@
  "RFC3074": {
   "area": "int",
   "keywords": [
-   "dynamic",
-   "host",
-   "configuration",
+   "DHC",
+   "dynamic host configuration",
    "protocol"
   ],
   "level": "std",
@@ -32822,13 +32806,14 @@
  "RFC3077": {
   "area": "rtg",
   "keywords": [
-   "ll",
+   "LL",
+   "Link-Layer",
    "udl",
+   "Unidirectional link",
    "bidirectional",
    "connectivity",
    "ip",
-   "internet",
-   "protocol"
+   "internet protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32862,10 +32847,11 @@
   "area": "app",
   "keywords": [
    "BEEP",
+   "Blocks Extensible Exchange Protocol",
    "text",
    "binary",
    "messages",
-   "kernal"
+   "kernel"
   ],
   "level": "std",
   "status": "current",
@@ -32876,12 +32862,10 @@
  "RFC3081": {
   "area": "app",
   "keywords": [
-   "transmission",
-   "control",
-   "protocol",
-   "blocks",
-   "extensible",
-   "exchange"
+   "TCP",
+   "transmission control protocol",
+   "BEEP",
+   "blocks extensible exchange protocol"
   ],
   "level": "std",
   "status": "current",
@@ -32891,9 +32875,8 @@
  },
  "RFC3082": {
   "keywords": [
-   "service",
-   "location",
-   "protocol"
+   "SLP",
+   "service location protocol"
   ],
   "level": "experimental",
   "status": "current",
@@ -32919,11 +32902,10 @@
   "area": "ops",
   "keywords": [
    "COPS-PR",
-   "common",
-   "open",
-   "service",
+   "common open policy service",
    "security",
-   "quality"
+   "quality",
+   "provisioning"
   ],
   "level": "historic",
   "status": "current",
@@ -32973,14 +32955,10 @@
  },
  "RFC3088": {
   "keywords": [
-   "lightweight",
-   "directory",
-   "access",
-   "protocol",
+   "OpenLDAP",
+   "lightweight directory access protocol",
    "dns",
-   "domain",
-   "name",
-   "system"
+   "domain name system"
   ],
   "level": "experimental",
   "status": "current",
@@ -106853,6 +106831,18 @@
   "title": "Constrained Application Protocol (CoAP) Block-Wise Transfer Options Supporting Robust Transmission",
   "wg": "core"
  },
+ "RFC9178": {
+  "area": "int",
+  "keywords": [
+   "CoAP",
+   "cellular networks"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Building Power-Efficient Constrained Application Protocol (CoAP) Devices for Cellular Networks",
+  "wg": "lwig"
+ },
  "RFC9179": {
   "area": "ops",
   "keywords": [
@@ -107324,6 +107314,18 @@
   "title": "IPv4 Routes with an IPv6 Next Hop in the Babel Routing Protocol",
   "wg": "babel"
  },
+ "RFC9232": {
+  "area": "ops",
+  "keywords": [
+   "Telemetry",
+   "OAM"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Network Telemetry Framework",
+  "wg": "opsawg"
+ },
  "RFC9233": {
   "keywords": [
    "IDN",
@@ -107400,6 +107402,19 @@
   "stream": "ietf",
   "title": "Updates to ECMAScript Media Types",
   "wg": "dispatch"
+ },
+ "RFC9242": {
+  "area": "sec",
+  "keywords": [
+   "IKE_INTERMEDIATE",
+   "Quantum Computer resistant key exchange method",
+   "Post-quantum"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Intermediate Exchange in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+  "wg": "ipsecme"
  },
  "RFC9250": {
   "area": "int",
