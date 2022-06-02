@@ -35331,9 +35331,8 @@
   "area": "rai",
   "keywords": [
    "SIP",
+   "Session Initiation Protocol",
    "application-layer",
-   "application",
-   "layer",
    "multimedia",
    "multicast",
    "unicast"
@@ -35363,10 +35362,9 @@
  "RFC3264": {
   "area": "rai",
   "keywords": [
-   "SIP",
+   "SDP",
+   "Session Description Protocol",
    "application-layer",
-   "application",
-   "layer",
    "multimedia",
    "multicast",
    "unicast"
@@ -35381,9 +35379,8 @@
   "area": "rai",
   "keywords": [
    "SIP",
+   "Session Initiation Protocol",
    "application-layer",
-   "application",
-   "layer",
    "multimedia",
    "multicast",
    "unicast"
@@ -35408,6 +35405,12 @@
  "RFC3267": {
   "area": "rai",
   "keywords": [
+   "RTP",
+   "Real-Time Transport Protocol",
+   "Adaptive Multi-Rate",
+   "AMR",
+   "Adaptive Multi-Rate Wideband",
+   "AMR-WB",
    "interoperate",
    "applications"
   ],
@@ -35420,6 +35423,10 @@
  "RFC3268": {
   "area": "sec",
   "keywords": [
+   "AES",
+   "Advanced Encryption Standard",
+   "TLS",
+   "Transport Layer Security",
    "idea",
    "international data algorithm",
    "symmetric"
@@ -35445,10 +35452,13 @@
  "RFC3270": {
   "area": "rtg",
   "keywords": [
+   "MPLS",
+   "Multi-Protocol Label Switching",
    "diff-serv",
-   "ba",
+   "Differentiated Services",
+   "BA",
    "behaviour aggregate",
-   "lsp",
+   "LSP",
    "label switched paths"
   ],
   "level": "std",
@@ -35489,7 +35499,9 @@
   "area": "ops",
   "keywords": [
    "rmon",
+   "Remote Network Monitoring",
    "mib",
+   "management information base",
    "high speed networks"
   ],
   "level": "std",
@@ -35501,6 +35513,8 @@
  "RFC3274": {
   "area": "sec",
   "keywords": [
+   "CMS",
+   "Cryptographic Message Syntax",
    "content info type"
   ],
   "level": "std",
@@ -35512,9 +35526,8 @@
  "RFC3275": {
   "area": "sec",
   "keywords": [
-   "extensible",
-   "markup",
-   "language"
+   "XML",
+   "extensible markup language"
   ],
   "level": "std",
   "status": "current",
@@ -35561,7 +35574,12 @@
  "RFC3279": {
   "area": "sec",
   "keywords": [
-   "ASN.1"
+   "ASN.1",
+   "X.509",
+   "PKI",
+   "Public Key Infrastructure",
+   "CRL",
+   "Certificate Revocation List"
   ],
   "level": "std",
   "status": "current",
@@ -35571,7 +35589,13 @@
  },
  "RFC3280": {
   "area": "sec",
-  "keywords": [],
+  "keywords": [
+   "X.509",
+   "PKI",
+   "Public Key Infrastructure",
+   "CRL",
+   "Certificate Revocation List"
+  ],
   "level": "std",
   "status": "obsoleted",
   "stream": "ietf",
@@ -35584,7 +35608,8 @@
    "electronic mail",
    "email",
    "ipsec",
-   "www security"
+   "www",
+   "security"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -35593,7 +35618,11 @@
   "wg": "pkix"
  },
  "RFC3282": {
-  "keywords": [],
+  "keywords": [
+   "Content-language",
+   "Accept-Language",
+   "header"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -35616,6 +35645,7 @@
  },
  "RFC3284": {
   "keywords": [
+   "VCDIFF",
    "transport",
    "portable",
    "at&t",
@@ -35649,8 +35679,11 @@
   "area": "ops",
   "keywords": [
    "rmon",
+   "Remote Monitoring",
+   "MIB",
    "management information base",
-   "diffserv"
+   "diffserv",
+   "Differentiated Services"
   ],
   "level": "std",
   "status": "current",
@@ -35673,9 +35706,10 @@
   "area": "tsv",
   "keywords": [
    "mib",
+   "Management Information Base",
    "diffserv",
-   "router",
-   "architecture"
+   "Differentiated Services Architecture",
+   "router"
   ],
   "level": "std",
   "status": "current",
@@ -35698,11 +35732,10 @@
   "area": "ops",
   "keywords": [
    "tc",
+   "textual conventions",
    "mib",
    "layer",
-   "management",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -35713,8 +35746,8 @@
  "RFC3292": {
   "area": "subip",
   "keywords": [
-   "switch",
-   "label",
+   "GSMP",
+   "general switch label protocol",
    "unicast",
    "multicast",
    "qos",
@@ -35728,7 +35761,14 @@
  },
  "RFC3293": {
   "area": "subip",
-  "keywords": [],
+  "keywords": [
+   "GSMP",
+   "General Switch Management Protocol",
+   "ATM",
+   "Asynchronous Transfer Mode",
+   "TCP",
+   "Transmission Control Protocol"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -35752,7 +35792,8 @@
    "mib",
    "management information base",
    "controller",
-   "gsmp-mib"
+   "gsmp-mib",
+   "General Switch Management Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -35762,6 +35803,8 @@
  },
  "RFC3296": {
   "keywords": [
+   "LDAP",
+   "Lightweight Directory Access Protocol",
    "schema",
    "elements",
    "description",
@@ -35775,6 +35818,8 @@
  "RFC3297": {
   "area": "app",
   "keywords": [
+   "content",
+   "negotiation",
    "facsimile"
   ],
   "level": "std",
@@ -35810,7 +35855,10 @@
  },
  "RFC3301": {
   "area": "int",
-  "keywords": [],
+  "keywords": [
+   "L2TP",
+   "Layer Two Tunneling Protocol"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -35821,10 +35869,9 @@
   "area": "app",
   "keywords": [
    "TIFF",
-   "Multipurpose",
-   "Internet",
-   "Mail",
-   "extensions"
+   "Tag Image File Format",
+   "MIME",
+   "Multipurpose Internet Mail Extensions"
   ],
   "level": "std",
   "status": "current",
@@ -35868,7 +35915,9 @@
  "RFC3306": {
   "area": "int",
   "keywords": [
-   "internet protocol"
+   "IPv6",
+   "internet protocol",
+   "multicast"
   ],
   "level": "std",
   "status": "current",
@@ -35879,7 +35928,9 @@
  "RFC3307": {
   "area": "tsv",
   "keywords": [
-   "internet protocol"
+   "IPv6",
+   "internet protocol",
+   "multicast"
   ],
   "level": "std",
   "status": "current",
@@ -35890,9 +35941,12 @@
  "RFC3308": {
   "area": "int",
   "keywords": [
+   "L2TP",
+   "Layer Two Tunneling Protocol",
    "per hop behavior",
    "phb",
-   "diffserv"
+   "diffserv",
+   "Differentiated Services Extension"
   ],
   "level": "std",
   "status": "current",
@@ -35929,6 +35983,8 @@
  "RFC3311": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "parameters",
    "media streams"
   ],
@@ -35941,6 +35997,8 @@
  "RFC3312": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "qos",
    "quality of service",
    "precondition"
@@ -35977,6 +36035,8 @@
  "RFC3315": {
   "area": "int",
   "keywords": [
+   "DHCPv6",
+   "Dynamic Host Configuration Protocol for IPv6",
    "internet protocol",
    "parameters",
    "addresses"
@@ -36023,6 +36083,10 @@
  "RFC3319": {
   "area": "rai",
   "keywords": [
+   "DHCPv6",
+   "Dynamic Host Configuration Protocol",
+   "SIP",
+   "Session Initiation Protocol",
    "outbound proxy servers"
   ],
   "level": "std",
@@ -36037,7 +36101,9 @@
    "sip",
    "session initiation protocol",
    "udvm",
-   "universal decompressor virtual machine"
+   "universal decompressor virtual machine",
+   "SigComp",
+   "Signaling Compression"
   ],
   "level": "std",
   "status": "current",
@@ -36051,7 +36117,9 @@
    "sip",
    "session initiation protocol",
    "udvm",
-   "universal decompressor virtual machine"
+   "universal decompressor virtual machine",
+   "SigComp",
+   "Signaling Compression"
   ],
   "level": "std",
   "status": "current",
@@ -36067,7 +36135,9 @@
    "wireless",
    "cellular",
    "sdp",
-   "session description protocol"
+   "session description protocol",
+   "SigComp",
+   "Signaling Compression"
   ],
   "level": "informational",
   "status": "current",
@@ -36078,6 +36148,8 @@
  "RFC3323": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "privacy service"
   ],
   "level": "std",
@@ -36114,6 +36186,8 @@
  "RFC3326": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "heterogeneous error response forking problem",
    "herfp"
   ],
@@ -36126,6 +36200,8 @@
  "RFC3327": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "3gpp",
    "register",
    "contact",
@@ -36143,7 +36219,9 @@
  "RFC3329": {
   "area": "rai",
   "keywords": [
-   "ua",
+   "SIP",
+   "Session Initiation Protocol",
+   "UA",
    "user agent"
   ],
   "level": "std",
@@ -36203,7 +36281,7 @@
    "meter configuration",
    "qos auditing",
    "aaa",
-   "aaa architecture",
+   "architecture",
    "inter-domain accounting"
   ],
   "level": "experimental",
@@ -36214,9 +36292,10 @@
  "RFC3335": {
   "area": "app",
   "keywords": [
-   "multipurpose",
-   "internet mail extensions",
-   "edi"
+   "MIME",
+   "multipurpose internet mail extensions",
+   "edi",
+   "Electronic Data Interchange-Internet Integration"
   ],
   "level": "std",
   "status": "current",
@@ -36227,9 +36306,11 @@
  "RFC3336": {
   "area": "int",
   "keywords": [
+   "PPP",
    "point-to-point",
    "protocol",
    "atm",
+   "Asynchronous Transfer Mode",
    "aal2",
    "datagram",
    "packets"
