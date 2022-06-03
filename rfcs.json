@@ -36324,9 +36324,10 @@
  "RFC3337": {
   "area": "int",
   "keywords": [
-   "point-to-point",
-   "protocol",
-   "atm",
+   "PPP",
+   "point-to-point protocol",
+   "ATM",
+   "Asynchronous Transfer Mode Adaptation Layer 2",
    "aal2",
    "encapsulation"
   ],
@@ -36338,7 +36339,10 @@
  },
  "RFC3338": {
   "area": "ops",
-  "keywords": [],
+  "keywords": [
+   "BIA",
+   "Bump-in-the-API"
+  ],
   "level": "experimental",
   "status": "obsoleted",
   "stream": "ietf",
@@ -36348,8 +36352,10 @@
  "RFC3339": {
   "area": "app",
   "keywords": [
+   "Timestamps",
    "gregorian calendar",
-   "iso"
+   "iso",
+   "International Organization for Standardization"
   ],
   "level": "std",
   "status": "current",
@@ -36360,7 +36366,8 @@
  "RFC3340": {
   "area": "app",
   "keywords": [
-   "APEX"
+   "APEX",
+   "Application Exchange Core"
   ],
   "level": "historic",
   "status": "current",
@@ -36371,7 +36378,8 @@
  "RFC3341": {
   "area": "app",
   "keywords": [
-   "APEX"
+   "APEX",
+   "Application Exchange"
   ],
   "level": "historic",
   "status": "current",
@@ -36382,6 +36390,8 @@
  "RFC3342": {
   "area": "app",
   "keywords": [
+   "APEX",
+   "Application Exchange",
    "datagram",
    "service",
    "core",
@@ -36397,6 +36407,8 @@
  "RFC3343": {
   "area": "app",
   "keywords": [
+   "APEX",
+   "Application Exchange",
    "endpoint"
   ],
   "level": "historic",
@@ -36409,8 +36421,7 @@
   "area": "int",
   "keywords": [
    "MOBILEIPSUPIP",
-   "Internet",
-   "Protocol"
+   "Internet Protocol Mobility Support for IPv4"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -36445,8 +36456,11 @@
  "RFC3347": {
   "area": "tsv",
   "keywords": [
-   "scsi",
-   "tcp. storage",
+   "iSCSI",
+   "Small Computer Systems Interface",
+   "TCP",
+   "Transmission Control Protocol",
+   "storage",
    "fibre channel"
   ],
   "level": "std",
@@ -36536,9 +36550,13 @@
  "RFC3355": {
   "area": "int",
   "keywords": [
+   "L2TP",
+   "Layer Two Tunneling Protocol",
    "link",
    "dial-up server",
-   "asynchronous transfer mode"
+   "ATM",
+   "asynchronous transfer mode",
+   "adaptation layer"
   ],
   "level": "std",
   "status": "current",
@@ -36618,6 +36636,10 @@
  "RFC3361": {
   "area": "rai",
   "keywords": [
+   "DHCP",
+   "Dynamic Host Configuration Protocol",
+   "SIP",
+   "Session Initiation Protocol",
    "proxy servers"
   ],
   "level": "std",
@@ -36627,7 +36649,13 @@
   "wg": "sip"
  },
  "RFC3362": {
-  "keywords": [],
+  "keywords": [
+   "T.38",
+   "Real-time Facsimile",
+   "MIME",
+   "Multipurpose Internet Mail Extensions",
+   "image/t38"
+  ],
   "level": "std",
   "status": "current",
   "stream": "legacy",
@@ -36681,6 +36709,8 @@
  },
  "RFC3367": {
   "keywords": [
+   "CNRP",
+   "Common Name Resolution Protocol",
    "unique resource locators",
    "client applications"
   ],
@@ -36691,7 +36721,10 @@
  },
  "RFC3368": {
   "keywords": [
-   "uniform resource identifier"
+   "URI",
+   "uniform resource identifier",
+   "CNRP",
+   "Common Name Resolution Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -36715,6 +36748,9 @@
  "RFC3370": {
   "area": "sec",
   "keywords": [
+   "CMS",
+   "Cryptographic Message Syntax",
+   "algorithms",
    "digitally sign",
    "authenticate",
    "encrypt",
@@ -36729,7 +36765,10 @@
  "RFC3371": {
   "area": "int",
   "keywords": [
-   "mib"
+   "L2TP",
+   "Layer Two Tunneling Protocol",
+   "MIB",
+   "Management Information Base"
   ],
   "level": "std",
   "status": "current",
@@ -36793,7 +36832,7 @@
   "area": "rtg",
   "keywords": [
    "IGMP",
-   "IGMP",
+   "Internet Group Management Protocol",
    "multicast",
    "routing",
    "IP",
@@ -36831,9 +36870,10 @@
   "area": "sec",
   "keywords": [
    "dpv",
+   "Delegated Path Validation",
    "dpd",
-   "public",
-   "key",
+   "Delegated Path Discovery",
+   "public key",
    "certificates"
   ],
   "level": "informational",
@@ -36846,11 +36886,9 @@
   "area": "app",
   "keywords": [
    "IPP-E-T",
-   "IPP",
+   "Internet Printing Protocol",
    "application",
-   "media-type",
-   "media",
-   "type"
+   "media type"
   ],
   "level": "std",
   "status": "current",
@@ -36862,11 +36900,9 @@
   "area": "app",
   "keywords": [
    "IPP-E-T",
-   "IPP",
+   "Internet Printing Protocol",
    "application",
-   "media-type",
-   "media",
-   "type"
+   "media type"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -36878,11 +36914,9 @@
   "area": "app",
   "keywords": [
    "IPP-E-T",
-   "IPP",
+   "Internet Printing Protocol",
    "application",
-   "media-type",
-   "media",
-   "type"
+   "media type"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -36955,6 +36989,8 @@
  "RFC3388": {
   "area": "rai",
   "keywords": [
+   "SDP",
+   "Session Description Protocol",
    "formats",
    "attribute",
    "port",
@@ -36974,6 +37010,10 @@
  "RFC3389": {
   "area": "rai",
   "keywords": [
+   "RTP",
+   "Real-time Transport Protocol",
+   "CN",
+   "Comfort Noise",
    "codecs",
    "audio",
    "multimedia"
@@ -36987,6 +37027,7 @@
  "RFC3390": {
   "area": "tsv",
   "keywords": [
+   "TCP",
    "transmission control protocol"
   ],
   "level": "std",
@@ -37008,9 +37049,8 @@
  "RFC3392": {
   "area": "rtg",
   "keywords": [
-   "border",
-   "gateway",
-   "protocol"
+   "BGP",
+   "border gateway protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -37021,8 +37061,11 @@
  "RFC3393": {
   "area": "tsv",
   "keywords": [
+   "IPPM",
+   "IP Performance Metrics",
    "internet protocol",
-   "ipdv"
+   "ipdv",
+   "IP Packet Delay Variation"
   ],
   "level": "std",
   "status": "current",
@@ -37045,9 +37088,8 @@
   "area": "ops",
   "keywords": [
    "RMON-MIB",
-   "management",
-   "information",
-   "base"
+   "Remote Network Monitoring",
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -37058,6 +37100,8 @@
  "RFC3396": {
   "area": "int",
   "keywords": [
+   "DHCPv4",
+   "Dynamic Host Configuration Protocol",
    "octet",
    "packet",
    "code"
@@ -37070,9 +37114,12 @@
  },
  "RFC3397": {
   "keywords": [
+   "DHCP",
+   "Dynamic Host Configuration Protocol",
    "dns",
+   "Domain Name System",
    "client",
-   "client server"
+   "server"
   ],
   "level": "std",
   "status": "current",
@@ -37082,10 +37129,16 @@
  "RFC3398": {
   "area": "rai",
   "keywords": [
+   "ISDN",
+   "Integrated Services Digital Network",
+   "ISUP",
+   "User Part",
    "signaling system no. 7",
    "ss7",
    "pstn",
-   "public switched telephone network"
+   "public switched telephone network",
+   "SIP",
+   "Session Initiation Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -37110,8 +37163,10 @@
   "area": "app",
   "keywords": [
    "NAPTR",
+   "DNS",
    "domain name system",
-   "RR"
+   "RR",
+   "Resource Record"
   ],
   "level": "std",
   "status": "current",
@@ -37123,8 +37178,10 @@
   "area": "app",
   "keywords": [
    "NAPTR",
+   "DNS",
    "domain name system",
-   "RR"
+   "RR",
+   "Resource Record"
   ],
   "level": "std",
   "status": "current",
@@ -37136,8 +37193,10 @@
   "area": "app",
   "keywords": [
    "NAPTR",
+   "DNS",
    "domain name system",
-   "RR"
+   "RR",
+   "Resource Record"
   ],
   "level": "std",
   "status": "current",
@@ -37171,7 +37230,8 @@
  },
  "RFC3407": {
   "keywords": [
-   "SDPng"
+   "SDPng",
+   "Session Description Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -37181,6 +37241,8 @@
  "RFC3408": {
   "area": "tsv",
   "keywords": [
+   "ROHC",
+   "RObust Header Compression",
    "single-octet",
    "packet size"
   ],
@@ -37220,10 +37282,8 @@
   "area": "ops",
   "keywords": [
    "ARCH-SNMP",
-   "simple",
-   "protocol",
-   "network",
-   "management"
+   "Architecture",
+   "simple network management protocol"
   ],
   "level": "std",
   "status": "current",
@@ -37235,6 +37295,8 @@
   "area": "ops",
   "keywords": [
    "MPD-SNMP",
+   "Message Processing and Dispatching",
+   "Simple Network Management Protocol",
    "processing",
    "models",
    "multiple"
@@ -37249,10 +37311,8 @@
   "area": "ops",
   "keywords": [
    "SNMP-APP",
-   "simple",
-   "network",
-   "management",
-   "protocol",
+   "simple network management protocol",
+   "applications",
    "proxy",
    "operations",
    "command"
@@ -37267,11 +37327,12 @@
   "area": "ops",
   "keywords": [
    "USM-SNMPV3",
+   "User-based Security Model",
+   "Simple Network Management Protocol",
    "message",
    "level",
    "mib",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -37283,9 +37344,10 @@
   "area": "ops",
   "keywords": [
    "VACM-SNMP",
+   "View-based Access Control Model",
+   "Simple Network Management Protocol",
    "mib",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -37297,11 +37359,10 @@
   "area": "ops",
   "keywords": [
    "OPS-MIB",
-   "Simple",
-   "Network",
-   "Management",
-   "Protocol",
-   "Version 2"
+   "SNMP",
+   "Simple Network Management Protocol Version 2",
+   "Management Information Base",
+   "operations"
   ],
   "level": "std",
   "status": "current",
@@ -37313,12 +37374,10 @@
   "area": "ops",
   "keywords": [
    "TRANS-MIB",
-   "Simple",
-   "Network",
-   "Management",
-   "Protocol",
-   "Version",
-   "2"
+   "Transport",
+   "SNMP",
+   "Simple Network Management Protocol Version 2",
+   "Management Information Base"
   ],
   "level": "std",
   "status": "current",
@@ -37330,12 +37389,8 @@
   "area": "ops",
   "keywords": [
    "SNMPv2-MIB",
-   "Simple",
-   "Network",
-   "Management",
-   "Protocol",
-   "Version",
-   "2"
+   "Simple Network Management Protocol Version 2",
+   "Management Information Base"
   ],
   "level": "std",
   "status": "current",
@@ -37357,7 +37412,7 @@
   "area": "rai",
   "keywords": [
    "mime",
-   "multipurpose internet mail extesions"
+   "multipurpose internet mail extensions"
   ],
   "level": "std",
   "status": "current",
@@ -37367,10 +37422,13 @@
  },
  "RFC3421": {
   "keywords": [
+   "SLP",
+   "Service Location Protocol",
+   "UA",
    "user agent",
-   "url",
+   "URL",
+   "Uniform Resource Locator",
    "service reply",
-   "ua",
    "svrrply"
   ],
   "level": "experimental",
@@ -37416,7 +37474,7 @@
   "area": "int",
   "keywords": [
    "dns lookups",
-   "domain"
+   "domain name system"
   ],
   "level": "std",
   "status": "current",
