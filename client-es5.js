@@ -182,6 +182,13 @@ $traceurRuntime.registerModule("util.js", [], function() {
     });
     return keys;
   };
+  Object.prototype.get = function(key, backstop) {
+    if (this.hasOwnProperty(key)) {
+      return this[key];
+    } else {
+      return backstop;
+    }
+  };
   function addDOMLoadEvent(func) {
     if (!window.__load_events) {
       var init = function() {
@@ -239,10 +246,12 @@ $traceurRuntime.registerModule("client.js", [], function() {
   var searchWords = [];
   var allRfcs = [];
   var rfcs = {};
+  var refs = {};
+  var inRefs = {};
   var tagColours = {
     stream: '#678',
     level: '#a33',
-    wg: '#753'
+    wg: '#ccc'
   };
   function init() {
     util.onDone(loadDone);
@@ -252,11 +261,25 @@ $traceurRuntime.registerModule("client.js", [], function() {
     util.loadJson('rfcs.json', function(json) {
       rfcs = json;
     });
+    util.loadJson('refs.json', function(json) {
+      refs = json;
+    });
   }
   function loadDone() {
     compute();
     tagTypes.forEach(function(tagType) {
       initTags(tagType, clickTagHandler);
+    });
+    refs.forEach(function(rfc) {
+      var rfcRefs = refs.get(rfc, {});
+      rfcRefs.get('normative', []).forEach(function(ref) {
+        var rfcName = ("RFC" + ref.padStart(4, '0'));
+        inRefs[rfcName] = inRefs.get(rfcName, 0) + 1;
+      });
+      rfcRefs.get('informative', []).forEach(function(ref) {
+        var rfcName = ("RFC" + ref.padStart(4, '0'));
+        inRefs[rfcName] = inRefs.get(rfcName, 0) + 1;
+      });
     });
     installFormHandlers();
     loadUrl();
@@ -466,6 +489,14 @@ $traceurRuntime.registerModule("client.js", [], function() {
     if (rfcData.level !== 'std') {
       renderTag('level', rfcData.level, rfcSpan);
     }
+    if (rfcData.wg) {
+      renderTag('wg', rfcData.wg, rfcSpan);
+    }
+    var refSpan = document.createElement('span');
+    refSpan.className = 'refcount';
+    var refCount = document.createTextNode((inRefs.get(rfcName, 0) + " refs"));
+    refSpan.appendChild(refCount);
+    rfcSpan.appendChild(refSpan);
     target.appendChild(rfcSpan);
   }
   function showRelevantTags(rfcSet) {
@@ -525,10 +556,9 @@ $traceurRuntime.registerModule("client.js", [], function() {
       return word;
     });
     showRfcs();
-    updateUrl();
   }
   function searchSubmit() {
-    updateUrl(true);
+    updateUrl();
     return false;
   }
   function searchLookup(searchWord, index, attr) {
@@ -557,7 +587,6 @@ $traceurRuntime.registerModule("client.js", [], function() {
     updateUrl();
   }
   function updateUrl() {
-    var inHistory = arguments[0] !== (void 0) ? arguments[0] : false;
     var queries = [];
     if (searchWords.length > 0) {
       queries.push('search=' + searchWords.join('%20'));
@@ -582,11 +611,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
       url += '?';
     url += queries.join('&');
     var title = ("rfc.fyi: " + searchWords.join(' '));
-    if (inHistory) {
-      history.pushState({}, title, url);
-    } else {
-      history.replaceState({}, title, url);
-    }
+    history.pushState({}, title, url);
   }
   function loadUrl() {
     var url = new URL(window.location.href);
@@ -629,7 +654,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
     return output.replace(/[\]().,?"']/g, '');
   }
   function rfcSort(a, b) {
-    return parseInt(b.replace('RFC', '')) - parseInt(a.replace('RFC', ''));
+    return inRefs.get(b, 0) - inRefs.get(a, 0);
   }
   util.addDOMLoadEvent(init);
   return {};
