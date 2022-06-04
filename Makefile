@@ -1,5 +1,5 @@
 
-traceur := /usr/local/bin/traceur
+traceur := /opt/homebrew/bin/traceur
 
 rfcs.json: rfc-index.xml rfc-json.py
 	cat rfc-index.xml | ./rfc-json.py > rfcs.json
