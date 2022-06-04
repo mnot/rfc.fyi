@@ -335,11 +335,10 @@ function searchInput () {
   const searchText = document.getElementById('search').value
   searchWords = searchText.split(' ').filter(word => word)
   showRfcs()
-  updateUrl()
 }
 
 function searchSubmit () {
-  updateUrl(true)
+  updateUrl()
   return false
 }
 
@@ -367,7 +366,7 @@ function showObsoleteHandler (event) {
   updateUrl()
 }
 
-function updateUrl (inHistory = false) {
+function updateUrl () {
   const queries = []
   if (searchWords.length > 0) {
     queries.push('search=' + searchWords.join('%20'))
@@ -391,11 +390,7 @@ function updateUrl (inHistory = false) {
   if (queries.length > 0) url += '?'
   url += queries.join('&')
   const title = `rfc.fyi: ${searchWords.join(' ')}`
-  if (inHistory) {
-    history.pushState({}, title, url)
-  } else {
-    history.replaceState({}, title, url)
-  }
+  history.pushState({}, title, url)
 }
 
 function loadUrl () {
