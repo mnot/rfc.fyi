@@ -389,6 +389,16 @@
                 "RFC8179"
             ]
         },
+        "Architectural Principles": {
+            "rfcs": [
+                "RFC1958",
+                "RFC2993",
+                "RFC3439",
+                "RFC3724",
+                "RFC6950",
+                "RFC6973"
+            ]
+        },
         "SNMP": {
             "colour": "#9309ab",
             "maintainers": ["hardaker"],
