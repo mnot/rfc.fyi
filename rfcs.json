@@ -39352,8 +39352,12 @@
   "wg": "tewg"
  },
  "RFC3565": {
-  "area": "sec",
+  "area": "int",
   "keywords": [
+   "AES",
+   "Advanced Encryption Standard",
+   "CMS",
+   "Cryptographic Message Syntax",
    "security",
    "data encoding"
   ],
@@ -39361,11 +39365,13 @@
   "status": "current",
   "stream": "ietf",
   "title": "Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax (CMS)",
-  "wg": "smime"
+  "wg": "vgmib"
  },
  "RFC3566": {
   "area": "sec",
   "keywords": [
+   "IPsec",
+   "Internet Protocol Security",
    "authentication",
    "hash security"
   ],
@@ -39449,10 +39455,10 @@
   "area": "int",
   "keywords": [
    "ppp",
-   "point to point",
    "point-to-point",
    "pstn",
-   "public switched telephone network"
+   "public switched telephone network. L2TP",
+   "Layer 2 Tunneling Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -39477,12 +39483,14 @@
  },
  "RFC3575": {
   "keywords": [
-   "internet assigned numbers authority",
+   "IANA",
+   "Internet Assigned Numbers Authority",
    "encryption",
    "NAS",
    "Network",
-   "Access",
-   "Server"
+   "Access Server",
+   "RADIUS",
+   "Remote Authentication Dial In User Service"
   ],
   "level": "std",
   "status": "current",
@@ -39514,7 +39522,13 @@
   "area": "rai",
   "keywords": [
    "pstn",
-   "public switched telephone network"
+   "public switched telephone network",
+   "ISDN",
+   "Integrated Services Digital Network",
+   "ISUP",
+   "User Part",
+   "SIP",
+   "Session Initiation Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -39550,6 +39564,9 @@
  "RFC3581": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
+   "Symmetric Response Routing",
    "report client server"
   ],
   "level": "std",
@@ -39599,10 +39616,14 @@
  "RFC3585": {
   "area": "sec",
   "keywords": [
+   "IPsec",
+   "Internet Protocol Security",
    "ike",
    "internet key exchange protocol",
    "core",
-   "pcim"
+   "Constrained RESTful Environments",
+   "pcim",
+   "Policy Core Information Model"
   ],
   "level": "std",
   "status": "current",
@@ -39613,6 +39634,8 @@
  "RFC3586": {
   "area": "sec",
   "keywords": [
+   "IPSP",
+   "Internet Protocol Security Policy",
    "data integrity",
    "authentication",
    "host network"
@@ -39642,7 +39665,8 @@
   "keywords": [
    "aaa",
    "authentication authorization accounting",
-   "ip mobility"
+   "ip mobility",
+   "Diameter Base Protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -39664,8 +39688,9 @@
   "area": "int",
   "keywords": [
    "MLD-IPv6",
+   "Multicast Listener Discovery",
    "internet protocol",
-   "routher",
+   "router",
    "packets"
   ],
   "level": "std",
@@ -39675,10 +39700,10 @@
   "wg": "magma"
  },
  "RFC3591": {
-  "area": "ops",
+  "area": "int",
   "keywords": [
+   "MIB",
    "management information base",
-   "mib",
    "snmp",
    "simple network management protocol",
    "otn",
@@ -39687,7 +39712,7 @@
    "performance monitoring",
    "configuration",
    "dwdm",
-   "optical tranmission session",
+   "optical transmission session",
    "optical multiplex section",
    "optical channel",
    "otuk",
@@ -39698,39 +39723,46 @@
   "status": "current",
   "stream": "ietf",
   "title": "Definitions of Managed Objects for the Optical Interface Type",
-  "wg": "atommib"
+  "wg": "vgmib"
  },
  "RFC3592": {
-  "area": "ops",
+  "area": "int",
   "keywords": [
    "MIB",
-   "Management",
-   "SNMP"
+   "Management Information Base",
+   "SNMP",
+   "Simple Network Management Protocol",
+   "Synchronous Optical Network",
+   "Synchronous Digital Hierarchy",
+   "SONET",
+   "SDH"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Definitions of Managed Objects for the Synchronous Optical Network/Synchronous Digital Hierarchy (SONET/SDH) Interface Type",
-  "wg": "atommib"
+  "wg": "vgmib"
  },
  "RFC3593": {
-  "area": "ops",
+  "area": "int",
   "keywords": [
-   "management",
-   "information",
-   "base",
+   "MIB",
+   "management information base",
    "data"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Textual Conventions for MIB Modules Using Performance History Based on 15 Minute Intervals",
-  "wg": "atommib"
+  "wg": "vgmib"
  },
  "RFC3594": {
   "area": "int",
   "keywords": [
-   "dynamic host configuration protocol"
+   "DHCP",
+   "dynamic host configuration protocol",
+   "CCC",
+   "CableLabs Client Configuration"
   ],
   "level": "std",
   "status": "current",
@@ -39767,10 +39799,13 @@
  "RFC3597": {
   "area": "int",
   "keywords": [
+   "DNS",
    "domain name system",
    "name server software",
    "compression",
-   "transparency"
+   "transparency",
+   "RR",
+   "Resource Record"
   ],
   "level": "std",
   "status": "current",
@@ -39828,6 +39863,7 @@
   "area": "sec",
   "keywords": [
    "ipsec",
+   "Internet Protocol Security",
    "encapsulating",
    "security",
    "payload"
@@ -39864,6 +39900,10 @@
  "RFC3605": {
   "area": "rai",
   "keywords": [
+   "RTCP",
+   "Real Time Control Protocol",
+   "SDP",
+   "Session Description Protocol",
    "nat",
    "network access translation",
    "port mapping"
@@ -39875,17 +39915,18 @@
   "wg": "mmusic"
  },
  "RFC3606": {
-  "area": "ops",
+  "area": "int",
   "keywords": [
+   "ATM",
    "asynchronous transfer mode",
-   "mib",
+   "MIB",
    "management information base"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Definitions of Supplemental Managed Objects for ATM Interface",
-  "wg": "atommib"
+  "wg": "vgmib"
  },
  "RFC3607": {
   "keywords": [
@@ -39905,6 +39946,8 @@
  "RFC3608": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "user agent",
    "domain",
    "register"
@@ -39944,12 +39987,15 @@
  "RFC3611": {
   "area": "rai",
   "keywords": [
+   "RTP",
    "real time transport protocol",
    "packet",
    "type",
-   "sdp",
-   "session description",
-   "blocks"
+   "SDP",
+   "session description protocol",
+   "blocks",
+   "XR",
+   "Extended Report"
   ],
   "level": "std",
   "status": "current",
@@ -40029,6 +40075,8 @@
  "RFC3618": {
   "area": "rtg",
   "keywords": [
+   "MSDP",
+   "Multicast Source Discovery Protocol",
    "ipv4",
    "pim-sm",
    "independent multicast",
@@ -40055,6 +40103,7 @@
  "RFC3620": {
   "area": "sec",
   "keywords": [
+   "TUNNEL",
    "beep",
    "blocks extensible exchange protocol",
    "firewall",
@@ -40069,8 +40118,9 @@
  "RFC3621": {
   "area": "ops",
   "keywords": [
+   "MIB",
    "management information base",
-   "data terminal equipment power",
+   "data terminal equipment",
    "dte",
    "power sourcing equipment",
    "pse"
@@ -40093,6 +40143,7 @@
  "RFC3623": {
   "area": "rtg",
   "keywords": [
+   "OSPF",
    "open shortest path first",
    "non-stop forwarding"
   ],
@@ -40131,6 +40182,8 @@
  "RFC3626": {
   "area": "rtg",
   "keywords": [
+   "OLSR",
+   "Optimized Link State Routing",
    "mobile ad hoc",
    "wireless multipoint relays",
    "mpr",
@@ -40168,6 +40221,7 @@
   "keywords": [
    "UTF-8",
    "UCS",
+   "Universal Character Set",
    "Transformation",
    "Format"
   ],
