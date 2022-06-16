@@ -29368,7 +29368,7 @@
    "security"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "HTTP Over TLS",
   "wg": "tls"
@@ -34556,7 +34556,7 @@
    "layering"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "legacy",
   "title": "On the use of HTTP as a Substrate"
  },
@@ -37503,7 +37503,10 @@
  "RFC3428": {
   "area": "rai",
   "keywords": [
-   "im",
+   "SIP",
+   "Session Initiation Protocol",
+   "IM",
+   "Instant Messaging",
    "message method"
   ],
   "level": "std",
@@ -37523,8 +37526,10 @@
  },
  "RFC3430": {
   "keywords": [
-   "snmp",
-   "tcp"
+   "SNMP",
+   "Simple Network Management Protocol",
+   "TCP",
+   "Transmission Control Protocol"
   ],
   "level": "experimental",
   "status": "current",
@@ -37558,9 +37563,11 @@
  "RFC3433": {
   "area": "ops",
   "keywords": [
-   "mib",
+   "MIB",
+   "Management Information Base",
    "physical sensors",
-   "snmp"
+   "SNMP",
+   "Simple Network Management Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -37571,10 +37578,15 @@
  "RFC3434": {
   "area": "ops",
   "keywords": [
-   "rmon",
+   "RMON",
+   "Remote Monitoring",
+   "MIB",
+   "Management Information Base",
    "counter64",
    "smiv2",
-   "snmp"
+   "Structure of Management Information Version 2",
+   "SNMP",
+   "Simple Network Management Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -37597,8 +37609,10 @@
  "RFC3436": {
   "area": "tsv",
   "keywords": [
-   "sctp",
-   "tls"
+   "SCTP",
+   "Stream Control Transmission Protocol",
+   "TLS",
+   "Transport Layer Security"
   ],
   "level": "std",
   "status": "current",
@@ -37609,8 +37623,10 @@
  "RFC3437": {
   "area": "int",
   "keywords": [
-   "l2tp",
-   "lcp"
+   "L2TP",
+   "Layer-Two Tunneling Protocol",
+   "LCP",
+   "Link Control Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -37645,9 +37661,11 @@
  "RFC3440": {
   "area": "ops",
   "keywords": [
+   "SNMP",
    "simple network management protocol",
-   "mib",
-   "adsl",
+   "MIB",
+   "Management Information Base",
+   "ADSL",
    "asymmetric digital subscriber line"
   ],
   "level": "std",
@@ -37669,10 +37687,8 @@
  "RFC3442": {
   "area": "int",
   "keywords": [
-   "Dynamic",
-   "Host",
-   "Configuration",
-   "Protocol",
+   "DHCP",
+   "Dynamic Host Configuration Protocol",
    "Bootstrap"
   ],
   "level": "std",
@@ -37684,9 +37700,13 @@
  "RFC3443": {
   "area": "rtg",
   "keywords": [
+   "TTL",
+   "Time To Live",
    "label stack encoding",
    "uniform model",
-   "pipe model"
+   "pipe model",
+   "MPLS",
+   "Multi-Protocol Label Switching"
   ],
   "level": "std",
   "status": "current",
@@ -37743,6 +37763,8 @@
  "RFC3448": {
   "area": "tsv",
   "keywords": [
+   "TFRC",
+   "TCP Friendly Rate Control",
    "congestion",
    "unicast",
    "streaming media"
@@ -37785,6 +37807,8 @@
  "RFC3451": {
   "area": "tsv",
   "keywords": [
+   "LCT",
+   "Layered Coding Transport",
    "content",
    "stream",
    "delivery",
@@ -37800,6 +37824,8 @@
  "RFC3452": {
   "area": "tsv",
   "keywords": [
+   "FEC",
+   "Forward Error Correction",
    "content",
    "stream",
    "delivery",
@@ -37845,6 +37871,8 @@
  "RFC3456": {
   "area": "sec",
   "keywords": [
+   "DHCPv4",
+   "Dynamic Host Configuration Protocol",
    "security",
    "internet protocol"
   ],
@@ -37870,7 +37898,7 @@
   "area": "app",
   "keywords": [
    "user agent",
-   "ua"
+   "UA"
   ],
   "level": "std",
   "status": "current",
@@ -37881,6 +37909,8 @@
  "RFC3459": {
   "area": "app",
   "keywords": [
+   "MIME",
+   "Multi-purpose Internet Mail Extensions",
    "body parts",
    "content-disposition"
   ],
@@ -37893,7 +37923,8 @@
  "RFC3460": {
   "area": "ops",
   "keywords": [
-   "CIM",
+   "PCIM",
+   "Policy Core Information Model",
    "common",
    "schema",
    "object-oriented"
@@ -37907,10 +37938,8 @@
  "RFC3461": {
   "keywords": [
    "SMTP-DSN",
-   "simple",
-   "mail",
-   "transfer",
-   "protocol"
+   "Simple Mail Transfer Protocol",
+   "Delivery Status Notifications"
   ],
   "level": "std",
   "status": "current",
@@ -37920,10 +37949,8 @@
  "RFC3462": {
   "keywords": [
    "MIME-RPT",
-   "Multipurpose",
-   "Internet",
-   "Mail",
-   "Extensions"
+   "Multipurpose Internet Mail Extensions",
+   "Report"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -37933,10 +37960,8 @@
  "RFC3463": {
   "keywords": [
    "EMS-CODE",
-   "simple",
-   "mail",
-   "transfer",
-   "protocol",
+   "Enhanced Mail System Status Codes",
+   "simple mail transfer protocol",
    "SMTP"
   ],
   "level": "std",
@@ -37947,12 +37972,10 @@
  "RFC3464": {
   "keywords": [
    "DSN",
-   "Multipurpose",
-   "Internet",
-   "Mail",
-   "Extensions",
-   "Content",
-   "Type"
+   "Delivery Status Notifications",
+   "MIME",
+   "Multipurpose Internet Mail Extensions",
+   "Content Type"
   ],
   "level": "std",
   "status": "current",
@@ -37961,8 +37984,11 @@
  },
  "RFC3465": {
   "keywords": [
+   "TCP",
    "transmission control protocol",
-   "security performance"
+   "security performance",
+   "ABC",
+   "Appropriate Byte Counting"
   ],
   "level": "experimental",
   "status": "current",
@@ -38031,8 +38057,11 @@
  "RFC3471": {
   "area": "rtg",
   "keywords": [
-   "mpls",
-   "sonet/sdh"
+   "GMPLS",
+   "Generalized Multi-Protocol Label Switching",
+   "SONET/SDH",
+   "Synchronous Optical Network",
+   "Synchronous Digital Hierarchy"
   ],
   "level": "std",
   "status": "current",
@@ -38043,8 +38072,13 @@
  "RFC3472": {
   "area": "rtg",
   "keywords": [
-   "mpls",
-   "sonet/sdh"
+   "GMPLS",
+   "Generalized Multi-Protocol Label Switching",
+   "SONET/SDH",
+   "Synchronous Optical Network",
+   "Synchronous Digital Hierarchy",
+   "CR-LDP",
+   "Constraint-based Routed Label Distribution Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -38055,8 +38089,14 @@
  "RFC3473": {
   "area": "rtg",
   "keywords": [
-   "mpls",
-   "sonet/sdh"
+   "GMPLS",
+   "Generalized Multi-Protocol Label Switching",
+   "SONET/SDH",
+   "Synchronous Optical Network",
+   "Synchronous Digital Hierarchy",
+   "RSVP-TE",
+   "Resource ReserVation Protocol",
+   "Traffic Engineering"
   ],
   "level": "std",
   "status": "current",
@@ -38099,8 +38139,11 @@
  "RFC3477": {
   "area": "rtg",
   "keywords": [
-   "mpls-te",
-   "traffic engineering"
+   "MPLS-TE",
+   "Multi-Protocol Label Switching",
+   "Traffic Engineering",
+   "RSVP",
+   "Resource ReSerVation Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -38111,8 +38154,10 @@
  "RFC3478": {
   "area": "rtg",
   "keywords": [
-   "ldp",
-   "mpls"
+   "LDP",
+   "Label Distribution Protocol",
+   "MPLS",
+   "Multi-Protocol Label Switching"
   ],
   "level": "std",
   "status": "current",
@@ -38123,9 +38168,10 @@
  "RFC3479": {
   "area": "rtg",
   "keywords": [
-   "mpls",
+   "MPLS",
    "multiprotocol label switching",
-   "cr-ldp",
+   "LDP",
+   "Label Distribution Protocol",
    "high availability restart"
   ],
   "level": "std",
@@ -38140,7 +38186,10 @@
    "mpls",
    "multiprotocol label switching",
    "traffic engineering",
-   "mpls-te"
+   "mpls-te",
+   "Traffic Engineering",
+   "CR-LDP",
+   "Constraint-Routing Label Distribution Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -38189,6 +38238,7 @@
  "RFC3484": {
   "area": "int",
   "keywords": [
+   "IPv6",
    "source",
    "address destination"
   ],
@@ -38201,6 +38251,12 @@
  "RFC3485": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
+   "SDP",
+   "Session Description Protocol",
+   "SigComp",
+   "Static Dictionary for Signaling Compression",
    "algorithm"
   ],
   "level": "std",
@@ -38211,7 +38267,10 @@
  },
  "RFC3486": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "SIP",
+   "Session Initiation Protocol"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -38245,6 +38304,11 @@
  "RFC3489": {
   "area": "tsv",
   "keywords": [
+   "STUN",
+   "Simple Traversal of User Datagram Protocol",
+   "UDP",
+   "NATs",
+   "Network Address Translators",
    "lightweight",
    "applications",
    "firewalls"
@@ -38258,7 +38322,8 @@
  "RFC3490": {
   "area": "int",
   "keywords": [
-   "idn",
+   "IDNs",
+   "Internationalized Domain Names",
    "ascii",
    "characters"
   ],
@@ -38271,7 +38336,8 @@
  "RFC3491": {
   "area": "int",
   "keywords": [
-   "idna",
+   "IDN",
+   "Internationalized Domain Name",
    "applications"
   ],
   "level": "std",
@@ -38283,6 +38349,8 @@
  "RFC3492": {
   "area": "int",
   "keywords": [
+   "IDNA",
+   "Internationalized Domain Names in Applications",
    "syntax",
    "string host label"
   ],
@@ -38330,8 +38398,11 @@
  "RFC3495": {
   "area": "int",
   "keywords": [
-   "packetcable media terminal adapter",
-   "mta"
+   "DHCP",
+   "Dynamic Host Configuration Protocol",
+   "packetcable",
+   "MTA",
+   "Media Terminal Adapter"
   ],
   "level": "std",
   "status": "current",
@@ -38354,9 +38425,12 @@
  "RFC3497": {
   "area": "rai",
   "keywords": [
+   "RTP",
    "real-time transport protocol",
    "hdtv",
-   "high definition television"
+   "high definition television",
+   "SMPTE",
+   "Society of Motion Picture and Television Engineers"
   ],
   "level": "std",
   "status": "current",
@@ -38367,10 +38441,15 @@
  "RFC3498": {
   "area": "ops",
   "keywords": [
-   "mib",
+   "MIB",
    "management information base",
-   "tcp/ip transmission control protocol",
-   "internet protocol"
+   "tcp/ip",
+   "transmission control protocol",
+   "internet protocol",
+   "Synchronous Optical Network",
+   "SONET",
+   "Automatic Protection Switching",
+   "APS"
   ],
   "level": "std",
   "status": "current",
@@ -38388,7 +38467,8 @@
  "RFC3501": {
   "keywords": [
    "IMAPv4",
-   "imap",
+   "Internet Message Access Protocol",
+   "Version 4rev1",
    "imapv4rev1"
   ],
   "level": "std",
@@ -38409,9 +38489,12 @@
  },
  "RFC3503": {
   "keywords": [
-   "mua",
+   "MUA",
    "mail user agent",
-   "imap4"
+   "imap4",
+   "Internet Message Access Protocol",
+   "MDN",
+   "Message Disposition Notification"
   ],
   "level": "std",
   "status": "current",
@@ -38501,11 +38584,11 @@
   "area": "app",
   "keywords": [
    "IPP-E-T",
-   "IPP",
+   "Internet Printing Protocol",
    "application",
-   "media-type",
-   "media",
-   "type"
+   "media type",
+   "URL",
+   "Uniform Resource Locator"
   ],
   "level": "std",
   "status": "current",
@@ -38567,6 +38650,8 @@
  "RFC3515": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "resource request",
    "call transfer"
   ],
@@ -38588,6 +38673,7 @@
  "RFC3517": {
   "area": "tsv",
   "keywords": [
+   "TCP",
    "transmission control protocol",
    "retransmission",
    "congestion control"
@@ -38602,7 +38688,8 @@
   "area": "int",
   "keywords": [
    "PPP-BCP",
-   "point-to-point",
+   "point-to-point protocol",
+   "Bridging Control Protocol",
    "datagrams",
    "network"
   ],
@@ -38641,6 +38728,7 @@
  "RFC3520": {
   "area": "ops",
   "keywords": [
+   "session authorization policy",
    "admission control",
    "resource reservation"
   ],
@@ -38672,6 +38760,7 @@
  "RFC3522": {
   "area": "tsv",
   "keywords": [
+   "TCP",
    "transmission control protocol",
    "loss recovery",
    "timestamps"
@@ -38697,10 +38786,10 @@
  "RFC3524": {
   "area": "rai",
   "keywords": [
-   "sdp",
+   "SDP",
    "session description protocol",
-   "srf",
-   "single"
+   "SRF",
+   "single reservation flow"
   ],
   "level": "std",
   "status": "current",
@@ -38726,6 +38815,10 @@
  "RFC3526": {
   "area": "sec",
   "keywords": [
+   "MODP",
+   "More Modular Exponential",
+   "IKE",
+   "Internet Key Exchange",
    "bit groups"
   ],
   "level": "std",
@@ -38737,6 +38830,7 @@
  "RFC3527": {
   "area": "int",
   "keywords": [
+   "DHCPv4",
    "dynamic host configuration protocol"
   ],
   "level": "std",
@@ -38747,12 +38841,14 @@
  },
  "RFC3528": {
   "keywords": [
-   "da",
+   "DA",
    "directory agent",
    "slpda",
    "service agent",
-   "sa",
-   "slpv2"
+   "SA",
+   "slpv2",
+   "Mesh-enhanced Service Location Protocol",
+   "mSLP"
   ],
   "level": "experimental",
   "status": "current",
@@ -38761,10 +38857,14 @@
  },
  "RFC3529": {
   "keywords": [
+   "XML-RPC",
+   "Extensible Markup Language-Remote Procedure Calling",
    "format",
    "messages",
    "clients",
-   "servers"
+   "servers",
+   "BEEP",
+   "Blocks Extensible Exchange Protocol"
   ],
   "level": "experimental",
   "status": "current",
@@ -38775,9 +38875,7 @@
   "area": "tsv",
   "keywords": [
    "NFSv4",
-   "network",
-   "file",
-   "system"
+   "network file system"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -38861,13 +38959,20 @@
   "title": "Terminology Used in Internationalization in the IETF"
  },
  "RFC3537": {
-  "area": "sec",
-  "keywords": [],
+  "area": "int",
+  "keywords": [
+   "HMAC",
+   "Hashed Message Authentication Code",
+   "DES",
+   "Data Encryption Standard",
+   "AES",
+   "Advanced Encryption Standard"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Wrapping a Hashed Message Authentication Code (HMAC) key with a Triple-Data Encryption Standard (DES) Key or an Advanced Encryption Standard (AES) Key",
-  "wg": "smime"
+  "wg": "vgmib"
  },
  "RFC3538": {
   "area": "app",
@@ -38885,7 +38990,12 @@
  },
  "RFC3539": {
   "area": "ops",
-  "keywords": [],
+  "keywords": [
+   "AAA",
+   "Authentication",
+   "Authorization",
+   "Accounting"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -38895,9 +39005,10 @@
  "RFC3540": {
   "area": "tsv",
   "keywords": [
-   "congestion control",
-   "tcp",
-   "traffic control protocol"
+   "ECN",
+   "explicit congestion notification",
+   "TCP",
+   "transmission control protocol"
   ],
   "level": "historic",
   "status": "current",
@@ -38936,7 +39047,9 @@
  "RFC3543": {
   "area": "int",
   "keywords": [
-   "internet protocol"
+   "IPv4",
+   "internet protocol",
+   "mobile"
   ],
   "level": "std",
   "status": "current",
@@ -38948,8 +39061,8 @@
   "area": "int",
   "keywords": [
    "IPCOM-PPP",
-   "internet",
-   "protocol",
+   "internet protocol",
+   "header compression",
    "point-to-point",
    "datagrams"
   ],
@@ -38962,6 +39075,9 @@
  "RFC3545": {
   "area": "rai",
   "keywords": [
+   "Compressed Real-time Transport Protocol",
+   "CRTP",
+   "PPP",
    "point to point",
    "header"
   ],
@@ -38974,9 +39090,8 @@
  "RFC3546": {
   "area": "sec",
   "keywords": [
-   "transport",
-   "protocol",
-   "layer",
+   "TLS",
+   "transport layer security",
    "authentication",
    "privacy"
   ],
@@ -38989,8 +39104,10 @@
  "RFC3547": {
   "area": "sec",
   "keywords": [
-   "isamkp",
-   "doi",
+   "ISAMKP",
+   "Internet Security Association and Key Management Protocol",
+   "DOI",
+   "Domain of Interpretation",
    "key management",
    "security",
    "encryption"
@@ -39030,11 +39147,13 @@
   "area": "rai",
   "keywords": [
    "RTP",
+   "Real-Time Transport Protocol",
    "end-to-end",
    "network",
    "audio",
    "video",
-   "RTCP"
+   "RTCP",
+   "RTP Control Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -39046,6 +39165,9 @@
   "area": "rai",
   "keywords": [
    "RTP-AV",
+   "Real-time Transport Protocol",
+   "audio",
+   "video",
    "end-to-end",
    "network",
    "conference"
@@ -39058,7 +39180,9 @@
  },
  "RFC3552": {
   "keywords": [
-   "Request for Comment"
+   "RFC",
+   "Request for Comment",
+   "Security Considerations"
   ],
   "level": "bcp",
   "status": "current",
@@ -39078,9 +39202,11 @@
  "RFC3554": {
   "area": "sec",
   "keywords": [
-   "ike",
+   "IKE",
    "internet key exchange",
-   "security"
+   "security",
+   "SCTP",
+   "Stream Control Transmission Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -39091,7 +39217,9 @@
  "RFC3555": {
   "area": "rai",
   "keywords": [
+   "RTP",
    "real time transport protocol",
+   "MIME",
    "multipurpose internet mail extensions"
   ],
   "level": "std",
@@ -39103,8 +39231,12 @@
  "RFC3556": {
   "area": "rai",
   "keywords": [
+   "RTP",
    "real time transport protocol",
-   "real-time"
+   "SDP",
+   "Session Description Protocol",
+   "RTCP",
+   "RTP Control Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -39115,9 +39247,10 @@
  "RFC3557": {
   "area": "rai",
   "keywords": [
+   "RTP",
    "real time transport protocol",
-   "real-time",
-   "dsr"
+   "DSR",
+   "distributed speech recognition"
   ],
   "level": "std",
   "status": "current",
@@ -39128,10 +39261,14 @@
  "RFC3558": {
   "area": "rai",
   "keywords": [
+   "RTP",
    "real time transport protocol",
-   "real-time",
    "bundled",
-   "interleaved"
+   "interleaved",
+   "EVRC",
+   "Enhanced Variable Rate Codecs",
+   "SMV",
+   "Selectable Mode Vocoders"
   ],
   "level": "std",
   "status": "current",
@@ -39143,6 +39280,8 @@
   "area": "tsv",
   "keywords": [
    "maas",
+   "multicast address allocation servers",
+   "MIB",
    "management information base"
   ],
   "level": "std",
@@ -39152,19 +39291,23 @@
   "wg": "malloc"
  },
  "RFC3560": {
-  "area": "sec",
+  "area": "int",
   "keywords": [
+   "CMS",
+   "Cryptographic Message Syntax",
    "security encryption"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Use of the RSAES-OAEP Key Transport Algorithm in Cryptographic Message Syntax (CMS)",
-  "wg": "smime"
+  "wg": "vgmib"
  },
  "RFC3561": {
   "area": "rtg",
   "keywords": [
+   "AODV",
+   "Ad hoc On-Demand Distance Vector",
    "unicast",
    "multiple nodes"
   ],
@@ -49997,7 +50140,7 @@
    "network"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Stream Control Transmission Protocol (SCTP) Specification Errata and Issues",
   "wg": "tsvwg"
@@ -55968,7 +56111,7 @@
    "network"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Stream Control Transmission Protocol",
   "wg": "tsvwg"
@@ -70006,7 +70149,7 @@
   "area": "tsv",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Stream Control Transmission Protocol (SCTP) Chunk Flags Registration",
   "wg": "tsvwg"
@@ -80781,7 +80924,7 @@
   "area": "tsv",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "SACK-IMMEDIATELY Extension for the Stream Control Transmission Protocol",
   "wg": "tsvwg"
@@ -82856,7 +82999,7 @@
    "HTTP message format"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing",
   "wg": "httpbis"
@@ -82873,7 +83016,7 @@
    "HTTP status code"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content",
   "wg": "httpbis"
@@ -82886,7 +83029,7 @@
    "HTTP conditional requests"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests",
   "wg": "httpbis"
@@ -82895,7 +83038,7 @@
   "area": "app",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Hypertext Transfer Protocol (HTTP/1.1): Range Requests",
   "wg": "httpbis"
@@ -82908,7 +83051,7 @@
    "HTTP"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Hypertext Transfer Protocol (HTTP/1.1): Caching",
   "wg": "httpbis"
@@ -82921,7 +83064,7 @@
    "HTTP"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Hypertext Transfer Protocol (HTTP/1.1): Authentication",
   "wg": "httpbis"
@@ -86534,7 +86677,7 @@
    "status code"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect)",
   "wg": "httpbis"
@@ -86556,7 +86699,7 @@
    "Web"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Hypertext Transfer Protocol Version 2 (HTTP/2)",
   "wg": "httpbis"
@@ -87516,7 +87659,7 @@
    "authentication"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "HTTP Authentication-Info and Proxy-Authentication-Info Response Header Fields",
   "wg": "httpbis"
@@ -88504,7 +88647,7 @@
    "content-encoding"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Hypertext Transfer Protocol (HTTP) Client-Initiated Content-Encoding",
   "wg": "httpbis"
@@ -99038,7 +99181,7 @@
   "area": "tsv",
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Stream Control Transmission Protocol: Errata and Issues in RFC 4960",
   "wg": "tsvwg"
@@ -101460,7 +101603,7 @@
    "post-handshake client authentication"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Using TLS 1.3 with HTTP/2",
   "wg": "httpbis"
@@ -106182,6 +106325,77 @@
   "title": "Network Time Protocol Version 4: Port Randomization",
   "wg": "ntp"
  },
+ "RFC9110": {
+  "area": "art",
+  "keywords": [
+   "Hypertext Transfer Protocol",
+   "HTTP",
+   "HTTP semantics",
+   "HTTP content",
+   "HTTP method",
+   "HTTP status code"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP Semantics",
+  "wg": "httpbis"
+ },
+ "RFC9111": {
+  "area": "art",
+  "keywords": [
+   "Hypertext Transfer Protocol",
+   "HTTP",
+   "HTTP Caching"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP Caching",
+  "wg": "httpbis"
+ },
+ "RFC9112": {
+  "area": "art",
+  "keywords": [
+   "Hypertext Transfer Protocol",
+   "HTTP",
+   "HTTP message format"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP/1.1",
+  "wg": "httpbis"
+ },
+ "RFC9113": {
+  "area": "art",
+  "keywords": [
+   "HTTP",
+   "SPDY",
+   "Web"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP/2",
+  "wg": "httpbis"
+ },
+ "RFC9114": {
+  "area": "tsv",
+  "keywords": [
+   "Transport",
+   "QUIC",
+   "HTTP/2",
+   "HPACK",
+   "QPACK",
+   "Web"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP/3",
+  "wg": "quic"
+ },
  "RFC9115": {
   "area": "sec",
   "keywords": [
@@ -106770,6 +106984,18 @@
   "title": "Certificate Transparency Version 2.0",
   "wg": "trans"
  },
+ "RFC9163": {
+  "area": "art",
+  "keywords": [
+   "Certificate Transparency",
+   "Expect-CT"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Expect-CT Extension for HTTP",
+  "wg": "httpbis"
+ },
  "RFC9164": {
   "area": "art",
   "keywords": [
@@ -107154,6 +107380,21 @@
   "stream": "independent",
   "title": "Network Service Header (NSH) Fixed-Length Context Header Allocation"
  },
+ "RFC9193": {
+  "area": "art",
+  "keywords": [
+   "Internet of Things (IoT)",
+   "Internet of Things",
+   "IOT",
+   "data model",
+   "media type"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Sensor Measurement Lists (SenML) Fields for Indicating Data Value Content-Format",
+  "wg": "core"
+ },
  "RFC9195": {
   "area": "ops",
   "keywords": [],
@@ -107219,6 +107460,35 @@
   "stream": "independent",
   "title": "Considerations for Large Authoritative DNS Server Operators"
  },
+ "RFC9204": {
+  "area": "tsv",
+  "keywords": [
+   "Transport",
+   "QUIC",
+   "compression",
+   "HTTP/3",
+   "HPACK",
+   "header",
+   "field",
+   "trailer"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "QPACK: Field Compression for HTTP/3",
+  "wg": "quic"
+ },
+ "RFC9205": {
+  "area": "art",
+  "keywords": [
+   "HTTP API"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Building Protocols with HTTP",
+  "wg": "httpbis"
+ },
  "RFC9206": {
   "keywords": [
    "post quantum",
@@ -107251,6 +107521,19 @@
   "title": "IMAP QUOTA Extension",
   "wg": "extra"
  },
+ "RFC9209": {
+  "area": "art",
+  "keywords": [
+   "proxy",
+   "intermediary",
+   "reverse proxy"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Proxy-Status HTTP Response Header Field",
+  "wg": "httpbis"
+ },
  "RFC9210": {
   "area": "ops",
   "keywords": [
@@ -107263,6 +107546,20 @@
   "title": "DNS Transport over TCP - Operational Requirements",
   "wg": "dnsop"
  },
+ "RFC9211": {
+  "area": "art",
+  "keywords": [
+   "http",
+   "cache",
+   "debugging",
+   "x-cache"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Cache-Status HTTP Response Header Field",
+  "wg": "httpbis"
+ },
  "RFC9212": {
   "keywords": [
    "NSS",
@@ -107272,6 +107569,19 @@
   "status": "current",
   "stream": "independent",
   "title": "Commercial National Security Algorithm (CNSA) Suite Cryptography for Secure Shell (SSH)"
+ },
+ "RFC9213": {
+  "area": "art",
+  "keywords": [
+   "CDN",
+   "Content Delivery Network",
+   "Caching"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Targeted HTTP Cache Control",
+  "wg": "httpbis"
  },
  "RFC9214": {
   "area": "rtg",
@@ -107325,6 +107635,20 @@
   "stream": "irtf",
   "title": "Current Open Questions in Path-Aware Networking"
  },
+ "RFC9218": {
+  "area": "art",
+  "keywords": [
+   "Response priority",
+   "Stream multiplexing",
+   "Reprioritization",
+   "Server scheduling"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensible Prioritization Scheme for HTTP",
+  "wg": "httpbis"
+ },
  "RFC9219": {
   "area": "art",
   "keywords": [
@@ -107336,6 +107660,18 @@
   "stream": "ietf",
   "title": "S/MIME Signature Verification Extension to the JSON Meta Application Protocol (JMAP)",
   "wg": "jmap"
+ },
+ "RFC9220": {
+  "area": "art",
+  "keywords": [
+   "extended connect",
+   "42"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bootstrapping WebSockets with HTTP/3",
+  "wg": "httpbis"
  },
  "RFC9221": {
   "area": "tsv",
@@ -107453,6 +107789,19 @@
   "title": "IPv4 Routes with an IPv6 Next Hop in the Babel Routing Protocol",
   "wg": "babel"
  },
+ "RFC9230": {
+  "keywords": [
+   "Privacy",
+   "DNS Privacy",
+   "DoH",
+   "ODoH",
+   "HPKE"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "independent",
+  "title": "Oblivious DNS over HTTPS"
+ },
  "RFC9232": {
   "area": "ops",
   "keywords": [
@@ -107555,6 +107904,27 @@
   "title": "Intermediate Exchange in the Internet Key Exchange Protocol Version 2 (IKEv2)",
   "wg": "ipsecme"
  },
+ "RFC9246": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "URI Signing for Content Delivery Network Interconnection (CDNI)",
+  "wg": "cdni"
+ },
+ "RFC9248": {
+  "area": "art",
+  "keywords": [
+   "rue",
+   "relay user equipment"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Interoperability Profile for Relay User Equipment",
+  "wg": "rum"
+ },
  "RFC9250": {
   "area": "int",
   "keywords": [
@@ -107569,5 +107939,32 @@
   "stream": "ietf",
   "title": "DNS over Dedicated QUIC Connections",
   "wg": "dprive"
+ },
+ "RFC9255": {
+  "area": "ops",
+  "keywords": [
+   "Resource Public Key Infrastructure"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The 'I' in RPKI Does Not Stand for Identity",
+  "wg": "sidrops"
+ },
+ "RFC9260": {
+  "area": "tsv",
+  "keywords": [
+   "SCTP",
+   "IP",
+   "internet",
+   "transport",
+   "packet",
+   "network"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Stream Control Transmission Protocol",
+  "wg": "tsvwg"
  }
 }
