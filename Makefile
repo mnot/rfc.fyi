@@ -10,7 +10,7 @@ refs.json:
 
 .PHONY: rfc-index.xml
 rfc-index.xml:
-	curl -R -z $@ "https://www.rfc-editor.org/rfc-index.xml" -o $@
+	curl -R --etag-save $@.etag --etag-compare $@.etag "https://www.rfc-editor.org/rfc-index.xml" -o $@
 
 client-es5.js: client.js util.js
 	$(traceur) --out client-es5.js client.js
