@@ -107958,6 +107958,24 @@
   "title": "Intermediate Exchange in the Internet Key Exchange Protocol Version 2 (IKEv2)",
   "wg": "ipsecme"
  },
+ "RFC9244": {
+  "area": "sec",
+  "keywords": [
+   "automation",
+   "cybersecurity",
+   "DDoS",
+   "Resilience",
+   "Intelligence",
+   "Service delivery",
+   "Robustness",
+   "Collaborative"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Telemetry",
+  "wg": "dots"
+ },
  "RFC9246": {
   "area": "art",
   "keywords": [],
