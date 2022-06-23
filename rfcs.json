@@ -108041,6 +108041,15 @@
   "title": "DNS over Dedicated QUIC Connections",
   "wg": "dprive"
  },
+ "RFC9251": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet Group Management Protocol (IGMP) and Multicast Listener Discovery (MLD) Proxies for Ethernet VPN (EVPN)",
+  "wg": "bess"
+ },
  "RFC9255": {
   "area": "ops",
   "keywords": [
