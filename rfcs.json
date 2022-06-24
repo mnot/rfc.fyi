@@ -108014,6 +108014,21 @@
   "title": "URI Signing for Content Delivery Network Interconnection (CDNI)",
   "wg": "cdni"
  },
+ "RFC9247": {
+  "area": "rtg",
+  "keywords": [
+   "BGP-LS",
+   "BFD",
+   "IS-IS",
+   "OSPF",
+   "OSPFv3"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP - Link State (BGP-LS) Extensions for Seamless Bidirectional Forwarding Detection (S-BFD)",
+  "wg": "idr"
+ },
  "RFC9248": {
   "area": "art",
   "keywords": [
@@ -108060,6 +108075,19 @@
   "stream": "ietf",
   "title": "The 'I' in RPKI Does Not Stand for Identity",
   "wg": "sidrops"
+ },
+ "RFC9259": {
+  "area": "int",
+  "keywords": [
+   "SRv6",
+   "Segment Routing",
+   "OAM"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operations, Administration, and Maintenance (OAM) in Segment Routing over IPv6 (SRv6)",
+  "wg": "6man"
  },
  "RFC9260": {
   "area": "tsv",
