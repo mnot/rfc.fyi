@@ -18336,7 +18336,7 @@
    "Force"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The Organizations Involved in the IETF Standards Process",
   "wg": "poised95"
@@ -74712,7 +74712,7 @@
   "area": "rtg",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Manifests for the Resource Public Key Infrastructure (RPKI)",
   "wg": "sidr"
@@ -101515,7 +101515,7 @@
    "IASA2"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "RFC Editor Model (Version 2)"
  },
@@ -108104,5 +108104,60 @@
   "stream": "ietf",
   "title": "Stream Control Transmission Protocol",
   "wg": "tsvwg"
+ },
+ "RFC9280": {
+  "keywords": [
+   "editorial",
+   "publication",
+   "series",
+   "streams"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "RFC Editor Model (Version 3)"
+ },
+ "RFC9281": {
+  "keywords": [
+   "IESG",
+   "RFC Editor",
+   "IRTF",
+   "IETF LLC",
+   "ISOC",
+   "registries",
+   "IANA"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Entities Involved in the IETF Standards Process"
+ },
+ "RFC9282": {
+  "keywords": [
+   "Protocols",
+   "copyrights",
+   "intellectual",
+   "property"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Responsibility Change for the RFC Series"
+ },
+ "RFC9283": {
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IAB Charter Update for RFC Editor Model"
+ },
+ "RFC9286": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Manifests for the Resource Public Key Infrastructure (RPKI)",
+  "wg": "sidrops"
  }
 }
