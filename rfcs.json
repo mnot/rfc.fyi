@@ -79628,7 +79628,7 @@
  "RFC6931": {
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Additional XML Security Uniform Resource Identifiers (URIs)"
  },
@@ -107856,6 +107856,23 @@
   "stream": "independent",
   "title": "Oblivious DNS over HTTPS"
  },
+ "RFC9231": {
+  "keywords": [
+   "XMLSEC",
+   "XMLDSIG",
+   "XMLENC",
+   "DigestMethod",
+   "SigntureMethod",
+   "EncryptionMethod",
+   "AgreementMethod",
+   "KeyDerivationMethod",
+   "KeyInfo"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Additional XML Security Uniform Resource Identifiers (URIs)"
+ },
  "RFC9232": {
   "area": "ops",
   "keywords": [
@@ -108040,6 +108057,20 @@
   "stream": "ietf",
   "title": "Interoperability Profile for Relay User Equipment",
   "wg": "rum"
+ },
+ "RFC9249": {
+  "area": "int",
+  "keywords": [
+   "NTP",
+   "YANG",
+   "NTPv4",
+   "NTPv3"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for NTP",
+  "wg": "ntp"
  },
  "RFC9250": {
   "area": "int",
