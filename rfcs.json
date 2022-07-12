@@ -40233,9 +40233,8 @@
  "RFC3630": {
   "area": "rtg",
   "keywords": [
-   "open-shortest",
-   "path",
-   "first",
+   "OSPF",
+   "open-shortest path first",
    "ink",
    "state",
    "advertisement"
@@ -40276,6 +40275,8 @@
  "RFC3633": {
   "area": "int",
   "keywords": [
+   "DHCP",
+   "Dynamic Host Configuration Protocol",
    "automated delegation router"
   ],
   "level": "std",
@@ -40286,7 +40287,14 @@
  },
  "RFC3634": {
   "area": "int",
-  "keywords": [],
+  "keywords": [
+   "DHCP",
+   "Dynamic Host Configuration Protocol",
+   "KDC",
+   "Key Distribution Center",
+   "CCC",
+   "CableLabs Client Configuration"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -40297,9 +40305,7 @@
   "area": "ops",
   "keywords": [
    "MIB",
-   "management",
-   "information",
-   "base"
+   "management information base"
   ],
   "level": "std",
   "status": "current",
@@ -40324,8 +40330,8 @@
  "RFC3637": {
   "area": "ops",
   "keywords": [
-   "mib",
-   "management information base"
+   "MIB",
+   "Management Information Base"
   ],
   "level": "std",
   "status": "current",
@@ -40362,6 +40368,7 @@
  "RFC3640": {
   "area": "rai",
   "keywords": [
+   "RTP",
    "real time transport protocol",
    "audio video streams"
   ],
@@ -40394,6 +40401,8 @@
  "RFC3643": {
   "area": "tsv",
   "keywords": [
+   "FC",
+   "Fibre Channel",
    "ips",
    "ip storage",
    "frame header"
@@ -40407,6 +40416,8 @@
  "RFC3644": {
   "area": "ops",
   "keywords": [
+   "QoS",
+   "Quality of Service",
    "integrated differentiated",
    "object oriented"
   ],
@@ -40419,9 +40430,10 @@
  "RFC3645": {
   "area": "int",
   "keywords": [
-   "TSIG",
+   "GSS-TSIG",
+   "Generic Security Service Algorithm",
+   "Secret Key Transaction Authentication for DNS",
    "domain name system",
-   "transaction",
    "signature"
   ],
   "level": "std",
@@ -40433,10 +40445,13 @@
  "RFC3646": {
   "area": "int",
   "keywords": [
+   "DNS",
    "domain name system",
    "service",
    "server",
-   "client"
+   "client",
+   "DHCP",
+   "Dynamic Host Configuration Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -40461,6 +40476,8 @@
  "RFC3648": {
   "area": "app",
   "keywords": [
+   "WebDAV",
+   "Web Distribution Authoring and Versioning",
    "server client semantics",
    "ordering",
    "orderpatch method",
@@ -40476,6 +40493,7 @@
  "RFC3649": {
   "area": "tsv",
   "keywords": [
+   "TCP",
    "transmission control protocol",
    "round-trip",
    "rate packet"
@@ -40553,10 +40571,13 @@
  },
  "RFC3656": {
   "keywords": [
+   "Mailbox Update",
+   "MUPDATE",
+   "Distributed Mailbox Database Protocol",
    "imap",
    "pop3",
    "post office protocol",
-   "internet message access"
+   "internet message access protocol"
   ],
   "level": "experimental",
   "status": "current",
@@ -40564,8 +40585,10 @@
   "title": "The Mailbox Update (MUPDATE) Distributed Mailbox Database Protocol"
  },
  "RFC3657": {
-  "area": "sec",
+  "area": "int",
   "keywords": [
+   "CMS",
+   "Cryptographic Message Syntax",
    "security",
    "mail content",
    "key"
@@ -40574,7 +40597,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Use of the Camellia Encryption Algorithm in Cryptographic Message Syntax (CMS)",
-  "wg": "smime"
+  "wg": "vgmib"
  },
  "RFC3658": {
   "area": "int",
@@ -40643,6 +40666,8 @@
  },
  "RFC3663": {
   "keywords": [
+   "LDAP",
+   "Lightweight Directory Access Protocol",
    "referral types",
    "well-known"
   ],
@@ -40654,8 +40679,11 @@
  "RFC3664": {
   "area": "sec",
   "keywords": [
-   "security",
+   "IKE",
+   "Internet Key Exchange Protocol",
    "ipsec",
+   "IP Security",
+   "AES",
    "advanced encryption standard",
    "mac",
    "message authentication code"
@@ -40732,9 +40760,10 @@
  "RFC3670": {
   "area": "ops",
   "keywords": [
+   "QoS",
    "quality of service",
    "host",
-   "netowrk devices",
+   "network devices",
    "traffic"
   ],
   "level": "std",
@@ -40810,9 +40839,11 @@
  },
  "RFC3677": {
   "keywords": [
-   "internet society",
-   "bot",
-   "engineering task force"
+   "IETF",
+   "Internet Engineering Task Force",
+   "ISOC",
+   "Internet Society",
+   "Board of Trustees"
   ],
   "level": "bcp",
   "status": "current",
@@ -40856,6 +40887,8 @@
  "RFC3680": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "REGISTER",
    "event package name",
    "event package parameters"
@@ -40896,6 +40929,8 @@
  "RFC3684": {
   "area": "rtg",
   "keywords": [
+   "TBRPF",
+   "Topology Dissemination Based on Reverse-Path Forwarding",
    "proactive routing",
    "ad-hoc networks",
    "neighbor discovery",
