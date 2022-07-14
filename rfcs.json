@@ -108171,6 +108171,15 @@
   "title": "Stream Control Transmission Protocol",
   "wg": "tsvwg"
  },
+ "RFC9261": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Exported Authenticators in TLS",
+  "wg": "tls"
+ },
  "RFC9280": {
   "keywords": [
    "editorial",
