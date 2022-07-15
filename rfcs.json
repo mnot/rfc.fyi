@@ -107997,6 +107997,28 @@
   "title": "Updates to ECMAScript Media Types",
   "wg": "dispatch"
  },
+ "RFC9240": {
+  "area": "tsv",
+  "keywords": [
+   "ALTO"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Extension for Application-Layer Traffic Optimization (ALTO): Entity Property Maps",
+  "wg": "alto"
+ },
+ "RFC9241": {
+  "area": "tsv",
+  "keywords": [
+   "ALTO"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Content Delivery Network Interconnection (CDNI) Footprint and Capabilities Advertisement Using Application-Layer Traffic Optimization (ALTO)",
+  "wg": "alto"
+ },
  "RFC9242": {
   "area": "sec",
   "keywords": [
