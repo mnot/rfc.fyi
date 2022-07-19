@@ -108153,6 +108153,29 @@
   "title": "Internet Group Management Protocol (IGMP) and Multicast Listener Discovery (MLD) Proxies for Ethernet VPN (EVPN)",
   "wg": "bess"
  },
+ "RFC9252": {
+  "area": "rtg",
+  "keywords": [
+   "BGP",
+   "SRv6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Overlay Services Based on Segment Routing over IPv6 (SRv6)",
+  "wg": "bess"
+ },
+ "RFC9254": {
+  "area": "art",
+  "keywords": [
+   "CBOR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Encoding of Data Modeled with YANG in the Concise Binary Object Representation (CBOR)",
+  "wg": "core"
+ },
  "RFC9255": {
   "area": "ops",
   "keywords": [
