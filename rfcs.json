@@ -40959,6 +40959,11 @@
  "RFC3686": {
   "area": "sec",
   "keywords": [
+   "AES",
+   "Advanced Encryption Standard",
+   "IPsec Internet Protocol Security",
+   "ESP",
+   "Encapsulating Security Payload",
    "authentication vector",
    "cipher block"
   ],
