@@ -108192,6 +108192,21 @@
   "title": "The 'I' in RPKI Does Not Stand for Identity",
   "wg": "sidrops"
  },
+ "RFC9256": {
+  "area": "rtg",
+  "keywords": [
+   "Segment Routing",
+   "SR Policy",
+   "SR-MPLS",
+   "SRv6",
+   "Traffic Engineering"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing Policy Architecture",
+  "wg": "spring"
+ },
  "RFC9259": {
   "area": "int",
   "keywords": [
