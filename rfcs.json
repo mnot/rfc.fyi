@@ -108207,6 +108207,24 @@
   "title": "Segment Routing Policy Architecture",
   "wg": "spring"
  },
+ "RFC9257": {
+  "area": "sec",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidance for External Pre-Shared Key (PSK) Usage in TLS",
+  "wg": "tls"
+ },
+ "RFC9258": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Importing External Pre-Shared Keys (PSKs) for TLS 1.3",
+  "wg": "tls"
+ },
  "RFC9259": {
   "area": "int",
   "keywords": [
