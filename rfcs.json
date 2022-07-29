@@ -108296,6 +108296,16 @@
   "title": "Channel Bindings for TLS 1.3",
   "wg": "kitten"
  },
+ "RFC9267": {
+  "keywords": [
+   "vulnerabilities",
+   "vulnerability"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Common Implementation Anti-Patterns Related to Domain Name System (DNS) Resource Record (RR) Processing"
+ },
  "RFC9274": {
   "area": "tsv",
   "keywords": [
