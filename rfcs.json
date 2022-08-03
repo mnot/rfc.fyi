@@ -108324,6 +108324,17 @@
   "title": "A Cost Mode Registry for the Application-Layer Traffic Optimization (ALTO) Protocol",
   "wg": "alto"
  },
+ "RFC9279": {
+  "area": "rtg",
+  "keywords": [
+   "Multicast"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet Group Management Protocol Version 3 (IGMPv3) and Multicast Listener Discovery Version 2 (MLDv2) Message Extension",
+  "wg": "pim"
+ },
  "RFC9280": {
   "keywords": [
    "editorial",
