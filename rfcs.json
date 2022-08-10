@@ -108263,6 +108263,17 @@
   "title": "Exported Authenticators in TLS",
   "wg": "tls"
  },
+ "RFC9263": {
+  "area": "rtg",
+  "keywords": [
+   "SFC metadata"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Network Service Header (NSH) Metadata Type 2 Variable-Length Context Headers",
+  "wg": "sfc"
+ },
  "RFC9264": {
   "area": "art",
   "keywords": [
@@ -108306,6 +108317,19 @@
   "stream": "independent",
   "title": "Common Implementation Anti-Patterns Related to Domain Name System (DNS) Resource Record (RR) Processing"
  },
+ "RFC9271": {
+  "keywords": [
+   "Uninterruptible",
+   "Power",
+   "Supply",
+   "UPS",
+   "NUT"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Uninterruptible Power Supply (UPS) Management Protocol -- Commands and Responses"
+ },
  "RFC9274": {
   "area": "tsv",
   "keywords": [
@@ -108323,6 +108347,22 @@
   "stream": "ietf",
   "title": "A Cost Mode Registry for the Application-Layer Traffic Optimization (ALTO) Protocol",
   "wg": "alto"
+ },
+ "RFC9278": {
+  "area": "sec",
+  "keywords": [
+   "JSON Web Key",
+   "JWK",
+   "Thumbprint",
+   "URI",
+   "URN",
+   "OAuth"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JWK Thumbprint URI",
+  "wg": "oauth"
  },
  "RFC9279": {
   "area": "rtg",
@@ -108380,6 +108420,15 @@
   "status": "current",
   "stream": "ietf",
   "title": "IAB Charter Update for RFC Editor Model"
+ },
+ "RFC9285": {
+  "keywords": [
+   "BASE45"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Base45 Data Encoding"
  },
  "RFC9286": {
   "area": "ops",
