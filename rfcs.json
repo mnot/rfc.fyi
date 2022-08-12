@@ -108317,6 +108317,18 @@
   "stream": "independent",
   "title": "Common Implementation Anti-Patterns Related to Domain Name System (DNS) Resource Record (RR) Processing"
  },
+ "RFC9270": {
+  "area": "rtg",
+  "keywords": [
+   "GMPLS",
+   "Shared mesh protection"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "GMPLS Signaling Extensions for Shared Mesh Protection",
+  "wg": "teas"
+ },
  "RFC9271": {
   "keywords": [
    "Uninterruptible",
@@ -108347,6 +108359,21 @@
   "stream": "ietf",
   "title": "A Cost Mode Registry for the Application-Layer Traffic Optimization (ALTO) Protocol",
   "wg": "alto"
+ },
+ "RFC9276": {
+  "area": "ops",
+  "keywords": [
+   "DNSSEC",
+   "DNS",
+   "NSEC3",
+   "NSEC",
+   "Denial of Existence"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidance for NSEC3 Parameter Settings",
+  "wg": "dnsop"
  },
  "RFC9278": {
   "area": "sec",
