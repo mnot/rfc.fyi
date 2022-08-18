@@ -108342,6 +108342,19 @@
   "stream": "independent",
   "title": "Uninterruptible Power Supply (UPS) Management Protocol -- Commands and Responses"
  },
+ "RFC9273": {
+  "keywords": [
+   "ICN",
+   "CCNx",
+   "NDN",
+   "network coding",
+   "in-network cache"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Network Coding for Content-Centric Networking / Named Data Networking: Considerations and Challenges"
+ },
  "RFC9274": {
   "area": "tsv",
   "keywords": [
