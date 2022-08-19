@@ -5261,7 +5261,7 @@
    "TCP"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "legacy",
   "title": "Transmission Control Protocol"
  },
@@ -30124,7 +30124,7 @@
    "internet"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "legacy",
   "title": "TCP Processing of the IPv4 Precedence Field"
  },
@@ -70207,7 +70207,7 @@
    "Transmission Control Protocol"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "On the Implementation of the TCP Urgent Mechanism",
   "wg": "tcpm"
@@ -74085,7 +74085,7 @@
    "security vulnerability"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "TCP Sender Clarification for Persist Condition",
   "wg": "tcpm"
@@ -75191,7 +75191,7 @@
    "TCP vulnerabilities"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Defending against Sequence Number Attacks",
   "wg": "tcpm"
@@ -77051,7 +77051,7 @@
   "area": "tsv",
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "TCP Options and Maximum Segment Size (MSS)",
   "wg": "tcpm"
@@ -108170,6 +108170,20 @@
   "title": "BGP Overlay Services Based on Segment Routing over IPv6 (SRv6)",
   "wg": "bess"
  },
+ "RFC9253": {
+  "area": "art",
+  "keywords": [
+   "iCalendar",
+   "link",
+   "related-to",
+   "relationships"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Support for iCalendar Relationships",
+  "wg": "calext"
+ },
  "RFC9254": {
   "area": "art",
   "keywords": [
@@ -108478,5 +108492,30 @@
   "stream": "ietf",
   "title": "Manifests for the Resource Public Key Infrastructure (RPKI)",
   "wg": "sidrops"
+ },
+ "RFC9288": {
+  "area": "ops",
+  "keywords": [
+   "Denial of Service",
+   "Distributed Denial of Service",
+   "DoS",
+   "DDoS",
+   "ACL",
+   "filtering policy"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Recommendations on the Filtering of IPv6 Packets Containing IPv6 Extension Headers at Transit Routers",
+  "wg": "opsec"
+ },
+ "RFC9293": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Transmission Control Protocol (TCP)",
+  "wg": "tcpm"
  }
 }
