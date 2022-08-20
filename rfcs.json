@@ -108517,5 +108517,20 @@
   "stream": "ietf",
   "title": "Transmission Control Protocol (TCP)",
   "wg": "tcpm"
+ },
+ "RFC9294": {
+  "area": "rtg",
+  "keywords": [
+   "BGP-LS",
+   "Segment Routing",
+   "IS-IS",
+   "OSPF",
+   "OSPFv3"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Application-Specific Link Attributes Advertisement Using the Border Gateway Protocol - Link State (BGP-LS)",
+  "wg": "idr"
  }
 }
