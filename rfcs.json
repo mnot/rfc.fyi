@@ -40984,6 +40984,7 @@
  },
  "RFC3688": {
   "keywords": [
+   "XML",
    "extensible markup language"
   ],
   "level": "bcp",
@@ -41011,6 +41012,8 @@
  },
  "RFC3691": {
   "keywords": [
+   "IMAP",
+   "Internet Message Access Protocol",
    "mailbox session client"
   ],
   "level": "std",
@@ -41020,8 +41023,8 @@
  },
  "RFC3692": {
   "keywords": [
-   "iana",
-   "internet assigned numbers authority",
+   "IANA",
+   "Internet Assigned Numbers Authority",
    "values",
    "implementations"
   ],
@@ -41058,11 +41061,15 @@
  "RFC3695": {
   "area": "tsv",
   "keywords": [
+   "FEC",
+   "Forward Error Correction",
    "content",
    "stream",
    "delivery",
    "multicast",
-   "internet protocol"
+   "internet protocol",
+   "compact",
+   "schemes"
   ],
   "level": "experimental",
   "status": "obsoleted",
@@ -41083,6 +41090,8 @@
  "RFC3697": {
   "area": "int",
   "keywords": [
+   "IPv6",
+   "Flow Label",
    "nodes",
    "packets"
   ],
@@ -41094,10 +41103,8 @@
  },
  "RFC3698": {
   "keywords": [
-   "lightweight",
-   "directory",
-   "access",
-   "protocol",
+   "LDAP",
+   "lightweight directory access protocol",
    "directory services"
   ],
   "level": "std",
@@ -41106,7 +41113,9 @@
   "title": "Lightweight Directory Access Protocol (LDAP): Additional Matching Rules"
  },
  "RFC3700": {
-  "keywords": [],
+  "keywords": [
+   "Official Protocols"
+  ],
   "level": "historic",
   "status": "obsoleted",
   "stream": "independent",
@@ -41137,6 +41146,9 @@
  "RFC3703": {
   "area": "ops",
   "keywords": [
+   "LDAP",
+   "Lightweight Directory Access Protocol",
+   "Policy Core",
    "mapping classes"
   ],
   "level": "std",
@@ -41160,7 +41172,9 @@
  "RFC3705": {
   "area": "ops",
   "keywords": [
-   "management information base"
+   "MIB",
+   "Management Information Base",
+   "High Capacity Textual Conventions"
   ],
   "level": "std",
   "status": "current",
@@ -41195,7 +41209,14 @@
  },
  "RFC3708": {
   "area": "tsv",
-  "keywords": [],
+  "keywords": [
+   "DSACK",
+   "Duplicate Selective Acknowledgement",
+   "SCTP",
+   "Stream Control Transmission Protocol",
+   "TSN",
+   "Transmission Sequence Number"
+  ],
   "level": "experimental",
   "status": "current",
   "stream": "ietf",
@@ -41205,8 +41226,11 @@
  "RFC3709": {
   "area": "sec",
   "keywords": [
+   "X.509",
+   "Public Key Infrastructure",
    "authentication",
-   "security identification"
+   "security identification",
+   "certificates"
   ],
   "level": "std",
   "status": "current",
@@ -41227,6 +41251,8 @@
  "RFC3711": {
   "area": "rai",
   "keywords": [
+   "SRTP",
+   "Secure Real-time Transport Protocol",
    "authentication",
    "traffic",
    "cryptographic"
@@ -41330,6 +41356,8 @@
  "RFC3720": {
   "area": "tsv",
   "keywords": [
+   "iSCSI",
+   "Internet Small Computer Systems Interface",
    "transport protocol",
    "tcp",
    "transmission control protocol"
@@ -41360,6 +41388,8 @@
  "RFC3722": {
   "area": "tsv",
   "keywords": [
+   "iSCSI",
+   "Internet Small Computer Systems Interface",
    "transport",
    "unique",
    "global"
@@ -41395,7 +41425,12 @@
  },
  "RFC3725": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "3pcc",
+   "Third Party Call Control",
+   "SIP",
+   "Session Initiation Protocol"
+  ],
   "level": "bcp",
   "status": "current",
   "stream": "ietf",
@@ -41418,7 +41453,9 @@
  },
  "RFC3727": {
   "keywords": [
-   "lightweight directory access protocol"
+   "LDAP",
+   "lightweight directory access protocol",
+   "X.500"
   ],
   "level": "std",
   "status": "current",
@@ -41428,8 +41465,10 @@
  "RFC3728": {
   "area": "ops",
   "keywords": [
-   "management information base",
-   "mib"
+   "Management Information Base",
+   "MIB",
+   "VDSL",
+   "Very High Speed Digital Subscriber Lines"
   ],
   "level": "std",
   "status": "current",
