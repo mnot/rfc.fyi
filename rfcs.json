@@ -108370,6 +108370,21 @@
   "stream": "independent",
   "title": "Common Implementation Anti-Patterns Related to Domain Name System (DNS) Resource Record (RR) Processing"
  },
+ "RFC9269": {
+  "keywords": [
+   "LTE",
+   "ICN",
+   "ICN-4G",
+   "ICNoIP",
+   "IPoICN",
+   "HybridICN",
+   "Dual Trannsport"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Experimental Scenarios of Information-Centric Networking (ICN) Integration in 4G Mobile Networks"
+ },
  "RFC9270": {
   "area": "rtg",
   "keywords": [
@@ -108532,6 +108547,18 @@
   "title": "Manifests for the Resource Public Key Infrastructure (RPKI)",
   "wg": "sidrops"
  },
+ "RFC9287": {
+  "area": "tsv",
+  "keywords": [
+   "Header",
+   "Path signal"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Greasing the QUIC Bit",
+  "wg": "quic"
+ },
  "RFC9288": {
   "area": "ops",
   "keywords": [
@@ -108571,5 +108598,16 @@
   "stream": "ietf",
   "title": "Application-Specific Link Attributes Advertisement Using the Border Gateway Protocol - Link State (BGP-LS)",
   "wg": "idr"
+ },
+ "RFC9296": {
+  "keywords": [
+   "ifType",
+   "ifStack",
+   "point-to-point"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "ifStackTable for the Point-to-Point (P2P) Interface over a LAN Type: Definition and Examples"
  }
 }
