@@ -108609,5 +108609,43 @@
   "status": "current",
   "stream": "independent",
   "title": "ifStackTable for the Point-to-Point (P2P) Interface over a LAN Type: Definition and Examples"
+ },
+ "RFC9297": {
+  "area": "tsv",
+  "keywords": [
+   "quic",
+   "http",
+   "datagram",
+   "fast",
+   "tunnels",
+   "turtles all the way down",
+   "masque",
+   "http-ng"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP Datagrams and the Capsule Protocol",
+  "wg": "masque"
+ },
+ "RFC9298": {
+  "area": "tsv",
+  "keywords": [
+   "quic",
+   "http",
+   "datagram",
+   "udp",
+   "proxy",
+   "tunnels",
+   "quic in quic",
+   "turtles all the way down",
+   "masque",
+   "http-ng"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Proxying UDP in HTTP",
+  "wg": "masque"
  }
 }
