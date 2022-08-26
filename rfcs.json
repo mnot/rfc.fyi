@@ -41162,7 +41162,8 @@
    "ISP",
    "Internet Service Provider",
    "Internet Protocol",
-   "DOS"
+   "DOS",
+   "Denial of Service"
   ],
   "level": "bcp",
   "status": "current",
@@ -41478,7 +41479,11 @@
  },
  "RFC3729": {
   "area": "ops",
-  "keywords": [],
+  "keywords": [
+   "MIB",
+   "Management Information Base",
+   "application performance"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -41558,7 +41563,11 @@
  },
  "RFC3736": {
   "area": "int",
-  "keywords": [],
+  "keywords": [
+   "DHCP",
+   "Dynamic Host Configuration Protocol",
+   "IPv6"
+  ],
   "level": "std",
   "status": "obsoleted",
   "stream": "ietf",
@@ -41568,8 +41577,12 @@
  "RFC3737": {
   "area": "ops",
   "keywords": [
-   "management information base",
-   "internet assigned numbers authority"
+   "MIB",
+   "Management Information Base",
+   "IANA",
+   "Internet Assigned Numbers Authority",
+   "RMON",
+   "Registry of Remote Monitoring"
   ],
   "level": "std",
   "status": "current",
@@ -41580,6 +41593,8 @@
  "RFC3738": {
   "area": "tsv",
   "keywords": [
+   "WEBRC",
+   "Wave and Equation Based Rate Control",
    "congestion control",
    "data delivery",
    "multicast",
@@ -41595,6 +41610,8 @@
  "RFC3739": {
   "area": "sec",
   "keywords": [
+   "X.509",
+   "Public Key Infrastructure",
    "syntax"
   ],
   "level": "std",
@@ -41629,7 +41646,9 @@
  "RFC3742": {
   "area": "tsv",
   "keywords": [
-   "transmission control protocol"
+   "TCP",
+   "transmission control protocol",
+   "congestion"
   ],
   "level": "experimental",
   "status": "current",
@@ -41646,7 +41665,11 @@
  },
  "RFC3744": {
   "area": "app",
-  "keywords": [],
+  "keywords": [
+   "WebDAV",
+   "Web Distributed Authoring and Versioning",
+   "Access Control"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -41655,7 +41678,9 @@
  },
  "RFC3745": {
   "keywords": [
+   "MIME",
    "multipurpose internet mail extensions",
+   "JPEG",
    "joint photographic experts group"
   ],
   "level": "std",
@@ -41677,8 +41702,10 @@
  "RFC3747": {
   "area": "ops",
   "keywords": [
+   "MIB",
    "management information base",
-   "diffserv"
+   "diffserv",
+   "differentiated services"
   ],
   "level": "std",
   "status": "current",
@@ -41690,8 +41717,8 @@
   "area": "int",
   "keywords": [
    "PPP-EAP",
+   "Extensible Authentication Protocol",
    "data link layers",
-   "ppp",
    "point-to-point",
    "ieee 802"
   ],
@@ -41704,7 +41731,8 @@
  "RFC3749": {
   "area": "sec",
   "keywords": [
-   "tls",
+   "TLS",
+   "Transport Layer Security",
    "lossless data compression",
    "handshake protocol"
   ],
@@ -41813,6 +41841,8 @@
  "RFC3758": {
   "area": "tsv",
   "keywords": [
+   "SCTP",
+   "Stream Control Transmission Protocol",
    "init",
    "init ack",
    "forward tsn"
@@ -41853,6 +41883,12 @@
  "RFC3761": {
   "area": "rai",
   "keywords": [
+   "E.164",
+   "URI",
+   "Uniform Resource Identifier",
+   "DDDS",
+   "Dynamic Delegation Discovery System",
+   "DNS",
    "domain name system"
   ],
   "level": "std",
@@ -41864,6 +41900,8 @@
  "RFC3762": {
   "area": "rai",
   "keywords": [
+   "ENUM",
+   "Telephone Number Mapping",
    "multimedia",
    "packet based network"
   ],
@@ -41889,8 +41927,12 @@
  "RFC3764": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "aor",
-   "electronic number"
+   "Addresses-of-Record",
+   "electronic number",
+   "ENUM"
   ],
   "level": "std",
   "status": "current",
