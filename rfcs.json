@@ -108412,6 +108412,18 @@
   "stream": "independent",
   "title": "Common Implementation Anti-Patterns Related to Domain Name System (DNS) Resource Record (RR) Processing"
  },
+ "RFC9268": {
+  "area": "int",
+  "keywords": [
+   "DPLPMTUD",
+   "PMTUD"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Minimum Path MTU Hop-by-Hop Option",
+  "wg": "6man"
+ },
  "RFC9269": {
   "keywords": [
    "LTE",
