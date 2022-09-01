@@ -107686,6 +107686,66 @@
   "stream": "independent",
   "title": "Considerations for Large Authoritative DNS Server Operators"
  },
+ "RFC9200": {
+  "area": "sec",
+  "keywords": [
+   "CoAP",
+   "OAuth 2.0",
+   "Access Control",
+   "Authorization",
+   "Internet of Things"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Authentication and Authorization for Constrained Environments Using the OAuth 2.0 Framework (ACE-OAuth)",
+  "wg": "ace"
+ },
+ "RFC9201": {
+  "area": "sec",
+  "keywords": [
+   "CoAP",
+   "OAuth 2.0",
+   "Access Control",
+   "Authorization",
+   "Internet of Things"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Additional OAuth Parameters for Authentication and Authorization for Constrained Environments (ACE)",
+  "wg": "ace"
+ },
+ "RFC9202": {
+  "area": "sec",
+  "keywords": [
+   "Internet of Thinks (IoT)",
+   "Internet of Things",
+   "IOT",
+   "OAuth",
+   "Access Token"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Datagram Transport Layer Security (DTLS) Profile for Authentication and Authorization for Constrained Environments (ACE)",
+  "wg": "ace"
+ },
+ "RFC9203": {
+  "area": "sec",
+  "keywords": [
+   "CoAP",
+   "OAuth 2.0",
+   "Access Control",
+   "Authorization",
+   "Internet of Things"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Object Security for Constrained RESTful Environments (OSCORE) Profile of the Authentication and Authorization for Constrained Environments (ACE) Framework",
+  "wg": "ace"
+ },
  "RFC9204": {
   "area": "tsv",
   "keywords": [
@@ -108105,6 +108165,20 @@
   "status": "current",
   "stream": "irtf",
   "title": "Architectural Considerations of Information-Centric Networking (ICN) Using a Name Resolution Service"
+ },
+ "RFC9237": {
+  "area": "sec",
+  "keywords": [
+   "OAuth",
+   "IoT",
+   "Internet of Things",
+   "Access Control"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Authorization Information Format (AIF) for Authentication and Authorization for Constrained Environments (ACE)",
+  "wg": "ace"
  },
  "RFC9238": {
   "keywords": [
