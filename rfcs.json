@@ -108589,6 +108589,15 @@
   "stream": "independent",
   "title": "Uninterruptible Power Supply (UPS) Management Protocol -- Commands and Responses"
  },
+ "RFC9272": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Underlay Path Calculation Algorithm and Constraints for Bit Index Explicit Replication (BIER)",
+  "wg": "bier"
+ },
  "RFC9273": {
   "keywords": [
    "ICN",
@@ -108853,5 +108862,16 @@
   "stream": "ietf",
   "title": "Proxying UDP in HTTP",
   "wg": "masque"
+ },
+ "RFC9309": {
+  "keywords": [
+   "robot",
+   "crawler",
+   "robots.txt"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Robots Exclusion Protocol"
  }
 }
