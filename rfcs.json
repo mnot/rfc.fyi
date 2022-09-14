@@ -108781,6 +108781,20 @@
   "title": "Recommendations on the Filtering of IPv6 Packets Containing IPv6 Extension Headers at Transit Routers",
   "wg": "opsec"
  },
+ "RFC9289": {
+  "area": "tsv",
+  "keywords": [
+   "network file system",
+   "remote procedure call",
+   "transport layer security",
+   "X.509"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Towards Remote Procedure Call Encryption by Default",
+  "wg": "nfsv4"
+ },
  "RFC9292": {
   "area": "art",
   "keywords": [],
@@ -108813,6 +108827,20 @@
   "stream": "ietf",
   "title": "Application-Specific Link Attributes Advertisement Using the Border Gateway Protocol - Link State (BGP-LS)",
   "wg": "idr"
+ },
+ "RFC9295": {
+  "area": "sec",
+  "keywords": [
+   "PKIX",
+   "X.509",
+   "keyUsage",
+   "Elliptic Curve Cryptography"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clarifications for Ed25519, Ed448, X25519, and X448 Algorithm Identifiers",
+  "wg": "lamps"
  },
  "RFC9296": {
   "keywords": [
@@ -108873,5 +108901,14 @@
   "status": "current",
   "stream": "ietf",
   "title": "Robots Exclusion Protocol"
+ },
+ "RFC9311": {
+  "area": "gen",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Running an IETF Hackathon",
+  "wg": "shmoo"
  }
 }
