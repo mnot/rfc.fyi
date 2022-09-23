@@ -108795,6 +108795,22 @@
   "title": "Towards Remote Procedure Call Encryption by Default",
   "wg": "nfsv4"
  },
+ "RFC9291": {
+  "area": "ops",
+  "keywords": [
+   "automation",
+   "network model",
+   "service provider",
+   "service provisionning",
+   "network automation",
+   "service delivery"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Network Data Model for Layer 2 VPNs",
+  "wg": "opsawg"
+ },
  "RFC9292": {
   "area": "art",
   "keywords": [],
