@@ -108629,6 +108629,19 @@
   "title": "A Cost Mode Registry for the Application-Layer Traffic Optimization (ALTO) Protocol",
   "wg": "alto"
  },
+ "RFC9275": {
+  "area": "tsv",
+  "keywords": [
+   "network visibility",
+   "abstract network element",
+   "shared bottleneck"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Extension for Application-Layer Traffic Optimization (ALTO): Path Vector",
+  "wg": "alto"
+ },
  "RFC9276": {
   "area": "ops",
   "keywords": [
@@ -108926,5 +108939,21 @@
   "stream": "ietf",
   "title": "Running an IETF Hackathon",
   "wg": "shmoo"
+ },
+ "RFC9314": {
+  "area": "rtg",
+  "keywords": [
+   "Liveliness check",
+   "BGP",
+   "OSPF",
+   "IS-IS",
+   "TCP-AO",
+   "MD5"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for Bidirectional Forwarding Detection (BFD)",
+  "wg": "bfd"
  }
 }
