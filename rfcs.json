@@ -108930,6 +108930,18 @@
   "stream": "iab",
   "title": "Report from the IAB Workshop on Analyzing IETF Data (AID) 2021"
  },
+ "RFC9308": {
+  "area": "tsv",
+  "keywords": [
+   "application protocol mapping",
+   "deployment"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Applicability of the QUIC Transport Protocol",
+  "wg": "quic"
+ },
  "RFC9309": {
   "keywords": [
    "robot",
@@ -108949,6 +108961,18 @@
   "stream": "ietf",
   "title": "Running an IETF Hackathon",
   "wg": "shmoo"
+ },
+ "RFC9312": {
+  "area": "tsv",
+  "keywords": [
+   "network management",
+   "wire image"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Manageability of the QUIC Transport Protocol",
+  "wg": "quic"
  },
  "RFC9314": {
   "area": "rtg",
