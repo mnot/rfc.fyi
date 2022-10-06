@@ -108989,5 +108989,19 @@
   "stream": "ietf",
   "title": "YANG Data Model for Bidirectional Forwarding Detection (BFD)",
   "wg": "bfd"
+ },
+ "RFC9318": {
+  "keywords": [
+   "QoE",
+   "QoS",
+   "Quality of Service",
+   "Quality of Experience",
+   "Measurement",
+   "End User"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "IAB Workshop Report: Measuring Network Quality for End-Users"
  }
 }
