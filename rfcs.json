@@ -108990,6 +108990,22 @@
   "title": "YANG Data Model for Bidirectional Forwarding Detection (BFD)",
   "wg": "bfd"
  },
+ "RFC9315": {
+  "keywords": [
+   "Autonomic networking",
+   "Network management",
+   "Intent-based management",
+   "Intent-based management",
+   "Policy-based management",
+   "policy",
+   "policy-based network management",
+   "abstraction"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Intent-Based Networking - Concepts and Definitions"
+ },
  "RFC9318": {
   "keywords": [
    "QoE",
