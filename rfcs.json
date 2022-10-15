@@ -41979,7 +41979,7 @@
   "area": "rtg",
   "keywords": [
    "VRRP",
-   "vrrp",
+   "Virtual Router Redundancy Protocol",
    "lan",
    "local",
    "area",
@@ -42032,6 +42032,8 @@
  "RFC3772": {
   "area": "int",
   "keywords": [
+   "PPP",
+   "Point-to-Point",
    "link control protocol",
    "lcp"
   ],
@@ -42072,6 +42074,7 @@
  "RFC3775": {
   "area": "int",
   "keywords": [
+   "mobility",
    "internet protocol",
    "nodes"
   ],
@@ -42084,6 +42087,7 @@
  "RFC3776": {
   "area": "int",
   "keywords": [
+   "IPsec",
    "security",
    "internet protocol"
   ],
@@ -42096,8 +42100,10 @@
  "RFC3777": {
   "area": "gen",
   "keywords": [
+   "IAB",
+   "IESG",
    "Internet Architecture Board",
-   "Engineering Steering Group"
+   "Internet Engineering Steering Group"
   ],
   "level": "bcp",
   "status": "obsoleted",
@@ -42119,6 +42125,7 @@
  "RFC3779": {
   "area": "sec",
   "keywords": [
+   "X.509",
    "allocation",
    "atrribute certificate",
    "authorization",
@@ -42139,6 +42146,9 @@
  },
  "RFC3780": {
   "keywords": [
+   "SMIng",
+   "Structure of Management Information",
+   "Next Generation",
    "data definition language"
   ],
   "level": "experimental",
@@ -42158,9 +42168,8 @@
  "RFC3782": {
   "area": "tsv",
   "keywords": [
-   "Transmission",
-   "Control",
-   "Protocol"
+   "TCP",
+   "Transmission Control Protocol"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -42195,6 +42204,12 @@
  "RFC3785": {
   "area": "subip",
   "keywords": [
+   "IGP",
+   "Interior Gateway Protocol",
+   "MPLS",
+   "MultiProtocol Label Switching",
+   "TE",
+   "Traffic Engineering",
    "link",
    "bandwidth router"
   ],
@@ -42226,7 +42241,11 @@
  },
  "RFC3788": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "SIGTRAN",
+   "Signaling Transport",
+   "Security"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -42319,6 +42338,7 @@
   "keywords": [
    "EMF-MDN",
    "MDN",
+   "Message Disposition Notifications",
    "media-type",
    "MIME",
    "multipurpose internet mail extensions"
@@ -42333,6 +42353,7 @@
   "keywords": [
    "MIME-VP2",
    "vpim",
+   "Voice Profile for Internet Mail",
    "messaging"
   ],
   "level": "std",
@@ -42345,10 +42366,8 @@
   "area": "app",
   "keywords": [
    "MIME-ADPCM",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
+   "multipurpose internet mail extensions",
+   "Adaptive Differential Pulse Code Modulation",
    "audio"
   ],
   "level": "std",
@@ -42361,6 +42380,7 @@
   "area": "app",
   "keywords": [
    "CONT-DUR",
+   "Content Duration",
    "multipurpose internet mail extensions",
    "time",
    "media"
@@ -42374,6 +42394,8 @@
  "RFC3804": {
   "area": "app",
   "keywords": [
+   "VPIM",
+   "Voice Profile for Internet Mail",
    "formats"
   ],
   "level": "std",
@@ -42385,6 +42407,7 @@
  "RFC3805": {
   "keywords": [
    "Print-MIB",
+   "Printer",
    "Management Information Base",
    "snmp",
    "management"
@@ -42456,6 +42479,7 @@
  "RFC3810": {
   "area": "int",
   "keywords": [
+   "Multicast Listener Discovery",
    "ssm",
    "source filtering",
    "igmp",
@@ -42471,6 +42495,10 @@
  "RFC3811": {
   "area": "rtg",
   "keywords": [
+   "Textual Conventions",
+   "TCs",
+   "Multiprotocol Label Switching",
+   "MPLS",
    "management information base"
   ],
   "level": "std",
@@ -42481,7 +42509,14 @@
  },
  "RFC3812": {
   "area": "rtg",
-  "keywords": [],
+  "keywords": [
+   "MPLS",
+   "Multiprotocol Label Switching",
+   "TE",
+   "Traffic Engineering",
+   "MIB",
+   "Management Information Base"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -42499,7 +42534,16 @@
  },
  "RFC3814": {
   "area": "rtg",
-  "keywords": [],
+  "keywords": [
+   "MPLS",
+   "Multiprotocol Label Switching",
+   "MIB",
+   "Management Information Base",
+   "FEC",
+   "Forwarding Equivalence Class",
+   "NHLFE",
+   "Next Hop Label Forwarding Entry"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -42508,7 +42552,12 @@
  },
  "RFC3815": {
   "area": "rtg",
-  "keywords": [],
+  "keywords": [
+   "MPLS",
+   "Multiprotocol Label Switching",
+   "LDP",
+   "Label Distribution Protocol"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -42518,6 +42567,8 @@
  "RFC3816": {
   "area": "tsv",
   "keywords": [
+   "ROHC",
+   "Robust Header Compression",
    "mib",
    "management information base"
   ],
@@ -42540,7 +42591,10 @@
  },
  "RFC3818": {
   "area": "int",
-  "keywords": [],
+  "keywords": [
+   "PPP",
+   "Point-to-Point Protocol"
+  ],
   "level": "bcp",
   "status": "current",
   "stream": "ietf",
@@ -42563,6 +42617,9 @@
  "RFC3820": {
   "area": "sec",
   "keywords": [
+   "X.509",
+   "PKI",
+   "Public Key Infrastructure",
    "authentication",
    "security credentials",
    "restricted delegation",
@@ -42578,6 +42635,8 @@
  "RFC3821": {
   "area": "tsv",
   "keywords": [
+   "FCIP",
+   "Fibre Channel Over TCI/IP",
    "storage area networks",
    "IP-based networks",
    "unified storage area network"
@@ -42591,6 +42650,10 @@
  "RFC3822": {
   "area": "tsv",
   "keywords": [
+   "FCIP",
+   "Fibre Channel over TCP/IP",
+   "SLP",
+   "Service Location Protocol",
    "dynamic discovery"
   ],
   "level": "std",
@@ -42625,8 +42688,11 @@
   "area": "rai",
   "keywords": [
    "dhcp",
+   "Dynamic Host Configuration Protocol",
    "lci",
-   "geographic location"
+   "geographic location",
+   "LCI",
+   "Location Configuration Information"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -42653,7 +42719,10 @@
  },
  "RFC3828": {
   "area": "tsv",
-  "keywords": [],
+  "keywords": [
+   "UDP-Lite",
+   "Lightweight User Datagram Protocol"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -42672,6 +42741,8 @@
  "RFC3830": {
   "area": "sec",
   "keywords": [
+   "MIKEY",
+   "Multimedia Internet KEYing",
    "key management scheme",
    "real-time applications"
   ],
@@ -42696,12 +42767,11 @@
  },
  "RFC3832": {
   "keywords": [
+   "SLP",
+   "Service Location Protocol",
    "DNS-SRV",
-   "domain",
-   "name",
-   "system",
-   "resource",
-   "record"
+   "domain name system",
+   "resource record"
   ],
   "level": "experimental",
   "status": "current",
@@ -42794,8 +42864,11 @@
  "RFC3840": {
   "area": "rai",
   "keywords": [
+   "User Agent",
    "ua",
-   "contact header field"
+   "contact header field",
+   "SIP",
+   "Session Initiation Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -42806,6 +42879,8 @@
  "RFC3841": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "Uniform Resource Identifiers",
    "URI",
    "Accept-Contact",
@@ -42821,6 +42896,8 @@
  "RFC3842": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "message waiting status",
    "message summary"
   ],
@@ -42833,6 +42910,8 @@
  "RFC3843": {
   "area": "tsv",
   "keywords": [
+   "ROHC",
+   "RObust Header Compression",
    "compression protocols"
   ],
   "level": "std",
@@ -42877,7 +42956,8 @@
  "RFC3846": {
   "area": "int",
   "keywords": [
-   "nai",
+   "NAI",
+   "Network Access Identifiers",
    "internet protocol",
    "home aaa server",
    "ha server",
@@ -42929,10 +43009,8 @@
    "x.509",
    "encryption",
    "certificate",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
+   "mime",
+   "multipurpose internet mail extensions",
    "secure"
   ],
   "level": "std",
@@ -108483,6 +108561,27 @@
   "title": "Exported Authenticators in TLS",
   "wg": "tls"
  },
+ "RFC9262": {
+  "area": "rtg",
+  "keywords": [
+   "BIER",
+   "BIER-TE",
+   "controller",
+   "ECMP",
+   "forwarding",
+   "traffic-engineering",
+   "multicast",
+   "pseudocode",
+   "routing",
+   "traffic-steering",
+   "tree-steering"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Tree Engineering for Bit Index Explicit Replication (BIER-TE)",
+  "wg": "bier"
+ },
  "RFC9263": {
   "area": "rtg",
   "keywords": [
@@ -108973,6 +109072,27 @@
   "stream": "ietf",
   "title": "Manageability of the QUIC Transport Protocol",
   "wg": "quic"
+ },
+ "RFC9313": {
+  "area": "ops",
+  "keywords": [
+   "IPv6",
+   "Transition Technologies",
+   "Comparison",
+   "IPv4aaS",
+   "IPv6-only",
+   "464XLAT",
+   "DNS64",
+   "Dual Stack Lite",
+   "Lightweight 4over6",
+   "MAP-E",
+   "MAP-T"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Pros and Cons of IPv6 Transition Technologies for IPv4-as-a-Service (IPv4aaS)",
+  "wg": "v6ops"
  },
  "RFC9314": {
   "area": "rtg",
