@@ -106824,6 +106824,37 @@
   "title": "YANG Data Model for Bidirectional Forwarding Detection (BFD)",
   "wg": "bfd"
  },
+ "RFC9128": {
+  "area": "rtg",
+  "keywords": [
+   "Network Management",
+   "PIM",
+   "YANG"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for Protocol Independent Multicast (PIM)",
+  "wg": "pim"
+ },
+ "RFC9129": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for the OSPF Protocol",
+  "wg": "lsr"
+ },
+ "RFC9130": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for the IS-IS Protocol",
+  "wg": "lsr"
+ },
  "RFC9131": {
   "area": "int",
   "keywords": [
@@ -107698,6 +107729,15 @@
   "stream": "ietf",
   "title": "Sensor Measurement Lists (SenML) Fields for Indicating Data Value Content-Format",
   "wg": "core"
+ },
+ "RFC9194": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Module for IS-IS Reverse Metric",
+  "wg": "lsr"
  },
  "RFC9195": {
   "area": "ops",
@@ -108906,6 +108946,22 @@
   "stream": "ietf",
   "title": "Towards Remote Procedure Call Encryption by Default",
   "wg": "nfsv4"
+ },
+ "RFC9290": {
+  "area": "art",
+  "keywords": [
+   "CoAP",
+   "API",
+   "Problem Details",
+   "CBOR Tag",
+   "Language Tag",
+   "Bidi"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Problem Details for Constrained Application Protocol (CoAP) APIs",
+  "wg": "core"
  },
  "RFC9291": {
   "area": "ops",
