@@ -78778,7 +78778,7 @@
   "area": "int",
   "keywords": [],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The Locator/ID Separation Protocol (LISP)",
   "wg": "lisp"
@@ -78805,7 +78805,7 @@
   "area": "int",
   "keywords": [],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Locator/ID Separation Protocol (LISP) Map-Server Interface",
   "wg": "lisp"
@@ -78814,7 +78814,7 @@
   "area": "int",
   "keywords": [],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Locator/ID Separation Protocol (LISP) Map-Versioning",
   "wg": "lisp"
@@ -94183,7 +94183,7 @@
    "Extending LISP"
   ],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Locator/ID Separation Protocol (LISP): Shared Extension Message & IANA Registry for Packet Type Allocations",
   "wg": "lisp"
@@ -109074,6 +109074,107 @@
   "stream": "ietf",
   "title": "Proxying UDP in HTTP",
   "wg": "masque"
+ },
+ "RFC9299": {
+  "area": "rtg",
+  "keywords": [
+   "LISP",
+   "Architecture"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Architectural Introduction to the Locator/ID Separation Protocol (LISP)",
+  "wg": "lisp"
+ },
+ "RFC9300": {
+  "area": "rtg",
+  "keywords": [
+   "LISP data plane"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Locator/ID Separation Protocol (LISP)",
+  "wg": "lisp"
+ },
+ "RFC9301": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Locator/ID Separation Protocol (LISP) Control Plane",
+  "wg": "lisp"
+ },
+ "RFC9302": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Locator/ID Separation Protocol (LISP) Map-Versioning",
+  "wg": "lisp"
+ },
+ "RFC9303": {
+  "area": "rtg",
+  "keywords": [
+   "LISP",
+   "deployment"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Locator/ID Separation Protocol Security (LISP-SEC)",
+  "wg": "lisp"
+ },
+ "RFC9304": {
+  "area": "rtg",
+  "keywords": [
+   "Shared Experiment Code",
+   "LISP codepoints",
+   "Experiment Identifier",
+   "Experiment ID",
+   "LISP Experimental Registry",
+   "LISP Extension",
+   "Extending LISP",
+   "Exhauted LISP types",
+   "LISP IANA",
+   "IANA"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Locator/ID Separation Protocol (LISP): Shared Extension Message and IANA Registry for Packet Type Allocations",
+  "wg": "lisp"
+ },
+ "RFC9305": {
+  "area": "rtg",
+  "keywords": [
+   "security",
+   "policy"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Locator/ID Separation Protocol (LISP) Generic Protocol Extension",
+  "wg": "lisp"
+ },
+ "RFC9306": {
+  "area": "rtg",
+  "keywords": [
+   "lisp",
+   "lcaf",
+   "internal",
+   "domain",
+   "organization",
+   "private"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Vendor-Specific LISP Canonical Address Format (LCAF)",
+  "wg": "lisp"
  },
  "RFC9307": {
   "keywords": [
