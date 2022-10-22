@@ -109283,6 +109283,25 @@
   "stream": "irtf",
   "title": "Intent-Based Networking - Concepts and Definitions"
  },
+ "RFC9316": {
+  "keywords": [
+   "intent taxonomy",
+   "intent-based network",
+   "intent users",
+   "intent categories",
+   "intent types",
+   "network management",
+   "network automation",
+   "network intent",
+   "network service",
+   "network orchestration",
+   "intent translation"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Intent Classification"
+ },
  "RFC9318": {
   "keywords": [
    "QoE",
@@ -109296,6 +109315,18 @@
   "status": "current",
   "stream": "iab",
   "title": "IAB Workshop Report: Measuring Network Quality for End-Users"
+ },
+ "RFC9319": {
+  "area": "ops",
+  "keywords": [
+   "Secure Internet routing",
+   "Resource public key infrastructure"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Use of maxLength in the Resource Public Key Infrastructure (RPKI)",
+  "wg": "sidrops"
  },
  "RFC9321": {
   "keywords": [],
