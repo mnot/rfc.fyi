@@ -43023,10 +43023,7 @@
   "area": "sec",
   "keywords": [
    "secure",
-   "multipurpose",
-   "internet",
-   "mail",
-   "extensions",
+   "multipurpose internet mail extensions",
    "encryption"
   ],
   "level": "std",
@@ -43038,6 +43035,8 @@
  "RFC3852": {
   "area": "sec",
   "keywords": [
+   "CMS",
+   "Cryptographic Message Syntax",
    "digitally sign",
    "authenticate",
    "encrypt",
@@ -43053,6 +43052,9 @@
   "area": "rai",
   "keywords": [
    "SIP",
+   "Session Initiation Protocol",
+   "AES",
+   "Advanced Encryption Standard",
    "application-layer",
    "application",
    "layer",
@@ -43067,8 +43069,11 @@
   "wg": "sip"
  },
  "RFC3854": {
-  "area": "sec",
+  "area": "int",
   "keywords": [
+   "MIME",
+   "secure",
+   "Multipurpose Internet Mail Extensions",
    "encryption",
    "cryptographic signature"
   ],
@@ -43076,19 +43081,22 @@
   "status": "current",
   "stream": "ietf",
   "title": "Securing X.400 Content with Secure/Multipurpose Internet Mail Extensions (S/MIME)",
-  "wg": "smime"
+  "wg": "vgmib"
  },
  "RFC3855": {
-  "area": "sec",
+  "area": "int",
   "keywords": [
    "cms",
-   "cryptographic message syntax message"
+   "cryptographic message syntax message",
+   "MIME",
+   "Multipurpose Internet Mail Extensions",
+   "secure"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Transporting Secure/Multipurpose Internet Mail Extensions (S/MIME) Objects in X.400",
-  "wg": "smime"
+  "wg": "vgmib"
  },
  "RFC3856": {
   "area": "rai",
@@ -43123,6 +43131,8 @@
  "RFC3859": {
   "area": "app",
   "keywords": [
+   "CPP",
+   "Common Profile for Presence",
    "data formats",
    "semantics",
    "instant messaging"
@@ -43136,6 +43146,8 @@
  "RFC3860": {
   "area": "app",
   "keywords": [
+   "CPIM",
+   "Common Profile for Instant Messaging",
    "data formats",
    "semantics",
    "instant messaging"
@@ -43166,7 +43178,7 @@
  "RFC3862": {
   "area": "app",
   "keywords": [
-   "instant messaging and presence protocol",
+   "instant messaging and common presence protocol",
    "message/cpim"
   ],
   "level": "std",
@@ -43203,6 +43215,8 @@
  },
  "RFC3865": {
   "keywords": [
+   "SMTP",
+   "Simple Mail Transfer Protocol",
    "unsolicited bulk email",
    "ube",
    "no soliciting",
@@ -43217,10 +43231,8 @@
  },
  "RFC3866": {
   "keywords": [
-   "lightweight",
-   "directory",
-   "access",
-   "protocol",
+   "LDAP",
+   "lightweight directory access protocol",
    "servers"
   ],
   "level": "std",
@@ -43243,6 +43255,8 @@
  "RFC3868": {
   "area": "rai",
   "keywords": [
+   "SUA",
+   "Signaling Connection Control Part User Adaptation Layer",
    "sctp",
    "stream control transmission protocol",
    "modular",
@@ -43291,7 +43305,10 @@
  "RFC3872": {
   "area": "rai",
   "keywords": [
-   "mib"
+   "mib",
+   "management information base",
+   "TRIP",
+   "Telephony Routing over IP"
   ],
   "level": "std",
   "status": "current",
@@ -43301,7 +43318,12 @@
  },
  "RFC3873": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "SCTP",
+   "Stream Control Transmission Protocol",
+   "MIB",
+   "Management Information Base"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -43331,6 +43353,8 @@
  },
  "RFC3876": {
   "keywords": [
+   "LDAP",
+   "Lightweight Directory Access Protocol",
    "attribute",
    "filter"
   ],
@@ -43342,6 +43366,7 @@
  "RFC3877": {
   "area": "ops",
   "keywords": [
+   "Management Information Base",
    "alarm mib",
    "iana-itu-alarm-tc-mib",
    "itu-alarm-tc-mib",
@@ -43356,6 +43381,8 @@
  "RFC3878": {
   "area": "ops",
   "keywords": [
+   "MIB",
+   "Management Information Base",
    "alarm condition",
    "probably cause"
   ],
@@ -43368,8 +43395,10 @@
  "RFC3879": {
   "area": "int",
   "keywords": [
+   "Internet Protocol",
    "ipv6",
-   "architecture"
+   "architecture",
+   "site-local"
   ],
   "level": "std",
   "status": "current",
@@ -43379,7 +43408,10 @@
  },
  "RFC3880": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "CPL",
+   "Call Processing Language"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -43407,7 +43439,8 @@
   "area": "rtg",
   "keywords": [
    "OSPF-DC",
-   "Open Shortest Path First"
+   "Open Shortest Path First",
+   "Demand Circuits"
   ],
   "level": "std",
   "status": "current",
@@ -43425,6 +43458,7 @@
  "RFC3885": {
   "area": "app",
   "keywords": [
+   "SMTP",
    "simple mail transfer protocol"
   ],
   "level": "std",
@@ -43450,7 +43484,8 @@
  "RFC3887": {
   "area": "app",
   "keywords": [
-   "mtqp",
+   "Message Tracking Query Protocol",
+   "MTQP",
    "ESMTP"
   ],
   "level": "std",
@@ -43461,7 +43496,9 @@
  },
  "RFC3888": {
   "area": "app",
-  "keywords": [],
+  "keywords": [
+   "Message Tracking"
+  ],
   "level": "informational",
   "status": "current",
   "stream": "ietf",
@@ -43471,8 +43508,10 @@
  "RFC3890": {
   "area": "rai",
   "keywords": [
-   "tias",
-   "application specific maximum"
+   "SDP",
+   "Session Description Protocol",
+   "TIAS",
+   "Transport Independent Application Specific Maximum"
   ],
   "level": "std",
   "status": "current",
@@ -43483,6 +43522,8 @@
  "RFC3891": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "multi-party applications",
    "call control"
   ],
@@ -43495,6 +43536,8 @@
  "RFC3892": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "REFER"
   ],
   "level": "std",
@@ -43506,6 +43549,8 @@
  "RFC3893": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "authenticated identity body",
    "digitally-signed SIP message",
    "message fragment",
@@ -43520,6 +43565,7 @@
  },
  "RFC3894": {
   "keywords": [
+   "Sieve",
    "client",
    "server"
   ],
@@ -43531,6 +43577,7 @@
  "RFC3895": {
   "area": "ops",
   "keywords": [
+   "MIB",
    "management information base"
   ],
   "level": "std",
@@ -43540,16 +43587,17 @@
   "wg": "atommib"
  },
  "RFC3896": {
-  "area": "ops",
+  "area": "int",
   "keywords": [
    "DS3-E3-MIB",
-   "management information base"
+   "management information base",
+   "Interface Type"
   ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Definitions of Managed Objects for the DS3/E3 Interface Type",
-  "wg": "atommib"
+  "wg": "vgmib"
  },
  "RFC3897": {
   "area": "app",
@@ -43567,10 +43615,13 @@
  "RFC3898": {
   "area": "int",
   "keywords": [
+   "Network Information Service",
    "NIS Servers",
    "NIS+ Servers",
    "NIS Client Domain Name",
-   "NIS+ Client Domain name"
+   "NIS+ Client Domain name",
+   "DHCPv6",
+   "Dynamic Host Configuration Protocol for IPV6"
   ],
   "level": "std",
   "status": "current",
@@ -43581,6 +43632,7 @@
  "RFC3901": {
   "area": "ops",
   "keywords": [
+   "DNS",
    "domain name system",
    "internet protocol"
   ],
@@ -43600,6 +43652,8 @@
  "RFC3903": {
   "area": "rai",
   "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
    "presence",
    "information",
    "package"
@@ -43648,6 +43702,8 @@
  },
  "RFC3909": {
   "keywords": [
+   "LDAP",
+   "Lightweight Directory Access Protocol",
    "abandon operation",
    "outstanding operation"
   ],
@@ -43659,7 +43715,9 @@
  "RFC3910": {
   "area": "tsv",
   "keywords": [
+   "SPIRTS",
    "pstn",
+   "Public Switched Telephone Network",
    "sip",
    "services",
    "event notification",
@@ -43668,7 +43726,7 @@
    "xml",
    "wireless",
    "intelligent network",
-   "in",
+   "IN",
    "detection point",
    "dp"
   ],
@@ -43680,7 +43738,11 @@
  },
  "RFC3911": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
+   "Join header"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -43689,6 +43751,7 @@
  },
  "RFC3912": {
   "keywords": [
+   "WHOIS",
    "NICNAME"
   ],
   "level": "std",
@@ -43720,8 +43783,10 @@
  },
  "RFC3915": {
   "keywords": [
-   "dns",
-   "name system"
+   "DNS",
+   "Domain Name System",
+   "EPP",
+   "Extensible Provisioning Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -43843,6 +43908,7 @@
   "keywords": [
    "dhc",
    "dhcp",
+   "Dynamic Host Configuration Protocol",
    "class",
    "vendor-specific"
   ],
@@ -43854,7 +43920,10 @@
  },
  "RFC3926": {
   "area": "tsv",
-  "keywords": [],
+  "keywords": [
+   "FLUTE",
+   "File Delivery over Unidirectional Transport"
+  ],
   "level": "experimental",
   "status": "obsoleted",
   "stream": "ietf",
@@ -43864,6 +43933,7 @@
  "RFC3927": {
   "area": "int",
   "keywords": [
+   "Dynamic Configuration",
    "ip network",
    "ip address",
    "169.254/16"
@@ -43876,7 +43946,12 @@
  },
  "RFC3928": {
   "area": "app",
-  "keywords": [],
+  "keywords": [
+   "LDAP",
+   "Lightweight Directory Access Protocol",
+   "LCUP",
+   "Client Update Protocol"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -43901,6 +43976,7 @@
   "area": "int",
   "keywords": [
    "L2TP",
+   "Layer Two Tunneling Protocol",
    "ppp",
    "point-to-point",
    "protocol",
@@ -43914,6 +43990,8 @@
  },
  "RFC3932": {
   "keywords": [
+   "IESG",
+   "RFC Editor",
    "independent submission"
   ],
   "level": "bcp",
@@ -43923,7 +44001,9 @@
   "wg": "IESG"
  },
  "RFC3933": {
-  "keywords": [],
+  "keywords": [
+   "Experiments"
+  ],
   "level": "bcp",
   "status": "current",
   "stream": "ietf",
