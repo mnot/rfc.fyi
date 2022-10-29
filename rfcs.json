@@ -44023,7 +44023,9 @@
   "title": "Updates to RFC 2418 Regarding the Management of IETF Mailing Lists"
  },
  "RFC3935": {
-  "keywords": [],
+  "keywords": [
+   "Mission Statement"
+  ],
   "level": "bcp",
   "status": "current",
   "stream": "ietf",
@@ -44031,9 +44033,8 @@
  },
  "RFC3936": {
   "keywords": [
-   "resource",
-   "reservation",
-   "protocol",
+   "RSVP",
+   "resource reservation protocol",
    "label",
    "switched",
    "paths"
@@ -44061,7 +44062,9 @@
   "title": "Video-Message Message-Context"
  },
  "RFC3939": {
-  "keywords": [],
+  "keywords": [
+   "Voice Mail"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -44069,7 +44072,12 @@
  },
  "RFC3940": {
   "area": "tsv",
-  "keywords": [],
+  "keywords": [
+   "NACK",
+   "Negative-acknowledgement",
+   "Oriented Reliable Multicast",
+   "NORM"
+  ],
   "level": "experimental",
   "status": "obsoleted",
   "stream": "ietf",
@@ -44078,7 +44086,12 @@
  },
  "RFC3941": {
   "area": "tsv",
-  "keywords": [],
+  "keywords": [
+   "NACK",
+   "Negative-acknowledgement",
+   "Oriented Reliable Multicast",
+   "NORM"
+  ],
   "level": "experimental",
   "status": "obsoleted",
   "stream": "ietf",
@@ -44089,7 +44102,8 @@
   "area": "int",
   "keywords": [
    "DHCP-BOOTP",
-   "Bootstrap"
+   "Bootstrap",
+   "Dynamic Host Configuration Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -44124,7 +44138,10 @@
  },
  "RFC3945": {
   "area": "rtg",
-  "keywords": [],
+  "keywords": [
+   "GMPLS",
+   "Generalized Multi-Protocol Label Switching"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -44142,7 +44159,10 @@
  },
  "RFC3947": {
   "area": "sec",
-  "keywords": [],
+  "keywords": [
+   "IKE",
+   "Internet Key Exchange"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -44151,7 +44171,11 @@
  },
  "RFC3948": {
   "area": "sec",
-  "keywords": [],
+  "keywords": [
+   "IPsec",
+   "ESP",
+   "Encapsulating Security Payload"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -44200,7 +44224,10 @@
  },
  "RFC3951": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "iLBC",
+   "Internet Low Bit Rate Codec"
+  ],
   "level": "experimental",
   "status": "current",
   "stream": "ietf",
@@ -44209,7 +44236,12 @@
  },
  "RFC3952": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "RTP",
+   "Real-time Transport Protocol",
+   "iLBC",
+   "internet Low Bit Rate Codec"
+  ],
   "level": "experimental",
   "status": "current",
   "stream": "ietf",
@@ -44221,7 +44253,9 @@
   "keywords": [
    "uniform resource identifier",
    "uri",
-   "provisioning pres"
+   "provisioning pres",
+   "ENUM",
+   "Telephone Number Mapping"
   ],
   "level": "std",
   "status": "current",
@@ -44248,6 +44282,8 @@
  "RFC3956": {
   "area": "ops",
   "keywords": [
+   "RP",
+   "Rendezvous Point",
    "internet protocol"
   ],
   "level": "std",
@@ -44266,7 +44302,10 @@
   "wg": "mip4"
  },
  "RFC3958": {
-  "keywords": [],
+  "keywords": [
+   "DDDS",
+   "Dynamic Delegation Discovery System"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -44274,7 +44313,10 @@
  },
  "RFC3959": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "SIP",
+   "Session Initiation Protocol"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -44335,6 +44377,7 @@
   "area": "app",
   "keywords": [
    "SMFAX-IM",
+   "Simple Mode of Facsimile Using Internet Mail",
    "data",
    "file",
    "format",
@@ -44349,10 +44392,11 @@
  "RFC3966": {
   "area": "rai",
   "keywords": [
-   "uniform",
-   "resource",
+   "URI",
+   "uniform resource identifier",
    "locator",
-   "schemes"
+   "schemes",
+   "tel"
   ],
   "level": "std",
   "status": "current",
@@ -44369,7 +44413,10 @@
  },
  "RFC3968": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "SIP",
+   "Session Initiation Protocol"
+  ],
   "level": "bcp",
   "status": "current",
   "stream": "ietf",
@@ -44378,7 +44425,10 @@
  },
  "RFC3969": {
   "area": "rai",
-  "keywords": [],
+  "keywords": [
+   "SIP",
+   "Session Initiation Protocol"
+  ],
   "level": "bcp",
   "status": "current",
   "stream": "ietf",
@@ -44386,7 +44436,12 @@
   "wg": "sip"
  },
  "RFC3970": {
-  "keywords": [],
+  "keywords": [
+   "MIB",
+   "Management Information Base",
+   "TE",
+   "Traffic Engineering"
+  ],
   "level": "std",
   "status": "current",
   "stream": "legacy",
@@ -109381,6 +109436,23 @@
   "status": "current",
   "stream": "irtf",
   "title": "Intent Classification"
+ },
+ "RFC9317": {
+  "area": "ops",
+  "keywords": [
+   "DASH",
+   "HLS",
+   "ABR",
+   "adaptive streaming",
+   "live streaming",
+   "live latency",
+   "media transport"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operational Considerations for Streaming Media",
+  "wg": "mops"
  },
  "RFC9318": {
   "keywords": [
