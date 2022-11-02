@@ -109486,5 +109486,18 @@
   "status": "current",
   "stream": "independent",
   "title": "Signature Validation Token"
+ },
+ "RFC9327": {
+  "area": "int",
+  "keywords": [
+   "NTP",
+   "mode 6",
+   "mode 7"
+  ],
+  "level": "historic",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Control Messages Protocol for Use with Network Time Protocol Version 4",
+  "wg": "ntp"
  }
 }
