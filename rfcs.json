@@ -19313,7 +19313,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "iab",
   "title": "IPv4 Address Behaviour Today"
  },
  "RFC2102": {
@@ -32611,7 +32611,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "A URN Namespace of Object Identifiers"
  },
  "RFC3062": {
