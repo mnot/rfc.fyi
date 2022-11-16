@@ -109487,6 +109487,30 @@
   "stream": "independent",
   "title": "Signature Validation Token"
  },
+ "RFC9322": {
+  "area": "tsv",
+  "keywords": [
+   "IOAM",
+   "Telemetry"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "In Situ Operations, Administration, and Maintenance (IOAM) Loopback and Active Flags",
+  "wg": "ippm"
+ },
+ "RFC9326": {
+  "area": "tsv",
+  "keywords": [
+   "IOAM",
+   "Telemetry"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "In Situ Operations, Administration, and Maintenance (IOAM) Direct Exporting",
+  "wg": "ippm"
+ },
  "RFC9327": {
   "area": "int",
   "keywords": [
