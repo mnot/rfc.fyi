@@ -109499,6 +109499,19 @@
   "title": "In Situ Operations, Administration, and Maintenance (IOAM) Loopback and Active Flags",
   "wg": "ippm"
  },
+ "RFC9323": {
+  "area": "ops",
+  "keywords": [
+   "security",
+   "cryptography",
+   "X.509"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Profile for RPKI Signed Checklists (RSCs)",
+  "wg": "sidrops"
+ },
  "RFC9326": {
   "area": "tsv",
   "keywords": [
