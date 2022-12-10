@@ -109572,5 +109572,18 @@
   "stream": "ietf",
   "title": "TCP Encapsulation of Internet Key Exchange Protocol (IKE) and IPsec Packets",
   "wg": "ipsecme"
+ },
+ "RFC9337": {
+  "keywords": [
+   "password-based cryptography",
+   "derived key",
+   "GOST algorithms",
+   "pkcs5",
+   "gost"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Generating Password-Based Keys Using the GOST Algorithms"
  }
 }
