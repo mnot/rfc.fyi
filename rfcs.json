@@ -96893,7 +96893,7 @@
    "Coloring Technique"
   ],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Alternate-Marking Method for Passive and Hybrid Performance Monitoring",
   "wg": "ippm"
@@ -103908,7 +103908,7 @@
    "Network Clustering"
   ],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Multipoint Alternate-Marking Method for Passive and Hybrid Performance Monitoring",
   "wg": "ippm"
@@ -109585,5 +109585,56 @@
   "status": "current",
   "stream": "independent",
   "title": "Generating Password-Based Keys Using the GOST Algorithms"
+ },
+ "RFC9338": {
+  "area": "sec",
+  "keywords": [
+   "digital signature"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE): Countersignatures",
+  "wg": "cose"
+ },
+ "RFC9341": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Alternate-Marking Method",
+  "wg": "ippm"
+ },
+ "RFC9342": {
+  "area": "tsv",
+  "keywords": [
+   "Multipoint",
+   "Cluster",
+   "Performance",
+   "Measurement",
+   "Monitoring",
+   "Passive",
+   "Hybrid",
+   "Loss",
+   "Delay",
+   "Delay Variation",
+   "Hashing",
+   "Closed-Loop"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clustered Alternate-Marking Method",
+  "wg": "ippm"
+ },
+ "STD0096": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE): Structures and Process",
+  "wg": "cose"
  }
 }
