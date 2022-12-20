@@ -109627,14 +109627,5 @@
   "stream": "ietf",
   "title": "Clustered Alternate-Marking Method",
   "wg": "ippm"
- },
- "STD0096": {
-  "area": "sec",
-  "keywords": [],
-  "level": "std",
-  "status": "current",
-  "stream": "ietf",
-  "title": "CBOR Object Signing and Encryption (COSE): Structures and Process",
-  "wg": "cose"
  }
 }
