@@ -109525,6 +109525,17 @@
   "title": "A Profile for RPKI Signed Checklists (RSCs)",
   "wg": "sidrops"
  },
+ "RFC9324": {
+  "area": "ops",
+  "keywords": [
+   "bgp"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Policy Based on the Resource Public Key Infrastructure (RPKI) without Route Refresh",
+  "wg": "sidrops"
+ },
  "RFC9325": {
   "area": "art",
   "keywords": [],
@@ -109559,6 +109570,21 @@
   "title": "Control Messages Protocol for Use with Network Time Protocol Version 4",
   "wg": "ntp"
  },
+ "RFC9328": {
+  "area": "art",
+  "keywords": [
+   "H.266",
+   "ISO/IEC 23090-3",
+   "MPEG-I Part 3",
+   "RTP Payload",
+   "Video"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Payload Format for Versatile Video Coding (VVC)",
+  "wg": "avtcore"
+ },
  "RFC9329": {
   "area": "sec",
   "keywords": [
@@ -109572,6 +109598,20 @@
   "stream": "ietf",
   "title": "TCP Encapsulation of Internet Key Exchange Protocol (IKE) and IPsec Packets",
   "wg": "ipsecme"
+ },
+ "RFC9336": {
+  "area": "sec",
+  "keywords": [
+   "X.509",
+   "KeyPurposeIds",
+   "Key Purpose Identifier",
+   "Document Signing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "X.509 Certificate General-Purpose Extended Key Usage (EKU) for Document Signing",
+  "wg": "lamps"
  },
  "RFC9337": {
   "keywords": [
@@ -109596,6 +109636,18 @@
   "stream": "ietf",
   "title": "CBOR Object Signing and Encryption (COSE): Countersignatures",
   "wg": "cose"
+ },
+ "RFC9339": {
+  "area": "rtg",
+  "keywords": [
+   "IGP",
+   "OSPF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Reverse Metric",
+  "wg": "lsr"
  },
  "RFC9341": {
   "area": "tsv",
@@ -109627,5 +109679,31 @@
   "stream": "ietf",
   "title": "Clustered Alternate-Marking Method",
   "wg": "ippm"
+ },
+ "RFC9343": {
+  "area": "int",
+  "keywords": [
+   "Extension",
+   "Header",
+   "Option",
+   "Destination",
+   "Hop-By-Hop",
+   "Performance",
+   "Measurement",
+   "Monitoring",
+   "Passive",
+   "Hybrid",
+   "Loss",
+   "Delay",
+   "Delay Variation",
+   "Multipoint",
+   "Cluster",
+   "Closed-Loop"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Application of the Alternate-Marking Method",
+  "wg": "6man"
  }
 }
