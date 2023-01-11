@@ -44537,9 +44537,9 @@
  "RFC3978": {
   "area": "gen",
   "keywords": [
-   "intellectual property rights",
-   "copyright",
-   "ipr"
+   "Intellectual Property Rights",
+   "IPR",
+   "copyright"
   ],
   "level": "bcp",
   "status": "obsoleted",
@@ -44550,7 +44550,8 @@
  "RFC3979": {
   "area": "gen",
   "keywords": [
-   "ipr",
+   "IPR",
+   "Intellectual Property Rights",
    "copyright"
   ],
   "level": "bcp",
@@ -44621,11 +44622,10 @@
  },
  "RFC3986": {
   "keywords": [
-   "Internet",
-   "protocol",
-   "uniform",
-   "resource",
-   "identifier",
+   "Internet protocol",
+   "IP",
+   "uniform resource identifier",
+   "URI",
    "www",
    "world wide web"
   ],
