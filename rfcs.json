@@ -109344,6 +109344,17 @@
   "stream": "ietf",
   "title": "Robots Exclusion Protocol"
  },
+ "RFC9310": {
+  "area": "sec",
+  "keywords": [
+   "Digital Certificate"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "X.509 Certificate Extension for 5G Network Function Types",
+  "wg": "lamps"
+ },
  "RFC9311": {
   "area": "gen",
   "keywords": [],
