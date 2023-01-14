@@ -109610,6 +109610,39 @@
   "title": "TCP Encapsulation of Internet Key Exchange Protocol (IKE) and IPsec Packets",
   "wg": "ipsecme"
  },
+ "RFC9333": {
+  "area": "int",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Minimal IP Encapsulating Security Payload (ESP)",
+  "wg": "lwig"
+ },
+ "RFC9334": {
+  "area": "sec",
+  "keywords": [
+   "evidence",
+   "attestation results",
+   "epoch",
+   "epoch-id",
+   "endorsement",
+   "attestating environment",
+   "reference value",
+   "target environment",
+   "layered attestation",
+   "appraisal policy",
+   "background check model",
+   "passport model",
+   "freshness",
+   "recentness"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Remote ATtestation procedureS (RATS) Architecture",
+  "wg": "rats"
+ },
  "RFC9336": {
   "area": "sec",
   "keywords": [
@@ -109716,5 +109749,31 @@
   "stream": "ietf",
   "title": "IPv6 Application of the Alternate-Marking Method",
   "wg": "6man"
+ },
+ "RFC9353": {
+  "area": "rtg",
+  "keywords": [
+   "Path Computation Element"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IGP Extension for Path Computation Element Communication Protocol (PCEP) Security Capability Support in PCE Discovery (PCED)",
+  "wg": "lsr"
+ },
+ "RFC9354": {
+  "area": "int",
+  "keywords": [
+   "6lo",
+   "6lowpan",
+   "6lo-plc",
+   "6loplc",
+   "plc"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Transmission of IPv6 Packets over Power Line Communication (PLC) Networks",
+  "wg": "6lo"
  }
 }
