@@ -109727,6 +109727,17 @@
   "title": "Remote ATtestation procedureS (RATS) Architecture",
   "wg": "rats"
  },
+ "RFC9335": {
+  "area": "art",
+  "keywords": [
+   "SRTP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Completely Encrypting RTP Header Extensions and Contributing Sources",
+  "wg": "avtcore"
+ },
  "RFC9336": {
   "area": "sec",
   "keywords": [
@@ -109859,5 +109870,16 @@
   "stream": "ietf",
   "title": "Transmission of IPv6 Packets over Power Line Communication (PLC) Networks",
   "wg": "6lo"
+ },
+ "RFC9356": {
+  "area": "rtg",
+  "keywords": [
+   "OSPF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Advertising Layer 2 Bundle Member Link Attributes in OSPF",
+  "wg": "lsr"
  }
 }
