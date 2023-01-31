@@ -44832,9 +44832,7 @@
   "keywords": [
    "internet protocol version 4",
    "aaa",
-   "authentication",
-   "authorization",
-   "accounting",
+   "authentication authorization accounting",
    "inter-realm",
    "diameter accounting"
   ],
@@ -44848,9 +44846,7 @@
   "area": "ops",
   "keywords": [
    "aaa",
-   "authentication",
-   "authorization",
-   "accounting",
+   "authentication authorization accounting",
    "nas",
    "diameter base",
    "transport profile",
@@ -45421,7 +45417,7 @@
  "RFC4053": {
   "keywords": [
    "sdo",
-   "standards develoopment organization"
+   "standards development organization"
   ],
   "level": "bcp",
   "status": "current",
