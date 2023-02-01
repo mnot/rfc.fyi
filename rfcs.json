@@ -109841,6 +109841,37 @@
   "title": "IPv6 Application of the Alternate-Marking Method",
   "wg": "6man"
  },
+ "RFC9347": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Aggregation and Fragmentation Mode for Encapsulating Security Payload (ESP) and Its Use for IP Traffic Flow Security (IP-TFS)",
+  "wg": "ipsecme"
+ },
+ "RFC9348": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for IP Traffic Flow Security",
+  "wg": "ipsecme"
+ },
+ "RFC9349": {
+  "area": "sec",
+  "keywords": [
+   "MIB",
+   "IPsec",
+   "IP-TRAFFIC-FLOW-SECURITY-MIB"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Definitions of Managed Objects for IP Traffic Flow Security",
+  "wg": "ipsecme"
+ },
  "RFC9353": {
   "area": "rtg",
   "keywords": [
