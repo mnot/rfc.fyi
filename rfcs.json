@@ -60810,7 +60810,7 @@
    "flooding"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "ISIS Extensions in Support of Inter-Autonomous System (AS) MPLS and GMPLS Traffic Engineering",
   "wg": "ccamp"
@@ -109841,6 +109841,19 @@
   "title": "IPv6 Application of the Alternate-Marking Method",
   "wg": "6man"
  },
+ "RFC9346": {
+  "area": "rtg",
+  "keywords": [
+   "ISIS",
+   "Inter-AS",
+   "TE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IS-IS Extensions in Support of Inter-Autonomous System (AS) MPLS and GMPLS Traffic Engineering",
+  "wg": "lsr"
+ },
  "RFC9347": {
   "area": "sec",
   "keywords": [],
@@ -109908,5 +109921,16 @@
   "stream": "ietf",
   "title": "Advertising Layer 2 Bundle Member Link Attributes in OSPF",
   "wg": "lsr"
+ },
+ "RFC9357": {
+  "area": "rtg",
+  "keywords": [
+   "PCEP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Label Switched Path (LSP) Object Flag Extension for Stateful PCE",
+  "wg": "pce"
  }
 }
