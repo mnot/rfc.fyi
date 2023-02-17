@@ -109841,6 +109841,18 @@
   "title": "IPv6 Application of the Alternate-Marking Method",
   "wg": "6man"
  },
+ "RFC9344": {
+  "keywords": [
+   "ICN",
+   "CCNx",
+   "NDN",
+   "CCNinfo"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "irtf",
+  "title": "CCNinfo: Discovering Content and Network Information in Content-Centric Networks"
+ },
  "RFC9346": {
   "area": "rtg",
   "keywords": [
@@ -109945,6 +109957,15 @@
   "stream": "ietf",
   "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Establishing Relationships between Sets of Label Switched Paths and Virtual Networks",
   "wg": "pce"
+ },
+ "RFC9360": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE): Header Parameters for Carrying and Referencing X.509 Certificates",
+  "wg": "cose"
  },
  "RFC9364": {
   "area": "ops",
