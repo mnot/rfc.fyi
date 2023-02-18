@@ -109979,5 +109979,17 @@
   "stream": "ietf",
   "title": "DNS Security Extensions (DNSSEC)",
   "wg": "dnsop"
+ },
+ "RFC9367": {
+  "keywords": [
+   "GOST",
+   "cipher suite",
+   "TLS 1.3",
+   "signature scheme"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "GOST Cipher Suites for Transport Layer Security (TLS) Protocol Version 1.3"
  }
 }
