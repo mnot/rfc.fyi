@@ -109897,6 +109897,39 @@
   "title": "Definitions of Managed Objects for IP Traffic Flow Security",
   "wg": "ipsecme"
  },
+ "RFC9350": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IGP Flexible Algorithm",
+  "wg": "lsr"
+ },
+ "RFC9351": {
+  "area": "rtg",
+  "keywords": [
+   "BGP-LS",
+   "Segment Routing",
+   "IS-IS",
+   "OSPF",
+   "OSPFv3"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Border Gateway Protocol - Link State (BGP-LS) Extensions for Flexible Algorithm Advertisement",
+  "wg": "idr"
+ },
+ "RFC9352": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IS-IS Extensions to Support Segment Routing over the IPv6 Data Plane",
+  "wg": "lsr"
+ },
  "RFC9353": {
   "area": "rtg",
   "keywords": [
@@ -109922,6 +109955,18 @@
   "stream": "ietf",
   "title": "Transmission of IPv6 Packets over Power Line Communication (PLC) Networks",
   "wg": "6lo"
+ },
+ "RFC9355": {
+  "area": "rtg",
+  "keywords": [
+   "IGP",
+   "OSPF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Bidirectional Forwarding Detection (BFD) Strict-Mode",
+  "wg": "lsr"
  },
  "RFC9356": {
   "area": "rtg",
