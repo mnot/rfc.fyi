@@ -110012,6 +110012,28 @@
   "title": "CBOR Object Signing and Encryption (COSE): Header Parameters for Carrying and Referencing X.509 Certificates",
   "wg": "cose"
  },
+ "RFC9362": {
+  "area": "sec",
+  "keywords": [
+   "Quick-Block",
+   "Robust-Block",
+   "R-Block",
+   "Tough-Block",
+   "Resilient-Block",
+   "Fast-Block",
+   "Resilience",
+   "Filtering",
+   "Faster transmission",
+   "Large amounts of data",
+   "Less packet interchange",
+   "Fast recovery"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel Configuration Attributes for Robust Block Transmission",
+  "wg": "dots"
+ },
  "RFC9364": {
   "area": "ops",
   "keywords": [
