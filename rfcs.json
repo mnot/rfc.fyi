@@ -110034,6 +110034,23 @@
   "title": "Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel Configuration Attributes for Robust Block Transmission",
   "wg": "dots"
  },
+ "RFC9363": {
+  "area": "int",
+  "keywords": [
+   "Header Compression",
+   "Fragmentation",
+   "SCHC Rule",
+   "IPv6",
+   "UDP",
+   "CoAP",
+   "OSCORE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Static Context Header Compression (SCHC)",
+  "wg": "lpwan"
+ },
  "RFC9364": {
   "area": "ops",
   "keywords": [
@@ -110058,5 +110075,14 @@
   "status": "current",
   "stream": "independent",
   "title": "GOST Cipher Suites for Transport Layer Security (TLS) Protocol Version 1.3"
+ },
+ "RFC9371": {
+  "keywords": [
+   "IANA"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration Procedures for Private Enterprise Numbers (PENs)"
  }
 }
