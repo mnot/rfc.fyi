@@ -38605,7 +38605,7 @@
    "web caching"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Benchmarking Methodology for Firewall Performance",
   "wg": "bmwg"
@@ -110012,6 +110012,21 @@
   "title": "CBOR Object Signing and Encryption (COSE): Header Parameters for Carrying and Referencing X.509 Certificates",
   "wg": "cose"
  },
+ "RFC9361": {
+  "keywords": [
+   "Trademark Clearinghouse",
+   "TMDB",
+   "ICANN",
+   "TMCH",
+   "gTLD",
+   "new gTLD",
+   "mark"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "ICANN Trademark Clearinghouse (TMCH) Functional Specifications"
+ },
  "RFC9362": {
   "area": "sec",
   "keywords": [
@@ -110093,5 +110108,20 @@
   "status": "current",
   "stream": "ietf",
   "title": "Registration Procedures for Private Enterprise Numbers (PENs)"
+ },
+ "RFC9411": {
+  "area": "ops",
+  "keywords": [
+   "NGFW",
+   "NGIPS",
+   "benchmarking",
+   "performance testing",
+   "security testing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Benchmarking Methodology for Network Security Device Performance",
+  "wg": "bmwg"
  }
 }
