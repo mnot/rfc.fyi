@@ -109784,6 +109784,19 @@
   "title": "OSPF Reverse Metric",
   "wg": "lsr"
  },
+ "RFC9340": {
+  "keywords": [
+   "Quantum Internet",
+   "Architecture",
+   "Repeater",
+   "Bell Pair",
+   "EPR Pair"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Architectural Principles for a Quantum Internet"
+ },
  "RFC9341": {
   "area": "tsv",
   "keywords": [],
@@ -110079,6 +110092,15 @@
   "title": "DNS Security Extensions (DNSSEC)",
   "wg": "dnsop"
  },
+ "RFC9365": {
+  "area": "int",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Wireless Access in Vehicular Environments (IPWAVE): Problem Statement and Use Cases",
+  "wg": "ipwave"
+ },
  "RFC9366": {
   "area": "art",
   "keywords": [],
@@ -110108,6 +110130,26 @@
   "status": "current",
   "stream": "ietf",
   "title": "Registration Procedures for Private Enterprise Numbers (PENs)"
+ },
+ "RFC9373": {
+  "keywords": [
+   "IPSECKEY EdDSA"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "EdDSA Value for IPSECKEY"
+ },
+ "RFC9374": {
+  "area": "int",
+  "keywords": [
+   "RID"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DRIP Entity Tag (DET) for Unmanned Aircraft System Remote ID (UAS RID)",
+  "wg": "drip"
  },
  "RFC9411": {
   "area": "ops",
