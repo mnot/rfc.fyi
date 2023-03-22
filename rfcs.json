@@ -109784,19 +109784,6 @@
   "title": "OSPF Reverse Metric",
   "wg": "lsr"
  },
- "RFC9340": {
-  "keywords": [
-   "Quantum Internet",
-   "Architecture",
-   "Repeater",
-   "Bell Pair",
-   "EPR Pair"
-  ],
-  "level": "informational",
-  "status": "current",
-  "stream": "irtf",
-  "title": "Architectural Principles for a Quantum Internet"
- },
  "RFC9341": {
   "area": "tsv",
   "keywords": [],
