@@ -110118,6 +110118,20 @@
   "stream": "ietf",
   "title": "Registration Procedures for Private Enterprise Numbers (PENs)"
  },
+ "RFC9372": {
+  "area": "rtg",
+  "keywords": [
+   "Aeronautical Communications",
+   "Data Link Technology",
+   "Future Communications Infrastructure",
+   "Reliable Wireless Technology"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "L-Band Digital Aeronautical Communications System (LDACS)",
+  "wg": "raw"
+ },
  "RFC9373": {
   "keywords": [
    "IPSECKEY EdDSA"
@@ -110137,6 +110151,15 @@
   "stream": "ietf",
   "title": "DRIP Entity Tag (DET) for Unmanned Aircraft System Remote ID (UAS RID)",
   "wg": "drip"
+ },
+ "RFC9384": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A BGP Cease NOTIFICATION Subcode for Bidirectional Forwarding Detection (BFD)",
+  "wg": "idr"
  },
  "RFC9411": {
   "area": "ops",
