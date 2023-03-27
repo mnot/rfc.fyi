@@ -48279,7 +48279,7 @@
   "title": "The Codecs Parameter for \"Bucket\" Media Types"
  },
  "RFC4282": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "NAI",
    "nai",
@@ -49480,7 +49480,7 @@
   "title": "BCP 101 Update for IPR Trust"
  },
  "RFC4372": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "radius",
    "remote authentication dial-in user service",
@@ -52094,7 +52094,7 @@
   "wg": "geopriv"
  },
  "RFC4590": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "remote authentication dial-in user service",
    "sip",
@@ -53033,7 +53033,7 @@
   "wg": "l2tpext"
  },
  "RFC4668": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "management information base",
    "security",
@@ -53047,7 +53047,7 @@
   "wg": "radext"
  },
  "RFC4669": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "management information base",
    "security",
@@ -53061,7 +53061,7 @@
   "wg": "radext"
  },
  "RFC4670": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "management information base",
    "security",
@@ -53075,7 +53075,7 @@
   "wg": "radext"
  },
  "RFC4671": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "management information base",
    "security",
@@ -53089,7 +53089,7 @@
   "wg": "radext"
  },
  "RFC4672": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "remote authentication dial-in user service",
    "dac",
@@ -53104,7 +53104,7 @@
   "wg": "radext"
  },
  "RFC4673": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "management information base",
    "remote authentication dial-in user service",
@@ -53129,7 +53129,7 @@
   "wg": "pce"
  },
  "RFC4675": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "remote authentication dial-in user service",
    "local area network"
@@ -54824,7 +54824,7 @@
   "wg": "mpls"
  },
  "RFC4818": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "remote authentication dial in user service",
    "diameter"
@@ -55199,7 +55199,7 @@
   "title": "Domain-Based Application Service Location Using URIs and the Dynamic Delegation Discovery Service (DDDS)"
  },
  "RFC4849": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "remote authentication dial in user service",
    "nas-filter-rule"
@@ -57928,7 +57928,7 @@
   "wg": "sip"
  },
  "RFC5080": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -58047,7 +58047,7 @@
   "wg": "pce"
  },
  "RFC5090": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "remote authentication dial-in user service",
    "sip",
@@ -59112,7 +59112,7 @@
   "wg": "ipv6"
  },
  "RFC5176": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "user session"
   ],
@@ -64579,7 +64579,7 @@
   "wg": "geopriv"
  },
  "RFC5607": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "Network Management",
    "Device Management",
@@ -69316,7 +69316,7 @@
   "wg": "ipsecme"
  },
  "RFC5997": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "status-server"
   ],
@@ -71235,7 +71235,7 @@
   "wg": "sipping"
  },
  "RFC6158": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [],
   "level": "bcp",
   "status": "current",
@@ -74273,7 +74273,7 @@
   "wg": "pim"
  },
  "RFC6421": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -76416,7 +76416,7 @@
   "title": "Interactions between Proxy Mobile IPv6 (PMIPv6) and Mobile IPv6 (MIPv6): Scenarios and Related Issues"
  },
  "RFC6613": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "Remote Authentication Dial-In User Server",
    "Transmission Control Protocol",
@@ -76429,7 +76429,7 @@
   "wg": "radext"
  },
  "RFC6614": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "RADIUS",
    "AAA",
@@ -79756,7 +79756,7 @@
   "wg": "bliss"
  },
  "RFC6911": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "AAA",
    "RADIUS",
@@ -79938,7 +79938,7 @@
   "wg": "tcpm"
  },
  "RFC6929": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -83824,7 +83824,7 @@
   "wg": "pwe3"
  },
  "RFC7268": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -84903,7 +84903,7 @@
   "wg": "opsec"
  },
  "RFC7360": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [],
   "level": "experimental",
   "status": "current",
@@ -86563,7 +86563,7 @@
   "wg": "sfc"
  },
  "RFC7499": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "RADIUS",
    "attribute",
@@ -87101,7 +87101,7 @@
   "wg": "httpbis"
  },
  "RFC7542": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -87628,7 +87628,7 @@
   "wg": "straw"
  },
  "RFC7585": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "RADIUS",
    "AAA",
@@ -92047,7 +92047,7 @@
   "wg": "dane"
  },
  "RFC7930": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "ABFAB"
   ],
@@ -93501,7 +93501,7 @@
   "title": "Source-Address-Dependent Routing and Source Address Selection for IPv6 Hosts: Overview of the Problem Space"
  },
  "RFC8044": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -93510,7 +93510,7 @@
   "wg": "radext"
  },
  "RFC8045": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "address sharing",
    "address continuity",
@@ -99772,7 +99772,7 @@
   "title": "Transport Protocol Path Signals"
  },
  "RFC8559": {
-  "area": "ops",
+  "area": "sec",
   "keywords": [
    "RADIUS",
    "Change of Authorization",
