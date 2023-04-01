@@ -110165,6 +110165,17 @@
   "title": "DRIP Entity Tag (DET) for Unmanned Aircraft System Remote ID (UAS RID)",
   "wg": "drip"
  },
+ "RFC9376": {
+  "area": "rtg",
+  "keywords": [
+   "B100G OTN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Applicability of GMPLS for beyond 100 Gbit/s Optical Transport Network",
+  "wg": "ccamp"
+ },
  "RFC9384": {
   "area": "rtg",
   "keywords": [],
