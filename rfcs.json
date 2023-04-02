@@ -110185,6 +110185,40 @@
   "title": "A BGP Cease NOTIFICATION Subcode for Bidirectional Forwarding Detection (BFD)",
   "wg": "idr"
  },
+ "RFC9401": {
+  "keywords": [
+   "TCP",
+   "Control bits",
+   "flags"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "The Addition of the Death (DTH) Flag to TCP"
+ },
+ "RFC9402": {
+  "keywords": [
+   "cat",
+   "container"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Concat Notation"
+ },
+ "RFC9405": {
+  "keywords": [
+   "Artificial intelligence",
+   "ChatGPT",
+   "Large Language Models",
+   "Sarcasm",
+   "Sentiment analysis"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "AI Sarcasm Detection: Insult Your AI without Offending It"
+ },
  "RFC9411": {
   "area": "ops",
   "keywords": [
