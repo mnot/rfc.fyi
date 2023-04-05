@@ -110176,6 +110176,15 @@
   "title": "Applicability of GMPLS for beyond 100 Gbit/s Optical Transport Network",
   "wg": "ccamp"
  },
+ "RFC9377": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IS-IS Flood Reflection",
+  "wg": "lsr"
+ },
  "RFC9384": {
   "area": "rtg",
   "keywords": [],
