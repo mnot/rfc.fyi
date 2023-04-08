@@ -110016,6 +110016,20 @@
   "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Establishing Relationships between Sets of Label Switched Paths and Virtual Networks",
   "wg": "pce"
  },
+ "RFC9359": {
+  "area": "tsv",
+  "keywords": [
+   "IPv6",
+   "MPLS",
+   "SFC",
+   "BIER"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Echo Request/Reply for Enabled In Situ OAM (IOAM) Capabilities",
+  "wg": "ippm"
+ },
  "RFC9360": {
   "area": "sec",
   "keywords": [],
