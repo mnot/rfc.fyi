@@ -69771,7 +69771,7 @@
    "isp"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Emerging Service Provider Scenarios for IPv6 Deployment",
   "wg": "v6ops"
@@ -110207,6 +110207,42 @@
   "stream": "ietf",
   "title": "A BGP Cease NOTIFICATION Subcode for Bidirectional Forwarding Detection (BFD)",
   "wg": "idr"
+ },
+ "RFC9386": {
+  "area": "ops",
+  "keywords": [
+   "Survey",
+   "Challenges",
+   "IPv6-only",
+   "Overlay",
+   "Underlay",
+   "IPv4aaS"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Deployment Status",
+  "wg": "v6ops"
+ },
+ "RFC9391": {
+  "area": "int",
+  "keywords": [
+   "SCHC",
+   "Header Compression",
+   "Fragmentation",
+   "3GPP",
+   "5G",
+   "IoT",
+   "Sensor network",
+   "cellular network",
+   "LTE",
+   "LTE-M"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Static Context Header Compression over Narrowband Internet of Things",
+  "wg": "lpwan"
  },
  "RFC9401": {
   "keywords": [
