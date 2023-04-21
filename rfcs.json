@@ -46141,8 +46141,9 @@
  "RFC4113": {
   "area": "int",
   "keywords": [
-   "MIB-UDP",
+   "MIB-UDP|p",
    "mib",
+   "Management Information Base",
    "UDP-MIB",
    "internet protocol",
    "ip"
@@ -46618,7 +46619,7 @@
  "RFC4150": {
   "area": "ops",
   "keywords": [
-   "managgement information base",
+   "management information base",
    "tpm",
    "tpm-mib"
   ],
@@ -110223,6 +110224,21 @@
   "stream": "ietf",
   "title": "IPv6 Deployment Status",
   "wg": "v6ops"
+ },
+ "RFC9387": {
+  "area": "sec",
+  "keywords": [
+   "DOTS",
+   "Telemetry",
+   "Use cases",
+   "DDoS",
+   "Automation"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use Cases for DDoS Open Threat Signaling (DOTS) Telemetry",
+  "wg": "dots"
  },
  "RFC9391": {
   "area": "int",
