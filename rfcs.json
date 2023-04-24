@@ -47361,7 +47361,7 @@
  "RFC4210": {
   "area": "sec",
   "keywords": [
-   "PKICMP",
+   "PKICMP security",
    "cryptographic authentication",
    "pkix",
    "pki",
@@ -47431,7 +47431,7 @@
  },
  "RFC4214": {
   "keywords": [
-   "ISATAP]",
+   "ISATAP",
    "ipv4",
    "link layer",
    "nbma",
@@ -47678,7 +47678,7 @@
  },
  "RFC4234": {
   "keywords": [
-   "ABNF]",
+   "ABNF",
    "backus-naur form",
    "augmented backus-naur form",
    "rule definitions",
