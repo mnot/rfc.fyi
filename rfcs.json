@@ -23584,7 +23584,7 @@
    "key",
    "management"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "obsoleted",
   "stream": "ietf",
   "title": "The Internet IP Security Domain of Interpretation for ISAKMP",
@@ -23598,7 +23598,7 @@
    "cryptography",
    "authentication"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "obsoleted",
   "stream": "ietf",
   "title": "Internet Security Association and Key Management Protocol (ISAKMP)",
@@ -23617,7 +23617,7 @@
    "key",
    "management"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "obsoleted",
   "stream": "ietf",
   "title": "The Internet Key Exchange (IKE)",
@@ -110259,6 +110259,20 @@
   "stream": "ietf",
   "title": "Static Context Header Compression over Narrowband Internet of Things",
   "wg": "lpwan"
+ },
+ "RFC9395": {
+  "area": "sec",
+  "keywords": [
+   "IKEv1",
+   "IKEv2",
+   "IPsec",
+   "IKE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecation of the Internet Key Exchange Version 1 (IKEv1) Protocol and Obsoleted Algorithms",
+  "wg": "ipsecme"
  },
  "RFC9401": {
   "keywords": [
