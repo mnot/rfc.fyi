@@ -110240,6 +110240,15 @@
   "title": "Use Cases for DDoS Open Threat Signaling (DOTS) Telemetry",
   "wg": "dots"
  },
+ "RFC9390": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Diameter Group Signaling",
+  "wg": "dime"
+ },
  "RFC9391": {
   "area": "int",
   "keywords": [
