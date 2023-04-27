@@ -110180,6 +110180,17 @@
   "title": "DRIP Entity Tag (DET) for Unmanned Aircraft System Remote ID (UAS RID)",
   "wg": "drip"
  },
+ "RFC9375": {
+  "area": "ops",
+  "keywords": [
+   "VPN Performance Measurement Telemetry"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Network and VPN Service Performance Monitoring",
+  "wg": "opsawg"
+ },
  "RFC9376": {
   "area": "rtg",
   "keywords": [
@@ -110199,6 +110210,18 @@
   "stream": "ietf",
   "title": "IS-IS Flood Reflection",
   "wg": "lsr"
+ },
+ "RFC9378": {
+  "area": "tsv",
+  "keywords": [
+   "Telemetry",
+   "Tracing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "In Situ Operations, Administration, and Maintenance (IOAM) Deployment",
+  "wg": "ippm"
  },
  "RFC9384": {
   "area": "rtg",
@@ -110268,6 +110291,20 @@
   "stream": "ietf",
   "title": "Static Context Header Compression over Narrowband Internet of Things",
   "wg": "lpwan"
+ },
+ "RFC9392": {
+  "area": "tsv",
+  "keywords": [
+   "RTP",
+   "Congestion Control",
+   "VoIP",
+   "Video Conferencing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Sending RTP Control Protocol (RTCP) Feedback for Congestion Control in Interactive Multimedia Conferences",
+  "wg": "rmcat"
  },
  "RFC9395": {
   "area": "sec",
