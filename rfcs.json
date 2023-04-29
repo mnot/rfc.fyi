@@ -12006,8 +12006,8 @@
    "FAX",
    "Facsimile"
   ],
-  "level": "experimental",
-  "status": "current",
+  "level": "historic",
+  "status": "obsoleted",
   "stream": "legacy",
   "title": "Principles of Operation for the TPC.INT Subdomain: Remote Printing -- Technical Procedures"
  },
@@ -14150,7 +14150,7 @@
    "Record",
    "Resource"
   ],
-  "level": "informational",
+  "level": "historic",
   "status": "current",
   "stream": "legacy",
   "title": "DNS NSAP Resource Records"
@@ -47734,7 +47734,7 @@
   "keywords": [
    "vpim",
    "telephone number addressing",
-   "voice profile and intenret mail",
+   "voice profile and internet mail",
    "vpim directory"
   ],
   "level": "std",
@@ -102623,7 +102623,7 @@
    "nomcom"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Eligibility for the 2020-2021 Nominating Committee"
  },
@@ -105138,7 +105138,7 @@
  "RFC8989": {
   "keywords": [],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Additional Criteria for Nominating Committee Eligibility"
  },
@@ -106902,6 +106902,13 @@
   "status": "current",
   "stream": "iab",
   "title": "Nameservers for the Address and Routing Parameter Area (\"arpa\") Domain"
+ },
+ "RFC9121": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecating Infrastructure \"int\" Domains"
  },
  "RFC9124": {
   "area": "sec",
@@ -110262,6 +110269,17 @@
   "stream": "ietf",
   "title": "Use Cases for DDoS Open Threat Signaling (DOTS) Telemetry",
   "wg": "dots"
+ },
+ "RFC9389": {
+  "area": "gen",
+  "keywords": [
+   "NomCom"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Nominating Committee Eligibility",
+  "wg": "elegy"
  },
  "RFC9390": {
   "area": "ops",
