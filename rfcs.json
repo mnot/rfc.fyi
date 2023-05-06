@@ -41234,7 +41234,7 @@
    "certificates"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Internet X.509 Public Key Infrastructure: Logotypes in X.509 Certificates",
   "wg": "pkix"
@@ -71371,7 +71371,7 @@
    "otherLogos"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Internet X.509 Public Key Infrastructure -- Certificate Image",
   "wg": "pkix"
@@ -110337,6 +110337,21 @@
   "stream": "ietf",
   "title": "Deprecation of the Internet Key Exchange Version 1 (IKEv1) Protocol and Obsoleted Algorithms",
   "wg": "ipsecme"
+ },
+ "RFC9399": {
+  "area": "sec",
+  "keywords": [
+   "X.509",
+   "Public Key Infrastructure",
+   "authentication",
+   "security identification",
+   "certificates"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet X.509 Public Key Infrastructure: Logotypes in X.509 Certificates",
+  "wg": "lamps"
  },
  "RFC9401": {
   "keywords": [
