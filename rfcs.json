@@ -110387,6 +110387,18 @@
   "stream": "independent",
   "title": "AI Sarcasm Detection: Insult Your AI without Offending It"
  },
+ "RFC9406": {
+  "area": "tsv",
+  "keywords": [
+   "TCP",
+   "congestion control"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HyStart++: Modified Slow Start for TCP",
+  "wg": "tcpm"
+ },
  "RFC9411": {
   "area": "ops",
   "keywords": [
