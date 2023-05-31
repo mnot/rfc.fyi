@@ -110370,6 +110370,31 @@
   "title": "Deprecation of the Internet Key Exchange Version 1 (IKEv1) Protocol and Obsoleted Algorithms",
   "wg": "ipsecme"
  },
+ "RFC9396": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "oauth2"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Rich Authorization Requests",
+  "wg": "oauth"
+ },
+ "RFC9398": {
+  "area": "rtg",
+  "keywords": [
+   "IGMP Proxy",
+   "MLD Proxy",
+   "YANG"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Internet Group Management Protocol (IGMP) and Multicast Listener Discovery (MLD) Proxy Devices",
+  "wg": "pim"
+ },
  "RFC9399": {
   "area": "sec",
   "keywords": [
