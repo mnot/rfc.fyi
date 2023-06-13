@@ -110382,6 +110382,15 @@
   "title": "Sending RTP Control Protocol (RTCP) Feedback for Congestion Control in Interactive Multimedia Conferences",
   "wg": "rmcat"
  },
+ "RFC9394": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IMAP PARTIAL Extension for Paged SEARCH and FETCH",
+  "wg": "extra"
+ },
  "RFC9395": {
   "area": "sec",
   "keywords": [
@@ -110436,6 +110445,15 @@
   "title": "Internet X.509 Public Key Infrastructure: Logotypes in X.509 Certificates",
   "wg": "lamps"
  },
+ "RFC9400": {
+  "area": "gen",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines for the Organization of Fully Online Meetings",
+  "wg": "shmoo"
+ },
  "RFC9401": {
   "keywords": [
    "TCP",
@@ -110482,6 +110500,15 @@
   "title": "HyStart++: Modified Slow Start for TCP",
   "wg": "tcpm"
  },
+ "RFC9407": {
+  "keywords": [
+   "Network Coding"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Tetrys: An On-the-Fly Network Coding Protocol"
+ },
  "RFC9411": {
   "area": "ops",
   "keywords": [
@@ -110496,5 +110523,14 @@
   "stream": "ietf",
   "title": "Benchmarking Methodology for Network Security Device Performance",
   "wg": "bmwg"
+ },
+ "RFC9412": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The ORIGIN Extension in HTTP/3",
+  "wg": "httpbis"
  }
 }
