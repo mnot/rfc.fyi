@@ -35,20 +35,10 @@ function init () {
 }
 
 function loadDone () {
-  compute()
+  createSearchIndex()
+  countReferences()
   tagTypes.forEach(tagType => {
     initTags(tagType, clickTagHandler)
-  })
-  refs.forEach(rfc => {
-    const rfcRefs = refs.get(rfc, {})
-    rfcRefs.get('normative', []).forEach(ref => {
-      const rfcName = `RFC${ref.padStart(4, '0')}`
-      inRefs[rfcName] = inRefs.get(rfcName, 0) + 1
-    })
-    rfcRefs.get('informative', []).forEach(ref => {
-      const rfcName = `RFC${ref.padStart(4, '0')}`
-      inRefs[rfcName] = inRefs.get(rfcName, 0) + 1
-    })
   })
   installFormHandlers()
   installClickHandlers()
@@ -92,7 +82,7 @@ function installClickHandlers () {
   sortByRefs.onclick = (event) => { showRfcs(true); return false }
 }
 
-function compute () {
+function createSearchIndex () {
   allRfcs = Object.keys(rfcs)
   allRfcs.sort(rfcSort)
   allRfcs.forEach(rfcName => {
@@ -114,6 +104,20 @@ function compute () {
     // index titles
     searchIndex(rfc.title.split(' '), rfcName, words)
     searchIndex(rfc.keywords, rfcName, keywords)
+  })
+}
+
+function countReferences () {
+  refs.forEach(rfc => {
+    const rfcRefs = refs.get(rfc, {})
+    rfcRefs.get('normative', []).forEach(ref => {
+      const rfcName = `RFC${ref.padStart(4, '0')}`
+      inRefs[rfcName] = inRefs.get(rfcName, 0) + 1
+    })
+    rfcRefs.get('informative', []).forEach(ref => {
+      const rfcName = `RFC${ref.padStart(4, '0')}`
+      inRefs[rfcName] = inRefs.get(rfcName, 0) + 1
+    })
   })
 }
 
