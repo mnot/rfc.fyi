@@ -17,7 +17,7 @@ client-es5.js: client.js util.js
 
 .PHONY: server
 server:
-	python -m SimpleHTTPServer
+	python -m http.server
 
 .PHONY: lint
 lint: client.js util.js *.py
