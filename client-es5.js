@@ -282,6 +282,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
       });
     });
     installFormHandlers();
+    installClickHandlers();
     loadUrl();
     window.onpopstate = back;
   }
@@ -312,6 +313,18 @@ $traceurRuntime.registerModule("client.js", [], function() {
     title = document.getElementById('title');
     title.onclick = function() {
       window.location = '/';
+    };
+  }
+  function installClickHandlers() {
+    var sortByNum = document.getElementById('sortByNumber');
+    sortByNum.onclick = function(event) {
+      showRfcs();
+      return false;
+    };
+    var sortByRefs = document.getElementById('sortByRefs');
+    sortByRefs.onclick = function(event) {
+      showRfcs(true);
+      return false;
     };
   }
   function compute() {
@@ -398,7 +411,7 @@ $traceurRuntime.registerModule("client.js", [], function() {
       activeTags.delete(tagType);
     }
   }
-  function showRfcs() {
+  function showRfcs(sortByRef) {
     var target = document.getElementById('rfc-list');
     clear(target);
     var searchedRfcs = new Set();
@@ -412,7 +425,11 @@ $traceurRuntime.registerModule("client.js", [], function() {
       searchedRfcs = listSearchedRfcs();
       relevantRfcs = taggedRfcs.intersection(searchedRfcs);
       rfcList = Array.from(relevantRfcs);
-      rfcList.sort(rfcSort);
+      if (sortByRef === true) {
+        rfcList.sort(refSort);
+      } else {
+        rfcList.sort(rfcSort);
+      }
       rfcList.forEach(function(item) {
         var rfcData = rfcs[item];
         renderRfc(item, rfcData, target);
@@ -654,6 +671,9 @@ $traceurRuntime.registerModule("client.js", [], function() {
     return output.replace(/[\]().,?"']/g, '');
   }
   function rfcSort(a, b) {
+    return parseInt(b.replace('RFC', '')) - parseInt(a.replace('RFC', ''));
+  }
+  function refSort(a, b) {
     return inRefs.get(b, 0) - inRefs.get(a, 0);
   }
   util.addDOMLoadEvent(init);

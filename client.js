@@ -51,6 +51,7 @@ function loadDone () {
     })
   })
   installFormHandlers()
+  installClickHandlers()
   loadUrl()
   window.onpopstate = back
 }
@@ -82,6 +83,13 @@ function installFormHandlers () {
   title.onclick = function () {
     window.location = '/'
   }
+}
+
+function installClickHandlers () {
+  const sortByNum = document.getElementById('sortByNumber')
+  sortByNum.onclick = (event) => { showRfcs(); return false }
+  const sortByRefs = document.getElementById('sortByRefs')
+  sortByRefs.onclick = (event) => { showRfcs(true); return false }
 }
 
 function compute () {
@@ -171,7 +179,7 @@ function setTagActivity (tagType, tagName, active) {
   }
 }
 
-function showRfcs () {
+function showRfcs (sortByRef) {
   const target = document.getElementById('rfc-list')
   clear(target)
   let searchedRfcs = new Set()
@@ -187,12 +195,17 @@ function showRfcs () {
     searchedRfcs = listSearchedRfcs()
     relevantRfcs = taggedRfcs.intersection(searchedRfcs)
     rfcList = Array.from(relevantRfcs)
-    rfcList.sort(rfcSort)
+    if (sortByRef === true) {
+      rfcList.sort(refSort)
+    } else {
+      rfcList.sort(rfcSort)
+    }
     rfcList.forEach(item => {
       const rfcData = rfcs[item]
       renderRfc(item, rfcData, target)
     })
   }
+
   // tags
   if (!userInput) { // default screen
     const relevantTags = {
@@ -207,11 +220,13 @@ function showRfcs () {
   } else { // search (and possibly tags), but only worry about search terms
     showRelevantTags(searchedRfcs)
   }
+
   // count
   const count = document.createTextNode(rfcList.length + ' RFCs')
   const countTarget = document.getElementById('count')
   clear(countTarget)
   countTarget.appendChild(count)
+
   setContainer(rfcList.length > 0 || userInput)
 }
 
@@ -435,6 +450,10 @@ function cleanString (input) {
 }
 
 function rfcSort (a, b) {
+  return parseInt(b.replace('RFC', '')) - parseInt(a.replace('RFC', ''))
+}
+
+function refSort (a, b) {
   return inRefs.get(b, 0) - inRefs.get(a, 0)
 }
 
