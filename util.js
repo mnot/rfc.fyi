@@ -1,7 +1,8 @@
 /* global XMLHttpRequest */
 
 let outstanding = 0 // outstanding fetches
-const doneFuncs = [] // things to do when fetching is done
+let doneFunc = null
+let doneContext = null
 
 export function loadJson (url, func) {
   const req = new XMLHttpRequest()
@@ -24,14 +25,13 @@ export function loadJson (url, func) {
   }
 }
 
-export function onDone (func) {
-  doneFuncs.push(func)
+export function onDone (func, context) {
+  doneFunc = func
+  doneContext = context
 }
 
 function loadDone () {
-  doneFuncs.forEach(func => {
-    func()
-  })
+  doneFunc.bind(doneContext)()
 }
 
 export function genColour (str) {

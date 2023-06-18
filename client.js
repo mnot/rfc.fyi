@@ -2,515 +2,516 @@
 
 import * as util from './util.js'
 
-const prefixLen = 3
-const tagTypes = ['collection', 'status', 'stream', 'level', 'wg']
-const unshownTagTypes = ['status']
-const oldTags = [
-  'status-obsoleted',
-  'level-historic'
-]
+class RfcFyiUi {
+  prefixLen = 3
+  tagTypes = ['collection', 'status', 'stream', 'level', 'wg']
+  unshownTagTypes = ['status']
+  oldTags = [
+    'status-obsoleted',
+    'level-historic'
+  ]
 
-let tags = {} // tags and associated rfcs
-const activeTags = new Map() // what tags are active
-let verbose = false // whether we're showing obsolete, etc.
-const words = new Map() // index of word prefixes to RFCs containing them
-const keywords = new Map() // index of keyword phrases to RFCs containing them
-let searchWords = [] // words the user is searching for
-let allRfcs = [] // list of all RFC names
-let rfcs = {} // RFC objects
-let refs = {} // references
-const inRefs = {} // inbound references
+  tags = {} // tags and associated rfcs
+  activeTags = new Map() // what tags are active
+  verbose = false // whether we're showing obsolete, etc.
+  words = new Map() // index of word prefixes to RFCs containing them
+  keywords = new Map() // index of keyword phrases to RFCs containing them
+  searchWords = [] // words the user is searching for
+  allRfcs = [] // list of all RFC names
+  rfcs = {} // RFC objects
+  refs = {} // references
+  inRefs = {} // inbound references
 
-const tagColours = {
-  stream: '#678',
-  level: '#a33',
-  wg: '#ccc'
-}
+  tagColours = {
+    stream: '#678',
+    level: '#a33',
+    wg: '#ccc'
+  }
 
-function init () {
-  util.onDone(loadDone)
-  util.loadJson('tags.json', function (json) { tags = json })
-  util.loadJson('rfcs.json', function (json) { rfcs = json })
-  util.loadJson('refs.json', function (json) { refs = json })
-}
+  load () {
+    util.onDone(this.loadDone, this)
+    util.loadJson('tags.json', (json) => { this.tags = json })
+    util.loadJson('rfcs.json', (json) => { this.rfcs = json })
+    util.loadJson('refs.json', (json) => { this.refs = json })
+  }
 
-function loadDone () {
-  createSearchIndex()
-  computeReferences()
-  tagTypes.forEach(tagType => {
-    initTags(tagType, clickTagHandler)
-  })
-  installFormHandlers()
-  installClickHandlers()
-  loadUi()
-  window.onpopstate = loadUi
-}
+  loadDone () {
+    this.createSearchIndex()
+    this.computeReferences()
+    this.tagTypes.forEach(tagType => {
+      this.initTags(tagType, this.clickTagHandler)
+    })
+    this.installFormHandlers()
+    this.installClickHandlers()
+    this.loadUi()
+    window.onpopstate = this.loadUi
+  }
 
-let obsoleteTarget
-let searchTarget
-let clearSearchTarget
-let form
-let title
-
-function installFormHandlers () {
   obsoleteTarget = document.getElementById('obsolete')
-  obsoleteTarget.onchange = showObsoleteHandler
   searchTarget = document.getElementById('search')
-  searchTarget.placeholder = 'Search titles & keywords'
-  searchTarget.oninput = searchInput
-  searchTarget.disabled = false
-  searchTarget.focus()
   clearSearchTarget = document.getElementById('clearSearch')
-  clearSearchTarget.onclick = clearSearchHandler
   form = document.forms[0]
-  form.onsubmit = searchSubmit
   title = document.getElementById('title')
-  title.onclick = function () {
-    window.location = '/'
+
+  installFormHandlers () {
+    this.obsoleteTarget.onchange = this.showObsoleteHandler
+    this.searchTarget.placeholder = 'Search titles & keywords'
+    this.searchTarget.oninput = this.searchInput
+    this.searchTarget.disabled = false
+    this.searchTarget.focus()
+    this.clearSearchTarget.onclick = this.clearSearchHandler
+    this.form.onsubmit = this.searchSubmit
+    this.title.onclick = function () {
+      window.location = '/'
+    }
   }
-}
 
-function installClickHandlers () {
-  const sortByNum = document.getElementById('sortByNumber')
-  sortByNum.onclick = (event) => { showRfcs(); return false }
-  const sortByRefs = document.getElementById('sortByRefs')
-  sortByRefs.onclick = (event) => { showRfcs(true); return false }
-}
+  installClickHandlers () {
+    const sortByNum = document.getElementById('sortByNumber')
+    sortByNum.onclick = (event) => { this.showRfcs(); return false }
+    const sortByRefs = document.getElementById('sortByRefs')
+    sortByRefs.onclick = (event) => { this.showRfcs(true); return false }
+  }
 
-function createSearchIndex () {
-  allRfcs = Object.keys(rfcs)
-  allRfcs.sort(rfcSort)
-  allRfcs.forEach(rfcName => {
-    const rfc = rfcs[rfcName]
-    tagTypes.forEach(tagType => {
-      const tagName = rfc[tagType]
-      if (tagName) {
-        if (!tags[tagType]) tags[tagType] = {}
-        if (!tags[tagType][tagName]) {
-          tags[tagType][tagName] = {
-            colour: '',
-            rfcs: [],
-            active: false
+  createSearchIndex () {
+    this.allRfcs = Object.keys(this.rfcs)
+    this.allRfcs.sort(this.rfcSort)
+    this.allRfcs.forEach(rfcName => {
+      const rfc = this.rfcs[rfcName]
+      this.tagTypes.forEach(tagType => {
+        const tagName = rfc[tagType]
+        if (tagName) {
+          if (!this.tags[tagType]) this.tags[tagType] = {}
+          if (!this.tags[tagType][tagName]) {
+            this.tags[tagType][tagName] = {
+              colour: '',
+              rfcs: [],
+              active: false
+            }
           }
+          this.tags[tagType][tagName].rfcs.push(rfcName)
         }
-        tags[tagType][tagName].rfcs.push(rfcName)
-      }
+      })
+      // index titles and keywords
+      this.searchIndex(rfc.title.split(' '), rfcName, this.words)
+      this.searchIndex(rfc.keywords, rfcName, this.keywords)
     })
-    // index titles
-    searchIndex(rfc.title.split(' '), rfcName, words)
-    searchIndex(rfc.keywords, rfcName, keywords)
-  })
-}
+  }
 
-function computeReferences () {
-  allRfcs.forEach(rfcName => {
-    inRefs[rfcName] = []
-  })
-  refs.forEach(rfcNum => {
-    const rfcName = rfcNumtoName(rfcNum)
-    const rfcRefs = refs.get(rfcNum, {})
-    rfcRefs.get('normative', []).forEach(ref => {
-      const refName = rfcNumtoName(ref)
-      try {
-        inRefs[refName].push([true, rfcName])
-      } catch (error) {
-        console.log(`${rfcName} has non-existant normative reference - ${refName}`)
-      }
+  computeReferences () {
+    this.allRfcs.forEach(rfcName => {
+      this.inRefs[rfcName] = []
     })
-    rfcRefs.get('informative', []).forEach(ref => {
-      const refName = rfcNumtoName(ref)
-      try {
-        inRefs[refName].push([false, rfcName])
-      } catch (error) {
-        console.log(`${rfcName} has non-existant informative refereence - ${refName}`)
-      }
+    this.refs.forEach(rfcNum => {
+      const rfcName = this.rfcNumtoName(rfcNum)
+      const rfcRefs = this.refs.get(rfcNum, {})
+      rfcRefs.get('normative', []).forEach(ref => {
+        const refName = this.rfcNumtoName(ref)
+        try {
+          this.inRefs[refName].push([true, rfcName])
+        } catch (error) {
+          console.log(`${rfcName} has non-existant normative reference - ${refName}`)
+        }
+      })
+      rfcRefs.get('informative', []).forEach(ref => {
+        const refName = this.rfcNumtoName(ref)
+        try {
+          this.inRefs[refName].push([false, rfcName])
+        } catch (error) {
+          console.log(`${rfcName} has non-existant informative refereence - ${refName}`)
+        }
+      })
     })
-  })
-}
-
-function initTags (tagType, clickHandler) {
-  if (unshownTagTypes.includes(tagType)) return
-  const targetDiv = document.getElementById(tagType)
-  const tagList = tags[tagType].keys()
-  tagList.sort()
-  tagList.forEach(tagName => {
-    const tagSpan = renderTag(tagType, tagName, targetDiv, clickHandler)
-    tags[tagType][tagName].target = tagSpan
-    targetDiv.appendChild(document.createTextNode(' '))
-  })
-}
-
-function renderTag (tagType, tagName, target, clickHandler) {
-  const tagSpan = document.createElement('span')
-  const tagContent = document.createTextNode(tagName)
-  const tagData = tags[tagType][tagName]
-  tagSpan.appendChild(tagContent)
-  tagSpan.classList.add('tag')
-  tagSpan.style.backgroundColor = tagData.colour || tagColours[tagType] || util.genColour(tagName)
-  tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor)
-  if (clickHandler) {
-    tagSpan.onclick = clickHandler(tagType, tagName)
-  } else {
-    tagSpan.style.cursor = 'default'
   }
-  target.appendChild(tagSpan)
-  return tagSpan
-}
 
-function clickTagHandler (tagType, tagName) {
-  return function (event) {
-    const activeTag = activeTags.get(tagType)
-    if (activeTag && activeTag !== tagName) {
-      setTagActivity(tagType, activeTag, false)
-    }
-    const tagData = tags[tagType][tagName]
-    setTagActivity(tagType, tagName, !tagData.active)
-    showRfcs()
-    updateUrl()
+  initTags (tagType, clickHandler) {
+    if (this.unshownTagTypes.includes(tagType)) return
+    const targetDiv = document.getElementById(tagType)
+    const tagList = this.tags[tagType].keys()
+    tagList.sort()
+    tagList.forEach(tagName => {
+      const tagSpan = this.renderTag(tagType, tagName, targetDiv, clickHandler)
+      this.tags[tagType][tagName].target = tagSpan
+      targetDiv.appendChild(document.createTextNode(' '))
+    })
   }
-}
 
-function clearSearchHandler (event) {
-  searchTarget.value = ''
-  searchWords = []
-  showRfcs()
-  updateUrl()
-}
-
-function setTagActivity (tagType, tagName, active) {
-  const change = tagType !== 'collection'
-  const tagData = tags[tagType][tagName]
-  tagData.active = active
-  if (tagData.active === true) {
-    if (change) tagData.target.className = 'tag-active'
-    activeTags.set(tagType, tagName)
-  } else {
-    if (change) tagData.target.className = 'tag'
-    activeTags.delete(tagType)
-  }
-}
-
-function showRfcs (sortByRef) {
-  const target = document.getElementById('rfc-list')
-  clear(target)
-  let searchedRfcs = new Set()
-  let taggedRfcs = new Set()
-  let relevantRfcs = new Set()
-  let rfcList = []
-  let userInput = false
-  if (activeTags.size !== 0 ||
-      (searchWords.length !== 0 && !isNaN(parseInt(searchWords[0]))) ||
-      (searchWords.length !== 0 && searchWords[0].length >= prefixLen)) {
-    userInput = true
-    taggedRfcs = listTaggedRfcs()
-    searchedRfcs = listSearchedRfcs()
-    relevantRfcs = taggedRfcs.intersection(searchedRfcs)
-    rfcList = Array.from(relevantRfcs)
-    if (sortByRef === true) {
-      rfcList.sort(refSort)
+  renderTag (tagType, tagName, target, clickHandler) {
+    const tagSpan = document.createElement('span')
+    const tagContent = document.createTextNode(tagName)
+    const tagData = this.tags[tagType][tagName]
+    tagSpan.appendChild(tagContent)
+    tagSpan.classList.add('tag')
+    tagSpan.style.backgroundColor = tagData.colour || this.tagColours[tagType] || util.genColour(tagName)
+    tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor)
+    if (clickHandler) {
+      tagSpan.onclick = clickHandler(tagType, tagName)
     } else {
-      rfcList.sort(rfcSort)
+      tagSpan.style.cursor = 'default'
     }
-    rfcList.forEach(item => {
-      const rfcData = rfcs[item]
-      renderRfc(item, rfcData, target)
+    target.appendChild(tagSpan)
+    return tagSpan
+  }
+
+  clickTagHandler (tagType, tagName) {
+    return (event) => {
+      const activeTag = ui.activeTags.get(tagType)
+      if (activeTag && activeTag !== tagName) {
+        ui.setTagActivity(tagType, activeTag, false)
+      }
+      const tagData = ui.tags[tagType][tagName]
+      ui.setTagActivity(tagType, tagName, !tagData.active)
+      ui.showRfcs()
+      ui.updateUrl()
+    }
+  }
+
+  clearSearchHandler (event) {
+    ui.searchTarget.value = ''
+    ui.searchWords = []
+    ui.showRfcs()
+    ui.updateUrl()
+  }
+
+  setTagActivity (tagType, tagName, active) {
+    const change = tagType !== 'collection'
+    const tagData = this.tags[tagType][tagName]
+    tagData.active = active
+    if (tagData.active === true) {
+      if (change) tagData.target.className = 'tag-active'
+      this.activeTags.set(tagType, tagName)
+    } else {
+      if (change) tagData.target.className = 'tag'
+      this.activeTags.delete(tagType)
+    }
+  }
+
+  showRfcs (sortByRef) {
+    const target = document.getElementById('rfc-list')
+    this.clear(target)
+    let searchedRfcs = new Set()
+    let taggedRfcs = new Set()
+    let relevantRfcs = new Set()
+    let rfcList = []
+    let userInput = false
+    if (this.activeTags.size !== 0 ||
+        (this.searchWords.length !== 0 && !isNaN(parseInt(this.searchWords[0]))) ||
+        (this.searchWords.length !== 0 && this.searchWords[0].length >= this.prefixLen)) {
+      userInput = true
+      taggedRfcs = this.listTaggedRfcs()
+      searchedRfcs = this.listSearchedRfcs()
+      relevantRfcs = taggedRfcs.intersection(searchedRfcs)
+      rfcList = Array.from(relevantRfcs)
+      if (sortByRef === true) {
+        rfcList.sort(this.refSort)
+      } else {
+        rfcList.sort(this.rfcSort)
+      }
+      rfcList.forEach(item => {
+        const rfcData = this.rfcs[item]
+        this.renderRfc(item, rfcData, target)
+      })
+    }
+
+    // tags
+    if (!userInput) { // default screen
+      const relevantTags = {
+        collection: new Set(this.tags.collection.keys()),
+        stream: new Set(this.tags.stream.keys())
+      }
+      this.showTags(relevantTags, false)
+    } else if (this.activeTags.has('collection')) { // show a collection
+      this.showRelevantTags(relevantRfcs)
+    } else if (this.searchWords.length === 0) { // just tags
+      this.showRelevantTags(taggedRfcs)
+    } else { // search (and possibly tags), but only worry about search terms
+      this.showRelevantTags(searchedRfcs)
+    }
+
+    // count
+    const count = document.createTextNode(`${rfcList.length} RFC${this.pluralise(rfcList.length)}`)
+    const countTarget = document.getElementById('count')
+    this.clear(countTarget)
+    countTarget.appendChild(count)
+
+    this.setContainer(rfcList.length > 0 || userInput)
+  }
+
+  listTaggedRfcs () {
+    let filteredRfcs = new Set(this.allRfcs)
+    this.tags.forEach(tagType => {
+      this.tags[tagType].forEach(tagName => {
+        const tagData = this.tags[tagType][tagName]
+        const rfcs = new Set(tagData.rfcs)
+        if (tagData.active === true) {
+          filteredRfcs = filteredRfcs.intersection(rfcs)
+        } else if (!this.verbose && this.oldTags.includes(`${tagType}-${tagName}`)) {
+          filteredRfcs = filteredRfcs.difference(rfcs)
+        }
+      })
     })
+    return filteredRfcs
   }
 
-  // tags
-  if (!userInput) { // default screen
-    const relevantTags = {
-      collection: new Set(tags.collection.keys()),
-      stream: new Set(tags.stream.keys())
-    }
-    showTags(relevantTags, false)
-  } else if (activeTags.has('collection')) { // show a collection
-    showRelevantTags(relevantRfcs)
-  } else if (searchWords.length === 0) { // just tags
-    showRelevantTags(taggedRfcs)
-  } else { // search (and possibly tags), but only worry about search terms
-    showRelevantTags(searchedRfcs)
-  }
-
-  // count
-  const count = document.createTextNode(`${rfcList.length} RFC${pluralise(rfcList.length)}`)
-  const countTarget = document.getElementById('count')
-  clear(countTarget)
-  countTarget.appendChild(count)
-
-  setContainer(rfcList.length > 0 || userInput)
-}
-
-function listTaggedRfcs () {
-  let filteredRfcs = new Set(allRfcs)
-  tags.forEach(tagType => {
-    tags[tagType].forEach(tagName => {
-      const tagData = tags[tagType][tagName]
-      const rfcs = new Set(tagData.rfcs)
-      if (tagData.active === true) {
-        filteredRfcs = filteredRfcs.intersection(rfcs)
-      } else if (!verbose && oldTags.includes(`${tagType}-${tagName}`)) {
-        filteredRfcs = filteredRfcs.difference(rfcs)
+  listSearchedRfcs () {
+    let filteredRfcs = new Set(this.allRfcs)
+    this.searchWords.forEach(searchWord => {
+      const padded = `RFC${searchWord.padStart(4, '0')}`
+      if (padded in this.rfcs) {
+        filteredRfcs = new Set([padded])
+      } else if (searchWord.length >= this.prefixLen || this.searchWords.length === 1) {
+        const wordRfcs = this.searchLookup(searchWord, this.words, 'title')
+        const keywordRfcs = this.searchLookup(searchWord, this.keywords, 'keywords')
+        filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
       }
     })
-  })
-  return filteredRfcs
-}
+    return filteredRfcs
+  }
 
-function listSearchedRfcs () {
-  let filteredRfcs = new Set(allRfcs)
-  searchWords.forEach(searchWord => {
-    const padded = `RFC${searchWord.padStart(4, '0')}`
-    if (padded in rfcs) {
-      filteredRfcs = new Set([padded])
-    } else if (searchWord.length >= prefixLen || searchWords.length === 1) {
-      const wordRfcs = searchLookup(searchWord, words, 'title')
-      const keywordRfcs = searchLookup(searchWord, keywords, 'keywords')
-      filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
+  renderRfc (rfcName, rfcData, target, hideRefs) {
+    const rfcNum = this.rfcNametoNum(rfcName)
+    const rfcSpan = document.createElement('li')
+    rfcSpan.num = rfcNum
+    rfcSpan.data = rfcData
+    const rfcRef = document.createElement('a')
+    rfcRef.className = 'reference'
+    rfcRef.href = `https://www.rfc-editor.org/refs/bibxml/reference.RFC.${rfcNum}.xml`
+    rfcRef.appendChild(document.createTextNode(rfcName))
+    rfcSpan.appendChild(rfcRef)
+    const sep = document.createTextNode(': ')
+    rfcSpan.appendChild(sep)
+    const rfcLink = document.createElement('a')
+    rfcLink.href = `https://www.rfc-editor.org/rfc/rfc${rfcNum}.html`
+    rfcSpan.appendChild(rfcLink)
+    const rfcTitle = document.createTextNode(rfcData.title)
+    rfcLink.appendChild(rfcTitle)
+    if (rfcData.stream !== 'ietf') {
+      this.renderTag('stream', rfcData.stream, rfcSpan)
     }
-  })
-  return filteredRfcs
-}
+    if (rfcData.level !== 'std') {
+      this.renderTag('level', rfcData.level, rfcSpan)
+    }
+    if (rfcData.wg) {
+      this.renderTag('wg', rfcData.wg, rfcSpan)
+    }
+    if (hideRefs !== true) {
+      const refSpan = document.createElement('span')
+      refSpan.className = 'refcount'
+      const count = this.inRefs.get(rfcName, []).length
+      const refCountLink = document.createElement('a')
+      refCountLink.href = '#'
+      refCountLink.className = 'refcountlink'
+      refCountLink.onclick = this.refExpandHandler
+      const refCountText = document.createTextNode(`${count} referencing RFC${this.pluralise(count)}`)
+      refCountLink.appendChild(refCountText)
+      refSpan.appendChild(refCountLink)
+      rfcSpan.appendChild(refSpan)
+    }
+    target.appendChild(rfcSpan)
+  }
 
-function renderRfc (rfcName, rfcData, target, hideRefs) {
-  const rfcNum = rfcNametoNum(rfcName)
-  const rfcSpan = document.createElement('li')
-  rfcSpan.num = rfcNum
-  rfcSpan.data = rfcData
-  const rfcRef = document.createElement('a')
-  rfcRef.className = 'reference'
-  rfcRef.href = `https://www.rfc-editor.org/refs/bibxml/reference.RFC.${rfcNum}.xml`
-  rfcRef.appendChild(document.createTextNode(rfcName))
-  rfcSpan.appendChild(rfcRef)
-  const sep = document.createTextNode(': ')
-  rfcSpan.appendChild(sep)
-  const rfcLink = document.createElement('a')
-  rfcLink.href = `https://www.rfc-editor.org/rfc/rfc${rfcNum}.html`
-  rfcSpan.appendChild(rfcLink)
-  const rfcTitle = document.createTextNode(rfcData.title)
-  rfcLink.appendChild(rfcTitle)
-  if (rfcData.stream !== 'ietf') {
-    renderTag('stream', rfcData.stream, rfcSpan)
+  refExpandHandler (event) {
+    const refList = document.createElement('ul')
+    const rfcElement = event.target.parentElement.parentElement
+    const rfcName = ui.rfcNumtoName(rfcElement.num)
+    const rfcRefs = ui.inRefs.get(rfcName, [])
+    rfcRefs.forEach(ref => {
+      //    const normative = ref[0]
+      const refName = ref[1]
+      const refData = ui.rfcs[refName]
+      ui.renderRfc(refName, refData, refList, true)
+    })
+    event.target.parentElement.appendChild(refList)
+    event.target.removeChild(event.target.firstChild)
+    event.stopPropagation()
+    return false
   }
-  if (rfcData.level !== 'std') {
-    renderTag('level', rfcData.level, rfcSpan)
-  }
-  if (rfcData.wg) {
-    renderTag('wg', rfcData.wg, rfcSpan)
-  }
-  if (hideRefs !== true) {
-    const refSpan = document.createElement('span')
-    refSpan.className = 'refcount'
-    const count = inRefs.get(rfcName, []).length
-    const refCountLink = document.createElement('a')
-    refCountLink.href = '#'
-    refCountLink.className = 'refcountlink'
-    refCountLink.onclick = refExpandHandler
-    const refCountText = document.createTextNode(`${count} referencing RFC${pluralise(count)}`)
-    refCountLink.appendChild(refCountText)
-    refSpan.appendChild(refCountLink)
-    rfcSpan.appendChild(refSpan)
-  }
-  target.appendChild(rfcSpan)
-}
 
-function refExpandHandler (event) {
-  const refList = document.createElement('ul')
-  const rfcElement = event.target.parentElement.parentElement
-  const rfcName = rfcNumtoName(rfcElement.num)
-  const rfcRefs = inRefs.get(rfcName, [])
-  rfcRefs.forEach(ref => {
-    //    const normative = ref[0]
-    const refName = ref[1]
-    const refData = rfcs[refName]
-    renderRfc(refName, refData, refList, true)
-  })
-  event.target.parentElement.appendChild(refList)
-  event.target.removeChild(event.target.firstChild)
-  event.stopPropagation()
-  return false
-}
+  showRelevantTags (rfcSet) {
+    const relevantTags = {}
+    this.tagTypes.forEach(tagType => {
+      relevantTags[tagType] = new Set()
+      const activeTag = this.activeTags.get(tagType)
+      if (activeTag) relevantTags[tagType].add(activeTag)
+    })
+    rfcSet.forEach(rfcName => {
+      this.tagTypes.forEach(tagType => {
+        const tagName = this.rfcs[rfcName][tagType]
+        if (!this.verbose && this.oldTags.includes(`${tagType}-${tagName}`)) {
+          return
+        }
+        if (tagName) {
+          relevantTags[tagType].add(tagName)
+        }
+      })
+    })
+    this.showTags(relevantTags)
+  }
 
-function showRelevantTags (rfcSet) {
-  const relevantTags = {}
-  tagTypes.forEach(tagType => {
-    relevantTags[tagType] = new Set()
-    const activeTag = activeTags.get(tagType)
-    if (activeTag) relevantTags[tagType].add(activeTag)
-  })
-  rfcSet.forEach(rfcName => {
-    tagTypes.forEach(tagType => {
-      const tagName = rfcs[rfcName][tagType]
-      if (!verbose && oldTags.includes(`${tagType}-${tagName}`)) {
+  showTags (relevantTags, showHeader = true) {
+    this.tagTypes.forEach(tagType => {
+      if (this.unshownTagTypes.includes(tagType)) return
+      if (!relevantTags[tagType]) {
+        relevantTags[tagType] = new Set()
+      }
+      const header = document.getElementById(tagType + '-header')
+      header.style.display = showHeader && relevantTags[tagType].size > 0 ? 'block' : 'none'
+      this.tags[tagType].forEach(tagName => {
+        const visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
+        this.tags[tagType][tagName].target.style.display = visibility
+      })
+    })
+  }
+
+  searchIndex (words, inputId, index) {
+    words.forEach(word => {
+      word = this.cleanString(word)
+      if (word.length < this.prefixLen) {
         return
       }
-      if (tagName) {
-        relevantTags[tagType].add(tagName)
+      const prefix = word.substring(0, this.prefixLen)
+      if (index.has(prefix)) {
+        index.get(prefix).add(inputId)
+      } else {
+        index.set(prefix, new Set([inputId]))
       }
     })
-  })
-  showTags(relevantTags)
-}
+  }
 
-function showTags (relevantTags, showHeader = true) {
-  tagTypes.forEach(tagType => {
-    if (unshownTagTypes.includes(tagType)) return
-    if (!relevantTags[tagType]) {
-      relevantTags[tagType] = new Set()
-    }
-    const header = document.getElementById(tagType + '-header')
-    header.style.display = showHeader && relevantTags[tagType].size > 0 ? 'block' : 'none'
-    tags[tagType].forEach(tagName => {
-      const visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
-      tags[tagType][tagName].target.style.display = visibility
-    })
-  })
-}
+  searchInput () {
+    const searchText = document.getElementById('search').value
+    ui.searchWords = searchText.split(' ').filter(word => word)
+    ui.showRfcs()
+  }
 
-function searchIndex (words, inputId, index) {
-  words.forEach(word => {
-    word = cleanString(word)
-    if (word.length < prefixLen) {
-      return
-    }
-    const prefix = word.substring(0, prefixLen)
-    if (index.has(prefix)) {
-      index.get(prefix).add(inputId)
-    } else {
-      index.set(prefix, new Set([inputId]))
-    }
-  })
-}
+  searchSubmit () {
+    this.updateUrl()
+    return false
+  }
 
-function searchInput () {
-  const searchText = document.getElementById('search').value
-  searchWords = searchText.split(' ').filter(word => word)
-  showRfcs()
-}
-
-function searchSubmit () {
-  updateUrl()
-  return false
-}
-
-function searchLookup (searchWord, index, attr) {
-  searchWord = cleanString(searchWord)
-  const searchPrefix = searchWord.substring(0, prefixLen)
-  const matchRfcs = new Set(index.get(searchPrefix))
-  if (searchWord.length > prefixLen) {
-    matchRfcs.forEach(rfcName => {
-      let hit = false
-      let fullItem = rfcs[rfcName][attr]
-      if (typeof (fullItem) === 'string') fullItem = fullItem.split(' ')
-      fullItem.forEach(item => {
-        if (cleanString(item).startsWith(searchWord)) hit = true
+  searchLookup (searchWord, index, attr) {
+    searchWord = this.cleanString(searchWord)
+    const searchPrefix = searchWord.substring(0, this.prefixLen)
+    const matchRfcs = new Set(index.get(searchPrefix))
+    if (searchWord.length > this.prefixLen) {
+      matchRfcs.forEach(rfcName => {
+        let hit = false
+        let fullItem = this.rfcs[rfcName][attr]
+        if (typeof (fullItem) === 'string') fullItem = fullItem.split(' ')
+        fullItem.forEach(item => {
+          if (this.cleanString(item).startsWith(searchWord)) hit = true
+        })
+        if (!hit) matchRfcs.delete(rfcName)
       })
-      if (!hit) matchRfcs.delete(rfcName)
-    })
+    }
+    return matchRfcs
   }
-  return matchRfcs
-}
 
-function showObsoleteHandler (event) {
-  verbose = obsoleteTarget.checked
-  showRfcs()
-  updateUrl()
-}
+  showObsoleteHandler (event) {
+    ui.verbose = ui.obsoleteTarget.checked
+    ui.showRfcs()
+    ui.updateUrl()
+  }
 
-function updateUrl () {
-  const queries = []
-  if (searchWords.length > 0) {
-    queries.push('search=' + searchWords.join('%20'))
-  }
-  if (verbose) {
-    queries.push('obsolete')
-  }
-  tags.forEach(tagType => {
-    const urlTags = []
-    tags[tagType].forEach(tagName => {
-      const tagData = tags[tagType][tagName]
-      if (tagData.active === true) {
-        urlTags.push(tagName)
+  updateUrl () {
+    const queries = []
+    if (this.searchWords.length > 0) {
+      queries.push('search=' + this.searchWords.join('%20'))
+    }
+    if (this.verbose) {
+      queries.push('obsolete')
+    }
+    this.tags.forEach(tagType => {
+      const urlTags = []
+      this.tags[tagType].forEach(tagName => {
+        const tagData = this.tags[tagType][tagName]
+        if (tagData.active === true) {
+          urlTags.push(tagName)
+        }
+      })
+      if (urlTags.length > 0) {
+        queries.push(tagType + '=' + urlTags.join(','))
       }
     })
-    if (urlTags.length > 0) {
-      queries.push(tagType + '=' + urlTags.join(','))
-    }
-  })
-  let url = './'
-  if (queries.length > 0) url += '?'
-  url += queries.join('&')
-  const title = `rfc.fyi: ${searchWords.join(' ')}`
-  history.pushState({}, title, url)
-}
-
-function loadUi (...args) {
-  const url = new URL(window.location.href)
-  const params = new URLSearchParams(url.search)
-  const search = params.get('search') || ''
-  document.getElementById('search').value = search
-  searchWords = search.split(' ').filter(word => word)
-  if (params.has('obsolete')) {
-    verbose = true
+    let url = './'
+    if (queries.length > 0) url += '?'
+    url += queries.join('&')
+    const title = `rfc.fyi: ${this.searchWords.join(' ')}`
+    history.pushState({}, title, url)
   }
-  obsoleteTarget.checked = verbose
-  tagTypes.forEach(tagType => {
-    if (unshownTagTypes.includes(tagType)) return
-    activeTags.delete(tagType)
-    const tagstring = params.get(tagType)
-    const urlTagNames = new Set(tagstring ? tagstring.split(',') : [])
-    tags[tagType].forEach(tagName => {
-      setTagActivity(tagType, tagName, urlTagNames.has(tagName))
+
+  loadUi (...args) {
+    const url = new URL(window.location.href)
+    const params = new URLSearchParams(url.search)
+    const search = params.get('search') || ''
+    document.getElementById('search').value = search
+    this.searchWords = search.split(' ').filter(word => word)
+    if (params.has('obsolete')) {
+      this.verbose = true
+    }
+    this.obsoleteTarget.checked = this.verbose
+    this.tagTypes.forEach(tagType => {
+      if (this.unshownTagTypes.includes(tagType)) return
+      this.activeTags.delete(tagType)
+      const tagstring = params.get(tagType)
+      const urlTagNames = new Set(tagstring ? tagstring.split(',') : [])
+      this.tags[tagType].forEach(tagName => {
+        this.setTagActivity(tagType, tagName, urlTagNames.has(tagName))
+      })
+      if (urlTagNames.size > 0) {
+        this.activeTags.set(tagType, urlTagNames.keys().next().value)
+      }
     })
-    if (urlTagNames.size > 0) {
-      activeTags.set(tagType, urlTagNames.keys().next().value)
+    this.showRfcs()
+  }
+
+  clear (target) {
+    while (target.firstChild) {
+      target.removeChild(target.firstChild)
     }
-  })
-  showRfcs()
-}
+  }
 
-function clear (target) {
-  while (target.firstChild) {
-    target.removeChild(target.firstChild)
+  setContainer (hasResults) {
+    const container = document.getElementById('container')
+    container.className = hasResults ? 'results' : 'noresults'
+  }
+
+  cleanString (input) {
+    const output = input.toLowerCase()
+    return output.replace(/[\]().,?"']/g, '')
+  }
+
+  rfcSort (a, b) {
+    return parseInt(b.replace('RFC', '')) - parseInt(a.replace('RFC', ''))
+  }
+
+  refSort (a, b) {
+    return ui.inRefs.get(b, []).length - ui.inRefs.get(a, []).length
+  }
+
+  pluralise (num) {
+    if (num === 0) {
+      return 's'
+    }
+    if (num > 1) {
+      return 's'
+    }
+    return ''
+  }
+
+  rfcNumtoName (rfcNum) {
+    return `RFC${rfcNum.padStart(4, '0')}`
+  }
+
+  rfcNametoNum (rfcName) {
+    const rfcNum = parseInt(rfcName.substring(3))
+    const rfcNumPad = rfcNum.toString().padStart(4, '0')
+    return rfcNumPad
   }
 }
 
-function setContainer (hasResults) {
-  const container = document.getElementById('container')
-  container.className = hasResults ? 'results' : 'noresults'
-}
+const ui = new RfcFyiUi()
 
-function cleanString (input) {
-  const output = input.toLowerCase()
-  return output.replace(/[\]().,?"']/g, '')
-}
-
-function rfcSort (a, b) {
-  return parseInt(b.replace('RFC', '')) - parseInt(a.replace('RFC', ''))
-}
-
-function refSort (a, b) {
-  return inRefs.get(b, []).length - inRefs.get(a, []).length
-}
-
-function pluralise (num) {
-  if (num === 0) {
-    return 's'
-  }
-  if (num > 1) {
-    return 's'
-  }
-  return ''
-}
-
-function rfcNumtoName (rfcNum) {
-  return `RFC${rfcNum.padStart(4, '0')}`
-}
-
-function rfcNametoNum (rfcName) {
-  const rfcNum = parseInt(rfcName.substring(3))
-  const rfcNumPad = rfcNum.toString().padStart(4, '0')
-  return rfcNumPad
-}
-
-util.addDOMLoadEvent(init)
+util.addDOMLoadEvent(function () {
+  ui.load()
+})
