@@ -19,7 +19,7 @@ let searchWords = [] // words the user is searching for
 let allRfcs = [] // list of all RFC numbers
 let rfcs = {} // RFC objects
 let refs = {} // references
-const inRefs = {} // inbound reference counts
+const inRefs = {} // inbound references
 
 const tagColours = {
   stream: '#678',
@@ -36,7 +36,7 @@ function init () {
 
 function loadDone () {
   createSearchIndex()
-  countReferences()
+  computeReferences()
   tagTypes.forEach(tagType => {
     initTags(tagType, clickTagHandler)
   })
@@ -107,16 +107,28 @@ function createSearchIndex () {
   })
 }
 
-function countReferences () {
-  refs.forEach(rfc => {
-    const rfcRefs = refs.get(rfc, {})
+function computeReferences () {
+  rfcs.forEach(rfcName => {
+    inRefs[rfcName] = []
+  })
+  refs.forEach(rfcNum => {
+    const rfcName = rfcNumtoName(rfcNum)
+    const rfcRefs = refs.get(rfcNum, {})
     rfcRefs.get('normative', []).forEach(ref => {
-      const rfcName = `RFC${ref.padStart(4, '0')}`
-      inRefs[rfcName] = inRefs.get(rfcName, 0) + 1
+      const refName = rfcNumtoName(ref)
+      try {
+        inRefs[refName].push([true, rfcName])
+      } catch (error) {
+        console.log(`${rfcName} has non-existant normative reference - ${refName}`)
+      }
     })
     rfcRefs.get('informative', []).forEach(ref => {
-      const rfcName = `RFC${ref.padStart(4, '0')}`
-      inRefs[rfcName] = inRefs.get(rfcName, 0) + 1
+      const refName = rfcNumtoName(ref)
+      try {
+        inRefs[refName].push([false, rfcName])
+      } catch (error) {
+        console.log(`${rfcName} has non-existant informative refereence - ${refName}`)
+      }
     })
   })
 }
@@ -163,7 +175,7 @@ function clickTagHandler (tagType, tagName) {
   }
 }
 
-function deleteHandler () {
+function deleteHandler (event) {
   searchTarget.value = ''
   searchWords = []
   showRfcs()
@@ -226,7 +238,7 @@ function showRfcs (sortByRef) {
   }
 
   // count
-  const count = document.createTextNode(rfcList.length + ' RFCs')
+  const count = document.createTextNode(`${rfcList.length} RFC${pluralise(rfcList.length)}`)
   const countTarget = document.getElementById('count')
   clear(countTarget)
   countTarget.appendChild(count)
@@ -265,14 +277,14 @@ function listSearchedRfcs () {
   return filteredRfcs
 }
 
-function renderRfc (rfcName, rfcData, target) {
-  const rfcNum = parseInt(rfcName.substring(3))
-  const rfcNumPad = rfcNum.toString().padStart(4, '0')
+function renderRfc (rfcName, rfcData, target, hideRefs) {
+  const rfcNum = rfcNametoNum(rfcName)
   const rfcSpan = document.createElement('li')
+  rfcSpan.num = rfcNum
   rfcSpan.data = rfcData
   const rfcRef = document.createElement('a')
   rfcRef.className = 'reference'
-  rfcRef.href = `https://www.rfc-editor.org/refs/bibxml/reference.RFC.${rfcNumPad}.xml`
+  rfcRef.href = `https://www.rfc-editor.org/refs/bibxml/reference.RFC.${rfcNum}.xml`
   rfcRef.appendChild(document.createTextNode(rfcName))
   rfcSpan.appendChild(rfcRef)
   const sep = document.createTextNode(': ')
@@ -291,12 +303,36 @@ function renderRfc (rfcName, rfcData, target) {
   if (rfcData.wg) {
     renderTag('wg', rfcData.wg, rfcSpan)
   }
-  const refSpan = document.createElement('span')
-  refSpan.className = 'refcount'
-  const refCount = document.createTextNode(`${inRefs.get(rfcName, 0)} refs`)
-  refSpan.appendChild(refCount)
-  rfcSpan.appendChild(refSpan)
+  if (hideRefs !== true) {
+    const refSpan = document.createElement('span')
+    refSpan.className = 'refcount'
+    const count = inRefs.get(rfcName, []).length
+    const refCountLink = document.createElement('a')
+    refCountLink.href = '#'
+    refCountLink.className = 'refcountlink'
+    refCountLink.onclick = refExpandHandler
+    const refCountText = document.createTextNode(`${count} referencing RFC${pluralise(count)}`)
+    refCountLink.appendChild(refCountText)
+    refSpan.appendChild(refCountLink)
+    rfcSpan.appendChild(refSpan)
+  }
   target.appendChild(rfcSpan)
+}
+
+function refExpandHandler (event) {
+  const refList = document.createElement('ul')
+  const rfcElement = event.target.parentElement.parentElement
+  const rfcName = rfcNumtoName(rfcElement.num)
+  const rfcRefs = inRefs.get(rfcName, [])
+  rfcRefs.forEach(ref => {
+    //    const normative = ref[0]
+    const refName = ref[1]
+    const refData = rfcs[refName]
+    renderRfc(refName, refData, refList, true)
+  })
+  event.target.parentElement.appendChild(refList)
+  event.stopPropagation()
+  return false
 }
 
 function showRelevantTags (rfcSet) {
@@ -458,7 +494,27 @@ function rfcSort (a, b) {
 }
 
 function refSort (a, b) {
-  return inRefs.get(b, 0) - inRefs.get(a, 0)
+  return inRefs.get(b, []).length - inRefs.get(a, []).length
+}
+
+function pluralise (num) {
+  if (num === 0) {
+    return 's'
+  }
+  if (num > 1) {
+    return 's'
+  }
+  return ''
+}
+
+function rfcNumtoName (rfcNum) {
+  return `RFC${rfcNum.padStart(4, '0')}`
+}
+
+function rfcNametoNum (rfcName) {
+  const rfcNum = parseInt(rfcName.substring(3))
+  const rfcNumPad = rfcNum.toString().padStart(4, '0')
+  return rfcNumPad
 }
 
 util.addDOMLoadEvent(init)
