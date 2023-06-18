@@ -141,7 +141,7 @@ h2 {
   display: none;
 }
 
-#delete {
+#clearSearch {
   position: absolute;
   font-size: 18px;
   top: 6px;
@@ -152,7 +152,7 @@ h2 {
   color: #c99;
 }
 
-.noresults #delete {
+.noresults #clearSearch {
   top: 4px;
   right: 15.8%;
 }
@@ -206,12 +206,12 @@ h2 {
     margin: 1em 0;
   }
 
-  #delete {
+  #clearSearch {
     top: 6px;
     right: 2%;
   }
 
-  .noresults #delete {
+  .noresults #clearSearch {
     right: 2%;
   }
 

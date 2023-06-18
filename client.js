@@ -16,7 +16,7 @@ let verbose = false // whether we're showing obsolete, etc.
 const words = new Map() // index of word prefixes to RFCs containing them
 const keywords = new Map() // index of keyword phrases to RFCs containing them
 let searchWords = [] // words the user is searching for
-let allRfcs = [] // list of all RFC numbers
+let allRfcs = [] // list of all RFC names
 let rfcs = {} // RFC objects
 let refs = {} // references
 const inRefs = {} // inbound references
@@ -43,17 +43,12 @@ function loadDone () {
   installFormHandlers()
   installClickHandlers()
   loadUi()
-  window.onpopstate = back
-}
-
-function back (...args) {
-  loadUi()
-  showRfcs()
+  window.onpopstate = loadUi
 }
 
 let obsoleteTarget
 let searchTarget
-let deleteTarget
+let clearSearchTarget
 let form
 let title
 
@@ -65,8 +60,8 @@ function installFormHandlers () {
   searchTarget.oninput = searchInput
   searchTarget.disabled = false
   searchTarget.focus()
-  deleteTarget = document.getElementById('delete')
-  deleteTarget.onclick = deleteHandler
+  clearSearchTarget = document.getElementById('clearSearch')
+  clearSearchTarget.onclick = clearSearchHandler
   form = document.forms[0]
   form.onsubmit = searchSubmit
   title = document.getElementById('title')
@@ -108,7 +103,7 @@ function createSearchIndex () {
 }
 
 function computeReferences () {
-  rfcs.forEach(rfcName => {
+  allRfcs.forEach(rfcName => {
     inRefs[rfcName] = []
   })
   refs.forEach(rfcNum => {
@@ -175,7 +170,7 @@ function clickTagHandler (tagType, tagName) {
   }
 }
 
-function deleteHandler (event) {
+function clearSearchHandler (event) {
   searchTarget.value = ''
   searchWords = []
   showRfcs()
@@ -448,7 +443,7 @@ function updateUrl () {
   history.pushState({}, title, url)
 }
 
-function loadUi () {
+function loadUi (...args) {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search)
   const search = params.get('search') || ''
