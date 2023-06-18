@@ -326,6 +326,7 @@ function refExpandHandler (event) {
     renderRfc(refName, refData, refList, true)
   })
   event.target.parentElement.appendChild(refList)
+  event.target.removeChild(event.target.firstChild)
   event.stopPropagation()
   return false
 }
