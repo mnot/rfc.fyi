@@ -42,12 +42,12 @@ function loadDone () {
   })
   installFormHandlers()
   installClickHandlers()
-  loadUrl()
+  loadUi()
   window.onpopstate = back
 }
 
 function back (...args) {
-  loadUrl()
+  loadUi()
   showRfcs()
 }
 
@@ -448,7 +448,7 @@ function updateUrl () {
   history.pushState({}, title, url)
 }
 
-function loadUrl () {
+function loadUi () {
   const url = new URL(window.location.href)
   const params = new URLSearchParams(url.search)
   const search = params.get('search') || ''
