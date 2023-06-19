@@ -1,6 +1,4 @@
 
-traceur := /opt/homebrew/bin/traceur
-
 rfcs.json: rfc-index.xml rfc-json.py
 	cat rfc-index.xml | ./rfc-json.py > rfcs.json
 
@@ -11,9 +9,6 @@ refs.json:
 .PHONY: rfc-index.xml
 rfc-index.xml:
 	curl -R --etag-save $@.etag --etag-compare $@.etag "https://www.rfc-editor.org/rfc-index.xml" -o $@
-
-client-es5.js: client.js util.js
-	$(traceur) --out client-es5.js client.js
 
 .PHONY: server
 server:
