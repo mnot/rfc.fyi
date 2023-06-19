@@ -68,12 +68,16 @@ a:link, a:visited, a:active {
 
 ul {
   padding-left: 0.75em;
+  list-style-type: none;
 }
 
 li {
   line-height: 1.55em;
 }
 
+li ul {
+  margin-left: 4em;
+}
 .noresults #main {
   display: none;
   flex: 0;
@@ -177,7 +181,6 @@ h2 {
 }
 
 .refcountlink {
-  color: #999;
   font-size: 75%;
   margin-left: 1em;
   white-space: nowrap;
