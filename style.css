@@ -73,11 +73,14 @@ ul {
 
 li {
   line-height: 1.55em;
+  text-indent: -4.7em;
+  margin-left: 4.7em;
 }
 
 li ul {
-  margin-left: 4em;
+  margin-left: -0.5em;
 }
+
 .noresults #main {
   display: none;
   flex: 0;
