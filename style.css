@@ -20,7 +20,7 @@ a:link, a:visited, a:active {
 }
 
 #selector {
-  width: 250px;
+  width: 275px;
   margin-top: 1em;
   padding: 0;
   line-height: 1.55em;
@@ -85,8 +85,8 @@ li {
 }
 
 input#search {
-  width: 100%;
-  font-size: 20px;
+  width: 95%;
+  font-size: 18px;
 }
 
 .obsolete {
@@ -143,8 +143,8 @@ h2 {
 
 #clearSearch {
   position: absolute;
-  font-size: 18px;
-  top: 6px;
+  font-size: 15px;
+  top: 1px;
   right: 4%;
   z-index: 100;
   cursor: pointer;
