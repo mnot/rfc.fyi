@@ -157,8 +157,7 @@ h2 {
 }
 
 .noresults #clearSearch {
-  top: 4px;
-  right: 15.8%;
+  display: none;
 }
 
 .footer {
