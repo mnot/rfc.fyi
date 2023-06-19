@@ -89,11 +89,11 @@ input#search {
   font-size: 18px;
 }
 
-.obsolete {
+.obsolete, #sort {
   font-size: 85%;
 }
 
-.noresults .obsolete {
+.noresults .obsolete, .noresults #sort {
   display: none;
 }
 
