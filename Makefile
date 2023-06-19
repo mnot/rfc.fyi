@@ -20,7 +20,7 @@ server:
 	python -m http.server
 
 .PHONY: lint
-lint: client.js util.js *.py
+lint: client.js util.js data.js *.py
 	standard --fix client.js util.js
 	black *.py
 
