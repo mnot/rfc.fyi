@@ -149,15 +149,15 @@ class RfcFyiUi {
     if (rfcData.wg) {
       this.renderTag('wg', rfcData.wg, rfcSpan)
     }
-    if (hideRefs !== true) {
+    const refCount = data.inRefs.get(rfcName, []).length
+    if (hideRefs !== true && refCount > 0) {
       const refSpan = document.createElement('span')
       refSpan.className = 'refcount'
-      const count = data.inRefs.get(rfcName, []).length
       const refCountLink = document.createElement('a')
       refCountLink.href = '#'
       refCountLink.className = 'refcountlink'
       refCountLink.onclick = this.refExpandHandler
-      const refCountText = document.createTextNode(`${count} referencing RFC${this.pluralise(count)}`)
+      const refCountText = document.createTextNode(`${refCount} referencing RFC${this.pluralise(refCount)}`)
       refCountLink.appendChild(refCountText)
       refSpan.appendChild(refCountLink)
       rfcSpan.appendChild(refSpan)
