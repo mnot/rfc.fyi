@@ -164,14 +164,9 @@ h2 {
 }
 
 .footer {
-  position: absolute;
-  bottom: 50px;
   width: 100%;
+  padding: 3px;
   text-align: center;
-}
-
-.noresults .footer {
-  bottom: 100px;
 }
 
 .octicon {
