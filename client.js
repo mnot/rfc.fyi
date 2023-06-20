@@ -126,6 +126,7 @@ class RfcFyiUi {
   renderRfc (rfcName, rfcData, target, hideRefs) {
     const rfcNum = data.rfcNametoNum(rfcName)
     const rfcSpan = document.createElement('li')
+    rfcSpan.className = rfcData['status']
     rfcSpan.num = rfcNum
     rfcSpan.data = rfcData
     const rfcRef = document.createElement('a')

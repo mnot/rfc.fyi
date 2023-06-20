@@ -22,8 +22,9 @@ a:link, a:visited, a:active {
 #selector {
   width: 275px;
   margin-top: 1em;
-  padding: 0;
+  padding: 2px;
   line-height: 1.55em;
+  overflow-y: clip;
 }
 
 #form {
@@ -96,11 +97,11 @@ input#search {
   font-size: 18px;
 }
 
-.obsolete, #sort {
+.control {
   font-size: 85%;
 }
 
-.noresults .obsolete, .noresults #sort {
+.noresults .control {
   display: none;
 }
 
@@ -177,6 +178,10 @@ h2 {
   color: black;
 }
 
+.obsoleted .reference {
+  text-decoration: line-through;
+}
+
 .refcountlink {
   font-size: 75%;
   margin-left: 1em;
@@ -228,7 +233,7 @@ h2 {
   }
 
   #shadow {
-    width: 250px;
+    width: 280px;
     margin-top: 1em;
     padding: 0;
   }
