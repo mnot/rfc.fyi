@@ -192,7 +192,6 @@ class RfcFyiUi {
       tagList.sort()
       tagList.forEach(tagName => {
         const tagSpan = this.renderTag(tagType, tagName, targetDiv, this.clickTagHandlerFactory)
-        targetDiv.appendChild(document.createTextNode(' '))
         this.tagTargets[tagType][tagName] = tagSpan
       })
       // activate tags from the URL
@@ -218,6 +217,7 @@ class RfcFyiUi {
       tagSpan.style.cursor = 'default'
     }
     target.appendChild(tagSpan)
+    target.appendChild(document.createTextNode(' '))
     return tagSpan
   }
 
