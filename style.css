@@ -178,7 +178,7 @@ h2 {
   color: black;
 }
 
-.obsoleted .reference {
+.status-obsoleted .reference, .level-historic .reference {
   text-decoration: line-through;
 }
 
