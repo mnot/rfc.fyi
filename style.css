@@ -37,8 +37,9 @@ a:link, a:visited, a:active {
 }
 
 .noresults input#search {
-  margin: 0 15%;
-  width: 70%;
+  margin: 0 25%;
+  width: 50%;
+  min-width: 400px;
 }
 
 .start {
