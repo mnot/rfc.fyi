@@ -12,10 +12,6 @@ export default class RfcData {
   keywords = new Map() // index of keyword phrases to RFCs containing them
   tagTypes = ['collection', 'status', 'stream', 'level', 'wg']
 
-  oldTags = [
-    'status-obsoleted',
-    'level-historic'
-  ]
   doneCallback
 
   constructor (doneCallback) {
