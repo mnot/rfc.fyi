@@ -110509,6 +110509,28 @@
   "stream": "irtf",
   "title": "Tetrys: An On-the-Fly Network Coding Protocol"
  },
+ "RFC9408": {
+  "area": "ops",
+  "keywords": [
+   "Service Infrastructure",
+   "User Network Interface",
+   "UNI",
+   "NNI",
+   "Network-to-Network Interface",
+   "Inter-AS VPN",
+   "CE",
+   "PE",
+   "Attachment Circuit",
+   "Service Delivery Point",
+   "Automation",
+   "Service Delivery"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Network Data Model for Service Attachment Points (SAPs)",
+  "wg": "opsawg"
+ },
  "RFC9411": {
   "area": "ops",
   "keywords": [
@@ -110532,5 +110554,19 @@
   "stream": "ietf",
   "title": "The ORIGIN Extension in HTTP/3",
   "wg": "httpbis"
+ },
+ "RFC9425": {
+  "area": "art",
+  "keywords": [
+   "JMAP",
+   "JSON",
+   "email",
+   "quotas"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSON Meta Application Protocol (JMAP) for Quotas",
+  "wg": "jmap"
  }
 }
