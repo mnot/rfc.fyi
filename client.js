@@ -12,8 +12,8 @@ class RfcFyiUi {
   tagTargets = {} // holds references to tag elements
   unshownTagTypes = ['status']
   tagColours = {
-    stream: '#678',
-    level: '#a33',
+    stream: '#684',
+    level: '#955',
     wg: '#cc6'
   }
 

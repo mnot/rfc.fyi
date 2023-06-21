@@ -121,7 +121,7 @@ input#search {
 }
 
 .tag-active {
-  filter: hue-rotate(180deg);
+  filter: hue-rotate(150deg);
 }
 
 li .tag {
