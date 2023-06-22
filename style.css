@@ -114,6 +114,7 @@ input#search {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
+  border: 2px;
   border-radius: 5px;
   user-select: none;
   cursor: pointer;
@@ -121,7 +122,7 @@ input#search {
 }
 
 .tag-active {
-  filter: hue-rotate(150deg);
+  border: 1px solid #111;
 }
 
 li .tag {
