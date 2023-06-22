@@ -12,20 +12,19 @@ export default class RfcData {
   keywords = new Map() // index of keyword phrases to RFCs containing them
   tagTypes = ['collection', 'status', 'stream', 'level', 'wg']
 
-  doneCallback
-
   constructor (doneCallback) {
-    this.doneCallback = doneCallback
-    util.onDone(this.loadDone, this)
-    util.loadJson('tags.json', (json) => { this.tags = json })
-    util.loadJson('rfcs.json', (json) => { this.rfcs = json })
-    util.loadJson('refs.json', (json) => { this.refs = json })
-  }
-
-  loadDone () {
-    this.createSearchIndex()
-    this.computeReferences()
-    this.doneCallback()
+    const tagLoader = util.loadJson('tags.json')
+    const rfcLoader = util.loadJson('rfcs.json')
+    const refLoader = util.loadJson('refs.json')
+    Promise.all([tagLoader, rfcLoader, refLoader])
+    .then(([tags, rfcs, refs]) => {
+      this.tags = tags
+      this.rfcs = rfcs
+      this.refs = refs
+      this.createSearchIndex()
+      this.computeReferences()
+      doneCallback()
+    })
   }
 
   createSearchIndex () {

@@ -1,37 +1,10 @@
-/* global XMLHttpRequest */
-
-let outstanding = 0 // outstanding fetches
-let doneFunc = null
-let doneContext = null
-
-export function loadJson (url, func) {
-  const req = new XMLHttpRequest()
-  req.onreadystatechange = function () {
-    if (req.readyState === 4) {
-      outstanding -= 1
-      func(JSON.parse(req.responseText)) // TODO: error handling
-      if (outstanding === 0) {
-        loadDone()
-      }
-    }
-  }
-  try {
-    outstanding += 1
-    req.open('GET', url, true)
-    req.send('')
-  } catch (e3) {
-    outstanding -= 1
-    console.log(`Request error: ${url} (${e3})`)
-  }
-}
-
-export function onDone (func, context) {
-  doneFunc = func
-  doneContext = context
-}
-
-function loadDone () {
-  doneFunc.bind(doneContext)()
+export async function loadJson (url) {
+  const response = await fetch(url, {
+    method: 'GET',
+    credentials: 'include',
+    mode: 'no-cors'
+  })
+  return response.json()
 }
 
 export function genColour (str) {
