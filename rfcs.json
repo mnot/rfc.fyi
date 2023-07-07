@@ -110589,6 +110589,13 @@
   "stream": "iab",
   "title": "Maintaining Robust Protocols"
  },
+ "RFC9419": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Considerations on Application - Network Collaboration Using Path Signals"
+ },
  "RFC9425": {
   "area": "art",
   "keywords": [
@@ -110615,5 +110622,14 @@
   "stream": "ietf",
   "title": "TLS-Based Extensible Authentication Protocol (EAP) Types for Use with TLS 1.3",
   "wg": "emu"
+ },
+ "RFC9432": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Catalog Zones",
+  "wg": "dnsop"
  }
 }
