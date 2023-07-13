@@ -110682,5 +110682,20 @@
   "stream": "ietf",
   "title": "DNS Catalog Zones",
   "wg": "dnsop"
+ },
+ "RFC9443": {
+  "area": "art",
+  "keywords": [
+   "RTP",
+   "ZRTP",
+   "STUN",
+   "TURN",
+   "DTLS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multiplexing Scheme Updates for QUIC",
+  "wg": "avtcore"
  }
 }
