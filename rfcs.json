@@ -109885,6 +109885,20 @@
   "stream": "irtf",
   "title": "CCNinfo: Discovering Content and Network Information in Content-Centric Networks"
  },
+ "RFC9345": {
+  "area": "sec",
+  "keywords": [
+   "certificate",
+   "authentication",
+   "TLS 1.3",
+   "signature scheme"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Delegated Credentials for TLS and DTLS",
+  "wg": "tls"
+ },
  "RFC9346": {
   "area": "rtg",
   "keywords": [
