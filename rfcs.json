@@ -110565,6 +110565,21 @@
   "title": "A YANG Network Data Model for Service Attachment Points (SAPs)",
   "wg": "opsawg"
  },
+ "RFC9409": {
+  "area": "art",
+  "keywords": [
+   "SIP",
+   "Session Initiation Protocol",
+   "automatic peering",
+   "WebFinger",
+   "capability set"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The 'sip-trunking-capability' Link Relation Type",
+  "wg": "asap"
+ },
  "RFC9411": {
   "area": "ops",
   "keywords": [
