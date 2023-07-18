@@ -110712,6 +110712,20 @@
   "title": "DNS Catalog Zones",
   "wg": "dnsop"
  },
+ "RFC9434": {
+  "area": "int",
+  "keywords": [
+   "UAS RID",
+   "F3411",
+   "DRIP",
+   "drone"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Drone Remote Identification Protocol (DRIP) Architecture",
+  "wg": "drip"
+ },
  "RFC9443": {
   "area": "art",
   "keywords": [
