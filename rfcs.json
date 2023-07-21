@@ -110353,6 +110353,18 @@
   "title": "Use Cases for DDoS Open Threat Signaling (DOTS) Telemetry",
   "wg": "dots"
  },
+ "RFC9388": {
+  "area": "art",
+  "keywords": [
+   "Request Routing",
+   "Footprint and Capabilities Semantics"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Content Delivery Network Interconnection (CDNI) Footprint Types: Country Subdivision Code and Footprint Union",
+  "wg": "cdni"
+ },
  "RFC9389": {
   "area": "gen",
   "keywords": [
@@ -110685,6 +110697,23 @@
   "title": "TLS-Based Extensible Authentication Protocol (EAP) Types for Use with TLS 1.3",
   "wg": "emu"
  },
+ "RFC9428": {
+  "area": "int",
+  "keywords": [
+   "Near Field Communication",
+   "NFC",
+   "6LowPAN",
+   "IPv6",
+   "Adaptation Layer",
+   "IoT",
+   "Internet of Things"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Transmission of IPv6 Packets over Near Field Communication",
+  "wg": "6lo"
+ },
  "RFC9430": {
   "area": "sec",
   "keywords": [
@@ -110735,6 +110764,18 @@
   "title": "Drone Remote Identification Protocol (DRIP) Architecture",
   "wg": "drip"
  },
+ "RFC9435": {
+  "area": "tsv",
+  "keywords": [
+   "DSCP",
+   "DiffServ Codepoints"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Considerations for Assigning a New Recommended Differentiated Services Code Point (DSCP)",
+  "wg": "tsvwg"
+ },
  "RFC9443": {
   "area": "art",
   "keywords": [
@@ -110749,5 +110790,16 @@
   "stream": "ietf",
   "title": "Multiplexing Scheme Updates for QUIC",
   "wg": "avtcore"
+ },
+ "RFC9446": {
+  "keywords": [
+   "pervasive monitoring",
+   "privacy",
+   "security"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Reflections on Ten Years Past the Snowden Revelations"
  }
 }
