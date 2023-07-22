@@ -1,4 +1,11 @@
 {
+ "BCP0072": {
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "iab",
+  "title": "Guidelines for Writing RFC Text on Security Considerations"
+ },
  "RFC0001": {
   "keywords": [],
   "level": "unknown",
@@ -110463,6 +110470,22 @@
   "title": "OAuth 2.0 Rich Authorization Requests",
   "wg": "oauth"
  },
+ "RFC9397": {
+  "area": "sec",
+  "keywords": [
+   "trusted application",
+   "trusted component",
+   "TEE",
+   "trust anchor",
+   "TAM",
+   "confidential computing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Trusted Execution Environment Provisioning (TEEP) Architecture",
+  "wg": "teep"
+ },
  "RFC9398": {
   "area": "rtg",
   "keywords": [
@@ -110630,6 +110653,45 @@
   "stream": "iab",
   "title": "Maintaining Robust Protocols"
  },
+ "RFC9414": {
+  "keywords": [
+   "security",
+   "vulnerability",
+   "algorithm",
+   "attack",
+   "fingerprinting"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Unfortunate History of Transient Numeric Identifiers"
+ },
+ "RFC9415": {
+  "keywords": [
+   "security",
+   "vulnerability",
+   "algorithm",
+   "attack",
+   "fingerprinting"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "On the Generation of Transient Numeric Identifiers"
+ },
+ "RFC9416": {
+  "keywords": [
+   "security",
+   "vulnerability",
+   "algorithm",
+   "attack",
+   "fingerprinting"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Security Considerations for Transient Numeric Identifiers Employed in Network Protocols"
+ },
  "RFC9417": {
   "area": "ops",
   "keywords": [],
@@ -110683,6 +110745,16 @@
   "stream": "ietf",
   "title": "JSON Meta Application Protocol (JMAP) for Quotas",
   "wg": "jmap"
+ },
+ "RFC9426": {
+  "keywords": [
+   "BATS code",
+   "multi-hop"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "BATched Sparse (BATS) Coding Scheme for Multi-hop Data Transport"
  },
  "RFC9427": {
   "area": "sec",
@@ -110750,6 +110822,21 @@
   "title": "DNS Catalog Zones",
   "wg": "dnsop"
  },
+ "RFC9433": {
+  "area": "int",
+  "keywords": [
+   "SRv6 mobility",
+   "MUP",
+   "CMUP",
+   "srv6 3gpp",
+   "GTP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing over IPv6 for the Mobile User Plane",
+  "wg": "dmm"
+ },
  "RFC9434": {
   "area": "int",
   "keywords": [
@@ -110775,6 +110862,18 @@
   "stream": "ietf",
   "title": "Considerations for Assigning a New Recommended Differentiated Services Code Point (DSCP)",
   "wg": "tsvwg"
+ },
+ "RFC9440": {
+  "area": "art",
+  "keywords": [
+   "http",
+   "client certificate"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Client-Cert HTTP Header Field",
+  "wg": "httpbis"
  },
  "RFC9443": {
   "area": "art",
