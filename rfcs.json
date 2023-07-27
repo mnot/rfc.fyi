@@ -110875,6 +110875,48 @@
   "title": "Client-Cert HTTP Header Field",
   "wg": "httpbis"
  },
+ "RFC9441": {
+  "area": "int",
+  "keywords": [
+   "SCHC",
+   "LPWAN",
+   "IoT",
+   "Fragmentation",
+   "Reliable Delivery",
+   "Link Layer Protocols",
+   "Cross-Layer Protocols",
+   "Adaptation Layer",
+   "Acknowledgment",
+   "Sigfox",
+   "LoRaWAN",
+   "NB-IoT",
+   "Compound ACK"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Static Context Header Compression (SCHC) Compound Acknowledgement (ACK)",
+  "wg": "lpwan"
+ },
+ "RFC9442": {
+  "area": "int",
+  "keywords": [
+   "IoT",
+   "Sigfox",
+   "SCHC",
+   "LPWAN",
+   "fragmentation",
+   "Reliable Delivery",
+   "Link Layer Protocols",
+   "Cross-Layer Protocols",
+   "Adaptation Layer"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Static Context Header Compression (SCHC) over Sigfox Low-Power Wide Area Network (LPWAN)",
+  "wg": "lpwan"
+ },
  "RFC9443": {
   "area": "art",
   "keywords": [
