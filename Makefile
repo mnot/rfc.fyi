@@ -1,6 +1,6 @@
 
-var/rfcs.json: var/rfc-index.xml rfc-json.py
-	cat var/rfc-index.xml | ./rfc-json.py > var/rfcs.json
+var/rfcs.json: var/rfc-index.xml bin/rfc-json.py
+	cat var/rfc-index.xml | bin/rfc-json.py > var/rfcs.json
 
 .PHONY: refs.json
 var/refs.json:
