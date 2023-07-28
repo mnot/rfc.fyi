@@ -22,10 +22,10 @@ jobs:
         python-version: 3.7
     - name: Build rfcs.json
       run: |
-        make rfcs.json
+        make var/rfcs.json
     - name: Fetch refs.json
       run: |
-        make refs.json
+        make var/refs.json
     - name: Push update
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,13 +1,13 @@
 
-rfcs.json: rfc-index.xml rfc-json.py
-	cat rfc-index.xml | ./rfc-json.py > rfcs.json
+var/rfcs.json: var/rfc-index.xml rfc-json.py
+	cat var/rfc-index.xml | ./rfc-json.py > var/rfcs.json
 
 .PHONY: refs.json
-refs.json:
+var/refs.json:
 	curl https://raw.githubusercontent.com/mnot/rfc-refs/main/refs.json > $@
 
-.PHONY: rfc-index.xml
-rfc-index.xml:
+.PHONY: var/rfc-index.xml
+var/rfc-index.xml:
 	curl -R --etag-save $@.etag --etag-compare $@.etag "https://www.rfc-editor.org/rfc-index.xml" -o $@
 
 .PHONY: server
@@ -21,4 +21,4 @@ lint: client.js util.js data.js *.py
 
 .PHONY: clean
 clean:
-	rm -f rfcs.json rfcs.json.gz
+	rm -f var/rfcs.json
