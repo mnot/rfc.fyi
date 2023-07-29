@@ -3,7 +3,7 @@
 We welcome contributions from the community.
 
 
-## Adding and Maintaining Collections
+## Adding and Maintaining Tag Collections
 
 Collections (the tags you see on the front page) are intended to be useful sets
 of RFCs that cover a particular topic.
@@ -16,9 +16,12 @@ meet its purpose. Note that proposing a collection doesn't mean that you'll auto
 selected as a maintainer, or that the collection will be accepted. We want to keep it
 high-quality and focused.
 
-Collections are maintained in `tags.json`; see that file for the (hopefully obvious) format. In the
-future, they might be moved to discrete files, if this becomes unwieldy.
+Collections are maintained in `src/tags`; each file is a separate collection. The format is line-based:
 
+* Lines starting with "RFC" are RFCs to include in the collection; everything after the first space is ignored.
+* The first line starting with "colour" expects a hex colour after the first space, to use for that tag.
+* The first line starting with "name" expects a name to use for the collection; otherwise, the filename will be used.
+* Lines beginning with `#` are ignored.
 
 
 ## Code Contributions
