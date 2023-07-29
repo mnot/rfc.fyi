@@ -16,5 +16,6 @@ git add var/rfc-index.xml
 git add var/rfc-index.xml.etag
 git add var/rfcs.json
 git add var/refs.json
+git add var/tags.json
 git commit -m "update rfcs"
 git push origin main
