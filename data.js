@@ -13,9 +13,9 @@ export default class RfcData {
   tagTypes = ['collection', 'status', 'stream', 'level', 'wg']
 
   constructor (doneCallback) {
-    const tagLoader = util.loadJson('tags.json')
-    const rfcLoader = util.loadJson('rfcs.json')
-    const refLoader = util.loadJson('refs.json')
+    const tagLoader = util.loadJson('var/tags.json')
+    const rfcLoader = util.loadJson('var/rfcs.json')
+    const refLoader = util.loadJson('var/refs.json')
     Promise.all([tagLoader, rfcLoader, refLoader])
     .then(([tags, rfcs, refs]) => {
       this.tags = tags
