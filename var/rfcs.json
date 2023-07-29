@@ -1,11 +1,4 @@
 {
- "BCP0072": {
-  "keywords": [],
-  "level": "bcp",
-  "status": "current",
-  "stream": "iab",
-  "title": "Guidelines for Writing RFC Text on Security Considerations"
- },
  "RFC0001": {
   "keywords": [],
   "level": "unknown",
