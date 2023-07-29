@@ -1,0 +1,26 @@
+name: Create Tags
+
+on:
+  push:
+    paths:
+    - 'src/tags/*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        ref: main
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Create tags.json
+      run: |
+        make var/tags.json
+    - name: Push update
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        ./bin/update.sh

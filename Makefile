@@ -10,6 +10,10 @@ var/refs.json:
 var/rfc-index.xml:
 	curl -R --etag-save $@.etag --etag-compare $@.etag "https://www.rfc-editor.org/rfc-index.xml" -o $@
 
+tagfiles := $(wildcard src/tags/*)
+var/tags.json: bin/createtags.py $(tagfiles)
+	python bin/createtags.py $(tagfiles) > $@
+
 .PHONY: server
 server:
 	python -m http.server
