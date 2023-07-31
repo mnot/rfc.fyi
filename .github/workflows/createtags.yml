@@ -4,6 +4,7 @@ on:
   push:
     paths:
     - 'src/tags/*'
+    - 'bin/createtags.py'
 
 jobs:
   build:
@@ -13,12 +14,12 @@ jobs:
       with:
         ref: main
     - name: Set up Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
       with:
-        python-version: 3.7
+        python-version: 3.10
     - name: Create tags.json
       run: |
-        make var/tags.json
+        python bin/createtags.py src/tags/* > var/tags.json
     - name: Push update
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
