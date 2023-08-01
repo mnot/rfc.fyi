@@ -90461,7 +90461,7 @@
    "XML"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Problem Details for HTTP APIs",
   "wg": "appsawg"
@@ -110608,6 +110608,20 @@
   "title": "The 'sip-trunking-capability' Link Relation Type",
   "wg": "asap"
  },
+ "RFC9410": {
+  "area": "art",
+  "keywords": [
+   "Identity",
+   "multiple errors",
+   "passport",
+   "reason header field"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Handling of Identity Header Errors for Secure Telephone Identity Revisited (STIR)",
+  "wg": "stir"
+ },
  "RFC9411": {
   "area": "ops",
   "keywords": [
@@ -110935,5 +110949,22 @@
   "status": "current",
   "stream": "independent",
   "title": "Reflections on Ten Years Past the Snowden Revelations"
+ },
+ "RFC9457": {
+  "area": "art",
+  "keywords": [
+   "status",
+   "HTTP",
+   "error",
+   "problem",
+   "API",
+   "JSON",
+   "XML"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Problem Details for HTTP APIs",
+  "wg": "httpapi"
  }
 }
