@@ -110870,6 +110870,22 @@
   "title": "Considerations for Assigning a New Recommended Differentiated Services Code Point (DSCP)",
   "wg": "tsvwg"
  },
+ "RFC9437": {
+  "area": "rtg",
+  "keywords": [
+   "lisp",
+   "publish",
+   "subscribe",
+   "subscription",
+   "sdn",
+   "nfv"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Publish/Subscribe Functionality for the Locator/ID Separation Protocol (LISP)",
+  "wg": "lisp"
+ },
  "RFC9440": {
   "area": "art",
   "keywords": [
