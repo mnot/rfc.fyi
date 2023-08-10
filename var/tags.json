@@ -72,19 +72,23 @@
         "RFC0748"
       ]
     },
-    "Architectural Principles": {
+    "Author Handbook": {
       "rfcs": [
-        "RFC1958",
-        "RFC2993",
-        "RFC3439",
-        "RFC3724",
-        "RFC6950",
-        "RFC6973"
+        "RFC2119",
+        "RFC2277",
+        "RFC3552",
+        "RFC5378",
+        "RFC7322",
+        "RFC7841",
+        "RFC7991",
+        "RFC7997",
+        "RFC8126",
+        "RFC8179"
       ]
     },
     "DNS": {
       "rfcs": [
-        "RFC920",
+        "RFC0920",
         "RFC1032",
         "RFC1033",
         "RFC1034",
@@ -377,13 +381,14 @@
         "RFC8179"
       ]
     },
-    "IPR": {
+    "Internet Architecture": {
       "rfcs": [
-        "RFC5378",
-        "RFC5743",
-        "RFC5744",
-        "RFC5745",
-        "RFC8179"
+        "RFC1958",
+        "RFC2993",
+        "RFC3439",
+        "RFC3724",
+        "RFC6950",
+        "RFC6973"
       ]
     },
     "Note Well": {
@@ -572,20 +577,6 @@
         "RFC8422",
         "RFC8446",
         "RFC8449"
-      ]
-    },
-    "Writing RFCs": {
-      "rfcs": [
-        "RFC2119",
-        "RFC2277",
-        "RFC3552",
-        "RFC5378",
-        "RFC7322",
-        "RFC7841",
-        "RFC7991",
-        "RFC7997",
-        "RFC8126",
-        "RFC8179"
       ]
     }
   }
