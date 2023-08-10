@@ -1,8 +1,8 @@
 name Internet Architecture
 
-RFC1958
-RFC2993
-RFC3439
-RFC3724
-RFC6950
-RFC6973
+RFC1958 Architectural Principles of the Internet
+RFC2993 Architectural Implications of NAT
+RFC3439 Some Internet Architectural Guidelines and Philosophy
+RFC3724 The Rise of the Middle and the Future of End-to-End: Reflections on the Evolution of the Internet Architecture
+RFC6950 Architectural Considerations on Application Features in the DNS
+RFC6973 Privacy Considerations for Internet Protocols

@@ -2,91 +2,91 @@
 
 colour #9309ab
 
-RFC1089
-RFC1098
-RFC1157
-RFC1161
-RFC1187
-RFC1215
-RFC1227
-RFC1228
-RFC1270
-RFC1283
-RFC1298
-RFC1303
-RFC1351
-RFC1352
-RFC1353
-RFC1381
-RFC1382
-RFC1418
-RFC1419
-RFC1420
-RFC1442
-RFC1443
-RFC1444
-RFC1445
-RFC1446
-RFC1447
-RFC1448
-RFC1449
-RFC1450
-RFC1461
-RFC1503
-RFC1901
-RFC1902
-RFC1903
-RFC1904
-RFC1905
-RFC1906
-RFC1907
-RFC1909
-RFC1910
-RFC2011
-RFC2012
-RFC2013
-RFC2089
-RFC2261
-RFC2262
-RFC2263
-RFC2264
-RFC2265
-RFC2271
-RFC2272
-RFC2273
-RFC2274
-RFC2275
-RFC2571
-RFC2572
-RFC2573
-RFC2574
-RFC2575
-RFC2742
-RFC2962
-RFC3411
-RFC3412
-RFC3413
-RFC3414
-RFC3415
-RFC3416
-RFC3417
-RFC3418
-RFC3512
-RFC3781
-RFC3826
-RFC4088
-RFC4789
-RFC5343
-RFC5345
-RFC5590
-RFC5591
-RFC5592
-RFC5608
-RFC5675
-RFC5676
-RFC5935
-RFC5953
-RFC6353
-RFC7407
-RFC7630
-RFC7860
+RFC1089 SNMP over Ethernet
+RFC1098 Simple Network Management Protocol (SNMP)
+RFC1157 Simple Network Management Protocol (SNMP)
+RFC1161 SNMP over OSI
+RFC1187 Bulk Table Retrieval with the SNMP
+RFC1215 Convention for defining traps for use with the SNMP
+RFC1227 SNMP MUX protocol and MIB
+RFC1228 SNMP-DPI: Simple Network Management Protocol Distributed Program Interface
+RFC1270 SNMP Communications Services
+RFC1283 SNMP over OSI
+RFC1298 SNMP over IPX
+RFC1303 A Convention for Describing SNMP-based Agents
+RFC1351 SNMP Administrative Model
+RFC1352 SNMP Security Protocols
+RFC1353 Definitions of Managed Objects for Administration of SNMP Parties
+RFC1381 SNMP MIB Extension for X.25 LAPB
+RFC1382 SNMP MIB Extension for the X.25 Packet Layer
+RFC1418 SNMP over OSI
+RFC1419 SNMP over AppleTalk
+RFC1420 SNMP over IPX
+RFC1442 Structure of Management Information for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1443 Textual Conventions for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1444 Conformance Statements for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1445 Administrative Model for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1446 Security Protocols for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1447 Party MIB for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1448 Protocol Operations for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1449 Transport Mappings for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1450 Management Information Base for version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1461 SNMP MIB extension for Multiprotocol Interconnect over X.25
+RFC1503 Algorithms for Automating Administration in SNMPv2 Managers
+RFC1901 Introduction to Community-based SNMPv2
+RFC1902 Structure of Management Information for Version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1903 Textual Conventions for Version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1904 Conformance Statements for Version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1905 Protocol Operations for Version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1906 Transport Mappings for Version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1907 Management Information Base for Version 2 of the Simple Network Management Protocol (SNMPv2)
+RFC1909 An Administrative Infrastructure for SNMPv2
+RFC1910 User-based Security Model for SNMPv2
+RFC2011 SNMPv2 Management Information Base for the Internet Protocol using SMIv2
+RFC2012 SNMPv2 Management Information Base for the Transmission Control Protocol using SMIv2
+RFC2013 SNMPv2 Management Information Base for the User Datagram Protocol using SMIv2
+RFC2089 V2ToV1 Mapping SNMPv2 onto SNMPv1 within a bi-lingual SNMP agent
+RFC2261 An Architecture for Describing SNMP Management Frameworks
+RFC2262 Message Processing and Dispatching for the Simple Network Management Protocol (SNMP)
+RFC2263 SNMPv3 Applications
+RFC2264 User-based Security Model (USM) for version 3 of the Simple Network Management Protocol (SNMPv3)
+RFC2265 View-based Access Control Model (VACM) for the Simple Network Management Protocol (SNMP)
+RFC2271 An Architecture for Describing SNMP Management Frameworks
+RFC2272 Message Processing and Dispatching for the Simple Network Management Protocol (SNMP)
+RFC2273 SNMPv3 Applications
+RFC2274 User-based Security Model (USM) for version 3 of the Simple Network Management Protocol (SNMPv3)
+RFC2275 View-based Access Control Model (VACM) for the Simple Network Management Protocol (SNMP)
+RFC2571 An Architecture for Describing SNMP Management Frameworks
+RFC2572 Message Processing and Dispatching for the Simple Network Management Protocol (SNMP)
+RFC2573 SNMP Applications
+RFC2574 User-based Security Model (USM) for version 3 of the Simple Network Management Protocol (SNMPv3)
+RFC2575 View-based Access Control Model (VACM) for the Simple Network Management Protocol (SNMP)
+RFC2742 Definitions of Managed Objects for Extensible SNMP Agents
+RFC2962 An SNMP Application Level Gateway for Payload Address Translation
+RFC3411 An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks
+RFC3412 Message Processing and Dispatching for the Simple Network Management Protocol (SNMP)
+RFC3413 Simple Network Management Protocol (SNMP) Applications
+RFC3414 User-based Security Model (USM) for version 3 of the Simple Network Management Protocol (SNMPv3)
+RFC3415 View-based Access Control Model (VACM) for the Simple Network Management Protocol (SNMP)
+RFC3416 Version 2 of the Protocol Operations for the Simple Network Management Protocol (SNMP)
+RFC3417 Transport Mappings for the Simple Network Management Protocol (SNMP)
+RFC3418 Management Information Base (MIB) for the Simple Network Management Protocol (SNMP)
+RFC3512 Configuring Networks and Devices with Simple Network Management Protocol (SNMP)
+RFC3781 Next Generation Structure of Management Information (SMIng) Mappings to the Simple Network Management Protocol (SNMP)
+RFC3826 The Advanced Encryption Standard (AES) Cipher Algorithm in the SNMP User-based Security Model
+RFC4088 Uniform Resource Identifier (URI) Scheme for the Simple Network Management Protocol (SNMP)
+RFC4789 Simple Network Management Protocol (SNMP) over IEEE 802 Networks
+RFC5343 Simple Network Management Protocol (SNMP) Context EngineID Discovery
+RFC5345 Simple Network Management Protocol (SNMP) Traffic Measurements and Trace Exchange Formats
+RFC5590 Transport Subsystem for the Simple Network Management Protocol (SNMP)
+RFC5591 Transport Security Model for the Simple Network Management Protocol (SNMP)
+RFC5592 Secure Shell Transport Model for the Simple Network Management Protocol (SNMP)
+RFC5608 Remote Authentication Dial-In User Service (RADIUS) Usage for Simple Network Management Protocol (SNMP) Transport Models
+RFC5675 Mapping Simple Network Management Protocol (SNMP) Notifications to SYSLOG Messages
+RFC5676 Definitions of Managed Objects for Mapping SYSLOG Messages to Simple Network Management Protocol (SNMP) Notifications
+RFC5935 Expressing SNMP SMI Datatypes in XML Schema Definition Language
+RFC5953 Transport Layer Security (TLS) Transport Model for the Simple Network Management Protocol (SNMP)
+RFC6353 Transport Layer Security (TLS) Transport Model for the Simple Network Management Protocol (SNMP)
+RFC7407 A YANG Data Model for SNMP Configuration
+RFC7630 HMAC-SHA-2 Authentication Protocols in the User-based Security Model (USM) for SNMPv3
+RFC7860 HMAC-SHA-2 Authentication Protocols in User-Based Security Model (USM) for SNMPv3

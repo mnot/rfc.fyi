@@ -1,12 +1,12 @@
 name Author Handbook
 
-RFC2119
-RFC2277
-RFC3552
-RFC5378
-RFC7322
-RFC7841
-RFC7991
-RFC7997
-RFC8126
-RFC8179
+RFC2119 Key words for use in RFCs to Indicate Requirement Levels
+RFC2277 IETF Policy on Character Sets and Languages
+RFC3552 Guidelines for Writing RFC Text on Security Considerations
+RFC5378 Rights Contributors Provide to the IETF Trust
+RFC7322 RFC Style Guide
+RFC7841 RFC Streams, Headers, and Boilerplates
+RFC7991 The "xml2rfc" Version 3 Vocabulary
+RFC7997 The Use of Non-ASCII Characters in RFCs
+RFC8126 Guidelines for Writing an IANA Considerations Section in RFCs
+RFC8179 Intellectual Property Rights in IETF Technology

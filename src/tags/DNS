@@ -1,178 +1,178 @@
-RFC920
-RFC1032
-RFC1033
-RFC1034
-RFC1035
-RFC1101
-RFC1123
-RFC1178
-RFC1183
-RFC1401
-RFC1535
-RFC1536
-RFC1591
-RFC1706
-RFC1712
-RFC1713
-RFC1794
-RFC1876
-RFC1912
-RFC1982
-RFC1995
-RFC1996
-RFC2136
-RFC2163
-RFC2181
-RFC2182
-RFC2230
-RFC2308
-RFC2317
-RFC2536
-RFC2539
-RFC2540
-RFC2606
-RFC2782
-RFC2825
-RFC2826
-RFC2845
-RFC2870
-RFC2930
-RFC2931
-RFC3007
-RFC3071
-RFC3110
-RFC3123
-RFC3130
-RFC3197
-RFC3225
-RFC3226
-RFC3258
-RFC3363
-RFC3364
-RFC3403
-RFC3425
-RFC3467
-RFC3492
-RFC3596
-RFC3597
-RFC3645
-RFC3696
-RFC3833
-RFC3901
-RFC4025
-RFC4033
-RFC4034
-RFC4035
-RFC4074
-RFC4159
-RFC4185
-RFC4255
-RFC4339
-RFC4343
-RFC4367
-RFC4398
-RFC4408
-RFC4431
-RFC4470
-RFC4471
-RFC4472
-RFC4509
-RFC4592
-RFC4635
-RFC4697
-RFC4701
-RFC4892
-RFC4955
-RFC4956
-RFC4986
-RFC5001
-RFC5011
-RFC5074
-RFC5155
-RFC5205
-RFC5358
-RFC5452
-RFC5507
-RFC5625
-RFC5702
-RFC5855
-RFC5864
-RFC5890
-RFC5891
-RFC5933
-RFC5936
-RFC5966
-RFC6014
-RFC6147
-RFC6168
-RFC6303
-RFC6304
-RFC6305
-RFC6335
-RFC6604
-RFC6605
-RFC6672
-RFC6698
-RFC6725
-RFC6742
-RFC6761
-RFC6781
-RFC6840
-RFC6841
-RFC6844
-RFC6891
-RFC6895
-RFC6912
-RFC6944
-RFC6975
-RFC7043
-RFC7085
-RFC7218
-RFC7314
-RFC7344
-RFC7477
-RFC7534
-RFC7535
-RFC7583
-RFC7626
-RFC7646
-RFC7671
-RFC7686
-RFC7706
-RFC7719
-RFC7766
-RFC7793
-RFC7816
-RFC7828
-RFC7830
-RFC7858
-RFC7871
-RFC7873
-RFC7901
-RFC7929
-RFC7958
-RFC8005
-RFC8027
-RFC8078
-RFC8080
-RFC8094
-RFC8567
-RFC8586
-RFC8598
-RFC8618
-RFC8624
-RFC8659
-RFC8749
-RFC8764
-RFC8765
-RFC8766
-RFC8767
-RFC8777
-RFC8882
-RFC8901
-RFC8904
-RFC8906
-RFC8914
-RFC8932
-RFC8945
-RFC8976
+RFC0920 Domain requirements
+RFC1032 Domain administrators guide
+RFC1033 Domain Administrators Operations Guide
+RFC1034 Domain names - concepts and facilities
+RFC1035 Domain names - implementation and specification
+RFC1101 DNS encoding of network names and other types
+RFC1123 Requirements for Internet Hosts - Application and Support
+RFC1178 Choosing a name for your computer
+RFC1183 New DNS RR Definitions
+RFC1401 Correspondence between the IAB and DISA on the use of DNS
+RFC1535 A Security Problem and Proposed Correction With Widely Deployed DNS Software
+RFC1536 Common DNS Implementation Errors and Suggested Fixes
+RFC1591 Domain Name System Structure and Delegation
+RFC1706 DNS NSAP Resource Records
+RFC1712 DNS Encoding of Geographical Location
+RFC1713 Tools for DNS debugging
+RFC1794 DNS Support for Load Balancing
+RFC1876 A Means for Expressing Location Information in the Domain Name System
+RFC1912 Common DNS Operational and Configuration Errors
+RFC1982 Serial Number Arithmetic
+RFC1995 Incremental Zone Transfer in DNS
+RFC1996 A Mechanism for Prompt Notification of Zone Changes (DNS NOTIFY)
+RFC2136 Dynamic Updates in the Domain Name System (DNS UPDATE)
+RFC2163 Using the Internet DNS to Distribute MIXER Conformant Global Address Mapping (MCGAM)
+RFC2181 Clarifications to the DNS Specification
+RFC2182 Selection and Operation of Secondary DNS Servers
+RFC2230 Key Exchange Delegation Record for the DNS
+RFC2308 Negative Caching of DNS Queries (DNS NCACHE)
+RFC2317 Classless IN-ADDR.ARPA delegation
+RFC2536 DSA KEYs and SIGs in the Domain Name System (DNS)
+RFC2539 Storage of Diffie-Hellman Keys in the Domain Name System (DNS)
+RFC2540 Detached Domain Name System (DNS) Information
+RFC2606 Reserved Top Level DNS Names
+RFC2782 A DNS RR for specifying the location of services (DNS SRV)
+RFC2825 A Tangled Web: Issues of I18N, Domain Names, and the Other Internet protocols
+RFC2826 IAB Technical Comment on the Unique DNS Root
+RFC2845 Secret Key Transaction Authentication for DNS (TSIG)
+RFC2870 Root Name Server Operational Requirements
+RFC2930 Secret Key Establishment for DNS (TKEY RR)
+RFC2931 DNS Request and Transaction Signatures ( SIG(0)s )
+RFC3007 Secure Domain Name System (DNS) Dynamic Update
+RFC3071 Reflections on the DNS, RFC 1591, and Categories of Domains
+RFC3110 RSA/SHA-1 SIGs and RSA KEYs in the Domain Name System (DNS)
+RFC3123 A DNS RR Type for Lists of Address Prefixes (APL RR)
+RFC3130 Notes from the State-Of-The-Technology: DNSSEC
+RFC3197 Applicability Statement for DNS MIB Extensions
+RFC3225 Indicating Resolver Support of DNSSEC
+RFC3226 DNSSEC and IPv6 A6 aware server/resolver message size requirements
+RFC3258 Distributing Authoritative Name Servers via Shared Unicast Addresses
+RFC3363 Representing Internet Protocol version 6 (IPv6) Addresses in the Domain Name System (DNS)
+RFC3364 Tradeoffs in Domain Name System (DNS) Support for Internet Protocol version 6 (IPv6)
+RFC3403 Dynamic Delegation Discovery System (DDDS) Part Three: The Domain Name System (DNS) Database
+RFC3425 Obsoleting IQUERY
+RFC3467 Role of the Domain Name System (DNS)
+RFC3492 Punycode: A Bootstring encoding of Unicode for Internationalized Domain Names in Applications (IDNA)
+RFC3596 DNS Extensions to Support IP Version 6
+RFC3597 Handling of Unknown DNS Resource Record (RR) Types
+RFC3645 Generic Security Service Algorithm for Secret Key Transaction Authentication for DNS (GSS-TSIG)
+RFC3696 Application Techniques for Checking and Transformation of Names
+RFC3833 Threat Analysis of the Domain Name System (DNS)
+RFC3901 DNS IPv6 Transport Operational Guidelines
+RFC4025 A Method for Storing IPsec Keying Material in DNS
+RFC4033 DNS Security Introduction and Requirements
+RFC4034 Resource Records for the DNS Security Extensions
+RFC4035 Protocol Modifications for the DNS Security Extensions
+RFC4074 Common Misbehavior Against DNS Queries for IPv6 Addresses
+RFC4159 Deprecation of "ip6.int"
+RFC4185 National and Local Characters for DNS Top Level Domain (TLD) Names
+RFC4255 Using DNS to Securely Publish Secure Shell (SSH) Key Fingerprints
+RFC4339 IPv6 Host Configuration of DNS Server Information Approaches
+RFC4343 Domain Name System (DNS) Case Insensitivity Clarification
+RFC4367 What's in a Name: False Assumptions about DNS Names
+RFC4398 Storing Certificates in the Domain Name System (DNS)
+RFC4408 Sender Policy Framework (SPF) for Authorizing Use of Domains in E-Mail, Version 1
+RFC4431 The DNSSEC Lookaside Validation (DLV) DNS Resource Record
+RFC4470 Minimally Covering NSEC Records and DNSSEC On-line Signing
+RFC4471 Derivation of DNS Name Predecessor and Successor
+RFC4472 Operational Considerations and Issues with IPv6 DNS
+RFC4509 Use of SHA-256 in DNSSEC Delegation Signer (DS) Resource Records (RRs)
+RFC4592 The Role of Wildcards in the Domain Name System
+RFC4635 HMAC SHA (Hashed Message Authentication Code, Secure Hash Algorithm) TSIG Algorithm Identifiers
+RFC4697 Observed DNS Resolution Misbehavior
+RFC4701 A DNS Resource Record (RR) for Encoding Dynamic Host Configuration Protocol (DHCP) Information (DHCID RR)
+RFC4892 Requirements for a Mechanism Identifying a Name Server Instance
+RFC4955 DNS Security (DNSSEC) Experiments
+RFC4956 DNS Security (DNSSEC) Opt-In
+RFC4986 Requirements Related to DNS Security (DNSSEC) Trust Anchor Rollover
+RFC5001 DNS Name Server Identifier (NSID) Option
+RFC5011 Automated Updates of DNS Security (DNSSEC) Trust Anchors
+RFC5074 DNSSEC Lookaside Validation (DLV)
+RFC5155 DNS Security (DNSSEC) Hashed Authenticated Denial of Existence
+RFC5205 Host Identity Protocol (HIP) Domain Name System (DNS) Extensions
+RFC5358 Preventing Use of Recursive Nameservers in Reflector Attacks
+RFC5452 Measures for Making DNS More Resilient against Forged Answers
+RFC5507 Design Choices When Expanding the DNS
+RFC5625 DNS Proxy Implementation Guidelines
+RFC5702 Use of SHA-2 Algorithms with RSA in DNSKEY and RRSIG Resource Records for DNSSEC
+RFC5855 Nameservers for IPv4 and IPv6 Reverse Zones
+RFC5864 DNS SRV Resource Records for AFS
+RFC5890 Internationalized Domain Names for Applications (IDNA): Definitions and Document Framework
+RFC5891 Internationalized Domain Names in Applications (IDNA): Protocol
+RFC5933 Use of GOST Signature Algorithms in DNSKEY and RRSIG Resource Records for DNSSEC
+RFC5936 DNS Zone Transfer Protocol (AXFR)
+RFC5966 DNS Transport over TCP - Implementation Requirements
+RFC6014 Cryptographic Algorithm Identifier Allocation for DNSSEC
+RFC6147 DNS64: DNS Extensions for Network Address Translation from IPv6 Clients to IPv4 Servers
+RFC6168 Requirements for Management of Name Servers for the DNS
+RFC6303 Locally Served DNS Zones
+RFC6304 AS112 Nameserver Operations
+RFC6305 I'm Being Attacked by PRISONER.IANA.ORG!
+RFC6335 Internet Assigned Numbers Authority (IANA) Procedures for the Management of the Service Name and Transport Protocol Port Number Registry
+RFC6604 xNAME RCODE and Status Bits Clarification
+RFC6605 Elliptic Curve Digital Signature Algorithm (DSA) for DNSSEC
+RFC6672 DNAME Redirection in the DNS
+RFC6698 The DNS-Based Authentication of Named Entities (DANE) Transport Layer Security (TLS) Protocol: TLSA
+RFC6725 DNS Security (DNSSEC) DNSKEY Algorithm IANA Registry Updates
+RFC6742 DNS Resource Records for the Identifier-Locator Network Protocol (ILNP)
+RFC6761 Special-Use Domain Names
+RFC6781 DNSSEC Operational Practices, Version 2
+RFC6840 Clarifications and Implementation Notes for DNS Security (DNSSEC)
+RFC6841 A Framework for DNSSEC Policies and DNSSEC Practice Statements
+RFC6844 DNS Certification Authority Authorization (CAA) Resource Record
+RFC6891 Extension Mechanisms for DNS (EDNS(0))
+RFC6895 Domain Name System (DNS) IANA Considerations
+RFC6912 Principles for Unicode Code Point Inclusion in Labels in the DNS
+RFC6944 Applicability Statement: DNS Security (DNSSEC) DNSKEY Algorithm Implementation Status
+RFC6975 Signaling Cryptographic Algorithm Understanding in DNS Security Extensions (DNSSEC)
+RFC7043 Resource Records for EUI-48 and EUI-64 Addresses in the DNS
+RFC7085 Top-Level Domains That Are Already Dotless
+RFC7218 Adding Acronyms to Simplify Conversations about DNS-Based Authentication of Named Entities (DANE)
+RFC7314 Extension Mechanisms for DNS (EDNS) EXPIRE Option
+RFC7344 Automating DNSSEC Delegation Trust Maintenance
+RFC7477 Child-to-Parent Synchronization in DNS
+RFC7534 AS112 Nameserver Operations
+RFC7535 AS112 Redirection Using DNAME
+RFC7583 DNSSEC Key Rollover Timing Considerations
+RFC7626 DNS Privacy Considerations
+RFC7646 Definition and Use of DNSSEC Negative Trust Anchors
+RFC7671 The DNS-Based Authentication of Named Entities (DANE) Protocol: Updates and Operational Guidance
+RFC7686 The ".onion" Special-Use Domain Name
+RFC7706 Decreasing Access Time to Root Servers by Running One on Loopback
+RFC7719 DNS Terminology
+RFC7766 DNS Transport over TCP - Implementation Requirements
+RFC7793 Adding 100.64.0.0/10 Prefixes to the IPv4 Locally-Served DNS Zones Registry
+RFC7816 DNS Query Name Minimisation to Improve Privacy
+RFC7828 The edns-tcp-keepalive EDNS0 Option
+RFC7830 The EDNS(0) Padding Option
+RFC7858 Specification for DNS over Transport Layer Security (TLS)
+RFC7871 Client Subnet in DNS Queries
+RFC7873 Domain Name System (DNS) Cookies
+RFC7901 CHAIN Query Requests in DNS
+RFC7929 DNS-Based Authentication of Named Entities (DANE) Bindings for OpenPGP
+RFC7958 DNSSEC Trust Anchor Publication for the Root Zone
+RFC8005 Host Identity Protocol (HIP) Domain Name System (DNS) Extension
+RFC8027 DNSSEC Roadblock Avoidance
+RFC8078 Managing DS Records from the Parent via CDS/CDNSKEY
+RFC8080 Edwards-Curve Digital Security Algorithm (EdDSA) for DNSSEC
+RFC8094 DNS over Datagram Transport Layer Security (DTLS)
+RFC8567 Customer Management DNS Resource Records
+RFC8586 Loop Detection in Content Delivery Networks (CDNs)
+RFC8598 Split DNS Configuration for the Internet Key Exchange Protocol Version 2 (IKEv2)
+RFC8618 Compacted-DNS (C-DNS): A Format for DNS Packet Capture
+RFC8624 Algorithm Implementation Requirements and Usage Guidance for DNSSEC
+RFC8659 DNS Certification Authority Authorization (CAA) Resource Record
+RFC8749 Moving DNSSEC Lookaside Validation (DLV) to Historic Status
+RFC8764 Apple's DNS Long-Lived Queries Protocol
+RFC8765 DNS Push Notifications
+RFC8766 Discovery Proxy for Multicast DNS-Based Service Discovery
+RFC8767 Serving Stale Data to Improve DNS Resiliency
+RFC8777 DNS Reverse IP Automatic Multicast Tunneling (AMT) Discovery
+RFC8882 DNS-Based Service Discovery (DNS-SD) Privacy and Security Requirements
+RFC8901 Multi-Signer DNSSEC Models
+RFC8904 DNS Whitelist (DNSWL) Email Authentication Method Extension
+RFC8906 A Common Operational Problem in DNS Servers: Failure to Communicate
+RFC8914 Extended DNS Errors
+RFC8932 Recommendations for DNS Privacy Service Operators
+RFC8945 Secret Key Transaction Authentication for DNS (TSIG)
+RFC8976 Message Digest for DNS Zones

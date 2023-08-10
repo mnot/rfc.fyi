@@ -1,15 +1,15 @@
 name RFC Editor
 
-RFC2026
-RFC2555
-RFC4844
-RFC4846
-RFC5540
-RFC6410
-RFC6548
-RFC6635
-RFC7322
-RFC7841
-RFC8126
-RFC3552
-RFC2277
+RFC2026 The Internet Standards Process -- Revision 3
+RFC2555 30 Years of RFCs
+RFC4844 The RFC Series and RFC Editor
+RFC4846 Independent Submissions to the RFC Editor
+RFC5540 40 Years of RFCs
+RFC6410 Reducing the Standards Track to Two Maturity Levels
+RFC6548 Independent Submission Editor Model
+RFC6635 RFC Editor Model (Version 2)
+RFC7322 RFC Style Guide
+RFC7841 RFC Streams, Headers, and Boilerplates
+RFC8126 Guidelines for Writing an IANA Considerations Section in RFCs
+RFC3552 Guidelines for Writing RFC Text on Security Considerations
+RFC2277 IETF Policy on Character Sets and Languages

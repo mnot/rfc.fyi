@@ -1,17 +1,17 @@
 name IETF Administration
 
-RFC2028
-RFC2031
-RFC2850
-RFC3677
-RFC3716
-RFC4052
-RFC4053
-RFC4071
-RFC4089
-RFC4333
-RFC6220
-RFC7475
-RFC7691
-RFC8090
-RFC8128
+RFC2028 The Organizations Involved in the IETF Standards Process
+RFC2031 IETF-ISOC relationship
+RFC2850 Charter of the Internet Architecture Board (IAB)
+RFC3677 IETF ISOC Board of Trustee Appointment Procedures
+RFC3716 IETF in the Large:  Administration and Execution
+RFC4052 IAB Processes for Management of IETF Liaison Relationships
+RFC4053 Procedures for Handling Liaison Statements to and from the IETF
+RFC4071 Structure of the IETF Administrative Support Activity (IASA)
+RFC4089 IAB and IESG Recommendation for IETF Administrative Restructuring
+RFC4333 The IETF Administrative Oversight Committee (IAOC) Member Selection Guidelines and Process
+RFC6220 Defining the Role and Function of IETF Protocol Parameter Registry Operators
+RFC7475 Increasing the Number of Area Directors in an IETF Area
+RFC7691 Updating the Term Dates of IETF Administrative Oversight Committee (IAOC) Members
+RFC8090 Appointment Procedures for the IETF Representatives to the Community Coordination Group (CCG)
+RFC8128 IETF Appointment Procedures for the ICANN Root Zone Evolution Review Committee

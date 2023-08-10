@@ -3,56 +3,56 @@
 
 color #F9AA66
 
-RFC1945
-RFC2068
-RFC2069
-RFC2109
-RFC2145
-RFC2616
-RFC2818
-RFC2965
-RFC5789
-RFC5861
-RFC6265
-RFC6266
-RFC6585
-RFC7089
-RFC7230
-RFC7231
-RFC7232
-RFC7233
-RFC7234
-RFC7235
-RFC7538
-RFC7540
-RFC7541
-RFC7615
-RFC7616
-RFC7617
-RFC7639
-RFC7694
-RFC7725
-RFC7838
-RFC8144
-RFC8164
-RFC8188
-RFC8246
-RFC8288
-RFC8297
-RFC8336
-RFC8441
-RFC8470
-RFC8941
-RFC9110
-RFC9111
-RFC9112
-RFC9113
-RFC9114
-RFC9204
-RFC9205
-RFC9209
-RFC9211
-RFC9213
-RFC9218
-RFC9220
-RFC9298
+RFC1945 Hypertext Transfer Protocol -- HTTP/1.0
+RFC2068 Hypertext Transfer Protocol -- HTTP/1.1
+RFC2069 An Extension to HTTP : Digest Access Authentication
+RFC2109 HTTP State Management Mechanism
+RFC2145 Use and Interpretation of HTTP Version Numbers
+RFC2616 Hypertext Transfer Protocol -- HTTP/1.1
+RFC2818 HTTP Over TLS
+RFC2965 HTTP State Management Mechanism
+RFC5789 PATCH Method for HTTP
+RFC5861 HTTP Cache-Control Extensions for Stale Content
+RFC6265 HTTP State Management Mechanism
+RFC6266 Use of the Content-Disposition Header Field in the Hypertext Transfer Protocol (HTTP)
+RFC6585 Additional HTTP Status Codes
+RFC7089 HTTP Framework for Time-Based Access to Resource States -- Memento
+RFC7230 Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing
+RFC7231 Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content
+RFC7232 Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests
+RFC7233 Hypertext Transfer Protocol (HTTP/1.1): Range Requests
+RFC7234 Hypertext Transfer Protocol (HTTP/1.1): Caching
+RFC7235 Hypertext Transfer Protocol (HTTP/1.1): Authentication
+RFC7538 The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect)
+RFC7540 Hypertext Transfer Protocol Version 2 (HTTP/2)
+RFC7541 HPACK: Header Compression for HTTP/2
+RFC7615 HTTP Authentication-Info and Proxy-Authentication-Info Response Header Fields
+RFC7616 HTTP Digest Access Authentication
+RFC7617 The 'Basic' HTTP Authentication Scheme
+RFC7639 The ALPN HTTP Header Field
+RFC7694 Hypertext Transfer Protocol (HTTP) Client-Initiated Content-Encoding
+RFC7725 An HTTP Status Code to Report Legal Obstacles
+RFC7838 HTTP Alternative Services
+RFC8144 Use of the Prefer Header Field in Web Distributed Authoring and Versioning (WebDAV)
+RFC8164 Opportunistic Security for HTTP/2
+RFC8188 Encrypted Content-Encoding for HTTP
+RFC8246 HTTP Immutable Responses
+RFC8288 Web Linking
+RFC8297 An HTTP Status Code for Indicating Hints
+RFC8336 The ORIGIN HTTP/2 Frame
+RFC8441 Bootstrapping WebSockets with HTTP/2
+RFC8470 Using Early Data in HTTP
+RFC8941 Structured Field Values for HTTP
+RFC9110 HTTP Semantics
+RFC9111 HTTP Caching
+RFC9112 HTTP/1.1
+RFC9113 HTTP/2
+RFC9114 HTTP/3
+RFC9204 QPACK: Field Compression for HTTP/3
+RFC9205 Building Protocols with HTTP
+RFC9209 The Proxy-Status HTTP Response Header Field
+RFC9211 The Cache-Status HTTP Response Header Field
+RFC9213 Targeted HTTP Cache Control
+RFC9218 Extensible Prioritization Scheme for HTTP
+RFC9220 Bootstrapping WebSockets with HTTP/3
+RFC9298 Proxying UDP in HTTP

@@ -1,70 +1,70 @@
 name: April 1
 colour: #E07EDB
 
-RFC9405
-RFC9402
-RFC9401
-RFC9226
-RFC9225
-RFC8962
-RFC8774
-RFC8771
-RFC8565
-RFC8567
-RFC8369
-RFC8367
-RFC8140
-RFC8136
-RFC8135
-RFC7511
-RFC7514
-RFC7169
-RFC7168
-RFC6919
-RFC6921
-RFC6593
-RFC6592
-RFC6217
-RFC6214
-RFC5984
-RFC5841
-RFC5514
-RFC5513
-RFC5242
-RFC5241
-RFC4824
-RFC4042
-RFC4041
-RFC3751
-RFC3514
-RFC3252
-RFC3251
-RFC3093
-RFC3092
-RFC3091
-RFC2795
-RFC2551
-RFC2550
-RFC2549
-RFC2325
-RFC2324
-RFC2323
-RFC2322
-RFC2321
-RFC2100
-RFC1927
-RFC1926
-RFC1925
-RFC1924
-RFC1776
-RFC1607
-RFC1606
-RFC1605
-RFC1438
-RFC1437
-RFC1313
-RFC1217
-RFC1216
-RFC1149
-RFC1097
-RFC0748
+RFC9405 AI Sarcasm Detection: Insult Your AI without Offending It
+RFC9402 Concat Notation
+RFC9401 The Addition of the Death (DTH) Flag to TCP
+RFC9226 Bioctal: Hexadecimal 2.0
+RFC9225 Software Defects Considered Harmful
+RFC8962 Establishing the Protocol Police
+RFC8774 The Quantum Bug
+RFC8771 The Internationalized Deliberately Unreadable Network NOtation (I-DUNNO)
+RFC8565 Hypertext Jeopardy Protocol (HTJP/1.0)
+RFC8567 Customer Management DNS Resource Records
+RFC8369 Internationalizing IPv6 Using 128-Bit Unicode
+RFC8367 Wrongful Termination of Internet Protocol (IP) Packets
+RFC8140 The Arte of ASCII: Or, An True and Accurate Representation of an Menagerie of Thynges Fabulous and Wonderful in Ye Forme of Character
+RFC8136 Additional Transition Functionality for IPv6
+RFC8135 Complex Addressing in IPv6
+RFC7511 Scenic Routing for IPv6
+RFC7514 Really Explicit Congestion Notification (RECN)
+RFC7169 The NSA (No Secrecy Afforded) Certificate Extension
+RFC7168 The Hyper Text Coffee Pot Control Protocol for Tea Efflux Appliances (HTCPCP-TEA)
+RFC6919 Further Key Words for Use in RFCs to Indicate Requirement Levels
+RFC6921 Design Considerations for Faster-Than-Light (FTL) Communication
+RFC6593 Service Undiscovery Using Hide-and-Go-Seek for the Domain Pseudonym System (DPS)
+RFC6592 The Null Packet
+RFC6217 Regional Broadcast Using an Atmospheric Link Layer
+RFC6214 Adaptation of RFC 1149 for IPv6
+RFC5984 Increasing Throughput in IP Networks with ESP-Based Forwarding: ESPBasedForwarding
+RFC5841 TCP Option to Denote Packet Mood
+RFC5514 IPv6 over Social Networks
+RFC5513 IANA Considerations for Three Letter Acronyms
+RFC5242 A Generalized Unified Character Code: Western European and CJK Sections
+RFC5241 Naming Rights in IETF Protocols
+RFC4824 The Transmission of IP Datagrams over the Semaphore Flag Signaling System (SFSS)
+RFC4042 UTF-9 and UTF-18 Efficient Transformation Formats of Unicode
+RFC4041 Requirements for Morality Sections in Routing Area Drafts
+RFC3751 Omniscience Protocol Requirements
+RFC3514 The Security Flag in the IPv4 Header
+RFC3252 Binary Lexical Octet Ad-hoc Transport
+RFC3251 Electricity over IP
+RFC3093 Firewall Enhancement Protocol (FEP)
+RFC3092 Etymology of "Foo"
+RFC3091 Pi Digit Generation Protocol
+RFC2795 The Infinite Monkey Protocol Suite (IMPS)
+RFC2551 The Roman Standards Process -- Revision III
+RFC2550 Y10K and Beyond
+RFC2549 IP over Avian Carriers with Quality of Service
+RFC2325 Definitions of Managed Objects for Drip-Type Heated Beverage Hardware Devices using SMIv2
+RFC2324 Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)
+RFC2323 IETF Identification and Security Guidelines
+RFC2322 Management of IP numbers by peg-dhcp
+RFC2321 RITA -- The Reliable Internetwork Troubleshooting Agent
+RFC2100 The Naming of Hosts
+RFC1927 Suggested Additional MIME Types for Associating Documents
+RFC1926 An Experimental Encapsulation of IP Datagrams on Top of ATM
+RFC1925 The Twelve Networking Truths
+RFC1924 A Compact Representation of IPv6 Addresses
+RFC1776 The Address is the Message
+RFC1607 A VIEW FROM THE 21ST CENTURY
+RFC1606 A Historical Perspective On The Usage Of IP Version 9
+RFC1605 SONET to Sonnet Translation
+RFC1438 Internet Engineering Task Force Statements Of Boredom (SOBs)
+RFC1437 The Extension of MIME Content-Types to a New Medium
+RFC1313 Today's Programming for KRFC AM 1313 Internet Talk Radio
+RFC1217 Memo from the Consortium for Slow Commotion Research (CSCR)
+RFC1216 Gigabit network economics and paradigm shifts
+RFC1149 Standard for the transmission of IP datagrams on avian carriers
+RFC1097 Telnet subliminal-message option
+RFC0748 Telnet randomly-lose option

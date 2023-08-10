@@ -1,28 +1,28 @@
 name IETF Standards Process
 
 
-RFC2026
-RFC2028
-RFC2418
-RFC3669
-RFC3774
-RFC3844
-RFC3967
-RFC3929
-RFC3933
-RFC3934
-RFC3935
-RFC4633
-RFC4691
-RFC4858
-RFC5434
-RFC6174
-RFC6410
-RFC6702
-RFC7154
-RFC7221
-RFC7282
-RFC7704
-RFC7776
-RFC7957
-RFC8179
+RFC2026 The Internet Standards Process -- Revision 3
+RFC2028 The Organizations Involved in the IETF Standards Process
+RFC2418 IETF Working Group Guidelines and Procedures
+RFC3669 Guidelines for Working Groups on Intellectual Property Issues
+RFC3774 IETF Problem Statement
+RFC3844 IETF Problem Resolution Process
+RFC3967 Clarifying when Standards Track Documents may Refer Normatively to Documents at a Lower Level
+RFC3929 Alternative Decision Making Processes for Consensus-Blocked Decisions in the IETF
+RFC3933 A Model for IETF Process Experiments
+RFC3934 Updates to RFC 2418 Regarding the Management of IETF Mailing Lists
+RFC3935 A Mission Statement for the IETF
+RFC4633 Experiment in Long-Term Suspensions From Internet Engineering Task Force (IETF) Mailing Lists
+RFC4691 Guidelines for Acting as an IETF Liaison to Another Organization
+RFC4858 Document Shepherding from Working Group Last Call to Publication
+RFC5434 Considerations for Having a Successful Birds-of-a-Feather (BOF) Session
+RFC6174 Definition of IETF Working Group Document States
+RFC6410 Reducing the Standards Track to Two Maturity Levels
+RFC6702 Promoting Compliance with Intellectual Property Rights (IPR) Disclosure Rules
+RFC7154 IETF Guidelines for Conduct
+RFC7221 Handling of Internet-Drafts by IETF Working Groups
+RFC7282 On Consensus and Humming in the IETF
+RFC7704 An IETF with Much Diversity and Professional Conduct
+RFC7776 IETF Anti-Harassment Procedures
+RFC7957 DISPATCH-Style Working Groups and the SIP Change Process
+RFC8179 Intellectual Property Rights in IETF Technology

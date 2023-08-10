@@ -1,14 +1,14 @@
 name Note Well
 
-RFC2026
-RFC5657
-RFC6410
-RFC7100
-RFC7127
-RFC7475
-RFC2418
-RFC3934
-RFC7776
-RFC7154
-RFC5378
-RFC8179
+RFC2026 The Internet Standards Process -- Revision 3
+RFC5657 Guidance on Interoperation and Implementation Reports for Advancement to Draft Standard
+RFC6410 Reducing the Standards Track to Two Maturity Levels
+RFC7100 Retirement of the "Internet Official Protocol Standards" Summary Document
+RFC7127 Characterization of Proposed Standards
+RFC7475 Increasing the Number of Area Directors in an IETF Area
+RFC2418 IETF Working Group Guidelines and Procedures
+RFC3934 Updates to RFC 2418 Regarding the Management of IETF Mailing Lists
+RFC7776 IETF Anti-Harassment Procedures
+RFC7154 IETF Guidelines for Conduct
+RFC5378 Rights Contributors Provide to the IETF Trust
+RFC8179 Intellectual Property Rights in IETF Technology
