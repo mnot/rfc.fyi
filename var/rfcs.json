@@ -96765,7 +96765,7 @@
   "area": "tsv",
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "CUBIC for Fast Long-Distance Networks",
   "wg": "tcpm"
@@ -110301,6 +110301,13 @@
   "title": "In Situ Operations, Administration, and Maintenance (IOAM) Deployment",
   "wg": "ippm"
  },
+ "RFC9380": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Hashing to Elliptic Curves"
+ },
  "RFC9384": {
   "area": "rtg",
   "keywords": [],
@@ -110739,6 +110746,18 @@
   "title": "The Messaging Layer Security (MLS) Protocol",
   "wg": "mls"
  },
+ "RFC9424": {
+  "area": "ops",
+  "keywords": [
+   "IOC",
+   "Attack Defence"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Indicators of Compromise (IoCs) and Their Role in Attack Defence",
+  "wg": "opsec"
+ },
  "RFC9425": {
   "area": "art",
   "keywords": [
@@ -110886,6 +110905,32 @@
   "title": "Publish/Subscribe Functionality for the Locator/ID Separation Protocol (LISP)",
   "wg": "lisp"
  },
+ "RFC9438": {
+  "area": "tsv",
+  "keywords": [
+   "Congestion control",
+   "large BDP",
+   "window scalability",
+   "RTT fairness"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CUBIC for Fast and Long-Distance Networks",
+  "wg": "tcpm"
+ },
+ "RFC9439": {
+  "area": "tsv",
+  "keywords": [
+   "JavaScript Object Notation",
+   "Application-Layer Traffic Optimization"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Application-Layer Traffic Optimization (ALTO) Performance Cost Metrics",
+  "wg": "alto"
+ },
  "RFC9440": {
   "area": "art",
   "keywords": [
@@ -110965,6 +111010,23 @@
   "status": "current",
   "stream": "independent",
   "title": "Reflections on Ten Years Past the Snowden Revelations"
+ },
+ "RFC9451": {
+  "area": "rtg",
+  "keywords": [
+   "Diagnostic",
+   "Troubelshooting",
+   "Service Function Chaining",
+   "Automation",
+   "SDN",
+   "Programmable Networks",
+   "Service Differentiation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operations, Administration, and Maintenance (OAM) Packet and Behavior in the Network Service Header (NSH)",
+  "wg": "sfc"
  },
  "RFC9457": {
   "area": "art",
