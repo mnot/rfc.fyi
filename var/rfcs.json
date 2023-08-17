@@ -110544,6 +110544,17 @@
   "stream": "independent",
   "title": "Concat Notation"
  },
+ "RFC9404": {
+  "area": "art",
+  "keywords": [
+   "jmap"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSON Meta Application Protocol (JMAP) Blob Management Extension",
+  "wg": "jmap"
+ },
  "RFC9405": {
   "keywords": [
    "Artificial intelligence",
@@ -111000,6 +111011,30 @@
   "title": "Multiplexing Scheme Updates for QUIC",
   "wg": "avtcore"
  },
+ "RFC9445": {
+  "area": "ops",
+  "keywords": [
+   "redirection",
+   "subscriber policies",
+   "differentiated service",
+   "DNS",
+   "DoH",
+   "DoT",
+   "DoQ",
+   "QUIC",
+   "Encryption",
+   "Service delivery",
+   "Service provisioning",
+   "service activation",
+   "policies",
+   "connectivity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RADIUS Extensions for DHCP-Configured Services",
+  "wg": "opsawg"
+ },
  "RFC9446": {
   "keywords": [
    "pervasive monitoring",
@@ -111027,6 +111062,17 @@
   "stream": "ietf",
   "title": "Operations, Administration, and Maintenance (OAM) Packet and Behavior in the Network Service Header (NSH)",
   "wg": "sfc"
+ },
+ "RFC9454": {
+  "area": "rtg",
+  "keywords": [
+   "OSPF terminology"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Update to OSPF Terminology",
+  "wg": "lsr"
  },
  "RFC9457": {
   "area": "art",
