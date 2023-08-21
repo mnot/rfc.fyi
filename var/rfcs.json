@@ -48414,11 +48414,8 @@
   "area": "int",
   "keywords": [
    "TABLE-MIB",
-   "Management",
-   "Information",
-   "Base",
-   "Internet",
-   "Protocol"
+   "Management Information Base",
+   "Internet Protocol"
   ],
   "level": "std",
   "status": "current",
@@ -48431,14 +48428,10 @@
   "keywords": [
    "MIB-IP",
    "IP",
-   "Simple",
-   "Network",
-   "Management",
-   "Protocol",
+   "Simple Network Management Protocol",
    "MIB",
    "ipv6",
-   "ICMPv6-MIB|",
-   "mib",
+   "ICMPv6-MIB",
    "internet",
    "protocol",
    "ip mib",
@@ -48519,7 +48512,6 @@
  "RFC4301": {
   "area": "sec",
   "keywords": [
-   "IPSEC",
    "ipsec",
    "authentication",
    "encapsulation",
@@ -48662,7 +48654,6 @@
    "association",
    "key",
    "management",
-   "ipsec",
    "cryptography",
    "authentication",
    "IKE",
@@ -48779,7 +48770,7 @@
    "IMAP4-ACL",
    "Control",
    "List",
-   "interet message access protocol"
+   "internet message access protocol"
   ],
   "level": "std",
   "status": "current",
@@ -48790,10 +48781,7 @@
  "RFC4315": {
   "keywords": [
    "IMAP4UIDPL",
-   "internet",
-   "message",
-   "access",
-   "protocol",
+   "internet message access protocol",
    "disconnected",
    "operation"
   ],
