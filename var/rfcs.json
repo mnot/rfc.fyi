@@ -110296,6 +110296,17 @@
   "stream": "irtf",
   "title": "Hashing to Elliptic Curves"
  },
+ "RFC9381": {
+  "keywords": [
+   "public key cryptography",
+   "hashing",
+   "authenticated denial"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Verifiable Random Functions (VRFs)"
+ },
  "RFC9384": {
   "area": "rtg",
   "keywords": [],
@@ -110999,6 +111010,15 @@
   "title": "Multiplexing Scheme Updates for QUIC",
   "wg": "avtcore"
  },
+ "RFC9444": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automated Certificate Management Environment (ACME) for Subdomains",
+  "wg": "acme"
+ },
  "RFC9445": {
   "area": "ops",
   "keywords": [
@@ -111034,6 +111054,20 @@
   "stream": "independent",
   "title": "Reflections on Ten Years Past the Snowden Revelations"
  },
+ "RFC9450": {
+  "area": "rtg",
+  "keywords": [
+   "determinism",
+   "availability",
+   "routing",
+   "path"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Reliable and Available Wireless (RAW) Use Cases",
+  "wg": "raw"
+ },
  "RFC9451": {
   "area": "rtg",
   "keywords": [
@@ -111051,6 +111085,20 @@
   "title": "Operations, Administration, and Maintenance (OAM) Packet and Behavior in the Network Service Header (NSH)",
   "wg": "sfc"
  },
+ "RFC9452": {
+  "area": "rtg",
+  "keywords": [
+   "inband",
+   "In-situ",
+   "Telemetry",
+   "Tracing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Network Service Header (NSH) Encapsulation for In Situ OAM (IOAM) Data",
+  "wg": "sfc"
+ },
  "RFC9454": {
   "area": "rtg",
   "keywords": [
@@ -111061,6 +111109,18 @@
   "stream": "ietf",
   "title": "Update to OSPF Terminology",
   "wg": "lsr"
+ },
+ "RFC9455": {
+  "area": "ops",
+  "keywords": [
+   "ROA",
+   "Route Origin Authorization"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Avoiding Route Origin Authorizations (ROAs) Containing Multiple IP Prefixes",
+  "wg": "sidrops"
  },
  "RFC9457": {
   "area": "art",
