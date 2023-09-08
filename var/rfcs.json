@@ -111065,6 +111065,18 @@
   "stream": "independent",
   "title": "Reflections on Ten Years Past the Snowden Revelations"
  },
+ "RFC9449": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "oauth2"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Demonstrating Proof of Possession (DPoP)",
+  "wg": "oauth"
+ },
  "RFC9450": {
   "area": "rtg",
   "keywords": [
