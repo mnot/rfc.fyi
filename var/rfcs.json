@@ -111170,5 +111170,20 @@
   "stream": "ietf",
   "title": "Unsolicited Bidirectional Forwarding Detection (BFD) for Sessionless Applications",
   "wg": "bfd"
+ },
+ "RFC9470": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "oauth2",
+   "openid connect",
+   "oauth",
+   "step-up"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Step Up Authentication Challenge Protocol",
+  "wg": "oauth"
  }
 }
