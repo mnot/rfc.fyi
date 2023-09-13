@@ -111065,6 +111065,28 @@
   "stream": "independent",
   "title": "Reflections on Ten Years Past the Snowden Revelations"
  },
+ "RFC9447": {
+  "area": "sec",
+  "keywords": [
+   "ACME"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automated Certificate Management Environment (ACME) Challenges Using an Authority Token",
+  "wg": "acme"
+ },
+ "RFC9448": {
+  "area": "sec",
+  "keywords": [
+   "STIR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TNAuthList Profile of Automated Certificate Management Environment (ACME) Authority Token",
+  "wg": "acme"
+ },
  "RFC9449": {
   "area": "sec",
   "keywords": [
