@@ -111207,5 +111207,17 @@
   "stream": "ietf",
   "title": "OAuth 2.0 Step Up Authentication Challenge Protocol",
   "wg": "oauth"
+ },
+ "RFC9473": {
+  "keywords": [
+   "PAN",
+   "path-aware network",
+   "path property",
+   "path selection"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "A Vocabulary of Path Properties"
  }
 }
