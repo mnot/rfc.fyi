@@ -111184,6 +111184,18 @@
   "title": "Problem Details for HTTP APIs",
   "wg": "httpapi"
  },
+ "RFC9459": {
+  "area": "sec",
+  "keywords": [
+   "COSE Encryption",
+   "Firmware encryption"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE): AES-CTR and AES-CBC",
+  "wg": "cose"
+ },
  "RFC9468": {
   "area": "rtg",
   "keywords": [],
@@ -111219,5 +111231,14 @@
   "status": "current",
   "stream": "irtf",
   "title": "A Vocabulary of Path Properties"
+ },
+ "RFC9476": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The .alt Special-Use Top-Level Domain",
+  "wg": "dnsop"
  }
 }
