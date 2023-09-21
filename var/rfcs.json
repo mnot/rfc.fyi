@@ -111205,6 +111205,19 @@
   "title": "Unsolicited Bidirectional Forwarding Detection (BFD) for Sessionless Applications",
   "wg": "bfd"
  },
+ "RFC9469": {
+  "area": "rtg",
+  "keywords": [
+   "EVPN",
+   "Applicability",
+   "NVO3"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Applicability of Ethernet Virtual Private Network (EVPN) to Network Virtualization over Layer 3 (NVO3) Networks",
+  "wg": "nvo3"
+ },
  "RFC9470": {
   "area": "sec",
   "keywords": [
