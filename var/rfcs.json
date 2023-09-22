@@ -111144,6 +111144,15 @@
   "title": "Network Service Header (NSH) Encapsulation for In Situ OAM (IOAM) Data",
   "wg": "sfc"
  },
+ "RFC9453": {
+  "area": "int",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Applicability and Use Cases for IPv6 over Networks of Resource-constrained Nodes (6lo)",
+  "wg": "6lo"
+ },
  "RFC9454": {
   "area": "rtg",
   "keywords": [
