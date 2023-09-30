@@ -111205,6 +111205,17 @@
   "title": "CBOR Object Signing and Encryption (COSE): AES-CTR and AES-CBC",
   "wg": "cose"
  },
+ "RFC9465": {
+  "area": "rtg",
+  "keywords": [
+   "Multicast"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PIM Null-Register Packing",
+  "wg": "pim"
+ },
  "RFC9468": {
   "area": "rtg",
   "keywords": [],
@@ -111269,5 +111280,14 @@
   "status": "current",
   "stream": "independent",
   "title": "Complaint Feedback Loop Address Header"
+ },
+ "RFC9486": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Options for In Situ Operations, Administration, and Maintenance (IOAM)",
+  "wg": "ippm"
  }
 }
