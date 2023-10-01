@@ -110307,6 +110307,20 @@
   "stream": "irtf",
   "title": "Verifiable Random Functions (VRFs)"
  },
+ "RFC9382": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "SPAKE2, a Password-Authenticated Key Exchange"
+ },
+ "RFC9383": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "SPAKE2+, an Augmented Password-Authenticated Key Exchange (PAKE) Protocol"
+ },
  "RFC9384": {
   "area": "rtg",
   "keywords": [],
@@ -111252,6 +111266,19 @@
   "stream": "ietf",
   "title": "OAuth 2.0 Step Up Authentication Challenge Protocol",
   "wg": "oauth"
+ },
+ "RFC9471": {
+  "area": "ops",
+  "keywords": [
+   "Glue Record",
+   "In-Domain Name Server",
+   "Sibling Domain Name Server"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Glue Requirements in Referral Responses",
+  "wg": "dnsop"
  },
  "RFC9473": {
   "keywords": [
