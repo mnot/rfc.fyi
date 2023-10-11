@@ -104229,7 +104229,7 @@
   "area": "rtg",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IS-IS Application-Specific Link Attributes",
   "wg": "lsr"
@@ -104238,7 +104238,7 @@
   "area": "rtg",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "OSPF Application-Specific Link Attributes",
   "wg": "lsr"
@@ -111280,6 +111280,15 @@
   "title": "DNS Glue Requirements in Referral Responses",
   "wg": "dnsop"
  },
+ "RFC9472": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Reporting Software Bills of Materials (SBOMs) and Vulnerability Information",
+  "wg": "opsawg"
+ },
  "RFC9473": {
   "keywords": [
    "PAN",
@@ -111291,6 +111300,17 @@
   "status": "current",
   "stream": "irtf",
   "title": "A Vocabulary of Path Properties"
+ },
+ "RFC9474": {
+  "keywords": [
+   "RSABSSA",
+   "RSA",
+   "blind signature"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "RSA Blind Signatures"
  },
  "RFC9476": {
   "area": "ops",
@@ -111308,6 +111328,28 @@
   "stream": "independent",
   "title": "Complaint Feedback Loop Address Header"
  },
+ "RFC9478": {
+  "area": "sec",
+  "keywords": [
+   "IKEv2",
+   "SPD",
+   "SAD"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Labeled IPsec Traffic Selector Support for the Internet Key Exchange Protocol Version 2 (IKEv2)",
+  "wg": "ipsecme"
+ },
+ "RFC9479": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IS-IS Application-Specific Link Attributes",
+  "wg": "lsr"
+ },
  "RFC9486": {
   "area": "tsv",
   "keywords": [],
@@ -111316,5 +111358,14 @@
   "stream": "ietf",
   "title": "IPv6 Options for In Situ Operations, Administration, and Maintenance (IOAM)",
   "wg": "ippm"
+ },
+ "RFC9492": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Application-Specific Link Attributes",
+  "wg": "lsr"
  }
 }
