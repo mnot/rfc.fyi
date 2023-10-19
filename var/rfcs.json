@@ -51101,7 +51101,7 @@
   "area": "app",
   "keywords": [
    "LDAPV3",
-   "LDAv3",
+   "LDAV3",
    "x.500",
    "LDAP3-ATD",
    "syntax",
@@ -51218,7 +51218,7 @@
    "LDAP3-ATD",
    "LDAv3",
    "x.500",
-   "syntax,"
+   "syntax"
   ],
   "level": "std",
   "status": "current",
@@ -111379,6 +111379,21 @@
   "stream": "ietf",
   "title": "IPv6 Options for In Situ Operations, Administration, and Maintenance (IOAM)",
   "wg": "ippm"
+ },
+ "RFC9488": {
+  "area": "rtg",
+  "keywords": [
+   "segment routing",
+   "adjacency sid",
+   "sla",
+   "fast reroute",
+   "ti-lfa"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Local Protection Enforcement in the Path Computation Element Communication Protocol (PCEP)",
+  "wg": "pce"
  },
  "RFC9492": {
   "area": "rtg",
