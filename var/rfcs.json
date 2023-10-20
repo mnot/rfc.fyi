@@ -111359,6 +111359,26 @@
   "title": "IS-IS Application-Specific Link Attributes",
   "wg": "lsr"
  },
+ "RFC9484": {
+  "area": "tsv",
+  "keywords": [
+   "quic",
+   "http",
+   "datagram",
+   "VPN",
+   "proxy",
+   "tunnels",
+   "quic in udp in IP in quic",
+   "turtles all the way down",
+   "masque",
+   "http-ng"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Proxying IP in HTTP",
+  "wg": "masque"
+ },
  "RFC9485": {
   "area": "art",
   "keywords": [
