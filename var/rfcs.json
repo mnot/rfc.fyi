@@ -111436,5 +111436,43 @@
   "stream": "ietf",
   "title": "Certification Authority Authorization (CAA) Processing for Email Addresses",
   "wg": "lamps"
+ },
+ "RFC9503": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Simple Two-Way Active Measurement Protocol (STAMP) Extensions for Segment Routing Networks",
+  "wg": "ippm"
+ },
+ "RFC9506": {
+  "area": "tsv",
+  "keywords": [
+   "Performance",
+   "Monitoring",
+   "Passive",
+   "Hybrid",
+   "Loss",
+   "Delay",
+   "Client",
+   "Server",
+   "On-path",
+   "Observer",
+   "Probe",
+   "Alternate",
+   "Marking",
+   "Round",
+   "Trip",
+   "Latency",
+   "Encrypted",
+   "Protocol",
+   "Bits"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Explicit Host-to-Network Flow Measurements Techniques",
+  "wg": "ippm"
  }
 }
