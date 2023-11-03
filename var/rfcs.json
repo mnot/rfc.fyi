@@ -32123,14 +32123,16 @@
   "wg": "mobileip"
  },
  "RFC3025": {
+  "area": "int",
   "keywords": [
    "internet",
    "protocol"
   ],
   "level": "std",
   "status": "obsoleted",
-  "stream": "legacy",
-  "title": "Mobile IP Vendor/Organization-Specific Extensions"
+  "stream": "ietf",
+  "title": "Mobile IP Vendor/Organization-Specific Extensions",
+  "wg": "mobileip"
  },
  "RFC3026": {
   "keywords": [
@@ -32147,7 +32149,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "ietf",
   "title": "Liaison to IETF/ISOC on ENUM"
  },
  "RFC3027": {
