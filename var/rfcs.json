@@ -111221,6 +111221,102 @@
   "title": "CBOR Object Signing and Encryption (COSE): AES-CTR and AES-CBC",
   "wg": "cose"
  },
+ "RFC9460": {
+  "area": "ops",
+  "keywords": [
+   "multi-CDN",
+   "HSTS",
+   "ECH",
+   "CNAME",
+   "apex",
+   "ALPN",
+   "HTTP/3",
+   "alias",
+   "SvcParam",
+   "AliasMode",
+   "ServiceMode"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)",
+  "wg": "dnsop"
+ },
+ "RFC9461": {
+  "area": "int",
+  "keywords": [
+   "DoH",
+   "DoT",
+   "DoQ",
+   "DDR",
+   "DNR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Service Binding Mapping for DNS Servers",
+  "wg": "add"
+ },
+ "RFC9462": {
+  "area": "int",
+  "keywords": [
+   "DNS",
+   "DoH",
+   "DoT",
+   "DoQ"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Discovery of Designated Resolvers",
+  "wg": "add"
+ },
+ "RFC9463": {
+  "area": "int",
+  "keywords": [
+   "DNS",
+   "service resolution",
+   "encryption",
+   "service discovery",
+   "service provider",
+   "network provider",
+   "automation",
+   "DoH",
+   "DoT",
+   "DoQ"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DHCP and Router Advertisement Options for the Discovery of Network-designated Resolvers (DNR)",
+  "wg": "add"
+ },
+ "RFC9464": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "name resolution",
+   "encryption",
+   "service discovery",
+   "naming",
+   "resolver",
+   "stub-resolver",
+   "CPE",
+   "Customer premise equipment",
+   "VPN",
+   "Secure discovery",
+   "DoT",
+   "DoH",
+   "DoQ",
+   "Tunnel",
+   "connectivity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet Key Exchange Protocol Version 2 (IKEv2) Configuration for Encrypted DNS",
+  "wg": "ipsecme"
+ },
  "RFC9465": {
   "area": "rtg",
   "keywords": [
