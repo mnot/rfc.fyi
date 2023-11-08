@@ -349,7 +349,11 @@
         "RFC2418",
         "RFC6640",
         "RFC6771",
-        "RFC7649"
+        "RFC7649",
+        "RFC8718",
+        "RFC8719",
+        "RFC9137",
+        "RFC9400"
       ]
     },
     "IETF Standards Process": {
@@ -387,6 +391,7 @@
         "RFC2993",
         "RFC3439",
         "RFC3724",
+        "RFC5704",
         "RFC6950",
         "RFC6973"
       ]
