@@ -111551,6 +111551,21 @@
   "title": "Local Protection Enforcement in the Path Computation Element Communication Protocol (PCEP)",
   "wg": "pce"
  },
+ "RFC9491": {
+  "area": "rtg",
+  "keywords": [
+   "NSH",
+   "SR",
+   "MPLS-SR",
+   "SRv6",
+   "SFC"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Integration of the Network Service Header (NSH) and Segment Routing for Service Function Chaining (SFC)",
+  "wg": "spring"
+ },
  "RFC9492": {
   "area": "rtg",
   "keywords": [],
