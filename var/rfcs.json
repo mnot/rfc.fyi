@@ -32123,14 +32123,16 @@
   "wg": "mobileip"
  },
  "RFC3025": {
+  "area": "int",
   "keywords": [
    "internet",
    "protocol"
   ],
   "level": "std",
   "status": "obsoleted",
-  "stream": "legacy",
-  "title": "Mobile IP Vendor/Organization-Specific Extensions"
+  "stream": "ietf",
+  "title": "Mobile IP Vendor/Organization-Specific Extensions",
+  "wg": "mobileip"
  },
  "RFC3026": {
   "keywords": [
@@ -32147,7 +32149,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "ietf",
   "title": "Liaison to IETF/ISOC on ENUM"
  },
  "RFC3027": {
@@ -51101,7 +51103,7 @@
   "area": "app",
   "keywords": [
    "LDAPV3",
-   "LDAv3",
+   "LDAV3",
    "x.500",
    "LDAP3-ATD",
    "syntax",
@@ -51218,7 +51220,7 @@
    "LDAP3-ATD",
    "LDAv3",
    "x.500",
-   "syntax,"
+   "syntax"
   ],
   "level": "std",
   "status": "current",
@@ -101929,7 +101931,7 @@
    "Multicast"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "PIM Message Type Space Extension and Reserved Bits",
   "wg": "pim"
@@ -104229,7 +104231,7 @@
   "area": "rtg",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IS-IS Application-Specific Link Attributes",
   "wg": "lsr"
@@ -104238,7 +104240,7 @@
   "area": "rtg",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "OSPF Application-Specific Link Attributes",
   "wg": "lsr"
@@ -110296,6 +110298,31 @@
   "stream": "irtf",
   "title": "Hashing to Elliptic Curves"
  },
+ "RFC9381": {
+  "keywords": [
+   "public key cryptography",
+   "hashing",
+   "authenticated denial"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Verifiable Random Functions (VRFs)"
+ },
+ "RFC9382": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "SPAKE2, a Password-Authenticated Key Exchange"
+ },
+ "RFC9383": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "SPAKE2+, an Augmented Password-Authenticated Key Exchange (PAKE) Protocol"
+ },
  "RFC9384": {
   "area": "rtg",
   "keywords": [],
@@ -110888,6 +110915,17 @@
   "title": "Considerations for Assigning a New Recommended Differentiated Services Code Point (DSCP)",
   "wg": "tsvwg"
  },
+ "RFC9436": {
+  "area": "rtg",
+  "keywords": [
+   "Multicast PIM"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PIM Message Type Space Extension and Reserved Bits",
+  "wg": "pim"
+ },
  "RFC9437": {
   "area": "rtg",
   "keywords": [
@@ -110999,6 +111037,15 @@
   "title": "Multiplexing Scheme Updates for QUIC",
   "wg": "avtcore"
  },
+ "RFC9444": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automated Certificate Management Environment (ACME) for Subdomains",
+  "wg": "acme"
+ },
  "RFC9445": {
   "area": "ops",
   "keywords": [
@@ -111034,6 +111081,54 @@
   "stream": "independent",
   "title": "Reflections on Ten Years Past the Snowden Revelations"
  },
+ "RFC9447": {
+  "area": "sec",
+  "keywords": [
+   "ACME"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automated Certificate Management Environment (ACME) Challenges Using an Authority Token",
+  "wg": "acme"
+ },
+ "RFC9448": {
+  "area": "sec",
+  "keywords": [
+   "STIR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TNAuthList Profile of Automated Certificate Management Environment (ACME) Authority Token",
+  "wg": "acme"
+ },
+ "RFC9449": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "oauth2"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Demonstrating Proof of Possession (DPoP)",
+  "wg": "oauth"
+ },
+ "RFC9450": {
+  "area": "rtg",
+  "keywords": [
+   "determinism",
+   "availability",
+   "routing",
+   "path"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Reliable and Available Wireless (RAW) Use Cases",
+  "wg": "raw"
+ },
  "RFC9451": {
   "area": "rtg",
   "keywords": [
@@ -111051,6 +111146,29 @@
   "title": "Operations, Administration, and Maintenance (OAM) Packet and Behavior in the Network Service Header (NSH)",
   "wg": "sfc"
  },
+ "RFC9452": {
+  "area": "rtg",
+  "keywords": [
+   "inband",
+   "In-situ",
+   "Telemetry",
+   "Tracing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Network Service Header (NSH) Encapsulation for In Situ OAM (IOAM) Data",
+  "wg": "sfc"
+ },
+ "RFC9453": {
+  "area": "int",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Applicability and Use Cases for IPv6 over Networks of Resource-constrained Nodes (6lo)",
+  "wg": "6lo"
+ },
  "RFC9454": {
   "area": "rtg",
   "keywords": [
@@ -111061,6 +111179,18 @@
   "stream": "ietf",
   "title": "Update to OSPF Terminology",
   "wg": "lsr"
+ },
+ "RFC9455": {
+  "area": "ops",
+  "keywords": [
+   "ROA",
+   "Route Origin Authorization"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Avoiding Route Origin Authorizations (ROAs) Containing Multiple IP Prefixes",
+  "wg": "sidrops"
  },
  "RFC9457": {
   "area": "art",
@@ -111078,5 +111208,407 @@
   "stream": "ietf",
   "title": "Problem Details for HTTP APIs",
   "wg": "httpapi"
+ },
+ "RFC9459": {
+  "area": "sec",
+  "keywords": [
+   "COSE Encryption",
+   "Firmware encryption"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE): AES-CTR and AES-CBC",
+  "wg": "cose"
+ },
+ "RFC9460": {
+  "area": "ops",
+  "keywords": [
+   "multi-CDN",
+   "HSTS",
+   "ECH",
+   "CNAME",
+   "apex",
+   "ALPN",
+   "HTTP/3",
+   "alias",
+   "SvcParam",
+   "AliasMode",
+   "ServiceMode"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Service Binding and Parameter Specification via the DNS (SVCB and HTTPS Resource Records)",
+  "wg": "dnsop"
+ },
+ "RFC9461": {
+  "area": "int",
+  "keywords": [
+   "DoH",
+   "DoT",
+   "DoQ",
+   "DDR",
+   "DNR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Service Binding Mapping for DNS Servers",
+  "wg": "add"
+ },
+ "RFC9462": {
+  "area": "int",
+  "keywords": [
+   "DNS",
+   "DoH",
+   "DoT",
+   "DoQ"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Discovery of Designated Resolvers",
+  "wg": "add"
+ },
+ "RFC9463": {
+  "area": "int",
+  "keywords": [
+   "DNS",
+   "service resolution",
+   "encryption",
+   "service discovery",
+   "service provider",
+   "network provider",
+   "automation",
+   "DoH",
+   "DoT",
+   "DoQ"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DHCP and Router Advertisement Options for the Discovery of Network-designated Resolvers (DNR)",
+  "wg": "add"
+ },
+ "RFC9464": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "name resolution",
+   "encryption",
+   "service discovery",
+   "naming",
+   "resolver",
+   "stub-resolver",
+   "CPE",
+   "Customer premise equipment",
+   "VPN",
+   "Secure discovery",
+   "DoT",
+   "DoH",
+   "DoQ",
+   "Tunnel",
+   "connectivity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet Key Exchange Protocol Version 2 (IKEv2) Configuration for Encrypted DNS",
+  "wg": "ipsecme"
+ },
+ "RFC9465": {
+  "area": "rtg",
+  "keywords": [
+   "Multicast"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PIM Null-Register Packing",
+  "wg": "pim"
+ },
+ "RFC9466": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PIM Assert Message Packing",
+  "wg": "pim"
+ },
+ "RFC9468": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Unsolicited Bidirectional Forwarding Detection (BFD) for Sessionless Applications",
+  "wg": "bfd"
+ },
+ "RFC9469": {
+  "area": "rtg",
+  "keywords": [
+   "EVPN",
+   "Applicability",
+   "NVO3"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Applicability of Ethernet Virtual Private Network (EVPN) to Network Virtualization over Layer 3 (NVO3) Networks",
+  "wg": "nvo3"
+ },
+ "RFC9470": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "oauth2",
+   "openid connect",
+   "oauth",
+   "step-up"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Step Up Authentication Challenge Protocol",
+  "wg": "oauth"
+ },
+ "RFC9471": {
+  "area": "ops",
+  "keywords": [
+   "Glue Record",
+   "In-Domain Name Server",
+   "Sibling Domain Name Server"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Glue Requirements in Referral Responses",
+  "wg": "dnsop"
+ },
+ "RFC9472": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Reporting Software Bills of Materials (SBOMs) and Vulnerability Information",
+  "wg": "opsawg"
+ },
+ "RFC9473": {
+  "keywords": [
+   "PAN",
+   "path-aware network",
+   "path property",
+   "path selection"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "A Vocabulary of Path Properties"
+ },
+ "RFC9474": {
+  "keywords": [
+   "RSABSSA",
+   "RSA",
+   "blind signature"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "RSA Blind Signatures"
+ },
+ "RFC9476": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The .alt Special-Use Top-Level Domain",
+  "wg": "dnsop"
+ },
+ "RFC9477": {
+  "keywords": [],
+  "level": "experimental",
+  "status": "current",
+  "stream": "independent",
+  "title": "Complaint Feedback Loop Address Header"
+ },
+ "RFC9478": {
+  "area": "sec",
+  "keywords": [
+   "IKEv2",
+   "SPD",
+   "SAD"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Labeled IPsec Traffic Selector Support for the Internet Key Exchange Protocol Version 2 (IKEv2)",
+  "wg": "ipsecme"
+ },
+ "RFC9479": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IS-IS Application-Specific Link Attributes",
+  "wg": "lsr"
+ },
+ "RFC9480": {
+  "area": "sec",
+  "keywords": [
+   "CMP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Certificate Management Protocol (CMP) Updates",
+  "wg": "lamps"
+ },
+ "RFC9481": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Certificate Management Protocol (CMP) Algorithms",
+  "wg": "lamps"
+ },
+ "RFC9482": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Constrained Application Protocol (CoAP) Transfer for the Certificate Management Protocol",
+  "wg": "ace"
+ },
+ "RFC9483": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Lightweight Certificate Management Protocol (CMP) Profile",
+  "wg": "lamps"
+ },
+ "RFC9484": {
+  "area": "tsv",
+  "keywords": [
+   "quic",
+   "http",
+   "datagram",
+   "VPN",
+   "proxy",
+   "tunnels",
+   "quic in udp in IP in quic",
+   "turtles all the way down",
+   "masque",
+   "http-ng"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Proxying IP in HTTP",
+  "wg": "masque"
+ },
+ "RFC9485": {
+  "area": "art",
+  "keywords": [
+   "Regexp",
+   "Regex"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "I-Regexp: An Interoperable Regular Expression Format",
+  "wg": "jsonpath"
+ },
+ "RFC9486": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Options for In Situ Operations, Administration, and Maintenance (IOAM)",
+  "wg": "ippm"
+ },
+ "RFC9488": {
+  "area": "rtg",
+  "keywords": [
+   "segment routing",
+   "adjacency sid",
+   "sla",
+   "fast reroute",
+   "ti-lfa"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Local Protection Enforcement in the Path Computation Element Communication Protocol (PCEP)",
+  "wg": "pce"
+ },
+ "RFC9492": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPF Application-Specific Link Attributes",
+  "wg": "lsr"
+ },
+ "RFC9495": {
+  "area": "sec",
+  "keywords": [
+   "caa",
+   "certification authority authorization",
+   "email address"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Certification Authority Authorization (CAA) Processing for Email Addresses",
+  "wg": "lamps"
+ },
+ "RFC9503": {
+  "area": "tsv",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Simple Two-Way Active Measurement Protocol (STAMP) Extensions for Segment Routing Networks",
+  "wg": "ippm"
+ },
+ "RFC9506": {
+  "area": "tsv",
+  "keywords": [
+   "Performance",
+   "Monitoring",
+   "Passive",
+   "Hybrid",
+   "Loss",
+   "Delay",
+   "Client",
+   "Server",
+   "On-path",
+   "Observer",
+   "Probe",
+   "Alternate",
+   "Marking",
+   "Round",
+   "Trip",
+   "Latency",
+   "Encrypted",
+   "Protocol",
+   "Bits"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Explicit Host-to-Network Flow Measurements Techniques",
+  "wg": "ippm"
  }
 }
