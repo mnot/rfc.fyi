@@ -70832,7 +70832,7 @@
  "RFC6125": {
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Representation and Verification of Domain-Based Application Service Identity within Internet Public Key Infrastructure Using X.509 (PKIX) Certificates in the Context of Transport Layer Security (TLS)"
  },
@@ -111192,6 +111192,21 @@
   "title": "Avoiding Route Origin Authorizations (ROAs) Containing Multiple IP Prefixes",
   "wg": "sidrops"
  },
+ "RFC9456": {
+  "area": "ops",
+  "keywords": [
+   "TLSTM",
+   "DTLS",
+   "security",
+   "SNMPv3",
+   "MIB"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to the TLS Transport Model for SNMP",
+  "wg": "opsawg"
+ },
  "RFC9457": {
   "area": "art",
   "keywords": [
@@ -111536,6 +111551,19 @@
   "title": "IPv6 Options for In Situ Operations, Administration, and Maintenance (IOAM)",
   "wg": "ippm"
  },
+ "RFC9487": {
+  "area": "ops",
+  "keywords": [
+   "SRv6",
+   "SR",
+   "Flow Record"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Export of Segment Routing over IPv6 Information in IP Flow Information Export (IPFIX)",
+  "wg": "opsawg"
+ },
  "RFC9488": {
   "area": "rtg",
   "keywords": [
@@ -111550,6 +111578,19 @@
   "stream": "ietf",
   "title": "Local Protection Enforcement in the Path Computation Element Communication Protocol (PCEP)",
   "wg": "pce"
+ },
+ "RFC9489": {
+  "area": "rtg",
+  "keywords": [
+   "EVPN",
+   "LSP Ping",
+   "MPLS OAM"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Label Switched Path (LSP) Ping Mechanisms for EVPN and Provider Backbone Bridging EVPN (PBB-EVPN)",
+  "wg": "bess"
  },
  "RFC9491": {
   "area": "rtg",
@@ -111625,5 +111666,14 @@
   "stream": "ietf",
   "title": "Explicit Host-to-Network Flow Measurements Techniques",
   "wg": "ippm"
+ },
+ "RFC9525": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Service Identity in TLS",
+  "wg": "uta"
  }
 }
