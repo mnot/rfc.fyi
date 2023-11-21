@@ -110559,6 +110559,23 @@
   "stream": "independent",
   "title": "Concat Notation"
  },
+ "RFC9403": {
+  "area": "rtg",
+  "keywords": [
+   "configuration",
+   "IPv6 Router Advertisements",
+   "NETCONF",
+   "RESTCONF",
+   "YANG",
+   "Routing",
+   "RIB"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for RIB Extensions",
+  "wg": "rtgwg"
+ },
  "RFC9404": {
   "area": "art",
   "keywords": [
@@ -111629,6 +111646,15 @@
   "title": "Certification Authority Authorization (CAA) Processing for Email Addresses",
   "wg": "lamps"
  },
+ "RFC9498": {
+  "keywords": [
+   "name systems"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "The GNU Name System"
+ },
  "RFC9503": {
   "area": "tsv",
   "keywords": [],
@@ -111637,6 +111663,19 @@
   "stream": "ietf",
   "title": "Simple Two-Way Active Measurement Protocol (STAMP) Extensions for Segment Routing Networks",
   "wg": "ippm"
+ },
+ "RFC9505": {
+  "keywords": [
+   "network censorship",
+   "network blocking",
+   "network throttling",
+   "traffic impairment",
+   "censorship circumvention"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "A Survey of Worldwide Censorship Techniques"
  },
  "RFC9506": {
   "area": "tsv",
@@ -111666,6 +111705,15 @@
   "stream": "ietf",
   "title": "Explicit Host-to-Network Flow Measurements Techniques",
   "wg": "ippm"
+ },
+ "RFC9516": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Active Operations, Administration, and Maintenance (OAM) for Service Function Chaining (SFC)",
+  "wg": "sfc"
  },
  "RFC9525": {
   "area": "art",
