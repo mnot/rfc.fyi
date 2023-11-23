@@ -111655,6 +111655,17 @@
   "stream": "independent",
   "title": "The GNU Name System"
  },
+ "RFC9502": {
+  "area": "rtg",
+  "keywords": [
+   "IS-IS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IGP Flexible Algorithm in IP Networks",
+  "wg": "lsr"
+ },
  "RFC9503": {
   "area": "tsv",
   "keywords": [],
