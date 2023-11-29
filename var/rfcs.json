@@ -111717,6 +111717,15 @@
   "title": "Explicit Host-to-Network Flow Measurements Techniques",
   "wg": "ippm"
  },
+ "RFC9511": {
+  "area": "ops",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Attribution of Internet Probes",
+  "wg": "opsec"
+ },
  "RFC9516": {
   "area": "rtg",
   "keywords": [],
