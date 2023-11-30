@@ -111633,6 +111633,15 @@
   "title": "OSPF Application-Specific Link Attributes",
   "wg": "lsr"
  },
+ "RFC9494": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Long-Lived Graceful Restart for BGP",
+  "wg": "idr"
+ },
  "RFC9495": {
   "area": "sec",
   "keywords": [
