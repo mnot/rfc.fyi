@@ -92328,7 +92328,7 @@
  "RFC7954": {
   "area": "rtg",
   "keywords": [],
-  "level": "experimental",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "Locator/ID Separation Protocol (LISP) Endpoint Identifier (EID) Block",
@@ -92337,7 +92337,7 @@
  "RFC7955": {
   "area": "rtg",
   "keywords": [],
-  "level": "informational",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "Management Guidelines for the Locator/ID Separation Protocol (LISP) Endpoint Identifier (EID) Block",
