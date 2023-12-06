@@ -111735,6 +111735,34 @@
   "title": "Attribution of Internet Probes",
   "wg": "opsec"
  },
+ "RFC9513": {
+  "area": "rtg",
+  "keywords": [
+   "OSPF",
+   "OSPFv3",
+   "Segment Routing",
+   "SRv6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OSPFv3 Extensions for Segment Routing over IPv6 (SRv6)",
+  "wg": "lsr"
+ },
+ "RFC9514": {
+  "area": "rtg",
+  "keywords": [
+   "BGP",
+   "BGP-LS",
+   "Segment Routing",
+   "SRv6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Border Gateway Protocol - Link State (BGP-LS) Extensions for Segment Routing over IPv6 (SRv6)",
+  "wg": "idr"
+ },
  "RFC9516": {
   "area": "rtg",
   "keywords": [],
