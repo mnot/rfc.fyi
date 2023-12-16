@@ -111682,6 +111682,20 @@
   "stream": "ietf",
   "title": "Standard Public Key Cryptography (PKC) Test Keys"
  },
+ "RFC9501": {
+  "area": "gen",
+  "keywords": [
+   "no-cost",
+   "meetings",
+   "remote participation fee",
+   "remote"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Open Participation Principle regarding Remote Registration Fee",
+  "wg": "shmoo"
+ },
  "RFC9502": {
   "area": "rtg",
   "keywords": [
