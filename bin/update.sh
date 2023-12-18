@@ -8,8 +8,6 @@ git status --short var/rfcs.json var/refs.json var/tags.json var/rfc-index.xml.e
 # setup
 git config user.email mnot@mnot.net
 git config user.name mnot-bot
-git remote set-url --push origin https://mnot:$GITHUB_TOKEN@github.com/mnot/rfc.fyi
-git checkout -B main origin/main
 
 # Push the changes
 git add var/rfc-index.xml
