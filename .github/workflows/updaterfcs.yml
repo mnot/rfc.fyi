@@ -1,33 +1,28 @@
-name: Update rfcs
+name: Update RFCs
 
 on:
   push:
     paths:
-    - '*.py'
+    - '**.py'
     - 'Makefile'
     - 'update.sh'
   schedule:
     - cron: '41 9 * * *'
+  workflow_dispatch: null
+
+permissions:
+    contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-      with:
-        ref: main
     - name: Set up Python
       uses: actions/setup-python@v5
-      with:
-        python-version: 3.7
     - name: Build rfcs.json
-      run: |
-        make var/rfcs.json
+      run: make var/rfcs.json
     - name: Fetch refs.json
-      run: |
-        make var/refs.json
-    - name: Push update
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        ./bin/update.sh
+      run: make var/refs.json
+    - name: Upload
+      run: ./bin/update.sh
