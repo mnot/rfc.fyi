@@ -111828,6 +111828,15 @@
   "title": "Active Operations, Administration, and Maintenance (OAM) for Service Function Chaining (SFC)",
   "wg": "sfc"
  },
+ "RFC9518": {
+  "keywords": [
+   "governance"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Centralization, Decentralization, and Internet Standards"
+ },
  "RFC9525": {
   "area": "art",
   "keywords": [],
