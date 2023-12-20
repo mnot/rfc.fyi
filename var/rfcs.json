@@ -111451,6 +111451,17 @@
   "stream": "irtf",
   "title": "RSA Blind Signatures"
  },
+ "RFC9475": {
+  "area": "art",
+  "keywords": [
+   "SIP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Messaging Use Cases and Extensions for Secure Telephone Identity Revisited (STIR)",
+  "wg": "stir"
+ },
  "RFC9476": {
   "area": "ops",
   "keywords": [],
