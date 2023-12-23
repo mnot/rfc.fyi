@@ -89732,7 +89732,7 @@
    "Multi-AS"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "North-Bound Distribution of Link-State and Traffic Engineering (TE) Information Using BGP",
   "wg": "idr"
@@ -105716,7 +105716,7 @@
    "IANA"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Updates to the Allocation Policy for the Border Gateway Protocol - Link State (BGP-LS) Parameters Registries",
   "wg": "idr"
@@ -111677,6 +111677,31 @@
   "title": "Certification Authority Authorization (CAA) Processing for Email Addresses",
   "wg": "lamps"
  },
+ "RFC9496": {
+  "keywords": [
+   "cryptographic group",
+   "cryptography",
+   "Curve25519",
+   "ecc",
+   "edwards448",
+   "elliptic curve",
+   "elliptic curve cryptography",
+   "nonmalleable encodings",
+   "prime-order",
+   "prime order"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "The ristretto255 and decaf448 Groups"
+ },
+ "RFC9497": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Oblivious Pseudorandom Functions (OPRFs) Using Prime-Order Groups"
+ },
  "RFC9498": {
   "keywords": [
    "name systems"
@@ -111848,6 +111873,19 @@
   "stream": "independent",
   "title": "Centralization, Decentralization, and Internet Standards"
  },
+ "RFC9520": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "Negative",
+   "Caching"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Negative Caching of DNS Resolution Failures",
+  "wg": "dnsop"
+ },
  "RFC9525": {
   "area": "art",
   "keywords": [],
@@ -111856,5 +111894,21 @@
   "stream": "ietf",
   "title": "Service Identity in TLS",
   "wg": "uta"
+ },
+ "RFC9552": {
+  "area": "rtg",
+  "keywords": [
+   "research",
+   "measurement",
+   "identification",
+   "probing",
+   "out-of-band",
+   "in-band"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Distribution of Link-State and Traffic Engineering Information Using BGP",
+  "wg": "idr"
  }
 }
