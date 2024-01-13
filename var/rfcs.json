@@ -111241,6 +111241,20 @@
   "title": "Problem Details for HTTP APIs",
   "wg": "httpapi"
  },
+ "RFC9458": {
+  "area": "sec",
+  "keywords": [
+   "privacy",
+   "proxy",
+   "partitioning",
+   "tunnel"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Oblivious HTTP",
+  "wg": "ohai"
+ },
  "RFC9459": {
   "area": "sec",
   "keywords": [
