@@ -111383,6 +111383,22 @@
   "title": "PIM Assert Message Packing",
   "wg": "pim"
  },
+ "RFC9467": {
+  "area": "rtg",
+  "keywords": [
+   "multicast",
+   "wi-fi",
+   "security",
+   "authentication",
+   "packet reordering",
+   "wifi"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Relaxed Packet Counter Verification for Babel MAC Authentication",
+  "wg": "babel"
+ },
  "RFC9468": {
   "area": "rtg",
   "keywords": [],
@@ -111634,6 +111650,16 @@
   "title": "Label Switched Path (LSP) Ping Mechanisms for EVPN and Provider Backbone Bridging EVPN (PBB-EVPN)",
   "wg": "bess"
  },
+ "RFC9490": {
+  "keywords": [
+   "encryption",
+   "network management"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Report from the IAB Workshop on Management Techniques in Encrypted Networks (M-TEN)"
+ },
  "RFC9491": {
   "area": "rtg",
   "keywords": [
@@ -111878,6 +111904,13 @@
   "title": "Active Operations, Administration, and Maintenance (OAM) for Service Function Chaining (SFC)",
   "wg": "sfc"
  },
+ "RFC9517": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "A URN Namespace for the Data Documentation Initiative (DDI)"
+ },
  "RFC9518": {
   "keywords": [
    "governance"
@@ -111899,6 +111932,19 @@
   "stream": "ietf",
   "title": "Negative Caching of DNS Resolution Failures",
   "wg": "dnsop"
+ },
+ "RFC9521": {
+  "area": "rtg",
+  "keywords": [
+   "NVE",
+   "VAP",
+   "VNI"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bidirectional Forwarding Detection (BFD) for  Generic Network Virtualization Encapsulation (Geneve)",
+  "wg": "nvo3"
  },
  "RFC9525": {
   "area": "art",
