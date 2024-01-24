@@ -19250,7 +19250,8 @@
    "Information",
    "Base",
    "Internet",
-   "Protocol"
+   "Protocol",
+   "OSPF"
   ],
   "level": "std",
   "status": "obsoleted",
@@ -51920,7 +51921,8 @@
    "service provider",
    "sp",
    "provider edge",
-   "pe"
+   "pe",
+   "OSPF"
   ],
   "level": "std",
   "status": "current",
@@ -80619,7 +80621,9 @@
  },
  "RFC6992": {
   "area": "rtg",
-  "keywords": [],
+  "keywords": [
+   "OSPF"
+  ],
   "level": "informational",
   "status": "current",
   "stream": "ietf",
