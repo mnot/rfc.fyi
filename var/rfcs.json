@@ -111924,6 +111924,17 @@
   "stream": "independent",
   "title": "Centralization, Decentralization, and Internet Standards"
  },
+ "RFC9519": {
+  "keywords": [
+   "ssh",
+   "iana",
+   "registry"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Update to the IANA SSH Protocol Parameters Registry Requirements"
+ },
  "RFC9520": {
   "area": "ops",
   "keywords": [
