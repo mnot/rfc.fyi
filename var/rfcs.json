@@ -53250,7 +53250,7 @@
   "title": "Atom Threading Extensions"
  },
  "RFC4686": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "email",
    "attack",
@@ -55460,7 +55460,7 @@
   "title": "Domain-Based Email Authentication Using Public Keys Advertised in the DNS (DomainKeys)"
  },
  "RFC4871": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "internet mail",
    "authentication",
@@ -57124,7 +57124,7 @@
   "wg": "pim"
  },
  "RFC5016": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "cryptographic"
   ],
@@ -64277,7 +64277,7 @@
   "wg": "avt"
  },
  "RFC5585": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "Email",
    "Electroni Mail",
@@ -64714,7 +64714,7 @@
   "wg": "lemonade"
  },
  "RFC5617": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "email",
    "e-mail",
@@ -65460,7 +65460,7 @@
   "wg": "pce"
  },
  "RFC5672": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "DKIM",
    "email",
@@ -67727,7 +67727,7 @@
   "wg": "pce"
  },
  "RFC5863": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "Email",
    "Electronic Mail",
@@ -73749,7 +73749,7 @@
   "wg": "mpls"
  },
  "RFC6376": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "email",
    "architecture",
@@ -73773,7 +73773,7 @@
   "wg": "dkim"
  },
  "RFC6377": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "email",
    "architecture",
