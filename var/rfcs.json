@@ -35493,7 +35493,7 @@
    "networks"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Overview and Principles of Internet Traffic Engineering",
   "wg": "tewg"
@@ -111961,6 +111961,15 @@
   "title": "Bidirectional Forwarding Detection (BFD) for  Generic Network Virtualization Encapsulation (Geneve)",
   "wg": "nvo3"
  },
+ "RFC9522": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Overview and Principles of Internet Traffic Engineering",
+  "wg": "teas"
+ },
  "RFC9525": {
   "area": "art",
   "keywords": [],
@@ -111969,6 +111978,32 @@
   "stream": "ietf",
   "title": "Service Identity in TLS",
   "wg": "uta"
+ },
+ "RFC9526": {
+  "area": "int",
+  "keywords": [
+   "DNS",
+   "Homenet",
+   "outsourcing",
+   "management",
+   "hosting"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Simple Provisioning of Public Names for Residential Networks",
+  "wg": "homenet"
+ },
+ "RFC9527": {
+  "area": "int",
+  "keywords": [
+   "DNS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DHCPv6 Options for the Homenet Naming Authority",
+  "wg": "homenet"
  },
  "RFC9552": {
   "area": "rtg",
