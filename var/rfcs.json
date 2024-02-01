@@ -112005,6 +112005,46 @@
   "title": "DHCPv6 Options for the Homenet Naming Authority",
   "wg": "homenet"
  },
+ "RFC9532": {
+  "area": "art",
+  "keywords": [
+   "proxy status"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP Proxy-Status Parameter for Next-Hop Aliases",
+  "wg": "httpbis"
+ },
+ "RFC9533": {
+  "area": "tsv",
+  "keywords": [
+   "TWAMP",
+   "OWAMP",
+   "Performance Measurement",
+   "LAG",
+   "Micro-session"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "One-Way and Two-Way Active Measurement Protocol Extensions for Performance Measurement on a Link Aggregation Group",
+  "wg": "ippm"
+ },
+ "RFC9534": {
+  "area": "tsv",
+  "keywords": [
+   "STAMP",
+   "Performance Measurement",
+   "LAG",
+   "Micro Session"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Simple Two-Way Active Measurement Protocol Extensions for Performance Measurement on a Link Aggregation Group",
+  "wg": "ippm"
+ },
  "RFC9552": {
   "area": "rtg",
   "keywords": [
