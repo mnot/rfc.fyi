@@ -110793,6 +110793,19 @@
   "title": "The Messaging Layer Security (MLS) Protocol",
   "wg": "mls"
  },
+ "RFC9422": {
+  "keywords": [
+   "SMTP",
+   "LMTP",
+   "Message Submission",
+   "ESMTP",
+   "Extension"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The LIMITS SMTP Service Extension"
+ },
  "RFC9424": {
   "area": "ops",
   "keywords": [
