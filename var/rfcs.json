@@ -34882,7 +34882,7 @@
    "hypertext transfer protocol"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "legacy",
   "title": "Instance Digests in HTTP"
  },
@@ -110793,6 +110793,17 @@
   "title": "The Messaging Layer Security (MLS) Protocol",
   "wg": "mls"
  },
+ "RFC9421": {
+  "area": "art",
+  "keywords": [
+   "PKI"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP Message Signatures",
+  "wg": "httpbis"
+ },
  "RFC9422": {
   "keywords": [
    "SMTP",
@@ -111873,6 +111884,17 @@
   "title": "Attribution of Internet Probes",
   "wg": "opsec"
  },
+ "RFC9512": {
+  "area": "art",
+  "keywords": [
+   "data interchange format"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YAML Media Type",
+  "wg": "httpapi"
+ },
  "RFC9513": {
   "area": "rtg",
   "keywords": [
@@ -112018,6 +112040,17 @@
   "title": "DHCPv6 Options for the Homenet Naming Authority",
   "wg": "homenet"
  },
+ "RFC9530": {
+  "area": "art",
+  "keywords": [
+   "Digest"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Digest Fields",
+  "wg": "httpbis"
+ },
  "RFC9532": {
   "area": "art",
   "keywords": [
@@ -112057,6 +112090,18 @@
   "stream": "ietf",
   "title": "Simple Two-Way Active Measurement Protocol Extensions for Performance Measurement on a Link Aggregation Group",
   "wg": "ippm"
+ },
+ "RFC9547": {
+  "keywords": [
+   "environment",
+   "energy",
+   "Internet impacts",
+   "sustainability"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Report from the IAB Workshop on Environmental Impact of Internet Applications and Systems, 2022"
  },
  "RFC9552": {
   "area": "rtg",
