@@ -112005,6 +112005,18 @@
   "title": "Overview and Principles of Internet Traffic Engineering",
   "wg": "teas"
  },
+ "RFC9523": {
+  "area": "int",
+  "keywords": [
+   "NTP",
+   "NTPv4"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Secure Selection and Filtering Mechanism for the Network Time Protocol with Khronos",
+  "wg": "ntp"
+ },
  "RFC9525": {
   "area": "art",
   "keywords": [],
@@ -112090,6 +112102,30 @@
   "stream": "ietf",
   "title": "Simple Two-Way Active Measurement Protocol Extensions for Performance Measurement on a Link Aggregation Group",
   "wg": "ippm"
+ },
+ "RFC9535": {
+  "area": "art",
+  "keywords": [
+   "JSON"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSONPath: Query Expressions for JSON",
+  "wg": "jsonpath"
+ },
+ "RFC9540": {
+  "area": "sec",
+  "keywords": [
+   "DNS",
+   "Oblivious HTTP",
+   "SVCB"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Discovery of Oblivious Services via Service Binding Records",
+  "wg": "ohai"
  },
  "RFC9547": {
   "keywords": [
