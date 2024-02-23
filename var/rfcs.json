@@ -111875,6 +111875,18 @@
   "title": "Explicit Host-to-Network Flow Measurements Techniques",
   "wg": "ippm"
  },
+ "RFC9510": {
+  "keywords": [
+   "CCNx",
+   "constrained networks",
+   "compressed delta time",
+   "IoT"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Alternative Delta Time Encoding for Content-Centric Networking (CCNx) Using Compact Floating-Point Arithmetic"
+ },
  "RFC9511": {
   "area": "ops",
   "keywords": [],
@@ -112017,6 +112029,15 @@
   "title": "A Secure Selection and Filtering Mechanism for the Network Time Protocol with Khronos",
   "wg": "ntp"
  },
+ "RFC9524": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing Replication for Multipoint Service Delivery",
+  "wg": "spring"
+ },
  "RFC9525": {
   "area": "art",
   "keywords": [],
@@ -112114,6 +112135,20 @@
   "title": "JSONPath: Query Expressions for JSON",
   "wg": "jsonpath"
  },
+ "RFC9538": {
+  "area": "art",
+  "keywords": [
+   "HTTPS",
+   "delegation",
+   "ACME",
+   "STAR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Content Delivery Network Interconnection (CDNI) Delegation Using the Automated Certificate Management Environment",
+  "wg": "cdni"
+ },
  "RFC9540": {
   "area": "sec",
   "keywords": [
@@ -112126,6 +112161,21 @@
   "stream": "ietf",
   "title": "Discovery of Oblivious Services via Service Binding Records",
   "wg": "ohai"
+ },
+ "RFC9545": {
+  "area": "rtg",
+  "keywords": [
+   "Performance Measurement",
+   "Bidirectional SR Path",
+   "End-to-End Path Protection",
+   "SR Path Segment",
+   "Path Segment"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Segment Identifier in MPLS-Based Segment Routing Networks",
+  "wg": "spring"
  },
  "RFC9547": {
   "keywords": [
