@@ -112149,6 +112149,25 @@
   "title": "Content Delivery Network Interconnection (CDNI) Delegation Using the Automated Certificate Management Environment",
   "wg": "cdni"
  },
+ "RFC9539": {
+  "area": "int",
+  "keywords": [
+   "DNS over TLS",
+   "DNS over QUIC",
+   "ToT",
+   "DoQ",
+   "encryption",
+   "unilateral",
+   "recursive",
+   "authoritative",
+   "DNS"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Unilateral Opportunistic Deployment of Encrypted Recursive-to-Authoritative DNS",
+  "wg": "dprive"
+ },
  "RFC9540": {
   "area": "sec",
   "keywords": [
@@ -112176,6 +112195,18 @@
   "stream": "ietf",
   "title": "Path Segment Identifier in MPLS-Based Segment Routing Networks",
   "wg": "spring"
+ },
+ "RFC9546": {
+  "area": "rtg",
+  "keywords": [
+   "DetNet",
+   "OAM"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operations, Administration, and Maintenance (OAM) for Deterministic Networking (DetNet) with the MPLS Data Plane",
+  "wg": "detnet"
  },
  "RFC9547": {
   "keywords": [
