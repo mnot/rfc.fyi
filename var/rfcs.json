@@ -4909,7 +4909,7 @@
   "keywords": [],
   "level": "unknown",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Telnet randomly-lose option"
  },
  "RFC0749": {
@@ -7568,7 +7568,7 @@
   "keywords": [],
   "level": "unknown",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Telnet subliminal-message option"
  },
  "RFC1098": {
@@ -7983,7 +7983,7 @@
   ],
   "level": "experimental",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Standard for the transmission of IP datagrams on avian carriers"
  },
  "RFC1150": {
@@ -8527,14 +8527,14 @@
   "keywords": [],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Gigabit network economics and paradigm shifts"
  },
  "RFC1217": {
   "keywords": [],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Memo from the Consortium for Slow Commotion Research (CSCR)"
  },
  "RFC1218": {
@@ -9498,7 +9498,7 @@
   "keywords": [],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Today's Programming for KRFC AM 1313 Internet Talk Radio"
  },
  "RFC1314": {
@@ -10981,7 +10981,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "The Extension of MIME Content-Types to a New Medium"
  },
  "RFC1438": {
@@ -10991,7 +10991,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Internet Engineering Task Force Statements Of Boredom (SOBs)"
  },
  "RFC1439": {
@@ -12927,7 +12927,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "SONET to Sonnet Translation"
  },
  "RFC1606": {
@@ -12936,7 +12936,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "A Historical Perspective On The Usage Of IP Version 9"
  },
  "RFC1607": {
@@ -12945,7 +12945,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "A VIEW FROM THE 21ST CENTURY"
  },
  "RFC1608": {
@@ -15038,7 +15038,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "The Address is the Message"
  },
  "RFC1777": {
@@ -16962,7 +16962,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "A Compact Representation of IPv6 Addresses"
  },
  "RFC1925": {
@@ -16971,7 +16971,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "The Twelve Networking Truths"
  },
  "RFC1926": {
@@ -16982,7 +16982,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "An Experimental Encapsulation of IP Datagrams on Top of ATM"
  },
  "RFC1927": {
@@ -16991,7 +16991,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Suggested Additional MIME Types for Associating Documents"
  },
  "RFC1928": {
@@ -19301,7 +19301,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "The Naming of Hosts"
  },
  "RFC2101": {
@@ -22325,7 +22325,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "RITA -- The Reliable Internetwork Troubleshooting Agent"
  },
  "RFC2322": {
@@ -22339,7 +22339,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Management of IP numbers by peg-dhcp"
  },
  "RFC2323": {
@@ -22351,7 +22351,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "IETF Identification and Security Guidelines"
  },
  "RFC2324": {
@@ -22362,7 +22362,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0)"
  },
  "RFC2325": {
@@ -22376,7 +22376,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Definitions of Managed Objects for Drip-Type Heated Beverage Hardware Devices using SMIv2"
  },
  "RFC2326": {
@@ -25615,7 +25615,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "IP over Avian Carriers with Quality of Service"
  },
  "RFC2550": {
@@ -25628,7 +25628,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Y10K and Beyond"
  },
  "RFC2551": {
@@ -25641,7 +25641,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "The Roman Standards Process -- Revision III"
  },
  "RFC2552": {
@@ -29071,7 +29071,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "The Infinite Monkey Protocol Suite (IMPS)"
  },
  "RFC2796": {
@@ -33001,7 +33001,7 @@
   "keywords": [],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Pi Digit Generation Protocol"
  },
  "RFC3092": {
@@ -33015,7 +33015,7 @@
   "keywords": [],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Firewall Enhancement Protocol (FEP)"
  },
  "RFC3094": {
@@ -35178,7 +35178,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Electricity over IP"
  },
  "RFC3252": {
@@ -35187,7 +35187,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "Binary Lexical Octet Ad-hoc Transport"
  },
  "RFC3253": {
@@ -38647,7 +38647,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "independent",
   "title": "The Security Flag in the IPv4 Header"
  },
  "RFC3515": {
