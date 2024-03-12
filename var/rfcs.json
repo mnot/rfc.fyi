@@ -82055,7 +82055,7 @@
  "RFC7125": {
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Revision of the tcpControlBits IP Flow Information Export (IPFIX) Information Element"
  },
@@ -97855,7 +97855,7 @@
   "area": "sec",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Internationalization Updates to RFC 5280",
   "wg": "lamps"
@@ -111875,6 +111875,26 @@
   "title": "Explicit Host-to-Network Flow Measurements Techniques",
   "wg": "ippm"
  },
+ "RFC9507": {
+  "keywords": [
+   "ICN",
+   "Network Management"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Information-Centric Networking (ICN) Traceroute Protocol Specification"
+ },
+ "RFC9508": {
+  "keywords": [
+   "ICN",
+   "Network Management"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Information-Centric Networking (ICN) Ping Protocol Specification"
+ },
  "RFC9510": {
   "keywords": [
    "CCNx",
@@ -112084,6 +112104,15 @@
   "title": "Digest Fields",
   "wg": "httpbis"
  },
+ "RFC9531": {
+  "keywords": [
+   "ICN"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Path Steering in Content-Centric Networking (CCNx) and Named Data Networking (NDN)"
+ },
  "RFC9532": {
   "area": "art",
   "keywords": [
@@ -112181,6 +112210,17 @@
   "title": "Discovery of Oblivious Services via Service Binding Records",
   "wg": "ohai"
  },
+ "RFC9543": {
+  "area": "rtg",
+  "keywords": [
+   "Network Slicing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Framework for Network Slices in Networks Built from IETF Technologies",
+  "wg": "teas"
+ },
  "RFC9545": {
   "area": "rtg",
   "keywords": [
@@ -112220,6 +112260,29 @@
   "stream": "iab",
   "title": "Report from the IAB Workshop on Environmental Impact of Internet Applications and Systems, 2022"
  },
+ "RFC9549": {
+  "area": "sec",
+  "keywords": [
+   "Internationalized Email Address"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internationalization Updates to RFC 5280",
+  "wg": "lamps"
+ },
+ "RFC9551": {
+  "area": "rtg",
+  "keywords": [
+   "Metrics",
+   "Tracing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Framework of Operations, Administration, and Maintenance (OAM) for Deterministic Networking (DetNet)",
+  "wg": "detnet"
+ },
  "RFC9552": {
   "area": "rtg",
   "keywords": [
@@ -112235,5 +112298,20 @@
   "stream": "ietf",
   "title": "Distribution of Link-State and Traffic Engineering Information Using BGP",
   "wg": "idr"
+ },
+ "RFC9565": {
+  "area": "ops",
+  "keywords": [
+   "IPFIX",
+   "TCP",
+   "Measurement",
+   "Export",
+   "Observability"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Update to the tcpControlBits IP Flow Information Export (IPFIX) Information Element",
+  "wg": "opsawg"
  }
 }
