@@ -22443,7 +22443,7 @@
   "wg": "ospf"
  },
  "RFC2330": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Internet",
    "Protocol",
@@ -26683,7 +26683,7 @@
   "wg": "rps"
  },
  "RFC2623": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSV4",
    "network file system version 4",
@@ -26698,7 +26698,7 @@
   "wg": "nfsv4"
  },
  "RFC2624": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "network",
    "file",
@@ -27458,7 +27458,7 @@
   "title": "IPPM Metrics for Measuring Connectivity"
  },
  "RFC2679": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPPM",
    "internet protocol performance metrics",
@@ -27471,7 +27471,7 @@
   "wg": "ippm"
  },
  "RFC2680": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPPM",
    "internet protocol performance metrics"
@@ -27483,7 +27483,7 @@
   "wg": "ippm"
  },
  "RFC2681": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPPM",
    "internet protocol performance metrics",
@@ -29945,7 +29945,7 @@
   "title": "Memorandum of Understanding Concerning the Technical Work of the Internet Assigned Numbers Authority"
  },
  "RFC2861": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "transmission control protocol"
@@ -30255,7 +30255,7 @@
   "wg": "nasreq"
  },
  "RFC2883": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SACK",
    "Extension to the Selective Acknowledgement",
@@ -31646,7 +31646,7 @@
   "title": "Registration of Charset and Languages Media Features Tags"
  },
  "RFC2988": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "transmission control protocol",
@@ -31920,7 +31920,7 @@
   "wg": "avt"
  },
  "RFC3010": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4",
    "network",
@@ -32355,7 +32355,7 @@
   "wg": "ipngwg"
  },
  "RFC3042": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "transmission control protocol"
@@ -33777,7 +33777,7 @@
   "title": "Generic Routing Encapsulation over CLNS Networks"
  },
  "RFC3148": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "BTC",
    "transport",
@@ -34056,7 +34056,7 @@
   "title": "Request to Move RFC 1745 to Historic Status"
  },
  "RFC3168": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "IP",
    "internet protocol",
@@ -35958,7 +35958,7 @@
   "wg": "l2tpext"
  },
  "RFC3309": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "adler-32",
    "checksum",
@@ -36581,7 +36581,7 @@
   "title": "Internet Engineering Task Force and International Telecommunication Union - Telecommunications Standardization Sector Collaboration Guidelines"
  },
  "RFC3357": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "packets",
    "voice",
@@ -37028,7 +37028,7 @@
   "wg": "avt"
  },
  "RFC3390": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "transmission control protocol"
@@ -37062,7 +37062,7 @@
   "wg": "idr"
  },
  "RFC3393": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPPM",
    "IP Performance Metrics",
@@ -37550,7 +37550,7 @@
   "title": "Sieve Extension: Relational Tests"
  },
  "RFC3432": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "cbr",
    "constant bit rate",
@@ -37610,7 +37610,7 @@
   "title": "Media Gateway Control Protocol (MGCP) Version 1.0"
  },
  "RFC3436": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SCTP",
    "Stream Control Transmission Protocol",
@@ -37764,7 +37764,7 @@
   "title": "Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1"
  },
  "RFC3448": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TFRC",
    "TCP Friendly Rate Control",
@@ -38674,7 +38674,7 @@
   "title": "IMAP4 Binary Content Extension"
  },
  "RFC3517": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "transmission control protocol",
@@ -38761,7 +38761,7 @@
   "wg": "rap"
  },
  "RFC3522": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "transmission control protocol",
@@ -38875,7 +38875,7 @@
   "title": "Using Extensible Markup Language-Remote Procedure Calling (XML-RPC) in Blocks Extensible Exchange Protocol (BEEP)"
  },
  "RFC3530": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4",
    "network file system"
@@ -39006,7 +39006,7 @@
   "wg": "aaa"
  },
  "RFC3540": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "ECN",
    "explicit congestion notification",
@@ -40494,7 +40494,7 @@
   "wg": "webdav"
  },
  "RFC3649": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "transmission control protocol",
@@ -41212,7 +41212,7 @@
   "wg": "crisp"
  },
  "RFC3708": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "DSACK",
    "Duplicate Selective Acknowledgement",
@@ -41647,7 +41647,7 @@
   "wg": "xmldsig"
  },
  "RFC3742": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "transmission control protocol",
@@ -41842,7 +41842,7 @@
   "wg": "dnsext"
  },
  "RFC3758": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SCTP",
    "Stream Control Transmission Protocol",
@@ -41915,7 +41915,7 @@
   "wg": "enum"
  },
  "RFC3763": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "performance metrics",
    "delay",
@@ -42169,7 +42169,7 @@
   "title": "Next Generation Structure of Management Information (SMIng) Mappings to the Simple Network Management Protocol (SNMP)"
  },
  "RFC3782": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "Transmission Control Protocol"
@@ -42721,7 +42721,7 @@
   "title": "Additional Snoop Datalink Types"
  },
  "RFC3828": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "UDP-Lite",
    "Lightweight User Datagram Protocol"
@@ -44967,7 +44967,7 @@
   "wg": "dhc"
  },
  "RFC4015": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "transmision control protocol"
   ],
@@ -46468,7 +46468,7 @@
   "wg": "eap"
  },
  "RFC4138": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "tcp",
    "transmission control protocol"
@@ -46593,7 +46593,7 @@
   "title": "Proposed Changes to the Format of the IANA IPv6 Registry"
  },
  "RFC4148": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "internet protocol",
    "object identities",
@@ -50506,7 +50506,7 @@
   "title": "MTU and Fragmentation Issues with In-the-Network Tunneling"
  },
  "RFC4460": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SCTP",
    "IP",
@@ -50951,7 +50951,7 @@
   "title": "The AES-CMAC-96 Algorithm and Its Use with IPsec"
  },
  "RFC4495": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "rsvpv1"
   ],
@@ -51056,7 +51056,7 @@
   "wg": "sasl"
  },
  "RFC4506": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "XDR",
    "rpc",
@@ -51463,7 +51463,7 @@
   "wg": "magma"
  },
  "RFC4542": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "ieps",
    "internet emergency preparedness service",
@@ -52139,7 +52139,7 @@
   "wg": "rpsec"
  },
  "RFC4594": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "differentiated services code points",
    "traffic conditioners",
@@ -52357,7 +52357,7 @@
   "title": "Media Type Registrations for Downloadable Sounds for Musical Instrument Digital Interface (MIDI)"
  },
  "RFC4614": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "obsoleted",
@@ -52845,7 +52845,7 @@
   "wg": "ccamp"
  },
  "RFC4653": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "ncr",
    "non-congestion robustness",
@@ -52883,7 +52883,7 @@
   "wg": "pce"
  },
  "RFC4656": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "unidirectional characteristics",
    "one-way",
@@ -53888,7 +53888,7 @@
   "wg": "ccamp"
  },
  "RFC4737": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "ippm"
   ],
@@ -54329,7 +54329,7 @@
   "title": "Administration of the IANA Special Purpose IPv6 Address Block"
  },
  "RFC4774": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "bcp",
   "status": "current",
@@ -54431,7 +54431,7 @@
   "wg": "mpls"
  },
  "RFC4782": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "experimental",
   "status": "current",
@@ -54660,7 +54660,7 @@
   "wg": "ccamp"
  },
  "RFC4804": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "multiprotocol label switching",
    "traffic engineering",
@@ -54841,7 +54841,7 @@
   "wg": "secsh"
  },
  "RFC4820": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -55323,7 +55323,7 @@
   "wg": "mpls"
  },
  "RFC4860": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "session object",
    "session of interest",
@@ -55769,7 +55769,7 @@
   "title": "Use of Hash Algorithms in Internet Key Exchange (IKE) and IPsec"
  },
  "RFC4895": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "chunk type",
    "shared keys",
@@ -55806,7 +55806,7 @@
   "title": "Handling Normative References to Standards-Track Documents"
  },
  "RFC4898": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "transmission control protocol",
    "management information base",
@@ -56059,7 +56059,7 @@
   "wg": "ccamp"
  },
  "RFC4923": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "vpn",
    "nested vpn",
@@ -56401,7 +56401,7 @@
   "wg": "eai"
  },
  "RFC4953": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "rst",
    "transport control protocol"
@@ -56478,7 +56478,7 @@
   "title": "IMAP Extension for Simple Authentication and Security Layer (SASL) Initial Client Response"
  },
  "RFC4960": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SCTP",
    "IP",
@@ -56803,7 +56803,7 @@
   "wg": "dnsext"
  },
  "RFC4987": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP SYN Flood",
    "TCP SYN Cookies",
@@ -57331,7 +57331,7 @@
   "wg": "lemonade"
  },
  "RFC5033": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "bcp",
   "status": "current",
@@ -57655,7 +57655,7 @@
   "wg": "pim"
  },
  "RFC5061": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -57664,7 +57664,7 @@
   "wg": "tsvwg"
  },
  "RFC5062": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -58143,7 +58143,7 @@
   "wg": "mip6"
  },
  "RFC5097": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SMIv2",
    "UDPLITE-MIB",
@@ -58490,7 +58490,7 @@
   "wg": "smime"
  },
  "RFC5127": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Treatment Aggregate",
    "forwarding treatment"
@@ -58511,7 +58511,7 @@
   "wg": "behave"
  },
  "RFC5129": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Diffserv",
    "Differentiated Services",
@@ -58600,7 +58600,7 @@
   "wg": "behave"
  },
  "RFC5136": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "bandwidth",
    "bandwidth estimation",
@@ -60456,7 +60456,7 @@
   "wg": "mpls"
  },
  "RFC5284": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "resource reservation protocol",
    "user_error_spec",
@@ -61331,7 +61331,7 @@
   "wg": "rserpool"
  },
  "RFC5357": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "two-way measaurement",
    "round-trip measurement"
@@ -61770,7 +61770,7 @@
   "wg": "btns"
  },
  "RFC5388": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "extensible markup language",
    "DISMAN-TRACEROUTE-MIB"
@@ -61941,7 +61941,7 @@
   "title": "Compressed Data within an Internet Electronic Data Interchange (EDI) Message"
  },
  "RFC5403": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Kerberos",
    "ONC",
@@ -61980,7 +61980,7 @@
   "wg": "avt"
  },
  "RFC5405": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "user datagram protocol",
    "congestion control"
@@ -62696,7 +62696,7 @@
   "wg": "dhc"
  },
  "RFC5461": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "icmp",
    "Internet Control Message Protocol"
@@ -62946,7 +62946,7 @@
   "wg": "pkix"
  },
  "RFC5481": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "active measurement",
    "ipdv",
@@ -62960,7 +62960,7 @@
   "wg": "ippm"
  },
  "RFC5482": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Transmission Control Protocol"
   ],
@@ -63551,7 +63551,7 @@
   "title": "IMAP Response Codes"
  },
  "RFC5531": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "RPC",
    "ONC",
@@ -63564,7 +63564,7 @@
   "wg": "nfsv4"
  },
  "RFC5532": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "RPC",
    "XDR",
@@ -63950,7 +63950,7 @@
   "wg": "pcn"
  },
  "RFC5560": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "performance metrics",
    "packet duplication",
@@ -63976,7 +63976,7 @@
   "wg": "mpls"
  },
  "RFC5562": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "ecn-capable"
   ],
@@ -64758,7 +64758,7 @@
   "wg": "dkim"
  },
  "RFC5618": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "twamp-control protocol",
    "twamp-test protocol",
@@ -65088,7 +65088,7 @@
   "wg": "ospf"
  },
  "RFC5644": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Multiple point measurement",
    "relative performance",
@@ -65302,7 +65302,7 @@
   "wg": "btns"
  },
  "RFC5661": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Access Control List",
    "ACL",
@@ -65326,7 +65326,7 @@
   "wg": "nfsv4"
  },
  "RFC5662": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "xdr",
    "nfsv4"
@@ -65338,7 +65338,7 @@
   "wg": "nfsv4"
  },
  "RFC5663": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "nfsv4",
    "network file sharing version 4"
@@ -65350,7 +65350,7 @@
   "wg": "nfsv4"
  },
  "RFC5664": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "OSD",
    "storage device"
@@ -65362,7 +65362,7 @@
   "wg": "nfsv4"
  },
  "RFC5665": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "rpcbind",
    "portmap",
@@ -65378,7 +65378,7 @@
   "wg": "nfsv4"
  },
  "RFC5666": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Network File System",
    "NFS",
@@ -65395,7 +65395,7 @@
   "wg": "nfsv4"
  },
  "RFC5667": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Network File System",
    "NFS",
@@ -65582,7 +65582,7 @@
   "title": "The Nominating Committee Process: Open Disclosure of Willing Nominees"
  },
  "RFC5681": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "slow start",
    "congestion avoidance",
@@ -65596,7 +65596,7 @@
   "wg": "tcpm"
  },
  "RFC5682": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SACK",
    "transmission control protocol",
@@ -65730,7 +65730,7 @@
   "wg": "16ng"
  },
  "RFC5693": {
-  "area": "app",
+  "area": "ops",
   "keywords": [
    "peer-to-peer",
    "p2p"
@@ -65997,7 +65997,7 @@
   "wg": "rtgwg"
  },
  "RFC5716": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Federated File Systems",
    "Federated FA",
@@ -67290,7 +67290,7 @@
   "wg": "roll"
  },
  "RFC5827": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "transmission control protocol",
    "fast retransmission"
@@ -67380,7 +67380,7 @@
   "wg": "capwap"
  },
  "RFC5835": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -67753,7 +67753,7 @@
   "title": "DNS SRV Resource Records for AFS"
  },
  "RFC5865": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "real-time traffic"
   ],
@@ -68432,7 +68432,7 @@
   "wg": "sip"
  },
  "RFC5925": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "transmission control protocol",
    "border",
@@ -68449,7 +68449,7 @@
   "wg": "tcpm"
  },
  "RFC5926": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "transmission control protocol"
   ],
@@ -68460,7 +68460,7 @@
   "wg": "tcpm"
  },
  "RFC5927": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "vulnerability",
    "blind attacks",
@@ -68600,7 +68600,7 @@
   "title": "Using Trust Anchor Constraints during Certification Path Processing"
  },
  "RFC5938": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -68674,7 +68674,7 @@
   "wg": "mip4"
  },
  "RFC5945": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -68683,7 +68683,7 @@
   "wg": "tsvwg"
  },
  "RFC5946": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -68873,7 +68873,7 @@
   "wg": "mpls"
  },
  "RFC5961": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "RST",
    "SYN",
@@ -69515,7 +69515,7 @@
   "wg": "fecframe"
  },
  "RFC6016": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "l3vpn"
   ],
@@ -69779,7 +69779,7 @@
   "title": "Cisco Systems' Solution for Multicast in BGP/MPLS IP VPNs"
  },
  "RFC6038": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Testing",
    "Performance",
@@ -69801,7 +69801,7 @@
   "wg": "opsec"
  },
  "RFC6040": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Congestion Control and Management",
    "Congestion Notification",
@@ -69923,7 +69923,7 @@
   "title": "Network News Transfer Protocol (NNTP) Additions to LIST Command"
  },
  "RFC6049": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Performance",
    "Measurement",
@@ -70014,7 +70014,7 @@
   "title": "IAB Thoughts on Encodings for Internationalized Domain Names"
  },
  "RFC6056": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "tcp",
    "transmission control protocl",
@@ -70198,7 +70198,7 @@
   "title": "The 'mailto' URI Scheme"
  },
  "RFC6069": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Internet Control Message Protocol (ICMP)",
    "Retranmission Timeout (RTO)"
@@ -70369,7 +70369,7 @@
   "title": "Deprecating Unicode Language Tag Characters: RFC 2482 is Historic"
  },
  "RFC6083": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -70485,7 +70485,7 @@
   "wg": "v6ops"
  },
  "RFC6093": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Transmission Control Protocol"
   ],
@@ -70523,7 +70523,7 @@
   "title": "Extending YANG with Language Abstractions"
  },
  "RFC6096": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "obsoleted",
@@ -71611,7 +71611,7 @@
   "wg": "payload"
  },
  "RFC6191": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "bcp",
   "status": "current",
@@ -72230,7 +72230,7 @@
   "wg": "l2vpn"
  },
  "RFC6247": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -72239,7 +72239,7 @@
   "wg": "tcpm"
  },
  "RFC6248": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -72420,7 +72420,7 @@
   "wg": "payload"
  },
  "RFC6263": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "AVT",
    "SDP",
@@ -72456,7 +72456,7 @@
   "wg": "httpstate"
  },
  "RFC6266": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "filename",
    "attachment",
@@ -72697,7 +72697,7 @@
   "wg": "ltans"
  },
  "RFC6284": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "Port mapping",
    "port translation",
@@ -72875,7 +72875,7 @@
   "wg": "ledbat"
  },
  "RFC6298": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "RTO"
   ],
@@ -73295,7 +73295,7 @@
   "wg": "softwire"
  },
  "RFC6335": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "IANA",
    "transport",
@@ -73449,7 +73449,7 @@
   "wg": "mpls"
  },
  "RFC6349": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "metric",
    "TCP testing"
@@ -73511,7 +73511,7 @@
   "wg": "isms"
  },
  "RFC6354": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -74034,7 +74034,7 @@
   "wg": "intarea"
  },
  "RFC6401": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -74152,7 +74152,7 @@
   "title": "Reducing the Standards Track to Two Maturity Levels"
  },
  "RFC6411": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "RSVP authentication",
    "RSVP integrity",
@@ -74361,7 +74361,7 @@
   "wg": "mpls"
  },
  "RFC6429": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "zero window probe",
    "denial of service (DoS)",
@@ -74721,7 +74721,7 @@
   "wg": "pce"
  },
  "RFC6458": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -75438,7 +75438,7 @@
   "wg": "appsawg"
  },
  "RFC6525": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -75465,7 +75465,7 @@
   "title": "Definitions of Managed Objects for Virtual Router Redundancy Protocol Version 3 (VRRPv3)"
  },
  "RFC6528": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP security",
    "TCP Sequence Numbers",
@@ -75535,7 +75535,7 @@
   "wg": "eai"
  },
  "RFC6534": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -75876,7 +75876,7 @@
   "title": "Recommendations for the Remediation of Bots in ISP Networks"
  },
  "RFC6562": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "vbr"
   ],
@@ -76020,7 +76020,7 @@
   "wg": "l2vpn"
  },
  "RFC6576": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "inter-operability",
    "equivalence",
@@ -76080,7 +76080,7 @@
   "wg": "storm"
  },
  "RFC6582": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "congestion avoidance",
    "congestion control",
@@ -76665,7 +76665,7 @@
   "wg": "opsawg"
  },
  "RFC6633": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "congestion control",
    "icmp attacks",
@@ -76754,7 +76754,7 @@
   "title": "IETF Meeting Attendees' Frequently Asked (Travel) Questions"
  },
  "RFC6641": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "domainroot",
    "domain root file system"
@@ -76766,7 +76766,7 @@
   "wg": "nfsv4"
  },
  "RFC6642": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "Feedback Suppression",
    "NACK",
@@ -77116,7 +77116,7 @@
   "wg": "dnsext"
  },
  "RFC6673": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IP",
    "IPPM"
@@ -77143,7 +77143,7 @@
   "wg": "softwire"
  },
  "RFC6675": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "transmission control protocol",
    "retransmission",
@@ -77183,7 +77183,7 @@
   "wg": "emu"
  },
  "RFC6679": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "ECN",
    "RTP",
@@ -77291,7 +77291,7 @@
   "title": "Performance Evaluation of the Routing Protocol for Low-Power and Lossy Networks (RPL)"
  },
  "RFC6688": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFS",
    "NFSv4",
@@ -77317,7 +77317,7 @@
   "wg": "ccamp"
  },
  "RFC6690": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "CoRE",
    "Link Format",
@@ -77331,7 +77331,7 @@
   "wg": "core"
  },
  "RFC6691": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "obsoleted",
@@ -77435,7 +77435,7 @@
   "title": "Promoting Compliance with Intellectual Property Rights (IPR) Disclosure Rules"
  },
  "RFC6703": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Loss",
    "Delay",
@@ -77490,7 +77490,7 @@
   "title": "Asymmetric Extended Route Optimization (AERO)"
  },
  "RFC6707": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Delivery",
    "CDN"
@@ -77502,7 +77502,7 @@
   "wg": "cdni"
  },
  "RFC6708": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -78217,7 +78217,7 @@
   "wg": "grow"
  },
  "RFC6770": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "CDN",
    "CDNI"
@@ -78482,7 +78482,7 @@
   "wg": "v6ops"
  },
  "RFC6792": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "Real Time Control Protocol"
   ],
@@ -78573,7 +78573,7 @@
   "wg": "fecframe"
  },
  "RFC6802": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "available capacity",
    "rate",
@@ -78640,7 +78640,7 @@
   "wg": "pim"
  },
  "RFC6808": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "One-way Delay",
    "IP Performance Metrics",
@@ -79661,7 +79661,7 @@
   "title": "Additional Link Relation Types"
  },
  "RFC6904": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "real-time transport protocol",
    "rtp",
@@ -79922,7 +79922,7 @@
   "title": "Variants in Second-Level Names Registered in Top-Level Domains"
  },
  "RFC6928": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "experimental",
   "status": "current",
@@ -80012,7 +80012,7 @@
   "wg": "6man"
  },
  "RFC6937": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP loss recovery",
    "packet conservation",
@@ -80155,7 +80155,7 @@
   "title": "Architectural Considerations on Application Features in the DNS"
  },
  "RFC6951": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -80644,7 +80644,7 @@
   "title": "Instant Messaging and Presence Purpose for the Call-Info Header Field in the Session Initiation Protocol (SIP)"
  },
  "RFC6994": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -80768,7 +80768,7 @@
   "wg": "mmusic"
  },
  "RFC7007": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -80920,7 +80920,7 @@
   "title": "Assessing the Impact of Carrier-Grade NAT on Network Applications"
  },
  "RFC7022": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -81300,7 +81300,7 @@
   "wg": "lisp"
  },
  "RFC7053": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "obsoleted",
@@ -82231,7 +82231,7 @@
   "wg": "mpls"
  },
  "RFC7141": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "active queue management",
    "aqm",
@@ -82518,7 +82518,7 @@
   "wg": "ecrit"
  },
  "RFC7164": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "Leap second",
    "rtp",
@@ -83008,7 +83008,7 @@
   "wg": "soc"
  },
  "RFC7201": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "Secure RTP",
    "SRTP",
@@ -83023,7 +83023,7 @@
   "wg": "avtcore"
  },
  "RFC7202": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "SRTP",
    "RTP Profile",
@@ -83058,7 +83058,7 @@
   "wg": "mile"
  },
  "RFC7204": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4"
   ],
@@ -83371,7 +83371,7 @@
   "title": "Object Identifiers for Test Certificate Policies"
  },
  "RFC7230": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "Hyptertext Transfer Protocol",
    "HTTP",
@@ -83384,7 +83384,7 @@
   "wg": "httpbis"
  },
  "RFC7231": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "Hypertext Transfer Protocol",
    "HTTP",
@@ -83401,7 +83401,7 @@
   "wg": "httpbis"
  },
  "RFC7232": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "HyperText Transfer Protocol",
    "HTTP",
@@ -83414,7 +83414,7 @@
   "wg": "httpbis"
  },
  "RFC7233": {
-  "area": "app",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "obsoleted",
@@ -83423,7 +83423,7 @@
   "wg": "httpbis"
  },
  "RFC7234": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "HTTP caching",
    "HyperText Transfer Protocol",
@@ -83436,7 +83436,7 @@
   "wg": "httpbis"
  },
  "RFC7235": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "HTTP authentication",
    "HyperText Transfer Protocol",
@@ -83449,7 +83449,7 @@
   "wg": "httpbis"
  },
  "RFC7236": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "HyperText Transfer Protocol",
    "HTTP",
@@ -83463,7 +83463,7 @@
   "wg": "httpbis"
  },
  "RFC7237": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "HyperText Transfer Protocol",
    "HTTP",
@@ -83633,7 +83633,7 @@
   "title": "AES-CCM Elliptic Curve Cryptography (ECC) Cipher Suites for TLS"
  },
  "RFC7252": {
-  "area": "app",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -83864,7 +83864,7 @@
   "wg": "mpls"
  },
  "RFC7272": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "Inter-Destination Media Synchronization",
    "RTP Control Protocol",
@@ -83877,7 +83877,7 @@
   "wg": "avtcore"
  },
  "RFC7273": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "clock",
    "source"
@@ -84040,7 +84040,7 @@
   "title": "The Profile URI Registry"
  },
  "RFC7285": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "ALTO Information Resources",
    "Network Map",
@@ -84057,7 +84057,7 @@
   "wg": "alto"
  },
  "RFC7286": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -84098,7 +84098,7 @@
   "wg": "opsawg"
  },
  "RFC7290": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "packet loss",
    "IPPM implementation comparison",
@@ -84349,7 +84349,7 @@
   "wg": "idr"
  },
  "RFC7312": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Measurement",
    "Wireless",
@@ -84476,7 +84476,7 @@
   "title": "RFC Style Guide"
  },
  "RFC7323": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Timestamps",
    "Timestamp",
@@ -84620,7 +84620,7 @@
   "wg": "v6ops"
  },
  "RFC7336": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "CDNI",
    "content delivery network",
@@ -84637,7 +84637,7 @@
   "wg": "cdni"
  },
  "RFC7337": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -85258,7 +85258,7 @@
   "wg": "netext"
  },
  "RFC7390": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "multicast",
    "IP multicast",
@@ -85361,7 +85361,7 @@
   "title": "Report from the Smart Object Security Workshop"
  },
  "RFC7398": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "LMAP",
    "performance metrics"
@@ -85561,7 +85561,7 @@
   "wg": "mpls"
  },
  "RFC7413": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "experimental",
   "status": "current",
@@ -85570,7 +85570,7 @@
   "wg": "tcpm"
  },
  "RFC7414": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP Roadmap"
   ],
@@ -85603,7 +85603,7 @@
   "wg": "roll"
  },
  "RFC7417": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "generic aggregate rsvp"
   ],
@@ -86065,7 +86065,7 @@
   "wg": "trill"
  },
  "RFC7457": {
-  "area": "app",
+  "area": "sec",
   "keywords": [
    "Transport Layer Security",
    "TLS",
@@ -86290,7 +86290,7 @@
   "wg": "dnsop"
  },
  "RFC7478": {
-  "area": "rai",
+  "area": "wit",
   "keywords": [
    "webrtc",
    "browser",
@@ -86524,7 +86524,7 @@
   "wg": "mile"
  },
  "RFC7496": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -86533,7 +86533,7 @@
   "wg": "tsvwg"
  },
  "RFC7497": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Internet access",
    "Asymmetric Packet Size"
@@ -86902,7 +86902,7 @@
   "wg": "mpls"
  },
  "RFC7525": {
-  "area": "app",
+  "area": "sec",
   "keywords": [
    "Transport Layer Security",
    "TLS",
@@ -86959,7 +86959,7 @@
   "wg": "calext"
  },
  "RFC7530": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -86968,7 +86968,7 @@
   "wg": "nfsv4"
  },
  "RFC7531": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -86977,7 +86977,7 @@
   "wg": "nfsv4"
  },
  "RFC7532": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Federated File Systems"
   ],
@@ -86988,7 +86988,7 @@
   "wg": "nfsv4"
  },
  "RFC7533": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Federated File Systems"
   ],
@@ -87049,7 +87049,7 @@
   "wg": "mpls"
  },
  "RFC7538": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "redirect",
@@ -87071,7 +87071,7 @@
   "title": "ChaCha20 and Poly1305 for IETF Protocols"
  },
  "RFC7540": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "SPDY",
@@ -87084,7 +87084,7 @@
   "wg": "httpbis"
  },
  "RFC7541": {
-  "area": "app",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "Header"
@@ -87322,7 +87322,7 @@
   "wg": "6man"
  },
  "RFC7560": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "congestion control",
    "TCP"
@@ -87426,7 +87426,7 @@
   "wg": "tls"
  },
  "RFC7569": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4"
   ],
@@ -87685,7 +87685,7 @@
   "wg": "netconf"
  },
  "RFC7590": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "Extensible Messaging and Presence Protocol",
    "XMPP",
@@ -87899,7 +87899,7 @@
   "wg": "mmusic"
  },
  "RFC7605": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "tcp",
    "udp",
@@ -88032,7 +88032,7 @@
   "wg": "sipcore"
  },
  "RFC7615": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "authentication"
@@ -88348,7 +88348,7 @@
   "wg": "jose"
  },
  "RFC7639": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP CONNECT",
    "Firewall",
@@ -88370,7 +88370,7 @@
   "wg": "bmwg"
  },
  "RFC7641": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Smart Objects",
    "Internet of Things",
@@ -88384,7 +88384,7 @@
   "wg": "core"
  },
  "RFC7642": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "SIM user scenarios",
    "SCIM use cases"
@@ -88396,7 +88396,7 @@
   "wg": "scim"
  },
  "RFC7643": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "Identity",
    "Provisioning",
@@ -88410,7 +88410,7 @@
   "wg": "scim"
  },
  "RFC7644": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "SCIM"
   ],
@@ -88626,7 +88626,7 @@
   "wg": "dime"
  },
  "RFC7661": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "CWV",
    "TCP"
@@ -88704,7 +88704,7 @@
   "wg": "opsawg"
  },
  "RFC7667": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Real-time",
    "Multi-party",
@@ -88800,7 +88800,7 @@
   "wg": "idr"
  },
  "RFC7675": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "WebRTC"
   ],
@@ -88849,7 +88849,7 @@
   "wg": "dime"
  },
  "RFC7679": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Performance",
    "Measurement",
@@ -88862,7 +88862,7 @@
   "wg": "ippm"
  },
  "RFC7680": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Performance",
    "Measurement",
@@ -89020,7 +89020,7 @@
   "title": "The BLAKE2 Cryptographic Hash and Message Authentication Code (MAC)"
  },
  "RFC7694": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "content-encoding"
@@ -89278,7 +89278,7 @@
   "wg": "conex"
  },
  "RFC7714": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -89307,7 +89307,7 @@
   "wg": "bess"
  },
  "RFC7717": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -89316,7 +89316,7 @@
   "wg": "ippm"
  },
  "RFC7718": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -89386,7 +89386,7 @@
   "wg": "dhc"
  },
  "RFC7725": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Hypertext Transfer Protocol"
   ],
@@ -89538,7 +89538,7 @@
   "title": "Tracking Reviews of Documents"
  },
  "RFC7736": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CDNI",
    "CDN Interconnect",
@@ -89614,7 +89614,7 @@
   "wg": "payload"
  },
  "RFC7742": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "MTI",
    "mandatory-to-implement"
@@ -89700,7 +89700,7 @@
   "title": "The \"xml2rfc\" Version 2 Vocabulary"
  },
  "RFC7750": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPPM",
    "TWAMP",
@@ -89912,7 +89912,7 @@
   "wg": "appsawg"
  },
  "RFC7765": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "tcp",
    "retransmission timer",
@@ -90355,7 +90355,7 @@
   "wg": "payload"
  },
  "RFC7799": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IP Performance",
    "Measurements",
@@ -90426,7 +90426,7 @@
   "wg": "httpauth"
  },
  "RFC7805": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -90577,7 +90577,7 @@
   "wg": "dnsop"
  },
  "RFC7817": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "SMTP",
    "Submission",
@@ -90610,7 +90610,7 @@
   "wg": "dhc"
  },
  "RFC7820": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Checksum",
    "UDP",
@@ -90729,7 +90729,7 @@
   "wg": "dnsop"
  },
  "RFC7829": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SCTP",
    "Failover",
@@ -90869,7 +90869,7 @@
   "wg": "conex"
  },
  "RFC7838": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "ALPN",
@@ -91121,7 +91121,7 @@
   "wg": "softwire"
  },
  "RFC7857": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "address sharing",
    "IPv4 service continuity",
@@ -91191,7 +91191,7 @@
   "wg": "opsawg"
  },
  "RFC7861": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "RPCSEC_GSS",
    "ONC",
@@ -91213,7 +91213,7 @@
   "wg": "nfsv4"
  },
  "RFC7862": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4.2",
    "pNFS",
@@ -91228,7 +91228,7 @@
   "wg": "nfsv4"
  },
  "RFC7863": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4.2",
    "XDR"
@@ -91356,7 +91356,7 @@
   "wg": "dnsop"
  },
  "RFC7874": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -91365,7 +91365,7 @@
   "wg": "rtcweb"
  },
  "RFC7875": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "WebRTC",
    "audio",
@@ -92053,7 +92053,7 @@
   "wg": "radext"
  },
  "RFC7931": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -92123,7 +92123,7 @@
   "title": "Clarifying Registry Procedures for the WebSocket Subprotocol Name Registry"
  },
  "RFC7937": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CDNI",
    "Logging",
@@ -92384,7 +92384,7 @@
   "title": "DNSSEC Trust Anchor Publication for the Root Zone"
  },
  "RFC7959": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoAP",
    "Constrained Application Protocol",
@@ -92549,7 +92549,7 @@
   "wg": "mile"
  },
  "RFC7971": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -92595,7 +92595,7 @@
   "title": "An Experimental TCP Option for Host Identification"
  },
  "RFC7975": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "DNS"
@@ -92681,7 +92681,7 @@
   "wg": "tram"
  },
  "RFC7983": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "TLS",
    "STUN",
@@ -92908,7 +92908,7 @@
   "wg": "grow"
  },
  "RFC8000": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "multi-domain",
    "multi-domain-capable file system",
@@ -92988,7 +92988,7 @@
   "wg": "hip"
  },
  "RFC8006": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CDN",
    "cascaded CDN",
@@ -93018,7 +93018,7 @@
   "wg": "cdni"
  },
  "RFC8007": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CDN",
    "pre-position",
@@ -93032,7 +93032,7 @@
   "wg": "cdni"
  },
  "RFC8008": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CDNI",
    "CDN Interconnect",
@@ -93363,7 +93363,7 @@
   "wg": "aqm"
  },
  "RFC8035": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "RTP",
    "RTCP",
@@ -93842,7 +93842,7 @@
   "wg": "savi"
  },
  "RFC8075": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoAP",
    "HTTP-CoAP mapping",
@@ -93944,7 +93944,7 @@
   "wg": "avtext"
  },
  "RFC8083": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -93953,7 +93953,7 @@
   "wg": "avtcore"
  },
  "RFC8084": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Congestion control",
    "CC",
@@ -93970,7 +93970,7 @@
   "wg": "tsvwg"
  },
  "RFC8085": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "UDP",
    "guidelines"
@@ -93982,7 +93982,7 @@
   "wg": "tsvwg"
  },
  "RFC8086": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -94076,7 +94076,7 @@
   "wg": "dprive"
  },
  "RFC8095": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Transmission Control Protocol (TCP)",
    "Multipath TCP (MPTCP)",
@@ -94143,7 +94143,7 @@
   "wg": "ospf"
  },
  "RFC8100": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Diffserv",
    "Interconnection",
@@ -94246,7 +94246,7 @@
   "title": "Advertising Digital Identifier (Ad-ID) URN Namespace Definition"
  },
  "RFC8108": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -94568,7 +94568,7 @@
   "wg": "teas"
  },
  "RFC8132": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoAP"
   ],
@@ -94849,7 +94849,7 @@
   "title": "Digital Preservation Considerations for the RFC Series"
  },
  "RFC8154": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4"
   ],
@@ -94957,7 +94957,7 @@
   "wg": "6lo"
  },
  "RFC8164": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Opportunistic Security",
    "HTTP"
@@ -94981,7 +94981,7 @@
   "title": "Design Considerations for Metadata Insertion"
  },
  "RFC8166": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "RPC-over-RDMA"
   ],
@@ -94992,7 +94992,7 @@
   "wg": "nfsv4"
  },
  "RFC8167": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFS-over-RDMA",
    "RPC-over-RDMA"
@@ -95113,7 +95113,7 @@
   "wg": "rtgwg"
  },
  "RFC8178": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -95196,7 +95196,7 @@
   "wg": "pals"
  },
  "RFC8186": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPPM",
    "TWAMP",
@@ -95210,7 +95210,7 @@
   "wg": "ippm"
  },
  "RFC8187": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -95219,7 +95219,7 @@
   "wg": "httpbis"
  },
  "RFC8188": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "http",
    "content coding",
@@ -95233,7 +95233,7 @@
   "wg": "httpbis"
  },
  "RFC8189": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "ALTO Information Resources",
    "Network Map",
@@ -95926,7 +95926,7 @@
   "wg": "manet"
  },
  "RFC8246": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -95972,7 +95972,7 @@
   "wg": "trill"
  },
  "RFC8250": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -96067,7 +96067,7 @@
   "wg": "mpls"
  },
  "RFC8257": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "ECN",
@@ -96102,7 +96102,7 @@
   "wg": "jsonbis"
  },
  "RFC8260": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -96111,7 +96111,7 @@
   "wg": "tsvwg"
  },
  "RFC8261": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -96187,7 +96187,7 @@
   "wg": "precis"
  },
  "RFC8267": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFS-over-RDMA"
   ],
@@ -96220,7 +96220,7 @@
   "wg": "curdle"
  },
  "RFC8269": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "ARIA",
    "SRTP",
@@ -96293,7 +96293,7 @@
   "wg": "mile"
  },
  "RFC8275": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4"
   ],
@@ -96304,7 +96304,7 @@
   "wg": "nfsv4"
  },
  "RFC8276": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -96410,7 +96410,7 @@
   "title": "Lightweight Directory Access Protocol (LDAP) Schema for Supporting the Extensible Messaging and Presence Protocol (XMPP) in White Pages"
  },
  "RFC8285": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -96559,7 +96559,7 @@
   "wg": "bier"
  },
  "RFC8297": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "push",
    "preload"
@@ -96634,7 +96634,7 @@
   "wg": "trill"
  },
  "RFC8303": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -96643,7 +96643,7 @@
   "wg": "taps"
  },
  "RFC8304": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "UDP Transport"
   ],
@@ -96745,7 +96745,7 @@
   "wg": "dprive"
  },
  "RFC8311": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "ECN"
   ],
@@ -96756,7 +96756,7 @@
   "wg": "tsvwg"
  },
  "RFC8312": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "obsoleted",
@@ -96796,7 +96796,7 @@
   "wg": "mboned"
  },
  "RFC8314": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "POP",
    "IMAP",
@@ -96877,7 +96877,7 @@
   "wg": "mpls"
  },
  "RFC8321": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Alternate Marking",
    "Marking Method",
@@ -96907,7 +96907,7 @@
   "wg": "mile"
  },
  "RFC8323": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoAP",
    "Constrained Application Protocol",
@@ -96935,7 +96935,7 @@
   "title": "DNS Privacy, Authorization, Special Uses, Encoding, Characters, Matching, and Root Structure: Time for Another Look?"
  },
  "RFC8325": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "quality of service",
    "QoS",
@@ -97091,7 +97091,7 @@
   "wg": "intarea"
  },
  "RFC8336": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "connection coalescing",
    "HTTP"
@@ -97103,7 +97103,7 @@
   "wg": "httpbis"
  },
  "RFC8337": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "performance",
    "bulk capacity",
@@ -98206,7 +98206,7 @@
   "title": "Representing DNS Messages in JSON"
  },
  "RFC8428": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "IoT",
    "data model"
@@ -98283,7 +98283,7 @@
   "title": "A Simpler Method for Resolving Alert-Info URNs"
  },
  "RFC8434": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4"
   ],
@@ -98294,7 +98294,7 @@
   "wg": "nfsv4"
  },
  "RFC8435": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4"
   ],
@@ -98305,7 +98305,7 @@
   "wg": "nfsv4"
  },
  "RFC8436": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Diffserv",
    "DSCP"
@@ -98371,7 +98371,7 @@
   "wg": "extra"
  },
  "RFC8441": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CONNECT SETTINGS"
   ],
@@ -98594,7 +98594,7 @@
   "wg": "sfc"
  },
  "RFC8460": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "DANE",
    "MTA-STS"
@@ -98606,7 +98606,7 @@
   "wg": "uta"
  },
  "RFC8461": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "SMTP STARTTLS",
    "Mail Security"
@@ -98687,7 +98687,7 @@
   "wg": "dprive"
  },
  "RFC8468": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Measurement",
    "Methodology",
@@ -98720,7 +98720,7 @@
   "wg": "pals"
  },
  "RFC8470": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "TLS",
@@ -99234,7 +99234,7 @@
   "wg": "lsr"
  },
  "RFC8511": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "experimental",
   "status": "current",
@@ -99307,7 +99307,7 @@
   "title": "URN Namespace for ETSI Documents"
  },
  "RFC8516": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoAP"
   ],
@@ -99557,7 +99557,7 @@
   "wg": "dhc"
  },
  "RFC8540": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "obsoleted",
@@ -99613,7 +99613,7 @@
   "wg": "regext"
  },
  "RFC8545": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "OWAMP",
    "TWAMP"
@@ -100068,7 +100068,7 @@
   "wg": "v6ops"
  },
  "RFC8586": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CDN-Loop,"
   ],
@@ -100079,7 +100079,7 @@
   "wg": "httpbis"
  },
  "RFC8587": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFSv4.0",
    "migration",
@@ -100386,7 +100386,7 @@
   "wg": "dots"
  },
  "RFC8613": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -100485,7 +100485,7 @@
   "wg": "jmap"
  },
  "RFC8622": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Lower Effort",
    "Per-Hop Behavior",
@@ -101059,7 +101059,7 @@
   "title": "TLS Server Identity Pinning with Tickets"
  },
  "RFC8673": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "http",
    "range",
@@ -101165,7 +101165,7 @@
   "wg": "mpls"
  },
  "RFC8680": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "FEC",
    "FECFRAME",
@@ -101180,7 +101180,7 @@
   "wg": "tsvwg"
  },
  "RFC8681": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "RLC",
    "FEC",
@@ -101195,7 +101195,7 @@
   "wg": "tsvwg"
  },
  "RFC8682": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -101250,7 +101250,7 @@
   "wg": "pce"
  },
  "RFC8686": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Application-Layer Traffic Optimization (ALTO)",
    "ALTO cross-domain server discovery",
@@ -101291,7 +101291,7 @@
   "wg": "sipcore"
  },
  "RFC8689": {
-  "area": "art",
+  "area": "sec",
   "keywords": [
    "SMTP"
   ],
@@ -101573,7 +101573,7 @@
   "wg": "curdle"
  },
  "RFC8710": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoAP",
    "Multipart Content-Format"
@@ -101975,7 +101975,7 @@
   "wg": "acme"
  },
  "RFC8740": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "renegotiation",
@@ -102207,7 +102207,7 @@
   "wg": "curdle"
  },
  "RFC8759": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "subtitles",
    "captions",
@@ -102250,7 +102250,7 @@
   "wg": "netvc"
  },
  "RFC8762": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -102329,7 +102329,7 @@
   "wg": "dnsop"
  },
  "RFC8768": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "security",
    "mitigation",
@@ -102632,7 +102632,7 @@
   "title": "IETF Stream Documents Require IETF Rough Consensus"
  },
  "RFC8790": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoAP",
    "IoT",
@@ -102720,7 +102720,7 @@
   "wg": "mpls"
  },
  "RFC8797": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "NFS-over-RDMA"
   ],
@@ -102731,7 +102731,7 @@
   "wg": "nfsv4"
  },
  "RFC8798": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Internet of Things (IoT)",
    "data model",
@@ -102794,7 +102794,7 @@
   "title": "The Quality for Service (Q4S) Protocol"
  },
  "RFC8803": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Hybrid access",
    "aggregation",
@@ -102812,7 +102812,7 @@
   "wg": "tcpm"
  },
  "RFC8804": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -102975,7 +102975,7 @@
   "wg": "stir"
  },
  "RFC8817": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "MELP",
    "MELPe",
@@ -103091,7 +103091,7 @@
   "wg": "lpwan"
  },
  "RFC8825": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103100,7 +103100,7 @@
   "wg": "rtcweb"
  },
  "RFC8826": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103109,7 +103109,7 @@
   "wg": "rtcweb"
  },
  "RFC8827": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103118,7 +103118,7 @@
   "wg": "rtcweb"
  },
  "RFC8828": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "WebRTC",
    "privacy",
@@ -103136,7 +103136,7 @@
   "wg": "rtcweb"
  },
  "RFC8829": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "webrtc",
    "sdp",
@@ -103167,7 +103167,7 @@
   "wg": "mmusic"
  },
  "RFC8831": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103176,7 +103176,7 @@
   "wg": "rtcweb"
  },
  "RFC8832": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103185,7 +103185,7 @@
   "wg": "rtcweb"
  },
  "RFC8833": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "ALPN",
    "Protocol",
@@ -103198,7 +103198,7 @@
   "wg": "rtcweb"
  },
  "RFC8834": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103207,7 +103207,7 @@
   "wg": "rtcweb"
  },
  "RFC8835": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103230,7 +103230,7 @@
   "wg": "rmcat"
  },
  "RFC8837": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Diffserv",
    "rtcweb"
@@ -103443,7 +103443,7 @@
   "wg": "mmusic"
  },
  "RFC8854": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "RTP",
    "FEC"
@@ -103521,7 +103521,7 @@
   "wg": "mmusic"
  },
  "RFC8860": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Real-time",
    "Multiplexing",
@@ -103534,7 +103534,7 @@
   "wg": "avtcore"
  },
  "RFC8861": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "RGRP",
    "SDES",
@@ -103689,7 +103689,7 @@
   "wg": "perc"
  },
  "RFC8872": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Simulcast"
   ],
@@ -103792,7 +103792,7 @@
   "title": "Special Use Domain Name 'ipv4only.arpa'"
  },
  "RFC8881": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103877,7 +103877,7 @@
   "wg": "jmap"
  },
  "RFC8888": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Congestion control",
    "feedback message",
@@ -103891,7 +103891,7 @@
   "wg": "avtcore"
  },
  "RFC8889": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Clustered Alternate Marking",
    "Multipoint Marking Method",
@@ -103955,7 +103955,7 @@
   "title": "Simple Certificate Enrolment Protocol"
  },
  "RFC8895": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "ALTO"
   ],
@@ -103966,7 +103966,7 @@
   "wg": "alto"
  },
  "RFC8896": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103997,7 +103997,7 @@
   "wg": "sipcore"
  },
  "RFC8899": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "UDP",
    "SCTP",
@@ -104139,7 +104139,7 @@
   "wg": "capport"
  },
  "RFC8911": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPPM",
    "Loss",
@@ -104152,7 +104152,7 @@
   "wg": "ippm"
  },
  "RFC8912": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -104161,7 +104161,7 @@
   "wg": "ippm"
  },
  "RFC8913": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -104266,7 +104266,7 @@
   "title": "Dynamic Service Negotiation: The Connectivity Provisioning Negotiation Protocol (CPNP)"
  },
  "RFC8922": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Transport Protocols",
    "Transport Security"
@@ -104278,7 +104278,7 @@
   "wg": "taps"
  },
  "RFC8923": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "taps",
    "transport services"
@@ -104518,7 +104518,7 @@
   "wg": "emu"
  },
  "RFC8941": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "trailer",
    "header"
@@ -104530,7 +104530,7 @@
   "wg": "httpbis"
  },
  "RFC8942": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Content Negotiation"
   ],
@@ -104761,7 +104761,7 @@
   "wg": "mpls"
  },
  "RFC8961": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "retransmission timeout",
    "packet loss",
@@ -104907,7 +104907,7 @@
   "wg": "bfd"
  },
  "RFC8972": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPPM",
    "Performance Measurement"
@@ -104937,7 +104937,7 @@
   "wg": "dots"
  },
  "RFC8974": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "6tisch",
    "minimal-security"
@@ -105089,7 +105089,7 @@
   "wg": "calext"
  },
  "RFC8985": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "Loss Recovery",
@@ -105265,7 +105265,7 @@
   "wg": "tls"
  },
  "RFC8997": {
-  "area": "art",
+  "area": "sec",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -105286,7 +105286,7 @@
   "title": "ShangMi (SM) Cipher Suites for TLS 1.3"
  },
  "RFC8999": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "crypto",
    "next generation",
@@ -105303,7 +105303,7 @@
   "wg": "quic"
  },
  "RFC9000": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "multipath",
    "next generations",
@@ -105323,7 +105323,7 @@
   "wg": "quic"
  },
  "RFC9001": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "crypto",
    "opportunistic encryption",
@@ -105336,7 +105336,7 @@
   "wg": "quic"
  },
  "RFC9002": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "bbr",
    "delay-sensitive congestion control",
@@ -105849,7 +105849,7 @@
   "wg": "regext"
  },
  "RFC9039": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "URN",
    "device identifier",
@@ -105866,7 +105866,7 @@
   "wg": "core"
  },
  "RFC9040": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "informational",
   "status": "current",
@@ -106207,7 +106207,7 @@
   "title": "Considerations in the Development of a QoS Architecture for CCNx-Like Information-Centric Networking Protocols"
  },
  "RFC9065": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "transport design",
    "operations and management"
@@ -106286,7 +106286,7 @@
   "wg": "mpls"
  },
  "RFC9071": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "conference",
    "bridge",
@@ -106594,7 +106594,7 @@
   "wg": "v6ops"
  },
  "RFC9097": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IP Layer",
    "Performance",
@@ -106630,7 +106630,7 @@
   "wg": "opsec"
  },
  "RFC9100": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Internet of Things (IoT)",
    "Internet of Things",
@@ -106756,7 +106756,7 @@
   "wg": "ntp"
  },
  "RFC9110": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Hypertext Transfer Protocol",
    "HTTP",
@@ -106772,7 +106772,7 @@
   "wg": "httpbis"
  },
  "RFC9111": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Hypertext Transfer Protocol",
    "HTTP",
@@ -106785,7 +106785,7 @@
   "wg": "httpbis"
  },
  "RFC9112": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Hypertext Transfer Protocol",
    "HTTP",
@@ -106798,7 +106798,7 @@
   "wg": "httpbis"
  },
  "RFC9113": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP",
    "SPDY",
@@ -106811,7 +106811,7 @@
   "wg": "httpbis"
  },
  "RFC9114": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Transport",
    "QUIC",
@@ -107060,7 +107060,7 @@
   "wg": "dots"
  },
  "RFC9134": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "video",
    "transport",
@@ -107464,7 +107464,7 @@
   "wg": "trans"
  },
  "RFC9163": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Certificate Transparency",
    "Expect-CT"
@@ -107569,7 +107569,7 @@
   "title": "Long-Term Viability of Protocol Extension Mechanisms"
  },
  "RFC9171": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
    "Delay-tolerant networking",
    "disruption-tolerant networking"
@@ -107581,7 +107581,7 @@
   "wg": "dtn"
  },
  "RFC9172": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
    "security",
    "bundle",
@@ -107595,7 +107595,7 @@
   "wg": "dtn"
  },
  "RFC9173": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [
    "security",
    "bundle",
@@ -107609,7 +107609,7 @@
   "wg": "dtn"
  },
  "RFC9174": {
-  "area": "tsv",
+  "area": "int",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -107618,7 +107618,7 @@
   "wg": "dtn"
  },
  "RFC9175": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "OSCORE",
    "block-wise",
@@ -107639,7 +107639,7 @@
   "wg": "core"
  },
  "RFC9176": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoRE",
    "Web Linking",
@@ -107653,7 +107653,7 @@
   "wg": "core"
  },
  "RFC9177": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Quick-Block",
    "Robust-Block",
@@ -107860,7 +107860,7 @@
   "title": "Network Service Header (NSH) Fixed-Length Context Header Allocation"
  },
  "RFC9193": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Internet of Things (IoT)",
    "Internet of Things",
@@ -107906,7 +107906,7 @@
   "wg": "netconf"
  },
  "RFC9197": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "inband",
    "Telemetry",
@@ -107919,7 +107919,7 @@
   "wg": "ippm"
  },
  "RFC9198": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Performance",
    "Metrics",
@@ -108009,7 +108009,7 @@
   "wg": "ace"
  },
  "RFC9204": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Transport",
    "QUIC",
@@ -108027,7 +108027,7 @@
   "wg": "quic"
  },
  "RFC9205": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTP API"
   ],
@@ -108070,7 +108070,7 @@
   "wg": "extra"
  },
  "RFC9209": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "proxy",
    "intermediary",
@@ -108095,7 +108095,7 @@
   "wg": "dnsop"
  },
  "RFC9211": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "http",
    "cache",
@@ -108119,7 +108119,7 @@
   "title": "Commercial National Security Algorithm (CNSA) Suite Cryptography for Secure Shell (SSH)"
  },
  "RFC9213": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CDN",
    "Content Delivery Network",
@@ -108184,7 +108184,7 @@
   "title": "Current Open Questions in Path-Aware Networking"
  },
  "RFC9218": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Response priority",
    "Stream multiplexing",
@@ -108210,7 +108210,7 @@
   "wg": "jmap"
  },
  "RFC9220": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "extended connect",
    "42"
@@ -108222,7 +108222,7 @@
   "wg": "httpbis"
  },
  "RFC9221": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -108404,7 +108404,7 @@
   "wg": "idr"
  },
  "RFC9235": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "authentication",
@@ -108471,7 +108471,7 @@
   "wg": "dispatch"
  },
  "RFC9240": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "ALTO"
   ],
@@ -108482,7 +108482,7 @@
   "wg": "alto"
  },
  "RFC9241": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "ALTO"
   ],
@@ -108553,7 +108553,7 @@
   "title": "IETF Discussion List Charter"
  },
  "RFC9246": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -108653,7 +108653,7 @@
   "wg": "calext"
  },
  "RFC9254": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CBOR"
   ],
@@ -108721,7 +108721,7 @@
   "wg": "6man"
  },
  "RFC9260": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "SCTP",
    "IP",
@@ -108778,7 +108778,7 @@
   "wg": "sfc"
  },
  "RFC9264": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Web linking",
    "Typed links",
@@ -108895,7 +108895,7 @@
   "title": "Network Coding for Content-Centric Networking / Named Data Networking: Considerations and Challenges"
  },
  "RFC9274": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Optimization",
    "service performance",
@@ -108913,7 +108913,7 @@
   "wg": "alto"
  },
  "RFC9275": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "network visibility",
    "abstract network element",
@@ -109050,7 +109050,7 @@
   "wg": "sidrops"
  },
  "RFC9287": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Header",
    "Path signal"
@@ -109078,7 +109078,7 @@
   "wg": "opsec"
  },
  "RFC9289": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "network file system",
    "remote procedure call",
@@ -109092,7 +109092,7 @@
   "wg": "nfsv4"
  },
  "RFC9290": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "CoAP",
    "API",
@@ -109124,7 +109124,7 @@
   "wg": "opsawg"
  },
  "RFC9292": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -109133,7 +109133,7 @@
   "wg": "httpbis"
  },
  "RFC9293": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -109182,7 +109182,7 @@
   "title": "ifStackTable for the Point-to-Point (P2P) Interface over a LAN Type: Definition and Examples"
  },
  "RFC9297": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "quic",
    "http",
@@ -109200,7 +109200,7 @@
   "wg": "masque"
  },
  "RFC9298": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "quic",
    "http",
@@ -109331,7 +109331,7 @@
   "title": "Report from the IAB Workshop on Analyzing IETF Data (AID) 2021"
  },
  "RFC9308": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "application protocol mapping",
    "deployment"
@@ -109374,7 +109374,7 @@
   "wg": "shmoo"
  },
  "RFC9312": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "network management",
    "wire image"
@@ -109521,7 +109521,7 @@
   "title": "Signature Validation Token"
  },
  "RFC9322": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IOAM",
    "Telemetry"
@@ -109557,7 +109557,7 @@
   "wg": "sidrops"
  },
  "RFC9325": {
-  "area": "art",
+  "area": "sec",
   "keywords": [],
   "level": "bcp",
   "status": "current",
@@ -109566,7 +109566,7 @@
   "wg": "uta"
  },
  "RFC9326": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IOAM",
    "Telemetry"
@@ -109591,7 +109591,7 @@
   "wg": "ntp"
  },
  "RFC9328": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "H.266",
    "ISO/IEC 23090-3",
@@ -109620,7 +109620,7 @@
   "wg": "ipsecme"
  },
  "RFC9330": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Performance",
    "Queuing Delay",
@@ -109648,7 +109648,7 @@
   "wg": "tsvwg"
  },
  "RFC9331": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Burstiness",
    "Performance",
@@ -109676,7 +109676,7 @@
   "wg": "tsvwg"
  },
  "RFC9332": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Performance",
    "Queuing Delay",
@@ -109737,7 +109737,7 @@
   "wg": "rats"
  },
  "RFC9335": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "SRTP"
   ],
@@ -109811,7 +109811,7 @@
   "title": "Architectural Principles for a Quantum Internet"
  },
  "RFC9341": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -109820,7 +109820,7 @@
   "wg": "ippm"
  },
  "RFC9342": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Multipoint",
    "Cluster",
@@ -110044,7 +110044,7 @@
   "wg": "pce"
  },
  "RFC9359": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "IPv6",
    "MPLS",
@@ -110164,7 +110164,7 @@
   "title": "GOST Cipher Suites for Transport Layer Security (TLS) Protocol Version 1.3"
  },
  "RFC9368": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "quic",
    "version",
@@ -110181,7 +110181,7 @@
   "wg": "quic"
  },
  "RFC9369": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -110284,7 +110284,7 @@
   "wg": "lsr"
  },
  "RFC9378": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Telemetry",
    "Tracing"
@@ -110380,7 +110380,7 @@
   "wg": "dots"
  },
  "RFC9388": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Request Routing",
    "Footprint and Capabilities Semantics"
@@ -110605,7 +110605,7 @@
   "title": "AI Sarcasm Detection: Insult Your AI without Offending It"
  },
  "RFC9406": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "TCP",
    "congestion control"
@@ -110692,7 +110692,7 @@
   "wg": "bmwg"
  },
  "RFC9412": {
-  "area": "art",
+  "area": "wit",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -110794,7 +110794,7 @@
   "wg": "mls"
  },
  "RFC9421": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "PKI"
   ],
@@ -110949,7 +110949,7 @@
   "wg": "drip"
  },
  "RFC9435": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "DSCP",
    "DiffServ Codepoints"
@@ -110988,7 +110988,7 @@
   "wg": "lisp"
  },
  "RFC9438": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "Congestion control",
    "large BDP",
@@ -111002,7 +111002,7 @@
   "wg": "tcpm"
  },
  "RFC9439": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "JavaScript Object Notation",
    "Application-Layer Traffic Optimization"
@@ -111014,7 +111014,7 @@
   "wg": "alto"
  },
  "RFC9440": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "http",
    "client certificate"
@@ -111068,7 +111068,7 @@
   "wg": "lpwan"
  },
  "RFC9443": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "RTP",
    "ZRTP",
@@ -111253,7 +111253,7 @@
   "wg": "opsawg"
  },
  "RFC9457": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "status",
    "HTTP",
@@ -111597,7 +111597,7 @@
   "wg": "lamps"
  },
  "RFC9484": {
-  "area": "tsv",
+  "area": "wit",
   "keywords": [
    "quic",
    "http",
@@ -111629,7 +111629,7 @@
   "wg": "jsonpath"
  },
  "RFC9486": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -111812,7 +111812,7 @@
   "wg": "lsr"
  },
  "RFC9503": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -111847,7 +111847,7 @@
   "title": "A Survey of Worldwide Censorship Techniques"
  },
  "RFC9506": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "Performance",
    "Monitoring",
@@ -111917,7 +111917,7 @@
   "wg": "opsec"
  },
  "RFC9512": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "data interchange format"
   ],
@@ -112059,7 +112059,7 @@
   "wg": "spring"
  },
  "RFC9525": {
-  "area": "art",
+  "area": "sec",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -112094,7 +112094,7 @@
   "wg": "homenet"
  },
  "RFC9530": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "Digest"
   ],
@@ -112114,7 +112114,7 @@
   "title": "Path Steering in Content-Centric Networking (CCNx) and Named Data Networking (NDN)"
  },
  "RFC9532": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "proxy status"
   ],
@@ -112125,7 +112125,7 @@
   "wg": "httpbis"
  },
  "RFC9533": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "TWAMP",
    "OWAMP",
@@ -112140,7 +112140,7 @@
   "wg": "ippm"
  },
  "RFC9534": {
-  "area": "tsv",
+  "area": "ops",
   "keywords": [
    "STAMP",
    "Performance Measurement",
@@ -112165,7 +112165,7 @@
   "wg": "jsonpath"
  },
  "RFC9538": {
-  "area": "art",
+  "area": "wit",
   "keywords": [
    "HTTPS",
    "delegation",
