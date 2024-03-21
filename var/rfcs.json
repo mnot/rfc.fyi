@@ -99077,7 +99077,7 @@
    "domain name system"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "DNS Terminology",
   "wg": "dnsop"
@@ -111779,6 +111779,18 @@
   "stream": "independent",
   "title": "The GNU Name System"
  },
+ "RFC9499": {
+  "area": "ops",
+  "keywords": [
+   "vocabulary",
+   "domain name system"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Terminology",
+  "wg": "dnsop"
+ },
  "RFC9500": {
   "keywords": [],
   "level": "informational",
@@ -111894,6 +111906,17 @@
   "status": "current",
   "stream": "irtf",
   "title": "Information-Centric Networking (ICN) Ping Protocol Specification"
+ },
+ "RFC9509": {
+  "area": "sec",
+  "keywords": [
+   "3GPP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "X.509 Certificate Extended Key Usage (EKU) for 5G Network Functions",
+  "wg": "lamps"
  },
  "RFC9510": {
   "keywords": [
@@ -112093,6 +112116,38 @@
   "title": "DHCPv6 Options for the Homenet Naming Authority",
   "wg": "homenet"
  },
+ "RFC9528": {
+  "area": "sec",
+  "keywords": [
+   "AKE",
+   "LAKE",
+   "COSE",
+   "OSCORE",
+   "lightweight authenticated key exchange",
+   "constrained node networks",
+   "IoT security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Ephemeral Diffie-Hellman Over COSE (EDHOC)",
+  "wg": "lake"
+ },
+ "RFC9529": {
+  "area": "sec",
+  "keywords": [
+   "test vector",
+   "lightweight",
+   "authenticated key exchange",
+   "LAKE",
+   "AKE"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Traces of Ephemeral Diffie-Hellman Over COSE (EDHOC)",
+  "wg": "lake"
+ },
  "RFC9530": {
   "area": "wit",
   "keywords": [
@@ -112210,6 +112265,15 @@
   "title": "Discovery of Oblivious Services via Service Binding Records",
   "wg": "ohai"
  },
+ "RFC9541": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Flush Mechanism for Customer MAC Addresses Based on Service Instance Identifier (I-SID) in Provider Backbone Bridging EVPN (PBB-EVPN)",
+  "wg": "bess"
+ },
  "RFC9543": {
   "area": "rtg",
   "keywords": [
@@ -112220,6 +112284,18 @@
   "stream": "ietf",
   "title": "A Framework for Network Slices in Networks Built from IETF Technologies",
   "wg": "teas"
+ },
+ "RFC9544": {
+  "area": "ops",
+  "keywords": [
+   "IPPM",
+   "Performance Measurement"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Precision Availability Metrics (PAMs) for Services Governed by Service Level Objectives (SLOs)",
+  "wg": "ippm"
  },
  "RFC9545": {
   "area": "rtg",
@@ -112270,6 +112346,15 @@
   "stream": "ietf",
   "title": "Internationalization Updates to RFC 5280",
   "wg": "lamps"
+ },
+ "RFC9550": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet): Packet Ordering Function",
+  "wg": "detnet"
  },
  "RFC9551": {
   "area": "rtg",
