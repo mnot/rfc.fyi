@@ -112219,6 +112219,20 @@
   "title": "JSONPath: Query Expressions for JSON",
   "wg": "jsonpath"
  },
+ "RFC9537": {
+  "area": "art",
+  "keywords": [
+   "Redacted",
+   "Redaction",
+   "Redacting",
+   "JSONPath"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Redacted Fields in the Registration Data Access Protocol (RDAP) Response",
+  "wg": "regext"
+ },
  "RFC9538": {
   "area": "wit",
   "keywords": [
