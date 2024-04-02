@@ -112398,6 +112398,16 @@
   "title": "Distribution of Link-State and Traffic Engineering Information Using BGP",
   "wg": "idr"
  },
+ "RFC9564": {
+  "keywords": [
+   "LLM",
+   "IP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Faster Than Light Speed Protocol (FLIP)"
+ },
  "RFC9565": {
   "area": "ops",
   "keywords": [
