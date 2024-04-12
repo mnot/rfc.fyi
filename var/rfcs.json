@@ -81174,7 +81174,7 @@
    "LSAP"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters"
  },
@@ -103150,7 +103150,7 @@
    "answer"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "JavaScript Session Establishment Protocol (JSEP)",
   "wg": "rtcweb"
@@ -110817,6 +110817,19 @@
   "stream": "ietf",
   "title": "The LIMITS SMTP Service Extension"
  },
+ "RFC9423": {
+  "area": "wit",
+  "keywords": [
+   "CoAP",
+   "Web Linking",
+   "Resource Discovery"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Constrained RESTful Environments (CoRE) Target Attributes Registry",
+  "wg": "core"
+ },
  "RFC9424": {
   "area": "ops",
   "keywords": [
@@ -110882,6 +110895,26 @@
   "stream": "ietf",
   "title": "Transmission of IPv6 Packets over Near Field Communication",
   "wg": "6lo"
+ },
+ "RFC9429": {
+  "area": "wit",
+  "keywords": [
+   "webrtc",
+   "sdp",
+   "negotiation",
+   "signaling",
+   "peerconnection",
+   "api",
+   "ice",
+   "rtp",
+   "offer",
+   "answer"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JavaScript Session Establishment Protocol (JSEP)",
+  "wg": "rtcweb"
  },
  "RFC9430": {
   "area": "sec",
@@ -112219,6 +112252,18 @@
   "title": "JSONPath: Query Expressions for JSON",
   "wg": "jsonpath"
  },
+ "RFC9536": {
+  "area": "art",
+  "keywords": [
+   "RDAP",
+   "Reverse search"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration Data Access Protocol (RDAP) Reverse Search",
+  "wg": "regext"
+ },
  "RFC9537": {
   "area": "art",
   "keywords": [
@@ -112287,6 +112332,28 @@
   "stream": "ietf",
   "title": "Flush Mechanism for Customer MAC Addresses Based on Service Instance Identifier (I-SID) in Provider Backbone Bridging EVPN (PBB-EVPN)",
   "wg": "bess"
+ },
+ "RFC9542": {
+  "area": "int",
+  "keywords": [
+   "Ethernet",
+   "EtherType",
+   "802",
+   "OUI",
+   "EUI",
+   "LSAP",
+   "AFN",
+   "CBOR",
+   "LLC",
+   "SLAP",
+   "SNAP",
+   "CID"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IANA Considerations and IETF Protocol and Documentation Usage for IEEE 802 Parameters",
+  "wg": "intarea"
  },
  "RFC9543": {
   "area": "rtg",
@@ -112397,6 +112464,24 @@
   "stream": "ietf",
   "title": "Distribution of Link-State and Traffic Engineering Information Using BGP",
   "wg": "idr"
+ },
+ "RFC9556": {
+  "keywords": [
+   "in-network computing",
+   "in-network caching",
+   "in-network storage"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Internet of Things (IoT) Edge Challenges and Functions"
+ },
+ "RFC9558": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Use of GOST 2012 Signature Algorithms in DNSKEY and RRSIG Resource Records for DNSSEC"
  },
  "RFC9561": {
   "area": "wit",
