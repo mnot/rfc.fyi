@@ -112476,12 +112476,44 @@
   "stream": "irtf",
   "title": "Internet of Things (IoT) Edge Challenges and Functions"
  },
+ "RFC9557": {
+  "area": "art",
+  "keywords": [
+   "Gregorian calendar",
+   "Calendar awareness",
+   "Time zone",
+   "ISO 8601",
+   "Temporal",
+   "RFC 3339",
+   "Extension",
+   "Internet Extended Date/Time Format",
+   "IXDTF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Date and Time on the Internet: Timestamps with Additional Information",
+  "wg": "sedate"
+ },
  "RFC9558": {
   "keywords": [],
   "level": "informational",
   "status": "current",
   "stream": "independent",
   "title": "Use of GOST 2012 Signature Algorithms in DNSKEY and RRSIG Resource Records for DNSSEC"
+ },
+ "RFC9560": {
+  "area": "art",
+  "keywords": [
+   "RDAP",
+   "Federated",
+   "Authentication"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Federated Authentication for the Registration Data Access Protocol (RDAP) Using OpenID Connect",
+  "wg": "regext"
  },
  "RFC9561": {
   "area": "wit",
@@ -112518,5 +112550,34 @@
   "stream": "ietf",
   "title": "An Update to the tcpControlBits IP Flow Information Export (IPFIX) Information Element",
   "wg": "opsawg"
+ },
+ "RFC9566": {
+  "area": "rtg",
+  "keywords": [
+   "IP Data Plane",
+   "Service sub-layer",
+   "Replication",
+   "Elimination",
+   "Ordering"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) Packet Replication, Elimination, and Ordering Functions (PREOF) via MPLS over UDP/IP",
+  "wg": "detnet"
+ },
+ "RFC9567": {
+  "area": "ops",
+  "keywords": [
+   "monitoring",
+   "agent",
+   "RFC8914",
+   "8914"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Error Reporting",
+  "wg": "dnsop"
  }
 }
