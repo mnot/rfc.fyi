@@ -67017,7 +67017,7 @@
   "area": "rtg",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Virtual Router Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6",
   "wg": "vrrp"
@@ -112579,5 +112579,14 @@
   "stream": "ietf",
   "title": "DNS Error Reporting",
   "wg": "dnsop"
+ },
+ "RFC9568": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Virtual Router Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6",
+  "wg": "rtgwg"
  }
 }
