@@ -46262,7 +46262,7 @@
    "globally unique identifier"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "A Universally Unique IDentifier (UUID) URN Namespace"
  },
@@ -112465,6 +112465,50 @@
   "title": "Distribution of Link-State and Traffic Engineering Information Using BGP",
   "wg": "idr"
  },
+ "RFC9553": {
+  "area": "art",
+  "keywords": [
+   "JSON",
+   "addressbook",
+   "contacts",
+   "cards",
+   "VCARD"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSContact: A JSON Representation of Contact Data",
+  "wg": "calext"
+ },
+ "RFC9554": {
+  "area": "art",
+  "keywords": [
+   "addressbook",
+   "contacts",
+   "cards",
+   "vCard",
+   "JSContact"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "vCard Format Extensions for JSContact",
+  "wg": "calext"
+ },
+ "RFC9555": {
+  "area": "art",
+  "keywords": [
+   "JSON",
+   "contacts",
+   "vCard",
+   "jCard"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSContact: Converting from and to vCard",
+  "wg": "calext"
+ },
  "RFC9556": {
   "keywords": [
    "in-network computing",
@@ -112525,6 +112569,17 @@
   "stream": "ietf",
   "title": "Using the Parallel NFS (pNFS) SCSI Layout to Access Non-Volatile Memory Express (NVMe) Storage Devices",
   "wg": "nfsv4"
+ },
+ "RFC9562": {
+  "area": "art",
+  "keywords": [
+   "uuid"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Universally Unique IDentifiers (UUIDs)",
+  "wg": "uuidrev"
  },
  "RFC9564": {
   "keywords": [
