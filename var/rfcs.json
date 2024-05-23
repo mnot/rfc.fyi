@@ -112643,5 +112643,17 @@
   "stream": "ietf",
   "title": "Virtual Router Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6",
   "wg": "rtgwg"
+ },
+ "RFC9570": {
+  "area": "rtg",
+  "keywords": [
+   "LSP ping",
+   "router alert"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecating the Use of Router Alert in LSP Ping",
+  "wg": "mpls"
  }
 }
