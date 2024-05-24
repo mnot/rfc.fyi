@@ -74992,7 +74992,7 @@
    "BGP"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "A Profile for Route Origin Authorizations (ROAs)",
   "wg": "sidr"
@@ -97846,7 +97846,7 @@
    "emal address"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Internationalized Email Addresses in X.509 Certificates",
   "wg": "lamps"
@@ -112655,5 +112655,43 @@
   "stream": "ietf",
   "title": "Deprecating the Use of Router Alert in LSP Ping",
   "wg": "mpls"
+ },
+ "RFC9582": {
+  "area": "ops",
+  "keywords": [
+   "RPKI",
+   "Routing Security",
+   "BGP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Profile for Route Origin Authorizations (ROAs)",
+  "wg": "sidrops"
+ },
+ "RFC9589": {
+  "area": "ops",
+  "keywords": [
+   "CMS",
+   "signing-time"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "On the Use of the Cryptographic Message Syntax (CMS) Signing-Time Attribute in Resource Public Key Infrastructure (RPKI) Signed Objects",
+  "wg": "sidrops"
+ },
+ "RFC9598": {
+  "area": "sec",
+  "keywords": [
+   "EAI",
+   "PKIX",
+   "email address"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internationalized Email Addresses in X.509 Certificates",
+  "wg": "lamps"
  }
 }
