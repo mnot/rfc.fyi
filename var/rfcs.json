@@ -112656,6 +112656,50 @@
   "title": "Deprecating the Use of Router Alert in LSP Ping",
   "wg": "mpls"
  },
+ "RFC9572": {
+  "area": "rtg",
+  "keywords": [
+   "per-region I-PMSI",
+   "selective multicast forwarding",
+   "tunnel segmentation",
+   "inter-AS segmentation",
+   "inter-region segmentation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to EVPN Broadcast, Unknown Unicast, or Multicast (BUM) Procedures",
+  "wg": "bess"
+ },
+ "RFC9573": {
+  "area": "rtg",
+  "keywords": [
+   "DCB",
+   "Tunnel Aggregation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "MVPN/EVPN Tunnel Aggregation with Common Labels",
+  "wg": "bess"
+ },
+ "RFC9574": {
+  "area": "rtg",
+  "keywords": [
+   "Assisted Replication",
+   "AR",
+   "AR-Replicator",
+   "RNVE",
+   "Pruned Flood List",
+   "PFL",
+   "Pruned Flooding List"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Optimized Ingress Replication Solution for Ethernet VPNs (EVPNs)",
+  "wg": "bess"
+ },
  "RFC9582": {
   "area": "ops",
   "keywords": [
