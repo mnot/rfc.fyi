@@ -112736,6 +112736,20 @@
   "title": "A Profile for Route Origin Authorizations (ROAs)",
   "wg": "sidrops"
  },
+ "RFC9586": {
+  "area": "art",
+  "keywords": [
+   "IMAP",
+   "UIDONLY",
+   "IMAP4rev1",
+   "IMAP4rev2"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IMAP Extension for Using and Returning Unique Identifiers (UIDs) Only",
+  "wg": "extra"
+ },
  "RFC9589": {
   "area": "ops",
   "keywords": [
