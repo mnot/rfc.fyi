@@ -112775,6 +112775,15 @@
   "title": "IMAP Extension for Using and Returning Unique Identifiers (UIDs) Only",
   "wg": "extra"
  },
+ "RFC9587": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for OSPFv3 Extended Link State Advertisements (LSAs)",
+  "wg": "lsr"
+ },
  "RFC9589": {
   "area": "ops",
   "keywords": [
