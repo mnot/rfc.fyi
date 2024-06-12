@@ -112749,6 +112749,19 @@
   "title": "A Profile for Route Origin Authorizations (ROAs)",
   "wg": "sidrops"
  },
+ "RFC9584": {
+  "area": "wit",
+  "keywords": [
+   "EVC",
+   "ISO/IEC 23094-1",
+   "Essential Video Coding"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Payload Format for Essential Video Coding (EVC)",
+  "wg": "avtcore"
+ },
  "RFC9585": {
   "area": "art",
   "keywords": [
@@ -112808,6 +112821,17 @@
   "stream": "ietf",
   "title": "IMAP Extension for Returning Mailbox METADATA in Extended LIS",
   "wg": "extra"
+ },
+ "RFC9596": {
+  "area": "sec",
+  "keywords": [
+   "Explicit Typing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE) \"typ\" (type) Header Parameter",
+  "wg": "cose"
  },
  "RFC9598": {
   "area": "sec",
