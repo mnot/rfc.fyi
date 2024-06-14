@@ -112723,6 +112723,37 @@
   "title": "Optimized Ingress Replication Solution for Ethernet VPNs (EVPNs)",
   "wg": "bess"
  },
+ "RFC9576": {
+  "area": "sec",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Privacy Pass Architecture",
+  "wg": "privacypass"
+ },
+ "RFC9577": {
+  "area": "sec",
+  "keywords": [
+   "anonymous",
+   "authorization",
+   "crypto"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Privacy Pass HTTP Authentication Scheme",
+  "wg": "privacypass"
+ },
+ "RFC9578": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Privacy Pass Issuance Protocols",
+  "wg": "privacypass"
+ },
  "RFC9579": {
   "area": "sec",
   "keywords": [
