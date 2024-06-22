@@ -77669,7 +77669,7 @@
  "RFC6722": {
   "keywords": [],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Publishing the \"Tao of the IETF\" as a Web Page"
  },
@@ -112780,6 +112780,19 @@
   "title": "A Profile for Route Origin Authorizations (ROAs)",
   "wg": "sidrops"
  },
+ "RFC9583": {
+  "keywords": [
+   "Quantum Key Distribution",
+   "Blind Quantum Computing",
+   "Distributed Quantum Computing",
+   "Entanglement Distribution",
+   "Quantum Internet Requirement"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Application Scenarios for the Quantum Internet"
+ },
  "RFC9584": {
   "area": "wit",
   "keywords": [
@@ -112852,6 +112865,19 @@
   "stream": "ietf",
   "title": "IMAP Extension for Returning Mailbox METADATA in Extended LIS",
   "wg": "extra"
+ },
+ "RFC9592": {
+  "keywords": [
+   "Tao",
+   "archive",
+   "retired",
+   "inactive",
+   "tutorial"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Retiring the Tao of the IETF"
  },
  "RFC9596": {
   "area": "sec",
