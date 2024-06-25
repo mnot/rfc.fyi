@@ -112890,6 +112890,18 @@
   "title": "CBOR Object Signing and Encryption (COSE) \"typ\" (type) Header Parameter",
   "wg": "cose"
  },
+ "RFC9597": {
+  "area": "sec",
+  "keywords": [
+   "COSE",
+   "JOSE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Web Token (CWT) Claims in COSE Headers",
+  "wg": "cose"
+ },
  "RFC9598": {
   "area": "sec",
   "keywords": [
