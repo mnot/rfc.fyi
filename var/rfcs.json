@@ -112723,6 +112723,21 @@
   "title": "Optimized Ingress Replication Solution for Ethernet VPNs (EVPNs)",
   "wg": "bess"
  },
+ "RFC9575": {
+  "area": "int",
+  "keywords": [
+   "drone",
+   "UAS",
+   "Broadcast RID",
+   "trustworthy remote identification",
+   "anti-spoofing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DRIP Entity Tag (DET) Authentication Formats and Protocols for Broadcast Remote Identification (RID)",
+  "wg": "drip"
+ },
  "RFC9576": {
   "area": "sec",
   "keywords": [],
