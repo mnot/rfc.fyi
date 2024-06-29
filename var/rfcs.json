@@ -112882,6 +112882,19 @@
   "title": "IMAP Extension for Returning Mailbox METADATA in Extended LIS",
   "wg": "extra"
  },
+ "RFC9591": {
+  "keywords": [
+   "Threshold signature",
+   "threshold cryptography",
+   "secret sharing",
+   "EdDSA signature",
+   "Schnorr signature"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "The Flexible Round-Optimized Schnorr Threshold (FROST) Protocol for Two-Round Schnorr Signatures"
+ },
  "RFC9592": {
   "keywords": [
    "Tao",
@@ -112929,6 +112942,28 @@
   "status": "current",
   "stream": "ietf",
   "title": "Internationalized Email Addresses in X.509 Certificates",
+  "wg": "lamps"
+ },
+ "RFC9606": {
+  "area": "int",
+  "keywords": [
+   "Transparency",
+   "User Experience",
+   "DNS server selection"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Resolver Information",
+  "wg": "add"
+ },
+ "RFC9608": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "No Revocation Available for X.509 Public Key Certificates",
   "wg": "lamps"
  }
 }
