@@ -112965,5 +112965,20 @@
   "stream": "ietf",
   "title": "No Revocation Available for X.509 Public Key Certificates",
   "wg": "lamps"
+ },
+ "RFC9615": {
+  "area": "ops",
+  "keywords": [
+   "DNSSEC",
+   "bootstrapping",
+   "DS",
+   "CDS",
+   "CDNSKEY"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automatic DNSSEC Bootstrapping Using Authenticated Signals from the Zone's Operator",
+  "wg": "dnsop"
  }
 }
