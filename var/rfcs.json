@@ -112966,6 +112966,18 @@
   "title": "No Revocation Available for X.509 Public Key Certificates",
   "wg": "lamps"
  },
+ "RFC9611": {
+  "area": "sec",
+  "keywords": [
+   "IKEv2",
+   "IPsec"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet Key Exchange Protocol Version 2 (IKEv2) Support for Per-Resource Child Security Associations (SAs)",
+  "wg": "ipsecme"
+ },
  "RFC9615": {
   "area": "ops",
   "keywords": [
