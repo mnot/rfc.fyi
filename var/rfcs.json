@@ -112908,6 +112908,20 @@
   "stream": "ietf",
   "title": "Retiring the Tao of the IETF"
  },
+ "RFC9593": {
+  "area": "sec",
+  "keywords": [
+   "signature",
+   "digital signature",
+   "credentials",
+   "intermediate exchange"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Announcing Supported Authentication Methods in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+  "wg": "ipsecme"
+ },
  "RFC9596": {
   "area": "sec",
   "keywords": [
@@ -112977,6 +112991,18 @@
   "stream": "ietf",
   "title": "Internet Key Exchange Protocol Version 2 (IKEv2) Support for Per-Resource Child Security Associations (SAs)",
   "wg": "ipsecme"
+ },
+ "RFC9612": {
+  "area": "rtg",
+  "keywords": [
+   "LSP Ping",
+   "BFD"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bidirectional Forwarding Detection (BFD) Reverse Path for MPLS Label Switched Paths (LSPs)",
+  "wg": "mpls"
  },
  "RFC9615": {
   "area": "ops",
