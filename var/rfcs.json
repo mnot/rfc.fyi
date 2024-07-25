@@ -112971,6 +112971,15 @@
   "title": "DNS Resolver Information",
   "wg": "add"
  },
+ "RFC9607": {
+  "area": "wit",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Payload Format for the Secure Communication Interoperability Protocol (SCIP) Codec",
+  "wg": "avtcore"
+ },
  "RFC9608": {
   "area": "sec",
   "keywords": [],
@@ -113017,6 +113026,15 @@
   "status": "current",
   "stream": "ietf",
   "title": "Automatic DNSSEC Bootstrapping Using Authenticated Signals from the Zone's Operator",
+  "wg": "dnsop"
+ },
+ "RFC9619": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "In the DNS, QDCOUNT Is (Usually) One",
   "wg": "dnsop"
  }
 }
