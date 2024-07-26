@@ -385,6 +385,15 @@
         "RFC8179"
       ]
     },
+    "Independent Stream": {
+      "rfcs": [
+        "RFC4846",
+        "RFC5744",
+        "RFC8730",
+        "RFC8726",
+        "RFC5742"
+      ]
+    },
     "Internet Architecture": {
       "rfcs": [
         "RFC1958",
