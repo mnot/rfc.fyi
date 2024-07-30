@@ -112958,6 +112958,19 @@
   "title": "Internationalized Email Addresses in X.509 Certificates",
   "wg": "lamps"
  },
+ "RFC9603": {
+  "area": "rtg",
+  "keywords": [
+   "PCEP",
+   "SRv6",
+   "IPv6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for IPv6 Segment Routing",
+  "wg": "pce"
+ },
  "RFC9606": {
   "area": "int",
   "keywords": [
