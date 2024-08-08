@@ -106545,7 +106545,7 @@
   "area": "ops",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Finding and Using Geofeed Data",
   "wg": "opsawg"
@@ -113086,5 +113086,31 @@
   "stream": "ietf",
   "title": "In the DNS, QDCOUNT Is (Usually) One",
   "wg": "dnsop"
+ },
+ "RFC9629": {
+  "area": "sec",
+  "keywords": [
+   "kemri",
+   "KEMRecipientInfo"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using Key Encapsulation Mechanism (KEM) Algorithms in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
+ },
+ "RFC9632": {
+  "area": "ops",
+  "keywords": [
+   "geolocation",
+   "geo-location",
+   "RPSL",
+   "inetnum"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Finding and Using Geofeed Data",
+  "wg": "opsawg"
  }
 }
