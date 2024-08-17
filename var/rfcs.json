@@ -112797,6 +112797,27 @@
   "title": "OpenPGP",
   "wg": "openpgp"
  },
+ "RFC9581": {
+  "area": "art",
+  "keywords": [
+   "Point in time",
+   "Duration",
+   "Period in time",
+   "Clock accuracy",
+   "Timescale",
+   "TAI",
+   "UTC",
+   "NTP",
+   "Network Time Protocol",
+   "PTP",
+   "Precision Time Protocol"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Binary Object Representation (CBOR) Tags for Time, Duration, and Period",
+  "wg": "cbor"
+ },
  "RFC9582": {
   "area": "ops",
   "keywords": [
@@ -112994,6 +113015,15 @@
   "status": "current",
   "stream": "ietf",
   "title": "Path Computation Element Communication Protocol (PCEP) Extensions for IPv6 Segment Routing",
+  "wg": "pce"
+ },
+ "RFC9604": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Carrying Binding Label/SID in PCE-Based Networks",
   "wg": "pce"
  },
  "RFC9606": {
