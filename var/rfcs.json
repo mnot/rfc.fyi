@@ -104691,7 +104691,7 @@
    "OCSP Nonce Randomness"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
   "wg": "lamps"
@@ -113081,6 +113081,15 @@
   "title": "Bidirectional Forwarding Detection (BFD) Reverse Path for MPLS Label Switched Paths (LSPs)",
   "wg": "mpls"
  },
+ "RFC9613": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Requirements for Solutions that Support MPLS Network Actions (MNAs)",
+  "wg": "mpls"
+ },
  "RFC9614": {
   "keywords": [
    "MASQUE",
@@ -113129,6 +113138,18 @@
   "title": "Using Key Encapsulation Mechanism (KEM) Algorithms in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
  },
+ "RFC9631": {
+  "area": "int",
+  "keywords": [
+   "IPv6",
+   "Routing header"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The IPv6 Compact Routing Header (CRH)",
+  "wg": "6man"
+ },
  "RFC9632": {
   "area": "ops",
   "keywords": [
@@ -113142,5 +113163,23 @@
   "stream": "ietf",
   "title": "Finding and Using Geofeed Data",
   "wg": "opsawg"
+ },
+ "RFC9650": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Revision to Registration Procedures for IS-IS Neighbor Link-Attribute Bit Values",
+  "wg": "lsr"
+ },
+ "RFC9654": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
+  "wg": "lamps"
  }
 }
