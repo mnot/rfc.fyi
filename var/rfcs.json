@@ -113013,6 +113013,56 @@
   "title": "Internationalized Email Addresses in X.509 Certificates",
   "wg": "lamps"
  },
+ "RFC9599": {
+  "area": "wit",
+  "keywords": [
+   "Congestion Control and Management",
+   "Congestion Notification",
+   "Information Security",
+   "Tunnelling",
+   "Encapsulation",
+   "Decapsulation",
+   "Protocol",
+   "ECN",
+   "Layering"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines for Adding Congestion Notification to Protocols that Encapsulate IP",
+  "wg": "tsvwg"
+ },
+ "RFC9600": {
+  "area": "rtg",
+  "keywords": [
+   "Congestion",
+   "L4S",
+   "RBridge"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TRansparent Interconnection of Lots of Links (TRILL): Explicit Congestion Notification (ECN) Support",
+  "wg": "trill"
+ },
+ "RFC9601": {
+  "area": "wit",
+  "keywords": [
+   "Congestion Control and Management",
+   "Congestion Notification",
+   "Information Security",
+   "Tunnelling",
+   "Encapsulation & Decapsulation",
+   "Protocol",
+   "ECN",
+   "Layering"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Propagating Explicit Congestion Notification across IP Tunnel Headers Separated by a Shim",
+  "wg": "tsvwg"
+ },
  "RFC9603": {
   "area": "rtg",
   "keywords": [
@@ -113150,6 +113200,15 @@
   "stream": "ietf",
   "title": "A YANG Data Model for In Situ Operations, Administration, and Maintenance (IOAM)",
   "wg": "ippm"
+ },
+ "RFC9618": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to X.509 Policy Validation",
+  "wg": "lamps"
  },
  "RFC9619": {
   "area": "ops",
