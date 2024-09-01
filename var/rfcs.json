@@ -113219,6 +113219,29 @@
   "title": "In the DNS, QDCOUNT Is (Usually) One",
   "wg": "dnsop"
  },
+ "RFC9624": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "EVPN Broadcast, Unknown Unicast, or Multicast (BUM) Using Bit Index Explicit Replication (BIER)",
+  "wg": "bier"
+ },
+ "RFC9625": {
+  "area": "rtg",
+  "keywords": [
+   "OISM",
+   "PEG",
+   "MEG",
+   "SBD"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "EVPN Optimized Inter-Subnet Multicast (OISM) Forwarding",
+  "wg": "bess"
+ },
  "RFC9629": {
   "area": "sec",
   "keywords": [
