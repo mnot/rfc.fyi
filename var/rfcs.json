@@ -68549,7 +68549,7 @@
    "domain name system security extensions",
    "ECC"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "Use of GOST Signature Algorithms in DNSKEY and RRSIG Resource Records for DNSSEC",
