@@ -112659,6 +112659,17 @@
   "title": "Virtual Router Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6",
   "wg": "rtgwg"
  },
+ "RFC9569": {
+  "area": "ops",
+  "keywords": [
+   "incremental update"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Application-Layer Traffic Optimization (ALTO) Transport Information Publication Service (TIPS)",
+  "wg": "alto"
+ },
  "RFC9570": {
   "area": "rtg",
   "keywords": [
