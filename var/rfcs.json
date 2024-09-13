@@ -113230,6 +113230,16 @@
   "title": "In the DNS, QDCOUNT Is (Usually) One",
   "wg": "dnsop"
  },
+ "RFC9620": {
+  "keywords": [
+   "International human rights",
+   "Protocol design"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Guidelines for Human Rights Protocol and Architecture Considerations"
+ },
  "RFC9624": {
   "area": "rtg",
   "keywords": [],
