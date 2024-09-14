@@ -112977,6 +112977,20 @@
   "title": "Announcing Supported Authentication Methods in the Internet Key Exchange Protocol Version 2 (IKEv2)",
   "wg": "ipsecme"
  },
+ "RFC9594": {
+  "area": "sec",
+  "keywords": [
+   "Key Management",
+   "Access Control",
+   "Constrained Application Protocol (CoAP)",
+   "Secure group communication"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Key Provisioning for Group Communication Using Authentication and Authorization for Constrained Environments (ACE)",
+  "wg": "ace"
+ },
  "RFC9595": {
   "area": "wit",
   "keywords": [
@@ -113199,6 +113213,22 @@
   "stream": "ietf",
   "title": "Automatic DNSSEC Bootstrapping Using Authenticated Signals from the Zone's Operator",
   "wg": "dnsop"
+ },
+ "RFC9616": {
+  "area": "rtg",
+  "keywords": [
+   "Timestamp",
+   "clock",
+   "NTP",
+   "Mills",
+   "Hello",
+   "Fuzzball"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Delay-Based Metric Extension for the Babel Routing Protocol",
+  "wg": "babel"
  },
  "RFC9617": {
   "area": "ops",
