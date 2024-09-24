@@ -105968,7 +105968,7 @@
    "AKA'",
    "3GPP"
   ],
-  "level": "informational",
+  "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Improved Extensible Authentication Protocol Method for 3GPP Mobile Network Authentication and Key Agreement (EAP-AKA')",
