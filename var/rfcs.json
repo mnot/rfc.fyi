@@ -113352,6 +113352,21 @@
   "title": "Expanding the IPv6 Documentation Space",
   "wg": "v6ops"
  },
+ "RFC9638": {
+  "area": "rtg",
+  "keywords": [
+   "Encapsulation",
+   "NVE",
+   "Geneve",
+   "GUE",
+   "VXLAN-GPE"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Network Virtualization over Layer 3 (NVO3) Encapsulation Considerations",
+  "wg": "nvo3"
+ },
  "RFC9650": {
   "area": "rtg",
   "keywords": [],
