@@ -113376,6 +113376,15 @@
   "title": "Revision to Registration Procedures for IS-IS Neighbor Link-Attribute Bit Values",
   "wg": "lsr"
  },
+ "RFC9653": {
+  "area": "wit",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Zero Checksum for the Stream Control Transmission Protocol",
+  "wg": "tsvwg"
+ },
  "RFC9654": {
   "area": "sec",
   "keywords": [],
@@ -113384,5 +113393,34 @@
   "stream": "ietf",
   "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
   "wg": "lamps"
+ },
+ "RFC9659": {
+  "area": "wit",
+  "keywords": [
+   "zstd",
+   "zstandard",
+   "compression",
+   "content encoding",
+   "content coding",
+   "application/zstd"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Window Sizing for Zstandard Content Encoding",
+  "wg": "httpbis"
+ },
+ "RFC9661": {
+  "area": "art",
+  "keywords": [
+   "JMAP",
+   "JSON",
+   "Sieve"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The JSON Meta Application Protocol (JMAP) for Sieve Scripts",
+  "wg": "jmap"
  }
 }
