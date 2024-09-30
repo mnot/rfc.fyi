@@ -325,6 +325,19 @@
         "RFC9298"
       ]
     },
+    "IAB Member Handbook": {
+      "rfcs": [
+        "RFC1958",
+        "RFC2850",
+        "RFC3677",
+        "RFC4052",
+        "RFC4053",
+        "RFC4845",
+        "RFC5745",
+        "RFC8090",
+        "RFC8128"
+      ]
+    },
     "IETF Administration": {
       "rfcs": [
         "RFC2028",
