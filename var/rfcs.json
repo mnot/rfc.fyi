@@ -104525,7 +104525,7 @@
    "header"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Structured Field Values for HTTP",
   "wg": "httpbis"
@@ -113376,6 +113376,29 @@
   "title": "Revision to Registration Procedures for IS-IS Neighbor Link-Attribute Bit Values",
   "wg": "lsr"
  },
+ "RFC9651": {
+  "area": "wit",
+  "keywords": [
+   "trailer",
+   "header"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Structured Field Values for HTTP",
+  "wg": "httpbis"
+ },
+ "RFC9652": {
+  "area": "wit",
+  "keywords": [
+   "link relation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Link-Template HTTP Header Field",
+  "wg": "httpapi"
+ },
  "RFC9653": {
   "area": "wit",
   "keywords": [],
@@ -113393,6 +113416,18 @@
   "stream": "ietf",
   "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
   "wg": "lamps"
+ },
+ "RFC9656": {
+  "area": "rtg",
+  "keywords": [
+   "microwave",
+   "topology"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Microwave Topology",
+  "wg": "ccamp"
  },
  "RFC9659": {
   "area": "wit",
