@@ -113457,5 +113457,35 @@
   "stream": "ietf",
   "title": "The JSON Meta Application Protocol (JMAP) for Sieve Scripts",
   "wg": "jmap"
+ },
+ "RFC9662": {
+  "area": "sec",
+  "keywords": [
+   "syslog",
+   "secure syslog",
+   "TLS_RSA_WITH_AES_128_CBC_SHA",
+   "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+   "DTLS",
+   "TLS",
+   "cipher suite"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to the Cipher Suites in Secure Syslog",
+  "wg": "uta"
+ },
+ "RFC9663": {
+  "area": "ops",
+  "keywords": [
+   "IPv6",
+   "SLAAC",
+   "DHCPv6-PD"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using DHCPv6 Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per Client in Large Broadcast Networks",
+  "wg": "v6ops"
  }
 }
