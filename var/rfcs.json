@@ -113343,6 +113343,19 @@
   "title": "Finding and Using Geofeed Data",
   "wg": "opsawg"
  },
+ "RFC9635": {
+  "area": "sec",
+  "keywords": [
+   "authentication",
+   "delegation",
+   "security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Grant Negotiation and Authorization Protocol (GNAP)",
+  "wg": "gnap"
+ },
  "RFC9637": {
   "area": "ops",
   "keywords": [],
@@ -113428,6 +113441,21 @@
   "stream": "ietf",
   "title": "A YANG Data Model for Microwave Topology",
   "wg": "ccamp"
+ },
+ "RFC9657": {
+  "area": "rtg",
+  "keywords": [
+   "Time-variant",
+   "Routing",
+   "Mobility",
+   "Green computing",
+   "Resource management"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Time-Variant Routing (TVR) Use Cases",
+  "wg": "tvr"
  },
  "RFC9659": {
   "area": "wit",
