@@ -113380,6 +113380,111 @@
   "title": "Network Virtualization over Layer 3 (NVO3) Encapsulation Considerations",
   "wg": "nvo3"
  },
+ "RFC9640": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Types and Groupings for Cryptography",
+  "wg": "netconf"
+ },
+ "RFC9641": {
+  "area": "ops",
+  "keywords": [
+   "IETF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for a Truststore",
+  "wg": "netconf"
+ },
+ "RFC9642": {
+  "area": "ops",
+  "keywords": [
+   "IETF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for a Keystore",
+  "wg": "netconf"
+ },
+ "RFC9643": {
+  "area": "ops",
+  "keywords": [
+   "IETF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Groupings for TCP Clients and TCP Servers",
+  "wg": "netconf"
+ },
+ "RFC9644": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Groupings for SSH Clients and SSH Servers",
+  "wg": "netconf"
+ },
+ "RFC9645": {
+  "area": "ops",
+  "keywords": [
+   "IETF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Groupings for TLS Clients and TLS Servers",
+  "wg": "netconf"
+ },
+ "RFC9646": {
+  "area": "ops",
+  "keywords": [
+   "zerotouch",
+   "bootstrap",
+   "sztp",
+   "ztp",
+   "csr",
+   "pkcs#10",
+   "p10",
+   "p10cr",
+   "cmc",
+   "cmp"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Conveying a Certificate Signing Request (CSR) in a Secure Zero-Touch Provisioning (SZTP) Bootstrapping Request",
+  "wg": "netconf"
+ },
+ "RFC9647": {
+  "area": "rtg",
+  "keywords": [
+   "babel",
+   "YANG"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Babel",
+  "wg": "babel"
+ },
+ "RFC9648": {
+  "area": "wit",
+  "keywords": [
+   "YANG"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for TCP",
+  "wg": "tcpm"
+ },
  "RFC9650": {
   "area": "rtg",
   "keywords": [],
