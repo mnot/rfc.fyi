@@ -113578,6 +113578,17 @@
   "title": "Window Sizing for Zstandard Content Encoding",
   "wg": "httpbis"
  },
+ "RFC9660": {
+  "area": "ops",
+  "keywords": [
+   "zoneversion"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The DNS Zone Version (ZONEVERSION) Option",
+  "wg": "dnsop"
+ },
  "RFC9661": {
   "area": "art",
   "keywords": [
@@ -113620,5 +113631,16 @@
   "stream": "ietf",
   "title": "Using DHCPv6 Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per Client in Large Broadcast Networks",
   "wg": "v6ops"
+ },
+ "RFC9671": {
+  "area": "art",
+  "keywords": [
+   "Sieve"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Sieve Email Filtering: Extension for Processing Calendar Attachments",
+  "wg": "extra"
  }
 }
