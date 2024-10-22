@@ -113103,6 +113103,17 @@
   "title": "Propagating Explicit Congestion Notification across IP Tunnel Headers Separated by a Shim",
   "wg": "tsvwg"
  },
+ "RFC9602": {
+  "area": "int",
+  "keywords": [
+   "prefix allocation"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing over IPv6 (SRv6) Segment Identifiers in the IPv6 Addressing Architecture",
+  "wg": "6man"
+ },
  "RFC9603": {
   "area": "rtg",
   "keywords": [
