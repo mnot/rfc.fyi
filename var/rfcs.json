@@ -113369,6 +113369,27 @@
   "title": "Finding and Using Geofeed Data",
   "wg": "opsawg"
  },
+ "RFC9633": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deterministic Networking (DetNet) YANG Data Model",
+  "wg": "detnet"
+ },
+ "RFC9634": {
+  "area": "rtg",
+  "keywords": [
+   "DetNet",
+   "OAM"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operations, Administration, and Maintenance (OAM) for Deterministic Networking (DetNet) with the IP Data Plane",
+  "wg": "detnet"
+ },
  "RFC9635": {
   "area": "sec",
   "keywords": [
@@ -113587,6 +113608,19 @@
   "stream": "ietf",
   "title": "Time-Variant Routing (TVR) Use Cases",
   "wg": "tvr"
+ },
+ "RFC9658": {
+  "area": "rtg",
+  "keywords": [
+   "MPLS",
+   "mLDP",
+   "Multi-topology"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multipoint LDP Extensions for Multi-Topology Routing",
+  "wg": "mpls"
  },
  "RFC9659": {
   "area": "wit",
