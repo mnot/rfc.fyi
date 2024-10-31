@@ -113702,5 +113702,18 @@
   "stream": "ietf",
   "title": "Sieve Email Filtering: Extension for Processing Calendar Attachments",
   "wg": "extra"
+ },
+ "RFC9680": {
+  "keywords": [
+   "anticompetitive",
+   "competition law",
+   "policy",
+   "compliance",
+   "recommendations"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Antitrust Guidelines for IETF Participants"
  }
 }
