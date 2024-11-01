@@ -99510,7 +99510,7 @@
    "tzif"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The Time Zone Information Format (TZif)"
  },
@@ -113403,6 +113403,17 @@
   "title": "Grant Negotiation and Authorization Protocol (GNAP)",
   "wg": "gnap"
  },
+ "RFC9636": {
+  "keywords": [
+   "time zone",
+   "tzdata",
+   "tzif"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Time Zone Information Format (TZif)"
+ },
  "RFC9637": {
   "area": "ops",
   "keywords": [],
@@ -113692,6 +113703,54 @@
   "title": "Using DHCPv6 Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per Client in Large Broadcast Networks",
   "wg": "v6ops"
  },
+ "RFC9666": {
+  "area": "rtg",
+  "keywords": [
+   "datacenter",
+   "IGP",
+   "routing",
+   "topology",
+   "level",
+   "abstraction",
+   "IS-IS",
+   "proxy"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Area Proxy for IS-IS",
+  "wg": "lsr"
+ },
+ "RFC9667": {
+  "area": "rtg",
+  "keywords": [
+   "datacenter",
+   "IGP",
+   "routing",
+   "flooding",
+   "dense",
+   "graph",
+   "topology"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Flooding on Dense Graphs",
+  "wg": "lsr"
+ },
+ "RFC9669": {
+  "area": "int",
+  "keywords": [
+   "eBPF",
+   "virtual machine",
+   "extensibility"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BPF Instruction Set Architecture (ISA)",
+  "wg": "bpf"
+ },
  "RFC9671": {
   "area": "art",
   "keywords": [
@@ -113702,6 +113761,24 @@
   "stream": "ietf",
   "title": "Sieve Email Filtering: Extension for Processing Calendar Attachments",
   "wg": "extra"
+ },
+ "RFC9673": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IPv6 Hop-by-Hop Options Processing Procedures",
+  "wg": "6man"
+ },
+ "RFC9677": {
+  "area": "wit",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Content Delivery Network Interconnection (CDNI) Metadata for Delegated Credentials",
+  "wg": "cdni"
  },
  "RFC9680": {
   "keywords": [
