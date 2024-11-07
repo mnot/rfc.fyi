@@ -113792,5 +113792,17 @@
   "status": "current",
   "stream": "ietf",
   "title": "Antitrust Guidelines for IETF Participants"
+ },
+ "RFC9687": {
+  "area": "rtg",
+  "keywords": [
+   "BGP",
+   "TCP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Border Gateway Protocol 4 (BGP-4) Send Hold Timer",
+  "wg": "idr"
  }
 }
