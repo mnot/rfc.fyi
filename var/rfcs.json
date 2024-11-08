@@ -113771,6 +113771,18 @@
   "title": "IPv6 Hop-by-Hop Options Processing Procedures",
   "wg": "6man"
  },
+ "RFC9675": {
+  "area": "int",
+  "keywords": [
+   "DTN",
+   "Network Management"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Delay-Tolerant Networking Management Architecture (DTNMA)",
+  "wg": "dtn"
+ },
  "RFC9677": {
   "area": "wit",
   "keywords": [],
