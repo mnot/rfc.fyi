@@ -113543,6 +113543,16 @@
   "title": "YANG Data Model for TCP",
   "wg": "tcpm"
  },
+ "RFC9649": {
+  "keywords": [
+   "VP8",
+   "WebP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "WebP Image Format"
+ },
  "RFC9650": {
   "area": "rtg",
   "keywords": [],
@@ -113738,6 +113748,23 @@
   "title": "Dynamic Flooding on Dense Graphs",
   "wg": "lsr"
  },
+ "RFC9668": {
+  "area": "wit",
+  "keywords": [
+   "security",
+   "key agreement",
+   "secure communication",
+   "constrained environments",
+   "AKE",
+   "lightweight authenticated key exchange",
+   "IoT security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using Ephemeral Diffie-Hellman Over COSE (EDHOC) with the Constrained Application Protocol (CoAP) and Object Security for Constrained RESTful Environments (OSCORE)",
+  "wg": "core"
+ },
  "RFC9669": {
   "area": "int",
   "keywords": [
@@ -113805,6 +113832,17 @@
   "stream": "ietf",
   "title": "Antitrust Guidelines for IETF Participants"
  },
+ "RFC9682": {
+  "area": "art",
+  "keywords": [
+   "Concise Data Definition Language"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to the Concise Data Definition Language (CDDL) Grammar",
+  "wg": "cbor"
+ },
  "RFC9687": {
   "area": "rtg",
   "keywords": [
@@ -113816,5 +113854,18 @@
   "stream": "ietf",
   "title": "Border Gateway Protocol 4 (BGP-4) Send Hold Timer",
   "wg": "idr"
+ },
+ "RFC9688": {
+  "area": "sec",
+  "keywords": [
+   "HKDF",
+   "KMAC128-KDF",
+   "KMAC256-KDF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the SHA3 One-Way Hash Functions in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
  }
 }
