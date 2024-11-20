@@ -40642,7 +40642,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "ietf",
   "title": "Basic Media Gateway Control Protocol (MGCP) Packages"
  },
  "RFC3661": {
@@ -113603,6 +113603,21 @@
   "title": "Online Certificate Status Protocol (OCSP) Nonce Extension",
   "wg": "lamps"
  },
+ "RFC9655": {
+  "area": "rtg",
+  "keywords": [
+   "FEC",
+   "OAM",
+   "OSPF",
+   "IS-IS",
+   "SPRING"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Egress Validation in Label Switched Path Ping and Traceroute Mechanisms",
+  "wg": "mpls"
+ },
  "RFC9656": {
   "area": "rtg",
   "keywords": [
@@ -113777,6 +113792,19 @@
   "stream": "ietf",
   "title": "BPF Instruction Set Architecture (ISA)",
   "wg": "bpf"
+ },
+ "RFC9670": {
+  "area": "art",
+  "keywords": [
+   "JMAP",
+   "JSON",
+   "sharing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSON Meta Application Protocol (JMAP) Sharing",
+  "wg": "jmap"
  },
  "RFC9671": {
   "area": "art",
