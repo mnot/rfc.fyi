@@ -113871,6 +113871,20 @@
   "title": "Updates to the Concise Data Definition Language (CDDL) Grammar",
   "wg": "cbor"
  },
+ "RFC9685": {
+  "area": "int",
+  "keywords": [
+   "6lo",
+   "6LoWPAN",
+   "RPL",
+   "Wi-SUN"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Listener Subscription for IPv6 Neighbor Discovery Multicast and Anycast Addresses",
+  "wg": "6lo"
+ },
  "RFC9687": {
   "area": "rtg",
   "keywords": [
