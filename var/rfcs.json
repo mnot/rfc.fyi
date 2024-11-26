@@ -113860,6 +113860,23 @@
   "stream": "ietf",
   "title": "Antitrust Guidelines for IETF Participants"
  },
+ "RFC9681": {
+  "area": "rtg",
+  "keywords": [
+   "LSP",
+   "congestion",
+   "flow control",
+   "scale",
+   "performance",
+   "IS-S",
+   "flooding"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IS-IS Fast Flooding",
+  "wg": "lsr"
+ },
  "RFC9682": {
   "area": "art",
   "keywords": [
