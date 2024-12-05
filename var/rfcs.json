@@ -112611,6 +112611,13 @@
   "title": "Universally Unique IDentifiers (UUIDs)",
   "wg": "uuidrev"
  },
+ "RFC9563": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "SM2 Digital Signature Algorithm for DNSSEC"
+ },
  "RFC9564": {
   "keywords": [
    "LLM",
@@ -113826,6 +113833,19 @@
   "title": "IPv6 Hop-by-Hop Options Processing Procedures",
   "wg": "6man"
  },
+ "RFC9674": {
+  "area": "ops",
+  "keywords": [
+   "same-origin",
+   "RPKI",
+   "RRDP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Same-Origin Policy for the RPKI Repository Delta Protocol (RRDP)",
+  "wg": "sidrops"
+ },
  "RFC9675": {
   "area": "int",
   "keywords": [
@@ -113926,5 +113946,16 @@
   "stream": "ietf",
   "title": "Use of the SHA3 One-Way Hash Functions in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
+ },
+ "RFC9689": {
+  "area": "rtg",
+  "keywords": [
+   "SDN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use Cases for a PCE as a Central Controller (PCECC)",
+  "wg": "teas"
  }
 }
