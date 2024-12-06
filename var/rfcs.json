@@ -113922,6 +113922,19 @@
   "title": "Listener Subscription for IPv6 Neighbor Discovery Multicast and Anycast Addresses",
   "wg": "6lo"
  },
+ "RFC9686": {
+  "area": "int",
+  "keywords": [
+   "DHCPv6",
+   "IPv6",
+   "SLAAC"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registering Self-Generated IPv6 Addresses Using DHCPv6",
+  "wg": "dhc"
+ },
  "RFC9687": {
   "area": "rtg",
   "keywords": [
