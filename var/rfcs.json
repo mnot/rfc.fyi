@@ -113908,6 +113908,27 @@
   "title": "Updates to the Concise Data Definition Language (CDDL) Grammar",
   "wg": "cbor"
  },
+ "RFC9683": {
+  "area": "sec",
+  "keywords": [
+   "Attestation",
+   "TPM"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Remote Integrity Verification of Network Devices Containing Trusted Platform Modules",
+  "wg": "rats"
+ },
+ "RFC9684": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Challenge-Response-Based Remote Attestation (CHARRA) Procedures Using Trusted Platform Modules (TPMs)",
+  "wg": "rats"
+ },
  "RFC9685": {
   "area": "int",
   "keywords": [
