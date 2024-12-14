@@ -113991,5 +113991,18 @@
   "stream": "ietf",
   "title": "Use Cases for a PCE as a Central Controller (PCECC)",
   "wg": "teas"
+ },
+ "RFC9697": {
+  "area": "ops",
+  "keywords": [
+   "desynchronization",
+   "RPKI",
+   "RRDP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Detecting RPKI Repository Delta Protocol (RRDP) Session Desynchronization",
+  "wg": "sidrops"
  }
 }
