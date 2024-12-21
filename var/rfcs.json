@@ -113903,6 +113903,15 @@
   "title": "Content Delivery Network Interconnection (CDNI) Metadata for Delegated Credentials",
   "wg": "cdni"
  },
+ "RFC9679": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE) Key Thumbprint",
+  "wg": "cose"
+ },
  "RFC9680": {
   "keywords": [
    "anticompetitive",
