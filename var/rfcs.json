@@ -113860,6 +113860,18 @@
   "title": "Sieve Email Filtering: Extension for Processing Calendar Attachments",
   "wg": "extra"
  },
+ "RFC9672": {
+  "keywords": [
+   "IEEE",
+   "OWE",
+   "Opportunistic Wireless Encryption",
+   "RFC8110"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Transferring Opportunistic Wireless Encryption to the IEEE 802.11 Working Group"
+ },
  "RFC9673": {
   "area": "int",
   "keywords": [],
@@ -114062,5 +114074,35 @@
   "stream": "ietf",
   "title": "Detecting RPKI Repository Delta Protocol (RRDP) Session Desynchronization",
   "wg": "sidrops"
+ },
+ "RFC9699": {
+  "area": "ops",
+  "keywords": [
+   "low-latency",
+   "managed-cloud",
+   "offload"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use Case for an Extended Reality Application on Edge Computing Infrastructure",
+  "wg": "mops"
+ },
+ "RFC9703": {
+  "area": "rtg",
+  "keywords": [
+   "OAM",
+   "EPE",
+   "BGP-LS",
+   "BGP",
+   "SPRING",
+   "SDN",
+   "SID"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Label Switched Path (LSP) Ping/Traceroute for Segment Routing (SR) Egress Peer Engineering (EPE) Segment Identifiers (SIDs) with MPLS Data Plane",
+  "wg": "mpls"
  }
 }
