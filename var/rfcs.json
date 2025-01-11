@@ -101558,7 +101558,7 @@
    "message content"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Use of the HSS/LMS Hash-Based Signature Algorithm in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
@@ -114062,6 +114062,23 @@
   "title": "A Profile for Resource Public Key Infrastructure (RPKI) Trust Anchor Keys (TAKs)",
   "wg": "sidrops"
  },
+ "RFC9693": {
+  "area": "ops",
+  "keywords": [
+   "Benchmarking",
+   "Stateful NATxy",
+   "Measurement Procedure",
+   "Throughput",
+   "Frame Loss Rate",
+   "Latency",
+   "PDV"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Benchmarking Methodology for Stateful NATxy Gateways",
+  "wg": "bmwg"
+ },
  "RFC9697": {
   "area": "ops",
   "keywords": [
@@ -114088,6 +114105,17 @@
   "title": "Use Case for an Extended Reality Application on Edge Computing Infrastructure",
   "wg": "mops"
  },
+ "RFC9702": {
+  "area": "rtg",
+  "keywords": [
+   "MSD Types"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for Maximum Segment Identifier (SID) Depth (MSD) Types and MPLS MSD",
+  "wg": "mpls"
+ },
  "RFC9703": {
   "area": "rtg",
   "keywords": [
@@ -114104,5 +114132,29 @@
   "stream": "ietf",
   "title": "Label Switched Path (LSP) Ping/Traceroute for Segment Routing (SR) Egress Peer Engineering (EPE) Segment Identifiers (SIDs) with MPLS Data Plane",
   "wg": "mpls"
+ },
+ "RFC9708": {
+  "area": "sec",
+  "keywords": [
+   "digital signature",
+   "message content"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the HSS/LMS Hash-Based Signature Algorithm in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
+ },
+ "RFC9709": {
+  "area": "sec",
+  "keywords": [
+   "content-encryption key",
+   "content-authenticated-encryption key"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Encryption Key Derivation in the Cryptographic Message Syntax (CMS) Using HKDF with SHA-256",
+  "wg": "lamps"
  }
 }
