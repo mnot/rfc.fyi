@@ -4207,7 +4207,14 @@
   "title": "Change in network address for Haskins Lab"
  },
  "RFC0635": {
-  "keywords": [],
+  "keywords": [
+   "Theoretical and practical motivation for redesign",
+   "multipacket messages",
+   "host retransmission",
+   "duplicate detection",
+   "sequencing",
+   "acknowledgement"
+  ],
   "level": "unknown",
   "status": "current",
   "stream": "legacy",
