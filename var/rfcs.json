@@ -92795,7 +92795,7 @@
    "v3"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "RFC Format Framework"
  },
@@ -114140,6 +114140,22 @@
   "title": "Label Switched Path (LSP) Ping/Traceroute for Segment Routing (SR) Egress Peer Engineering (EPE) Segment Identifiers (SIDs) with MPLS Data Plane",
   "wg": "mpls"
  },
+ "RFC9706": {
+  "area": "ops",
+  "keywords": [
+   "multicast",
+   "SSM",
+   "AMT",
+   "LISP",
+   "CDN",
+   "PIM-SSM"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TreeDN: Tree-Based Content Delivery Network (CDN) for Live Streaming to Mass Audiences",
+  "wg": "mops"
+ },
  "RFC9708": {
   "area": "sec",
   "keywords": [
@@ -114163,5 +114179,23 @@
   "stream": "ietf",
   "title": "Encryption Key Derivation in the Cryptographic Message Syntax (CMS) Using HKDF with SHA-256",
   "wg": "lamps"
+ },
+ "RFC9713": {
+  "area": "int",
+  "keywords": [
+   "DTN"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bundle Protocol Version 7 Administrative Record Types Registry",
+  "wg": "dtn"
+ },
+ "RFC9720": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "editorial",
+  "title": "RFC Formats and Versions"
  }
 }
