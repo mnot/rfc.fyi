@@ -113323,6 +113323,36 @@
   "stream": "irtf",
   "title": "Guidelines for Human Rights Protocol and Architecture Considerations"
  },
+ "RFC9621": {
+  "area": "wit",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Architecture and Requirements for Transport Services",
+  "wg": "taps"
+ },
+ "RFC9622": {
+  "area": "wit",
+  "keywords": [
+   "Happy Eyeballs",
+   "Transport Selection"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Abstract Application Programming Interface (API) for Transport Services",
+  "wg": "taps"
+ },
+ "RFC9623": {
+  "area": "wit",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Implementing Interfaces to Transport Services",
+  "wg": "taps"
+ },
  "RFC9624": {
   "area": "rtg",
   "keywords": [],
@@ -114098,6 +114128,18 @@
   "stream": "ietf",
   "title": "Detecting RPKI Repository Delta Protocol (RRDP) Session Desynchronization",
   "wg": "sidrops"
+ },
+ "RFC9698": {
+  "area": "art",
+  "keywords": [
+   "IMAP",
+   "JMAP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The JMAPACCESS Extension for IMAP",
+  "wg": "extra"
  },
  "RFC9699": {
   "area": "ops",
