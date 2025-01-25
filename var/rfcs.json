@@ -92386,7 +92386,7 @@
    "KSK"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "independent",
   "title": "DNSSEC Trust Anchor Publication for the Root Zone"
  },
@@ -114232,6 +114232,17 @@
   "stream": "ietf",
   "title": "Bundle Protocol Version 7 Administrative Record Types Registry",
   "wg": "dtn"
+ },
+ "RFC9718": {
+  "area": "ops",
+  "keywords": [
+   "KSK"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNSSEC Trust Anchor Publication for the Root Zone",
+  "wg": "dnsop"
  },
  "RFC9720": {
   "keywords": [],
