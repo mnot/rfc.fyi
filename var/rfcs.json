@@ -114222,6 +114222,16 @@
   "title": "Encryption Key Derivation in the Cryptographic Message Syntax (CMS) Using HKDF with SHA-256",
   "wg": "lamps"
  },
+ "RFC9712": {
+  "keywords": [
+   "IETF region",
+   "Exploratory meeting"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IETF Meeting Venue Requirements Review"
+ },
  "RFC9713": {
   "area": "int",
   "keywords": [
@@ -114232,6 +114242,30 @@
   "stream": "ietf",
   "title": "Bundle Protocol Version 7 Administrative Record Types Registry",
   "wg": "dtn"
+ },
+ "RFC9715": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "IP Fragmentation",
+   "attack"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IP Fragmentation Avoidance in DNS over UDP",
+  "wg": "dnsop"
+ },
+ "RFC9717": {
+  "keywords": [
+   "IS-IS",
+   "MPLS",
+   "Segment routing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "A Routing Architecture for Satellite Networks"
  },
  "RFC9718": {
   "area": "ops",
