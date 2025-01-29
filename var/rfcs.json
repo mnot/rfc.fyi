@@ -114182,6 +114182,15 @@
   "title": "Label Switched Path (LSP) Ping/Traceroute for Segment Routing (SR) Egress Peer Engineering (EPE) Segment Identifiers (SIDs) with MPLS Data Plane",
   "wg": "mpls"
  },
+ "RFC9704": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Establishing Local DNS Authority in Validated Split-Horizon Environments",
+  "wg": "add"
+ },
  "RFC9706": {
   "area": "ops",
   "keywords": [
