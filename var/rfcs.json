@@ -77948,12 +77948,12 @@
    "Authorization Server",
    "Resource Server",
    "Token Endpoint",
-   "Authorization\u00c2\u00a0Endpoint",
+   "Authorization Endpoint",
    "Authorization Request",
    "Authorization Grant",
    "Protected Resource",
    "Access Token",
-   "Refresh\u00c2\u00a0Token",
+   "Refresh\u00a0Token",
    "Authorization Code",
    "Implicit Grant",
    "Client Identifier",
@@ -77972,17 +77972,17 @@
    "Client",
    "Resource Owner",
    "Authorization Server",
-   "Resource Server,\u00c2\u00a0Token Endpoint",
+   "Resource Server,\u00a0Token Endpoint",
    "Authorization Endpoint",
-   "Authorization Request,\u00c2\u00a0Authorization Grant",
+   "Authorization Request,\u00a0Authorization Grant",
    "Protected Resource",
    "Access Token",
-   "Refresh\u00c2\u00a0Token",
+   "Refresh\u00a0Token",
    "Authorization Code",
    "Implicit Grant",
-   "Client Identifier,\u00c2\u00a0Access Token Scope",
+   "Client Identifier,\u00a0Access Token Scope",
    "Bearer Authorization Header",
-   "Bearer Access\u00c2\u00a0Token Type"
+   "Bearer Access\u00a0Token Type"
   ],
   "level": "std",
   "status": "current",
@@ -114153,6 +114153,32 @@
   "stream": "ietf",
   "title": "Use Case for an Extended Reality Application on Edge Computing Infrastructure",
   "wg": "mops"
+ },
+ "RFC9700": {
+  "area": "sec",
+  "keywords": [
+   "threat model",
+   "attacks",
+   "mitigations"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Best Current Practice for OAuth 2.0 Security",
+  "wg": "oauth"
+ },
+ "RFC9701": {
+  "area": "sec",
+  "keywords": [
+   "token introspection",
+   "JWT",
+   "oauth2"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSON Web Token (JWT) Response for OAuth Token Introspection",
+  "wg": "oauth"
  },
  "RFC9702": {
   "area": "rtg",
