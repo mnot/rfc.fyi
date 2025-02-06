@@ -114319,5 +114319,14 @@
   "status": "current",
   "stream": "editorial",
   "title": "RFC Formats and Versions"
+ },
+ "RFC9735": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Locator/ID Separation Protocol (LISP) Distinguished Name Encoding",
+  "wg": "lisp"
  }
 }
