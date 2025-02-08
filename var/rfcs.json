@@ -7745,7 +7745,7 @@
    "clock",
    "synchronization"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "obsoleted",
   "stream": "legacy",
   "title": "Network Time Protocol (version 2) specification and implementation"
@@ -9429,7 +9429,7 @@
    "NTPV3",
    "NTP"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "obsoleted",
   "stream": "legacy",
   "title": "Network Time Protocol (Version 3) Specification, Implementation and Analysis"
@@ -49149,7 +49149,7 @@
    "arcfour cipher",
    "key scheduling algorithm"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "Improved Arcfour Modes for the Secure Shell (SSH) Transport Layer Protocol"
@@ -86644,7 +86644,7 @@
    "LSP Ping",
    "MPLS OAM"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "IPv6 Router Alert Option for MPLS Operations, Administration, and Maintenance (OAM)",
@@ -96571,7 +96571,7 @@
    "push",
    "preload"
   ],
-  "level": "experimental",
+  "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "An HTTP Status Code for Indicating Hints",
@@ -114290,6 +114290,22 @@
   "stream": "ietf",
   "title": "IP Fragmentation Avoidance in DNS over UDP",
   "wg": "dnsop"
+ },
+ "RFC9716": {
+  "area": "rtg",
+  "keywords": [
+   "OAM",
+   "EPE",
+   "BGP-LS",
+   "BGP",
+   "SPRING",
+   "SDN"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Mechanisms for MPLS Ping and Traceroute Procedures in Inter-Domain Segment Routing Networks",
+  "wg": "mpls"
  },
  "RFC9717": {
   "keywords": [
