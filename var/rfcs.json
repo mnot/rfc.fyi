@@ -69235,7 +69235,7 @@
    "generic hybrid cipher"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Use of the RSA-KEM Key Transport Algorithm in the Cryptographic Message Syntax (CMS)",
   "wg": "smime"
@@ -114085,6 +114085,18 @@
   "stream": "ietf",
   "title": "Use Cases for a PCE as a Central Controller (PCECC)",
   "wg": "teas"
+ },
+ "RFC9690": {
+  "area": "sec",
+  "keywords": [
+   "Key Encapsulation Mechanism (KEM)",
+   "KEMRecipientInfo"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the RSA-KEM Algorithm in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
  },
  "RFC9691": {
   "area": "ops",
