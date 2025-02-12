@@ -94265,7 +94265,7 @@
   "area": "ops",
   "keywords": [],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Initializing a DNS Resolver with Priming Queries",
   "wg": "dnsop"
@@ -113194,6 +113194,18 @@
   "title": "No Revocation Available for X.509 Public Key Certificates",
   "wg": "lamps"
  },
+ "RFC9609": {
+  "area": "ops",
+  "keywords": [
+   "DNS caching",
+   "root zone"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Initializing a DNS Resolver with Priming Queries",
+  "wg": "dnsop"
+ },
  "RFC9610": {
   "area": "art",
   "keywords": [
@@ -114347,6 +114359,23 @@
   "status": "current",
   "stream": "editorial",
   "title": "RFC Formats and Versions"
+ },
+ "RFC9734": {
+  "area": "sec",
+  "keywords": [
+   "x.509",
+   "certificate",
+   "extended key usage",
+   "eku",
+   "instant messaging",
+   "im URI",
+   "mimi URL"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs",
+  "wg": "lamps"
  },
  "RFC9735": {
   "area": "rtg",
