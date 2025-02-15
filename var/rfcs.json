@@ -114302,6 +114302,18 @@
   "title": "Bundle Protocol Version 7 Administrative Record Types Registry",
   "wg": "dtn"
  },
+ "RFC9714": {
+  "area": "rtg",
+  "keywords": [
+   "Flow-ID Label Indicator",
+   "Flow-ID Label"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Encapsulation for MPLS Performance Measurement with the Alternate-Marking Method",
+  "wg": "mpls"
+ },
  "RFC9715": {
   "area": "ops",
   "keywords": [
@@ -114359,6 +114371,20 @@
   "status": "current",
   "stream": "editorial",
   "title": "RFC Formats and Versions"
+ },
+ "RFC9729": {
+  "area": "wit",
+  "keywords": [
+   "secure",
+   "tunnels",
+   "masque",
+   "http-ng"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Concealed HTTP Authentication Scheme",
+  "wg": "httpbis"
  },
  "RFC9734": {
   "area": "sec",
