@@ -114281,6 +114281,22 @@
   "title": "Encryption Key Derivation in the Cryptographic Message Syntax (CMS) Using HKDF with SHA-256",
   "wg": "lamps"
  },
+ "RFC9710": {
+  "area": "ops",
+  "keywords": [
+   "IPFIX",
+   "Operations",
+   "Network Providers",
+   "Network Managment",
+   "Anomaly detection",
+   "Telemetry"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Simple Fixes to the IP Flow Information Export (IPFIX) Entities IANA Registry",
+  "wg": "opsawg"
+ },
  "RFC9712": {
   "keywords": [
    "IETF region",
