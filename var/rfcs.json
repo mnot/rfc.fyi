@@ -114257,6 +114257,18 @@
   "title": "TreeDN: Tree-Based Content Delivery Network (CDN) for Live Streaming to Mass Audiences",
   "wg": "mops"
  },
+ "RFC9707": {
+  "keywords": [
+   "Internet Access",
+   "Censorship",
+   "Community Networks",
+   "digital divide"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Report from the IAB Workshop on Barriers to Internet Access of Services (BIAS)"
+ },
  "RFC9708": {
   "area": "sec",
   "keywords": [
@@ -114427,5 +114439,16 @@
   "stream": "ietf",
   "title": "Locator/ID Separation Protocol (LISP) Distinguished Name Encoding",
   "wg": "lisp"
+ },
+ "RFC9737": {
+  "area": "wit",
+  "keywords": [
+   "NFSv4"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Reporting Errors in NFSv4.2 via LAYOUTRETURN",
+  "wg": "nfsv4"
  }
 }
