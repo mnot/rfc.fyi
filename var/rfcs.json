@@ -114450,5 +114450,19 @@
   "stream": "ietf",
   "title": "Reporting Errors in NFSv4.2 via LAYOUTRETURN",
   "wg": "nfsv4"
+ },
+ "RFC9748": {
+  "area": "int",
+  "keywords": [
+   "NTP",
+   "extensions",
+   "registries",
+   "IANA"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updating the NTP Registries",
+  "wg": "ntp"
  }
 }
