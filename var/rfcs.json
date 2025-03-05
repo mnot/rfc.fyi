@@ -113964,6 +113964,22 @@
   "title": "Content Delivery Network Interconnection (CDNI) Metadata for Delegated Credentials",
   "wg": "cdni"
  },
+ "RFC9678": {
+  "area": "sec",
+  "keywords": [
+   "EAP",
+   "AKA",
+   "AKA'",
+   "EAP-AKA'",
+   "EAP-AKA' FS",
+   "3GPP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Forward Secrecy Extension to the Improved Extensible Authentication Protocol Method for Authentication and Key Agreement (EAP-AKA' FS)",
+  "wg": "emu"
+ },
  "RFC9679": {
   "area": "sec",
   "keywords": [],
@@ -114414,6 +114430,19 @@
   "title": "The Concealed HTTP Authentication Scheme",
   "wg": "httpbis"
  },
+ "RFC9730": {
+  "area": "rtg",
+  "keywords": [
+   "architecture",
+   "ACTN",
+   "control plane"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Interworking of GMPLS Control and Centralized Controller Systems",
+  "wg": "teas"
+ },
  "RFC9733": {
   "area": "ops",
   "keywords": [
@@ -114477,6 +114506,38 @@
   "stream": "ietf",
   "title": "IMAP MESSAGELIMIT Extension",
   "wg": "extra"
+ },
+ "RFC9739": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Protocol Independent Multicast Light (PIM Light)",
+  "wg": "pim"
+ },
+ "RFC9740": {
+  "area": "ops",
+  "keywords": [
+   "IPFIX"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "New IPFIX Information Elements for TCP Options and IPv6 Extension Headers",
+  "wg": "opsawg"
+ },
+ "RFC9741": {
+  "area": "art",
+  "keywords": [
+   "Concise Data Definition Language",
+   "Control Operator"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Concise Data Definition Language (CDDL): Additional Control Operators for the Conversion and Processing of Text",
+  "wg": "cbor"
  },
  "RFC9748": {
   "area": "int",
