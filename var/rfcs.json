@@ -114539,6 +114539,22 @@
   "title": "Concise Data Definition Language (CDDL): Additional Control Operators for the Conversion and Processing of Text",
   "wg": "cbor"
  },
+ "RFC9746": {
+  "area": "rtg",
+  "keywords": [
+   "EVPN Multihoming",
+   "Split Horizon Filtering",
+   "Local Bias",
+   "ESI",
+   "encapsulations",
+   "SHT"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP EVPN Multihoming Extensions for Split-Horizon Filtering",
+  "wg": "bess"
+ },
  "RFC9748": {
   "area": "int",
   "keywords": [
