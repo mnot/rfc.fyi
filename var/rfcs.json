@@ -57341,7 +57341,7 @@
   "area": "wit",
   "keywords": [],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Specifying New Congestion Control Algorithms",
   "wg": "tsvwg"
@@ -114539,6 +114539,18 @@
   "title": "Concise Data Definition Language (CDDL): Additional Control Operators for the Conversion and Processing of Text",
   "wg": "cbor"
  },
+ "RFC9743": {
+  "area": "wit",
+  "keywords": [
+   "Transport",
+   "CC"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Specifying New Congestion Control Algorithms",
+  "wg": "ccwg"
+ },
  "RFC9746": {
   "area": "rtg",
   "keywords": [
@@ -114568,5 +114580,14 @@
   "stream": "ietf",
   "title": "Updating the NTP Registries",
   "wg": "ntp"
+ },
+ "RFC9756": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Update to the IANA Path Communication Element Protocol (PCEP) Numbers Registration Procedures and the Allowance of Experimental Error Codes",
+  "wg": "pce"
  }
 }
