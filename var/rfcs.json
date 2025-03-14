@@ -114487,6 +114487,20 @@
   "title": "Locator/ID Separation Protocol (LISP) Distinguished Name Encoding",
   "wg": "lisp"
  },
+ "RFC9736": {
+  "area": "ops",
+  "keywords": [
+   "IDR",
+   "GROW",
+   "BGP",
+   "BMP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The BGP Monitoring Protocol (BMP) Peer Up Message Namespace",
+  "wg": "grow"
+ },
  "RFC9737": {
   "area": "wit",
   "keywords": [
