@@ -114565,6 +114565,20 @@
   "title": "Specifying New Congestion Control Algorithms",
   "wg": "ccwg"
  },
+ "RFC9744": {
+  "area": "rtg",
+  "keywords": [
+   "EVPN",
+   "VPWS",
+   "Flexible Cross Connect",
+   "FXC"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "EVPN Virtual Private Wire Service (VPWS) Flexible Cross-Connect (FXC) Service",
+  "wg": "bess"
+ },
  "RFC9746": {
   "area": "rtg",
   "keywords": [
