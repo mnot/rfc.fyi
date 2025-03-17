@@ -79175,7 +79175,7 @@
    "IDNA"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IMAP Support for UTF-8",
   "wg": "eai"
@@ -114608,6 +114608,28 @@
   "stream": "ietf",
   "title": "Updating the NTP Registries",
   "wg": "ntp"
+ },
+ "RFC9749": {
+  "area": "art",
+  "keywords": [
+   "WebPush"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of Voluntary Application Server Identification (VAPID) in JSON Meta Application Protocol (JMAP) Web Push",
+  "wg": "jmap"
+ },
+ "RFC9755": {
+  "area": "art",
+  "keywords": [
+   "IMAP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IMAP Support for UTF-8",
+  "wg": "extra"
  },
  "RFC9756": {
   "area": "rtg",
