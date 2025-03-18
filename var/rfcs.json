@@ -114156,6 +114156,32 @@
   "title": "Benchmarking Methodology for Stateful NATxy Gateways",
   "wg": "bmwg"
  },
+ "RFC9694": {
+  "area": "art",
+  "keywords": [
+   "Media Type",
+   "Top-Level"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines for the Definition of New Top-Level Media Types",
+  "wg": "mediaman"
+ },
+ "RFC9695": {
+  "area": "art",
+  "keywords": [
+   "touch",
+   "tactile",
+   "vibrotactile",
+   "kinesthetic"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The 'haptics' Top-Level Media Type",
+  "wg": "mediaman"
+ },
  "RFC9697": {
   "area": "ops",
   "keywords": [
@@ -114416,6 +114442,22 @@
   "stream": "editorial",
   "title": "RFC Formats and Versions"
  },
+ "RFC9724": {
+  "area": "int",
+  "keywords": [
+   "privacy",
+   "tracking",
+   "slap",
+   "rcm",
+   "802.11bh",
+   "802.11bi"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "State of Affairs for Randomized and Changing Media Access Control (MAC) Addresses",
+  "wg": "madinas"
+ },
  "RFC9729": {
   "area": "wit",
   "keywords": [
@@ -114578,6 +114620,18 @@
   "stream": "ietf",
   "title": "EVPN Virtual Private Wire Service (VPWS) Flexible Cross-Connect (FXC) Service",
   "wg": "bess"
+ },
+ "RFC9745": {
+  "area": "wit",
+  "keywords": [
+   "HTTP",
+   "deprecation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Deprecation HTTP Response Header Field",
+  "wg": "httpapi"
  },
  "RFC9746": {
   "area": "rtg",
