@@ -20183,7 +20183,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Service Location Protocol",
-  "wg": "vgmib"
+  "wg": "svrloc"
  },
  "RFC2166": {
   "keywords": [],
@@ -20669,7 +20669,7 @@
   "wg": "rsvp"
  },
  "RFC2206": {
-  "area": "int",
+  "area": "tsv",
   "keywords": [
    "RSVP-MIB"
   ],
@@ -20677,10 +20677,10 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Management Information Base using SMIv2",
-  "wg": "vgmib"
+  "wg": "rsvp"
  },
  "RFC2207": {
-  "area": "int",
+  "area": "tsv",
   "keywords": [
    "RSVP-IPSEC",
    "resource",
@@ -20693,7 +20693,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Extensions for IPSEC Data Flows",
-  "wg": "vgmib"
+  "wg": "rsvp"
  },
  "RFC2208": {
   "area": "tsv",
@@ -26489,7 +26489,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Service Templates and Service: Schemes",
-  "wg": "vgmib"
+  "wg": "svrloc"
  },
  "RFC2610": {
   "area": "int",
@@ -28386,7 +28386,7 @@
   "wg": "cat"
  },
  "RFC2745": {
-  "area": "int",
+  "area": "tsv",
   "keywords": [
    "RSVP",
    "resource reservation protocol",
@@ -28397,10 +28397,10 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Diagnostic Messages",
-  "wg": "vgmib"
+  "wg": "rsvp"
  },
  "RFC2746": {
-  "area": "int",
+  "area": "tsv",
   "keywords": [
    "RSVP",
    "resource reservation protocol",
@@ -28411,10 +28411,10 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Operation Over IP Tunnels",
-  "wg": "vgmib"
+  "wg": "rsvp"
  },
  "RFC2747": {
-  "area": "int",
+  "area": "tsv",
   "keywords": [
    "RSVP",
    "resource reservation protocol",
@@ -28424,7 +28424,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Cryptographic Authentication",
-  "wg": "vgmib"
+  "wg": "rsvp"
  },
  "RFC2748": {
   "area": "ops",
@@ -31287,7 +31287,7 @@
   "wg": "sigtran"
  },
  "RFC2961": {
-  "area": "int",
+  "area": "tsv",
   "keywords": [
    "RSVP",
    "resource reservation protocol",
@@ -31297,7 +31297,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Refresh Overhead Reduction Extensions",
-  "wg": "vgmib"
+  "wg": "rsvp"
  },
  "RFC2962": {
   "area": "tsv",
@@ -33074,7 +33074,7 @@
   "wg": "rohc"
  },
  "RFC3097": {
-  "area": "int",
+  "area": "tsv",
   "keywords": [
    "RSVP",
    "resource reservation protocol",
@@ -33084,7 +33084,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "RSVP Cryptographic Authentication -- Updated Message Type Value",
-  "wg": "vgmib"
+  "wg": "rsvp"
  },
  "RFC3098": {
   "keywords": [
@@ -33276,7 +33276,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Service Location Protocol Modifications for IPv6",
-  "wg": "vgmib"
+  "wg": "svrloc"
  },
  "RFC3112": {
   "keywords": [
@@ -38969,7 +38969,7 @@
   "title": "Terminology Used in Internationalization in the IETF"
  },
  "RFC3537": {
-  "area": "int",
+  "area": "sec",
   "keywords": [
    "HMAC",
    "Hashed Message Authentication Code",
@@ -38982,7 +38982,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Wrapping a Hashed Message Authentication Code (HMAC) key with a Triple-Data Encryption Standard (DES) Key or an Advanced Encryption Standard (AES) Key",
-  "wg": "vgmib"
+  "wg": "smime"
  },
  "RFC3538": {
   "area": "app",
@@ -39301,7 +39301,7 @@
   "wg": "malloc"
  },
  "RFC3560": {
-  "area": "int",
+  "area": "sec",
   "keywords": [
    "CMS",
    "Cryptographic Message Syntax",
@@ -39311,7 +39311,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Use of the RSAES-OAEP Key Transport Algorithm in Cryptographic Message Syntax (CMS)",
-  "wg": "vgmib"
+  "wg": "smime"
  },
  "RFC3561": {
   "area": "rtg",
@@ -39362,7 +39362,7 @@
   "wg": "tewg"
  },
  "RFC3565": {
-  "area": "int",
+  "area": "sec",
   "keywords": [
    "AES",
    "Advanced Encryption Standard",
@@ -39375,7 +39375,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Use of the Advanced Encryption Standard (AES) Encryption Algorithm in Cryptographic Message Syntax (CMS)",
-  "wg": "vgmib"
+  "wg": "smime"
  },
  "RFC3566": {
   "area": "sec",
@@ -39710,7 +39710,7 @@
   "wg": "magma"
  },
  "RFC3591": {
-  "area": "int",
+  "area": "ops",
   "keywords": [
    "MIB",
    "management information base",
@@ -39733,10 +39733,10 @@
   "status": "current",
   "stream": "ietf",
   "title": "Definitions of Managed Objects for the Optical Interface Type",
-  "wg": "vgmib"
+  "wg": "atommib"
  },
  "RFC3592": {
-  "area": "int",
+  "area": "ops",
   "keywords": [
    "MIB",
    "Management Information Base",
@@ -39751,10 +39751,10 @@
   "status": "current",
   "stream": "ietf",
   "title": "Definitions of Managed Objects for the Synchronous Optical Network/Synchronous Digital Hierarchy (SONET/SDH) Interface Type",
-  "wg": "vgmib"
+  "wg": "atommib"
  },
  "RFC3593": {
-  "area": "int",
+  "area": "ops",
   "keywords": [
    "MIB",
    "management information base",
@@ -39764,7 +39764,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Textual Conventions for MIB Modules Using Performance History Based on 15 Minute Intervals",
-  "wg": "vgmib"
+  "wg": "atommib"
  },
  "RFC3594": {
   "area": "int",
@@ -39925,7 +39925,7 @@
   "wg": "mmusic"
  },
  "RFC3606": {
-  "area": "int",
+  "area": "ops",
   "keywords": [
    "ATM",
    "asynchronous transfer mode",
@@ -39936,7 +39936,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Definitions of Supplemental Managed Objects for ATM Interface",
-  "wg": "vgmib"
+  "wg": "atommib"
  },
  "RFC3607": {
   "keywords": [
@@ -40595,7 +40595,7 @@
   "title": "The Mailbox Update (MUPDATE) Distributed Mailbox Database Protocol"
  },
  "RFC3657": {
-  "area": "int",
+  "area": "sec",
   "keywords": [
    "CMS",
    "Cryptographic Message Syntax",
@@ -40607,7 +40607,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Use of the Camellia Encryption Algorithm in Cryptographic Message Syntax (CMS)",
-  "wg": "vgmib"
+  "wg": "smime"
  },
  "RFC3658": {
   "area": "int",
@@ -43079,7 +43079,7 @@
   "wg": "sip"
  },
  "RFC3854": {
-  "area": "int",
+  "area": "sec",
   "keywords": [
    "MIME",
    "secure",
@@ -43091,10 +43091,10 @@
   "status": "current",
   "stream": "ietf",
   "title": "Securing X.400 Content with Secure/Multipurpose Internet Mail Extensions (S/MIME)",
-  "wg": "vgmib"
+  "wg": "smime"
  },
  "RFC3855": {
-  "area": "int",
+  "area": "sec",
   "keywords": [
    "cms",
    "cryptographic message syntax message",
@@ -43106,7 +43106,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Transporting Secure/Multipurpose Internet Mail Extensions (S/MIME) Objects in X.400",
-  "wg": "vgmib"
+  "wg": "smime"
  },
  "RFC3856": {
   "area": "rai",
@@ -43597,7 +43597,7 @@
   "wg": "atommib"
  },
  "RFC3896": {
-  "area": "int",
+  "area": "ops",
   "keywords": [
    "DS3-E3-MIB",
    "management information base",
@@ -43607,7 +43607,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "Definitions of Managed Objects for the DS3/E3 Interface Type",
-  "wg": "vgmib"
+  "wg": "atommib"
  },
  "RFC3897": {
   "area": "app",
