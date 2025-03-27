@@ -114283,6 +114283,18 @@
   "title": "Establishing Local DNS Authority in Validated Split-Horizon Environments",
   "wg": "add"
  },
+ "RFC9705": {
+  "area": "rtg",
+  "keywords": [
+   "ri-rsvp-frr",
+   "RI-RSVP-FRR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Refresh-Interval Independent RSVP Fast Reroute Facility Protection",
+  "wg": "mpls"
+ },
  "RFC9706": {
   "area": "ops",
   "keywords": [
@@ -114457,6 +114469,19 @@
   "stream": "ietf",
   "title": "State of Affairs for Randomized and Changing Media Access Control (MAC) Addresses",
   "wg": "madinas"
+ },
+ "RFC9725": {
+  "area": "wit",
+  "keywords": [
+   "webrtc",
+   "streaming",
+   "ingest"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "WebRTC-HTTP Ingestion Protocol (WHIP)",
+  "wg": "wish"
  },
  "RFC9729": {
   "area": "wit",
@@ -114649,6 +114674,15 @@
   "title": "BGP EVPN Multihoming Extensions for Split-Horizon Filtering",
   "wg": "bess"
  },
+ "RFC9747": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Unaffiliated Bidirectional Forwarding Detection (BFD) Echo",
+  "wg": "bfd"
+ },
  "RFC9748": {
   "area": "int",
   "keywords": [
@@ -114682,6 +114716,17 @@
   "stream": "ietf",
   "title": "Closing the RTP Payload Format Media Types Registry",
   "wg": "avtcore"
+ },
+ "RFC9754": {
+  "area": "wit",
+  "keywords": [
+   "NFSv4"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensions for Opening and Delegating Files in NFSv4.2",
+  "wg": "nfsv4"
  },
  "RFC9755": {
   "area": "art",
