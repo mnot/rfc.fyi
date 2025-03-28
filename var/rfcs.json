@@ -113388,6 +113388,45 @@
   "title": "EVPN Optimized Inter-Subnet Multicast (OISM) Forwarding",
   "wg": "bess"
  },
+ "RFC9626": {
+  "area": "wit",
+  "keywords": [
+   "Scalable video",
+   "H.264",
+   "H.265",
+   "VP9",
+   "layered video"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Video Frame Marking RTP Header Extension",
+  "wg": "avtcore"
+ },
+ "RFC9627": {
+  "area": "art",
+  "keywords": [
+   "RTP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Layer Refresh Request (LRR) RTCP Feedback Message",
+  "wg": "avtext"
+ },
+ "RFC9628": {
+  "area": "wit",
+  "keywords": [
+   "RTP",
+   "VP9",
+   "WebM"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Payload Format for VP9 Video",
+  "wg": "avtcore"
+ },
  "RFC9629": {
   "area": "sec",
   "keywords": [
@@ -114508,6 +114547,32 @@
   "status": "current",
   "stream": "ietf",
   "title": "Interworking of GMPLS Control and Centralized Controller Systems",
+  "wg": "teas"
+ },
+ "RFC9731": {
+  "area": "rtg",
+  "keywords": [
+   "ACTN",
+   "SDN",
+   "TE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Virtual Network (VN) Operations",
+  "wg": "teas"
+ },
+ "RFC9732": {
+  "area": "rtg",
+  "keywords": [
+   "network slicing",
+   "traffic engineering",
+   "performance guarantee"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Framework for NRP-Based Enhanced Virtual Private Networks",
   "wg": "teas"
  },
  "RFC9733": {
