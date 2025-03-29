@@ -34868,7 +34868,7 @@
    "authority"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "IANA Considerations for IPv4 Internet Group Management Protocol (IGMP)",
   "wg": "magma"
@@ -36849,7 +36849,7 @@
    "Internet Protocol"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Internet Group Management Protocol, Version 3",
   "wg": "idmr"
@@ -42497,7 +42497,7 @@
    "mld"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Multicast Listener Discovery Version 2 (MLDv2) for IPv6",
   "wg": "magma"
@@ -114834,5 +114834,32 @@
   "status": "current",
   "stream": "irtf",
   "title": "IRTF Code of Conduct"
+ },
+ "RFC9776": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet Group Management Protocol, Version 3",
+  "wg": "pim"
+ },
+ "RFC9777": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multicast Listener Discovery Version 2 (MLDv2) for IPv6",
+  "wg": "pim"
+ },
+ "RFC9778": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IANA Considerations for Internet Group Management Protocols",
+  "wg": "pim"
  }
 }
