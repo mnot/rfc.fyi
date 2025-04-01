@@ -114522,6 +114522,23 @@
   "title": "WebRTC-HTTP Ingestion Protocol (WHIP)",
   "wg": "wish"
  },
+ "RFC9726": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "MUD",
+   "round-robin",
+   "tailored response",
+   "DNSSEC",
+   "IoT security",
+   "Device Identity"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operational Considerations for Use of DNS in Internet of Things (IoT) Devices",
+  "wg": "opsawg"
+ },
  "RFC9729": {
   "area": "wit",
   "keywords": [
