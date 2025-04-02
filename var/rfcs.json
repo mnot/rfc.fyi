@@ -114842,6 +114842,16 @@
   "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Native IP Networks",
   "wg": "pce"
  },
+ "RFC9759": {
+  "keywords": [
+   "Two-Week Principle",
+   "TWP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Unified Time Scaling for Temporal Coordination Frameworks"
+ },
  "RFC9775": {
   "keywords": [
    "IRTF",
