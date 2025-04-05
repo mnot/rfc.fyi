@@ -114525,6 +114525,18 @@
   "title": "DNSSEC Trust Anchor Publication for the Root Zone",
   "wg": "dnsop"
  },
+ "RFC9719": {
+  "area": "rtg",
+  "keywords": [
+   "RIFT",
+   "YANG"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Model for Routing in Fat Trees (RIFT)",
+  "wg": "rift"
+ },
  "RFC9720": {
   "keywords": [],
   "level": "informational",
@@ -114890,6 +114902,15 @@
   "status": "current",
   "stream": "independent",
   "title": "Unified Time Scaling for Temporal Coordination Frameworks"
+ },
+ "RFC9764": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bidirectional Forwarding Detection (BFD) Encapsulated in Large Packets",
+  "wg": "bfd"
  },
  "RFC9775": {
   "keywords": [
