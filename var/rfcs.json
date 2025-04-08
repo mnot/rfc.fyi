@@ -114850,6 +114850,19 @@
   "title": "Closing the RTP Payload Format Media Types Registry",
   "wg": "avtcore"
  },
+ "RFC9752": {
+  "area": "rtg",
+  "keywords": [
+   "PCE",
+   "vendor specific",
+   "vendor-specific"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Conveying Vendor-Specific Information in the Path Computation Element Communication Protocol (PCEP) Extensions for Stateful PCE",
+  "wg": "pce"
+ },
  "RFC9754": {
   "area": "wit",
   "keywords": [
