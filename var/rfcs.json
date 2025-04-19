@@ -114916,6 +114916,15 @@
   "stream": "independent",
   "title": "Unified Time Scaling for Temporal Coordination Frameworks"
  },
+ "RFC9761": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Manufacturer Usage Description (MUD) for TLS and DTLS Profiles for Internet of Things (IoT) Devices",
+  "wg": "opsawg"
+ },
  "RFC9764": {
   "area": "rtg",
   "keywords": [],
