@@ -114863,6 +114863,19 @@
   "title": "Conveying Vendor-Specific Information in the Path Computation Element Communication Protocol (PCEP) Extensions for Stateful PCE",
   "wg": "pce"
  },
+ "RFC9753": {
+  "area": "rtg",
+  "keywords": [
+   "PCEP",
+   "Stateful",
+   "optional processing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extension for Stateful PCE to Allow Optional Processing of Path Computation Element Communication Protocol (PCEP) Objects",
+  "wg": "pce"
+ },
  "RFC9754": {
   "area": "wit",
   "keywords": [
