@@ -114590,6 +114590,28 @@
   "title": "Operational Considerations for Use of DNS in Internet of Things (IoT) Devices",
   "wg": "opsawg"
  },
+ "RFC9728": {
+  "area": "sec",
+  "keywords": [
+   "OAuth",
+   "Discovery",
+   "Metadata",
+   "Discovery Metadata",
+   "Configuration Information",
+   "Resource Server",
+   "Protected Resource",
+   "Resource Identifier",
+   "JavaScript Object Notation",
+   "JSON",
+   "JSON Web Token",
+   "JWT"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "OAuth 2.0 Protected Resource Metadata",
+  "wg": "oauth"
+ },
  "RFC9729": {
   "area": "wit",
   "keywords": [
@@ -114974,6 +114996,15 @@
   "stream": "ietf",
   "title": "RADIUS/1.1: Leveraging Application-Layer Protocol Negotiation (ALPN) to Remove MD5",
   "wg": "radext"
+ },
+ "RFC9766": {
+  "area": "wit",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensions for Weak Cache Consistency in NFSv4.2's Flexible File Layout",
+  "wg": "nfsv4"
  },
  "RFC9767": {
   "area": "sec",
