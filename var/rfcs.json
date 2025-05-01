@@ -114441,6 +114441,19 @@
   "title": "Simple Fixes to the IP Flow Information Export (IPFIX) Entities IANA Registry",
   "wg": "opsawg"
  },
+ "RFC9711": {
+  "area": "sec",
+  "keywords": [
+   "signing",
+   "attestation",
+   "cbor"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Entity Attestation Token (EAT)",
+  "wg": "rats"
+ },
  "RFC9712": {
   "keywords": [
    "IETF region",
@@ -114543,6 +114556,25 @@
   "status": "current",
   "stream": "editorial",
   "title": "RFC Formats and Versions"
+ },
+ "RFC9721": {
+  "area": "rtg",
+  "keywords": [
+   "ES",
+   "Ethernet Segment",
+   "Peer-Sync-Local",
+   "Overlay",
+   "NVO",
+   "NVO3",
+   "RT-2",
+   "RT-5",
+   "MAC-IP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extended Mobility Procedures for Ethernet VPN Integrated Routing and Bridging (EVPN-IRB)",
+  "wg": "bess"
  },
  "RFC9724": {
   "area": "int",
@@ -114774,6 +114806,15 @@
   "stream": "ietf",
   "title": "Concise Data Definition Language (CDDL): Additional Control Operators for the Conversion and Processing of Text",
   "wg": "cbor"
+ },
+ "RFC9742": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Syslog Management",
+  "wg": "netmod"
  },
  "RFC9743": {
   "area": "wit",
