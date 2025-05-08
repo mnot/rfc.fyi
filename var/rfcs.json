@@ -115056,6 +115056,18 @@
   "title": "Grant Negotiation and Authorization Protocol Resource Server Connections",
   "wg": "gnap"
  },
+ "RFC9771": {
+  "keywords": [
+   "authenticated encryption",
+   "mode of operation",
+   "AEAD",
+   "properties"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Properties of Authenticated Encryption with Associated Data (AEAD) Algorithms"
+ },
  "RFC9775": {
   "keywords": [
    "IRTF",
