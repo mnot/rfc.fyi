@@ -115104,5 +115104,19 @@
   "stream": "ietf",
   "title": "IANA Considerations for Internet Group Management Protocols",
   "wg": "pim"
+ },
+ "RFC9779": {
+  "area": "rtg",
+  "keywords": [
+   "Delay Measurement",
+   "Loss Measurement",
+   "Link Measurement",
+   "SR-MPLS Policy Measurement"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Performance Measurement for Segment Routing Networks with the MPLS Data Plane",
+  "wg": "mpls"
  }
 }
