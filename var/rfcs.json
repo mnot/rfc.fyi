@@ -113994,6 +113994,18 @@
   "title": "Delay-Tolerant Networking Management Architecture (DTNMA)",
   "wg": "dtn"
  },
+ "RFC9676": {
+  "keywords": [
+   "identifier for legal documents",
+   "legislation",
+   "case law",
+   "administrative acts"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "LEX: A Uniform Resource Name (URN) Namespace for Sources of Law"
+ },
  "RFC9677": {
   "area": "wit",
   "keywords": [],
