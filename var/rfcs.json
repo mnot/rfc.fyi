@@ -74899,7 +74899,7 @@
    "Route Origin"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Recommendation for Not Using AS_SET and AS_CONFED_SET in BGP",
   "wg": "idr"
@@ -77747,7 +77747,11 @@
  },
  "RFC6728": {
   "area": "ops",
-  "keywords": [],
+  "keywords": [
+   "IPFIX",
+   "PSAMP",
+   "YANG"
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
@@ -115079,6 +115083,15 @@
   "status": "current",
   "stream": "irtf",
   "title": "Properties of Authenticated Encryption with Associated Data (AEAD) Algorithms"
+ },
+ "RFC9774": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecation of AS_SET and AS_CONFED_SET in BGP",
+  "wg": "idr"
  },
  "RFC9775": {
   "keywords": [
