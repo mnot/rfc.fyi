@@ -115011,6 +115011,21 @@
   "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Native IP Networks",
   "wg": "pce"
  },
+ "RFC9758": {
+  "area": "int",
+  "keywords": [
+   "DTN",
+   "ipn",
+   "BPv7",
+   "CBHE",
+   "Bundle Protocol"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to the 'ipn' URI Scheme",
+  "wg": "dtn"
+ },
  "RFC9759": {
   "keywords": [
    "Two-Week Principle",
@@ -115020,6 +115035,18 @@
   "status": "current",
   "stream": "independent",
   "title": "Unified Time Scaling for Temporal Coordination Frameworks"
+ },
+ "RFC9760": {
+  "area": "int",
+  "keywords": [
+   "PTP",
+   "Enterprise Profile"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Enterprise Profile for the Precision Time Protocol with Mixed Multicast and Unicast Messages",
+  "wg": "tictoc"
  },
  "RFC9761": {
   "area": "ops",
@@ -115071,6 +115098,18 @@
   "stream": "ietf",
   "title": "Grant Negotiation and Authorization Protocol Resource Server Connections",
   "wg": "gnap"
+ },
+ "RFC9769": {
+  "area": "int",
+  "keywords": [
+   "NTP",
+   "interleaved mode"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "NTP Interleaved Modes",
+  "wg": "ntp"
  },
  "RFC9771": {
   "keywords": [
