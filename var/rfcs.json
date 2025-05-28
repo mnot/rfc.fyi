@@ -115182,5 +115182,35 @@
   "stream": "ietf",
   "title": "Performance Measurement for Segment Routing Networks with the MPLS Data Plane",
   "wg": "mpls"
+ },
+ "RFC9781": {
+  "area": "sec",
+  "keywords": [
+   "Secure Channel",
+   "RATS",
+   "Conceptual Message Conveyance",
+   "Privacy",
+   "Confidentiality",
+   "CDDL",
+   "EAT",
+   "UJCS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Concise Binary Object Representation (CBOR) Tag for Unprotected CBOR Web Token Claims Sets (UCCS)",
+  "wg": "rats"
+ },
+ "RFC9782": {
+  "area": "sec",
+  "keywords": [
+   "EAT",
+   "media type"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Entity Attestation Token (EAT) Media Types",
+  "wg": "rats"
  }
 }
