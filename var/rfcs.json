@@ -114592,6 +114592,17 @@
   "title": "Extended Mobility Procedures for Ethernet VPN Integrated Routing and Bridging (EVPN-IRB)",
   "wg": "bess"
  },
+ "RFC9723": {
+  "area": "rtg",
+  "keywords": [
+   "intent-aware routing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Colored Prefix Routing (CPR) for Services Based on Segment Routing over IPv6 (SRv6)",
+  "wg": "idr"
+ },
  "RFC9724": {
   "area": "int",
   "keywords": [
