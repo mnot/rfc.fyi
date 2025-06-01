@@ -114592,6 +114592,20 @@
   "title": "Extended Mobility Procedures for Ethernet VPN Integrated Routing and Bridging (EVPN-IRB)",
   "wg": "bess"
  },
+ "RFC9722": {
+  "area": "rtg",
+  "keywords": [
+   "EVPN",
+   "Designated Forwarder",
+   "Convergence",
+   "Recovery"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Fast Recovery for EVPN Designated Forwarder Election",
+  "wg": "bess"
+ },
  "RFC9723": {
   "area": "rtg",
   "keywords": [
@@ -115134,6 +115148,17 @@
   "stream": "irtf",
   "title": "Properties of Authenticated Encryption with Associated Data (AEAD) Algorithms"
  },
+ "RFC9772": {
+  "area": "rtg",
+  "keywords": [
+   "OAM"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Active Operations, Administration, and Maintenance (OAM) for Use in Generic Network Virtualization Encapsulation (Geneve)",
+  "wg": "nvo3"
+ },
  "RFC9774": {
   "area": "rtg",
   "keywords": [],
@@ -115192,6 +115217,18 @@
   "status": "current",
   "stream": "ietf",
   "title": "Performance Measurement for Segment Routing Networks with the MPLS Data Plane",
+  "wg": "mpls"
+ },
+ "RFC9780": {
+  "area": "rtg",
+  "keywords": [
+   "BFD",
+   "Multipoint LSP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bidirectional Forwarding Detection (BFD) for Multipoint Networks over Point-to-Multipoint MPLS Label Switched Paths (LSPs)",
   "wg": "mpls"
  },
  "RFC9781": {
