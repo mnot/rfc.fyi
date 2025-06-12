@@ -113863,6 +113863,31 @@
   "title": "Using DHCPv6 Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per Client in Large Broadcast Networks",
   "wg": "v6ops"
  },
+ "RFC9664": {
+  "area": "int",
+  "keywords": [
+   "DNS Update"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An EDNS(0) Option to Negotiate Leases on DNS Updates",
+  "wg": "dnssd"
+ },
+ "RFC9665": {
+  "area": "int",
+  "keywords": [
+   "Multicast DNS",
+   "DNS-Based Service Discovery",
+   "DNS Update",
+   "SIG(0)"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Service Registration Protocol for DNS-Based Service Discovery",
+  "wg": "dnssd"
+ },
  "RFC9666": {
   "area": "rtg",
   "keywords": [
