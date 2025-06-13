@@ -115285,5 +115285,17 @@
   "stream": "ietf",
   "title": "Entity Attestation Token (EAT) Media Types",
   "wg": "rats"
+ },
+ "RFC9792": {
+  "area": "rtg",
+  "keywords": [
+   "Prefix attributes",
+   "IGP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Prefix Flag Extension for OSPFv2 and OSPFv3",
+  "wg": "lsr"
  }
 }
