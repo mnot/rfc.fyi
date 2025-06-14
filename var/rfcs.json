@@ -114688,6 +114688,17 @@
   "title": "Operational Considerations for Use of DNS in Internet of Things (IoT) Devices",
   "wg": "opsawg"
  },
+ "RFC9727": {
+  "area": "wit",
+  "keywords": [
+   "API"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "api-catalog: A Well-Known URI and Link Relation to Help Discovery of APIs",
+  "wg": "httpapi"
+ },
  "RFC9728": {
   "area": "sec",
   "keywords": [
@@ -115107,6 +115118,24 @@
   "title": "Manufacturer Usage Description (MUD) for TLS and DTLS Profiles for Internet of Things (IoT) Devices",
   "wg": "opsawg"
  },
+ "RFC9763": {
+  "area": "sec",
+  "keywords": [
+   "certificate",
+   "certificate request",
+   "hybrid",
+   "authentication",
+   "post-quantum",
+   "X.509",
+   "digital signature",
+   "quantum resistant"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Related Certificates for Use in Multiple Authentications within a Protocol",
+  "wg": "lamps"
+ },
  "RFC9764": {
   "area": "rtg",
   "keywords": [],
@@ -115160,6 +115189,23 @@
   "stream": "ietf",
   "title": "NTP Interleaved Modes",
   "wg": "ntp"
+ },
+ "RFC9770": {
+  "area": "sec",
+  "keywords": [
+   "Security",
+   "Access control",
+   "Access rights",
+   "Revocation",
+   "CoAP",
+   "IoT",
+   "Constrained environments"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Notification of Revoked Access Tokens in the Authentication and Authorization for Constrained Environments (ACE) Framework",
+  "wg": "ace"
  },
  "RFC9771": {
   "keywords": [
@@ -115286,6 +115332,19 @@
   "title": "Entity Attestation Token (EAT) Media Types",
   "wg": "rats"
  },
+ "RFC9783": {
+  "keywords": [
+   "Remote Attestation",
+   "EAT profile",
+   "Evidence",
+   "RATS",
+   "IoT"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Arm's Platform Security Architecture (PSA) Attestation Token"
+ },
  "RFC9792": {
   "area": "rtg",
   "keywords": [
@@ -115297,5 +115356,42 @@
   "stream": "ietf",
   "title": "Prefix Flag Extension for OSPFv2 and OSPFv3",
   "wg": "lsr"
+ },
+ "RFC9793": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Extensions for Bit Index Explicit Replication (BIER)",
+  "wg": "bier"
+ },
+ "RFC9794": {
+  "area": "sec",
+  "keywords": [
+   "cryptography",
+   "quantum-safe",
+   "pqc",
+   "composite"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Terminology for Post-Quantum Traditional Hybrid Schemes",
+  "wg": "pquip"
+ },
+ "RFC9803": {
+  "area": "art",
+  "keywords": [
+   "EPP",
+   "DNS",
+   "TTL",
+   "time-to-live"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensible Provisioning Protocol (EPP) Mapping for DNS Time-to-Live (TTL) Values",
+  "wg": "regext"
  }
 }
