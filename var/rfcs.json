@@ -115118,6 +115118,20 @@
   "title": "Manufacturer Usage Description (MUD) for TLS and DTLS Profiles for Internet of Things (IoT) Devices",
   "wg": "opsawg"
  },
+ "RFC9762": {
+  "area": "int",
+  "keywords": [
+   "ipv6",
+   "slaac",
+   "pio",
+   "dhcpv6-pd"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Using Router Advertisements to Signal the Availability of DHCPv6 Prefix Delegation to Clients",
+  "wg": "6man"
+ },
  "RFC9763": {
   "area": "sec",
   "keywords": [
