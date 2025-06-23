@@ -21773,7 +21773,7 @@
   "status": "obsoleted",
   "stream": "ietf",
   "title": "IAB and IESG Selection, Confirmation, and Recall Process: Operation of the Nominating and Recall Committees",
-  "wg": "Poisson"
+  "wg": "poisson"
  },
  "RFC2283": {
   "area": "rtg",
@@ -23756,7 +23756,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "IETF Working Group Guidelines and Procedures",
-  "wg": "Poisson"
+  "wg": "poisson"
  },
  "RFC2419": {
   "area": "int",
@@ -27621,7 +27621,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "A Proposal for an MOU-Based ICANN Protocol Support Organization",
-  "wg": "Poisson"
+  "wg": "poisson"
  },
  "RFC2691": {
   "area": "gen",
@@ -27635,7 +27635,7 @@
   "status": "current",
   "stream": "ietf",
   "title": "A Memorandum of Understanding for an ICANN Protocol Support Organization",
-  "wg": "Poisson"
+  "wg": "poisson"
  },
  "RFC2692": {
   "area": "sec",
@@ -28129,7 +28129,7 @@
   "status": "obsoleted",
   "stream": "ietf",
   "title": "IAB and IESG Selection, Confirmation, and Recall Process: Operation of the Nominating and Recall Committees",
-  "wg": "Poisson"
+  "wg": "poisson"
  },
  "RFC2728": {
   "area": "int",
@@ -28841,7 +28841,7 @@
   "status": "obsoleted",
   "stream": "ietf",
   "title": "Publicly Verifiable Nomcom Random Selection",
-  "wg": "Poisson"
+  "wg": "poisson"
  },
  "RFC2778": {
   "area": "app",
@@ -31866,7 +31866,7 @@
   "status": "obsoleted",
   "stream": "ietf",
   "title": "IETF Discussion List Charter",
-  "wg": "Poisson"
+  "wg": "poisson"
  },
  "RFC3006": {
   "area": "tsv",
@@ -34299,7 +34299,7 @@
   "status": "obsoleted",
   "stream": "ietf",
   "title": "IETF Guidelines for Conduct",
-  "wg": "Poisson"
+  "wg": "poisson"
  },
  "RFC3185": {
   "area": "sec",
