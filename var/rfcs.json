@@ -115411,6 +115411,48 @@
   "title": "Terminology for Post-Quantum Traditional Hybrid Schemes",
   "wg": "pquip"
  },
+ "RFC9798": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PIM Join/Prune Attributes for Locator/ID Separation Protocol (LISP) Environments Using Underlay Multicast",
+  "wg": "pim"
+ },
+ "RFC9799": {
+  "area": "sec",
+  "keywords": [
+   "tor",
+   "hidden service",
+   "onion service",
+   "caa",
+   "dns"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automated Certificate Management Environment (ACME) Extensions for \".onion\" Special-Use Domain Names",
+  "wg": "acme"
+ },
+ "RFC9802": {
+  "area": "sec",
+  "keywords": [
+   "HSS",
+   "LMS",
+   "XMSS",
+   "certificate",
+   "X.509",
+   "PKIX",
+   "stateful",
+   "hash-based"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the HSS and XMSS Hash-Based Signature Algorithms in Internet X.509 Public Key Infrastructure",
+  "wg": "lamps"
+ },
  "RFC9803": {
   "area": "art",
   "keywords": [
@@ -115435,5 +115477,16 @@
   "status": "current",
   "stream": "ietf",
   "title": "Simple Public Key Infrastructure (SPKI) S-Expressions"
+ },
+ "RFC9805": {
+  "area": "int",
+  "keywords": [
+   "IPv6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecation of the IPv6 Router Alert Option for New Protocols",
+  "wg": "6man"
  }
 }
