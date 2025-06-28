@@ -115376,6 +115376,46 @@
   "stream": "independent",
   "title": "Arm's Platform Security Architecture (PSA) Attestation Token"
  },
+ "RFC9784": {
+  "area": "rtg",
+  "keywords": [
+   "vES",
+   "Virtual ES"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Virtual Ethernet Segments for EVPN and Provider Backbone Bridge EVPN",
+  "wg": "bess"
+ },
+ "RFC9785": {
+  "area": "rtg",
+  "keywords": [
+   "Highest-Preference",
+   "Lowest-Preference",
+   "Non-Revertive",
+   "Don\u2019t Preempt",
+   "Preemption"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Preference-Based EVPN Designated Forwarder (DF) Election",
+  "wg": "bess"
+ },
+ "RFC9786": {
+  "area": "rtg",
+  "keywords": [
+   "Port-Active",
+   "EVPN",
+   "Multihoming"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "EVPN Port-Active Redundancy Mode",
+  "wg": "bess"
+ },
  "RFC9792": {
   "area": "rtg",
   "keywords": [
@@ -115410,6 +115450,38 @@
   "stream": "ietf",
   "title": "Terminology for Post-Quantum Traditional Hybrid Schemes",
   "wg": "pquip"
+ },
+ "RFC9797": {
+  "area": "int",
+  "keywords": [
+   "RCM",
+   "Universal MAC address",
+   "Local MAC address",
+   "Locally Administered MAC address",
+   "Personal Device",
+   "Shared Service Device",
+   "Network Functional Entities",
+   "Human-Related Entities",
+   "Over-the-Air (OTA) observers",
+   "Wireless access network operators",
+   "Network access providers",
+   "Over-the-Wired internal (OTWi) observers",
+   "Over-the-Wired external (OTWe) observers",
+   "full trust",
+   "selective trust",
+   "zero trust",
+   "privacy",
+   "Residential settings",
+   "Managed residential settings",
+   "public guest network",
+   "Enterprises with Bring-Your-Own-Device (BYOD)",
+   "Managed Enterprises"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Randomized and Changing Media Access Control (MAC) Addresses: Context, Network Impacts, and Use Cases",
+  "wg": "madinas"
  },
  "RFC9798": {
   "area": "rtg",
@@ -115488,5 +115560,17 @@
   "stream": "ietf",
   "title": "Deprecation of the IPv6 Router Alert Option for New Protocols",
   "wg": "6man"
+ },
+ "RFC9806": {
+  "area": "art",
+  "keywords": [
+   "siprec",
+   "errata"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to SIP-Based Media Recording (SIPREC) to Correct Metadata Media Type",
+  "wg": "sipcore"
  }
 }
