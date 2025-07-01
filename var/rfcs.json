@@ -115507,6 +115507,23 @@
   "title": "Automated Certificate Management Environment (ACME) Extensions for \".onion\" Special-Use Domain Names",
   "wg": "acme"
  },
+ "RFC9800": {
+  "area": "rtg",
+  "keywords": [
+   "Segment Routing",
+   "IPv6 Segment Routing",
+   "Compressed SID",
+   "CSID",
+   "NEXT-CSID",
+   "REPLACE-SID",
+   "SRH Compression"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Compressed SRv6 Segment List Encoding",
+  "wg": "spring"
+ },
  "RFC9802": {
   "area": "sec",
   "keywords": [
