@@ -56122,7 +56122,7 @@
  "RFC4928": {
   "area": "rtg",
   "keywords": [
-   "ecmp"
+   "ECMP"
   ],
   "level": "bcp",
   "status": "current",
@@ -115416,6 +115416,42 @@
   "title": "EVPN Port-Active Redundancy Mode",
   "wg": "bess"
  },
+ "RFC9789": {
+  "area": "rtg",
+  "keywords": [
+   "network function virtualization",
+   "service chaining"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "MPLS Network Actions (MNAs) Framework",
+  "wg": "mpls"
+ },
+ "RFC9790": {
+  "area": "rtg",
+  "keywords": [
+   "Post-stack header",
+   "Load-balancing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IANA Registry and Processing Recommendations for the First Nibble Following a Label Stack",
+  "wg": "mpls"
+ },
+ "RFC9791": {
+  "area": "rtg",
+  "keywords": [
+   "Special Purpose Label",
+   "MPLS data plane"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use Cases for MPLS Network Action Indicators and Ancillary Data",
+  "wg": "mpls"
+ },
  "RFC9792": {
   "area": "rtg",
   "keywords": [
@@ -115450,6 +115486,28 @@
   "stream": "ietf",
   "title": "Terminology for Post-Quantum Traditional Hybrid Schemes",
   "wg": "pquip"
+ },
+ "RFC9795": {
+  "area": "art",
+  "keywords": [
+   "Identity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Personal Assertion Token (PASSporT) Extension for Rich Call Data",
+  "wg": "stir"
+ },
+ "RFC9796": {
+  "area": "art",
+  "keywords": [
+   "Identity"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "SIP Call-Info Parameters for Rich Call Data",
+  "wg": "sipcore"
  },
  "RFC9797": {
   "area": "int",
@@ -115523,6 +115581,23 @@
   "stream": "ietf",
   "title": "Compressed SRv6 Segment List Encoding",
   "wg": "spring"
+ },
+ "RFC9801": {
+  "area": "rtg",
+  "keywords": [
+   "pseudowires",
+   "circuit emulation",
+   "structure-agnostic emulation",
+   "bit-stream payload",
+   "SR-MPLS",
+   "SRv6",
+   "IWF"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Private Line Emulation over Packet Switched Networks",
+  "wg": "pals"
  },
  "RFC9802": {
   "area": "sec",
