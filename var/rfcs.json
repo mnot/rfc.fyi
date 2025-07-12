@@ -115664,5 +115664,29 @@
   "stream": "ietf",
   "title": "Updates to SIP-Based Media Recording (SIPREC) to Correct Metadata Media Type",
   "wg": "sipcore"
+ },
+ "RFC9809": {
+  "area": "sec",
+  "keywords": [
+   "Industrial Automation",
+   "ERJU",
+   "extended key usage",
+   "extension",
+   "PKI"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "X.509 Certificate Extended Key Usage (EKU) for Configuration, Updates, and Safety-Critical Communication",
+  "wg": "lamps"
+ },
+ "RFC9813": {
+  "area": "sec",
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operational Considerations for Using TLS Pre-Shared Keys (TLS-PSKs) with RADIUS",
+  "wg": "radext"
  }
 }
