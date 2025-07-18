@@ -115688,5 +115688,20 @@
   "stream": "ietf",
   "title": "Operational Considerations for Using TLS Pre-Shared Keys (TLS-PSKs) with RADIUS",
   "wg": "radext"
+ },
+ "RFC9829": {
+  "area": "ops",
+  "keywords": [
+   "RPKI",
+   "Routing Security",
+   "BGP",
+   "X.509",
+   "CRL"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Handling of Resource Public Key Infrastructure (RPKI) Certificate Revocation List (CRL) Number Extensions",
+  "wg": "sidrops"
  }
 }
