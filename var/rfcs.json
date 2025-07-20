@@ -115689,6 +115689,29 @@
   "title": "Operational Considerations for Using TLS Pre-Shared Keys (TLS-PSKs) with RADIUS",
   "wg": "radext"
  },
+ "RFC9814": {
+  "area": "sec",
+  "keywords": [
+   "stateless hash-based signature algorithm"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the SLH-DSA Signature Algorithm in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
+ },
+ "RFC9819": {
+  "area": "rtg",
+  "keywords": [
+   "BGP",
+   "SRv6"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Argument Signaling for BGP Services in Segment Routing over IPv6 (SRv6)",
+  "wg": "bess"
+ },
  "RFC9829": {
   "area": "ops",
   "keywords": [
