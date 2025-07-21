@@ -115700,6 +115700,26 @@
   "title": "Use of the SLH-DSA Signature Algorithm in the Cryptographic Message Syntax (CMS)",
   "wg": "lamps"
  },
+ "RFC9815": {
+  "area": "rtg",
+  "keywords": [
+   "IDR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Link State (BGP-LS) Shortest Path First (SPF) Routing",
+  "wg": "lsvr"
+ },
+ "RFC9816": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Usage and Applicability of BGP Link State (BGP-LS) Shortest Path First (SPF) Routing in Data Centers",
+  "wg": "lsvr"
+ },
  "RFC9819": {
   "area": "rtg",
   "keywords": [
