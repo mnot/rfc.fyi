@@ -115665,6 +115665,13 @@
   "title": "Updates to SIP-Based Media Recording (SIPREC) to Correct Metadata Media Type",
   "wg": "sipcore"
  },
+ "RFC9807": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "The OPAQUE Augmented Password-Authenticated Key Exchange (aPAKE) Protocol"
+ },
  "RFC9809": {
   "area": "sec",
   "keywords": [
