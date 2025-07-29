@@ -115727,6 +115727,19 @@
   "title": "Usage and Applicability of BGP Link State (BGP-LS) Shortest Path First (SPF) Routing in Data Centers",
   "wg": "lsvr"
  },
+ "RFC9818": {
+  "area": "ops",
+  "keywords": [
+   "IPv6",
+   "Internet Protocol Version 6",
+   "DHCPv6"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DHCPv6 Prefix Delegation on IPv6 Customer Edge (CE) Routers in LANs",
+  "wg": "v6ops"
+ },
  "RFC9819": {
   "area": "rtg",
   "keywords": [
