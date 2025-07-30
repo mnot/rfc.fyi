@@ -47382,7 +47382,7 @@
    "certification authority"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Internet X.509 Public Key Infrastructure Certificate Management Protocol (CMP)",
   "wg": "pkix"
@@ -77551,7 +77551,7 @@
    "CMPtrans"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Internet X.509 Public Key Infrastructure -- HTTP Transfer for the Certificate Management Protocol (CMP)",
   "wg": "pkix"
@@ -111609,7 +111609,7 @@
    "CMP"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Certificate Management Protocol (CMP) Updates",
   "wg": "lamps"
@@ -115685,6 +115685,34 @@
   "status": "current",
   "stream": "ietf",
   "title": "X.509 Certificate Extended Key Usage (EKU) for Configuration, Updates, and Safety-Critical Communication",
+  "wg": "lamps"
+ },
+ "RFC9810": {
+  "area": "sec",
+  "keywords": [
+   "CMP",
+   "HTTP",
+   "Certificate management",
+   "PKI"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet X.509 Public Key Infrastructure -- Certificate Management Protocol (CMP)",
+  "wg": "lamps"
+ },
+ "RFC9811": {
+  "area": "sec",
+  "keywords": [
+   "CMP",
+   "HTTP",
+   "Certificate management",
+   "PKI"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet X.509 Public Key Infrastructure -- HTTP Transfer for the Certificate Management Protocol (CMP)",
   "wg": "lamps"
  },
  "RFC9813": {
