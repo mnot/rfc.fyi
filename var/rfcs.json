@@ -115672,6 +115672,15 @@
   "stream": "irtf",
   "title": "The OPAQUE Augmented Password-Authenticated Key Exchange (aPAKE) Protocol"
  },
+ "RFC9808": {
+  "area": "wit",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Content Delivery Network Interconnection (CDNI) Capacity Capability Advertisement Extensions",
+  "wg": "cdni"
+ },
  "RFC9809": {
   "area": "sec",
   "keywords": [
@@ -115779,6 +115788,15 @@
   "stream": "ietf",
   "title": "Argument Signaling for BGP Services in Segment Routing over IPv6 (SRv6)",
   "wg": "bess"
+ },
+ "RFC9825": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensions to OSPF for Advertising Prefix Administrative Tags",
+  "wg": "lsr"
  },
  "RFC9829": {
   "area": "ops",
