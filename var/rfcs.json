@@ -115764,6 +115764,23 @@
   "title": "Usage and Applicability of BGP Link State (BGP-LS) Shortest Path First (SPF) Routing in Data Centers",
   "wg": "lsvr"
  },
+ "RFC9817": {
+  "keywords": [
+   "COIN",
+   "in-network computing",
+   "VR",
+   "XR",
+   "Industry 4.0",
+   "Industrial IIoT",
+   "Performing Arts",
+   "CDN",
+   "P4"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Use Cases for In-Network Computing"
+ },
  "RFC9818": {
   "area": "ops",
   "keywords": [
