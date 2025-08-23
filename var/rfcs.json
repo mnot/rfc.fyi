@@ -19097,7 +19097,7 @@
    "format",
    "bitmap"
   ],
-  "level": "informational",
+  "level": "historic",
   "status": "current",
   "stream": "legacy",
   "title": "PNG (Portable Network Graphics) Specification Version 1.0"
@@ -79375,7 +79375,7 @@
   "area": "int",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Representing IPv6 Zone Identifiers in Address Literals and Uniform Resource Identifiers",
   "wg": "6man"
@@ -115416,6 +115416,53 @@
   "title": "EVPN Port-Active Redundancy Mode",
   "wg": "bess"
  },
+ "RFC9787": {
+  "area": "sec",
+  "keywords": [
+   "cryptography",
+   "encryption",
+   "signature",
+   "signing",
+   "usability",
+   "MIME",
+   "confidentiality",
+   "integrity",
+   "authenticity"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidance on End-to-End Email Security",
+  "wg": "lamps"
+ },
+ "RFC9788": {
+  "area": "sec",
+  "keywords": [
+   "Header Protection",
+   "Header Confidentiality Policy",
+   "HCP",
+   "cryptographic email",
+   "email encryption",
+   "encryption",
+   "encrypt",
+   "signature",
+   "sign",
+   "S/MIME",
+   "PGP/MIME",
+   "Legacy Display",
+   "Legacy Display Element",
+   "MIME",
+   "Privacy",
+   "HP-Outer",
+   "hp-legacy-display",
+   "hp"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Header Protection for Cryptographically Protected Email",
+  "wg": "lamps"
+ },
  "RFC9789": {
   "area": "rtg",
   "keywords": [
@@ -115829,5 +115876,40 @@
   "stream": "ietf",
   "title": "Handling of Resource Public Key Infrastructure (RPKI) Certificate Revocation List (CRL) Number Extensions",
   "wg": "sidrops"
+ },
+ "RFC9837": {
+  "area": "int",
+  "keywords": [
+   "IPv6",
+   "Destination Option",
+   "VPN"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The IPv6 VPN Service Destination Option",
+  "wg": "6man"
+ },
+ "RFC9839": {
+  "keywords": [
+   "Unicode",
+   "UTF-8",
+   "Surrogates",
+   "Noncharacters",
+   "Control characters"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Unicode Character Repertoire Subsets"
+ },
+ "RFC9844": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Entering IPv6 Zone Identifiers in User Interfaces",
+  "wg": "6man"
  }
 }
