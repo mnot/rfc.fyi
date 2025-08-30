@@ -115862,6 +115862,22 @@
   "title": "Extensions to OSPF for Advertising Prefix Administrative Tags",
   "wg": "lsr"
  },
+ "RFC9828": {
+  "area": "wit",
+  "keywords": [
+   "JPEG 2000",
+   "J2K",
+   "HTJ2K",
+   "low latency",
+   "scalable",
+   "streaming"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "RTP Payload Format for JPEG 2000 Streaming with Sub-Codestream Latency",
+  "wg": "avtcore"
+ },
  "RFC9829": {
   "area": "ops",
   "keywords": [
