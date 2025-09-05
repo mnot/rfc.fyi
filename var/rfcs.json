@@ -25541,14 +25541,16 @@
   "wg": "mmusic"
  },
  "RFC2544": {
+  "area": "ops",
   "keywords": [
    "testing",
    "performance"
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
-  "title": "Benchmarking Methodology for Network Interconnect Devices"
+  "stream": "ietf",
+  "title": "Benchmarking Methodology for Network Interconnect Devices",
+  "wg": "bmwg"
  },
  "RFC2545": {
   "area": "rtg",
