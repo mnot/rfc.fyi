@@ -112824,7 +112824,7 @@
    "pbkdf2"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Use of Password-Based Message Authentication Code 1 (PBMAC1) in PKCS #12 Syntax",
   "wg": "lamps"
@@ -115872,6 +115872,25 @@
   "title": "Authentication Service Based on the Extensible Authentication Protocol (EAP) for Use with the Constrained Application Protocol (CoAP)",
   "wg": "ace"
  },
+ "RFC9824": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "DNSSEC",
+   "Denial of Existence",
+   "Compact Denial of Existence",
+   "Compact Answers",
+   "Black Lies",
+   "NXDOMAIN",
+   "NODATA",
+   "Empty Non-Terminal"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Compact Denial of Existence in DNSSEC",
+  "wg": "dnsop"
+ },
  "RFC9825": {
   "area": "rtg",
   "keywords": [],
@@ -115988,6 +116007,16 @@
   "stream": "ietf",
   "title": "Unicode Character Repertoire Subsets"
  },
+ "RFC9840": {
+  "keywords": [
+   "Congestion control",
+   "scavenger/less-than-best-effort traffic"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "irtf",
+  "title": "rLEDBAT: Receiver-Driven Low Extra Delay Background Transport for TCP"
+ },
  "RFC9843": {
   "area": "rtg",
   "keywords": [
@@ -116008,5 +116037,18 @@
   "stream": "ietf",
   "title": "Entering IPv6 Zone Identifiers in User Interfaces",
   "wg": "6man"
+ },
+ "RFC9879": {
+  "area": "sec",
+  "keywords": [
+   "pbmac1",
+   "pkcs12",
+   "pbkdf2"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of Password-Based Message Authentication Code 1 (PBMAC1) in PKCS #12 Syntax",
+  "wg": "lamps"
  }
 }
