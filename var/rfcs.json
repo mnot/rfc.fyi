@@ -116038,6 +116038,22 @@
   "title": "Entering IPv6 Zone Identifiers in User Interfaces",
   "wg": "6man"
  },
+ "RFC9856": {
+  "area": "rtg",
+  "keywords": [
+   "Warm standby",
+   "hot standby",
+   "OISM",
+   "redundant G-source",
+   "SFG",
+   "Single Flow Group"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multicast Source Redundancy in EVPNs",
+  "wg": "bess"
+ },
  "RFC9879": {
   "area": "sec",
   "keywords": [
