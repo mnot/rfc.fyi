@@ -116054,6 +116054,31 @@
   "title": "Multicast Source Redundancy in EVPNs",
   "wg": "bess"
  },
+ "RFC9859": {
+  "area": "ops",
+  "keywords": [
+   "Delegation",
+   "Automation",
+   "DS",
+   "DNSSEC"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Generalized DNS Notifications",
+  "wg": "dnsop"
+ },
+ "RFC9874": {
+  "area": "art",
+  "keywords": [
+   "EPP"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Best Practices for Deletion of Domain and Host Objects in the Extensible Provisioning Protocol (EPP)",
+  "wg": "regext"
+ },
  "RFC9879": {
   "area": "sec",
   "keywords": [
