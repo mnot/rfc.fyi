@@ -115981,6 +115981,102 @@
   "title": "BGP Classful Transport Planes",
   "wg": "idr"
  },
+ "RFC9833": {
+  "area": "ops",
+  "keywords": [
+   "Slice Service",
+   "L3VPN",
+   "L2VPN",
+   "Automation",
+   "Network Automation",
+   "Orchestration",
+   "service delivery",
+   "Service provisioning",
+   "service segmentation",
+   "service flexibility",
+   "service simplification",
+   "Network Service",
+   "3GPP",
+   "Network Slicing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Common YANG Data Model for Attachment Circuits",
+  "wg": "opsawg"
+ },
+ "RFC9834": {
+  "area": "ops",
+  "keywords": [
+   "Slice Service",
+   "L3VPN",
+   "L2VPN",
+   "Automation",
+   "Network Automation",
+   "Orchestration",
+   "service delivery",
+   "Service provisioning",
+   "service segmentation",
+   "service flexibility",
+   "service simplification",
+   "Network Service",
+   "3GPP",
+   "Network Slicing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Data Models for Bearers and Attachment Circuits as a Service (ACaaS)",
+  "wg": "opsawg"
+ },
+ "RFC9835": {
+  "area": "ops",
+  "keywords": [
+   "Slice Service",
+   "L3VPN",
+   "L2VPN",
+   "Automation",
+   "Network Automation",
+   "Orchestration",
+   "service delivery",
+   "Service provisioning",
+   "service segmentation",
+   "service flexibility",
+   "service simplification",
+   "Network Service",
+   "3GPP",
+   "Network Slicing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Network YANG Data Model for Attachment Circuits",
+  "wg": "opsawg"
+ },
+ "RFC9836": {
+  "area": "ops",
+  "keywords": [
+   "Slice Service",
+   "L3VPN",
+   "L2VPN",
+   "Automation",
+   "Network Automation",
+   "Orchestration",
+   "service delivery",
+   "Service provisioning",
+   "service segmentation",
+   "service flexibility",
+   "service simplification",
+   "Network Service",
+   "3GPP",
+   "Network Slicing"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Augmenting VPN Service and Network Models with Attachment Circuits",
+  "wg": "opsawg"
+ },
  "RFC9837": {
   "area": "int",
   "keywords": [
