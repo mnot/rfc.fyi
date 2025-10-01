@@ -116113,6 +116113,29 @@
   "stream": "irtf",
   "title": "rLEDBAT: Receiver-Driven Low Extra Delay Background Transport for TCP"
  },
+ "RFC9841": {
+  "keywords": [
+   "dictionary compression lz77"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Shared Brotli Compressed Data Format"
+ },
+ "RFC9842": {
+  "area": "wit",
+  "keywords": [
+   "compression dictionary",
+   "shared brotli",
+   "zstandard dictionary",
+   "delta compression"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Compression Dictionary Transport",
+  "wg": "httpbis"
+ },
  "RFC9843": {
   "area": "rtg",
   "keywords": [
@@ -116163,6 +116186,21 @@
   "stream": "ietf",
   "title": "Generalized DNS Notifications",
   "wg": "dnsop"
+ },
+ "RFC9872": {
+  "area": "ops",
+  "keywords": [
+   "IPv6",
+   "DNS64",
+   "PREF64",
+   "NAT64",
+   "CLAT"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Recommendations for Discovering IPv6 Prefix Used for IPv6 Address Synthesis",
+  "wg": "v6ops"
  },
  "RFC9874": {
   "area": "art",
