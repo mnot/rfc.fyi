@@ -116157,6 +116157,13 @@
   "title": "Entering IPv6 Zone Identifiers in User Interfaces",
   "wg": "6man"
  },
+ "RFC9845": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Challenges and Opportunities in Management for Green Networking"
+ },
  "RFC9856": {
   "area": "rtg",
   "keywords": [
@@ -116186,6 +116193,52 @@
   "stream": "ietf",
   "title": "Generalized DNS Notifications",
   "wg": "dnsop"
+ },
+ "RFC9866": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Root Node Failure Detector (RNFD): Fast Detection of Border Router Crashes in the Routing Protocol for Low-Power and Lossy Networks (RPL)",
+  "wg": "roll"
+ },
+ "RFC9868": {
+  "area": "wit",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Transport Options for UDP",
+  "wg": "tsvwg"
+ },
+ "RFC9869": {
+  "area": "wit",
+  "keywords": [
+   "UDP",
+   "UDP-Options",
+   "PMTUD",
+   "PLPMTUD",
+   "DPLPMTUD",
+   "Datagram"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Datagram Packetization Layer Path MTU Discovery (DPLPMTUD) for UDP Options",
+  "wg": "tsvwg"
+ },
+ "RFC9870": {
+  "area": "ops",
+  "keywords": [
+   "surplus area",
+   "UDP options"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Export of UDP Options Information in IP Flow Information Export (IPFIX)",
+  "wg": "opsawg"
  },
  "RFC9872": {
   "area": "ops",
