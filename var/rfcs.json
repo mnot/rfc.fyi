@@ -116194,6 +116194,15 @@
   "title": "Generalized DNS Notifications",
   "wg": "dnsop"
  },
+ "RFC9865": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Cursor-Based Pagination of System of Cross-domain Identity Management (SCIM) Resources",
+  "wg": "scim"
+ },
  "RFC9866": {
   "area": "rtg",
   "keywords": [],
