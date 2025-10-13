@@ -116180,6 +116180,13 @@
   "title": "Multicast Source Redundancy in EVPNs",
   "wg": "bess"
  },
+ "RFC9858": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "Additional Parameter Sets for HSS/LMS Hash-Based Signatures"
+ },
  "RFC9859": {
   "area": "ops",
   "keywords": [
@@ -116193,6 +116200,20 @@
   "stream": "ietf",
   "title": "Generalized DNS Notifications",
   "wg": "dnsop"
+ },
+ "RFC9861": {
+  "keywords": [
+   "Keccak",
+   "Sakura",
+   "KangarooTwelve",
+   "TurboSHAKE",
+   "Cryptographic Hash",
+   "eXtendable Output Function"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "irtf",
+  "title": "KangarooTwelve and TurboSHAKE"
  },
  "RFC9865": {
   "area": "sec",
@@ -116264,6 +116285,15 @@
   "title": "Recommendations for Discovering IPv6 Prefix Used for IPv6 Address Synthesis",
   "wg": "v6ops"
  },
+ "RFC9873": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Additional Email Address Extension for the Extensible Provisioning Protocol (EPP)",
+  "wg": "regext"
+ },
  "RFC9874": {
   "area": "art",
   "keywords": [
@@ -116273,6 +116303,15 @@
   "status": "current",
   "stream": "ietf",
   "title": "Best Practices for Deletion of Domain and Host Objects in the Extensible Provisioning Protocol (EPP)",
+  "wg": "regext"
+ },
+ "RFC9877": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration Data Access Protocol (RDAP) Extension for Geofeed Data",
   "wg": "regext"
  },
  "RFC9879": {
@@ -116286,6 +116325,17 @@
   "status": "current",
   "stream": "ietf",
   "title": "Use of Password-Based Message Authentication Code 1 (PBMAC1) in PKCS #12 Syntax",
+  "wg": "lamps"
+ },
+ "RFC9883": {
+  "area": "sec",
+  "keywords": [
+   "PKCS#10"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Attribute for Statement of Possession of a Private Key",
   "wg": "lamps"
  }
 }
