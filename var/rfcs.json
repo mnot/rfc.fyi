@@ -115773,6 +115773,15 @@
   "title": "Internet X.509 Public Key Infrastructure -- HTTP Transfer for the Certificate Management Protocol (CMP)",
   "wg": "lamps"
  },
+ "RFC9812": {
+  "area": "int",
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clarification of IPv6 Address Allocation Policy",
+  "wg": "6man"
+ },
  "RFC9813": {
   "area": "sec",
   "keywords": [],
