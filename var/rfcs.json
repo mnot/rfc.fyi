@@ -100,7 +100,7 @@
  "RFC0016": {
   "keywords": [],
   "level": "unknown",
-  "status": "obsoleted",
+  "status": "current",
   "stream": "legacy",
   "title": "M.I.T"
  },
@@ -1334,7 +1334,7 @@
  "RFC0193": {
   "keywords": [],
   "level": "unknown",
-  "status": "obsoleted",
+  "status": "current",
   "stream": "legacy",
   "title": "NETWORK CHECKOUT"
  },
@@ -1903,7 +1903,7 @@
  "RFC0288": {
   "keywords": [],
   "level": "unknown",
-  "status": "obsoleted",
+  "status": "current",
   "stream": "legacy",
   "title": "Network host status"
  },
