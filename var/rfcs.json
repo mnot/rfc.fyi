@@ -116173,6 +116173,24 @@
   "stream": "irtf",
   "title": "Challenges and Opportunities in Management for Green Networking"
  },
+ "RFC9855": {
+  "area": "rtg",
+  "keywords": [
+   "TILFA",
+   "LFA",
+   "FRR",
+   "fast reroute",
+   "recovery",
+   "SR",
+   "protection",
+   "convergence"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Topology Independent Fast Reroute Using Segment Routing",
+  "wg": "rtgwg"
+ },
  "RFC9856": {
   "area": "rtg",
   "keywords": [
@@ -116209,6 +116227,24 @@
   "stream": "ietf",
   "title": "Generalized DNS Notifications",
   "wg": "dnsop"
+ },
+ "RFC9860": {
+  "area": "rtg",
+  "keywords": [
+   "PIM",
+   "MoFRR",
+   "LFA",
+   "TI-LFA",
+   "SR-MPLS",
+   "SRv6",
+   "RPF Vector",
+   "Join attribute"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multicast-Only Fast Reroute (MoFRR) Based on Topology Independent Loop-Free Alternate (TI-LFA) Fast Reroute",
+  "wg": "pim"
  },
  "RFC9861": {
   "keywords": [
@@ -116346,5 +116382,18 @@
   "stream": "ietf",
   "title": "An Attribute for Statement of Possession of a Private Key",
   "wg": "lamps"
+ },
+ "RFC9890": {
+  "area": "ops",
+  "keywords": [
+   "NETCONF",
+   "RESTCONF",
+   "Automation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Update to YANG Module Names Registration",
+  "wg": "netmod"
  }
 }
