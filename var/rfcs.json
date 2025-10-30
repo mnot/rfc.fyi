@@ -116173,6 +116173,19 @@
   "stream": "irtf",
   "title": "Challenges and Opportunities in Management for Green Networking"
  },
+ "RFC9854": {
+  "area": "rtg",
+  "keywords": [
+   "AODV",
+   "Peer-to-Peer Route Discovery",
+   "Asymmetric"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "AODV-RPL: The Routing Protocol for Low-Power and Lossy Networks (RPL) Based on Ad Hoc On-Demand Distance Vector (AODV) Routing",
+  "wg": "roll"
+ },
  "RFC9855": {
   "area": "rtg",
   "keywords": [
@@ -116206,6 +116219,25 @@
   "stream": "ietf",
   "title": "Multicast Source Redundancy in EVPNs",
   "wg": "bess"
+ },
+ "RFC9857": {
+  "area": "rtg",
+  "keywords": [
+   "BGP",
+   "BGP-LS",
+   "Segment Routing",
+   "SR",
+   "SR Policy",
+   "SR-MPLS",
+   "SRv6",
+   "Traffic Engineering",
+   "BGP SR Policy"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Advertisement of Segment Routing Policies Using BGP - Link State",
+  "wg": "idr"
  },
  "RFC9858": {
   "keywords": [],
@@ -116259,6 +116291,30 @@
   "status": "current",
   "stream": "irtf",
   "title": "KangarooTwelve and TurboSHAKE"
+ },
+ "RFC9862": {
+  "area": "rtg",
+  "keywords": [
+   "PCEP",
+   "SR Policy",
+   "Candidate Path"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Communication Protocol (PCEP) Extensions for Segment Routing (SR) Policy Candidate Paths",
+  "wg": "pce"
+ },
+ "RFC9863": {
+  "area": "rtg",
+  "keywords": [
+   "color"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Path Computation Element Protocol (PCEP) Extension for Color",
+  "wg": "pce"
  },
  "RFC9865": {
   "area": "sec",
@@ -116372,6 +116428,33 @@
   "title": "Use of Password-Based Message Authentication Code 1 (PBMAC1) in PKCS #12 Syntax",
   "wg": "lamps"
  },
+ "RFC9881": {
+  "area": "sec",
+  "keywords": [
+   "ML-DSA",
+   "Certificate",
+   "X.509",
+   "PKIX"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the Module-Lattice-Based Digital Signature Algorithm (ML-DSA)",
+  "wg": "lamps"
+ },
+ "RFC9882": {
+  "area": "sec",
+  "keywords": [
+   "cms",
+   "ml-dsa",
+   "dilithium"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of the ML-DSA Signature Algorithm in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
+ },
  "RFC9883": {
   "area": "sec",
   "keywords": [
@@ -116382,6 +116465,27 @@
   "stream": "ietf",
   "title": "An Attribute for Statement of Possession of a Private Key",
   "wg": "lamps"
+ },
+ "RFC9884": {
+  "area": "rtg",
+  "keywords": [
+   "Target FEC Stack",
+   "PSID"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Label Switched Path Ping for Segment Routing Path Segment Identifier with MPLS Data Plane",
+  "wg": "mpls"
+ },
+ "RFC9885": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Multi-Part TLVs in IS-IS",
+  "wg": "lsr"
  },
  "RFC9890": {
   "area": "ops",
