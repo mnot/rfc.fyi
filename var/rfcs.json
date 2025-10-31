@@ -116316,6 +116316,21 @@
   "title": "Path Computation Element Protocol (PCEP) Extension for Color",
   "wg": "pce"
  },
+ "RFC9864": {
+  "area": "sec",
+  "keywords": [
+   "Cryptographic Algorithm Identifiers",
+   "JSON Object Signing and Encryption (JOSE)",
+   "CBOR Object Signing and Encryption (COSE)",
+   "Polymorphic Algorithms",
+   "Algorithm Cipher Suites"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Fully-Specified Algorithms for JSON Object Signing and Encryption (JOSE) and CBOR Object Signing and Encryption (COSE)",
+  "wg": "jose"
+ },
  "RFC9865": {
   "area": "sec",
   "keywords": [],
@@ -116405,6 +116420,19 @@
   "stream": "ietf",
   "title": "Best Practices for Deletion of Domain and Host Objects in the Extensible Provisioning Protocol (EPP)",
   "wg": "regext"
+ },
+ "RFC9875": {
+  "area": "wit",
+  "keywords": [
+   "HTTP",
+   "Caching",
+   "Invalidation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "HTTP Cache Groups",
+  "wg": "httpbis"
  },
  "RFC9877": {
   "area": "art",
