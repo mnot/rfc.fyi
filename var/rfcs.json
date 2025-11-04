@@ -16387,7 +16387,7 @@
   ],
   "level": "informational",
   "status": "current",
-  "stream": "legacy",
+  "stream": "ietf",
   "title": "IPv6 Address Allocation Management"
  },
  "RFC1882": {
