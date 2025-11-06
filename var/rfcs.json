@@ -74121,7 +74121,7 @@
   "area": "sec",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The Group Domain of Interpretation",
   "wg": "msec"
@@ -115922,6 +115922,21 @@
   "title": "A YANG Data Model for the Path Computation Element Communication Protocol (PCEP)",
   "wg": "pce"
  },
+ "RFC9827": {
+  "area": "sec",
+  "keywords": [
+   "replay protection",
+   "anti-replay",
+   "IPsec",
+   "ESP",
+   "AH"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Renaming the Extended Sequence Numbers (ESN) Transform Type in the Internet Key Exchange Protocol Version 2 (IKEv2)",
+  "wg": "ipsecme"
+ },
  "RFC9828": {
   "area": "wit",
   "keywords": [
@@ -116098,6 +116113,15 @@
   "stream": "ietf",
   "title": "The IPv6 VPN Service Destination Option",
   "wg": "6man"
+ },
+ "RFC9838": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Group Key Management Using the Internet Key Exchange Protocol Version 2 (IKEv2)",
+  "wg": "ipsecme"
  },
  "RFC9839": {
   "keywords": [
@@ -116349,6 +116373,22 @@
   "title": "Root Node Failure Detector (RNFD): Fast Detection of Border Router Crashes in the Routing Protocol for Low-Power and Lossy Networks (RPL)",
   "wg": "roll"
  },
+ "RFC9867": {
+  "area": "sec",
+  "keywords": [
+   "internet key exchange",
+   "quantum computer",
+   "post quantum",
+   "post-quantum",
+   "quantum safe",
+   "PPK"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Mixing Preshared Keys in the IKE_INTERMEDIATE and CREATE_CHILD_SA Exchanges of the Internet Key Exchange Protocol Version 2 (IKEv2) for Post-Quantum Security",
+  "wg": "ipsecme"
+ },
  "RFC9868": {
   "area": "wit",
   "keywords": [],
@@ -116434,6 +116474,21 @@
   "title": "HTTP Cache Groups",
   "wg": "httpbis"
  },
+ "RFC9876": {
+  "area": "wit",
+  "keywords": [
+   "IANA",
+   "registration",
+   "update",
+   "CoAP",
+   "Content-Format"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to the IANA Registration Procedures for Constrained Application Protocol (CoAP) Content-Formats",
+  "wg": "core"
+ },
  "RFC9877": {
   "area": "art",
   "keywords": [],
@@ -116514,6 +116569,19 @@
   "stream": "ietf",
   "title": "Multi-Part TLVs in IS-IS",
   "wg": "lsr"
+ },
+ "RFC9889": {
+  "area": "rtg",
+  "keywords": [
+   "L3VPN",
+   "L2VPN",
+   "Slice Service"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Realization of Network Slices for 5G Networks Using Current IP/MPLS Technologies",
+  "wg": "teas"
  },
  "RFC9890": {
   "area": "ops",
