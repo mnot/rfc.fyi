@@ -92626,7 +92626,7 @@
    "IMS"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Updates to Private Header (P-Header) Extension Usage in Session Initiation Protocol (SIP) Requests and Responses"
  },
@@ -116498,6 +116498,22 @@
   "title": "Registration Data Access Protocol (RDAP) Extension for Geofeed Data",
   "wg": "regext"
  },
+ "RFC9878": {
+  "area": "art",
+  "keywords": [
+   "3GPP",
+   "Visited",
+   "ID",
+   "P-",
+   "3GPP",
+   "IMS"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to Private Header (P-Header) Extension Usage in Session Initiation Protocol (SIP) Requests and Responses",
+  "wg": "sipcore"
+ },
  "RFC9879": {
   "area": "sec",
   "keywords": [
@@ -116595,5 +116611,18 @@
   "stream": "ietf",
   "title": "An Update to YANG Module Names Registration",
   "wg": "netmod"
+ },
+ "RFC9901": {
+  "area": "sec",
+  "keywords": [
+   "security",
+   "oauth2",
+   "SD-JWT"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Selective Disclosure for JSON Web Tokens",
+  "wg": "oauth"
  }
 }
