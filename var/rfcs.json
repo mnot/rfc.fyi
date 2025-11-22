@@ -116426,6 +116426,21 @@
   "title": "Export of UDP Options Information in IP Flow Information Export (IPFIX)",
   "wg": "opsawg"
  },
+ "RFC9871": {
+  "area": "rtg",
+  "keywords": [
+   "intent-aware routing",
+   "intent-based routing",
+   "color-aware VPNs",
+   "color-aware BGP transport",
+   "BGP extensible NLRI"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Color-Aware Routing (CAR)",
+  "wg": "idr"
+ },
  "RFC9872": {
   "area": "ops",
   "keywords": [
@@ -116611,6 +116626,33 @@
   "stream": "ietf",
   "title": "An Update to YANG Module Names Registration",
   "wg": "netmod"
+ },
+ "RFC9891": {
+  "area": "sec",
+  "keywords": [
+   "ACME",
+   "DTN"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Automated Certificate Management Environment (ACME) Delay-Tolerant Networking (DTN) Node ID Validation Extension",
+  "wg": "acme"
+ },
+ "RFC9898": {
+  "area": "ops",
+  "keywords": [
+   "ND",
+   "NDP",
+   "SLACC",
+   "DHCPv6-PD",
+   "host isolation"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Neighbor Discovery Considerations in IPv6 Deployments",
+  "wg": "v6ops"
  },
  "RFC9901": {
   "area": "sec",
