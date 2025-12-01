@@ -100523,7 +100523,7 @@
   "area": "ops",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Algorithm Implementation Requirements and Usage Guidance for DNSSEC",
   "wg": "dnsop"
@@ -116666,5 +116666,51 @@
   "stream": "ietf",
   "title": "Selective Disclosure for JSON Web Tokens",
   "wg": "oauth"
+ },
+ "RFC9904": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "DNSSEC",
+   "rollover",
+   "agility"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNSSEC Cryptographic Algorithm Recommendation Update Process",
+  "wg": "dnsop"
+ },
+ "RFC9905": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "DNSSEC",
+   "rollover",
+   "agility",
+   "algorithm",
+   "SHA1"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecating the Use of SHA-1 in DNSSEC Signature Algorithms",
+  "wg": "dnsop"
+ },
+ "RFC9906": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "DNSSEC",
+   "GOST",
+   "algorithm",
+   "rollover",
+   "agility"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Deprecate Usage of ECC-GOST within DNSSEC",
+  "wg": "dnsop"
  }
 }
