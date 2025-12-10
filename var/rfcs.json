@@ -116601,6 +116601,17 @@
   "title": "Multi-Part TLVs in IS-IS",
   "wg": "lsr"
  },
+ "RFC9887": {
+  "area": "ops",
+  "keywords": [
+   "TACACS+"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Terminal Access Controller Access-Control System Plus (TACACS+) over TLS 1.3",
+  "wg": "opsawg"
+ },
  "RFC9889": {
   "area": "rtg",
   "keywords": [
@@ -116654,6 +116665,19 @@
   "title": "Neighbor Discovery Considerations in IPv6 Deployments",
   "wg": "v6ops"
  },
+ "RFC9900": {
+  "area": "ops",
+  "keywords": [
+   "de-assign",
+   "deallocate",
+   "release"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to NETCONF Transport Port Numbers",
+  "wg": "netconf"
+ },
  "RFC9901": {
   "area": "sec",
   "keywords": [
@@ -116666,6 +116690,24 @@
   "stream": "ietf",
   "title": "Selective Disclosure for JSON Web Tokens",
   "wg": "oauth"
+ },
+ "RFC9902": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for IS-IS Segment Routing over the MPLS Data Plane",
+  "wg": "lsr"
+ },
+ "RFC9903": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for OSPF Segment Routing over the MPLS Data Plane",
+  "wg": "lsr"
  },
  "RFC9904": {
   "area": "ops",
