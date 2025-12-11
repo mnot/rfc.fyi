@@ -71,6 +71,7 @@ export default class RfcData {
     this.allRfcs.forEach(rfcName => {
       this.inRefs[rfcName] = []
     })
+    this.obsoleteRefs = new Map()
     this.refs.forEach(rfcNum => {
       const rfcName = this.rfcNumtoName(rfcNum)
       const rfcRefs = this.refs.get(rfcNum, {})
@@ -91,6 +92,29 @@ export default class RfcData {
         }
       })
     })
+
+    this.allRfcs.forEach(rfcName => {
+      this.calculateObsoleteRefs(rfcName)
+    })
+  }
+
+  calculateObsoleteRefs(rfcName) {
+    if (this.obsoleteRefs.has(rfcName)) {
+      return this.obsoleteRefs.get(rfcName)
+    }
+    const rfc = this.rfcs[rfcName]
+    if (!rfc) {
+      return 0
+    }
+    let count = this.inRefs[rfcName] ? this.inRefs[rfcName].length : 0
+    // console.log(`Calc ${rfcName}: direct refs = ${count}`)
+    if (rfc.obsoletes) {
+      rfc.obsoletes.forEach(obsoleteRfc => {
+        count += this.calculateObsoleteRefs(obsoleteRfc)
+      })
+    }
+    this.obsoleteRefs.set(rfcName, count)
+    return count
   }
 
   searchRfcs (searchWords) {

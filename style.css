@@ -190,6 +190,13 @@ h2 {
   white-space: nowrap;
 }
 
+.sort-active {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  cursor: default;
+}
+
 @media all and (max-width: 800px) {
   #container {
     flex-direction: column;

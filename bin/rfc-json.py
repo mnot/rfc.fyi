@@ -16,7 +16,7 @@ except IndexError:
 class RfcIndexHandler(xml.sax.handler.ContentHandler):
     entry_tags = ["rfc-entry"]
     interesting_tags = ["title", "current-status", "stream", "area", "wg_acronym"]
-    invisible_tags = ["obsoleted-by", "is-also"]
+    invisible_tags = ["obsoleted-by", "is-also", "obsoletes"]
 
     def __init__(self):
         self.feature_namespaces = True
@@ -50,7 +50,12 @@ class RfcIndexHandler(xml.sax.handler.ContentHandler):
                 self.entry[tag] = self.content.strip()
 
         elif tag == "doc-id" and self.tags[-1] in self.invisible_tags:
-            self.entry[self.tags[-1]] = self.content.strip()
+            if self.tags[-1] == "obsoletes":
+                if "obsoletes" not in self.entry:
+                    self.entry["obsoletes"] = []
+                self.entry["obsoletes"].append(self.content.strip())
+            else:
+                self.entry[self.tags[-1]] = self.content.strip()
 
         elif tag == "kw" and self.tags[-1] == "keywords":
             if "keywords" in self.entry:
@@ -87,6 +92,8 @@ def fixup(raw):
             output[key]["wg"] = value["wg_acronym"]
         if "area" in value:
             output[key]["area"] = value["area"]
+        if "obsoletes" in value:
+            output[key]["obsoletes"] = value["obsoletes"]
     return output
 
 

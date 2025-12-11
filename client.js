@@ -47,7 +47,7 @@ class RfcFyiUi {
 
   installClickHandlers () {
     const sortByNum = document.getElementById('sortByNumber')
-    sortByNum.onclick = (event) => { this.showRfcs(); return false }
+    sortByNum.onclick = (event) => { this.showRfcs(false); return false }
     const sortByRefs = document.getElementById('sortByRefs')
     sortByRefs.onclick = (event) => { this.showRfcs(true); return false }
   }
@@ -69,8 +69,17 @@ class RfcFyiUi {
     ui.showRfcs()
   }
 
-  showRfcs (sortByRef) {
+  showRfcs (sortByRef = true) {
     const target = document.getElementById('rfc-list')
+    const sortNum = document.getElementById('sortByNumber')
+    const sortRef = document.getElementById('sortByRefs')
+    if (sortByRef) {
+      sortNum.classList.remove('sort-active')
+      sortRef.classList.add('sort-active')
+    } else {
+      sortNum.classList.add('sort-active')
+      sortRef.classList.remove('sort-active')
+    }
     this.clear(target)
     let searchedRfcs = new Set()
     let taggedRfcs = new Set()
@@ -150,7 +159,7 @@ class RfcFyiUi {
     if (rfcData.wg) {
       this.renderTag('wg', rfcData.wg, rfcSpan)
     }
-    const refCount = data.inRefs.get(rfcName, []).length
+    const refCount = data.obsoleteRefs.get(rfcName)
     if (hideRefs !== true && refCount > 0) {
       const refSpan = document.createElement('span')
       refSpan.className = 'refcount'
@@ -158,7 +167,7 @@ class RfcFyiUi {
       refCountLink.href = '#'
       refCountLink.className = 'refcountlink'
       refCountLink.onclick = this.refExpandHandler
-      const refCountText = document.createTextNode(`${refCount} referencing RFC${this.pluralise(refCount)}`)
+      const refCountText = document.createTextNode(`${refCount.toLocaleString()} referencing RFC${this.pluralise(refCount)}`)
       refCountLink.appendChild(refCountText)
       refSpan.appendChild(refCountLink)
       rfcSpan.appendChild(refSpan)
@@ -342,7 +351,7 @@ class RfcFyiUi {
   }
 
   refSort (a, b) {
-    return data.inRefs.get(b, []).length - data.inRefs.get(a, []).length
+    return data.obsoleteRefs.get(b) - data.obsoleteRefs.get(a)
   }
 
   pluralise (num) {
