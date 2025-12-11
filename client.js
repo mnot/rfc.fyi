@@ -87,8 +87,8 @@ class RfcFyiUi {
     let rfcList = []
     let userInput = false
     if (this.activeTags.size !== 0 ||
-        (this.searchWords.length !== 0 && !isNaN(parseInt(this.searchWords[0]))) ||
-        (this.searchWords.length !== 0 && this.searchWords[0].length >= data.prefixLen)) {
+      (this.searchWords.length !== 0 && !isNaN(parseInt(this.searchWords[0]))) ||
+      (this.searchWords.length !== 0 && this.searchWords[0].length >= data.prefixLen)) {
       userInput = true
       searchedRfcs = data.searchRfcs(this.searchWords)
       taggedRfcs = data.listTaggedRfcs(this.activeTags)
@@ -179,7 +179,7 @@ class RfcFyiUi {
     const refList = document.createElement('ul')
     const rfcElement = event.target.parentElement.parentElement
     const rfcName = data.rfcNumtoName(rfcElement.num)
-    const rfcRefs = data.inRefs.get(rfcName, [])
+    const rfcRefs = data.getObsoleteRefs(rfcName)
     rfcRefs.forEach(ref => {
       //    const normative = ref[0]
       const refName = ref[1]

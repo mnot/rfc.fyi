@@ -117,6 +117,20 @@ export default class RfcData {
     return count
   }
 
+  getObsoleteRefs (rfcName) {
+    const rfc = this.rfcs[rfcName]
+    if (!rfc) {
+      return []
+    }
+    let refs = this.inRefs[rfcName] ? [...this.inRefs[rfcName]] : []
+    if (rfc.obsoletes) {
+      rfc.obsoletes.forEach(obsoleteRfc => {
+        refs = refs.concat(this.getObsoleteRefs(obsoleteRfc))
+      })
+    }
+    return refs
+  }
+
   searchRfcs (searchWords) {
     let filteredRfcs = new Set(this.allRfcs)
     searchWords.forEach(searchWord => {
