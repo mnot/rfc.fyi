@@ -48221,7 +48221,7 @@
  "RFC4113": {
   "area": "int",
   "keywords": [
-   "MIB-UDP|p",
+   "MIB-UDP",
    "mib",
    "Management Information Base",
    "UDP-MIB",
@@ -83138,7 +83138,7 @@
    "self clock"
   ],
   "level": "experimental",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Proportional Rate Reduction for TCP",
   "wg": "tcpm"
@@ -120791,5 +120791,23 @@
   "stream": "ietf",
   "title": "Deprecate Usage of ECC-GOST within DNSSEC",
   "wg": "dnsop"
+ },
+ "RFC9937": {
+  "area": "wit",
+  "keywords": [
+   "loss recovery",
+   "SACK",
+   "self clock",
+   "fast retransmit",
+   "fast recovery"
+  ],
+  "level": "std",
+  "obsoletes": [
+   "RFC6937"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "Proportional Rate Reduction (PRR)",
+  "wg": "tcpm"
  }
 }
