@@ -83746,7 +83746,7 @@
   "obsoletes": [
    "RFC6021"
   ],
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Common YANG Data Types",
   "wg": "netmod"
@@ -120699,6 +120699,24 @@
   "title": "Neighbor Discovery Considerations in IPv6 Deployments",
   "wg": "v6ops"
  },
+ "RFC9899": {
+  "area": "ops",
+  "keywords": [
+   "filtering",
+   "security",
+   "authorization",
+   "match",
+   "packet identification",
+   "scrubbing",
+   "packet pattern",
+   "payload filtering"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Extensions to the YANG Data Model for Access Control Lists (ACLs)",
+  "wg": "netmod"
+ },
  "RFC9900": {
   "area": "ops",
   "keywords": [
@@ -120791,6 +120809,38 @@
   "stream": "ietf",
   "title": "Deprecate Usage of ECC-GOST within DNSSEC",
   "wg": "dnsop"
+ },
+ "RFC9909": {
+  "area": "sec",
+  "keywords": [
+   "SLH-DSA",
+   "SPHINCS+",
+   "PQ Signatures",
+   "post-quantum X.509"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the Stateless Hash-Based Digital Signature Algorithm (SLH-DSA)",
+  "wg": "lamps"
+ },
+ "RFC9911": {
+  "area": "ops",
+  "keywords": [
+   "yang",
+   "data types",
+   "address types",
+   "time types",
+   "date types"
+  ],
+  "level": "std",
+  "obsoletes": [
+   "RFC6991"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "Common YANG Data Types",
+  "wg": "netmod"
  },
  "RFC9937": {
   "area": "wit",
