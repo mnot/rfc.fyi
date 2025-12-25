@@ -120225,6 +120225,15 @@
   "stream": "irtf",
   "title": "Challenges and Opportunities in Management for Green Networking"
  },
+ "RFC9847": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IANA Registry Updates for TLS and DTLS",
+  "wg": "tls"
+ },
  "RFC9854": {
   "area": "rtg",
   "keywords": [
@@ -120634,6 +120643,15 @@
   "stream": "ietf",
   "title": "Multi-Part TLVs in IS-IS",
   "wg": "lsr"
+ },
+ "RFC9886": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DRIP Entity Tags (DETs) in the Domain Name System",
+  "wg": "drip"
  },
  "RFC9887": {
   "area": "ops",
