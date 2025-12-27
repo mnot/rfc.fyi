@@ -1,15 +1,46 @@
+:root {
+  --bg-color: #fcfcfc;
+  --text-main: #111;
+  --text-muted: #666;
+  --text-faint: #999;
+  --text-ref: black;
+  --link-color: #0000EE;
+  --border-main: #111;
+  --accent-dot: #c9bc38;
+  --accent-close: #c99;
+  --icon-fill: #aaa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #222;
+    --text-main: #ddd;
+    --text-muted: #aaa;
+    --text-faint: #777;
+    --text-ref: #ddd;
+    --link-color: #8ab4f8;
+    --border-main: #ddd;
+    --accent-dot: #e6db74;
+    --accent-close: #e06c75;
+    --icon-fill: #777;
+  }
+}
+
 body {
-  background-color: #fcfcfc;
-  color: #111;
+  background-color: var(--bg-color);
+  color: var(--text-main);
   font: 12pt/14pt "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 1em 5%;
   width: 90%;
   max-width: 1200px;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
   background-color: transparent;
+  color: var(--link-color);
 }
 
 #container {
@@ -43,14 +74,14 @@ a:link, a:visited, a:active {
 }
 
 .start {
-    margin: 3em 15%;
-    width: 70%;
-    text-align: center;
-    color: #666;
+  margin: 3em 15%;
+  width: 70%;
+  text-align: center;
+  color: var(--text-muted);
 }
 
 .results .start {
-    display: none;
+  display: none;
 }
 
 #main {
@@ -60,7 +91,7 @@ a:link, a:visited, a:active {
 }
 
 #count {
-  color: #999;
+  color: var(--text-faint);
   font-size: 75%;
 }
 
@@ -96,6 +127,9 @@ li ul {
 input#search {
   width: 95%;
   font-size: 18px;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  border: 1px solid var(--text-faint);
 }
 
 .control {
@@ -106,7 +140,8 @@ input#search {
   display: none;
 }
 
-.tag, .tag-active {
+.tag,
+.tag-active {
   display: inline;
   padding: .25em .6em;
   font-size: 75%;
@@ -122,7 +157,7 @@ input#search {
 }
 
 .tag-active {
-  border: 1px solid #111;
+  border: 1px solid var(--border-main);
 }
 
 li .tag {
@@ -135,15 +170,15 @@ h1 {
   text-align: center;
   margin: 1em 0;
   cursor: pointer;
-  user-select:none;
+  user-select: none;
 }
 
 h1 .dot {
-  color: #c9bc38;
+  color: var(--accent-dot);
 }
 
 h1 .fyi {
-  color: #999;
+  color: var(--text-faint);
 }
 
 h2 {
@@ -158,8 +193,8 @@ h2 {
   right: 5%;
   z-index: 100;
   cursor: pointer;
-  user-select:none;
-  color: #c99;
+  user-select: none;
+  color: var(--accent-close);
 }
 
 .noresults #clearSearch {
@@ -173,14 +208,15 @@ h2 {
 }
 
 .octicon {
-  fill: #aaa;
+  fill: var(--icon-fill);
 }
 
 .reference {
-  color: black;
+  color: var(--text-ref);
 }
 
-.status-obsoleted .reference, .level-historic .reference {
+.status-obsoleted .reference,
+.level-historic .reference {
   text-decoration: line-through;
 }
 
@@ -192,7 +228,7 @@ h2 {
 
 .sort-active {
   font-weight: bold;
-  color: #000;
+  color: var(--text-main);
   text-decoration: none;
   cursor: default;
 }
@@ -215,7 +251,8 @@ h2 {
     margin: 0;
   }
 
-  .start, .noresults .tags {
+  .start,
+  .noresults .tags {
     width: 100%;
     margin: 1em 0;
   }
