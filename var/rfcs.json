@@ -120828,6 +120828,20 @@
   "title": "Deprecate Usage of ECC-GOST within DNSSEC",
   "wg": "dnsop"
  },
+ "RFC9908": {
+  "area": "sec",
+  "keywords": [
+   "SubjectAltName",
+   "SAN",
+   "Certificate Extensions",
+   "Certificate Signing Request"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clarification and Enhancement of the CSR Attributes Definition in RFC 7030",
+  "wg": "lamps"
+ },
  "RFC9909": {
   "area": "sec",
   "keywords": [
