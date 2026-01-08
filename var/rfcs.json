@@ -120702,6 +120702,26 @@
   "title": "Automated Certificate Management Environment (ACME) Delay-Tolerant Networking (DTN) Node ID Validation Extension",
   "wg": "acme"
  },
+ "RFC9897": {
+  "area": "wit",
+  "keywords": [
+   "dccp",
+   "extensions",
+   "multipath",
+   "multihomed",
+   "subflow",
+   "concurrent",
+   "simultaneous",
+   "mobility",
+   "mpdccp",
+   "mp-dccp"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Datagram Congestion Control Protocol (DCCP) Extensions for Multipath Operation with Multiple Addresses",
+  "wg": "tsvwg"
+ },
  "RFC9898": {
   "area": "ops",
   "keywords": [
@@ -120855,6 +120875,15 @@
   "stream": "ietf",
   "title": "Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the Stateless Hash-Based Digital Signature Algorithm (SLH-DSA)",
   "wg": "lamps"
+ },
+ "RFC9910": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration Data Access Protocol (RDAP) Regional Internet Registry (RIR) Search",
+  "wg": "regext"
  },
  "RFC9911": {
   "area": "ops",
