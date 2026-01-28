@@ -120903,6 +120903,15 @@
   "title": "Common YANG Data Types",
   "wg": "netmod"
  },
+ "RFC9917": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IGP Flexible Algorithms Reverse Affinity Constraint",
+  "wg": "lsr"
+ },
  "RFC9937": {
   "area": "wit",
   "keywords": [
