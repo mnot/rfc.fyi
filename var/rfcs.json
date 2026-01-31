@@ -96294,7 +96294,7 @@
    "format"
   ],
   "level": "informational",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "SVG Drawings for RFCs: SVG 1.2 RFC"
  },
@@ -101663,7 +101663,7 @@
    "RFC7283",
    "RFC7550"
   ],
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Dynamic Host Configuration Protocol for IPv6 (DHCPv6)",
   "wg": "dhc"
@@ -120585,6 +120585,23 @@
   "title": "Use of Password-Based Message Authentication Code 1 (PBMAC1) in PKCS #12 Syntax",
   "wg": "lamps"
  },
+ "RFC9880": {
+  "area": "art",
+  "keywords": [
+   "IoT",
+   "Device Model",
+   "Interaction Model",
+   "Affordance",
+   "Property",
+   "Action",
+   "Event"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Semantic Definition Format (SDF) for Data and Interactions of Things",
+  "wg": "asdf"
+ },
  "RFC9881": {
   "area": "sec",
   "keywords": [
@@ -120701,6 +120718,18 @@
   "stream": "ietf",
   "title": "Automated Certificate Management Environment (ACME) Delay-Tolerant Networking (DTN) Node ID Validation Extension",
   "wg": "acme"
+ },
+ "RFC9896": {
+  "keywords": [
+   "SVG"
+  ],
+  "level": "informational",
+  "obsoletes": [
+   "RFC7996"
+  ],
+  "status": "current",
+  "stream": "editorial",
+  "title": "SVG in RFCs"
  },
  "RFC9897": {
   "area": "wit",
@@ -120902,6 +120931,22 @@
   "stream": "ietf",
   "title": "Common YANG Data Types",
   "wg": "netmod"
+ },
+ "RFC9915": {
+  "area": "int",
+  "keywords": [
+   "DHCPv6",
+   "IPv6",
+   "DHCP"
+  ],
+  "level": "std",
+  "obsoletes": [
+   "RFC8415"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Host Configuration Protocol for IPv6 (DHCPv6)",
+  "wg": "dhc"
  },
  "RFC9917": {
   "area": "rtg",
