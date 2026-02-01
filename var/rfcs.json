@@ -120719,6 +120719,45 @@
   "title": "Automated Certificate Management Environment (ACME) Delay-Tolerant Networking (DTN) Node ID Validation Extension",
   "wg": "acme"
  },
+ "RFC9892": {
+  "area": "rtg",
+  "keywords": [
+   "Diffserv Code Points",
+   "Ethernet Priority Code Points"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Link Exchange Protocol (DLEP) Traffic Classification Data Item",
+  "wg": "manet"
+ },
+ "RFC9893": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Link Exchange Protocol (DLEP) Credit-Based Flow Control Messages and Data Items",
+  "wg": "manet"
+ },
+ "RFC9894": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Link Exchange Protocol (DLEP) Diffserv Aware Credit Window Extension",
+  "wg": "manet"
+ },
+ "RFC9895": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Dynamic Link Exchange Protocol (DLEP) IEEE 802.1Q Aware Credit Window Extension",
+  "wg": "manet"
+ },
  "RFC9896": {
   "keywords": [
    "SVG"
