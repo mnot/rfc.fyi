@@ -38059,7 +38059,7 @@
   "title": "Policy-Based Accounting"
  },
  "RFC3335": {
-  "area": "app",
+  "area": "art",
   "keywords": [
    "MIME",
    "multipurpose internet mail extensions",
@@ -48453,7 +48453,7 @@
   "wg": "sigtran"
  },
  "RFC4130": {
-  "area": "app",
+  "area": "art",
   "keywords": [
    "hyper text transfer protocol",
    "simple mail transfer protocol"
@@ -57260,7 +57260,7 @@
   "title": "RIPv2 Cryptographic Authentication"
  },
  "RFC4823": {
-  "area": "app",
+  "area": "art",
   "keywords": [
    "applicability statement",
    "as",
@@ -78099,7 +78099,7 @@
    "Human Contact",
    "vCard"
   ],
-  "level": "std",
+  "level": "historic",
   "status": "current",
   "stream": "ietf",
   "title": "The Resource Public Key Infrastructure (RPKI) Ghostbusters Record",
@@ -93158,7 +93158,7 @@
    "IPv6 transition technology",
    "XLAT"
   ],
-  "level": "informational",
+  "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "SIIT-DC: Stateless IP/ICMP Translation for IPv6 Data Center Environments",
@@ -93181,7 +93181,7 @@
    "IPv6 transition technology",
    "XLAT"
   ],
-  "level": "informational",
+  "level": "std",
   "status": "current",
   "stream": "ietf",
   "title": "Stateless IP/ICMP Translation for IPv6 Internet Data Center Environments (SIIT-DC): Dual Translation Mode",
