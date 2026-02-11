@@ -120996,6 +120996,16 @@
   "title": "IGP Flexible Algorithms Reverse Affinity Constraint",
   "wg": "lsr"
  },
+ "RFC9924": {
+  "keywords": [
+   "mezzanine codec",
+   "visually lossless compression"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Advanced Professional Video"
+ },
  "RFC9937": {
   "area": "wit",
   "keywords": [
