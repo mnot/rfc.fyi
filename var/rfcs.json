@@ -112847,7 +112847,7 @@
   "obsoletes": [
    "RFC8728"
   ],
-  "status": "current",
+  "status": "obsoleted",
   "stream": "iab",
   "title": "RFC Editor Model (Version 3)"
  },
@@ -120996,6 +120996,22 @@
   "title": "IGP Flexible Algorithms Reverse Affinity Constraint",
   "wg": "lsr"
  },
+ "RFC9920": {
+  "keywords": [
+   "RFC Series",
+   "RFC Series Working Group",
+   "RSWG",
+   "RFC Production Center",
+   "RPC"
+  ],
+  "level": "informational",
+  "obsoletes": [
+   "RFC9280"
+  ],
+  "status": "current",
+  "stream": "editorial",
+  "title": "RFC Editor Model (Version 3)"
+ },
  "RFC9924": {
   "keywords": [
    "mezzanine codec",
@@ -121005,6 +121021,24 @@
   "status": "current",
   "stream": "independent",
   "title": "Advanced Professional Video"
+ },
+ "RFC9926": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Prefix Registration for IPv6 Neighbor Discovery",
+  "wg": "6lo"
+ },
+ "RFC9927": {
+  "area": "int",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Fixing the C-Flag in the Extended Address Registration Option (EARO)",
+  "wg": "6lo"
  },
  "RFC9937": {
   "area": "wit",
