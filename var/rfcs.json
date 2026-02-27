@@ -121012,6 +121012,15 @@
   "stream": "editorial",
   "title": "RFC Editor Model (Version 3)"
  },
+ "RFC9921": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE) Header Parameter for Timestamp Tokens as Defined in RFC 3161",
+  "wg": "cose"
+ },
  "RFC9924": {
   "keywords": [
    "mezzanine codec",
@@ -121021,6 +121030,17 @@
   "status": "current",
   "stream": "independent",
   "title": "Advanced Professional Video"
+ },
+ "RFC9925": {
+  "area": "sec",
+  "keywords": [
+   "self-signed certificate"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Unsigned X.509 Certificates",
+  "wg": "lamps"
  },
  "RFC9926": {
   "area": "int",
