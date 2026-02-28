@@ -42856,7 +42856,7 @@
  "RFC3683": {
   "keywords": [],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "A Practice for Revoking Posting Rights to IETF Mailing Lists"
  },
@@ -46017,7 +46017,7 @@
    "procedures"
   ],
   "level": "bcp",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Updates to RFC 2418 Regarding the Management of IETF Mailing Lists"
  },
@@ -85798,7 +85798,7 @@
    "Tunnel"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Tunnel Extensible Authentication Protocol (TEAP) Version 1",
   "wg": "emu"
@@ -121021,6 +121021,13 @@
   "title": "CBOR Object Signing and Encryption (COSE) Header Parameter for Timestamp Tokens as Defined in RFC 3161",
   "wg": "cose"
  },
+ "RFC9923": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "The FNV Non-Cryptographic Hash Algorithm"
+ },
  "RFC9924": {
   "keywords": [
    "mezzanine codec",
@@ -121060,6 +121067,27 @@
   "title": "Fixing the C-Flag in the Extended Address Registration Option (EARO)",
   "wg": "6lo"
  },
+ "RFC9929": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IGP Unreachable Prefix Announcement",
+  "wg": "lsr"
+ },
+ "RFC9930": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "obsoletes": [
+   "RFC7170"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "Tunnel Extensible Authentication Protocol (TEAP) Version 1",
+  "wg": "emu"
+ },
  "RFC9937": {
   "area": "wit",
   "keywords": [
@@ -121077,5 +121105,22 @@
   "stream": "ietf",
   "title": "Proportional Rate Reduction (PRR)",
   "wg": "tcpm"
+ },
+ "RFC9945": {
+  "area": "gen",
+  "keywords": [
+   "disruption",
+   "moderation",
+   "participation"
+  ],
+  "level": "bcp",
+  "obsoletes": [
+   "RFC3683",
+   "RFC3934"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "IETF Community Moderation",
+  "wg": "modpod"
  }
 }
