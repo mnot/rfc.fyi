@@ -121106,6 +121106,17 @@
   "title": "Proportional Rate Reduction (PRR)",
   "wg": "tcpm"
  },
+ "RFC9939": {
+  "area": "sec",
+  "keywords": [
+   "CMS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "PKCS #8: Private-Key Information Content Types",
+  "wg": "lamps"
+ },
  "RFC9945": {
   "area": "gen",
   "keywords": [
