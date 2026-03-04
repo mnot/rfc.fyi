@@ -120234,6 +120234,34 @@
   "title": "IANA Registry Updates for TLS and DTLS",
   "wg": "tls"
  },
+ "RFC9848": {
+  "area": "sec",
+  "keywords": [
+   "ech SvcParamKey",
+   "ech SvcParam",
+   "ECH",
+   "SVCB",
+   "HTTPS Resource Records",
+   "TLS SNI",
+   "Encrypted SNI",
+   "Server Name Indication",
+   "Encrypted Server Name Indication"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bootstrapping TLS Encrypted ClientHello with DNS Service Bindings",
+  "wg": "tls"
+ },
+ "RFC9849": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "TLS Encrypted Client Hello",
+  "wg": "tls"
+ },
  "RFC9854": {
   "area": "rtg",
   "keywords": [
