@@ -121116,6 +121116,19 @@
   "title": "Tunnel Extensible Authentication Protocol (TEAP) Version 1",
   "wg": "emu"
  },
+ "RFC9931": {
+  "area": "wit",
+  "keywords": [
+   "Request Smuggling",
+   "False Start",
+   "HTTP CONNECT"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Security Considerations for Optimistic Protocol Transitions in HTTP/1.1",
+  "wg": "httpbis"
+ },
  "RFC9934": {
   "keywords": [
    "TLS",
@@ -121125,6 +121138,36 @@
   "status": "current",
   "stream": "ietf",
   "title": "Privacy-Enhanced Mail (PEM) File Format for Encrypted ClientHello (ECH)"
+ },
+ "RFC9935": {
+  "area": "sec",
+  "keywords": [
+   "ML-KEM",
+   "Kyber",
+   "KEM",
+   "Certificate",
+   "X.509",
+   "PKIX"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Internet X.509 Public Key Infrastructure - Algorithm Identifiers for the Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM)",
+  "wg": "lamps"
+ },
+ "RFC9936": {
+  "area": "sec",
+  "keywords": [
+   "Key Encapsulation Mechanism (KEM)",
+   "KEMRecipientInfo",
+   "ML-KEM",
+   "Kyber"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Use of ML-KEM in the Cryptographic Message Syntax (CMS)",
+  "wg": "lamps"
  },
  "RFC9937": {
   "area": "wit",
