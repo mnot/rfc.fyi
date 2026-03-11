@@ -120262,6 +120262,19 @@
   "title": "TLS Encrypted Client Hello",
   "wg": "tls"
  },
+ "RFC9853": {
+  "area": "sec",
+  "keywords": [
+   "DTLS",
+   "RRC",
+   "CID"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Return Routability Check for DTLS 1.2 and 1.3",
+  "wg": "tls"
+ },
  "RFC9854": {
   "area": "rtg",
   "keywords": [
@@ -121048,6 +121061,20 @@
   "stream": "ietf",
   "title": "CBOR Object Signing and Encryption (COSE) Header Parameter for Timestamp Tokens as Defined in RFC 3161",
   "wg": "cose"
+ },
+ "RFC9922": {
+  "area": "ops",
+  "keywords": [
+   "calendaring",
+   "scheduling",
+   "YANG",
+   "groupings"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Common YANG Data Model for Scheduling",
+  "wg": "netmod"
  },
  "RFC9923": {
   "keywords": [],
