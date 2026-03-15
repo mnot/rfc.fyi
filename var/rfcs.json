@@ -121214,6 +121214,19 @@
   "title": "Proportional Rate Reduction (PRR)",
   "wg": "tcpm"
  },
+ "RFC9938": {
+  "area": "rtg",
+  "keywords": [
+   "DetNet",
+   "Controller plane",
+   "SDN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Framework for the Deterministic Networking (DetNet) Controller Plane",
+  "wg": "detnet"
+ },
  "RFC9939": {
   "area": "sec",
   "keywords": [
