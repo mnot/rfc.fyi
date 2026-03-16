@@ -124,8 +124,8 @@ class RfcFyiUi {
     // tags
     if (!userInput) { // default screen
       const relevantTags = {
-        collection: new Set(data.tags.collection.keys()),
-        stream: new Set(data.tags.stream.keys())
+        collection: new Set(data.tags?.collection ? data.tags.collection.keys() : []),
+        stream: new Set(data.tags?.stream ? data.tags.stream.keys() : [])
       }
       this.showTags(relevantTags, false)
     } else if (this.activeTags.has('collection')) { // show a collection
@@ -298,10 +298,12 @@ class RfcFyiUi {
       }
       const header = document.getElementById(tagType + '-header')
       header.style.display = showHeader && relevantTags[tagType].size > 0 ? 'block' : 'none'
-      data.tags[tagType].forEach(tagName => {
-        const visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
-        this.tagTargets[tagType][tagName].style.display = visibility
-      })
+      if (data.tags[tagType]) {
+        data.tags[tagType].forEach(tagName => {
+          const visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
+          this.tagTargets[tagType][tagName].style.display = visibility
+        })
+      }
     })
   }
 

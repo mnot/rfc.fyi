@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rfcfyi-v1773654881'
+const CACHE_NAME = 'rfcfyi-v1773656199'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -19,8 +19,8 @@ const DATA_ASSETS = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Pre-caching static assets')
-      return cache.addAll(STATIC_ASSETS)
+      console.log('[SW] Pre-caching static and data assets')
+      return cache.addAll([...STATIC_ASSETS, ...DATA_ASSETS])
     })
   )
 })
@@ -46,21 +46,16 @@ self.addEventListener('fetch', (event) => {
   // Handle data files with Stale-While-Revalidate
   if (DATA_ASSETS.includes(url.pathname)) {
     event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
+      caches.open(CACHE_NAME).then(async (cache) => {
+        const cachedResponse = await cache.match(event.request)
         const fetchPromise = fetch(event.request).then((networkResponse) => {
           if (networkResponse.ok) {
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, networkResponse.clone())
-            })
-            // If we have a cached response, we might want to notify the client if data changed significantly,
-            // but for now we just update the cache in the background.
+            cache.put(event.request, networkResponse.clone())
           }
           return networkResponse
         }).catch(() => {
-          // Fallback to cache if network fails
           return cachedResponse
         })
-
         return cachedResponse || fetchPromise
       })
     )

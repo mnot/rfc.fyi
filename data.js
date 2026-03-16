@@ -18,11 +18,18 @@ export default class RfcData {
     const refLoader = util.loadJson('var/refs.json')
     Promise.all([tagLoader, rfcLoader, refLoader])
     .then(([tags, rfcs, refs]) => {
-      this.tags = tags
-      this.rfcs = rfcs
-      this.refs = refs
+      this.tags = tags || {}
+      this.rfcs = rfcs || {}
+      this.refs = refs || []
       this.createSearchIndex()
       this.computeReferences()
+      doneCallback()
+    })
+    .catch(error => {
+      console.error('[Data] Failed to load data:', error)
+      this.tags = this.tags || {}
+      this.rfcs = this.rfcs || {}
+      this.refs = this.refs || []
       doneCallback()
     })
   }
@@ -36,6 +43,7 @@ export default class RfcData {
       this.tagTypes.forEach(tagType => {
         const tagName = rfc[tagType]
         if (tagName) {
+          if (!this.tags) this.tags = {}
           if (!this.tags[tagType]) this.tags[tagType] = {}
           if (!this.tags[tagType][tagName]) {
             this.tags[tagType][tagName] = {
