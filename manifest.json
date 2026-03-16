@@ -1,0 +1,16 @@
+{
+  "name": "rfc.fyi",
+  "short_name": "rfc.fyi",
+  "description": "Search for RFCs, fast",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "rfcfyi.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,9 +1,5 @@
 export async function loadJson (url) {
-  const response = await fetch(url, {
-    method: 'GET',
-    credentials: 'include',
-    mode: 'no-cors'
-  })
+  const response = await fetch(url)
   return response.json()
 }
 

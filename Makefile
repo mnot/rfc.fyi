@@ -26,3 +26,9 @@ lint: client.js util.js data.js *.py
 .PHONY: clean
 clean:
 	rm -f var/rfcs.json
+
+.PHONY: pwa-update
+pwa-update:
+	@VERSION=$$(date +%s); \
+	sed -i '' "s/CACHE_NAME = 'rfcfyi-v[0-9]*'/CACHE_NAME = 'rfcfyi-v$${VERSION}'/" sw.js; \
+	echo "PWA cache version updated to v$${VERSION}"
