@@ -101536,7 +101536,7 @@
   "obsoletes": [
    "RFC6087"
   ],
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Guidelines for Authors and Reviewers of Documents Containing YANG Data Models",
   "wg": "netmod"
@@ -120956,6 +120956,22 @@
   "stream": "ietf",
   "title": "Deprecate Usage of ECC-GOST within DNSSEC",
   "wg": "dnsop"
+ },
+ "RFC9907": {
+  "area": "ops",
+  "keywords": [
+   "NETCONF",
+   "RESTCONF",
+   "Automation"
+  ],
+  "level": "bcp",
+  "obsoletes": [
+   "RFC8407"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines for Authors and Reviewers of Documents Containing YANG Data Models",
+  "wg": "netmod"
  },
  "RFC9908": {
   "area": "sec",
