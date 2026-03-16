@@ -28,7 +28,10 @@ class RfcFyiUi {
       this.installFormHandlers()
       this.installClickHandlers()
       this.loadUi()
-      window.onpopstate = this.loadUi
+      window.onpopstate = () => {
+        this.loadUi()
+        this.showRfcs()
+      }
       this.registerServiceWorker()
     })
   }
@@ -68,13 +71,37 @@ class RfcFyiUi {
   loadUi (...args) {
     const url = new URL(window.location.href)
     this.params = new URLSearchParams(url.search)
+
+    // search
     const search = this.params.get('search') || ''
-    document.getElementById('search').value = search
+    this.searchTarget.value = search
     this.searchWords = search.split(' ').filter(word => word)
-    if (this.params.has('obsolete')) {
-      this.verbose = true
-    }
+
+    // verbose
+    this.verbose = this.params.has('obsolete')
     this.obsoleteTarget.checked = this.verbose
+
+    // tags
+    if (this.tagTargets.collection) { // only if tags are initialized
+      this.clearActiveTags()
+      data.tagTypes.forEach(tagType => {
+        const urlTagString = this.params.get(tagType)
+        const urlActiveTags = urlTagString ? urlTagString.split(',') : []
+        urlActiveTags.forEach(tagName => {
+          this.setActiveTag(tagType, tagName)
+        })
+      })
+    }
+  }
+
+  clearActiveTags () {
+    this.activeTags.forEach((tagName, tagType) => {
+      const hilight = tagType !== 'collection'
+      if (hilight && this.tagTargets[tagType][tagName]) {
+        this.tagTargets[tagType][tagName].classList.remove('tag-active')
+      }
+    })
+    this.activeTags.clear()
   }
 
   dataLoaded () {
@@ -217,13 +244,9 @@ class RfcFyiUi {
         const tagSpan = this.renderTag(tagType, tagName, targetDiv, this.clickTagHandlerFactory)
         this.tagTargets[tagType][tagName] = tagSpan
       })
-      // activate tags from the URL
-      const urlTagString = this.params.get(tagType)
-      const urlActiveTags = new Set(urlTagString ? urlTagString.split(',') : [])
-      urlActiveTags.forEach(tagName => {
-        this.setActiveTag(tagType, tagName)
       })
     })
+    this.loadUi()
   }
 
   renderTag (tagType, tagName, target, clickHandlerFactory) {
