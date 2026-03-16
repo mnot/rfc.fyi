@@ -244,7 +244,6 @@ class RfcFyiUi {
         const tagSpan = this.renderTag(tagType, tagName, targetDiv, this.clickTagHandlerFactory)
         this.tagTargets[tagType][tagName] = tagSpan
       })
-      })
     })
     this.loadUi()
   }
