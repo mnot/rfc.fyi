@@ -64,7 +64,7 @@ a:active {
   /* Matches background to prevent visible border by default */
 }
 
-#form {
+#form form {
   position: relative;
 }
 
@@ -73,11 +73,15 @@ a:active {
   width: 90%;
 }
 
-.noresults input#search {
-  display: block;
+.noresults #form form {
   margin: 0 auto;
   width: 90%;
   max-width: 600px;
+}
+
+.noresults input#search {
+  display: block;
+  width: 100%;
 }
 
 .start {
@@ -219,13 +223,14 @@ h2 {
 
 #clearSearch {
   position: absolute;
-  font-size: 15px;
-  top: 1px;
-  right: 5%;
+  font-size: 16px;
+  top: 0px;
+  right: 4px;
   z-index: 100;
   cursor: pointer;
   user-select: none;
   color: var(--accent-close);
+  padding: 2px 6px;
 }
 
 .noresults #clearSearch {
@@ -296,9 +301,12 @@ h2 {
     display: none !important;
   }
 
+  .noresults #form form {
+    width: 100%;
+  }
+
   .noresults input#search {
     display: block;
-    margin: 0 auto;
     width: 100%;
   }
 
@@ -306,13 +314,8 @@ h2 {
     text-align: center;
   }
 
-  #clearSearch {
-    top: 6px;
-    right: 2%;
-  }
-
   .noresults #clearSearch {
-    right: 2%;
+    display: none;
   }
 
   .results .footer {
