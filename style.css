@@ -278,7 +278,17 @@ h2 {
     margin: 1em 0;
   }
 
-  #selector {
+  #selector,
+  .noresults #selector {
+    width: 100%;
+  }
+
+  .start {
+    margin: 2em 0;
+    width: 100%;
+  }
+
+  .noresults .tags {
     width: 100%;
   }
 
