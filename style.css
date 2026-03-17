@@ -57,9 +57,9 @@ a:active {
 #selector {
   width: 280px;
   margin-top: 1.5em;
-  padding: 2px 10px;
+  padding: 10px;
   line-height: 1.55em;
-  overflow-y: clip;
+  overflow-y: visible;
   border-right: 1px solid var(--bg-color);
   /* Matches background to prevent visible border by default */
 }
@@ -133,18 +133,18 @@ li ul {
 
 @media all and (max-width: 800px) {
 
-  .tags,
-  h2.tags,
-  #collection,
-  #stream,
-  #level,
-  #wg,
-  #collection-header,
-  #stream-header,
-  #level-header,
-  #wg-header,
-  .start em,
-  .start em+p {
+  .results .tags,
+  .results h2.tags,
+  .results #collection,
+  .results #stream,
+  .results #level,
+  .results #wg,
+  .results #collection-header,
+  .results #stream-header,
+  .results #level-header,
+  .results #wg-header,
+  .results .start em,
+  .results .start em+p {
     display: none !important;
   }
 }
@@ -195,6 +195,8 @@ h1 {
   font-size: 300%;
   text-align: center;
   margin: 0 0 1em 0;
+  line-height: 1.2em;
+  padding-top: 5px;
   cursor: pointer;
   user-select: none;
 }
@@ -209,7 +211,6 @@ h1 .fyi {
 
 h2 {
   font-size: 14pt;
-  display: none;
 }
 
 .mobile-hidden {
@@ -276,22 +277,22 @@ h2 {
     width: 100%;
   }
 
-  #selector h2,
-  #selector div.tags,
-  #selector .tag,
-  .tags,
-  h2.tags,
-  .start em,
-  .start em+p,
-  #collection,
-  #stream,
-  #level,
-  #wg,
-  #collection-header,
-  #stream-header,
-  #level-header,
-  #wg-header,
-  p.start {
+  .results #selector h2,
+  .results #selector div.tags,
+  .results #selector .tag,
+  .results .tags,
+  .results h2.tags,
+  .results .start em,
+  .results .start em+p,
+  .results #collection,
+  .results #stream,
+  .results #level,
+  .results #wg,
+  .results #collection-header,
+  .results #stream-header,
+  .results #level-header,
+  .results #wg-header,
+  .results p.start {
     display: none !important;
   }
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rfcfyi-v1773716340'
+const CACHE_NAME = 'rfcfyi-v1773716870'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
