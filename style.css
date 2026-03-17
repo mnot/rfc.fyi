@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --bg-color: #fcfcfc;
   --text-main: #111;
@@ -30,8 +34,8 @@ body {
   background-color: var(--bg-color);
   color: var(--text-main);
   font: 12pt/14pt "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 1em 5%;
-  width: 90%;
+  margin: 0;
+  padding: 1em 5%;
   max-width: 1200px;
 }
 
@@ -51,11 +55,13 @@ a:active {
 }
 
 #selector {
-  width: 275px;
-  margin-top: 1em;
-  padding: 2px;
+  width: 280px;
+  margin-top: 1.5em;
+  padding: 2px 10px;
   line-height: 1.55em;
   overflow-y: clip;
+  border-right: 1px solid var(--bg-color);
+  /* Matches background to prevent visible border by default */
 }
 
 #form {
@@ -68,9 +74,10 @@ a:active {
 }
 
 .noresults input#search {
-  margin: 0 25%;
-  width: 50%;
-  min-width: 400px;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
 }
 
 .start {
@@ -86,7 +93,7 @@ a:active {
 
 #main {
   flex: 1;
-  margin: 6em 1em 0 50px;
+  margin: 1.5em 1em 0 20px;
   padding: 0;
 }
 
@@ -124,12 +131,31 @@ li ul {
   margin: 0 auto 1em auto;
 }
 
+@media all and (max-width: 800px) {
+
+  .tags,
+  h2.tags,
+  #collection,
+  #stream,
+  #level,
+  #wg,
+  #collection-header,
+  #stream-header,
+  #level-header,
+  #wg-header,
+  .start em,
+  .start em+p {
+    display: none !important;
+  }
+}
+
 input#search {
-  width: 95%;
+  width: 100%;
   font-size: 18px;
   background-color: var(--bg-color);
   color: var(--text-main);
   border: 1px solid var(--text-faint);
+  padding: 2px 25px 2px 10px;
 }
 
 .control {
@@ -168,7 +194,7 @@ h1 {
   width: 100%;
   font-size: 300%;
   text-align: center;
-  margin: 1em 0;
+  margin: 0 0 1em 0;
   cursor: pointer;
   user-select: none;
 }
@@ -184,6 +210,10 @@ h1 .fyi {
 h2 {
   font-size: 14pt;
   display: none;
+}
+
+.mobile-hidden {
+  display: none !important;
 }
 
 #clearSearch {
@@ -239,22 +269,40 @@ h2 {
   }
 
   #main {
-    margin: 2em 0 0 0;
+    margin: 1em 0;
   }
 
   #selector {
     width: 100%;
   }
 
-  .noresults input#search {
-    width: 100%;
-    margin: 0;
+  #selector h2,
+  #selector div.tags,
+  #selector .tag,
+  .tags,
+  h2.tags,
+  .start em,
+  .start em+p,
+  #collection,
+  #stream,
+  #level,
+  #wg,
+  #collection-header,
+  #stream-header,
+  #level-header,
+  #wg-header,
+  p.start {
+    display: none !important;
   }
 
-  .start,
-  .noresults .tags {
+  .noresults input#search {
+    display: block;
+    margin: 0 auto;
     width: 100%;
-    margin: 1em 0;
+  }
+
+  #sort {
+    text-align: center;
   }
 
   #clearSearch {
@@ -276,11 +324,26 @@ h2 {
     position: fixed;
     overflow-y: auto;
     height: 100%;
+    border-right: none;
+  }
+
+  #selector::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  #selector::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #selector::-webkit-scrollbar-thumb {
+    background-color: #d1d1d1;
+    /* Subtler grey for thumb */
+    border-radius: 10px;
   }
 
   #shadow {
     width: 280px;
-    margin-top: 1em;
+    margin-top: 1.5em;
     padding: 0;
   }
 }

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rfcfyi-v1773669601'
+const CACHE_NAME = 'rfcfyi-v1773716340'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -17,6 +17,7 @@ const DATA_ASSETS = [
 ]
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting()
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('[SW] Pre-caching static and data assets')
@@ -27,45 +28,38 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('[SW] Removing old cache', cacheName)
-            return caches.delete(cacheName)
-          }
-        })
-      )
-    })
+    Promise.all([
+      self.clients.claim(),
+      caches.keys().then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== CACHE_NAME) {
+              console.log('[SW] Removing old cache', cacheName)
+              return caches.delete(cacheName)
+            }
+          })
+        )
+      })
+    ])
   )
 })
 
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url)
 
-  // Handle data files with Stale-While-Revalidate
-  if (DATA_ASSETS.includes(url.pathname)) {
-    event.respondWith(
-      caches.open(CACHE_NAME).then(async (cache) => {
-        const cachedResponse = await cache.match(event.request)
-        const fetchPromise = fetch(event.request).then((networkResponse) => {
-          if (networkResponse.ok) {
-            cache.put(event.request, networkResponse.clone())
-          }
-          return networkResponse
-        }).catch(() => {
-          return cachedResponse
-        })
-        return cachedResponse || fetchPromise
-      })
-    )
-    return
-  }
-
-  // Handle static assets with Cache-First
+  // Handle data and static assets with Stale-While-Revalidate
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request)
+    caches.open(CACHE_NAME).then(async (cache) => {
+      const cachedResponse = await cache.match(event.request)
+      const fetchPromise = fetch(event.request).then((networkResponse) => {
+        if (networkResponse.ok) {
+          cache.put(event.request, networkResponse.clone())
+        }
+        return networkResponse
+      }).catch(() => {
+        return cachedResponse
+      })
+      return cachedResponse || fetchPromise
     })
   )
 })
