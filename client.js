@@ -313,7 +313,6 @@ class RfcFyiUi {
   }
 
   showTags (relevantTags, showHeader = true) {
-    const isMobile = window.matchMedia('(max-width: 800px)').matches
     data.tagTypes.forEach(tagType => {
       const header = document.getElementById(tagType + '-header')
       if (!header) return
@@ -321,10 +320,10 @@ class RfcFyiUi {
       if (!relevantTags[tagType]) {
         relevantTags[tagType] = new Set()
       }
-      header.style.display = !isMobile && showHeader && relevantTags[tagType].size > 0 ? 'block' : 'none'
+      header.style.display = showHeader && relevantTags[tagType].size > 0 ? 'block' : 'none'
       if (data.tags[tagType]) {
         data.tags[tagType].forEach(tagName => {
-          const visibility = !isMobile && relevantTags[tagType].has(tagName) ? 'inline' : 'none'
+          const visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
           this.tagTargets[tagType][tagName].style.display = visibility
         })
       }
