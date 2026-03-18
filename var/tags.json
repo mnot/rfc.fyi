@@ -3,6 +3,8 @@
     "April 1": {
       "colour": "#e07edb",
       "rfcs": [
+        "RFC9759",
+        "RFC9564",
         "RFC9405",
         "RFC9402",
         "RFC9401",
