@@ -195,7 +195,6 @@ export default class RfcData {
 
   rfcNametoNum (rfcName) {
     const rfcNum = parseInt(rfcName.substring(3))
-    const rfcNumPad = rfcNum.toString().padStart(4, '0')
-    return rfcNumPad
+    return rfcNum.toString()
   }
 }
