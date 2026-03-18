@@ -181,7 +181,7 @@ class RfcFyiUi {
     const rfcRef = document.createElement('a')
     rfcRef.className = 'reference'
     rfcRef.href = `https://bib.ietf.org/public/rfc/bibxml/reference.RFC.${rfcNum}.xml`
-    rfcRef.appendChild(document.createTextNode(rfcName))
+    rfcRef.appendChild(document.createTextNode(`RFC${rfcNum}`))
     rfcSpan.appendChild(rfcRef)
     const sep = document.createTextNode(': ')
     rfcSpan.appendChild(sep)
