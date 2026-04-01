@@ -110496,7 +110496,7 @@
   "area": "ops",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "A YANG Data Model for Terminal Access Controller Access-Control System Plus (TACACS+)",
   "wg": "opsawg"
@@ -121138,6 +121138,17 @@
   "title": "Fixing the C-Flag in the Extended Address Registration Option (EARO)",
   "wg": "6lo"
  },
+ "RFC9928": {
+  "area": "int",
+  "keywords": [
+   "dhcp"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DHCPv4 over DHCPv6 with Relay Agent Support",
+  "wg": "dhc"
+ },
  "RFC9929": {
   "area": "rtg",
   "keywords": [],
@@ -121270,5 +121281,78 @@
   "stream": "ietf",
   "title": "IETF Community Moderation",
   "wg": "modpod"
+ },
+ "RFC9947": {
+  "keywords": [
+   "SRH",
+   "TLV",
+   "Extension",
+   "Header",
+   "Option",
+   "Performance",
+   "Measurement",
+   "Monitoring",
+   "Passive",
+   "Hybrid",
+   "Loss",
+   "Delay",
+   "Delay Variation",
+   "Multipoint",
+   "Cluster",
+   "Closed-Loop"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "independent",
+  "title": "Application of the Alternate-Marking Method to the Segment Routing Header"
+ },
+ "RFC9950": {
+  "area": "ops",
+  "keywords": [
+   "TLS",
+   "device management",
+   "network operator",
+   "provider network",
+   "AAA",
+   "authentication",
+   "authorization",
+   "accounting"
+  ],
+  "level": "std",
+  "obsoletes": [
+   "RFC9105"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "A YANG Data Model for Terminal Access Controller Access-Control System Plus (TACACS+)",
+  "wg": "opsawg"
+ },
+ "RFC9952": {
+  "area": "wit",
+  "keywords": [
+   "CoRE",
+   "CoAP",
+   "SVCB",
+   "DTLS",
+   "ALPN"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Application-Layer Protocol Negotiation (ALPN) ID for CoAP over DTLS",
+  "wg": "core"
+ },
+ "RFC9953": {
+  "area": "wit",
+  "keywords": [
+   "CoRE",
+   "CoAP",
+   "DNS"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS over CoAP (DoC)",
+  "wg": "core"
  }
 }
