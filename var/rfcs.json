@@ -121265,6 +121265,25 @@
   "title": "PKCS #8: Private-Key Information Content Types",
   "wg": "lamps"
  },
+ "RFC9940": {
+  "area": "ops",
+  "keywords": [
+   "Problem",
+   "Event",
+   "Fault",
+   "Occurrence",
+   "Incident",
+   "Anomaly",
+   "Symptom",
+   "Alert",
+   "Alarm"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Some Key Terms for Network Fault and Problem Management",
+  "wg": "nmop"
+ },
  "RFC9945": {
   "area": "gen",
   "keywords": [
