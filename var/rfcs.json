@@ -121183,6 +121183,22 @@
   "title": "Security Considerations for Optimistic Protocol Transitions in HTTP/1.1",
   "wg": "httpbis"
  },
+ "RFC9932": {
+  "keywords": [
+   "machine-to-machine",
+   "trust framework",
+   "mutual TLS",
+   "mTLS",
+   "public key pinning",
+   "SPKI",
+   "federation metadata",
+   "federation"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "Mutually Authenticating TLS in the Context of Federations"
+ },
  "RFC9934": {
   "keywords": [
    "TLS",
@@ -121283,6 +121299,22 @@
   "stream": "ietf",
   "title": "Some Key Terms for Network Fault and Problem Management",
   "wg": "nmop"
+ },
+ "RFC9941": {
+  "area": "sec",
+  "keywords": [
+   "NTRUPrime",
+   "X25519",
+   "SSH",
+   "key exchange",
+   "post-quantum cryptography",
+   "hybrid key exchange"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512",
+  "wg": "sshm"
  },
  "RFC9945": {
   "area": "gen",
