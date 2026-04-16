@@ -121028,6 +121028,40 @@
   "title": "Common YANG Data Types",
   "wg": "netmod"
  },
+ "RFC9912": {
+  "area": "rtg",
+  "keywords": [
+   "DetNet"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Reliable and Available Wireless (RAW) Architecture",
+  "wg": "detnet"
+ },
+ "RFC9913": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Reliable and Available Wireless (RAW) Technologies",
+  "wg": "detnet"
+ },
+ "RFC9914": {
+  "area": "rtg",
+  "keywords": [
+   "IOT",
+   "SDN",
+   "DetNet",
+   "RAW"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Root-Initiated Routing State in the Routing Protocol for Low-Power and Lossy Networks (RPL)",
+  "wg": "roll"
+ },
  "RFC9915": {
   "area": "int",
   "keywords": [
