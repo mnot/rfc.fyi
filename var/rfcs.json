@@ -97124,7 +97124,7 @@
   "title": "Session Initiation Protocol (SIP) Via Header Field Parameter to Indicate Received Realm"
  },
  "RFC8056": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -97197,7 +97197,7 @@
   "wg": "kitten"
  },
  "RFC8063": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "Extensible Provisioning Protocol"
   ],
@@ -100635,7 +100635,7 @@
   "wg": "rtgwg"
  },
  "RFC8334": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "EPP",
    "Sunrise",
@@ -102640,7 +102640,7 @@
   "title": "Multicast Email (MULE) over Allied Communications Publication (ACP) 142"
  },
  "RFC8495": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -103005,7 +103005,7 @@
   "wg": "opsawg"
  },
  "RFC8521": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "RDAP",
    "Entity",
@@ -103223,7 +103223,7 @@
   "wg": "i2rs"
  },
  "RFC8543": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "epp registry organization object mapping"
   ],
@@ -103234,7 +103234,7 @@
   "wg": "regext"
  },
  "RFC8544": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "epp organization mapping extension"
   ],
@@ -103757,7 +103757,7 @@
   "title": "The 'leaptofrogans' URI Scheme"
  },
  "RFC8590": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -105785,7 +105785,7 @@
   "wg": "ace"
  },
  "RFC8748": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -106556,7 +106556,7 @@
   "wg": "dnsop"
  },
  "RFC8807": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -107847,7 +107847,7 @@
   "wg": "capport"
  },
  "RFC8909": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "data escrow",
    "registry"
@@ -108732,7 +108732,7 @@
   "wg": "dnsop"
  },
  "RFC8977": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "RDAP",
    "Sorting",
@@ -108803,7 +108803,7 @@
   "wg": "6man"
  },
  "RFC8982": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "RDAP",
    "Partial response"
@@ -109405,7 +109405,7 @@
   "title": "Use of the Walnut Digital Signature Algorithm with CBOR Object Signing and Encryption (COSE)"
  },
  "RFC9022": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "data escrow",
    "registry",
@@ -109600,7 +109600,7 @@
   "wg": "detnet"
  },
  "RFC9038": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "login",
    "greeting",
@@ -110216,7 +110216,7 @@
   "wg": "bess"
  },
  "RFC9082": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "obsoletes": [
@@ -110228,7 +110228,7 @@
   "wg": "regext"
  },
  "RFC9083": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "obsoletes": [
@@ -111171,7 +111171,7 @@
   "wg": "drip"
  },
  "RFC9154": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "EPP",
    "authinfo",
@@ -111361,7 +111361,7 @@
   "wg": "pim"
  },
  "RFC9167": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -112100,7 +112100,7 @@
   "title": "Real-Time Transport Object Delivery over Unidirectional Transport (ROUTE)"
  },
  "RFC9224": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "whois",
    "bootstrap",
@@ -116203,7 +116203,7 @@
   "wg": "jsonpath"
  },
  "RFC9536": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "RDAP",
    "Reverse search"
@@ -116215,7 +116215,7 @@
   "wg": "regext"
  },
  "RFC9537": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "Redacted",
    "Redaction",
@@ -116536,7 +116536,7 @@
   "wg": "cellar"
  },
  "RFC9560": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "RDAP",
    "Federated",
@@ -119681,7 +119681,7 @@
   "wg": "lamps"
  },
  "RFC9803": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "EPP",
    "DNS",
@@ -120535,7 +120535,7 @@
   "wg": "v6ops"
  },
  "RFC9873": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -120544,7 +120544,7 @@
   "wg": "regext"
  },
  "RFC9874": {
-  "area": "art",
+  "area": "ops",
   "keywords": [
    "EPP"
   ],
@@ -120583,7 +120583,7 @@
   "wg": "core"
  },
  "RFC9877": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
@@ -121002,7 +121002,7 @@
   "wg": "lamps"
  },
  "RFC9910": {
-  "area": "art",
+  "area": "ops",
   "keywords": [],
   "level": "std",
   "status": "current",
