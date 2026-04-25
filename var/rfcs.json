@@ -119196,6 +119196,23 @@
   "title": "Grant Negotiation and Authorization Protocol Resource Server Connections",
   "wg": "gnap"
  },
+ "RFC9768": {
+  "area": "wit",
+  "keywords": [
+   "Congestion Control and Management",
+   "Congestion Notification",
+   "Feedback",
+   "Reliable",
+   "Ordered",
+   "Protocol",
+   "ECN"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "More Accurate Explicit Congestion Notification (AccECN) Feedback in TCP",
+  "wg": "tcpm"
+ },
  "RFC9769": {
   "area": "int",
   "keywords": [
@@ -121367,6 +121384,17 @@
   "title": "IETF Community Moderation",
   "wg": "modpod"
  },
+ "RFC9946": {
+  "area": "ops",
+  "keywords": [
+   "load rate adjustment algorithm"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The UDP Speed Test Protocol (UDPSTP) for One-Way IP Capacity Metric Measurement",
+  "wg": "ippm"
+ },
  "RFC9947": {
   "keywords": [
    "SRH",
@@ -121424,6 +121452,15 @@
   "status": "current",
   "stream": "ietf",
   "title": "A YANG Data Model for Terminal Access Controller Access-Control System Plus (TACACS+)",
+  "wg": "opsawg"
+ },
+ "RFC9951": {
+  "area": "ops",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Export of Delay Performance Metrics in IP Flow Information Export (IPFIX)",
   "wg": "opsawg"
  },
  "RFC9952": {
