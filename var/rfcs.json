@@ -121490,5 +121490,14 @@
   "stream": "ietf",
   "title": "DNS over CoAP (DoC)",
   "wg": "core"
+ },
+ "RFC9963": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Legacy RSASSA-PKCS1-v1_5 Code Points for TLS 1.3",
+  "wg": "tls"
  }
 }
