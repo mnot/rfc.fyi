@@ -121491,6 +121491,33 @@
   "title": "DNS over CoAP (DoC)",
   "wg": "core"
  },
+ "RFC9960": {
+  "area": "rtg",
+  "keywords": [
+   "SR Multicast",
+   "SRv6 Multicast"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Segment Routing Point-to-Multipoint Policy",
+  "wg": "pim"
+ },
+ "RFC9961": {
+  "area": "rtg",
+  "keywords": [
+   "SR Multicast",
+   "SRv6 Multicast",
+   "SR Multicast ping",
+   "SR Multicast traceroute",
+   "SR Multicast OAM"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "MPLS Segment Routing Point-to-Multipoint (P2MP) Policy Ping",
+  "wg": "pim"
+ },
  "RFC9963": {
   "area": "sec",
   "keywords": [],
