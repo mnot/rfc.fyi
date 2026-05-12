@@ -121491,6 +121491,55 @@
   "title": "DNS over CoAP (DoC)",
   "wg": "core"
  },
+ "RFC9956": {
+  "area": "wit",
+  "keywords": [
+   "DS",
+   "DSCP",
+   "L4S",
+   "delay",
+   "jitter",
+   "delay variation",
+   "Queuing variation",
+   "One Way Delay",
+   "Round-Trip Time",
+   "RTT",
+   "Quality of Service",
+   "QoS",
+   "Quality of Experience",
+   "QoE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "A Non-Queue-Building Per-Hop Behavior (NQB PHB) for Differentiated Services",
+  "wg": "tsvwg"
+ },
+ "RFC9957": {
+  "keywords": [
+   "Independent Submission Stream",
+   "ISE",
+   "Latency",
+   "Policing"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "The DOCSIS Queue Protection Algorithm to Preserve Low Latency"
+ },
+ "RFC9959": {
+  "area": "wit",
+  "keywords": [
+   "Transport",
+   "Congestion Control",
+   "QUIC"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Careful Resume: Convergence of Congestion Control from Retained State",
+  "wg": "tsvwg"
+ },
  "RFC9960": {
   "area": "rtg",
   "keywords": [
@@ -121526,5 +121575,18 @@
   "stream": "ietf",
   "title": "Legacy RSASSA-PKCS1-v1_5 Code Points for TLS 1.3",
   "wg": "tls"
+ },
+ "RFC9968": {
+  "keywords": [
+   "YANG",
+   "NETCONF",
+   "RESTCONF",
+   "NMOPS",
+   "RFC3535"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Report from the IAB Workshop on the Next Era of Network Management Operations (NEMOPS)"
  }
 }
