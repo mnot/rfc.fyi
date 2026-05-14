@@ -121367,6 +121367,18 @@
   "title": "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512",
   "wg": "sshm"
  },
+ "RFC9944": {
+  "area": "sec",
+  "keywords": [
+   "provisioning",
+   "CRUD"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Device Schema Extensions to the System for Cross-Domain Identity Management (SCIM) Model",
+  "wg": "scim"
+ },
  "RFC9945": {
   "area": "gen",
   "keywords": [
@@ -121566,6 +121578,13 @@
   "stream": "ietf",
   "title": "MPLS Segment Routing Point-to-Multipoint (P2MP) Policy Ping",
   "wg": "pim"
+ },
+ "RFC9962": {
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "independent",
+  "title": "A Decentralized Locator/ID Separation Protocol Mapping System (LISP-Decent)"
  },
  "RFC9963": {
   "area": "sec",
