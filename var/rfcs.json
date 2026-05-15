@@ -121595,6 +121595,22 @@
   "title": "Legacy RSASSA-PKCS1-v1_5 Code Points for TLS 1.3",
   "wg": "tls"
  },
+ "RFC9967": {
+  "area": "sec",
+  "keywords": [
+   "Identity",
+   "Event",
+   "SET",
+   "Provisioning",
+   "Token",
+   "SCIM"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "System for Cross-Domain Identity Management (SCIM) Profile for Security Event Tokens (SETs)",
+  "wg": "scim"
+ },
  "RFC9968": {
   "keywords": [
    "YANG",
