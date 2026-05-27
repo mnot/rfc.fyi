@@ -121666,6 +121666,15 @@
   "title": "The eap.arpa. Domain and Extensible Authentication Protocol (EAP) Provisioning",
   "wg": "emu"
  },
+ "RFC9966": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bootstrapped TLS Authentication with Proof of Knowledge",
+  "wg": "emu"
+ },
  "RFC9967": {
   "area": "sec",
   "keywords": [
@@ -121728,6 +121737,22 @@
   "stream": "ietf",
   "title": "Advanced BGP Monitoring Protocol (BMP) Statistics Types",
   "wg": "grow"
+ },
+ "RFC9975": {
+  "area": "ops",
+  "keywords": [
+   "DNSSEC",
+   "DS",
+   "CDS",
+   "CDNSKEY",
+   "CSYNC",
+   "automation"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clarifications on CDS/CDNSKEY and CSYNC Consistency",
+  "wg": "dnsop"
  },
  "RFC998": {
   "keywords": [
