@@ -87374,7 +87374,9 @@
  },
  "RFC7477": {
   "area": "ops",
-  "keywords": [],
+  "keywords": [
+   ""
+  ],
   "level": "std",
   "status": "current",
   "stream": "ietf",
