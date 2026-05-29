@@ -121768,6 +121768,15 @@
   "stream": "legacy",
   "title": "NETBLT: A bulk data transfer protocol"
  },
+ "RFC9982": {
+  "area": "art",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "JSContact Version 2.0: A JSON Representation of Contact Data",
+  "wg": "calext"
+ },
  "RFC9983": {
   "area": "rtg",
   "keywords": [
@@ -121780,6 +121789,19 @@
   "stream": "ietf",
   "title": "OSPFv2 Anycast Property Advertisement",
   "wg": "lsr"
+ },
+ "RFC9987": {
+  "area": "sec",
+  "keywords": [
+   "ssh",
+   "agent",
+   "ssh-agent"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Secure Shell (SSH) Agent Protocol",
+  "wg": "sshm"
  },
  "RFC9989": {
   "area": "art",
