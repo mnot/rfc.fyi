@@ -121756,6 +121756,32 @@
   "title": "Clarifications on CDS/CDNSKEY and CSYNC Consistency",
   "wg": "dnsop"
  },
+ "RFC9977": {
+  "area": "ops",
+  "keywords": [
+   "prefix",
+   "allocation",
+   "RPSL",
+   "inetnum"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Publishing End-Site Prefix Lengths",
+  "wg": "opsawg"
+ },
+ "RFC9979": {
+  "area": "art",
+  "keywords": [
+   "IMAP",
+   "JMAP"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Registration of Further IMAP/JMAP Keywords and Mailbox Name Attributes",
+  "wg": "mailmaint"
+ },
  "RFC998": {
   "keywords": [
    "NETBLT"
@@ -121767,6 +121793,19 @@
   "status": "current",
   "stream": "legacy",
   "title": "NETBLT: A bulk data transfer protocol"
+ },
+ "RFC9981": {
+  "area": "ops",
+  "keywords": [
+   "RPKI",
+   "Routing Security",
+   "X.509"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Resource Public Key Infrastructure (RPKI) Manifest Number Handling",
+  "wg": "sidrops"
  },
  "RFC9982": {
   "area": "art",
