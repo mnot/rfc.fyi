@@ -121896,6 +121896,18 @@
   "title": "Domain-Based Message Authentication, Reporting, and Conformance (DMARC) Failure Reporting",
   "wg": "dmarc"
  },
+ "RFC9992": {
+  "area": "rtg",
+  "keywords": [
+   "rift",
+   "kv"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Routing in Fat Trees (RIFT) Key/Value Topology Information Elements Structure and Processing",
+  "wg": "rift"
+ },
  "RFC9993": {
   "area": "wit",
   "keywords": [
