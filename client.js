@@ -186,7 +186,7 @@ class RfcFyiUi {
     const sep = document.createTextNode(': ')
     rfcSpan.appendChild(sep)
     const rfcLink = document.createElement('a')
-    rfcLink.href = `https://www.rfc-editor.org/rfc/rfc${rfcNum}.html`
+    rfcLink.href = `https://www.rfc-editor.org/info/rfc${rfcNum}/`
     rfcSpan.appendChild(rfcLink)
     const rfcTitle = document.createTextNode(rfcData.title)
     rfcLink.appendChild(rfcTitle)
