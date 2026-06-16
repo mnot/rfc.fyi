@@ -33,6 +33,19 @@
   "stream": "legacy",
   "title": "Request For Comments reference guide"
  },
+ "RFC10008": {
+  "area": "wit",
+  "keywords": [
+   "http",
+   "query",
+   "method"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The HTTP QUERY Method",
+  "wg": "httpbis"
+ },
  "RFC1001": {
   "keywords": [
    "NETBIOS"
@@ -121829,6 +121842,18 @@
   "title": "OSPFv2 Anycast Property Advertisement",
   "wg": "lsr"
  },
+ "RFC9984": {
+  "area": "ops",
+  "keywords": [
+   "UDP client",
+   "UDP server"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG Groupings for UDP Clients and UDP Servers",
+  "wg": "netconf"
+ },
  "RFC9987": {
   "area": "sec",
   "keywords": [
@@ -121921,5 +121946,15 @@
   "stream": "ietf",
   "title": "RTP Payload Format for Haptics",
   "wg": "avtcore"
+ },
+ "RFC9998": {
+  "keywords": [
+   "IAB workshop",
+   "age gate"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "iab",
+  "title": "Report from the IAB/W3C Workshop on Age-Based Restrictions on Content Access"
  }
 }
