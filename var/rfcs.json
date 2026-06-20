@@ -121876,6 +121876,32 @@
   "title": "YANG Groupings for UDP Clients and UDP Servers",
   "wg": "netconf"
  },
+ "RFC9985": {
+  "area": "rtg",
+  "keywords": [
+   "BFD",
+   "authentication"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Optimizing Bidirectional Forwarding Detection (BFD) Authentication",
+  "wg": "bfd"
+ },
+ "RFC9986": {
+  "area": "rtg",
+  "keywords": [
+   "secure BFD",
+   "replay packets",
+   "spoofing",
+   "pseudo-random number"
+  ],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Meticulous Keyed ISAAC for Bidirectional Forwarding Detection (BFD) Optimized Authentication",
+  "wg": "bfd"
+ },
  "RFC9987": {
   "area": "sec",
   "keywords": [
