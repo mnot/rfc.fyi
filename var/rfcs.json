@@ -33,6 +33,15 @@
   "stream": "legacy",
   "title": "Request For Comments reference guide"
  },
+ "RFC10005": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "BGP Link Bandwidth Extended Community",
+  "wg": "idr"
+ },
  "RFC10008": {
   "area": "wit",
   "keywords": [
@@ -121994,6 +122003,18 @@
   "stream": "ietf",
   "title": "RTP Payload Format for Haptics",
   "wg": "avtcore"
+ },
+ "RFC9994": {
+  "area": "rtg",
+  "keywords": [
+   "MNA Header",
+   "MNA Encoding"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "MPLS Network Action (MNA) Sub-Stack Specification Including In-Stack Network Actions and Data",
+  "wg": "mpls"
  },
  "RFC9998": {
   "keywords": [
