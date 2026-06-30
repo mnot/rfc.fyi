@@ -121770,6 +121770,17 @@
   "stream": "legacy",
   "title": "Internet numbers"
  },
+ "RFC9970": {
+  "area": "art",
+  "keywords": [
+   "SIP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Connected Identity for Secure Telephone Identity Revisited (STIR)",
+  "wg": "stir"
+ },
  "RFC9972": {
   "area": "ops",
   "keywords": [
@@ -121783,6 +121794,18 @@
   "stream": "ietf",
   "title": "Advanced BGP Monitoring Protocol (BMP) Statistics Types",
   "wg": "grow"
+ },
+ "RFC9974": {
+  "area": "rtg",
+  "keywords": [
+   "BIER",
+   "OAM"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operations, Administration, and Maintenance (OAM) Requirements for the Bit Index Explicit Replication (BIER) Layer",
+  "wg": "bier"
  },
  "RFC9975": {
   "area": "ops",
@@ -121813,6 +121836,15 @@
   "stream": "ietf",
   "title": "Publishing End-Site Prefix Lengths",
   "wg": "opsawg"
+ },
+ "RFC9978": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "experimental",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Bidirectional Forwarding Detection (BFD) Stability",
+  "wg": "bfd"
  },
  "RFC9979": {
   "area": "art",
