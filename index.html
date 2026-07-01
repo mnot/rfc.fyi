@@ -15,7 +15,8 @@
   <meta name="twitter:image" content="https://rfc.fyi/rfcfyi.png" />
   <meta name="description" content="rfc.fyi lets you search the RFC Series - fast!">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#fcfcfc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#222222" media="(prefers-color-scheme: dark)">
   <link rel="modulepreload" href="/util.js" as="script" />
   <link rel="modulepreload" href="/data.js" as="script" />
   <link rel="preload" href="/var/tags.json" as="fetch" />
@@ -30,28 +31,34 @@
 
     <h1 id="title">rfc<span class="dot">.</span><span class="fyi">fyi</span></h1>
 
-    <div id="form"><form>
-      <input type="text" id="search" value="" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" enterkeyhint="go" placeholder="Loading..." disabled="true"><span id="clearSearch">x</span>
-      <p><label class="control" title="Specifiations that have been obsoleted or Historic."><input type="checkbox" id="obsolete"> Show obsolete and historic</label></p>
+    <div id="form"><form role="search" aria-label="Search RFCs">
+      <span class="search-field"><input type="text" id="search" value="" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" enterkeyhint="go" aria-label="Search RFC titles and keywords" placeholder="Loading..." disabled="true"><button type="button" id="clearSearch" aria-label="Clear search">&times;</button></span>
+      <p><label class="control" title="Include RFCs that have been obsoleted by a newer RFC, or marked Historic."><input type="checkbox" id="obsolete"> Show obsolete and historic RFCs</label></p>
     </form></div>
 
-    <p id="sort" class="control">sort by:<br/><a href="#" id="sortByNumber">RFC number</a> | <a href="#" id="sortByRefs">referencing RFCs</a></p>
+    <p id="dataError" class="error" role="alert" hidden>Couldn’t load the RFC index. Check your connection and <button type="button" id="reloadBtn" class="linklike">reload</button>.</p>
+
+    <p id="sort" class="control">sort by:<br/><button type="button" class="sortlink" id="sortByNumber">RFC number</button> | <button type="button" class="sortlink" id="sortByRefs">referencing RFCs</button></p>
 
     <p class="start">Try “congestion”, “Cisco”, “IMAP search”, “UDP”, “firewall” or “privacy”.</p>
 
-    <p class="start"><em>Or, choose a collection to start with:</em></p>
+    <p class="start"><em>Or browse by:</em></p>
 
-    <h2 id="collection-header" class="tags">Collection</h2>
-    <div id="collection" class="tags"></div>
-    <h2 id="stream-header" class="tags">Stream</h2>
-    <div id="stream" class="tags"></div>
-    <h2 id="level-header" class="tags">Level</h2>
-    <div id="level" class="tags"></div>
-    <h2 id="wg-header" class="tags">Working Group</h2>
-    <div id="wg" class="tags"></div>
+    <button type="button" id="filterToggle" class="control" aria-expanded="false" aria-controls="facets">Filters</button>
+
+    <div id="facets">
+      <h2 id="collection-header" class="tags">Collection</h2>
+      <div id="collection" class="tags"></div>
+      <h2 id="stream-header" class="tags">Stream</h2>
+      <div id="stream" class="tags"></div>
+      <h2 id="level-header" class="tags">Level</h2>
+      <div id="level" class="tags"></div>
+      <h2 id="wg-header" class="tags">Working Group</h2>
+      <div id="wg" class="tags"></div>
+    </div>
 
   <div class="footer">
-    <a title="GitHub" href="https://github.com/mnot/rfc.fyi/">
+    <a title="GitHub" aria-label="rfc.fyi source on GitHub" href="https://github.com/mnot/rfc.fyi/">
           <svg height="24" class="octicon" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
     </a>
   </div>
@@ -59,10 +66,11 @@
 
   </div>
   <div id="shadow"></div>
-  <div id="main">
-    <div id="count"></div>
+  <main id="main">
+    <div id="count" role="status" aria-live="polite" aria-atomic="true"></div>
     <ul id="rfc-list"></ul>
-  </div>
+    <p id="empty" class="empty-state" hidden></p>
+  </main>
 
 </div>
 </body>

@@ -17,13 +17,22 @@ export function genColour (str) {
 }
 
 export function revColour (inColour) {
-  const rgb = inColour.match(/\d+/g)
-  const luma = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2] // ITU-R BT.709
-  if (luma < 128) {
-    return '#fff'
-  } else {
-    return '#000'
+  const rgb = inColour.match(/\d+/g).map(Number)
+  // Pick whichever of white/black gives the higher WCAG contrast against the
+  // background. The max-contrast choice is always >= 4.58:1 for any colour, so
+  // tag labels stay legible whatever the (curated or hash-generated) background.
+  const lum = relativeLuminance(rgb)
+  const contrastWhite = 1.05 / (lum + 0.05)
+  const contrastBlack = (lum + 0.05) / 0.05
+  return contrastWhite >= contrastBlack ? '#fff' : '#000'
+}
+
+function relativeLuminance ([r, g, b]) {
+  const channel = c => {
+    c /= 255
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
+  return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
 }
 
 Set.prototype.intersection = function (setB) { // eslint-disable-line

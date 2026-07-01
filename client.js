@@ -59,6 +59,20 @@ class RfcFyiUi {
     this.title.onclick = function () {
       window.location = '/'
     }
+    const reloadBtn = document.getElementById('reloadBtn')
+    if (reloadBtn) reloadBtn.onclick = () => window.location.reload()
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') ui.resetToHome()
+    })
+  }
+
+  resetToHome () {
+    this.searchTarget.value = ''
+    this.searchWords = []
+    this.clearActiveTags()
+    this.showRfcs()
+    this.updateUrl()
+    this.searchTarget.focus()
   }
 
   installClickHandlers () {
@@ -66,6 +80,24 @@ class RfcFyiUi {
     sortByNum.onclick = (event) => { this.showRfcs(false); return false }
     const sortByRefs = document.getElementById('sortByRefs')
     sortByRefs.onclick = (event) => { this.showRfcs(true); return false }
+    const filterToggle = document.getElementById('filterToggle')
+    if (filterToggle) filterToggle.onclick = this.toggleFilters
+  }
+
+  toggleFilters (event) {
+    const container = document.getElementById('container')
+    const toggle = document.getElementById('filterToggle')
+    const open = container.classList.toggle('filters-open')
+    if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false')
+    event.stopPropagation()
+    return false
+  }
+
+  updateFilterToggle () {
+    const toggle = document.getElementById('filterToggle')
+    if (!toggle) return
+    const n = this.activeTags.size
+    toggle.textContent = n > 0 ? `Filters (${n})` : 'Filters'
   }
 
   loadUi (...args) {
@@ -96,17 +128,29 @@ class RfcFyiUi {
 
   clearActiveTags () {
     this.activeTags.forEach((tagName, tagType) => {
-      const hilight = tagType !== 'collection'
-      if (hilight && this.tagTargets[tagType][tagName]) {
-        this.tagTargets[tagType][tagName].classList.remove('tag-active')
+      const target = this.tagTargets[tagType] ? this.tagTargets[tagType][tagName] : null
+      if (target) {
+        target.classList.remove('tag-active')
+        target.setAttribute('aria-pressed', 'false')
       }
     })
     this.activeTags.clear()
   }
 
   dataLoaded () {
+    if (data.loadError) {
+      ui.showDataError()
+      return
+    }
     ui.initTags()
     ui.showRfcs()
+  }
+
+  showDataError () {
+    const err = document.getElementById('dataError')
+    if (err) err.hidden = false
+    this.searchTarget.disabled = true
+    this.searchTarget.placeholder = 'Couldn’t load data'
   }
 
   showRfcs (sortByRef = true) {
@@ -154,7 +198,7 @@ class RfcFyiUi {
         collection: new Set(data.tags?.collection ? data.tags.collection.keys() : []),
         stream: new Set(data.tags?.stream ? data.tags.stream.keys() : [])
       }
-      this.showTags(relevantTags, false)
+      this.showTags(relevantTags, true)
     } else if (this.activeTags.has('collection')) { // show a collection
       this.showRelevantTags(relevantRfcs)
     } else if (this.searchWords.length === 0) { // just tags
@@ -169,6 +213,20 @@ class RfcFyiUi {
     this.clear(countTarget)
     countTarget.appendChild(count)
 
+    // empty state
+    const emptyTarget = document.getElementById('empty')
+    if (emptyTarget) {
+      if (userInput && rfcList.length === 0) {
+        emptyTarget.textContent = this.verbose
+          ? 'No RFCs match. Try a broader term, check the spelling, or pick a collection.'
+          : 'No RFCs match. Try a broader term, or tick “Show obsolete and historic RFCs” to include older ones.'
+        emptyTarget.hidden = false
+      } else {
+        emptyTarget.hidden = true
+      }
+    }
+
+    this.updateFilterToggle()
     this.setContainer(rfcList.length > 0 || userInput)
   }
 
@@ -181,7 +239,7 @@ class RfcFyiUi {
     const rfcRef = document.createElement('a')
     rfcRef.className = 'reference'
     rfcRef.href = `https://bib.ietf.org/public/rfc/bibxml/reference.RFC.${rfcNum}.xml`
-    rfcRef.appendChild(document.createTextNode(`RFC${rfcNum}`))
+    rfcRef.appendChild(document.createTextNode(`RFC\u00A0${rfcNum}`))
     rfcSpan.appendChild(rfcRef)
     const sep = document.createTextNode(': ')
     rfcSpan.appendChild(sep)
@@ -203,8 +261,8 @@ class RfcFyiUi {
     if (hideRefs !== true && refCount > 0) {
       const refSpan = document.createElement('span')
       refSpan.className = 'refcount'
-      const refCountLink = document.createElement('a')
-      refCountLink.href = '#'
+      const refCountLink = document.createElement('button')
+      refCountLink.type = 'button'
       refCountLink.className = 'refcountlink'
       refCountLink.onclick = this.refExpandHandler
       const refCountText = document.createTextNode(`${refCount.toLocaleString()} referencing RFC${this.pluralise(refCount)}`)
@@ -250,13 +308,16 @@ class RfcFyiUi {
 
   renderTag (tagType, tagName, target, clickHandlerFactory) {
     const tagData = data.tags[tagType][tagName]
+    const interactive = clickHandlerFactory !== undefined
     const tagContent = document.createTextNode(tagName)
-    const tagSpan = document.createElement('span')
+    const tagSpan = document.createElement(interactive ? 'button' : 'span')
+    if (interactive) tagSpan.type = 'button'
     tagSpan.appendChild(tagContent)
     tagSpan.classList.add('tag')
     tagSpan.style.backgroundColor = tagData.colour || this.tagColours[tagType] || util.genColour(tagName)
     tagSpan.style.color = util.revColour(tagSpan.style.backgroundColor)
-    if (clickHandlerFactory !== undefined) {
+    if (interactive) {
+      tagSpan.setAttribute('aria-pressed', 'false')
       tagSpan.onclick = clickHandlerFactory(tagType, tagName)
     } else {
       tagSpan.style.cursor = 'default'
@@ -280,11 +341,19 @@ class RfcFyiUi {
     const hilight = tagType !== 'collection'
     const currentActiveTag = ui.activeTags.get(tagType)
     if (currentActiveTag) {
-      if (hilight) this.tagTargets[tagType][currentActiveTag].classList.remove('tag-active')
+      const prev = this.tagTargets[tagType][currentActiveTag]
+      if (prev) {
+        if (hilight) prev.classList.remove('tag-active')
+        prev.setAttribute('aria-pressed', 'false')
+      }
       this.activeTags.delete(tagType)
     }
     if (!currentActiveTag || currentActiveTag !== tagName) {
-      if (hilight) this.tagTargets[tagType][tagName].classList.add('tag-active')
+      const next = this.tagTargets[tagType][tagName]
+      if (next) {
+        if (hilight) next.classList.add('tag-active')
+        next.setAttribute('aria-pressed', 'true')
+      }
       this.activeTags.set(tagType, tagName)
     }
   }
@@ -337,11 +406,7 @@ class RfcFyiUi {
   }
 
   clearSearchHandler (event) {
-    ui.searchTarget.value = ''
-    ui.searchWords = []
-    ui.activeTags.clear()
-    ui.showRfcs()
-    ui.updateUrl()
+    ui.resetToHome()
     event.stopPropagation()
     return false
   }
@@ -381,7 +446,14 @@ class RfcFyiUi {
 
   setContainer (hasResults) {
     const container = document.getElementById('container')
+    const filtersOpen = hasResults && container.classList.contains('filters-open')
     container.className = hasResults ? 'results' : 'noresults'
+    if (filtersOpen) {
+      container.classList.add('filters-open')
+    } else {
+      const toggle = document.getElementById('filterToggle')
+      if (toggle) toggle.setAttribute('aria-expanded', 'false')
+    }
   }
 
   rfcSort (a, b) {
