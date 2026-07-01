@@ -42,6 +42,19 @@
   "title": "BGP Link Bandwidth Extended Community",
   "wg": "idr"
  },
+ "RFC10007": {
+  "area": "sec",
+  "keywords": [
+   "Public Key Infrastructure",
+   "Certificate validation",
+   "Security"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Clarification to Processing Key Usage Values During Certificate Revocation List (CRL) Validation",
+  "wg": "lamps"
+ },
  "RFC10008": {
   "area": "wit",
   "keywords": [
@@ -63,6 +76,15 @@
   "status": "current",
   "stream": "legacy",
   "title": "Protocol standard for a NetBIOS service on a TCP/UDP transport: Concepts and methods"
+ },
+ "RFC10014": {
+  "area": "ops",
+  "keywords": [],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Guidelines for Characterizing the Term \"OAM\"",
+  "wg": "opsawg"
  },
  "RFC1002": {
   "keywords": [
@@ -121433,6 +121455,28 @@
   "title": "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512",
   "wg": "sshm"
  },
+ "RFC9942": {
+  "area": "sec",
+  "keywords": [
+   "COSE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE) Receipts",
+  "wg": "cose"
+ },
+ "RFC9943": {
+  "area": "sec",
+  "keywords": [
+   "COSE"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "An Architecture for Trustworthy and Transparent Digital Supply Chains",
+  "wg": "scitt"
+ },
  "RFC9944": {
   "area": "sec",
   "keywords": [
@@ -121869,6 +121913,21 @@
   "status": "current",
   "stream": "legacy",
   "title": "NETBLT: A bulk data transfer protocol"
+ },
+ "RFC9980": {
+  "area": "sec",
+  "keywords": [
+   "pgp",
+   "pqc",
+   "encryption",
+   "digital signature",
+   "post-quantum"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Post-Quantum Cryptography in OpenPGP",
+  "wg": "openpgp"
  },
  "RFC9981": {
   "area": "ops",
