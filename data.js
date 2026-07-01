@@ -27,6 +27,7 @@ export default class RfcData {
     })
     .catch(error => {
       console.error('[Data] Failed to load data:', error)
+      this.loadError = error
       this.tags = this.tags || {}
       this.rfcs = this.rfcs || {}
       this.refs = this.refs || []
