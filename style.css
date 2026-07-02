@@ -132,17 +132,28 @@ ul {
 }
 
 li {
+  display: grid;
+  grid-template-columns: 5.5em 1fr;
+  column-gap: 0.6em;
   line-height: 1.55em;
-  text-indent: -5.75em;
-  margin-left: 5.75em;
 }
 
 #rfc-list > li {
   margin-bottom: 0.25em;
 }
 
+li .reference {
+  text-align: right;
+}
+
 li ul {
-  margin-left: -0.5em;
+  margin: 0.25em 0 0;
+  padding-left: 0;
+}
+
+li ul li {
+  grid-template-columns: 4.5em 1fr;
+  margin-bottom: 0.25em;
 }
 
 .noresults #main {
