@@ -241,21 +241,21 @@ class RfcFyiUi {
     rfcRef.href = `https://bib.ietf.org/public/rfc/bibxml/reference.RFC.${rfcNum}.xml`
     rfcRef.appendChild(document.createTextNode(`RFC\u00A0${rfcNum}`))
     rfcSpan.appendChild(rfcRef)
-    const sep = document.createTextNode(': ')
-    rfcSpan.appendChild(sep)
+    const rfcBody = document.createElement('span')
+    rfcBody.className = 'rfc-body'
     const rfcLink = document.createElement('a')
     rfcLink.href = `https://www.rfc-editor.org/info/rfc${rfcNum}/`
-    rfcSpan.appendChild(rfcLink)
+    rfcBody.appendChild(rfcLink)
     const rfcTitle = document.createTextNode(rfcData.title)
     rfcLink.appendChild(rfcTitle)
     if (rfcData.stream !== 'ietf') {
-      this.renderTag('stream', rfcData.stream, rfcSpan)
+      this.renderTag('stream', rfcData.stream, rfcBody)
     }
     if (rfcData.level !== 'std') {
-      this.renderTag('level', rfcData.level, rfcSpan)
+      this.renderTag('level', rfcData.level, rfcBody)
     }
     if (rfcData.wg) {
-      this.renderTag('wg', rfcData.wg, rfcSpan)
+      this.renderTag('wg', rfcData.wg, rfcBody)
     }
     const refCount = data.obsoleteRefs.get(rfcName)
     if (hideRefs !== true && refCount > 0) {
@@ -268,14 +268,15 @@ class RfcFyiUi {
       const refCountText = document.createTextNode(`${refCount.toLocaleString()} referencing RFC${this.pluralise(refCount)}`)
       refCountLink.appendChild(refCountText)
       refSpan.appendChild(refCountLink)
-      rfcSpan.appendChild(refSpan)
+      rfcBody.appendChild(refSpan)
     }
+    rfcSpan.appendChild(rfcBody)
     target.appendChild(rfcSpan)
   }
 
   refExpandHandler (event) {
     const refList = document.createElement('ul')
-    const rfcElement = event.target.parentElement.parentElement
+    const rfcElement = event.target.closest('li')
     const rfcName = data.rfcNumtoName(rfcElement.num)
     const rfcRefs = data.getObsoleteRefs(rfcName)
     rfcRefs.forEach(ref => {
