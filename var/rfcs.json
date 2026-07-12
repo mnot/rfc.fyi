@@ -89508,7 +89508,7 @@
   "area": "sec",
   "keywords": [],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Transport Layer Security (TLS) Session Hash and Extended Master Secret Extension",
   "wg": "tls"
@@ -100469,7 +100469,7 @@
   "obsoletes": [
    "RFC4492"
   ],
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Elliptic Curve Cryptography (ECC) Cipher Suites for Transport Layer Security (TLS) Versions 1.2 and Earlier",
   "wg": "tls"
@@ -100791,7 +100791,7 @@
    "RFC5246",
    "RFC6961"
   ],
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The Transport Layer Security (TLS) Protocol Version 1.3",
   "wg": "tls"
@@ -120220,6 +120220,23 @@
   "status": "current",
   "stream": "irtf",
   "title": "Challenges and Opportunities in Management for Green Networking"
+ },
+ "RFC9846": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "obsoletes": [
+   "RFC5077",
+   "RFC5246",
+   "RFC6961",
+   "RFC7627",
+   "RFC8422",
+   "RFC8446"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Transport Layer Security (TLS) Protocol Version 1.3",
+  "wg": "tls"
  },
  "RFC9847": {
   "area": "sec",
