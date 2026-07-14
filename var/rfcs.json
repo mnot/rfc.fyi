@@ -122124,6 +122124,15 @@
   "title": "MPLS Network Action (MNA) Sub-Stack Specification Including In-Stack Network Actions and Data",
   "wg": "mpls"
  },
+ "RFC9995": {
+  "area": "sec",
+  "keywords": [],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "CBOR Object Signing and Encryption (COSE) Hash Envelope",
+  "wg": "cose"
+ },
  "RFC9998": {
   "keywords": [
    "IAB workshop",
