@@ -55651,7 +55651,7 @@
    "pre-produced"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "The Lightweight Online Certificate Status Protocol (OCSP) Profile for High-Volume Environments",
   "wg": "pkix"
@@ -121173,6 +121173,22 @@
   "title": "Dynamic Host Configuration Protocol for IPv6 (DHCPv6)",
   "wg": "dhc"
  },
+ "RFC9916": {
+  "area": "rtg",
+  "keywords": [
+   "PCEP",
+   "PCEPS",
+   "TLS 1.3",
+   "TLS 1.2",
+   "Early Data",
+   "0-RTT"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to the Usage of TLS to Provide a Secure Transport for the Path Computation Element Communication Protocol (PCEP)",
+  "wg": "pce"
+ },
  "RFC9917": {
   "area": "rtg",
   "keywords": [],
@@ -121181,6 +121197,34 @@
   "stream": "ietf",
   "title": "IGP Flexible Algorithms Reverse Affinity Constraint",
   "wg": "lsr"
+ },
+ "RFC9918": {
+  "area": "ops",
+  "keywords": [
+   "NETCONF",
+   "TLS 1.3",
+   "TLS 1.2",
+   "Early Data"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Updates to Using the NETCONF Protocol over Transport Layer Security (TLS) with Mutual X.509 Authentication",
+  "wg": "netconf"
+ },
+ "RFC9919": {
+  "area": "sec",
+  "keywords": [
+   "Revocation"
+  ],
+  "level": "std",
+  "obsoletes": [
+   "RFC5019"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "The Lightweight Online Certificate Status Protocol (OCSP) Profile for High-Volume Environments",
+  "wg": "lamps"
  },
  "RFC992": {
   "keywords": [],
@@ -122142,5 +122186,19 @@
   "status": "current",
   "stream": "iab",
   "title": "Report from the IAB/W3C Workshop on Age-Based Restrictions on Content Access"
+ },
+ "RFC9999": {
+  "area": "sec",
+  "keywords": [
+   "evidence",
+   "attestation results",
+   "endorsments",
+   "reference values"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Remote ATtestation procedureS (RATS) Conceptual Message Wrapper (CMW)",
+  "wg": "rats"
  }
 }
