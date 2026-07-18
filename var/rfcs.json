@@ -33,6 +33,59 @@
   "stream": "legacy",
   "title": "Request For Comments reference guide"
  },
+ "RFC10002": {
+  "area": "sec",
+  "keywords": [
+   "Public Key Infrastructure",
+   "Certificate Management",
+   "Cryptographic Message Syntax"
+  ],
+  "level": "std",
+  "obsoletes": [
+   "RFC5272",
+   "RFC6402"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "Certificate Management over CMS (CMC)",
+  "wg": "lamps"
+ },
+ "RFC10003": {
+  "area": "sec",
+  "keywords": [
+   "Public Key Infrastructure",
+   "Cryptographic Message Syntax",
+   "Certificate Management",
+   "Transport Protocols"
+  ],
+  "level": "std",
+  "obsoletes": [
+   "RFC5273",
+   "RFC6402"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "Certificate Management over CMS (CMC): Transport Protocols",
+  "wg": "lamps"
+ },
+ "RFC10004": {
+  "area": "sec",
+  "keywords": [
+   "Public Key Infrastructure",
+   "Cryptographic Message Syntax",
+   "Certificate Management",
+   "Compliance"
+  ],
+  "level": "std",
+  "obsoletes": [
+   "RFC5274",
+   "RFC6402"
+  ],
+  "status": "current",
+  "stream": "ietf",
+  "title": "Certificate Management over CMS (CMC): Compliance Requirements",
+  "wg": "lamps"
+ },
  "RFC10005": {
   "area": "rtg",
   "keywords": [],
@@ -59086,7 +59139,7 @@
   "obsoletes": [
    "RFC2797"
   ],
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Certificate Management over CMS (CMC)",
   "wg": "pkix"
@@ -59101,7 +59154,7 @@
    "tcp"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Certificate Management over CMS (CMC): Transport Protocols",
   "wg": "pkix"
@@ -59113,7 +59166,7 @@
    "cmc enrollment protocol"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Certificate Management Messages over CMS (CMC): Compliance Requirements",
   "wg": "pkix"
@@ -74091,7 +74144,7 @@
    "cyrptographic message syntax"
   ],
   "level": "std",
-  "status": "current",
+  "status": "obsoleted",
   "stream": "ietf",
   "title": "Certificate Management over CMS (CMC) Updates",
   "wg": "pkix"
