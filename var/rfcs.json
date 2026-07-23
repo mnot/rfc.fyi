@@ -164,6 +164,18 @@
   "stream": "legacy",
   "title": "Protocol standard for a NetBIOS service on a TCP/UDP transport: Detailed specifications"
  },
+ "RFC10026": {
+  "area": "ops",
+  "keywords": [
+   "DNS",
+   "DS"
+  ],
+  "level": "bcp",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Operational Recommendations for DNSSEC Delegation Signer (DS) Automation",
+  "wg": "dnsop"
+ },
  "RFC1003": {
   "keywords": [],
   "level": "unknown",
@@ -122336,6 +122348,17 @@
   "stream": "ietf",
   "title": "CBOR Object Signing and Encryption (COSE) Hash Envelope",
   "wg": "cose"
+ },
+ "RFC9997": {
+  "area": "wit",
+  "keywords": [
+   "YANG-CBOR"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "YANG-CBOR: Allocating SID Ranges for Private Enterprise Number (PEN) Holders",
+  "wg": "core"
  },
  "RFC9998": {
   "keywords": [
