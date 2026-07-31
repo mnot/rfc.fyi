@@ -130,6 +130,21 @@
   "stream": "legacy",
   "title": "Protocol standard for a NetBIOS service on a TCP/UDP transport: Concepts and methods"
  },
+ "RFC10013": {
+  "area": "sec",
+  "keywords": [
+   "EAT",
+   "measurements",
+   "claim",
+   "measured",
+   "component"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Entity Attestation Token (EAT) Measured Component",
+  "wg": "rats"
+ },
  "RFC10014": {
   "area": "ops",
   "keywords": [],
@@ -155,6 +170,15 @@
   "title": "Deprecating Obsolete Key Exchange Methods in TLS 1.2 and DTLS 1.2",
   "wg": "tls"
  },
+ "RFC10019": {
+  "area": "rtg",
+  "keywords": [],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Zeroconf Multicast Address Allocation Problem Statement and Requirements",
+  "wg": "pim"
+ },
  "RFC1002": {
   "keywords": [
    "NETBIOS"
@@ -163,6 +187,20 @@
   "status": "current",
   "stream": "legacy",
   "title": "Protocol standard for a NetBIOS service on a TCP/UDP transport: Detailed specifications"
+ },
+ "RFC10023": {
+  "keywords": [
+   "domain name system",
+   "domain sale",
+   "domain brokerage",
+   "domain aftermarket",
+   "TXT record",
+   "attrleaf"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "The \"_for-sale\" Underscored and Globally Scoped DNS Node Name"
  },
  "RFC10026": {
   "area": "ops",
@@ -122350,6 +122388,20 @@
   "stream": "ietf",
   "title": "CBOR Object Signing and Encryption (COSE) Hash Envelope",
   "wg": "cose"
+ },
+ "RFC9996": {
+  "area": "art",
+  "keywords": [
+   "MIME",
+   "protobuf",
+   "media type",
+   "application"
+  ],
+  "level": "informational",
+  "status": "current",
+  "stream": "ietf",
+  "title": "Media Types for Protocol Buffers",
+  "wg": "dispatch"
  },
  "RFC9997": {
   "area": "wit",
