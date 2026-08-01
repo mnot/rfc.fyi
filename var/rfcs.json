@@ -188,6 +188,17 @@
   "stream": "legacy",
   "title": "Protocol standard for a NetBIOS service on a TCP/UDP transport: Detailed specifications"
  },
+ "RFC10022": {
+  "area": "art",
+  "keywords": [
+   "IMAP"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "IMAP UIDBATCHES Extension",
+  "wg": "mailmaint"
+ },
  "RFC10023": {
   "keywords": [
    "domain name system",
@@ -213,6 +224,18 @@
   "stream": "ietf",
   "title": "Operational Recommendations for DNSSEC Delegation Signer (DS) Automation",
   "wg": "dnsop"
+ },
+ "RFC10029": {
+  "area": "int",
+  "keywords": [
+   "DNS",
+   "resource records"
+  ],
+  "level": "std",
+  "status": "current",
+  "stream": "ietf",
+  "title": "DNS Multiple QTYPEs",
+  "wg": "dnssd"
  },
  "RFC1003": {
   "keywords": [],
