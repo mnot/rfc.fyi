@@ -59,8 +59,15 @@ def load_chunks(path: str, limit: int) -> Tuple[List[str], np.ndarray]:
             if not line:
                 continue
             rec = json.loads(line)
+            # A handful of RFCs have non-numeric ids (`rfc17a`). They can
+            # never match a numeric label, so map them to a sentinel rather
+            # than crashing the run for two chunks.
+            try:
+                num = int(rec["rfc"])
+            except (TypeError, ValueError):
+                num = -1
             texts.append(rec["text"])
-            rfcs.append(int(rec["rfc"]))
+            rfcs.append(num)
             if limit and len(texts) >= limit:
                 break
     return texts, np.array(rfcs, dtype=np.int32)

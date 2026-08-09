@@ -42,16 +42,26 @@ class ModelSpec:
     max_length: int = 512
 
 
+#: `max_length` is each model's *declared* sequence limit, not the 512 its
+#: position embeddings happen to allow. all-MiniLM-L6-v2 declares 256
+#: (`sentence_bert_config.json`) and its Xenova export bakes tokeniser
+#: truncation at 128; bge-small declares a genuine 512. Feeding MiniLM 512
+#: runs past its trained length and quietly degrades — so this is per model,
+#: and it is a real functional difference between the candidates, not a
+#: footnote: at ~1200-character chunks MiniLM sees roughly half of what
+#: bge-small does.
 MODELS: Dict[str, ModelSpec] = {
     "bge-small": ModelSpec(
         repo="Xenova/bge-small-en-v1.5",
         pooling="cls",
         query_prefix="Represent this sentence for searching relevant passages: ",
+        max_length=512,
     ),
     "minilm-l6": ModelSpec(
         repo="Xenova/all-MiniLM-L6-v2",
         pooling="mean",
         query_prefix="",
+        max_length=256,
     ),
 }
 
@@ -154,6 +164,10 @@ def token_stats(model: str, texts: Iterable[str]) -> Dict[str, float]:
     """
     spec = MODELS[model]
     tok = Tokenizer.from_file(hf_hub_download(spec.repo, "tokenizer.json"))
+    # Measure TRUE lengths. Some exports bake truncation into tokenizer.json
+    # (MiniLM's is 128), which would otherwise make every long chunk report
+    # as exactly the limit and hide the overflow we are trying to find.
+    tok.no_truncation()
     lengths = np.array([len(tok.encode(t).ids) for t in texts])
     if lengths.size == 0:
         return {}
