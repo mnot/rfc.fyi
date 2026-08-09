@@ -1,2 +1,16 @@
 var/
 _site/
+
+# The semantic index. Deliberately not committed: #53 moved the site to an
+# Actions artifact precisely so generated data stays out of git history, and
+# quantised vectors do not delta-compress the way the old var/*.json did.
+# It ships as a release asset, stitched into the artifact at deploy time.
+index/
+
+# Phase 0 model evaluation scratch.
+eval/out/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

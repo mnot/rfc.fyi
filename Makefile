@@ -55,3 +55,24 @@ pwa-update:
 	@VERSION=$$(date +%s); \
 	sed -i '' "s/CACHE_NAME = 'rfcfyi-v[0-9]*'/CACHE_NAME = 'rfcfyi-v$${VERSION}'/" sw.js; \
 	echo "PWA cache version updated to v$${VERSION}"
+
+
+# --- semantic index -------------------------------------------------------
+# Corpus text is a build input, never committed (see .gitignore). The full
+# mirror is ~512 MiB; SAMPLE narrows it for development, and deliberately
+# spans both the old page-oriented .txt format and modern xml2rfc-v3 output
+# so the chunker is exercised on both.
+
+RFC_TEXT := var/rfc-text
+RSYNC_SRC := ftp.rfc-editor.org::rfcs-text-only
+SAMPLE := 'rfc[19]*.txt'
+
+.PHONY: rfc-text
+rfc-text:
+	mkdir -p $(RFC_TEXT)
+	rsync -az --delete --include='rfc*.txt' --exclude='*' $(RSYNC_SRC) $(RFC_TEXT)/
+
+.PHONY: rfc-text-sample
+rfc-text-sample:
+	mkdir -p $(RFC_TEXT)
+	rsync -az --include=$(SAMPLE) --exclude='*' $(RSYNC_SRC) $(RFC_TEXT)/

@@ -1,0 +1,16 @@
+# Build-time dependencies for the semantic index (bin/embed.py, eval/).
+#
+# ONNX Runtime rather than torch, for two reasons. It installs in seconds in a
+# runner rather than pulling ~2 GB, which is what keeps a monthly incremental
+# update viable in CI. More importantly it is the *same* runtime and the same
+# quantised graph that transformers.js runs in the browser, so a corpus vector
+# and a query vector come from an identical computation rather than from two
+# implementations that merely claim the same model.
+#
+# Nothing here is needed to serve the site, or to run the existing
+# metadata build (bin/rfc-json.py and friends are stdlib-only).
+
+onnxruntime~=1.20
+tokenizers~=0.21
+huggingface-hub~=0.27
+numpy~=2.2
