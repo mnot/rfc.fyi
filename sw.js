@@ -1,3 +1,4 @@
+const CACHE_PREFIX = 'rfcfyi-v'
 const CACHE_NAME = 'rfcfyi-v1786354013'
 const STATIC_ASSETS = [
   '/',
@@ -33,7 +34,13 @@ self.addEventListener('activate', (event) => {
       caches.keys().then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
-            if (cacheName !== CACHE_NAME) {
+            // Only reap our own superseded caches. This origin will also
+            // hold caches we do not own -- transformers.js keeps the ~32 MiB
+            // embedding model in one of its own -- and CACHE_NAME is bumped
+            // on every deploy by `make pwa-update`. A blanket "delete
+            // anything that is not me" would therefore throw that model away
+            // once per release, and the user would re-download it.
+            if (cacheName.startsWith(CACHE_PREFIX) && cacheName !== CACHE_NAME) {
               console.log('[SW] Removing old cache', cacheName)
               return caches.delete(cacheName)
             }
