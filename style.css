@@ -531,3 +531,32 @@ h2 {
     padding: 0;
   }
 }
+/* Full-text mode: the matched passages under each RFC. These are what the
+   feature buys over title search, so they need to read as evidence rather
+   than decoration. */
+.hint {
+  opacity: 0.7;
+  font-size: 0.85em;
+}
+
+ul.sections {
+  margin: 0.25em 0 0 0;
+  padding-left: 1em;
+  list-style: none;
+  font-size: 0.9em;
+}
+
+ul.sections li {
+  margin: 0;
+  opacity: 0.85;
+}
+
+ul.sections li::before {
+  content: "↳ ";
+  opacity: 0.5;
+}
+
+#ftStatus {
+  font-style: italic;
+  opacity: 0.8;
+}

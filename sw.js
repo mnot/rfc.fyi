@@ -54,6 +54,12 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url)
 
+  // Same-origin only. The embedding model is fetched cross-origin from a
+  // CDN and transformers.js already caches it in a cache of its own, so
+  // handling it here would store ~32 MB twice. Letting it pass through also
+  // keeps opaque-response padding out of our quota.
+  if (url.origin !== self.location.origin) return
+
   // Handle data and static assets with Stale-While-Revalidate
   event.respondWith(
     caches.open(CACHE_NAME).then(async (cache) => {

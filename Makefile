@@ -6,7 +6,7 @@
 # here is not served, which is how bin/, src/ and the 13 MB rfc-index.xml stay
 # out. Adding a root-level asset means adding it here. bin/check-site.py fails
 # the build if this drifts from what sw.js expects to load.
-STATIC := index.html client.js data.js util.js style.css sw.js manifest.json rfcfyi.png CNAME
+STATIC := index.html client.js data.js util.js search.js style.css sw.js manifest.json rfcfyi.png CNAME
 DATA := var/rfcs.json var/refs.json var/tags.json
 
 var:
