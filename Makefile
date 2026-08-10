@@ -70,7 +70,7 @@ SAMPLE := 'rfc[19]*.txt'
 .PHONY: rfc-text
 rfc-text:
 	mkdir -p $(RFC_TEXT)
-	rsync -az --delete --include='rfc*.txt' --exclude='*' $(RSYNC_SRC) $(RFC_TEXT)/
+	rsync -az --delete --include='rfc[0-9]*.txt' --exclude='*' $(RSYNC_SRC) $(RFC_TEXT)/
 
 .PHONY: rfc-text-sample
 rfc-text-sample:
