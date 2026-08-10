@@ -83,8 +83,8 @@ export default class RfcData {
     this.obsoleteRefs = new Map()
     this.refs.forEach(rfcNum => {
       const rfcName = this.rfcNumtoName(rfcNum)
-      const rfcRefs = this.refs.get(rfcNum, {})
-      rfcRefs.get('normative', []).forEach(ref => {
+      const rfcRefs = util.getOr(this.refs, rfcNum, {})
+      util.getOr(rfcRefs, 'normative', []).forEach(ref => {
         const refName = this.rfcNumtoName(ref)
         try {
           this.inRefs[refName].push([true, rfcName])
@@ -92,7 +92,7 @@ export default class RfcData {
           console.log(`${rfcName} has non-existant normative reference - ${refName}`)
         }
       })
-      rfcRefs.get('informative', []).forEach(ref => {
+      util.getOr(rfcRefs, 'informative', []).forEach(ref => {
         const refName = this.rfcNumtoName(ref)
         try {
           this.inRefs[refName].push([false, rfcName])
