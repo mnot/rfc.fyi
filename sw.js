@@ -1,11 +1,7 @@
 const CACHE_PREFIX = 'rfcfyi-v'
-<<<<<<< HEAD
-const CACHE_NAME = 'rfcfyi-v1786354013'
-=======
 /* Hosts where a stale asset is a bug rather than a feature. */
 const DEV_HOSTS = new Set(['localhost', '127.0.0.1', '[::1]', '0.0.0.0'])
-const CACHE_NAME = 'rfcfyi-v1786352179'
->>>>>>> 3b08043 (Serve fresh assets on localhost; reap caches without a bare map)
+const CACHE_NAME = 'rfcfyi-v1786354013'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
