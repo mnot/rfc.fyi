@@ -38,8 +38,28 @@
  * which no browser can resolve from a CDN URL. This one has the runtime
  * inlined.
  */
-const RUNTIME_URL =
-  'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0/dist/transformers.min.js'
+const DEFAULT_RUNTIME_URL =
+  'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js'
+
+/* 3.8.1 rather than the 4.2.0 this was first written against. 4.2.0 loads and
+ * runs in Chrome but breaks in Safari: `pipeline()` throws "undefined is not
+ * an object (evaluating 'Qp[t]')", where `Qp` is the module-level task-alias
+ * map. That lookup is guarded (`Qp[t] ?? t`), so a missing *key* would be
+ * harmless -- `Qp` itself being undefined at call time means the module never
+ * finished initialising. 3.8.x is the long-deployed line and has the `dtype`
+ * support v3 introduced, which is all this needs.
+ *
+ * Overridable from the console, so testing another build on a browser you
+ * cannot script does not need a code change:
+ *   localStorage.transformersUrl = '<url>'   then reload
+ */
+function runtimeUrl () {
+  try {
+    return window.localStorage.getItem('transformersUrl') || DEFAULT_RUNTIME_URL
+  } catch {
+    return DEFAULT_RUNTIME_URL
+  }
+}
 
 const HEADER_BYTES = 24
 const FORMAT_VERSION = 1
@@ -282,11 +302,12 @@ export class SemanticSearch {
   async _openPipeline () {
     const spec = this.manifest.model || {}
     const report = this.onProgress
+    const url = runtimeUrl()
     let runtime
     try {
-      runtime = await import(/* @vite-ignore */ RUNTIME_URL)
+      runtime = await import(/* @vite-ignore */ url)
     } catch (err) {
-      return fail(`could not load the embedding runtime from ${RUNTIME_URL}`, err)
+      return fail(`could not load the embedding runtime from ${url}`, err)
     }
     runtime.env.allowLocalModels = false
     try {

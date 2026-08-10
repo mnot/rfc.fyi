@@ -250,7 +250,11 @@ class RfcFyiUi {
       this.semanticFor = query
       this.semanticHits = new Map()
       this.semanticOrder = []
-      this.ftStatus('Full-text search is unavailable. Untick it to search titles and keywords.', false)
+      // Say what actually broke. "Unavailable" alone is the same sentence
+      // for a missing index, a blocked CDN and a failed query, which makes
+      // it useless to whoever has to fix it -- including me.
+      const why = (err && err.message) ? err.message : String(err)
+      this.ftStatus(`Full-text search is unavailable: ${why}`, false)
       this.showRfcs()
     }
   }
