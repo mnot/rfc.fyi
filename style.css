@@ -556,7 +556,11 @@ ul.sections li::before {
   opacity: 0.5;
 }
 
+/* Not .control: that class is hidden on the front page, which is exactly
+   where the model download starts, so the progress it reports was rendered
+   into a hidden element for the whole of the first use. */
 #ftStatus {
+  font-size: 85%;
   font-style: italic;
   opacity: 0.8;
 }

@@ -76,9 +76,9 @@ server: site
 	cd _site && python -m http.server
 
 .PHONY: lint
-lint: client.js util.js data.js bin/*.py
-	standard --fix client.js util.js
-	black bin/*.py
+lint: client.js util.js data.js search.js bin/*.py eval/*.py
+	standard --fix client.js util.js data.js search.js
+	black bin/*.py eval/*.py
 
 .PHONY: clean
 clean:
@@ -141,10 +141,15 @@ index-verify:
 # repo without bound.
 .PHONY: index-release
 index-release:
-	@test -f index/manifest.json || { echo "no index; run make index-full"; exit 1; }
-	tar czf index.tar.gz index
-	gh release create index-$(shell $(PY) -c "import json;print(json.load(open('index/manifest.json'))['version'])") \
-	  index.tar.gz --title "Semantic index" --notes "Built by make index-full." || \
-	gh release upload index-$(shell $(PY) -c "import json;print(json.load(open('index/manifest.json'))['version'])") \
-	  index.tar.gz --clobber
-	rm -f index.tar.gz
+	@# One shell, one read. $(shell ...) expands when the recipe is expanded,
+	@# which is *before* the guard below runs -- so with no index you got two
+	@# Python tracebacks and an empty tag instead of the intended message.
+	@set -e; \
+	test -f index/manifest.json || { echo "no index; run make index-full" >&2; exit 1; }; \
+	tag=index-$$($(PY) -c "import json;print(json.load(open('index/manifest.json'))['version'])"); \
+	tar czf index.tar.gz index; \
+	gh release create "$$tag" index.tar.gz --title "Semantic index $$tag" \
+	  --notes "Built by make index-full." \
+	  || gh release upload "$$tag" index.tar.gz --clobber; \
+	rm -f index.tar.gz; \
+	echo "published $$tag"

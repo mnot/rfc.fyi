@@ -228,7 +228,13 @@ export class SemanticSearch {
      * so two queries probing the same cluster share one fetch. Session-only:
      * the HTTP cache and the service worker are what survive a reload.
      */
+    /* Bounded, least-recently-used. Twenty clusters at ~44 KiB land per
+     * distinct query, so an unbounded map grows by about a megabyte every
+     * fifty queries and never gives any of it back. The HTTP cache and the
+     * service worker are what make a re-fetch cheap, so evicting here costs
+     * little. */
     this.clusters = new Map()
+    this.maxCachedClusters = 400
     this.pipeline = null
     this.pipelinePromise = null
     this.stats = {
@@ -409,11 +415,18 @@ export class SemanticSearch {
     let pending = this.clusters.get(id)
     if (pending) {
       this.stats.clusterHits++
+      // Re-insert to mark it most-recently-used: Map iterates in insertion
+      // order, so the eviction below can just take the first key.
+      this.clusters.delete(id)
+      this.clusters.set(id, pending)
       return pending
     }
     pending = this._fetchCluster(id)
     pending.catch(() => this.clusters.delete(id))
     this.clusters.set(id, pending)
+    while (this.clusters.size > this.maxCachedClusters) {
+      this.clusters.delete(this.clusters.keys().next().value)
+    }
     return pending
   }
 

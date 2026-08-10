@@ -22,6 +22,8 @@ class RfcFyiUi {
   semanticOrder = [] // rfcNames, best score first
   semanticFor = null // the query semanticHits describes
   semanticTotal = 0 // rows before the rank cap, for an honest count
+  semanticTimer = null
+  semanticToken = 0
   // Hoisted out of showRfcs, which took it as an argument defaulting to true
   // while six of its eight call sites passed nothing -- so choosing "sort by
   // number" and then typing another character silently reverted to refs.
@@ -181,12 +183,17 @@ class RfcFyiUi {
   async refreshModelHint () {
     const hint = document.querySelector('#modeFullText .hint')
     if (!hint) return
+    const modelId = (this.engine && this.engine.manifest &&
+      this.engine.manifest.model && this.engine.manifest.model.id) || 'bge-small'
     let cached = false
     try {
       for (const name of await caches.keys()) {
         const cache = await caches.open(name)
         const keys = await cache.keys()
-        if (keys.some(r => r.url.includes('bge-small'))) { cached = true; break }
+        // Match the model this index was actually built with, rather than
+        // a hardcoded name: everything else reads it from the manifest, and
+        // a changed model would otherwise leave the hint permanently wrong.
+        if (keys.some(r => r.url.includes(modelId))) { cached = true; break }
       }
     } catch { /* no Cache API, or blocked: leave the hint as written */ }
     hint.hidden = cached
@@ -285,7 +292,22 @@ class RfcFyiUi {
     this.ftStatus('Preparing search model\u2026')
   }
 
+  /* Debounced, and only the newest query is allowed to land.
+   *
+   * searchInput fires per keystroke, and in full-text mode `semantic` is
+   * true from the first character -- the prefix path at least has
+   * data.prefixLen as a floor -- so typing "cache" used to start five
+   * searches, each an embed plus up to twenty cluster fetches. Out-of-order
+   * completion was not permanently corrupting, but a late resolver would
+   * claim semanticFor for its own stale query and trigger a third search.
+   */
+  scheduleSemanticSearch (query) {
+    clearTimeout(this.semanticTimer)
+    this.semanticTimer = setTimeout(() => this.runSemanticSearch(query), 200)
+  }
+
   async runSemanticSearch (query) {
+    const token = ++this.semanticToken
     // Everything here is lazy on purpose. The engine pulls ~1.6 MiB of
     // centroids and the model ~32 MiB, and someone who never ticks the box
     // should pay for neither.
@@ -324,6 +346,7 @@ class RfcFyiUi {
         if (!byRfc.has(name)) byRfc.set(name, [])
         byRfc.get(name).push(hit)
       })
+      if (token !== this.semanticToken) return // superseded while in flight
       this.semanticHits = byRfc
       this.semanticOrder = Array.from(byRfc.keys())
       this.semanticFor = query
@@ -331,6 +354,7 @@ class RfcFyiUi {
       this.showRfcs()
     } catch (err) {
       console.error('[search] full-text search failed:', err)
+      if (token !== this.semanticToken) return
       this.semanticFor = query
       this.semanticHits = new Map()
       this.semanticOrder = []
@@ -371,12 +395,12 @@ class RfcFyiUi {
     document.getElementById('sort').hidden = semantic
     document.getElementById('sortRelevance').hidden = !semantic
 
-    this.clear(target)
     let searchedRfcs = new Set()
     let taggedRfcs = new Set()
     let relevantRfcs = new Set()
     let rfcList = []
     let userInput = false
+    let pending = false
     if (this.activeTags.size !== 0 ||
       (semantic && this.searchWords.length !== 0) ||
       (this.searchWords.length !== 0 && !isNaN(parseInt(this.searchWords[0]))) ||
@@ -386,13 +410,19 @@ class RfcFyiUi {
       if (semantic) {
         const query = this.searchWords.join(' ')
         if (this.semanticFor !== query) {
-          this.runSemanticSearch(query)
-          return
+          // Kick off the search and fall through. Returning here left the
+          // list cleared while #count still showed the previous number, and
+          // skipped setContainer() -- which is what kept the download
+          // progress hidden, since #ftStatus only shows outside .noresults.
+          this.scheduleSemanticSearch(query)
+          pending = true
         }
         // Already ranked; keep that order. Tags still intersect, exactly as
         // they do for prefix hits.
-        rfcList = this.semanticOrder.filter(name => taggedRfcs.has(name))
-        relevantRfcs = new Set(rfcList)
+        if (!pending) {
+          rfcList = this.semanticOrder.filter(name => taggedRfcs.has(name))
+          relevantRfcs = new Set(rfcList)
+        }
       } else {
         searchedRfcs = data.searchRfcs(this.searchWords)
         relevantRfcs = taggedRfcs.intersection(searchedRfcs)
@@ -420,11 +450,16 @@ class RfcFyiUi {
         this.semanticTotal = rfcList.length
         rfcList = rfcList.slice(0, SEMANTIC_ROW_CAP)
       }
-      rfcList.forEach(item => {
-        const rfcData = data.rfcs[item]
-        this.renderRfc(item, rfcData, target, false,
-          semantic ? this.semanticHits.get(item) : null)
-      })
+      if (!pending) {
+        this.clear(target)
+        rfcList.forEach(item => {
+          const rfcData = data.rfcs[item]
+          this.renderRfc(item, rfcData, target, false,
+            semantic ? this.semanticHits.get(item) : null)
+        })
+      }
+    } else {
+      this.clear(target)
     }
 
     // tags
@@ -448,10 +483,12 @@ class RfcFyiUi {
     }
 
     // count
-    const truncated = semantic && this.semanticTotal > rfcList.length
-    const count = document.createTextNode(truncated
-      ? `top ${rfcList.length} of ${this.semanticTotal} RFCs`
-      : `${rfcList.length} RFC${this.pluralise(rfcList.length)}`)
+    const truncated = semantic && !pending && this.semanticTotal > rfcList.length
+    const count = document.createTextNode(pending
+      ? 'Searching\u2026'
+      : truncated
+        ? `top ${rfcList.length} of ${this.semanticTotal} RFCs`
+        : `${rfcList.length} RFC${this.pluralise(rfcList.length)}`)
     const countTarget = document.getElementById('count')
     this.clear(countTarget)
     countTarget.appendChild(count)
@@ -459,7 +496,7 @@ class RfcFyiUi {
     // empty state
     const emptyTarget = document.getElementById('empty')
     if (emptyTarget) {
-      if (userInput && rfcList.length === 0) {
+      if (userInput && !pending && rfcList.length === 0) {
         emptyTarget.textContent = this.verbose
           ? 'No RFCs match. Try a broader term, check the spelling, or pick a collection.'
           : 'No RFCs match. Try a broader term, or tick “Show obsolete and historic RFCs” to include older ones.'

@@ -1,4 +1,7 @@
 const CACHE_PREFIX = 'rfcfyi-v'
+/* Index content, kept apart from the site cache so a deploy does not discard
+   it. Not prefixed with CACHE_PREFIX, so activate's reaper leaves it alone. */
+const INDEX_CACHE = 'rfcfyi-index'
 /* Hosts where a stale asset is a bug rather than a feature. */
 const DEV_HOSTS = new Set(['localhost', '127.0.0.1', '[::1]', '0.0.0.0'])
 const CACHE_NAME = 'rfcfyi-v1786354013'
@@ -80,6 +83,25 @@ self.addEventListener('fetch', (event) => {
           if (cached) return cached
           throw err
         }
+      })
+    )
+    return
+  }
+
+  // Index content is immutable per release and expensive to refetch, so it
+  // does not belong in CACHE_NAME -- which `make pwa-update` bumps on every
+  // deploy, so `activate` would delete a user's whole warmed index because
+  // someone changed a stylesheet. This is the bug just fixed for the
+  // transformers.js model cache, one level in. Cache-first, since a given
+  // URL's bytes never change within a release.
+  if (url.pathname.startsWith('/index/')) {
+    event.respondWith(
+      caches.open(INDEX_CACHE).then(async (cache) => {
+        const hit = await cache.match(event.request)
+        if (hit) return hit
+        const fresh = await fetch(event.request)
+        if (fresh.ok) cache.put(event.request, fresh.clone())
+        return fresh
       })
     )
     return
