@@ -173,11 +173,43 @@ class RfcFyiUi {
     ui.updateUrl()
   }
 
-  ftStatus (message) {
+  ftStatus (message, busy = true) {
     const el = document.getElementById('ftStatus')
     if (!el) return
     el.hidden = !message
-    el.textContent = message || ''
+    el.textContent = ''
+    if (!message) return
+    if (busy) {
+      const spin = document.createElement('span')
+      spin.className = 'spinner'
+      spin.setAttribute('aria-hidden', 'true')
+      el.appendChild(spin)
+    }
+    el.appendChild(document.createTextNode(message))
+  }
+
+  // transformers.js reports per-file download progress. The model is tens of
+  // megabytes over several files, so a percentage is worth far more than an
+  // indeterminate spinner -- the wait is long enough that people need to know
+  // it is finite.
+  ftProgress (event) {
+    if (!event || typeof event !== 'object') {
+      this.ftStatus(String(event || ''))
+      return
+    }
+    if (event.phase === 'model' && event.status === 'progress' && event.total) {
+      const pct = Math.round((event.loaded / event.total) * 100)
+      const mb = (event.total / 1048576).toFixed(1)
+      const file = String(event.file || '').split('/').pop()
+      this.ftStatus(`Downloading search model \u2014 ${pct}% of ${mb} MB (${file})`)
+      return
+    }
+    if (event.phase === 'manifest' || event.phase === 'centroids') {
+      this.ftStatus('Loading search index\u2026')
+      return
+    }
+    if (event.status === 'ready' || event.status === 'done') return
+    this.ftStatus('Preparing search model\u2026')
   }
 
   async runSemanticSearch (query) {
@@ -190,9 +222,9 @@ class RfcFyiUi {
         const { SemanticSearch } = await import('./search.js')
         this.engine = await SemanticSearch.create({
           basePath: '/index',
-          onProgress: (msg) => this.ftStatus(msg)
+          onProgress: (event) => this.ftProgress(event)
         })
-        this.ftStatus('Loading search model (~32 MB, once)\u2026')
+        this.ftStatus('Loading search model (~39 MB, once)\u2026')
         await this.engine.loadModel()
       }
       this.ftStatus('Searching\u2026')
@@ -218,7 +250,7 @@ class RfcFyiUi {
       this.semanticFor = query
       this.semanticHits = new Map()
       this.semanticOrder = []
-      this.ftStatus('Full-text search is unavailable. Untick it to search titles and keywords.')
+      this.ftStatus('Full-text search is unavailable. Untick it to search titles and keywords.', false)
       this.showRfcs()
     }
   }

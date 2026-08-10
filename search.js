@@ -1,0 +1,442 @@
+/* Browser-side semantic search over the published IVF index in `index/`.
+ *
+ * The shape of the thing: `centroids.bin` (1.6 MiB) is resident, everything
+ * else is fetched on demand. A query is embedded locally, scored against every
+ * centroid, and the best `nprobe` clusters are pulled as whole files -- whole
+ * files because `cache.put()` rejects a 206, so a range request could not be
+ * cached by the service worker. Roughly 2,300 chunk vectors come back for a
+ * 20-cluster query and about ten of them are shown.
+ *
+ * The binary layout is specified in the module docstring of
+ * `bin/build-clusters.py`; `read_cluster()` there is the reference reader.
+ * Three things in it are silent wrongness rather than loud failure, so they
+ * are called out at the point where they are relied on:
+ *
+ *   1. Centroids are used exactly as dequantised -- NOT re-normalised. The
+ *      build's partition is `argmax(v . dequantised_centroid)`, and
+ *      re-normalising moves about 4% of chunks into a different cluster than
+ *      the one they were actually written to. See `dequantise` below.
+ *   2. bge-small pools the CLS token, not the mean (`pooling: 'cls'`).
+ *   3. The query gets an instruction prefix; the corpus was embedded without
+ *      one. Both come from the manifest so they cannot drift from the build.
+ *
+ * Nothing here loads the model until `loadModel()` is called, and nothing
+ * fetches transformers.js until then either -- `create()` only needs the
+ * manifest and the centroids, which is enough to build the UI around.
+ */
+
+/* The runtime is pinned, not floating: `dtype` and the pooling options are
+ * load-bearing and a major-version bump has moved both before. `@xenova/
+ * transformers` is the retired v2 package; this is its successor. The `int8`
+ * dtype selects `onnx/model_int8.onnx` (32.2 MiB) -- the exact artifact
+ * bin/embed.py encoded the corpus with. The wasm default would be `q8`, which
+ * is a *different* file (`model_quantized.onnx`), so leaving it unset would
+ * quietly embed queries with a model the corpus never saw.
+ *
+ * `dist/transformers.min.js` and not the `.web.` build: the latter is the
+ * bundler entry point and leaves `onnxruntime-web/webgpu` as a bare specifier,
+ * which no browser can resolve from a CDN URL. This one has the runtime
+ * inlined.
+ */
+const RUNTIME_URL =
+  'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0/dist/transformers.min.js'
+
+const HEADER_BYTES = 24
+const FORMAT_VERSION = 1
+const MAGIC_CENTROIDS = 'RFCV'
+const MAGIC_CLUSTER = 'RFCC'
+const DEFAULT_CLUSTER_PATH = 'clusters/{id:04d}.bin'
+
+/** Anything the UI can reasonably put in front of a person. */
+export class SearchError extends Error {
+  constructor (message, options) {
+    super(message, options)
+    this.name = 'SearchError'
+  }
+}
+
+function fail (message, cause) {
+  throw new SearchError(cause ? `${message}: ${cause.message}` : message, { cause })
+}
+
+async function fetchOk (url) {
+  let response
+  try {
+    response = await fetch(url)
+  } catch (err) {
+    return fail(`could not reach ${url}`, err)
+  }
+  if (!response.ok) {
+    fail(`${url}: HTTP ${response.status} ${response.statusText}`)
+  }
+  return response
+}
+
+/* Streamed only when Content-Length is known, because a progress bar that
+ * cannot say how far along it is helps nobody, and `arrayBuffer()` is the
+ * faster path when there is no one watching.
+ */
+async function fetchBuffer (url, report, phase) {
+  const response = await fetchOk(url)
+  const total = Number(response.headers.get('content-length')) || 0
+  if (!report || !total || !response.body) {
+    return response.arrayBuffer()
+  }
+  const reader = response.body.getReader()
+  const parts = []
+  let loaded = 0
+  for (;;) {
+    const { done, value } = await reader.read()
+    if (done) break
+    parts.push(value)
+    loaded += value.byteLength
+    report({ phase, status: 'progress', loaded, total, progress: (loaded / total) * 100 })
+  }
+  const bytes = new Uint8Array(loaded)
+  let at = 0
+  for (const part of parts) {
+    bytes.set(part, at)
+    at += part.byteLength
+  }
+  return bytes.buffer
+}
+
+/* The 24-byte header both binary files share. */
+function readHeader (buffer, url, magic) {
+  if (buffer.byteLength < HEADER_BYTES) {
+    fail(`${url}: ${buffer.byteLength} bytes, too short to be an index file`)
+  }
+  const view = new DataView(buffer)
+  const got = String.fromCharCode(...new Uint8Array(buffer, 0, 4))
+  if (got !== magic) {
+    fail(`${url}: magic ${JSON.stringify(got)}, expected ${JSON.stringify(magic)}`)
+  }
+  const version = view.getUint16(4, true)
+  if (version !== FORMAT_VERSION) {
+    fail(`${url}: format version ${version}, expected ${FORMAT_VERSION}`)
+  }
+  return {
+    dims: view.getUint16(6, true),
+    count: view.getUint32(8, true),
+    ident: view.getUint32(12, true),
+    metaLen: view.getUint32(16, true)
+  }
+}
+
+/* int8 -> float, and nothing else.
+ *
+ * Do NOT re-normalise the rows afterwards. The published partition is plain
+ * argmax over these values as they stand; unit-normalising them is a
+ * different function with a different argmax for a few percent of the corpus,
+ * and the chunks that move are invisibly unreachable rather than obviously
+ * broken.
+ */
+function dequantise (quantised, scale) {
+  const out = new Float32Array(quantised.length)
+  for (let i = 0; i < quantised.length; i++) {
+    out[i] = quantised[i] * scale
+  }
+  return out
+}
+
+function dot (query, vectors, row, dims) {
+  const base = row * dims
+  let sum = 0
+  for (let d = 0; d < dims; d++) {
+    sum += query[d] * vectors[base + d]
+  }
+  return sum
+}
+
+/* Indices of the `n` highest scores, best first.
+ *
+ * A bounded insertion rather than sorting everything: this runs over 4,337
+ * centroids on every keystroke-triggered query and over a few thousand chunks
+ * after that, and n is 20-50, so almost every candidate is rejected by one
+ * comparison.
+ */
+function topIndices (scores, n) {
+  const want = Math.min(n, scores.length)
+  if (want <= 0) return []
+  const best = []
+  let worst = -Infinity
+  for (let i = 0; i < scores.length; i++) {
+    const score = scores[i]
+    if (best.length === want && score <= worst) continue
+    let at = best.length
+    while (at > 0 && scores[best[at - 1]] < score) at--
+    best.splice(at, 0, i)
+    if (best.length > want) best.pop()
+    worst = scores[best[best.length - 1]]
+  }
+  return best
+}
+
+function clusterUrl (basePath, template, id) {
+  const path = template.replace(/\{id:0(\d+)d\}/, (_, width) =>
+    String(id).padStart(Number(width), '0'))
+  return `${basePath}/${path}`
+}
+
+export class SemanticSearch {
+  /* Use `create()`. */
+  constructor (options) {
+    this.basePath = options.basePath
+    this.manifest = options.manifest
+    this.dims = options.dims
+    this.scale = options.scale
+    this.centroids = options.centroids
+    this.clusterCount = options.centroids.length / options.dims
+    this.clusterPath = options.manifest.clusters?.path || DEFAULT_CLUSTER_PATH
+    this.onProgress = options.onProgress
+
+    /* Cluster id -> Promise of a parsed cluster. Promises rather than values
+     * so two queries probing the same cluster share one fetch. Session-only:
+     * the HTTP cache and the service worker are what survive a reload.
+     */
+    this.clusters = new Map()
+    this.pipeline = null
+    this.pipelinePromise = null
+    this.stats = {
+      centroidBytes: options.centroidBytes,
+      clusterBytes: 0,
+      clusterFetches: 0,
+      clusterHits: 0
+    }
+  }
+
+  /**
+   * Load the manifest and the centroids. Does not touch the model.
+   *
+   * @param {object} [options]
+   * @param {string} [options.basePath] where the index lives, no trailing slash
+   * @param {function} [options.onProgress] `{ phase, status, loaded, total, progress }`
+   *   with phase one of 'manifest' | 'centroids' | 'model'
+   */
+  static async create ({ basePath = '/index', onProgress } = {}) {
+    const base = String(basePath).replace(/\/+$/, '')
+    const report = typeof onProgress === 'function' ? onProgress : null
+
+    report?.({ phase: 'manifest', status: 'start' })
+    const manifestUrl = `${base}/manifest.json`
+    const response = await fetchOk(manifestUrl)
+    let manifest
+    try {
+      manifest = await response.json()
+    } catch (err) {
+      return fail(`${manifestUrl} is not JSON`, err)
+    }
+    if (manifest.version !== FORMAT_VERSION) {
+      fail(`${manifestUrl}: index version ${manifest.version}, expected ${FORMAT_VERSION}`)
+    }
+    report?.({ phase: 'manifest', status: 'done' })
+
+    const centroidsUrl = `${base}/${manifest.centroids?.path || 'centroids.bin'}`
+    const buffer = await fetchBuffer(centroidsUrl, report, 'centroids')
+    const head = readHeader(buffer, centroidsUrl, MAGIC_CENTROIDS)
+    const want = HEADER_BYTES + head.count * head.dims
+    if (buffer.byteLength !== want) {
+      fail(`${centroidsUrl}: ${buffer.byteLength} bytes, expected ${want}`)
+    }
+    if (head.dims !== manifest.model?.dims) {
+      fail(`${centroidsUrl}: ${head.dims} dims, manifest says ${manifest.model?.dims}`)
+    }
+    const scale = manifest.quant?.scale
+    if (!(scale > 0)) {
+      fail(`${manifestUrl}: no usable quant.scale`)
+    }
+    report?.({ phase: 'centroids', status: 'done', loaded: buffer.byteLength, total: buffer.byteLength })
+
+    return new SemanticSearch({
+      basePath: base,
+      manifest,
+      dims: head.dims,
+      scale,
+      centroids: dequantise(new Int8Array(buffer, HEADER_BYTES, head.count * head.dims), scale),
+      centroidBytes: buffer.byteLength,
+      onProgress: report
+    })
+  }
+
+  get modelLoaded () {
+    return this.pipeline !== null
+  }
+
+  /**
+   * Fetch and warm the embedding model (~32 MiB, plus the ONNX runtime).
+   * Cached by transformers.js in the Cache API, so it is a one-off per
+   * browser rather than per session. Idempotent, and safe to call
+   * concurrently; a failed load can be retried.
+   */
+  async loadModel () {
+    if (this.pipeline) return this.pipeline
+    if (!this.pipelinePromise) {
+      this.pipelinePromise = this._openPipeline()
+      // Reset on failure so a retry is possible, and so the rejection is
+      // never unhandled while the caller has not awaited yet.
+      this.pipelinePromise.catch(() => { this.pipelinePromise = null })
+    }
+    return this.pipelinePromise
+  }
+
+  async _openPipeline () {
+    const spec = this.manifest.model || {}
+    const report = this.onProgress
+    let runtime
+    try {
+      runtime = await import(/* @vite-ignore */ RUNTIME_URL)
+    } catch (err) {
+      return fail(`could not load the embedding runtime from ${RUNTIME_URL}`, err)
+    }
+    runtime.env.allowLocalModels = false
+    try {
+      this.pipeline = await runtime.pipeline('feature-extraction', spec.id, {
+        // The corpus was embedded with onnx/model_int8.onnx on CPU. Both are
+        // pinned so a query vector and a chunk vector come from the same
+        // graph at the same quantisation, on any machine.
+        dtype: spec.variant || 'int8',
+        device: 'wasm',
+        progress_callback: report
+          ? event => report({ phase: 'model', ...event })
+          : undefined
+      })
+    } catch (err) {
+      return fail(`could not load the embedding model ${spec.id}`, err)
+    }
+    // No 'ready' of our own: transformers.js emits one, and the resolution of
+    // the promise this returns is the signal that cannot be missed.
+    return this.pipeline
+  }
+
+  async _embed (text) {
+    const spec = this.manifest.model || {}
+    let output
+    try {
+      output = await this.pipeline(
+        // The instruction prefix goes on the query and only on the query --
+        // the corpus was embedded bare. Omitting it costs real recall, and
+        // adding it to passages would cost more. It comes from the manifest,
+        // which is written by the build that embedded the corpus.
+        (spec.query_prefix || '') + text,
+        { pooling: spec.pooling || 'cls', normalize: true }
+      )
+    } catch (err) {
+      return fail('could not embed the query', err)
+    }
+    const vector = output.data
+    if (!vector || vector.length !== this.dims) {
+      fail(`the model returned ${vector ? vector.length : 0} dims, expected ${this.dims}`)
+    }
+    return vector
+  }
+
+  /* The `nprobe` clusters whose centroids score highest. */
+  _probe (query, nprobe) {
+    const scores = new Float32Array(this.clusterCount)
+    for (let j = 0; j < this.clusterCount; j++) {
+      scores[j] = dot(query, this.centroids, j, this.dims)
+    }
+    return topIndices(scores, nprobe)
+  }
+
+  _cluster (id) {
+    let pending = this.clusters.get(id)
+    if (pending) {
+      this.stats.clusterHits++
+      return pending
+    }
+    pending = this._fetchCluster(id)
+    pending.catch(() => this.clusters.delete(id))
+    this.clusters.set(id, pending)
+    return pending
+  }
+
+  async _fetchCluster (id) {
+    const url = clusterUrl(this.basePath, this.clusterPath, id)
+    const buffer = await fetchBuffer(url)
+    const head = readHeader(buffer, url, MAGIC_CLUSTER)
+    if (head.dims !== this.dims) {
+      fail(`${url}: ${head.dims} dims, expected ${this.dims}`)
+    }
+    if (head.ident !== id) {
+      fail(`${url}: header says cluster ${head.ident}`)
+    }
+    const end = HEADER_BYTES + head.count * head.dims
+    if (buffer.byteLength !== end + head.metaLen) {
+      fail(`${url}: ${buffer.byteLength} bytes, expected ${end + head.metaLen}`)
+    }
+    let meta
+    try {
+      meta = JSON.parse(new TextDecoder().decode(new Uint8Array(buffer, end, head.metaLen)))
+    } catch (err) {
+      return fail(`${url}: unreadable metadata tail`, err)
+    }
+    if (meta.n !== head.count) {
+      fail(`${url}: tail says n=${meta.n}, header says ${head.count}`)
+    }
+    this.stats.clusterFetches++
+    this.stats.clusterBytes += buffer.byteLength
+    return {
+      id,
+      count: head.count,
+      vectors: new Int8Array(buffer, HEADER_BYTES, head.count * head.dims),
+      meta
+    }
+  }
+
+  /**
+   * Rank chunks against a query.
+   *
+   * @param {string} query
+   * @param {object} [options]
+   * @param {number} [options.nprobe=20] clusters to fetch and scan
+   * @param {number} [options.limit=50] chunks to return
+   * @returns {Promise<Array<{rfc: number|string, section: ?string, title: string,
+   *   offset: number, length: number, score: number}>>} best first. Chunks are
+   *   returned as they are -- several from one RFC, or one section, is normal;
+   *   collapsing them is the caller's business.
+   */
+  async search (query, { nprobe = 20, limit = 50 } = {}) {
+    const text = String(query ?? '').trim()
+    if (!text || limit <= 0) return []
+    await this.loadModel()
+    const vector = await this._embed(text)
+
+    const probes = this._probe(vector, Math.max(1, Math.min(nprobe, this.clusterCount)))
+    const clusters = await Promise.all(probes.map(id => this._cluster(id)))
+
+    // One flat candidate list across every probed cluster, scored against the
+    // dequantised int8 vectors. The scale is a positive constant so it cannot
+    // reorder anything, but it is applied anyway: the number a caller sees is
+    // then a cosine against the stored vector, not an arbitrary integer.
+    let total = 0
+    for (const cluster of clusters) total += cluster.count
+    const scores = new Float32Array(total)
+    const owner = new Int32Array(total)
+    const row = new Int32Array(total)
+    let at = 0
+    for (let c = 0; c < clusters.length; c++) {
+      const cluster = clusters[c]
+      for (let i = 0; i < cluster.count; i++) {
+        scores[at] = dot(vector, cluster.vectors, i, this.dims) * this.scale
+        owner[at] = c
+        row[at] = i
+        at++
+      }
+    }
+
+    return topIndices(scores, limit).map(hit => {
+      const { meta } = clusters[owner[hit]]
+      const i = row[hit]
+      const section = meta.sec[i]
+      return {
+        rfc: meta.rfc[i],
+        section: section === -1 ? null : meta.str[section],
+        title: meta.str[meta.title[i]],
+        offset: meta.off[i],
+        length: meta.len[i],
+        score: scores[hit]
+      }
+    })
+  }
+}
