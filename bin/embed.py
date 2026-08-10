@@ -130,8 +130,13 @@ class Embedder:
         mask = np.array([e.attention_mask for e in encodings], dtype=np.int64)
 
         self.encoded += len(batch)
+        # Count real tokens, not `len(e.ids)`. Padding is batch-longest, so
+        # ids are padded up to whatever the longest member of THIS batch is
+        # -- reading that length counts every chunk in a batch as truncated
+        # the moment one of them is. The attention mask is zero on padding,
+        # so its sum is the true length.
         self.truncated += sum(
-            1 for e in encodings if len(e.ids) >= self.spec.max_length
+            1 for e in encodings if sum(e.attention_mask) >= self.spec.max_length
         )
 
         feeds = {"input_ids": ids, "attention_mask": mask}
