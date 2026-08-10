@@ -256,9 +256,19 @@ class RfcFyiUi {
       // order the rows by their best chunk. rfc.fyi is a finder: the row is
       // the document, the sections are the evidence.
       const byRfc = new Map()
+      const seenSections = new Map() // rfcName -> Set of section keys
       hits.forEach(hit => {
         const name = data.rfcNumtoName(String(hit.rfc))
         if (!data.rfcs[name]) return // an id we have no metadata for
+        // One row per section, not per chunk. A section runs to several
+        // chunks, so without this the same heading renders two or three
+        // times under one RFC and the extra slots say nothing -- the worst
+        // observed case filled both displayed lines with the same section.
+        // Hits arrive best-first, so the first one kept is the strongest.
+        const key = hit.section || hit.title || ''
+        if (!seenSections.has(name)) seenSections.set(name, new Set())
+        if (seenSections.get(name).has(key)) return
+        seenSections.get(name).add(key)
         if (!byRfc.has(name)) byRfc.set(name, [])
         byRfc.get(name).push(hit)
       })
