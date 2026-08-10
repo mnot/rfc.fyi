@@ -96,6 +96,54 @@ def check(site, tags):
             f"{', '.join(dangling[:5])}"
         )
 
+    errors.extend(check_index(site))
+    return errors
+
+
+def check_index(site):
+    """The semantic index, when the build included one.
+
+    Absent is fine and deliberate: it is fetched from a release, and a site
+    without it publishes with full-text search reporting itself unavailable.
+    Present but wrong is the case worth catching -- a half-extracted tarball
+    or a truncated download leaves a manifest that parses and a clusters
+    directory that does not match it, and the failure a user sees is
+    'no results', which looks like a bad query rather than a broken deploy.
+    """
+    index = site / "index"
+    if not index.exists():
+        return []
+
+    errors = []
+    manifest_path = index / "manifest.json"
+    if not manifest_path.exists():
+        return [f"{index.name}/: present but has no manifest.json"]
+    try:
+        with open(manifest_path) as fh:
+            manifest = json.load(fh)
+    except (OSError, ValueError) as err:
+        return [f"index/manifest.json: unreadable ({err})"]
+
+    expected = (manifest.get("clusters") or {}).get("count")
+    found = len(list((index / "clusters").glob("*.bin"))) if (index / "clusters").is_dir() else 0
+    if not expected:
+        errors.append("index/manifest.json: no clusters.count to check against")
+    elif found != expected:
+        errors.append(f"index/clusters: {found} files, manifest says {expected}")
+
+    centroids = index / "centroids.bin"
+    if not centroids.exists():
+        errors.append("index/centroids.bin: missing")
+    elif expected:
+        # 24-byte header, then count x dims signed bytes. Wrong size means a
+        # centroid file that does not describe this partition, and every
+        # query would then probe clusters chosen against the wrong vectors.
+        dims = manifest.get("dims") or (manifest.get("model") or {}).get("dims") or 384
+        want = 24 + expected * dims
+        got = centroids.stat().st_size
+        if got != want:
+            errors.append(f"index/centroids.bin: {got} bytes, expected {want}")
+
     return errors
 
 
