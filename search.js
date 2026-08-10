@@ -309,7 +309,26 @@ export class SemanticSearch {
     } catch (err) {
       return fail(`could not load the embedding runtime from ${url}`, err)
     }
-    runtime.env.allowLocalModels = false
+    // Optional: it only matters for loading model files from this origin,
+    // which we never do. Guarded because Safari has twice handed back a
+    // namespace with top-level bindings missing -- 4.2.0's task-alias map,
+    // then this -- and crashing on a setting we do not need told us nothing
+    // about the real problem underneath.
+    if (runtime.env) {
+      runtime.env.allowLocalModels = false
+    } else {
+      report?.({
+        phase: 'model',
+        status: 'warn',
+        message: `runtime loaded without env; exports: ${Object.keys(runtime).slice(0, 12).join(', ') || '(none)'}`
+      })
+    }
+    if (typeof runtime.pipeline !== 'function') {
+      return fail(
+        `the runtime at ${url} exposes no pipeline() -- it loaded but did not ` +
+        `initialise. Exports: ${Object.keys(runtime).slice(0, 12).join(', ') || '(none)'}`
+      )
+    }
     try {
       this.pipeline = await runtime.pipeline('feature-extraction', spec.id, {
         // The corpus was embedded with onnx/model_int8.onnx on CPU. Both are
