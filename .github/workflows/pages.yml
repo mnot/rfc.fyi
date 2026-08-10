@@ -22,6 +22,27 @@ jobs:
       uses: actions/setup-python@v7
       with:
         python-version: "3.13"
+    # The semantic index is built locally -- it needs a model and hours of CPU
+    # -- and published as a release asset rather than committed, so that
+    # regenerating it does not grow the repository forever (see #53). Fetched
+    # here and unpacked for `make site` to pick up.
+    #
+    # Deliberately non-fatal. If no index has been released yet, or the
+    # download fails, the site still builds and deploys; full-text search
+    # reports itself unavailable and everything else works. A stale index is
+    # likewise better than no site.
+    - name: Fetch semantic index
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        tag=$(gh release list --limit 30 --json tagName \
+              -q '[.[].tagName | select(startswith("index-"))] | first // empty')
+        if [ -n "$tag" ] && gh release download "$tag" --pattern 'index.tar.gz' --dir .; then
+          tar xzf index.tar.gz && rm -f index.tar.gz
+          echo "index $tag: $(du -sh index | cut -f1), $(ls index/clusters | wc -l) clusters"
+        else
+          echo "no index release found; building without full-text search"
+        fi
     - name: Build site
       run: make site
     - name: Upload artifact

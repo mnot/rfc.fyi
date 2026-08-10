@@ -36,6 +36,16 @@ site: $(DATA)
 	cp $(STATIC) _site/
 	cp $(DATA) _site/var/
 	cp vendor/* _site/vendor/
+	@# The semantic index, when there is one. Optional by design: it is built
+	@# locally and collected from a release, so a site built without it is a
+	@# working site whose full-text mode reports itself unavailable, rather
+	@# than a failed deploy.
+	@if [ -d index ]; then \
+	  echo "cp -R index _site/ ($$(du -sh index | cut -f1))"; \
+	  cp -R index _site/; \
+	else \
+	  echo "no index/ -- publishing without full-text search"; \
+	fi
 	python bin/check-site.py _site $(words $(tagfiles)) || { rm -rf _site; exit 1; }
 
 .PHONY: server
