@@ -1,4 +1,4 @@
-/* global history */
+/* global history, caches */
 
 import * as util from './util.js'
 import RfcData from './data.js'
@@ -47,6 +47,7 @@ class RfcFyiUi {
         this.showRfcs()
       }
       this.registerServiceWorker()
+      this.refreshModelHint()
     })
   }
 
@@ -165,6 +166,26 @@ class RfcFyiUi {
     ui.showRfcs()
   }
 
+  /* transformers.js keeps the model in its own Cache API bucket, so the
+   * download is a one-off across sessions -- but the hint saying so is only
+   * true until it happens. Checked on load rather than remembered in
+   * localStorage, since the browser can evict the cache without telling us
+   * and a stale "already downloaded" is the more annoying lie.
+   */
+  async refreshModelHint () {
+    const hint = document.querySelector('#fullText ~ .hint, label .hint')
+    if (!hint) return
+    let cached = false
+    try {
+      for (const name of await caches.keys()) {
+        const cache = await caches.open(name)
+        const keys = await cache.keys()
+        if (keys.some(r => r.url.includes('bge-small'))) { cached = true; break }
+      }
+    } catch { /* no Cache API, or blocked: leave the hint as written */ }
+    hint.hidden = cached
+  }
+
   fullTextHandler (event) {
     ui.fullText = event.target.checked
     // A mode change invalidates any ranking we were holding.
@@ -226,6 +247,7 @@ class RfcFyiUi {
         })
         this.ftStatus('Loading search model (~39 MB, once)\u2026')
         await this.engine.loadModel()
+        this.refreshModelHint()
       }
       this.ftStatus('Searching\u2026')
       const hits = await this.engine.search(query, { nprobe: 20, limit: 200 })
@@ -343,7 +365,12 @@ class RfcFyiUi {
     } else if (this.searchWords.length === 0) { // just tags
       this.showRelevantTags(taggedRfcs)
     } else { // search (and possibly tags), but only worry about search terms
-      this.showRelevantTags(searchedRfcs)
+      // The unfiltered result set, so the facets offer what is actually
+      // there to narrow to. In full-text mode `searchedRfcs` is never
+      // populated -- the ranking is, so use that instead or the stream and
+      // level filters silently disappear exactly when a broad semantic
+      // result most needs narrowing.
+      this.showRelevantTags(semantic ? new Set(this.semanticOrder) : searchedRfcs)
     }
 
     // count
@@ -418,7 +445,13 @@ class RfcFyiUi {
       sections.slice(0, 3).forEach(hit => {
         const li = document.createElement('li')
         const a = document.createElement('a')
-        a.href = `https://www.rfc-editor.org/rfc/rfc${rfcNum}.txt#offset-${hit.offset}`
+        // The HTML rendering, at the section anchor rfc-editor actually
+        // publishes. Both the modern xml2rfc output and the legacy
+        // conversions carry id="section-N", so this works across the series.
+        // (`#offset-N` was invented and resolved to nothing.)
+        a.href = hit.section
+          ? `https://www.rfc-editor.org/rfc/rfc${rfcNum}.html#section-${hit.section}`
+          : `https://www.rfc-editor.org/rfc/rfc${rfcNum}.html`
         const label = hit.section ? `\u00A7${hit.section} ${hit.title || ''}` : (hit.title || 'Abstract')
         a.appendChild(document.createTextNode(label.trim()))
         li.appendChild(a)

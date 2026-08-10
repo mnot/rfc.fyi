@@ -578,3 +578,14 @@ ul.sections li::before {
 @media (prefers-reduced-motion: reduce) {
   .spinner { animation-duration: 3s }
 }
+
+/* The checkboxes under the search field are one group, not separate
+   paragraphs. Default <p> margins put a full line between them. */
+/* `.control` is on the label, not the paragraph, so target the paragraph. */
+#form form > p {
+  margin: 0.4em 0 0 0;
+}
+
+#form form > p:first-of-type {
+  margin-top: 0.6em;
+}
