@@ -143,9 +143,9 @@ export default class RfcData {
   searchRfcs (searchWords) {
     let filteredRfcs = new Set(this.allRfcs)
     searchWords.forEach(searchWord => {
-      const padded = `RFC${searchWord.padStart(4, '0')}`
-      if (padded in this.rfcs) {
-        filteredRfcs = new Set([padded])
+      const asNumber = /^\d+$/.test(searchWord) ? this.rfcNumtoName(searchWord) : null
+      if (asNumber !== null && asNumber in this.rfcs) {
+        filteredRfcs = new Set([asNumber])
       } else if (searchWord.length >= this.prefixLen || searchWords.length === 1) {
         const wordRfcs = this.searchLookup(searchWord, this.words, 'title')
         const keywordRfcs = this.searchLookup(searchWord, this.keywords, 'keywords')
@@ -190,8 +190,17 @@ export default class RfcData {
     return output.replace(/[\]().,?"']/g, '')
   }
 
+  // rfc-index.xml doc-ids are unpadded ("RFC768", "RFC10002"), so names are
+  // built without the zero padding the four-digit era used to imply. refs.json
+  // is mostly bare numbers but carries the odd "RFC9785", so strip a prefix
+  // too rather than turning it into RFCNaN.
   rfcNumtoName (rfcNum) {
-    return `RFC${rfcNum.padStart(4, '0')}`
+    return `RFC${parseInt(String(rfcNum).replace(/^RFC/i, ''), 10)}`
+  }
+
+  // Unpadded names don't sort numerically as strings, so compare the numbers.
+  rfcSort (a, b) {
+    return parseInt(a.substring(3), 10) - parseInt(b.substring(3), 10)
   }
 
   rfcNametoNum (rfcName) {

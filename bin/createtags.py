@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+import re
+
+# Tag files are hand-written, so both "RFC748" and the older zero-padded
+# "RFC0748" show up. rfc-index.xml doc-ids are unpadded, so normalise to that
+# -- a padded name matches nothing in rfcs.json and the tag silently loses an
+# entry.
+RFC_NAME = re.compile(r"^rfc0*(\d+)$")
+
 def processfiles(filenames):
     out = {"collection": {}}
     for filename in filenames:
@@ -16,7 +24,10 @@ def processfile(filename):
             line = line.strip()
             lcline = line.lower()
             if lcline.startswith("rfc"):
-                rfc = lcline.split(None, 1)[0].upper()
+                match = RFC_NAME.match(lcline.split(None, 1)[0])
+                if match is None:
+                    continue
+                rfc = "RFC%s" % match.group(1)
                 if rfc not in struct["rfcs"]:
                     struct["rfcs"].append(rfc)
             elif lcline.startswith("name") and name == filename.rsplit("/", 1)[1]:
