@@ -76,3 +76,41 @@ rfc-text:
 rfc-text-sample:
 	mkdir -p $(RFC_TEXT)
 	rsync -az --include=$(SAMPLE) --exclude='*' $(RSYNC_SRC) $(RFC_TEXT)/
+
+# --- semantic index build -------------------------------------------------
+# Local jobs, never CI: `index-full` embeds 457k chunks and takes hours.
+# `index` is the monthly path and only embeds what is new, which is viable
+# in a runner if we ever want it there.
+
+PY := .venv/bin/python
+
+.PHONY: index
+index: rfc-text
+	$(PY) bin/chunk.py $(RFC_TEXT) > var/chunks.jsonl
+	$(PY) bin/embed-corpus.py --chunks var/chunks.jsonl --out var/embeddings
+	$(PY) bin/build-clusters.py build --reuse-centroids index/centroids.bin
+
+.PHONY: index-full
+index-full: rfc-text
+	rm -rf var/embeddings index
+	$(PY) bin/chunk.py $(RFC_TEXT) > var/chunks.jsonl
+	$(PY) bin/embed-corpus.py --chunks var/chunks.jsonl --out var/embeddings
+	$(PY) bin/build-clusters.py build
+
+.PHONY: index-verify
+index-verify:
+	$(PY) bin/build-clusters.py verify --recall-queries 400
+
+# Publish the built index for the deploy workflow to collect. Kept out of
+# git deliberately (see .gitignore and #53): quantised vectors do not delta
+# compress, so committing a regenerated 190 MiB tree monthly would grow the
+# repo without bound.
+.PHONY: index-release
+index-release:
+	@test -f index/manifest.json || { echo "no index; run make index-full"; exit 1; }
+	tar czf index.tar.gz index
+	gh release create index-$(shell $(PY) -c "import json;print(json.load(open('index/manifest.json'))['version'])") \
+	  index.tar.gz --title "Semantic index" --notes "Built by make index-full." || \
+	gh release upload index-$(shell $(PY) -c "import json;print(json.load(open('index/manifest.json'))['version'])") \
+	  index.tar.gz --clobber
+	rm -f index.tar.gz

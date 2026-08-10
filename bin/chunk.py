@@ -887,11 +887,34 @@ def drop_toc(body):
 # --------------------------------------------------------------------------
 
 
+def _rfc_sort_key(name):
+    """Sort by RFC *number*, not filename.
+
+    Lexicographic order interleaves the series -- 1, 10, 100, 1000, 10002 --
+    so a newly published RFC lands in the middle of the output. Numeric order
+    makes the corpus append-only, because RFCs are immutable and numbered
+    monotonically: the only thing a later run adds is higher numbers, at the
+    end.
+
+    That is what lets an incremental build reuse existing embedding shards.
+    Under filename order every shard after the insertion point would be
+    stale, and each monthly update would re-embed the entire corpus.
+
+    Non-numeric ids (rfc17a) sort just after their numeric prefix, which
+    keeps them stable relative to their neighbours.
+    """
+    base = os.path.basename(name).lower()
+    match = re.match(r"rfc(\d+)(.*)\.txt$", base)
+    if not match:
+        return (1, 0, base)
+    return (0, int(match.group(1)), match.group(2))
+
+
 def gather_paths(args):
     paths = []
     for arg in args:
         if os.path.isdir(arg):
-            for name in sorted(os.listdir(arg)):
+            for name in sorted(os.listdir(arg), key=_rfc_sort_key):
                 if name.lower().endswith(".txt"):
                     paths.append(os.path.join(arg, name))
         else:
