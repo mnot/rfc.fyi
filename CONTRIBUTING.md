@@ -33,7 +33,13 @@ try to keep the size of that (and other) files down as much as possible.
 
 Everything in `var/` is generated or fetched, so it isn't checked in. `make site` fetches the
 inputs, builds the data files and assembles the published site into `_site/`; that directory is
-what CI uploads to GitHub Pages. `make server` serves the repository root for local development.
+what CI uploads to GitHub Pages. `make server` builds it and serves it, so what you see locally
+is what gets published.
+
+`_site` is assembled from an explicit list of files in the Makefile, so a new root-level asset
+has to be added there or it won't be published. `bin/check-site.py` guards the result: it fails
+the build if anything `sw.js` pre-caches is missing, or if the data files come back implausibly
+empty.
 
 JavaScript should be formatted according to
 [standard](https://github.com/standard/standard); try `make lint`.

@@ -4,37 +4,47 @@ on:
   push:
     branches:
     - main
+  pull_request:
   schedule:
     - cron: '41 9 * * *'
   workflow_dispatch: null
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow one deploy at a time; let a running one finish rather than
-# cancelling it, so we never leave a half-published site.
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
-  deploy:
+  # Runs on pull requests too, so a change that breaks the build turns a check
+  # red instead of turning production stale. Only the deploy is withheld.
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
     steps:
     - uses: actions/checkout@v7
     - name: Set up Python
       uses: actions/setup-python@v7
+      with:
+        python-version: "3.13"
     - name: Build site
       run: make site
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v5
       with:
         path: _site
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    # One deploy at a time; let a running one finish rather than cancelling it,
+    # so we never leave a half-published site.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v5
