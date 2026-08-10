@@ -3,6 +3,10 @@
 import * as util from './util.js'
 import RfcData from './data.js'
 
+/* Rows shown in full-text mode. See showRfcs() for why this is a rank cap
+ * and not a score floor. */
+const SEMANTIC_ROW_CAP = 50
+
 class RfcFyiUi {
   verbose = false // whether we're showing obsolete, etc.
   params // the URL parameters
@@ -17,6 +21,7 @@ class RfcFyiUi {
   semanticHits = null // Map rfcName -> [{ section, title, offset, score }]
   semanticOrder = [] // rfcNames, best score first
   semanticFor = null // the query semanticHits describes
+  semanticTotal = 0 // rows before the rank cap, for an honest count
   // Hoisted out of showRfcs, which took it as an argument defaulting to true
   // while six of its eight call sites passed nothing -- so choosing "sort by
   // number" and then typing another character silently reverted to refs.
@@ -403,6 +408,18 @@ class RfcFyiUi {
         // fewer than it promised.
         rfcList = rfcList.filter(item => data.rfcs[item].status !== 'obsoleted')
       }
+      if (semantic) {
+        // Cap by rank, not by score. Cosine scores here do not separate
+        // relevant from irrelevant at all -- measured over the query set,
+        // labelled-relevant chunks run a median 0.758 against 0.746 for
+        // everything else, so any absolute floor discards good material to
+        // remove almost no noise, and a relative one is no better. Rank
+        // does carry the signal: the median labelled RFC lands at position
+        // 5, and recall saturates by 50 rows (88.5%, against 89.4% at any
+        // depth). Past that it is tail nobody scrolls to.
+        this.semanticTotal = rfcList.length
+        rfcList = rfcList.slice(0, SEMANTIC_ROW_CAP)
+      }
       rfcList.forEach(item => {
         const rfcData = data.rfcs[item]
         this.renderRfc(item, rfcData, target, false,
@@ -431,7 +448,10 @@ class RfcFyiUi {
     }
 
     // count
-    const count = document.createTextNode(`${rfcList.length} RFC${this.pluralise(rfcList.length)}`)
+    const truncated = semantic && this.semanticTotal > rfcList.length
+    const count = document.createTextNode(truncated
+      ? `top ${rfcList.length} of ${this.semanticTotal} RFCs`
+      : `${rfcList.length} RFC${this.pluralise(rfcList.length)}`)
     const countTarget = document.getElementById('count')
     this.clear(countTarget)
     countTarget.appendChild(count)

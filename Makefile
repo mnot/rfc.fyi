@@ -30,12 +30,12 @@ var/tags.json: bin/createtags.py $(tagfiles) | var
 # Assemble the published site. This is what CI uploads as the Pages artifact;
 # nothing in it is committed.
 .PHONY: site
-site: $(DATA)
+site: $(DATA) vendor
 	rm -rf _site
 	mkdir -p _site/var _site/vendor
 	cp $(STATIC) _site/
 	cp $(DATA) _site/var/
-	cp vendor/* _site/vendor/
+	cp -R vendor/. _site/vendor/
 	@# The semantic index, when there is one. Optional by design: it is built
 	@# locally and collected from a release, so a site built without it is a
 	@# working site whose full-text mode reports itself unavailable, rather
@@ -47,6 +47,29 @@ site: $(DATA)
 	  echo "no index/ -- publishing without full-text search"; \
 	fi
 	python bin/check-site.py _site $(words $(tagfiles)) || { rm -rf _site; exit 1; }
+
+# Third-party runtime, fetched rather than committed. Same reasoning as the
+# index (#53): the wasm alone is 21 MB and does not delta-compress, so
+# committing it would add that much to history on every version bump. Pinned
+# by version, and the sizes are asserted so a truncated or redirected
+# download fails the build instead of shipping.
+TRANSFORMERS_VERSION := 3.8.1
+TRANSFORMERS_CDN := https://cdn.jsdelivr.net/npm/@huggingface/transformers@$(TRANSFORMERS_VERSION)/dist
+
+.PHONY: vendor
+vendor: vendor/transformers-$(TRANSFORMERS_VERSION).min.js vendor/ort/ort-wasm-simd-threaded.jsep.wasm
+
+vendor/transformers-$(TRANSFORMERS_VERSION).min.js:
+	mkdir -p vendor
+	curl --fail -sS $(TRANSFORMERS_CDN)/transformers.min.js -o $@
+	@test $$(wc -c < $@) -gt 800000 || { echo "$@ looks truncated"; rm -f $@; exit 1; }
+
+vendor/ort/ort-wasm-simd-threaded.jsep.wasm:
+	mkdir -p vendor/ort
+	curl --fail -sS $(TRANSFORMERS_CDN)/ort-wasm-simd-threaded.jsep.mjs \
+	  -o vendor/ort/ort-wasm-simd-threaded.jsep.mjs
+	curl --fail -sS $(TRANSFORMERS_CDN)/ort-wasm-simd-threaded.jsep.wasm -o $@
+	@test $$(wc -c < $@) -gt 20000000 || { echo "$@ looks truncated"; rm -f $@; exit 1; }
 
 .PHONY: server
 server: site

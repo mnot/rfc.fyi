@@ -14,3 +14,6 @@ eval/out/
 __pycache__/
 *.pyc
 .venv/
+
+# Third-party runtime, fetched by `make vendor` rather than committed.
+vendor/

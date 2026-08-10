@@ -330,6 +330,18 @@ export class SemanticSearch {
     // about the real problem underneath.
     if (runtime.env) {
       runtime.env.allowLocalModels = false
+      /* Serve the ONNX runtime wasm from this origin too.
+       *
+       * transformers.js caches the *model* files it fetches from HuggingFace
+       * in a Cache API bucket of its own, but the runtime binary comes from
+       * its CDN and lands only in the HTTP cache -- 4 MB that an offline
+       * reload cannot recover, so the feature broke offline even with the
+       * model right there. Same-origin, the service worker caches it like
+       * any other asset.
+       */
+      try {
+        runtime.env.backends.onnx.wasm.wasmPaths = '/vendor/ort/'
+      } catch { /* older layout: leave the default */ }
     } else {
       report?.({
         phase: 'model',
