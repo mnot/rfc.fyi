@@ -214,9 +214,19 @@ class RfcFyiUi {
     if (!titles || !full) return
     titles.classList.toggle('sort-active', !this.fullText)
     full.classList.toggle('sort-active', this.fullText)
+    // Full-text wants a phrase, not a keyword. Measured over the query set,
+    // recall falls from 0.701 on a ~10-word phrase to 0.138 on a single
+    // word -- so a placeholder inviting keywords steers people into the one
+    // shape this mode is worst at, and which titles-and-keywords is best at.
     this.searchTarget.placeholder = this.fullText
-      ? 'Search the text of every RFC'
+      ? 'Describe what you\u2019re looking for'
       : 'Search titles & keywords'
+    const exTitles = document.getElementById('examplesTitles')
+    const exFull = document.getElementById('examplesFullText')
+    if (exTitles && exFull) {
+      exTitles.hidden = this.fullText
+      exFull.hidden = !this.fullText
+    }
     // Selecting the mode is the opt-in, so start fetching immediately rather
     // than waiting for a query. The download is tens of megabytes and several
     // seconds; overlapping it with typing is most of the difference between
