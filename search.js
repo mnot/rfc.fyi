@@ -38,10 +38,24 @@
  * which no browser can resolve from a CDN URL. This one has the runtime
  * inlined.
  */
-const DEFAULT_RUNTIME_URL =
-  'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js'
+const DEFAULT_RUNTIME_URL = '/vendor/transformers-3.8.1.min.js'
 
-/* 3.8.1 rather than the 4.2.0 this was first written against. 4.2.0 loads and
+/* Served from this origin rather than a CDN.
+ *
+ * Loading it cross-origin from jsDelivr worked in Chrome and failed in Safari
+ * with "Invalid property. 'value' present on property with getter or setter"
+ * thrown out of the bundle's own `Object.defineProperty` shims -- while a bare
+ * `import()` of the identical URL from the Safari console returned all 856
+ * exports. So the module is fine and something about evaluating it in the page
+ * context was not, and rather than keep bisecting someone else's bundle we
+ * serve it ourselves.
+ *
+ * Self-hosting is worth having on its own terms: no third-party runtime on the
+ * critical path, no CDN outage or version drift, one fewer origin for the
+ * service worker to reason about, and it can be cached like any other asset.
+ * The ONNX wasm is still fetched by transformers.js from its own CDN.
+ *
+ * 3.8.1 rather than the 4.2.0 this was first written against. 4.2.0 loads and
  * runs in Chrome but breaks in Safari: `pipeline()` throws "undefined is not
  * an object (evaluating 'Qp[t]')", where `Qp` is the module-level task-alias
  * map. That lookup is guarded (`Qp[t] ?? t`), so a missing *key* would be

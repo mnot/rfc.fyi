@@ -32,9 +32,10 @@ var/tags.json: bin/createtags.py $(tagfiles) | var
 .PHONY: site
 site: $(DATA)
 	rm -rf _site
-	mkdir -p _site/var
+	mkdir -p _site/var _site/vendor
 	cp $(STATIC) _site/
 	cp $(DATA) _site/var/
+	cp vendor/* _site/vendor/
 	python bin/check-site.py _site $(words $(tagfiles)) || { rm -rf _site; exit 1; }
 
 .PHONY: server
