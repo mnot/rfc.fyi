@@ -13,6 +13,7 @@ class RfcFyiUi {
   // know the words. Full text is for when you don't.
   fullText = false
   engine = null // SemanticSearch, constructed on first use
+  prefetching = false
   semanticHits = null // Map rfcName -> [{ section, title, offset, score }]
   semanticOrder = [] // rfcNames, best score first
   semanticFor = null // the query semanticHits describes
@@ -31,7 +32,6 @@ class RfcFyiUi {
   }
 
   obsoleteTarget = document.getElementById('obsolete')
-  fullTextTarget = document.getElementById('fullText')
   searchTarget = document.getElementById('search')
   clearSearchTarget = document.getElementById('clearSearch')
   form = document.forms[0]
@@ -65,7 +65,6 @@ class RfcFyiUi {
 
   installFormHandlers () {
     this.obsoleteTarget.onchange = this.showObsoleteHandler
-    this.fullTextTarget.onchange = this.fullTextHandler
     this.searchTarget.placeholder = 'Search titles & keywords'
     this.searchTarget.oninput = this.searchInput
     this.searchTarget.disabled = false
@@ -96,6 +95,8 @@ class RfcFyiUi {
     sortByNum.onclick = (event) => { this.sortByRef = false; this.showRfcs(); return false }
     const sortByRefs = document.getElementById('sortByRefs')
     sortByRefs.onclick = (event) => { this.sortByRef = true; this.showRfcs(); return false }
+    document.getElementById('modeTitles').onclick = () => { this.setMode(false); return false }
+    document.getElementById('modeFullText').onclick = () => { this.setMode(true); return false }
     const filterToggle = document.getElementById('filterToggle')
     if (filterToggle) filterToggle.onclick = this.toggleFilters
   }
@@ -131,7 +132,7 @@ class RfcFyiUi {
 
     // full text
     this.fullText = this.params.has('ft')
-    this.fullTextTarget.checked = this.fullText
+    this.applyMode()
 
     // tags
     if (this.tagTargets.collection) { // only if tags are initialized
@@ -173,7 +174,7 @@ class RfcFyiUi {
    * and a stale "already downloaded" is the more annoying lie.
    */
   async refreshModelHint () {
-    const hint = document.querySelector('#fullText ~ .hint, label .hint')
+    const hint = document.querySelector('#modeFullText .hint')
     if (!hint) return
     let cached = false
     try {
@@ -186,12 +187,58 @@ class RfcFyiUi {
     hint.hidden = cached
   }
 
-  fullTextHandler (event) {
-    ui.fullText = event.target.checked
-    // A mode change invalidates any ranking we were holding.
-    ui.semanticFor = null
-    ui.showRfcs()
-    ui.updateUrl()
+  setMode (fullText) {
+    if (this.fullText === fullText) return
+    this.fullText = fullText
+    this.semanticFor = null // a mode change invalidates any ranking held
+    this.applyMode() // which starts the prefetch
+    this.showRfcs()
+    this.updateUrl()
+  }
+
+  applyMode () {
+    const titles = document.getElementById('modeTitles')
+    const full = document.getElementById('modeFullText')
+    if (!titles || !full) return
+    titles.classList.toggle('sort-active', !this.fullText)
+    full.classList.toggle('sort-active', this.fullText)
+    this.searchTarget.placeholder = this.fullText
+      ? 'Search the text of every RFC'
+      : 'Search titles & keywords'
+    // Selecting the mode is the opt-in, so start fetching immediately rather
+    // than waiting for a query. The download is tens of megabytes and several
+    // seconds; overlapping it with typing is most of the difference between
+    // the feature feeling instant and feeling broken.
+    if (this.fullText) this.prefetchEngine()
+  }
+
+  /* Warm the engine without running a query. Safe to call repeatedly: the
+   * work is guarded by `this.engine` and by loadModel() being idempotent.
+   */
+  prefetchEngine () {
+    if (this.prefetching || this.engine) return
+    this.prefetching = true
+    ;(async () => {
+      try {
+        const { SemanticSearch } = await import('./search.js')
+        const engine = await SemanticSearch.create({
+          basePath: '/index',
+          onProgress: (event) => {
+            // Don't talk over a search that has since started.
+            if (!this.semanticFor) this.ftProgress(event)
+          }
+        })
+        await engine.loadModel()
+        this.engine = engine
+        this.refreshModelHint()
+        if (!this.semanticFor) this.ftStatus('')
+      } catch (err) {
+        console.error('[search] prefetch failed:', err)
+        // Stay quiet: nothing was asked for yet. A real query will surface it.
+      } finally {
+        this.prefetching = false
+      }
+    })()
   }
 
   ftStatus (message, busy = true) {
@@ -241,12 +288,12 @@ class RfcFyiUi {
       if (!this.engine) {
         this.ftStatus('Loading search index\u2026')
         const { SemanticSearch } = await import('./search.js')
-        this.engine = await SemanticSearch.create({
+        const engine = await SemanticSearch.create({
           basePath: '/index',
           onProgress: (event) => this.ftProgress(event)
         })
-        this.ftStatus('Loading search model (~39 MB, once)\u2026')
-        await this.engine.loadModel()
+        await engine.loadModel()
+        this.engine = engine
         this.refreshModelHint()
       }
       this.ftStatus('Searching\u2026')
