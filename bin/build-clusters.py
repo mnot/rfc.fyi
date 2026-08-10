@@ -432,6 +432,25 @@ def split_oversized(
             file=sys.stderr,
             flush=True,
         )
+
+    # Reassign against the centroids actually being returned.
+    #
+    # `labels` above is computed at the *top* of each round, so it describes
+    # the centroid set as it stood *before* that round's split. When the loop
+    # converges (`over.size == 0`) that is the final set and the labels are
+    # correct. When it exhausts its rounds with clusters still over the cap --
+    # the normal outcome on this corpus -- the labels are one split behind the
+    # `cent` returned alongside them, and publishing that pair puts about 5% of
+    # chunks in a cluster no client would probe first for them. It also made a
+    # full build and a --reuse-centroids build disagree on identical input,
+    # which is what surfaced this.
+    #
+    # The cost is that this reassignment can push a cluster back over the cap.
+    # That is the right trade, and it matches the docstring above: the argmax
+    # invariant is what makes a chunk findable at all, the cap is only a
+    # fetch-size comfort, and over-cap clusters are reported in the manifest
+    # rather than forced.
+    labels, _, _ = assign_all(vecs, dequantise(quantise(cent, scale), scale))
     return cent, labels, history
 
 
