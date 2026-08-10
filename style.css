@@ -589,3 +589,11 @@ ul.sections li::before {
 #form form > p:first-of-type {
   margin-top: 0.6em;
 }
+
+/* The mode selector stays on the front page, unlike the other controls.
+   It is how people discover full-text search exists, and selecting it is
+   what starts the model downloading -- both of which have to be possible
+   before anyone has typed anything. */
+.noresults #mode {
+  display: block;
+}
