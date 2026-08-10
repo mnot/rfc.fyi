@@ -1,5 +1,11 @@
 const CACHE_PREFIX = 'rfcfyi-v'
+<<<<<<< HEAD
 const CACHE_NAME = 'rfcfyi-v1786354013'
+=======
+/* Hosts where a stale asset is a bug rather than a feature. */
+const DEV_HOSTS = new Set(['localhost', '127.0.0.1', '[::1]', '0.0.0.0'])
+const CACHE_NAME = 'rfcfyi-v1786352179'
+>>>>>>> 3b08043 (Serve fresh assets on localhost; reap caches without a bare map)
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -32,19 +38,18 @@ self.addEventListener('activate', (event) => {
     Promise.all([
       self.clients.claim(),
       caches.keys().then((cacheNames) => {
+        // Only reap our own superseded caches. This origin also holds
+        // caches we do not own -- transformers.js keeps the ~32 MiB
+        // embedding model in one of its own -- and CACHE_NAME is bumped on
+        // every deploy by `make pwa-update`. A blanket "delete anything
+        // that is not me" would throw that model away once per release.
         return Promise.all(
-          cacheNames.map((cacheName) => {
-            // Only reap our own superseded caches. This origin will also
-            // hold caches we do not own -- transformers.js keeps the ~32 MiB
-            // embedding model in one of its own -- and CACHE_NAME is bumped
-            // on every deploy by `make pwa-update`. A blanket "delete
-            // anything that is not me" would therefore throw that model away
-            // once per release, and the user would re-download it.
-            if (cacheName.startsWith(CACHE_PREFIX) && cacheName !== CACHE_NAME) {
-              console.log('[SW] Removing old cache', cacheName)
-              return caches.delete(cacheName)
-            }
-          })
+          cacheNames
+            .filter((name) => name.startsWith(CACHE_PREFIX) && name !== CACHE_NAME)
+            .map((name) => {
+              console.log('[SW] Removing old cache', name)
+              return caches.delete(name)
+            })
         )
       })
     ])
@@ -59,6 +64,30 @@ self.addEventListener('fetch', (event) => {
   // handling it here would store ~32 MB twice. Letting it pass through also
   // keeps opaque-response padding out of our quota.
   if (url.origin !== self.location.origin) return
+
+  // On localhost, network first: the edit you just made wins, and the cache
+  // is only a fallback for when the dev server is down. Stale-while-
+  // revalidate is right in production and actively misleading in
+  // development -- it serves the previous version of a file you just
+  // changed, so a fix looks like it did nothing and the next reload
+  // silently "fixes" it. Bumping CACHE_NAME is the production answer and it
+  // does not happen while you are editing.
+  if (DEV_HOSTS.has(url.hostname)) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then(async (cache) => {
+        try {
+          const fresh = await fetch(event.request, { cache: 'no-store' })
+          if (fresh.ok) cache.put(event.request, fresh.clone())
+          return fresh
+        } catch (err) {
+          const cached = await cache.match(event.request)
+          if (cached) return cached
+          throw err
+        }
+      })
+    )
+    return
+  }
 
   // Handle data and static assets with Stale-While-Revalidate
   event.respondWith(
