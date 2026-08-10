@@ -1,0 +1,40 @@
+name: Deploy Site
+
+on:
+  push:
+    branches:
+    - main
+  schedule:
+    - cron: '41 9 * * *'
+  workflow_dispatch: null
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one deploy at a time; let a running one finish rather than
+# cancelling it, so we never leave a half-published site.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - uses: actions/checkout@v7
+    - name: Set up Python
+      uses: actions/setup-python@v7
+    - name: Build site
+      run: make site
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v5
+      with:
+        path: _site
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v5

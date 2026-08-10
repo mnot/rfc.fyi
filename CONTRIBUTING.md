@@ -29,7 +29,11 @@ Collections are maintained in `src/tags`; each file is a separate collection. Th
 This is a single HTML page using JavaScript; it loads RFCs as a compressed JSON file, and so we
 try to keep the size of that (and other) files down as much as possible.
 
-`json-rfc.py` creates the JSON from the RFC Editor's index. Try `make rfcs.json.gz`.
+`rfc-json.py` creates the JSON from the RFC Editor's index. Try `make var/rfcs.json`.
+
+Everything in `var/` is generated or fetched, so it isn't checked in. `make site` fetches the
+inputs, builds the data files and assembles the published site into `_site/`; that directory is
+what CI uploads to GitHub Pages. `make server` serves the repository root for local development.
 
 JavaScript should be formatted according to
 [standard](https://github.com/standard/standard); try `make lint`.
