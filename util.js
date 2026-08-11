@@ -35,73 +35,35 @@ function relativeLuminance ([r, g, b]) {
   return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
 }
 
-Set.prototype.intersection = function (setB) { // eslint-disable-line
-  const intersection = new Set()
-  for (const elem of setB) {
-    if (this.has(elem)) {
-      intersection.add(elem)
-    }
-  }
-  return intersection
-}
-
-Set.prototype.union = function (setB) { // eslint-disable-line
-  const union = new Set()
-  for (const elemA of this) {
-    union.add(elemA)
-  }
-  for (const elemB of setB) {
-    union.add(elemB)
-  }
-  return union
-}
-
-Set.prototype.difference = function (setB) { // eslint-disable-line
-  const difference = new Set()
-  for (const elem of this) {
-    if (!setB.has(elem)) {
-      difference.add(elem)
-    }
-  }
-  return difference
-}
-
-/* These extend Object.prototype, which is a loaded gun, so two rules apply.
- *
- * They are defined non-enumerably. A plain assignment makes them turn up in
- * every `for...in` over every object in the program, including the ones inside
- * libraries we did not write.
- *
- * And nothing here may be named after a property-descriptor field --
- * value, writable, get, set, enumerable, configurable. A descriptor is read
- * through the prototype chain, so an inherited `get` makes the object literal
- * `{ value: 1 }` look to the engine like it specifies both an accessor and a
- * value, and `Object.defineProperty` throws. That breaks any bundled library
- * that defines properties, which is most of them: it is what stopped
- * transformers.js loading, from inside its own webpack helper setting
- * `__esModule`. `get` used to live here; it is `getOr` below, as a plain
- * function.
+/* Set algebra and plain-object iteration, as plain functions. Deliberately
+ * not Set.prototype's natives of the same names, so this still runs where
+ * those are missing. Nothing here goes on a built-in's prototype.
  */
-function defineHidden (name, value) {
-  // eslint-disable-next-line no-extend-native
-  Object.defineProperty(Object.prototype, name, {
-    value, enumerable: false, writable: true, configurable: true
-  })
+
+export function intersect (a, b) {
+  const out = new Set()
+  for (const item of b) {
+    if (a.has(item)) out.add(item)
+  }
+  return out
 }
 
-defineHidden('forEach', function (func) {
-  for (const item in this) {
-    if (Object.prototype.hasOwnProperty.call(this, item)) {
-      func(item)
-    }
-  }
-})
+export function union (a, b) {
+  const out = new Set(a)
+  for (const item of b) out.add(item)
+  return out
+}
 
-defineHidden('keys', function () {
-  const keys = []
-  this.forEach(item => keys.push(item))
-  return keys
-})
+/** Own enumerable keys of a plain object. */
+export function ownKeys (object) {
+  return Object.keys(object)
+}
+
+/** Call `func` with each own key, and nothing else -- not Array.forEach's
+    (value, index, array). */
+export function forEachKey (object, func) {
+  for (const key of ownKeys(object)) func(key)
+}
 
 /** Value at `key`, or `backstop` when absent. Was Object.prototype.get. */
 export function getOr (object, key, backstop) {

@@ -17,22 +17,22 @@ export default class RfcData {
     const rfcLoader = util.loadJson('var/rfcs.json')
     const refLoader = util.loadJson('var/refs.json')
     Promise.all([tagLoader, rfcLoader, refLoader])
-    .then(([tags, rfcs, refs]) => {
-      this.tags = tags || {}
-      this.rfcs = rfcs || {}
-      this.refs = refs || []
-      this.createSearchIndex()
-      this.computeReferences()
-      doneCallback()
-    })
-    .catch(error => {
-      console.error('[Data] Failed to load data:', error)
-      this.loadError = error
-      this.tags = this.tags || {}
-      this.rfcs = this.rfcs || {}
-      this.refs = this.refs || []
-      doneCallback()
-    })
+      .then(([tags, rfcs, refs]) => {
+        this.tags = tags || {}
+        this.rfcs = rfcs || {}
+        this.refs = refs || []
+        this.createSearchIndex()
+        this.computeReferences()
+        doneCallback()
+      })
+      .catch(error => {
+        console.error('[Data] Failed to load data:', error)
+        this.loadError = error
+        this.tags = this.tags || {}
+        this.rfcs = this.rfcs || {}
+        this.refs = this.refs || []
+        doneCallback()
+      })
   }
 
   createSearchIndex () {
@@ -81,7 +81,7 @@ export default class RfcData {
       this.inRefs[rfcName] = []
     })
     this.obsoleteRefs = new Map()
-    this.refs.forEach(rfcNum => {
+    util.forEachKey(this.refs, rfcNum => {
       const rfcName = this.rfcNumtoName(rfcNum)
       const rfcRefs = util.getOr(this.refs, rfcNum, {})
       util.getOr(rfcRefs, 'normative', []).forEach(ref => {
@@ -107,7 +107,7 @@ export default class RfcData {
     })
   }
 
-  calculateObsoleteRefs(rfcName) {
+  calculateObsoleteRefs (rfcName) {
     if (this.obsoleteRefs.has(rfcName)) {
       return this.obsoleteRefs.get(rfcName)
     }
@@ -149,7 +149,7 @@ export default class RfcData {
       } else if (searchWord.length >= this.prefixLen || searchWords.length === 1) {
         const wordRfcs = this.searchLookup(searchWord, this.words, 'title')
         const keywordRfcs = this.searchLookup(searchWord, this.keywords, 'keywords')
-        filteredRfcs = filteredRfcs.intersection(wordRfcs.union(keywordRfcs))
+        filteredRfcs = util.intersect(filteredRfcs, util.union(wordRfcs, keywordRfcs))
       }
     })
     return filteredRfcs
@@ -175,11 +175,11 @@ export default class RfcData {
 
   listTaggedRfcs (activeTags) {
     let filteredRfcs = new Set(this.allRfcs)
-    this.tags.forEach(tagType => {
+    util.forEachKey(this.tags, tagType => {
       const activeTag = activeTags.get(tagType)
       if (activeTag !== undefined) {
         const taggedRfcs = new Set(this.tags[tagType][activeTag].rfcs)
-        filteredRfcs = filteredRfcs.intersection(taggedRfcs)
+        filteredRfcs = util.intersect(filteredRfcs, taggedRfcs)
       }
     })
     return filteredRfcs
