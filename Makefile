@@ -173,6 +173,11 @@ index-verify:
 # bound. Tagged by build id, keeping the newest INDEX_KEEP.
 #
 # Recipe comments are macro-expanded, so keep make functions out of them.
+#
+# COPYFILE_DISABLE: macOS tar writes an AppleDouble `._name` member for every
+# file carrying an xattr, and the cluster files all have com.apple.provenance.
+# macOS hides them when listing, GNU tar on the runner extracts them as real
+# files, and `._0000.bin` matches `clusters/*.bin`.
 .PHONY: index-release
 index-release:
 	@set -e; \
@@ -186,7 +191,7 @@ index-release:
 	  echo "Check this machine's clock." >&2; \
 	  exit 1; \
 	fi; \
-	tar czf index.tar.gz index; \
+	COPYFILE_DISABLE=1 tar czf index.tar.gz index; \
 	gh release create "$$tag" index.tar.gz --title "Semantic index $$tag" \
 	  --notes "Built by make index. Unpack over index/ and run make site." \
 	  || gh release upload "$$tag" index.tar.gz --clobber; \

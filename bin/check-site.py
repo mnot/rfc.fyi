@@ -148,7 +148,20 @@ def check_index(site):
 
     expected = (manifest.get("clusters") or {}).get("count")
     clusters = index / "clusters"
-    found = len(list(clusters.glob("*.bin"))) if clusters.is_dir() else 0
+    files = sorted(clusters.glob("*.bin")) if clusters.is_dir() else []
+
+    # AppleDouble shadows. macOS tar writes a `._name` member for every file
+    # with an xattr and hides them again when listing, so a release packed
+    # there looks right until GNU tar unpacks it and `._0000.bin` starts
+    # matching the glob. Named here because a doubled count on its own sends
+    # you looking at the build instead of the tarball.
+    shadows = [p for p in files if p.name.startswith("._")]
+    if shadows:
+        errors.append(
+            f"index/{build}/clusters: {len(shadows)} AppleDouble files "
+            f"({shadows[0].name} ...) -- repack with COPYFILE_DISABLE=1"
+        )
+    found = len(files) - len(shadows)
     if not expected:
         errors.append(f"index/{build}/manifest.json: no clusters.count to check")
     elif found != expected:
