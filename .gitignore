@@ -1,2 +1,24 @@
 var/
 _site/
+
+# The semantic index. Deliberately not committed: #53 moved the site to an
+# Actions artifact precisely so generated data stays out of git history, and
+# quantised vectors do not delta-compress the way the old var/*.json did.
+# It ships as a release asset, stitched into the artifact at deploy time.
+index/
+
+# make index-release builds this and removes it; an interrupted run leaves
+# it behind.
+index.tar.gz
+
+# Measurement harness for the index design. Kept out of the repo; the
+# scripts and query set live on whichever machine is doing the measuring.
+eval/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Third-party runtime, fetched by `make vendor` rather than committed.
+vendor/

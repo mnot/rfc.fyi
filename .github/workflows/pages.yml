@@ -10,9 +10,63 @@ on:
   workflow_dispatch: null
 
 jobs:
+  # Has anything upstream moved? Most days no RFCs are published, and a run
+  # still shifts ~400 MB to republish the index unchanged. The signature is
+  # the two upstreams' validators; a cache entry under that key means we have
+  # already deployed it. Only the schedule is gated -- a push or a manual run
+  # is a change to the site itself.
+  upstream:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      changed: ${{ steps.decide.outputs.changed }}
+      signature: ${{ steps.probe.outputs.signature }}
+    steps:
+    - name: Read upstream validators
+      id: probe
+      if: github.event_name == 'schedule'
+      run: |
+        validator() {
+          curl -sS -I -L --max-time 30 "$1" \
+            | tr -d '\r' \
+            | awk 'tolower($1) ~ /^(etag|last-modified):$/ { $1 = ""; print }' \
+            | tail -1
+        }
+        index=$(validator https://www.rfc-editor.org/rfc-index.xml || true)
+        refs=$(validator https://raw.githubusercontent.com/mnot/rfc-refs/main/refs.json || true)
+        # Fail open: a probe that gets no validator lets the build run,
+        # rather than quietly stopping publication.
+        if [ -z "$index" ] || [ -z "$refs" ]; then
+          echo "no validators (index='$index' refs='$refs'); building anyway"
+        else
+          sig=$(printf '%s|%s' "$index" "$refs" | sha256sum | cut -d' ' -f1)
+          echo "signature=$sig" >> "$GITHUB_OUTPUT"
+          echo "upstream signature $sig"
+        fi
+    - name: Look for a deploy of that signature
+      id: seen
+      if: steps.probe.outputs.signature != ''
+      uses: actions/cache/restore@v4
+      with:
+        path: .upstream
+        key: upstream-${{ steps.probe.outputs.signature }}
+        lookup-only: true
+    - name: Decide
+      id: decide
+      run: |
+        if [ "${{ steps.seen.outputs.cache-hit }}" = "true" ]; then
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          echo "nothing new upstream since the last deploy; skipping"
+        else
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+        fi
+
   # Runs on pull requests too, so a change that breaks the build turns a check
   # red instead of turning production stale. Only the deploy is withheld.
   build:
+    needs: upstream
+    if: needs.upstream.outputs.changed == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -22,13 +76,59 @@ jobs:
       uses: actions/setup-python@v7
       with:
         python-version: "3.13"
+    # The runtime is fetched, not committed (21 MB of wasm that does not
+    # delta-compress), so cache it: otherwise every deploy depends on a CDN
+    # being up, which the index is carefully allowed not to be.
+    - name: Cache vendored runtime
+      uses: actions/cache@v4
+      with:
+        path: vendor
+        key: vendor-${{ hashFiles('Makefile') }}
+    # The index is built locally and published as a release asset rather than
+    # committed (see #53). Only releases carrying the asset count: an
+    # interrupted publish can leave the newest tag without one.
+    - name: Find the current index release
+      id: release
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        tag=$(gh api repos/{owner}/{repo}/releases --paginate -q \
+              '[.[] | select(.tag_name | startswith("index-"))
+                    | select(any(.assets[]?; .name == "index.tar.gz"))
+                    | .tag_name] | sort | reverse | first // empty')
+        echo "tag=$tag" >> "$GITHUB_OUTPUT"
+        echo "index release: ${tag:-none}"
+    # Keyed on the tag, so it survives until the index is rebuilt; the daily
+    # cron reads it often enough to stay clear of the eviction window.
+    - name: Cache the index asset
+      if: steps.release.outputs.tag != ''
+      uses: actions/cache@v4
+      with:
+        path: index.tar.gz
+        key: index-asset-${{ steps.release.outputs.tag }}
+    # Non-fatal: with no index, or a failed download, the site still deploys
+    # and full-text reports itself unavailable.
+    - name: Unpack the semantic index
+      if: steps.release.outputs.tag != ''
+      env:
+        GH_TOKEN: ${{ github.token }}
+        TAG: ${{ steps.release.outputs.tag }}
+      run: |
+        if [ ! -f index.tar.gz ]; then
+          gh release download "$TAG" --pattern 'index.tar.gz' --dir . || true
+        fi
+        if [ -f index.tar.gz ] && tar xzf index.tar.gz; then
+          echo "index $TAG: $(du -sh index | cut -f1), $(ls index/clusters | wc -l) clusters"
+        else
+          echo "no usable index asset; building without full-text search"
+          rm -rf index
+        fi
     - name: Build site
       run: make site
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v5
       with:
         path: _site
-
   deploy:
     needs: build
     if: github.event_name != 'pull_request'
@@ -48,3 +148,21 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v5
+
+  # Written only after a deploy has happened. Recorded any earlier, a Pages
+  # failure would suppress every following scheduled run until upstream next
+  # changed -- potentially weeks.
+  record:
+    needs: [upstream, build, deploy]
+    if: needs.upstream.outputs.signature != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - name: Note what was published
+      run: date -u > .upstream
+    - name: Record the upstream signature
+      uses: actions/cache/save@v4
+      with:
+        path: .upstream
+        key: upstream-${{ needs.upstream.outputs.signature }}

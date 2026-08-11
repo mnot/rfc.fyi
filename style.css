@@ -531,3 +531,77 @@ h2 {
     padding: 0;
   }
 }
+/* Full-text mode: the matched passages under each RFC. These are what the
+   feature buys over title search, so they need to read as evidence rather
+   than decoration. */
+.hint {
+  opacity: 0.7;
+  font-size: 0.85em;
+}
+
+ul.sections {
+  margin: 0.25em 0 0 0;
+  padding-left: 1em;
+  list-style: none;
+  font-size: 0.9em;
+}
+
+ul.sections li {
+  margin: 0;
+  opacity: 0.85;
+}
+
+ul.sections li::before {
+  content: "↳ ";
+  opacity: 0.5;
+}
+
+/* Not .control: that class is hidden on the front page, which is exactly
+   where the model download starts, so the progress it reports was rendered
+   into a hidden element for the whole of the first use. */
+#ftStatus {
+  font-size: 85%;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.spinner {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.5em;
+  vertical-align: -0.1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg) } }
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation-duration: 3s }
+}
+
+/* The checkboxes under the search field are one group, not separate
+   paragraphs. Default <p> margins put a full line between them. */
+/* `.control` is on the label, not the paragraph, so target the paragraph. */
+#form form > p {
+  margin: 0.4em 0 0 0;
+}
+
+#form form > p:first-of-type {
+  margin-top: 0.6em;
+}
+
+/* The mode selector stays on the front page, unlike the other controls.
+   It is how people discover full-text search exists, and selecting it is
+   what starts the model downloading -- both of which have to be possible
+   before anyone has typed anything. */
+.noresults #mode {
+  display: block;
+}
+
+#mode {
+  text-align: center;
+}

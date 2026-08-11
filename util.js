@@ -66,26 +66,46 @@ Set.prototype.difference = function (setB) { // eslint-disable-line
   return difference
 }
 
-Object.prototype.forEach = function (func) { // eslint-disable-line
+/* These extend Object.prototype, which is a loaded gun, so two rules apply.
+ *
+ * They are defined non-enumerably. A plain assignment makes them turn up in
+ * every `for...in` over every object in the program, including the ones inside
+ * libraries we did not write.
+ *
+ * And nothing here may be named after a property-descriptor field --
+ * value, writable, get, set, enumerable, configurable. A descriptor is read
+ * through the prototype chain, so an inherited `get` makes the object literal
+ * `{ value: 1 }` look to the engine like it specifies both an accessor and a
+ * value, and `Object.defineProperty` throws. That breaks any bundled library
+ * that defines properties, which is most of them: it is what stopped
+ * transformers.js loading, from inside its own webpack helper setting
+ * `__esModule`. `get` used to live here; it is `getOr` below, as a plain
+ * function.
+ */
+function defineHidden (name, value) {
+  // eslint-disable-next-line no-extend-native
+  Object.defineProperty(Object.prototype, name, {
+    value, enumerable: false, writable: true, configurable: true
+  })
+}
+
+defineHidden('forEach', function (func) {
   for (const item in this) {
-    if (this.hasOwnProperty(item)) { // eslint-disable-line
+    if (Object.prototype.hasOwnProperty.call(this, item)) {
       func(item)
     }
   }
-}
+})
 
-Object.prototype.keys = function () { // eslint-disable-line
+defineHidden('keys', function () {
   const keys = []
   this.forEach(item => keys.push(item))
   return keys
-}
+})
 
-Object.prototype.get = function (key, backstop) { // eslint-disable-line
-  if (this.hasOwnProperty(key)) {  // eslint-disable-line
-    return this[key]
-  } else {
-    return backstop
-  }
+/** Value at `key`, or `backstop` when absent. Was Object.prototype.get. */
+export function getOr (object, key, backstop) {
+  return Object.prototype.hasOwnProperty.call(object, key) ? object[key] : backstop
 }
 
 /*

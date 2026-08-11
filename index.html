@@ -33,14 +33,19 @@
 
     <div id="form"><form role="search" aria-label="Search RFCs">
       <span class="search-field"><input type="text" id="search" value="" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" enterkeyhint="go" aria-label="Search RFC titles and keywords" placeholder="Loading..." disabled="true"><button type="button" id="clearSearch" aria-label="Clear search">&times;</button></span>
+      <p id="mode" class="control"><button type="button" class="sortlink" id="modeTitles" title="Match words in RFC titles and keywords. Instant, and nothing to download.">titles &amp; keywords</button> | <button type="button" class="sortlink" id="modeFullText" title="Search the text of every RFC by meaning. Downloads a search model the first time.">full text <span class="hint">(~39&nbsp;MB)</span></button></p>
       <p><label class="control" title="Include RFCs that have been obsoleted by a newer RFC, or marked Historic."><input type="checkbox" id="obsolete"> Show obsolete and historic RFCs</label></p>
     </form></div>
 
     <p id="dataError" class="error" role="alert" hidden>Couldn’t load the RFC index. Check your connection and <button type="button" id="reloadBtn" class="linklike">reload</button>.</p>
 
-    <p id="sort" class="control">sort by:<br/><button type="button" class="sortlink" id="sortByNumber">RFC number</button> | <button type="button" class="sortlink" id="sortByRefs">referencing RFCs</button></p>
+    <p id="ftStatus" role="status" hidden></p>
 
-    <p class="start">Try “congestion”, “Cisco”, “IMAP search”, “UDP”, “firewall” or “privacy”.</p>
+    <p id="sort" class="control">sort by:<br/><button type="button" class="sortlink" id="sortByNumber">RFC number</button> | <button type="button" class="sortlink" id="sortByRefs">referencing RFCs</button></p>
+    <p id="sortRelevance" class="control" hidden>sorted by relevance</p>
+
+    <p class="start" id="examplesTitles">Try “congestion”, “Cisco”, “IMAP search”, “UDP”, “firewall” or “privacy”.</p>
+    <p class="start" id="examplesFullText" hidden>Try “when must a cache not store a response”, “how a host configures its own IPv6 address”, or “negotiating which compression algorithm to use”.</p>
 
     <p class="start"><em>Or browse by:</em></p>
 
