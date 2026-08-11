@@ -6,3 +6,6 @@ easier to find appropriate RFCs, both for IETF "insiders" and for the general pu
 
 Collections of RFCs are added and maintained using new issues; see our [contribution
 guidelines](CONTRIBUTING.md).
+
+Full-text search runs against an index that is built by hand and published as a release; see
+[maintaining the semantic index](docs/semantic-index.md).
