@@ -179,9 +179,13 @@ index-verify:
 # repo without bound.
 .PHONY: index-release
 index-release:
-	@# One shell, one read. $(shell ...) expands when the recipe is expanded,
-	@# which is *before* the guard below runs -- so with no index you got two
-	@# Python tracebacks and an empty tag instead of the intended message.
+	@# One shell, one read. A make `shell` call expands when the recipe is
+	@# expanded, which is *before* the guard below runs -- so with no index
+	@# you got two Python tracebacks and an empty tag rather than the
+	@# intended message. Do not name that function here in the obvious way:
+	@# make expands variables inside recipe comments too, so writing it out
+	@# runs it, which is how this comment used to greet every invocation
+	@# with "make: ...: Command not found".
 	@#
 	@# Tagged by build id, so each build gets its own release. The previous
 	@# one is kept: a consumer re-bundling the index reads it over several
