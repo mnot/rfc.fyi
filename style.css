@@ -563,6 +563,8 @@ ul.sections li::before {
   font-size: 85%;
   font-style: italic;
   opacity: 0.8;
+  /* Sits under #mode, which is centred; left-justified it read as misaligned. */
+  text-align: center;
 }
 
 .spinner {
