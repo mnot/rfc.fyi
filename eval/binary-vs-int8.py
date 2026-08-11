@@ -30,7 +30,9 @@ from typing import List
 
 import numpy as np
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "bin"))
+sys.path.insert(
+    0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "bin")
+)
 from embed import Embedder  # noqa: E402  pylint: disable=wrong-import-position
 
 
@@ -108,7 +110,9 @@ def main() -> None:
 
     n_chunks = len(vecs)
     print(f"\n{len(hits['int8'])} real queries, nprobe={args.nprobe}, k={args.k}")
-    print(f"{'encoding':<14}{'recall@k':>10}{'bytes/chunk':>14}{'index':>11}{'per query':>12}")
+    print(
+        f"{'encoding':<14}{'recall@k':>10}{'bytes/chunk':>14}{'index':>11}{'per query':>12}"
+    )
     for name, per_chunk in (("ivf_ceiling", None), ("int8", 423), ("binary", 48)):
         r = float(np.mean(hits[name]))
         if per_chunk is None:
