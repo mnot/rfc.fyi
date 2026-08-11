@@ -11,6 +11,7 @@ const STATIC_ASSETS = [
   '/client.js',
   '/data.js',
   '/util.js',
+  '/search.js',
   '/style.css',
   '/rfcfyi.png',
   '/manifest.json'

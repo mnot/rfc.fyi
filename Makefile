@@ -130,6 +130,14 @@ PY := .venv/bin/python
 #: superseded one is not left with a dead URL.
 INDEX_KEEP := 2
 
+#: Index releases, newest first, as "tag<TAB>whether it carries the asset".
+#: An interrupted publish can leave a tag with no index.tar.gz, and nothing
+#: should treat that as the current index just because it sorts highest.
+RELEASES = gh api repos/{owner}/{repo}/releases --paginate -q \
+	'.[] | select(.tag_name | startswith("index-")) \
+	     | [.tag_name, (any(.assets[]?; .name == "index.tar.gz") | tostring)] \
+	     | @tsv' | sort -r
+
 .PHONY: index
 index: rfc-text
 	test -f index/manifest.json || { \
@@ -153,8 +161,7 @@ index-full: rfc-text
 .PHONY: index-fetch
 index-fetch:
 	@set -e; \
-	tag=$$(gh release list --limit 50 --json tagName \
-	       -q '[.[].tagName | select(startswith("index-"))] | sort | reverse | first // empty'); \
+	tag=$$($(RELEASES) | awk -F'\t' '$$2=="true"' | head -1 | cut -f1); \
 	if [ -z "$$tag" ]; then echo "no index-* release to fetch" >&2; exit 1; fi; \
 	gh release download "$$tag" --pattern 'index.tar.gz' --dir . --clobber; \
 	rm -rf index; \
@@ -183,15 +190,24 @@ index-release:
 	@set -e; \
 	test -f index/manifest.json || { echo "no index; run make index-full" >&2; exit 1; }; \
 	tag=index-$$($(PY) -c "import json;print(json.load(open('index/manifest.json'))['build'])"); \
+	newest=$$($(RELEASES) | head -1 | cut -f1); \
+	if [ -n "$$newest" ] && [ "$$tag" != "$$newest" ] && \
+	   [ "$$(printf '%s\n%s\n' "$$tag" "$$newest" | sort -r | head -1)" != "$$tag" ]; then \
+	  echo "refusing to publish $$tag: it sorts older than $$newest, so every" >&2; \
+	  echo "consumer would keep the other one and the prune would delete this." >&2; \
+	  echo "Check this machine's clock." >&2; \
+	  exit 1; \
+	fi; \
 	tar czf index.tar.gz index; \
 	gh release create "$$tag" index.tar.gz --title "Semantic index $$tag" \
 	  --notes "Built by make index. Unpack over index/ and run make site." \
 	  || gh release upload "$$tag" index.tar.gz --clobber; \
 	rm -f index.tar.gz; \
 	echo "published $$tag"; \
-	gh release list --limit 50 --json tagName \
-	  -q '[.[].tagName | select(startswith("index-"))] | sort | reverse | .[$(INDEX_KEEP):][]' \
-	  | while read -r old; do \
-	      echo "pruning $$old"; \
-	      gh release delete "$$old" --yes --cleanup-tag; \
-	    done
+	all=$$($(RELEASES)); \
+	keep=$$(printf '%s\n' "$$all" | awk -F'\t' '$$2=="true"' | head -$(INDEX_KEEP) | cut -f1); \
+	printf '%s\n' "$$all" | cut -f1 | while read -r old; do \
+	  case " $$(echo $$keep) " in *" $$old "*) continue;; esac; \
+	  echo "pruning $$old"; \
+	  gh release delete "$$old" --yes --cleanup-tag; \
+	done

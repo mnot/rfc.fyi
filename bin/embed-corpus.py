@@ -53,9 +53,11 @@ from embed import Embedder  # noqa: E402
 from indexfmt import (  # noqa: E402
     ChunkKey,
     changed_rfcs,
+    chunker_changed,
     dequantise,
     previous_vectors,
     read_sources,
+    source_rfcs,
 )
 
 SHARD = 20_000
@@ -125,17 +127,31 @@ def hydrate(
     with open(manifest_path, encoding="utf-8") as fh:
         scale = float(json.load(fh)["quant"]["scale"])
 
-    old_digests = read_sources(os.path.join(index_dir, "sources.json"))
-    new_digests = read_sources(sources)
-    if not old_digests:
+    old_doc = read_sources(os.path.join(index_dir, "sources.json"))
+    new_doc = read_sources(sources)
+    if not old_doc:
         raise SystemExit(
             f"--hydrate {index_dir}: no sources.json, so there is no way to "
             f"tell which RFCs have been reissued since it was built. Rebuild "
             f"with `make index-full`, or hydrate from a newer release."
         )
-    if not new_digests:
+    if not new_doc:
         raise SystemExit(f"--sources {sources}: missing or empty")
 
+    # The chunker is half of what produced the text these vectors describe.
+    # Reusing across a change to it would attach old vectors to new text
+    # wherever offsets happen to have stayed put, which is most of the corpus
+    # for most chunker changes -- silently, and invisibly to any size guard.
+    why = chunker_changed(old_doc, new_doc)
+    if why:
+        raise SystemExit(
+            f"--hydrate {index_dir}: {why}. The chunk text these vectors were "
+            f"built from is not the text this run produces, so none of them "
+            f"can be reused. Rebuild with `make index-full`."
+        )
+
+    old_digests = source_rfcs(old_doc)
+    new_digests = source_rfcs(new_doc)
     changed = changed_rfcs(old_digests, new_digests)
     prev, skipped = previous_vectors(index_dir, changed)
 
@@ -252,9 +268,9 @@ def main() -> None:
                 flush=True,
             )
             # Persist as we go, so an interrupted run keeps its work.
-            partial = np.vstack([cache[h] for h in hashes if h in cache])
-            keys = [h for h in hashes if h in cache]
-            write_shards(args.out, partial, keys, args.shard)
+            done_hashes = [h for h in hashes if h in cache]
+            partial = np.vstack([cache[h] for h in done_hashes])
+            write_shards(args.out, partial, done_hashes, args.shard)
 
     vecs = np.vstack([cache[h] for h in hashes])
     n = write_shards(args.out, vecs, hashes, args.shard)

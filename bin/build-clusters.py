@@ -773,7 +773,12 @@ def cmd_build(args: argparse.Namespace) -> None:
     if previous.get("quant", {}).get("chunk_cosine_mean") is not None:
         chunk_cos = float(previous["quant"]["chunk_cosine_mean"])
         scale_tried = previous["quant"].get("candidates", scale_tried)
-        carried_from = previous.get("build") or previous.get("built")
+        # Follow the chain: after two incremental builds the previous one was
+        # carrying the figure too, and naming it would credit a build that
+        # never measured anything either.
+        carried_from = previous["quant"].get("chunk_cosine_from") or (
+            previous.get("build") or previous.get("built")
+        )
     else:
         chunk_cos = mean_cosine(sample, scale)
 

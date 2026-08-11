@@ -80,6 +80,7 @@ const FORMAT_VERSION = 1
 const MAGIC_CENTROIDS = 'RFCV'
 const MAGIC_CLUSTER = 'RFCC'
 const DEFAULT_CLUSTER_PATH = 'clusters/{id:04d}.bin'
+const DEFAULT_NPROBE = 20
 
 /* Where the index lives, and the one URL under it whose bytes change.
  *
@@ -130,12 +131,20 @@ export async function pruneIndexCache (basePath) {
   return dropped
 }
 
-/** The build the site is currently publishing, as a base path. */
-async function currentBasePath () {
-  /* Bypass the HTTP cache as well as the service worker's. Pages serves this
-   * with a max-age like everything else, and a pointer minutes out of date
-   * names a build the site has already replaced. */
-  const response = await fetchOk(CURRENT_URL, { cache: 'no-store' })
+/**
+ * The build the site is currently publishing, as a base path.
+ *
+ * @param {string} [bust] a nonce, when the pointer just proved to be stale.
+ *   `cache: 'no-store'` gets past the browser and the service worker, but
+ *   not a CDN edge -- Pages serves this with the same max-age as everything
+ *   else and offers no header control, so for some minutes after a deploy an
+ *   edge can still be handing out the previous build. A distinct URL is a
+ *   distinct cache key there, so it misses and reaches the origin. Only used
+ *   on the retry: the plain URL is what the offline fallback can match.
+ */
+async function currentBasePath (bust) {
+  const url = bust ? `${CURRENT_URL}?b=${bust}` : CURRENT_URL
+  const response = await fetchOk(url, { cache: 'no-store' })
   let build
   try {
     build = (await response.json()).build
@@ -143,7 +152,7 @@ async function currentBasePath () {
     return fail(`${CURRENT_URL} is not JSON`, err)
   }
   if (typeof build !== 'string' || !/^\d{8}T\d{6}Z$/.test(build)) {
-    fail(`${CURRENT_URL}: no usable build id`)
+    fail(`${url}: no usable build id`)
   }
   return `${INDEX_ROOT}/${build}`
 }
@@ -160,6 +169,14 @@ function fail (message, cause) {
   throw new SearchError(cause ? `${message}: ${cause.message}` : message, { cause })
 }
 
+function superseded (message) {
+  const err = new SearchError(message)
+  /* So create() can tell "the pointer was stale" apart from every other
+   * reason a fetch fails, and go round once more. */
+  err.supersededBuild = true
+  throw err
+}
+
 async function fetchOk (url, init) {
   let response
   try {
@@ -168,12 +185,12 @@ async function fetchOk (url, init) {
     return fail(`could not reach ${url}`, err)
   }
   if (response.status === 404 &&
-      url.startsWith(`${INDEX_ROOT}/`) && url !== CURRENT_URL) {
+      url.startsWith(`${INDEX_ROOT}/`) && !url.startsWith(CURRENT_URL)) {
     /* Everything under a build directory disappears together when a newer
      * index is published, and a session that started before the deploy is
      * still asking for the old one. Reloading picks up the new pointer;
      * "HTTP 404" would send someone looking for a broken link. */
-    fail(`${url}: this index build is no longer published -- reload the page`)
+    superseded(`${url}: this index build is no longer published -- reload the page`)
   }
   if (!response.ok) {
     fail(`${url}: HTTP ${response.status} ${response.statusText}`)
@@ -297,6 +314,10 @@ export class SemanticSearch {
     this.centroids = options.centroids
     this.clusterCount = options.centroids.length / options.dims
     this.clusterPath = options.manifest.clusters?.path || DEFAULT_CLUSTER_PATH
+    /* How many clusters a query fetches. The build chooses it -- `verify`
+     * reports the fetch budget against the same number -- so take it from
+     * the manifest rather than keeping a second copy here. */
+    this.nprobe = Number(options.manifest.clusters?.nprobe) || DEFAULT_NPROBE
     this.onProgress = options.onProgress
 
     /* Cluster id -> Promise of a parsed cluster. Promises rather than values
@@ -331,11 +352,23 @@ export class SemanticSearch {
    */
   static async create ({ basePath, onProgress } = {}) {
     const report = typeof onProgress === 'function' ? onProgress : null
+    if (basePath) {
+      return SemanticSearch._open(String(basePath).replace(/\/+$/, ''), report)
+    }
+    try {
+      return await SemanticSearch._open(await currentBasePath(), report)
+    } catch (err) {
+      if (!err?.supersededBuild) throw err
+      /* The pointer named a build the site has already replaced, which for
+       * the first minutes after a deploy means a CDN edge served us a stale
+       * one. Ask again in a way the edge cannot answer from its cache.
+       * Once: if the second answer is also gone, something else is wrong. */
+      return SemanticSearch._open(await currentBasePath(Date.now()), report)
+    }
+  }
 
+  static async _open (base, report) {
     report?.({ phase: 'manifest', status: 'start' })
-    const base = basePath
-      ? String(basePath).replace(/\/+$/, '')
-      : await currentBasePath()
     /* Fire and forget: reclaiming space from a build nobody will fetch
      * again should not hold up the search that is waiting on this. */
     pruneIndexCache(base).catch(() => {})
@@ -549,14 +582,15 @@ export class SemanticSearch {
    *
    * @param {string} query
    * @param {object} [options]
-   * @param {number} [options.nprobe=20] clusters to fetch and scan
+   * @param {number} [options.nprobe] clusters to fetch and scan; defaults to
+   *   the manifest's `clusters.nprobe`
    * @param {number} [options.limit=50] chunks to return
    * @returns {Promise<Array<{rfc: number|string, section: ?string, title: string,
    *   offset: number, length: number, score: number}>>} best first. Chunks are
    *   returned as they are -- several from one RFC, or one section, is normal;
    *   collapsing them is the caller's business.
    */
-  async search (query, { nprobe = 20, limit = 50 } = {}) {
+  async search (query, { nprobe = this.nprobe, limit = 50 } = {}) {
     const text = String(query ?? '').trim()
     if (!text || limit <= 0) return []
     await this.loadModel()

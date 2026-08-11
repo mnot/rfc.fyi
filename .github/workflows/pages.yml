@@ -98,9 +98,14 @@ jobs:
       id: release
       env:
         GH_TOKEN: ${{ github.token }}
+      # Only releases that actually carry the asset. An interrupted
+      # `make index-release` can leave the newest tag with no index.tar.gz,
+      # and newest-tag-wins would then pass over a perfectly good older one.
       run: |
-        tag=$(gh release list --limit 50 --json tagName \
-              -q '[.[].tagName | select(startswith("index-"))] | sort | reverse | first // empty')
+        tag=$(gh api repos/{owner}/{repo}/releases --paginate -q \
+              '[.[] | select(.tag_name | startswith("index-"))
+                    | select(any(.assets[]?; .name == "index.tar.gz"))
+                    | .tag_name] | sort | reverse | first // empty')
         echo "tag=$tag" >> "$GITHUB_OUTPUT"
         echo "index release: ${tag:-none}"
     # Keyed on the tag, so it survives until the index is rebuilt. A daily
@@ -136,20 +141,6 @@ jobs:
       uses: actions/upload-pages-artifact@v5
       with:
         path: _site
-    # Only now: the signature records what has been published, so writing it
-    # before the site is assembled would skip tomorrow's run after a build
-    # that never produced anything. Set only for the schedule, which is the
-    # only event this gates.
-    - name: Note what was published
-      if: needs.upstream.outputs.signature != ''
-      run: date -u > .upstream
-    - name: Record the upstream signature
-      if: needs.upstream.outputs.signature != ''
-      uses: actions/cache/save@v4
-      with:
-        path: .upstream
-        key: upstream-${{ needs.upstream.outputs.signature }}
-
   deploy:
     needs: build
     if: github.event_name != 'pull_request'
@@ -169,3 +160,23 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v5
+
+  # The signature says a deploy of it happened, so it is written after one
+  # has -- `needs: deploy`, not at the end of the build. Recording it earlier
+  # would let a Pages outage suppress every following scheduled run until
+  # upstream next changed, which at 10-25 RFCs a month can be weeks of the
+  # site quietly going stale.
+  record:
+    needs: [upstream, build, deploy]
+    if: needs.upstream.outputs.signature != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - name: Note what was published
+      run: date -u > .upstream
+    - name: Record the upstream signature
+      uses: actions/cache/save@v4
+      with:
+        path: .upstream
+        key: upstream-${{ needs.upstream.outputs.signature }}

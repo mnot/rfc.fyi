@@ -18,6 +18,7 @@ Standard library only.
 """
 
 import argparse
+import ast
 import bisect
 import hashlib
 import json
@@ -924,6 +925,26 @@ def gather_paths(args):
     return paths
 
 
+def chunker_fingerprint(opts):
+    """What this chunker would do, as a hash of its code plus its settings.
+
+    The code is hashed through its AST, so reformatting and comment edits do
+    not force a full re-embed while any change to what it computes does. A
+    docstring edit counts as a change, which errs the safe way.
+    """
+    with open(os.path.abspath(__file__), "rb") as handle:
+        tree = ast.parse(handle.read())
+    return {
+        "code": hashlib.sha256(ast.dump(tree).encode("utf-8")).hexdigest(),
+        "opts": {
+            "target": opts.target,
+            "cap": opts.cap,
+            "overlap": not opts.no_overlap,
+            "skip_acks": opts.skip_acks,
+        },
+    }
+
+
 def file_digest(path):
     """SHA-256 of an RFC's text file, as published.
 
@@ -1085,7 +1106,14 @@ def main():
         tmp = opts.sources + ".tmp"
         with open(tmp, "w", encoding="utf-8") as handle:
             json.dump(
-                {"digest": "sha256", "rfcs": digests}, handle, indent=1, sort_keys=True
+                {
+                    "digest": "sha256",
+                    "chunker": chunker_fingerprint(opts),
+                    "rfcs": digests,
+                },
+                handle,
+                indent=1,
+                sort_keys=True,
             )
             handle.write("\n")
         os.replace(tmp, opts.sources)
@@ -1093,6 +1121,13 @@ def main():
         report(counts, lengths, empty, errors, opts, sys.stderr)
     elif errors:
         report({}, [], [], errors, opts, sys.stderr)
+    if errors:
+        # A file that raised contributes no chunks and no digest, so the RFC
+        # drops out of the index and stays out -- the error repeats every
+        # month, and a line on stderr is not a signal anyone will see. Fail
+        # instead. Files that legitimately yield nothing are counted
+        # separately and do not come through here.
+        sys.exit(1)
 
 
 if __name__ == "__main__":

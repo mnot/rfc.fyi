@@ -24,8 +24,8 @@ make index-release   # publish it
 `make index` takes a few minutes. It prints three lines worth reading:
 
 ```
-hydrated 442,324 vectors from index (457,156 available, 0 RFCs changed so 0 rows were left out)
-457,156 chunks, 0 cached locally, 442,324 hydrated, 1,203 to embed (bge-small/int8)
+hydrated 441,121 vectors from index (455,953 available, 3 RFCs changed so 142 rows were left out)
+457,156 chunks, 0 cached locally, 441,121 hydrated, 1,203 to embed (bge-small/int8)
 wrote 4,337 clusters + centroids to index: 186.9 MiB total
 ```
 
@@ -34,6 +34,9 @@ wrote 4,337 clusters + centroids to index: 186.9 MiB total
 - **to embed** should be in the low thousands for a month's worth of new
   RFCs. If it is a large fraction of the corpus the run stops rather than
   spending hours; see Troubleshooting.
+- **hydrated plus to embed comes to less than the chunk count.** About 15,000
+  chunks repeat text that appears elsewhere in the series -- boilerplate,
+  mostly -- and the cache is keyed by text, so one vector serves all of them.
 
 `make index-verify` prints a JSON report. Check:
 
@@ -90,6 +93,17 @@ incremental build needs. There is no local state to move between machines.
 
 **`--hydrate index: no sources.json`**
 The release predates per-RFC digests. Do a full rebuild.
+
+**`--hydrate index: chunker code abc123 -> def456`** (or `chunker settings …`)
+`bin/chunk.py` has changed, so it no longer produces the text those vectors
+were built from and none of them can be reused. Do a full rebuild. Comments
+and formatting do not trigger this; anything the chunker computes does,
+including its docstrings.
+
+**`errors: 1` and a non-zero exit from `chunk.py`**
+A file failed to chunk. That RFC would be missing from the index and from the
+digests, so the run stops. Fix the file or the chunker before continuing --
+the named file is in the error output.
 
 **`… would be embedded, over the 25% limit for a hydrated run`**
 Either `index/` is not the previous build of this corpus, or the chunker has

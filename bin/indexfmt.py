@@ -77,7 +77,7 @@ import json
 import os
 import re
 import struct
-from typing import Any, Dict, Iterator, Set, Tuple
+from typing import Any, Dict, Iterator, Optional, Set, Tuple
 
 import numpy as np
 
@@ -207,20 +207,55 @@ def build_id(built: str) -> str:
 # --------------------------------------------------------------------------
 
 
-def read_sources(path: str) -> Dict[str, str]:
-    """`{rfc: digest}` from a sources.json, or empty if there isn't one."""
+def read_sources(path: str) -> Dict[str, Any]:
+    """A whole sources.json, or empty if there isn't one.
+
+        {"digest": "sha256",
+         "chunker": {"code": "<sha256>", "opts": {...}},
+         "rfcs": {"9111": "<sha256>", ...}}
+
+    `rfcs` digests each RFC's text file. `chunker` identifies the code and
+    settings that turned those bytes into chunks -- see `chunker_changed`.
+    """
     if not os.path.exists(path):
         return {}
     with open(path, encoding="utf-8") as fh:
-        return dict(json.load(fh).get("rfcs") or {})
+        return dict(json.load(fh))
 
 
-def write_sources(path: str, digests: Dict[str, str]) -> None:
+def source_rfcs(doc: Dict[str, Any]) -> Dict[str, str]:
+    return dict(doc.get("rfcs") or {})
+
+
+def write_sources(path: str, doc: Dict[str, Any]) -> None:
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as fh:
-        json.dump({"digest": "sha256", "rfcs": digests}, fh, indent=1, sort_keys=True)
+        json.dump(doc, fh, indent=1, sort_keys=True)
         fh.write("\n")
     os.replace(tmp, path)
+
+
+def chunker_changed(old: Dict[str, Any], new: Dict[str, Any]) -> Optional[str]:
+    """Why the two builds' chunkers differ, or None if they do not.
+
+    A chunk's text is a *cleaned* rendering of its byte range, so it is a
+    function of the file bytes and of the chunker. Digesting only the bytes
+    would let a change to the cleaning rules alter thousands of chunks
+    without moving a single offset -- which the `(rfc, off, len)` key cannot
+    see, and which no size guard would catch either, since the corpus looks
+    identical. Reuse has to be refused on this as well.
+    """
+    before, after = old.get("chunker"), new.get("chunker")
+    if not before or not after:
+        return "one of the builds recorded no chunker fingerprint"
+    if before.get("code") != after.get("code"):
+        return (
+            f"chunker code {str(before.get('code'))[:12]} -> "
+            f"{str(after.get('code'))[:12]}"
+        )
+    if before.get("opts") != after.get("opts"):
+        return f"chunker settings {before.get('opts')} -> {after.get('opts')}"
+    return None
 
 
 def changed_rfcs(old: Dict[str, str], new: Dict[str, str]) -> Set[str]:

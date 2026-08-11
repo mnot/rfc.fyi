@@ -332,7 +332,7 @@ class RfcFyiUi {
         this.refreshModelHint()
       }
       this.ftStatus('Searching\u2026')
-      const hits = await this.engine.search(query, { nprobe: 20, limit: 200 })
+      const hits = await this.engine.search(query, { limit: 200 })
 
       // Collapse chunk hits to RFC rows, best chunk first within each, and
       // order the rows by their best chunk. rfc.fyi is a finder: the row is
