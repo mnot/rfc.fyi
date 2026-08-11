@@ -388,19 +388,22 @@ class RfcFyiUi {
    * a document needs several good passages to lead, and one strong passage no
    * longer carries a whole RFC.
    *
-   * Measured over the 87 labelled queries, recall@10 goes 0.649 -> 0.785 and
-   * the median rank of the first relevant RFC 4 -> 2. Split in half, the gain
-   * holds on both halves independently (0.648 -> 0.818, 0.651 -> 0.752), so it
-   * is not the coefficients fitting the query set. They are still hand-picked;
-   * the citation weight in particular is sharp, and 0.05 loses more than 0.02
-   * gains by promoting RFCs on citation count alone.
+   * Measured over the 87 labelled queries (eval/rerank.py): recall@10 goes
+   * 0.649 -> 0.789, MRR 0.433 -> 0.563, median rank of the first relevant RFC
+   * 4 -> 2. Split in half the gain holds on each independently (0.648 ->
+   * 0.795, 0.651 -> 0.783), so it is not the coefficients fitting the set.
+   *
+   * Both weights are on narrow ridges, so re-run the sweep before moving
+   * them. Title peaks between 0.05 and 0.10 and falls off hard above: 0.20
+   * scores 0.707 on its own, worse than using no title at all. Citations at
+   * 0.05 lose 0.20 by promoting RFCs on citation count alone.
    */
   rowScore (query, rfcName, hits) {
     const top = hits.slice(0, 3)
     const passages = top.reduce((sum, hit) => sum + hit.score, 0) / 3
     const title = this.titleOverlap(query, (data.rfcs[rfcName] || {}).title)
     const cited = Math.log1p(data.obsoleteRefs.get(rfcName) || 0)
-    return passages + 0.2 * title + 0.02 * cited
+    return passages + 0.1 * title + 0.02 * cited
   }
 
   /* Query words present in the title, as a fraction. Lexical on purpose: the
