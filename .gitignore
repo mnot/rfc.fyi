@@ -11,8 +11,9 @@ index/
 # it behind.
 index.tar.gz
 
-# Phase 0 model evaluation scratch.
-eval/out/
+# Measurement harness for the index design. Kept out of the repo; the
+# scripts and query set live on whichever machine is doing the measuring.
+eval/
 
 # Python
 __pycache__/

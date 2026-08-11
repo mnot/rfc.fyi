@@ -78,9 +78,9 @@ server: site
 	cd _site && python -m http.server
 
 .PHONY: lint
-lint: client.js util.js data.js search.js bin/*.py eval/*.py
+lint: client.js util.js data.js search.js bin/*.py
 	standard --fix client.js util.js data.js search.js
-	black bin/*.py eval/*.py
+	black bin/*.py
 
 .PHONY: clean
 clean:
