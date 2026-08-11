@@ -38,11 +38,9 @@ self.addEventListener('activate', (event) => {
     Promise.all([
       self.clients.claim(),
       caches.keys().then((cacheNames) => {
-        // Only reap our own superseded caches. This origin also holds
-        // caches we do not own -- transformers.js keeps the ~32 MiB
-        // embedding model in one of its own -- and CACHE_NAME is bumped on
-        // every deploy by `make pwa-update`. A blanket "delete anything
-        // that is not me" would throw that model away once per release.
+        // Only our own superseded caches. transformers.js keeps the ~32 MiB
+        // model in a cache of its own, and CACHE_NAME is bumped every
+        // deploy, so reaping anything unfamiliar would discard it.
         return Promise.all(
           cacheNames
             .filter((name) => name.startsWith(CACHE_PREFIX) && name !== CACHE_NAME)
@@ -65,13 +63,9 @@ self.addEventListener('fetch', (event) => {
   // keeps opaque-response padding out of our quota.
   if (url.origin !== self.location.origin) return
 
-  // On localhost, network first: the edit you just made wins, and the cache
-  // is only a fallback for when the dev server is down. Stale-while-
-  // revalidate is right in production and actively misleading in
-  // development -- it serves the previous version of a file you just
-  // changed, so a fix looks like it did nothing and the next reload
-  // silently "fixes" it. Bumping CACHE_NAME is the production answer and it
-  // does not happen while you are editing.
+  // Network first on localhost, with the cache only as a fallback. In
+  // development stale-while-revalidate serves the previous version of a file
+  // you just changed, so a fix looks like it did nothing.
   if (DEV_HOSTS.has(url.hostname)) {
     event.respondWith(
       caches.open(CACHE_NAME).then(async (cache) => {
@@ -89,11 +83,9 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Which build the site is publishing. Network-first, and the only thing
-  // under /index/ that is: a stale pointer names a build directory the site
-  // no longer has, so every cluster fetch after it would 404. Forty bytes,
-  // and it is read once per session. The cached copy is an offline fallback,
-  // where the build it names is the one already in the cache anyway.
+  // Which build the site is publishing. The only thing under /index/ that is
+  // network-first: a stale pointer names a directory the site no longer has,
+  // so every fetch after it would 404. Cached as an offline fallback.
   if (url.pathname === '/index/current.json') {
     event.respondWith(
       caches.open(INDEX_CACHE).then(async (cache) => {
@@ -111,17 +103,11 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Index content is immutable and expensive to refetch, so it does not
-  // belong in CACHE_NAME -- which `make pwa-update` bumps on every deploy,
-  // so `activate` would delete a user's whole warmed index because someone
-  // changed a stylesheet. This is the bug just fixed for the transformers.js
-  // model cache, one level in.
-  //
-  // Cache-first with no revalidation, which is safe because these URLs carry
-  // the build that produced them: /index/<build>/... never changes content,
-  // it is superseded by a different path. search.js drops entries from
-  // builds that are no longer current, since the page is the side that knows
-  // which one is.
+  // Index content is immutable and expensive to refetch, so it stays out of
+  // CACHE_NAME, which `make pwa-update` bumps on every deploy -- a stylesheet
+  // change would otherwise discard a warmed index. Cache-first with no
+  // revalidation is safe because the URLs carry their build; search.js drops
+  // entries from builds that are no longer current.
   if (url.pathname.startsWith('/index/')) {
     event.respondWith(
       caches.open(INDEX_CACHE).then(async (cache) => {

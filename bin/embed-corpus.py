@@ -6,33 +6,24 @@ is a local job (see `make index-full`). What makes the monthly update cheap
 is not resumability but the cache below.
 
 **Keyed by content, not position.** Each vector is stored against the SHA-256
-of the text it came from. An earlier design keyed the cache by row number and
-skipped whole shards, which only works if new chunks land at the end of the
-file -- and they do not. RFCs publish out of numeric order: a document can
-sit in AUTH48 while later-numbered ones go out, so gaps are filled months
-afterwards and a new chunk can appear anywhere in the corpus. Position keying
-would silently misalign every vector after the insertion, or force a full
-re-embed to avoid it. Hashing the text makes the order irrelevant: reordering
-the corpus costs nothing, and only genuinely new text is embedded.
+of its text. RFCs publish out of numeric order -- a document can sit in
+AUTH48 while later-numbered ones go out -- so a new chunk can appear anywhere
+in the corpus, and a row-numbered cache would misalign every vector after it.
 
-**Order-stable output.** Chunks are length-sorted before encoding, because
-padding is batch-longest and mixing a 1,000-token chunk with thirty short
-ones pads them all to 1,000 -- worth about 25%. Vectors are written back in
-input order, so row N of the output always corresponds to line N of the
-input, whatever the batching did.
+**Order-stable output.** Chunks are length-sorted before encoding, since
+padding is batch-longest and mixing one long chunk with thirty short ones
+pads them all (worth ~25%). Vectors are written back in input order.
 
-**Resumable.** Output is still written as fixed-size shards, and a run that
-dies partway leaves its completed work in the cache, so restarting re-embeds
-only what it had not reached.
+**Resumable.** A run that dies partway leaves its completed work in the
+cache.
 
 **Hydrated from the published index.** `--hydrate index/` seeds the cache
-from the previous build's int8 vectors, joined on `(rfc, off, len)`. The
-round trip is exact -- requantising a dequantised int8 row at the same scale
-returns the same byte -- so a build that hydrates writes the same cluster
-bytes for untouched chunks as one that kept float32 around. That is what
-makes the monthly update independent of whichever machine ran the last one:
-the previous release is the cache. RFCs whose source digest has changed are
-excluded, because a reissue moves offsets underneath the key.
+from the previous build's int8 vectors, joined on `(rfc, off, len)`.
+Requantising a dequantised int8 row at the same scale returns the same byte,
+so hydrating writes the same cluster bytes as keeping float32 would -- which
+is what makes an update independent of the machine that ran the last one.
+RFCs whose digest changed are excluded, as is everything if the chunker
+changed.
 """
 
 from __future__ import annotations
@@ -62,10 +53,9 @@ from indexfmt import (  # noqa: E402
 
 SHARD = 20_000
 
-#: Refuse to embed more than this share of the corpus on a hydrated run.
-#: A monthly update adds a few thousand chunks; anything approaching a full
-#: re-embed means the hydrate source did not match, and six silent hours is
-#: the wrong way to find that out.
+#: Refuse to embed more than this share of the corpus on a hydrated run. A
+#: monthly update adds a few thousand chunks; anything near a full re-embed
+#: means the hydrate source did not match.
 MAX_NEW_FRACTION = 0.25
 
 
@@ -116,10 +106,8 @@ def hydrate(
 ) -> Dict[str, int]:
     """Seed `cache` from a previous index, skipping RFCs that have changed.
 
-    Everything this needs is published: the vectors are in the cluster files
-    and the digests are in `sources.json` beside them, so a machine that has
-    never built the index before can still do an incremental build from a
-    release.
+    Reads only published files -- the cluster vectors and `sources.json`
+    beside them -- so a release is enough to build incrementally from.
     """
     manifest_path = os.path.join(index_dir, "manifest.json")
     if not os.path.exists(manifest_path):
@@ -138,10 +126,8 @@ def hydrate(
     if not new_doc:
         raise SystemExit(f"--sources {sources}: missing or empty")
 
-    # The chunker is half of what produced the text these vectors describe.
-    # Reusing across a change to it would attach old vectors to new text
-    # wherever offsets happen to have stayed put, which is most of the corpus
-    # for most chunker changes -- silently, and invisibly to any size guard.
+    # The chunker is half of what produced the text these vectors describe,
+    # so a change to it invalidates all of them wherever offsets stayed put.
     why = chunker_changed(old_doc, new_doc)
     if why:
         raise SystemExit(

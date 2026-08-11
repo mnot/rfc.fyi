@@ -58,12 +58,11 @@ cluster holds many chunks from the same section -- the chunker emits
 several per section, and they are near-duplicates, so they land together.
 Measured against real embeddings the table takes 23% off the tail.
 
-`(rfc, off, len)` identifies a chunk's source text. RFC text files do not
-change within a publication version, so the same triple in a later build
-denotes the same bytes, which is what lets that build reuse this one's
-vectors; `index/sources.json` records a digest per RFC so a reissue can be
-told apart. The triple is stable where a row number is not -- RFCs publish
-out of numeric order, so an insertion renumbers everything after it.
+`(rfc, off, len)` identifies a chunk's source text, and is what a later
+build joins on to reuse this one's vectors. A row number could not: RFCs
+publish out of numeric order, so an insertion renumbers everything after
+it. `sources.json` alongside records what produced the text, since the
+triple survives a reissue that rewrites the bytes under it.
 
 Chunks within a file are ordered by ascending chunk id, and the partition
 is exactly `argmax` of the dot product against the *dequantised* centroids
@@ -191,10 +190,8 @@ def cluster_paths(index_dir: str) -> Iterator[str]:
 def build_id(built: str) -> str:
     """`2026-08-10T07:56:03Z` -> `20260810T075603Z`.
 
-    The compact form is what the index is published under, as a path segment
-    and as a release tag. Colons are illegal in a git ref and awkward in a
-    URL, and dropping them leaves something that still sorts lexically as it
-    does chronologically.
+    Used as a path segment and a release tag, so no colons; still sorts
+    lexically as chronologically.
     """
     compact = re.sub(r"[^0-9TZ]", "", built)
     if not re.fullmatch(r"\d{8}T\d{6}Z", compact):
@@ -210,12 +207,9 @@ def build_id(built: str) -> str:
 def read_sources(path: str) -> Dict[str, Any]:
     """A whole sources.json, or empty if there isn't one.
 
-        {"digest": "sha256",
-         "chunker": {"code": "<sha256>", "opts": {...}},
-         "rfcs": {"9111": "<sha256>", ...}}
-
-    `rfcs` digests each RFC's text file. `chunker` identifies the code and
-    settings that turned those bytes into chunks -- see `chunker_changed`.
+    {"digest": "sha256",
+     "chunker": {"code": "<sha256>", "opts": {...}},
+     "rfcs": {"9111": "<sha256>", ...}}
     """
     if not os.path.exists(path):
         return {}
@@ -239,11 +233,9 @@ def chunker_changed(old: Dict[str, Any], new: Dict[str, Any]) -> Optional[str]:
     """Why the two builds' chunkers differ, or None if they do not.
 
     A chunk's text is a *cleaned* rendering of its byte range, so it is a
-    function of the file bytes and of the chunker. Digesting only the bytes
-    would let a change to the cleaning rules alter thousands of chunks
-    without moving a single offset -- which the `(rfc, off, len)` key cannot
-    see, and which no size guard would catch either, since the corpus looks
-    identical. Reuse has to be refused on this as well.
+    function of the file bytes and of the chunker. A change to the cleaning
+    rules can alter thousands of chunks without moving an offset, which
+    neither the key nor a size guard can see.
     """
     before, after = old.get("chunker"), new.get("chunker")
     if not before or not after:
@@ -261,9 +253,8 @@ def chunker_changed(old: Dict[str, Any], new: Dict[str, Any]) -> Optional[str]:
 def changed_rfcs(old: Dict[str, str], new: Dict[str, str]) -> Set[str]:
     """RFCs whose source text differs, or whose digest either side lacks.
 
-    An RFC missing from either map counts as changed: without a digest on
-    both sides there is nothing to compare, and reusing a vector on that
-    basis is exactly the silent staleness the digests exist to prevent.
+    Missing counts as changed: with nothing to compare, reuse would be a
+    guess.
     """
     return {rfc for rfc in set(old) | set(new) if old.get(rfc) != new.get(rfc)}
 
@@ -278,10 +269,8 @@ def previous_vectors(
 ) -> Tuple[Dict[ChunkKey, np.ndarray], int]:
     """Every int8 vector in `index_dir`, keyed by `(rfc, off, len)`.
 
-    Chunks belonging to an RFC in `skip` are left out: their text may have
-    changed underneath the key, which is the one case where the key lies.
-
-    Returns the map and the number of rows skipped.
+    RFCs in `skip` are left out -- their text may have changed underneath
+    the key. Returns the map and the number of rows skipped.
     """
     out: Dict[ChunkKey, np.ndarray] = {}
     skipped = 0

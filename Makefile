@@ -36,15 +36,9 @@ site: $(DATA) vendor
 	cp $(STATIC) _site/
 	cp $(DATA) _site/var/
 	cp -R vendor/. _site/vendor/
-	@# The semantic index, when there is one. Optional by design: it is built
-	@# locally and collected from a release, so a site built without it is a
-	@# working site whose full-text mode reports itself unavailable, rather
-	@# than a failed deploy.
-	@#
-	@# Published under its build id, with current.json naming the build. Every
-	@# file below index/<build>/ is then immutable, so the client can cache it
-	@# permanently and an update is a move to a new set of URLs rather than a
-	@# change of bytes under the old ones.
+	@# The index is optional: without it the site still deploys and full-text
+	@# reports itself unavailable. Published under its build id so every file
+	@# is immutable and current.json is the only thing an update changes.
 	@if [ -d index ]; then \
 	  build=$$(python -c "import json;print(json.load(open('index/manifest.json'))['build'])"); \
 	  echo "cp -R index _site/index/$$build ($$(du -sh index | cut -f1))"; \
@@ -126,13 +120,13 @@ rfc-text-sample:
 
 PY := .venv/bin/python
 
-#: Index releases to keep. Two, so a consumer part-way through downloading the
-#: superseded one is not left with a dead URL.
+#: Index releases to keep, so a consumer mid-download of the superseded one
+#: is not left with a dead URL.
 INDEX_KEEP := 2
 
 #: Index releases, newest first, as "tag<TAB>whether it carries the asset".
-#: An interrupted publish can leave a tag with no index.tar.gz, and nothing
-#: should treat that as the current index just because it sorts highest.
+#: An interrupted publish leaves a tag with no index.tar.gz; it must not be
+#: taken for the current index just because it sorts highest.
 RELEASES = gh api repos/{owner}/{repo}/releases --paginate -q \
 	'.[] | select(.tag_name | startswith("index-")) \
 	     | [.tag_name, (any(.assets[]?; .name == "index.tar.gz") | tostring)] \
@@ -174,23 +168,13 @@ index-verify:
 	$(PY) bin/build-clusters.py verify --recall-queries 400
 
 # Publish the built index for the deploy workflow to collect. Kept out of
-# git deliberately (see .gitignore and #53): quantised vectors do not delta
-# compress, so committing a regenerated 190 MiB tree monthly would grow the
-# repo without bound.
+# git (see .gitignore and #53): quantised vectors do not delta compress, so
+# committing a regenerated 190 MiB tree monthly would grow the repo without
+# bound. Tagged by build id, keeping the newest INDEX_KEEP.
+#
+# Recipe comments are macro-expanded, so keep make functions out of them.
 .PHONY: index-release
 index-release:
-	@# One shell, one read. A make `shell` call expands when the recipe is
-	@# expanded, which is *before* the guard below runs -- so with no index
-	@# you got two Python tracebacks and an empty tag rather than the
-	@# intended message. Do not name that function here in the obvious way:
-	@# make expands variables inside recipe comments too, so writing it out
-	@# runs it, which is how this comment used to greet every invocation
-	@# with "make: ...: Command not found".
-	@#
-	@# Tagged by build id, so each build gets its own release. The previous
-	@# one is kept: a consumer re-bundling the index reads it over several
-	@# minutes, and pulling it out from under a download in progress is the
-	@# one failure this costs nothing to avoid.
 	@set -e; \
 	test -f index/manifest.json || { echo "no index; run make index-full" >&2; exit 1; }; \
 	tag=index-$$($(PY) -c "import json;print(json.load(open('index/manifest.json'))['build'])"); \

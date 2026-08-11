@@ -10,17 +10,11 @@ on:
   workflow_dispatch: null
 
 jobs:
-  # Has anything upstream actually moved? The cron exists to pick up newly
-  # published RFCs, and most days there are none -- but a run still downloads
-  # the index and uploads a ~225 MB artifact to republish it unchanged.
-  #
-  # The signature is the two upstreams' validators. A cache entry under that
-  # key is the record that we have already published it, so a hit means there
-  # is nothing to do. Entries expire after a week of not being read, which
-  # costs one redundant deploy in a quiet fortnight.
-  #
-  # Only the schedule is gated. A push or a manual run is someone changing the
-  # site itself, which upstream knows nothing about.
+  # Has anything upstream moved? Most days no RFCs are published, and a run
+  # still shifts ~400 MB to republish the index unchanged. The signature is
+  # the two upstreams' validators; a cache entry under that key means we have
+  # already deployed it. Only the schedule is gated -- a push or a manual run
+  # is a change to the site itself.
   upstream:
     runs-on: ubuntu-latest
     permissions:
@@ -41,9 +35,8 @@ jobs:
         }
         index=$(validator https://www.rfc-editor.org/rfc-index.xml || true)
         refs=$(validator https://raw.githubusercontent.com/mnot/rfc-refs/main/refs.json || true)
-        # No validator from either host means we cannot tell, so say nothing
-        # and let the build run. Skipping on a failed probe would quietly
-        # stop publishing.
+        # Fail open: a probe that gets no validator lets the build run,
+        # rather than quietly stopping publication.
         if [ -z "$index" ] || [ -z "$refs" ]; then
           echo "no validators (index='$index' refs='$refs'); building anyway"
         else
@@ -91,16 +84,13 @@ jobs:
       with:
         path: vendor
         key: vendor-${{ hashFiles('Makefile') }}
-    # The semantic index is built locally -- it needs a model and hours of CPU
-    # -- and published as a release asset rather than committed, so that
-    # regenerating it does not grow the repository forever (see #53).
+    # The index is built locally and published as a release asset rather than
+    # committed (see #53). Only releases carrying the asset count: an
+    # interrupted publish can leave the newest tag without one.
     - name: Find the current index release
       id: release
       env:
         GH_TOKEN: ${{ github.token }}
-      # Only releases that actually carry the asset. An interrupted
-      # `make index-release` can leave the newest tag with no index.tar.gz,
-      # and newest-tag-wins would then pass over a perfectly good older one.
       run: |
         tag=$(gh api repos/{owner}/{repo}/releases --paginate -q \
               '[.[] | select(.tag_name | startswith("index-"))
@@ -108,18 +98,16 @@ jobs:
                     | .tag_name] | sort | reverse | first // empty')
         echo "tag=$tag" >> "$GITHUB_OUTPUT"
         echo "index release: ${tag:-none}"
-    # Keyed on the tag, so it survives until the index is rebuilt. A daily
-    # cron reads it daily, which keeps it clear of the eviction window.
+    # Keyed on the tag, so it survives until the index is rebuilt; the daily
+    # cron reads it often enough to stay clear of the eviction window.
     - name: Cache the index asset
       if: steps.release.outputs.tag != ''
       uses: actions/cache@v4
       with:
         path: index.tar.gz
         key: index-asset-${{ steps.release.outputs.tag }}
-    # Deliberately non-fatal. If no index has been released yet, or the
-    # download fails, the site still builds and deploys; full-text search
-    # reports itself unavailable and everything else works. A stale index is
-    # likewise better than no site.
+    # Non-fatal: with no index, or a failed download, the site still deploys
+    # and full-text reports itself unavailable.
     - name: Unpack the semantic index
       if: steps.release.outputs.tag != ''
       env:
@@ -161,11 +149,9 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@v5
 
-  # The signature says a deploy of it happened, so it is written after one
-  # has -- `needs: deploy`, not at the end of the build. Recording it earlier
-  # would let a Pages outage suppress every following scheduled run until
-  # upstream next changed, which at 10-25 RFCs a month can be weeks of the
-  # site quietly going stale.
+  # Written only after a deploy has happened. Recorded any earlier, a Pages
+  # failure would suppress every following scheduled run until upstream next
+  # changed -- potentially weeks.
   record:
     needs: [upstream, build, deploy]
     if: needs.upstream.outputs.signature != ''

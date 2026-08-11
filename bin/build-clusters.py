@@ -375,23 +375,13 @@ def split_oversized(
             flush=True,
         )
 
-    # Reassign against the centroids actually being returned.
-    #
-    # `labels` above is computed at the *top* of each round, so it describes
-    # the centroid set as it stood *before* that round's split. When the loop
-    # converges (`over.size == 0`) that is the final set and the labels are
-    # correct. When it exhausts its rounds with clusters still over the cap --
-    # the normal outcome on this corpus -- the labels are one split behind the
-    # `cent` returned alongside them, and publishing that pair puts about 5% of
-    # chunks in a cluster no client would probe first for them. It also made a
-    # full build and a --reuse-centroids build disagree on identical input,
-    # which is what surfaced this.
-    #
-    # The cost is that this reassignment can push a cluster back over the cap.
-    # That is the right trade, and it matches the docstring above: the argmax
-    # invariant is what makes a chunk findable at all, the cap is only a
-    # fetch-size comfort, and over-cap clusters are reported in the manifest
-    # rather than forced.
+    # Reassign against the centroids actually being returned: `labels` above
+    # describes the set as it stood *before* the last round's split, and when
+    # the loop exhausts its rounds -- the normal outcome here -- publishing
+    # that pair would put ~5% of chunks in a cluster no client probes for
+    # them. This can push a cluster back over the cap, which is the right
+    # trade: argmax is what makes a chunk findable, the cap is only a
+    # fetch-size comfort, and over-cap clusters are reported in the manifest.
     labels, _, _ = assign_all(vecs, dequantise(quantise(cent, scale), scale))
     return cent, labels, history
 
@@ -443,10 +433,8 @@ def load_chunk_meta(path: str, limit: int = 0) -> Dict[str, List[Any]]:
 def chunk_index(meta: Dict[str, List[Any]]) -> Dict[Tuple[Any, int, int], int]:
     """`(rfc, off, len)` -> row number, for joining a cluster tail back.
 
-    The tail carries no row number: RFCs publish out of numeric order, so an
-    insertion renumbers every chunk after it and a row number recorded in a
-    previous build means something else in this one. The triple does not
-    move, which is what both `verify` and the incremental build join on.
+    The tail carries no row number -- an insertion renumbers every chunk
+    after it. Both `verify` and the incremental build join on the triple.
     """
     out: Dict[Tuple[Any, int, int], int] = {}
     for i, (rfc, off, length) in enumerate(zip(meta["rfc"], meta["off"], meta["len"])):
@@ -636,9 +624,8 @@ def _previous_manifest(centroids_path: Optional[str]) -> Dict[str, Any]:
 def git_commit() -> Optional[str]:
     """The commit this build was produced from, or None outside a checkout.
 
-    Recorded in the manifest because a consumer that wants a chunk's text
-    has to re-run the chunker and join on `(rfc, off, len)`, and that join
-    only holds if the chunker is the one that built the index.
+    In the manifest so a consumer recovering chunk text can pin the
+    chunker it re-runs.
     """
     try:
         out = subprocess.run(
@@ -773,9 +760,7 @@ def cmd_build(args: argparse.Namespace) -> None:
     if previous.get("quant", {}).get("chunk_cosine_mean") is not None:
         chunk_cos = float(previous["quant"]["chunk_cosine_mean"])
         scale_tried = previous["quant"].get("candidates", scale_tried)
-        # Follow the chain: after two incremental builds the previous one was
-        # carrying the figure too, and naming it would credit a build that
-        # never measured anything either.
+        # Follow the chain: the previous build may have been carrying it too.
         carried_from = previous["quant"].get("chunk_cosine_from") or (
             previous.get("build") or previous.get("built")
         )
@@ -824,10 +809,8 @@ def cmd_build(args: argparse.Namespace) -> None:
         json.dump(manifest, fh, indent=2)
         fh.write("\n")
 
-    # Publish the per-RFC source digests alongside the index. The next build
-    # compares them to decide which RFCs it may reuse vectors for; a
-    # consumer joining on `(rfc, off, len)` can use them to tell that its own
-    # mirror has drifted from the text this index was built against.
+    # The next build compares these to decide what it may reuse; a consumer
+    # can use them to tell its mirror has drifted from what this was built on.
     if args.sources:
         write_sources(
             os.path.join(args.out, "sources.json"), read_sources(args.sources)
@@ -886,9 +869,8 @@ def cmd_verify(args: argparse.Namespace) -> None:
     n_chunks = manifest["chunks"]["count"]
     report: Dict[str, Any] = {"clusters": k, "chunks": n_chunks}
 
-    # The tail carries no row number, so rejoin it to chunks.jsonl on
-    # `(rfc, off, len)` -- the same join an incremental build does, which
-    # means checking coverage here also exercises that.
+    # Rejoin the tail to chunks.jsonl on the same key an incremental build
+    # uses, so checking coverage exercises that join too.
     rows_by_key = chunk_index(load_chunk_meta(args.chunks, limit=n_chunks))
     if len(rows_by_key) != n_chunks:
         raise SystemExit(

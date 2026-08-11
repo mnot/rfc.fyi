@@ -7,6 +7,10 @@ _site/
 # It ships as a release asset, stitched into the artifact at deploy time.
 index/
 
+# make index-release builds this and removes it; an interrupted run leaves
+# it behind.
+index.tar.gz
+
 # Phase 0 model evaluation scratch.
 eval/out/
 

@@ -1,71 +1,37 @@
-/* Browser-side semantic search over the published IVF index in `index/`.
+/* Browser-side semantic search over the published IVF index.
  *
- * The shape of the thing: `centroids.bin` (1.6 MiB) is resident, everything
- * else is fetched on demand. A query is embedded locally, scored against every
- * centroid, and the best `nprobe` clusters are pulled as whole files -- whole
- * files because `cache.put()` rejects a 206, so a range request could not be
- * cached by the service worker. Roughly 2,300 chunk vectors come back for a
- * 20-cluster query and about ten of them are shown.
+ * `centroids.bin` (1.6 MiB) is resident; a query is embedded locally, scored
+ * against every centroid, and the best `nprobe` clusters are fetched whole
+ * (`cache.put()` rejects a 206, so ranges could not be cached).
  *
- * The binary layout is specified in the module docstring of
- * `bin/build-clusters.py`; `read_cluster()` there is the reference reader.
- * Three things in it are silent wrongness rather than loud failure, so they
- * are called out at the point where they are relied on:
+ * The binary layout is in `bin/indexfmt.py`. Three things there fail silently
+ * rather than loudly, and are flagged where they are relied on: centroids are
+ * used as dequantised and NOT re-normalised (which would move ~4% of chunks);
+ * bge-small pools CLS, not mean; and the query takes an instruction prefix the
+ * corpus was embedded without. All three come from the manifest.
  *
- *   1. Centroids are used exactly as dequantised -- NOT re-normalised. The
- *      build's partition is `argmax(v . dequantised_centroid)`, and
- *      re-normalising moves about 4% of chunks into a different cluster than
- *      the one they were actually written to. See `dequantise` below.
- *   2. bge-small pools the CLS token, not the mean (`pooling: 'cls'`).
- *   3. The query gets an instruction prefix; the corpus was embedded without
- *      one. Both come from the manifest so they cannot drift from the build.
- *
- * Nothing here loads the model until `loadModel()` is called, and nothing
- * fetches transformers.js until then either -- `create()` only needs the
- * manifest and the centroids, which is enough to build the UI around.
+ * `create()` needs only the manifest and centroids -- no model, and no
+ * transformers.js, until `loadModel()`.
  */
 
-/* The runtime is pinned, not floating: `dtype` and the pooling options are
- * load-bearing and a major-version bump has moved both before. `@xenova/
- * transformers` is the retired v2 package; this is its successor. The `int8`
- * dtype selects `onnx/model_int8.onnx` (32.2 MiB) -- the exact artifact
- * bin/embed.py encoded the corpus with. The wasm default would be `q8`, which
- * is a *different* file (`model_quantized.onnx`), so leaving it unset would
- * quietly embed queries with a model the corpus never saw.
- *
- * `dist/transformers.min.js` and not the `.web.` build: the latter is the
- * bundler entry point and leaves `onnxruntime-web/webgpu` as a bare specifier,
- * which no browser can resolve from a CDN URL. This one has the runtime
- * inlined.
+/* Pinned, not floating: `dtype` and the pooling options are load-bearing and
+ * a major version has moved both before. `int8` selects `model_int8.onnx`,
+ * the artifact bin/embed.py encoded the corpus with; the wasm default `q8` is
+ * a different file, so leaving it unset embeds queries with a model the
+ * corpus never saw. `dist/transformers.min.js` rather than the `.web.` build,
+ * which leaves `onnxruntime-web/webgpu` as an unresolvable bare specifier.
  */
 const DEFAULT_RUNTIME_URL = '/vendor/transformers-3.8.1.min.js'
 
-/* Served from this origin rather than a CDN.
+/* Served from this origin: loading it from jsDelivr failed in Safari inside
+ * the bundle's own `defineProperty` shims, and self-hosting also keeps a
+ * third-party runtime off the critical path.
  *
- * Loading it cross-origin from jsDelivr worked in Chrome and failed in Safari
- * with "Invalid property. 'value' present on property with getter or setter"
- * thrown out of the bundle's own `Object.defineProperty` shims -- while a bare
- * `import()` of the identical URL from the Safari console returned all 856
- * exports. So the module is fine and something about evaluating it in the page
- * context was not, and rather than keep bisecting someone else's bundle we
- * serve it ourselves.
+ * 3.8.1, not 4.2.0: 4.2.0 runs in Chrome but throws in Safari out of its
+ * module-level task-alias map, which means the module never finished
+ * initialising. 3.8.x has the `dtype` support this needs.
  *
- * Self-hosting is worth having on its own terms: no third-party runtime on the
- * critical path, no CDN outage or version drift, one fewer origin for the
- * service worker to reason about, and it can be cached like any other asset.
- * The ONNX wasm is still fetched by transformers.js from its own CDN.
- *
- * 3.8.1 rather than the 4.2.0 this was first written against. 4.2.0 loads and
- * runs in Chrome but breaks in Safari: `pipeline()` throws "undefined is not
- * an object (evaluating 'Qp[t]')", where `Qp` is the module-level task-alias
- * map. That lookup is guarded (`Qp[t] ?? t`), so a missing *key* would be
- * harmless -- `Qp` itself being undefined at call time means the module never
- * finished initialising. 3.8.x is the long-deployed line and has the `dtype`
- * support v3 introduced, which is all this needs.
- *
- * Overridable from the console, so testing another build on a browser you
- * cannot script does not need a code change:
- *   localStorage.transformersUrl = '<url>'   then reload
+ * Override for testing:  localStorage.transformersUrl = '<url>'
  */
 function runtimeUrl () {
   try {
@@ -82,31 +48,22 @@ const MAGIC_CLUSTER = 'RFCC'
 const DEFAULT_CLUSTER_PATH = 'clusters/{id:04d}.bin'
 const DEFAULT_NPROBE = 20
 
-/* Where the index lives, and the one URL under it whose bytes change.
- *
- * Everything else is published under `/index/<build>/`, so a given URL's
- * content is fixed forever and the service worker can keep it without ever
- * revalidating. An update publishes a new build directory rather than new
- * bytes at the old URLs; this pointer is how a client finds it.
- */
+/* The index is published under `/index/<build>/`, so those URLs are
+ * immutable; current.json is the only one whose bytes change, and is how a
+ * client finds the build. */
 const INDEX_ROOT = '/index'
 const CURRENT_URL = `${INDEX_ROOT}/current.json`
 
-/* The cache sw.js keeps index content in. Named here too because pruning
- * superseded builds is the page's job -- it is the side that knows which
- * build is current. */
+/* sw.js keeps index content here. Named on this side too because the page
+ * is what knows which build is current. */
 const INDEX_CACHE = 'rfcfyi-index'
 
 /**
- * Drop cached index entries that do not belong to the build in use.
+ * Drop cached index entries outside the build in use -- a superseded build,
+ * or the flat layout that preceded build-addressed URLs. Either is tens of
+ * megabytes in a cache the deploy reaper deliberately leaves alone.
  *
- * Covers a superseded build and, for anyone who used full-text search before
- * builds were addressable, the flat `/index/clusters/...` layout that
- * preceded them. Left alone, either is tens of megabytes that will never be
- * served again, in a cache deliberately exempt from the deploy reaper.
- *
- * Best-effort: a browser without CacheStorage, or one that refuses, just
- * keeps the clutter.
+ * Best-effort; a browser that refuses just keeps the clutter.
  */
 export async function pruneIndexCache (basePath) {
   const store = globalThis.caches
@@ -134,13 +91,11 @@ export async function pruneIndexCache (basePath) {
 /**
  * The build the site is currently publishing, as a base path.
  *
- * @param {string} [bust] a nonce, when the pointer just proved to be stale.
- *   `cache: 'no-store'` gets past the browser and the service worker, but
- *   not a CDN edge -- Pages serves this with the same max-age as everything
- *   else and offers no header control, so for some minutes after a deploy an
- *   edge can still be handing out the previous build. A distinct URL is a
- *   distinct cache key there, so it misses and reaches the origin. Only used
- *   on the retry: the plain URL is what the offline fallback can match.
+ * @param {string} [bust] a nonce, when the pointer proved stale. `no-store`
+ *   gets past the browser and the service worker but not a CDN edge, which
+ *   can serve the previous build for minutes after a deploy; a distinct URL
+ *   is a distinct key there. Retry only -- the offline fallback can only
+ *   match the plain URL.
  */
 async function currentBasePath (bust) {
   const url = bust ? `${CURRENT_URL}?b=${bust}` : CURRENT_URL
@@ -186,10 +141,8 @@ async function fetchOk (url, init) {
   }
   if (response.status === 404 &&
       url.startsWith(`${INDEX_ROOT}/`) && !url.startsWith(CURRENT_URL)) {
-    /* Everything under a build directory disappears together when a newer
-     * index is published, and a session that started before the deploy is
-     * still asking for the old one. Reloading picks up the new pointer;
-     * "HTTP 404" would send someone looking for a broken link. */
+    /* A build directory disappears whole when a newer index is published,
+     * so this is a session that outlived a deploy, not a broken link. */
     superseded(`${url}: this index build is no longer published -- reload the page`)
   }
   if (!response.ok) {
@@ -314,9 +267,8 @@ export class SemanticSearch {
     this.centroids = options.centroids
     this.clusterCount = options.centroids.length / options.dims
     this.clusterPath = options.manifest.clusters?.path || DEFAULT_CLUSTER_PATH
-    /* How many clusters a query fetches. The build chooses it -- `verify`
-     * reports the fetch budget against the same number -- so take it from
-     * the manifest rather than keeping a second copy here. */
+    /* The build chooses this, and `verify` reports its fetch budget against
+     * the same number, so read it rather than keeping a second copy. */
     this.nprobe = Number(options.manifest.clusters?.nprobe) || DEFAULT_NPROBE
     this.onProgress = options.onProgress
 
@@ -359,18 +311,15 @@ export class SemanticSearch {
       return await SemanticSearch._open(await currentBasePath(), report)
     } catch (err) {
       if (!err?.supersededBuild) throw err
-      /* The pointer named a build the site has already replaced, which for
-       * the first minutes after a deploy means a CDN edge served us a stale
-       * one. Ask again in a way the edge cannot answer from its cache.
-       * Once: if the second answer is also gone, something else is wrong. */
+      /* A stale pointer from a CDN edge. Ask once more in a way the edge
+       * cannot answer from cache. */
       return SemanticSearch._open(await currentBasePath(Date.now()), report)
     }
   }
 
   static async _open (base, report) {
     report?.({ phase: 'manifest', status: 'start' })
-    /* Fire and forget: reclaiming space from a build nobody will fetch
-     * again should not hold up the search that is waiting on this. */
+    /* Fire and forget: reclaiming space must not hold up the search. */
     pruneIndexCache(base).catch(() => {})
     const manifestUrl = `${base}/manifest.json`
     const response = await fetchOk(manifestUrl)

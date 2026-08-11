@@ -1122,11 +1122,9 @@ def main():
     elif errors:
         report({}, [], [], errors, opts, sys.stderr)
     if errors:
-        # A file that raised contributes no chunks and no digest, so the RFC
-        # drops out of the index and stays out -- the error repeats every
-        # month, and a line on stderr is not a signal anyone will see. Fail
-        # instead. Files that legitimately yield nothing are counted
-        # separately and do not come through here.
+        # A file that raised contributes no chunks and no digest, so the
+        # RFC would drop out of the index unnoticed. Files that legitimately
+        # yield nothing are counted separately.
         sys.exit(1)
 
 
