@@ -75,6 +75,15 @@ jobs:
       contents: read
     steps:
     - uses: actions/checkout@v7
+    # First, and before the Python and index setup it does not need: the
+    # suite has no dependencies and runs in under a second, so there is no
+    # reason for a broken parser to wait on an index download to say so.
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+    - name: Test
+      run: make test
     - name: Set up Python
       uses: actions/setup-python@v7
       with:
@@ -132,6 +141,7 @@ jobs:
       uses: actions/upload-pages-artifact@v5
       with:
         path: _site
+
   deploy:
     needs: build
     if: github.event_name != 'pull_request'
