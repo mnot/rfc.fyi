@@ -79,17 +79,34 @@ def digest(text: str) -> bytes:
 
 
 #: Ordered output, one pair per shard: vectors and their hashes.
-VECS, VEC_KEYS = "shard-", "hashes-"
+SHARD_FILES, SHARD_KEYS = "shard-", "hashes-"
 #: A batch as it was embedded, written once and dropped when the run finishes.
 PENDING, PENDING_KEYS = "pending-", "pendkeys-"
 
 
 def _pairs(out: str) -> Iterator[Tuple[str, str]]:
+    """(vectors, hashes) filenames for each persisted group."""
     for name in sorted(os.listdir(out)):
-        if name.startswith(VECS):
-            yield name, name.replace(VECS, VEC_KEYS, 1)
+        if not name.endswith(".npy"):  # .tmp from an interrupted write
+            continue
+        if name.startswith(SHARD_FILES):
+            yield name, name.replace(SHARD_FILES, SHARD_KEYS, 1)
         elif name.startswith(PENDING):
             yield name, name.replace(PENDING, PENDING_KEYS, 1)
+
+
+def next_pending(out: str) -> int:
+    """One past the highest pending batch already on disk.
+
+    Numbering from zero each run would have the second interrupted run
+    overwrite the first one's batches, throwing that work away silently.
+    """
+    used = [
+        int(name[len(PENDING) : -len(".npy")])
+        for name, _ in _pairs(out)
+        if name.startswith(PENDING)
+    ]
+    return max(used, default=-1) + 1
 
 
 def load_cache(out: str) -> Dict[bytes, np.ndarray]:
@@ -195,8 +212,8 @@ def write_shards(out: str, vecs: np.ndarray, hashes: List[bytes], shard: int) ->
         hi = min(lo + shard, len(vecs))
         write_pair(
             out,
-            f"{VECS}{s:04d}.npy",
-            f"{VEC_KEYS}{s:04d}.npy",
+            f"{SHARD_FILES}{s:04d}.npy",
+            f"{SHARD_KEYS}{s:04d}.npy",
             vecs[lo:hi],
             hashes[lo:hi],
         )
@@ -261,6 +278,7 @@ def main() -> None:
         )
 
     if todo:
+        pending_base = next_pending(args.out)
         emb = Embedder(args.model, args.variant)
         started = time.time()
         # Length-sort so a batch is not padded up to its longest member.
@@ -280,12 +298,18 @@ def main() -> None:
                 flush=True,
             )
             # Persist this batch alone. Rewriting every shard after each one
-            # cost 8.1 GiB of writes over a full embed to save 0.67 GiB of
-            # vectors, and rebuilt the whole 700 MiB array 23 times to do it.
+            # wrote 8.7 GiB over a full embed to keep 0.67 GiB of vectors,
+            # and rebuilt the whole 700 MiB array 23 times to do it.
+            #
+            # Numbered past whatever is already here, so a second interrupted
+            # run does not overwrite the first one's batches. The cost is
+            # that pending and shards briefly coexist at the end, roughly
+            # doubling peak disk (not memory) for the length of the cleanup.
+            batch = pending_base + lo // args.shard
             write_pair(
                 args.out,
-                f"{PENDING}{lo // args.shard:04d}.npy",
-                f"{PENDING_KEYS}{lo // args.shard:04d}.npy",
+                f"{PENDING}{batch:04d}.npy",
+                f"{PENDING_KEYS}{batch:04d}.npy",
                 vecs,
                 [hashes[i] for i in part],
             )
@@ -294,7 +318,7 @@ def main() -> None:
     n = write_shards(args.out, vecs, hashes, args.shard)
     for f in sorted(os.listdir(args.out)):
         # Shards left over from a longer previous corpus.
-        if f.startswith((VECS, VEC_KEYS)):
+        if f.startswith((SHARD_FILES, SHARD_KEYS)):
             if int(f.split("-")[1].split(".")[0]) >= n:
                 os.remove(os.path.join(args.out, f))
         # Pending batches, now that the ordered output covers them. Dropped
