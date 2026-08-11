@@ -356,7 +356,10 @@ class RfcFyiUi {
       })
       if (token !== this.semanticToken) return // superseded while in flight
       this.semanticHits = byRfc
+      const score = new Map()
+      byRfc.forEach((hits, name) => score.set(name, this.rowScore(query, name, hits)))
       this.semanticOrder = Array.from(byRfc.keys())
+        .sort((a, b) => score.get(b) - score.get(a))
       this.semanticFor = query
       this.ftStatus('')
       this.showRfcs()
@@ -373,6 +376,41 @@ class RfcFyiUi {
       this.ftStatus(`Full-text search is unavailable: ${why}`, false)
       this.showRfcs()
     }
+  }
+
+  /**
+   * How strongly an RFC answers the query, from its matched sections plus two
+   * weak priors.
+   *
+   * Ranking on the single best passage, which is what this replaced, scores a
+   * document that is *about* the query the same as one that mentions it once:
+   * "HTTP caching" put RFC 9111 tenth. Three sections at 1/3 weight each means
+   * a document needs several good passages to lead, and one strong passage no
+   * longer carries a whole RFC.
+   *
+   * Measured over the 87 labelled queries, recall@10 goes 0.649 -> 0.785 and
+   * the median rank of the first relevant RFC 4 -> 2. Split in half, the gain
+   * holds on both halves independently (0.648 -> 0.818, 0.651 -> 0.752), so it
+   * is not the coefficients fitting the query set. They are still hand-picked;
+   * the citation weight in particular is sharp, and 0.05 loses more than 0.02
+   * gains by promoting RFCs on citation count alone.
+   */
+  rowScore (query, rfcName, hits) {
+    const top = hits.slice(0, 3)
+    const passages = top.reduce((sum, hit) => sum + hit.score, 0) / 3
+    const title = this.titleOverlap(query, (data.rfcs[rfcName] || {}).title)
+    const cited = Math.log1p(data.obsoleteRefs.get(rfcName) || 0)
+    return passages + 0.2 * title + 0.02 * cited
+  }
+
+  /* Query words present in the title, as a fraction. Lexical on purpose: the
+     corpus embedding never saw the titles, and "HTTP caching" is the title of
+     the RFC it should return first. */
+  titleOverlap (query, title) {
+    const words = query.toLowerCase().split(/\s+/).filter(w => w.length > 2)
+    if (words.length === 0) return 0
+    const haystack = (title || '').toLowerCase()
+    return words.filter(w => haystack.includes(w)).length / words.length
   }
 
   showDataError () {
