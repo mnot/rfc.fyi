@@ -88,12 +88,39 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Index content is immutable per release and expensive to refetch, so it
-  // does not belong in CACHE_NAME -- which `make pwa-update` bumps on every
-  // deploy, so `activate` would delete a user's whole warmed index because
-  // someone changed a stylesheet. This is the bug just fixed for the
-  // transformers.js model cache, one level in. Cache-first, since a given
-  // URL's bytes never change within a release.
+  // Which build the site is publishing. Network-first, and the only thing
+  // under /index/ that is: a stale pointer names a build directory the site
+  // no longer has, so every cluster fetch after it would 404. Forty bytes,
+  // and it is read once per session. The cached copy is an offline fallback,
+  // where the build it names is the one already in the cache anyway.
+  if (url.pathname === '/index/current.json') {
+    event.respondWith(
+      caches.open(INDEX_CACHE).then(async (cache) => {
+        try {
+          const fresh = await fetch(event.request, { cache: 'no-store' })
+          if (fresh.ok) cache.put(event.request, fresh.clone())
+          return fresh
+        } catch (err) {
+          const hit = await cache.match(event.request)
+          if (hit) return hit
+          throw err
+        }
+      })
+    )
+    return
+  }
+
+  // Index content is immutable and expensive to refetch, so it does not
+  // belong in CACHE_NAME -- which `make pwa-update` bumps on every deploy,
+  // so `activate` would delete a user's whole warmed index because someone
+  // changed a stylesheet. This is the bug just fixed for the transformers.js
+  // model cache, one level in.
+  //
+  // Cache-first with no revalidation, which is safe because these URLs carry
+  // the build that produced them: /index/<build>/... never changes content,
+  // it is superseded by a different path. search.js drops entries from
+  // builds that are no longer current, since the page is the side that knows
+  // which one is.
   if (url.pathname.startsWith('/index/')) {
     event.respondWith(
       caches.open(INDEX_CACHE).then(async (cache) => {

@@ -110,39 +110,82 @@ def check_index(site):
     directory that does not match it, and the failure a user sees is
     'no results', which looks like a bad query rather than a broken deploy.
     """
-    index = site / "index"
-    if not index.exists():
+    root = site / "index"
+    if not root.exists():
         return []
 
+    # current.json is the only stable URL under index/; everything else lives
+    # under the build it names. A client that reads a build id nothing was
+    # published under gets 404s for every cluster, which looks exactly like a
+    # bad query.
+    pointer = root / "current.json"
+    if not pointer.exists():
+        return ["index/: present but has no current.json"]
+    try:
+        with open(pointer) as fh:
+            build = json.load(fh).get("build")
+    except (OSError, ValueError) as err:
+        return [f"index/current.json: unreadable ({err})"]
+    if not build:
+        return ["index/current.json: no build id"]
+
+    index = root / build
     errors = []
     manifest_path = index / "manifest.json"
     if not manifest_path.exists():
-        return [f"{index.name}/: present but has no manifest.json"]
+        return [f"index/{build}/: named by current.json but has no manifest.json"]
     try:
         with open(manifest_path) as fh:
             manifest = json.load(fh)
     except (OSError, ValueError) as err:
-        return [f"index/manifest.json: unreadable ({err})"]
+        return [f"index/{build}/manifest.json: unreadable ({err})"]
+
+    if manifest.get("build") != build:
+        errors.append(
+            f"index/{build}/manifest.json: says build {manifest.get('build')!r}, "
+            f"published under {build!r}"
+        )
 
     expected = (manifest.get("clusters") or {}).get("count")
-    found = len(list((index / "clusters").glob("*.bin"))) if (index / "clusters").is_dir() else 0
+    clusters = index / "clusters"
+    found = len(list(clusters.glob("*.bin"))) if clusters.is_dir() else 0
     if not expected:
-        errors.append("index/manifest.json: no clusters.count to check against")
+        errors.append(f"index/{build}/manifest.json: no clusters.count to check")
     elif found != expected:
-        errors.append(f"index/clusters: {found} files, manifest says {expected}")
+        errors.append(
+            f"index/{build}/clusters: {found} files, manifest says {expected}"
+        )
 
     centroids = index / "centroids.bin"
     if not centroids.exists():
-        errors.append("index/centroids.bin: missing")
+        errors.append(f"index/{build}/centroids.bin: missing")
     elif expected:
         # 24-byte header, then count x dims signed bytes. Wrong size means a
         # centroid file that does not describe this partition, and every
         # query would then probe clusters chosen against the wrong vectors.
-        dims = manifest.get("dims") or (manifest.get("model") or {}).get("dims") or 384
-        want = 24 + expected * dims
-        got = centroids.stat().st_size
-        if got != want:
-            errors.append(f"index/centroids.bin: {got} bytes, expected {want}")
+        dims = (manifest.get("model") or {}).get("dims")
+        if not dims:
+            errors.append(f"index/{build}/manifest.json: no model.dims")
+        else:
+            want = 24 + expected * dims
+            got = centroids.stat().st_size
+            if got != want:
+                errors.append(
+                    f"index/{build}/centroids.bin: {got} bytes, expected {want}"
+                )
+
+    # The next incremental build reads this to tell which RFCs were reissued.
+    # Without it that build has to re-embed the corpus from scratch.
+    if not (index / "sources.json").exists():
+        errors.append(f"index/{build}/sources.json: missing")
+
+    # Nothing should be left beside the build directory and the pointer: a
+    # stray older build doubles the artifact and is never served.
+    stray = sorted(
+        p.name for p in root.iterdir() if p.name not in {build, "current.json"}
+    )
+    if stray:
+        errors.append(f"index/: unexpected entries beside {build}: {', '.join(stray)}")
 
     return errors
 

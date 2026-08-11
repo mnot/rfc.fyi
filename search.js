@@ -81,6 +81,73 @@ const MAGIC_CENTROIDS = 'RFCV'
 const MAGIC_CLUSTER = 'RFCC'
 const DEFAULT_CLUSTER_PATH = 'clusters/{id:04d}.bin'
 
+/* Where the index lives, and the one URL under it whose bytes change.
+ *
+ * Everything else is published under `/index/<build>/`, so a given URL's
+ * content is fixed forever and the service worker can keep it without ever
+ * revalidating. An update publishes a new build directory rather than new
+ * bytes at the old URLs; this pointer is how a client finds it.
+ */
+const INDEX_ROOT = '/index'
+const CURRENT_URL = `${INDEX_ROOT}/current.json`
+
+/* The cache sw.js keeps index content in. Named here too because pruning
+ * superseded builds is the page's job -- it is the side that knows which
+ * build is current. */
+const INDEX_CACHE = 'rfcfyi-index'
+
+/**
+ * Drop cached index entries that do not belong to the build in use.
+ *
+ * Covers a superseded build and, for anyone who used full-text search before
+ * builds were addressable, the flat `/index/clusters/...` layout that
+ * preceded them. Left alone, either is tens of megabytes that will never be
+ * served again, in a cache deliberately exempt from the deploy reaper.
+ *
+ * Best-effort: a browser without CacheStorage, or one that refuses, just
+ * keeps the clutter.
+ */
+export async function pruneIndexCache (basePath) {
+  const store = globalThis.caches
+  if (!store) return 0
+  let cache
+  try {
+    cache = await store.open(INDEX_CACHE)
+  } catch {
+    return 0
+  }
+  const keep = `${basePath}/`
+  let dropped = 0
+  for (const request of await cache.keys()) {
+    const { pathname, origin } = new URL(request.url)
+    if (origin !== globalThis.location.origin) continue
+    if (pathname !== CURRENT_URL &&
+        pathname.startsWith(`${INDEX_ROOT}/`) &&
+        !pathname.startsWith(keep)) {
+      if (await cache.delete(request)) dropped++
+    }
+  }
+  return dropped
+}
+
+/** The build the site is currently publishing, as a base path. */
+async function currentBasePath () {
+  /* Bypass the HTTP cache as well as the service worker's. Pages serves this
+   * with a max-age like everything else, and a pointer minutes out of date
+   * names a build the site has already replaced. */
+  const response = await fetchOk(CURRENT_URL, { cache: 'no-store' })
+  let build
+  try {
+    build = (await response.json()).build
+  } catch (err) {
+    return fail(`${CURRENT_URL} is not JSON`, err)
+  }
+  if (typeof build !== 'string' || !/^\d{8}T\d{6}Z$/.test(build)) {
+    fail(`${CURRENT_URL}: no usable build id`)
+  }
+  return `${INDEX_ROOT}/${build}`
+}
+
 /** Anything the UI can reasonably put in front of a person. */
 export class SearchError extends Error {
   constructor (message, options) {
@@ -93,12 +160,20 @@ function fail (message, cause) {
   throw new SearchError(cause ? `${message}: ${cause.message}` : message, { cause })
 }
 
-async function fetchOk (url) {
+async function fetchOk (url, init) {
   let response
   try {
-    response = await fetch(url)
+    response = await fetch(url, init)
   } catch (err) {
     return fail(`could not reach ${url}`, err)
+  }
+  if (response.status === 404 &&
+      url.startsWith(`${INDEX_ROOT}/`) && url !== CURRENT_URL) {
+    /* Everything under a build directory disappears together when a newer
+     * index is published, and a session that started before the deploy is
+     * still asking for the old one. Reloading picks up the new pointer;
+     * "HTTP 404" would send someone looking for a broken link. */
+    fail(`${url}: this index build is no longer published -- reload the page`)
   }
   if (!response.ok) {
     fail(`${url}: HTTP ${response.status} ${response.statusText}`)
@@ -249,15 +324,21 @@ export class SemanticSearch {
    * Load the manifest and the centroids. Does not touch the model.
    *
    * @param {object} [options]
-   * @param {string} [options.basePath] where the index lives, no trailing slash
+   * @param {string} [options.basePath] where the index lives, no trailing
+   *   slash. Omit to read `/index/current.json` and use the published build.
    * @param {function} [options.onProgress] `{ phase, status, loaded, total, progress }`
    *   with phase one of 'manifest' | 'centroids' | 'model'
    */
-  static async create ({ basePath = '/index', onProgress } = {}) {
-    const base = String(basePath).replace(/\/+$/, '')
+  static async create ({ basePath, onProgress } = {}) {
     const report = typeof onProgress === 'function' ? onProgress : null
 
     report?.({ phase: 'manifest', status: 'start' })
+    const base = basePath
+      ? String(basePath).replace(/\/+$/, '')
+      : await currentBasePath()
+    /* Fire and forget: reclaiming space from a build nobody will fetch
+     * again should not hold up the search that is waiting on this. */
+    pruneIndexCache(base).catch(() => {})
     const manifestUrl = `${base}/manifest.json`
     const response = await fetchOk(manifestUrl)
     let manifest

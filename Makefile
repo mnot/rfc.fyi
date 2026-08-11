@@ -40,9 +40,17 @@ site: $(DATA) vendor
 	@# locally and collected from a release, so a site built without it is a
 	@# working site whose full-text mode reports itself unavailable, rather
 	@# than a failed deploy.
+	@#
+	@# Published under its build id, with current.json naming the build. Every
+	@# file below index/<build>/ is then immutable, so the client can cache it
+	@# permanently and an update is a move to a new set of URLs rather than a
+	@# change of bytes under the old ones.
 	@if [ -d index ]; then \
-	  echo "cp -R index _site/ ($$(du -sh index | cut -f1))"; \
-	  cp -R index _site/; \
+	  build=$$(python -c "import json;print(json.load(open('index/manifest.json'))['build'])"); \
+	  echo "cp -R index _site/index/$$build ($$(du -sh index | cut -f1))"; \
+	  mkdir -p _site/index; \
+	  cp -R index _site/index/$$build; \
+	  printf '{"build":"%s"}\n' "$$build" > _site/index/current.json; \
 	else \
 	  echo "no index/ -- publishing without full-text search"; \
 	fi
@@ -118,18 +126,41 @@ rfc-text-sample:
 
 PY := .venv/bin/python
 
+#: Index releases to keep. Two, so a consumer part-way through downloading the
+#: superseded one is not left with a dead URL.
+INDEX_KEEP := 2
+
 .PHONY: index
 index: rfc-text
-	$(PY) bin/chunk.py $(RFC_TEXT) > var/chunks.jsonl
-	$(PY) bin/embed-corpus.py --chunks var/chunks.jsonl --out var/embeddings
-	$(PY) bin/build-clusters.py build --reuse-centroids index/centroids.bin
+	test -f index/manifest.json || { \
+	  echo "no index/ to build on -- run 'make index-fetch' or 'make index-full'" >&2; \
+	  exit 1; }
+	$(PY) bin/chunk.py $(RFC_TEXT) --sources var/sources.json > var/chunks.jsonl
+	$(PY) bin/embed-corpus.py --chunks var/chunks.jsonl --out var/embeddings \
+	  --hydrate index --sources var/sources.json
+	$(PY) bin/build-clusters.py build --reuse-centroids index/centroids.bin \
+	  --sources var/sources.json
 
 .PHONY: index-full
 index-full: rfc-text
 	rm -rf var/embeddings index
-	$(PY) bin/chunk.py $(RFC_TEXT) > var/chunks.jsonl
+	$(PY) bin/chunk.py $(RFC_TEXT) --sources var/sources.json > var/chunks.jsonl
 	$(PY) bin/embed-corpus.py --chunks var/chunks.jsonl --out var/embeddings
-	$(PY) bin/build-clusters.py build
+	$(PY) bin/build-clusters.py build --sources var/sources.json
+
+# Collect the published index, so an incremental build does not depend on
+# having produced the previous one on this machine.
+.PHONY: index-fetch
+index-fetch:
+	@set -e; \
+	tag=$$(gh release list --limit 50 --json tagName \
+	       -q '[.[].tagName | select(startswith("index-"))] | sort | reverse | first // empty'); \
+	if [ -z "$$tag" ]; then echo "no index-* release to fetch" >&2; exit 1; fi; \
+	gh release download "$$tag" --pattern 'index.tar.gz' --dir . --clobber; \
+	rm -rf index; \
+	tar xzf index.tar.gz; \
+	rm -f index.tar.gz; \
+	echo "fetched $$tag: $$(du -sh index | cut -f1)"
 
 .PHONY: index-verify
 index-verify:
@@ -144,12 +175,23 @@ index-release:
 	@# One shell, one read. $(shell ...) expands when the recipe is expanded,
 	@# which is *before* the guard below runs -- so with no index you got two
 	@# Python tracebacks and an empty tag instead of the intended message.
+	@#
+	@# Tagged by build id, so each build gets its own release. The previous
+	@# one is kept: a consumer re-bundling the index reads it over several
+	@# minutes, and pulling it out from under a download in progress is the
+	@# one failure this costs nothing to avoid.
 	@set -e; \
 	test -f index/manifest.json || { echo "no index; run make index-full" >&2; exit 1; }; \
-	tag=index-$$($(PY) -c "import json;print(json.load(open('index/manifest.json'))['version'])"); \
+	tag=index-$$($(PY) -c "import json;print(json.load(open('index/manifest.json'))['build'])"); \
 	tar czf index.tar.gz index; \
 	gh release create "$$tag" index.tar.gz --title "Semantic index $$tag" \
-	  --notes "Built by make index-full." \
+	  --notes "Built by make index. Unpack over index/ and run make site." \
 	  || gh release upload "$$tag" index.tar.gz --clobber; \
 	rm -f index.tar.gz; \
-	echo "published $$tag"
+	echo "published $$tag"; \
+	gh release list --limit 50 --json tagName \
+	  -q '[.[].tagName | select(startswith("index-"))] | sort | reverse | .[$(INDEX_KEEP):][]' \
+	  | while read -r old; do \
+	      echo "pruning $$old"; \
+	      gh release delete "$$old" --yes --cleanup-tag; \
+	    done

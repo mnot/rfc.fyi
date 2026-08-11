@@ -244,7 +244,6 @@ class RfcFyiUi {
       try {
         const { SemanticSearch } = await import('./search.js')
         const engine = await SemanticSearch.create({
-          basePath: '/index',
           onProgress: (event) => {
             // Don't talk over a search that has since started.
             if (!this.semanticFor) this.ftProgress(event)
@@ -326,7 +325,6 @@ class RfcFyiUi {
         this.ftStatus('Loading search index\u2026')
         const { SemanticSearch } = await import('./search.js')
         const engine = await SemanticSearch.create({
-          basePath: '/index',
           onProgress: (event) => this.ftProgress(event)
         })
         await engine.loadModel()
