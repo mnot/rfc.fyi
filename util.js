@@ -35,20 +35,9 @@ function relativeLuminance ([r, g, b]) {
   return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
 }
 
-/* Set algebra and plain-object iteration, as functions.
- *
- * All of this was on Set.prototype and Object.prototype. Extending built-ins
- * reaches every object in the program including the ones inside libraries we
- * did not write, and it had already cost us twice: an `Object.prototype.get`
- * collided with the property-descriptor field of the same name, so
- * `Object.defineProperty(obj, k, { value })` threw for every object on the
- * page and stopped transformers.js loading from inside its own webpack
- * helper; and the Set methods now shadow the natives of the same names that
- * every current browser ships.
- *
- * These stay hand-written rather than deferring to those natives, since the
- * only thing the prototype versions were buying was compatibility and there
- * is no reason to spend it.
+/* Set algebra and plain-object iteration, as plain functions. Deliberately
+ * not Set.prototype's natives of the same names, so this still runs where
+ * those are missing. Nothing here goes on a built-in's prototype.
  */
 
 export function intersect (a, b) {
@@ -65,22 +54,15 @@ export function union (a, b) {
   return out
 }
 
-export function difference (a, b) {
-  const out = new Set()
-  for (const item of a) {
-    if (!b.has(item)) out.add(item)
-  }
-  return out
-}
-
-/** Own enumerable keys of a plain object. Was Object.prototype.keys. */
+/** Own enumerable keys of a plain object. */
 export function ownKeys (object) {
-  return Object.keys(object || {})
+  return Object.keys(object)
 }
 
-/** Call `func` with each own key. Was Object.prototype.forEach. */
+/** Call `func` with each own key, and nothing else -- not Array.forEach's
+    (value, index, array). */
 export function forEachKey (object, func) {
-  ownKeys(object).forEach(func)
+  for (const key of ownKeys(object)) func(key)
 }
 
 /** Value at `key`, or `backstop` when absent. Was Object.prototype.get. */

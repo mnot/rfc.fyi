@@ -431,13 +431,12 @@ class RfcFyiUi {
     const target = document.getElementById('rfc-list')
     const sortNum = document.getElementById('sortByNumber')
     const sortRef = document.getElementById('sortByRefs')
-    if (sortByRef) {
-      sortNum.classList.remove('sort-active')
-      sortRef.classList.add('sort-active')
-    } else {
-      sortNum.classList.add('sort-active')
-      sortRef.classList.remove('sort-active')
-    }
+    // Which is active is otherwise conveyed by colour alone, as for the
+    // mode buttons.
+    sortNum.classList.toggle('sort-active', !sortByRef)
+    sortRef.classList.toggle('sort-active', sortByRef)
+    sortNum.setAttribute('aria-pressed', String(!sortByRef))
+    sortRef.setAttribute('aria-pressed', String(sortByRef))
     // In full-text mode the list is *truncated* by relevance, so ranking
     // decides membership and not merely order. Re-sorting the survivors by
     // RFC number would show an arbitrary slice in numeric order, which is
@@ -517,8 +516,8 @@ class RfcFyiUi {
     // tags
     if (!userInput) { // default screen
       const relevantTags = {
-        collection: new Set(util.ownKeys(data.tags?.collection)),
-        stream: new Set(util.ownKeys(data.tags?.stream))
+        collection: new Set(data.tags?.collection ? util.ownKeys(data.tags.collection) : []),
+        stream: new Set(data.tags?.stream ? util.ownKeys(data.tags.stream) : [])
       }
       this.showTags(relevantTags, true)
     } else if (this.activeTags.has('collection')) { // show a collection
