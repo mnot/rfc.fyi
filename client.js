@@ -546,17 +546,18 @@ class RfcFyiUi {
       this.renderTag('wg', rfcData.wg, rfcBody)
     }
     const refCount = data.obsoleteRefs.get(rfcName)
+    let refSpan = null
     if (hideRefs !== true && refCount > 0) {
-      const refSpan = document.createElement('span')
+      refSpan = document.createElement('span')
       refSpan.className = 'refcount'
       const refCountLink = document.createElement('button')
       refCountLink.type = 'button'
       refCountLink.className = 'refcountlink'
+      refCountLink.setAttribute('aria-expanded', 'false')
       refCountLink.onclick = this.refExpandHandler
       const refCountText = document.createTextNode(`${refCount.toLocaleString()} referencing RFC${this.pluralise(refCount)}`)
       refCountLink.appendChild(refCountText)
       refSpan.appendChild(refCountLink)
-      rfcBody.appendChild(refSpan)
     }
     if (sections && sections.length) {
       // The matched passages. This is the visible difference between full
@@ -581,23 +582,34 @@ class RfcFyiUi {
       })
       rfcBody.appendChild(secList)
     }
+    // After the sections: expanded, the reference list runs to hundreds of
+    // rows, and above them it pushes the matched passages off the screen.
+    if (refSpan) rfcBody.appendChild(refSpan)
     rfcSpan.appendChild(rfcBody)
     target.appendChild(rfcSpan)
   }
 
   refExpandHandler (event) {
-    const refList = document.createElement('ul')
-    const rfcElement = event.target.closest('li')
+    const button = event.target.closest('button')
+    const refSpan = button.parentElement
+    const expand = button.getAttribute('aria-expanded') !== 'true'
+    button.setAttribute('aria-expanded', expand ? 'true' : 'false')
+
+    let refList = refSpan.querySelector('ul')
+    if (refList) {
+      refList.hidden = !expand
+      event.stopPropagation()
+      return false
+    }
+    // Built once, then kept and toggled. The label stays: removing it left
+    // an empty button, so an expanded list could never be collapsed again.
+    refList = document.createElement('ul')
+    const rfcElement = button.closest('li')
     const rfcName = data.rfcNumtoName(rfcElement.num)
-    const rfcRefs = data.getObsoleteRefs(rfcName)
-    rfcRefs.forEach(ref => {
-      //    const normative = ref[0]
-      const refName = ref[1]
-      const refData = data.rfcs[refName]
-      ui.renderRfc(refName, refData, refList, true)
+    data.getObsoleteRefs(rfcName).forEach(ref => {
+      ui.renderRfc(ref[1], data.rfcs[ref[1]], refList, true)
     })
-    event.target.parentElement.appendChild(refList)
-    event.target.removeChild(event.target.firstChild)
+    refSpan.appendChild(refList)
     event.stopPropagation()
     return false
   }
