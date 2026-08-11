@@ -24,6 +24,15 @@ input, whatever the batching did.
 **Resumable.** Output is still written as fixed-size shards, and a run that
 dies partway leaves its completed work in the cache, so restarting re-embeds
 only what it had not reached.
+
+**Hydrated from the published index.** `--hydrate index/` seeds the cache
+from the previous build's int8 vectors, joined on `(rfc, off, len)`. The
+round trip is exact -- requantising a dequantised int8 row at the same scale
+returns the same byte -- so a build that hydrates writes the same cluster
+bytes for untouched chunks as one that kept float32 around. That is what
+makes the monthly update independent of whichever machine ran the last one:
+the previous release is the cache. RFCs whose source digest has changed are
+excluded, because a reissue moves offsets underneath the key.
 """
 
 from __future__ import annotations
@@ -34,24 +43,43 @@ import json
 import os
 import sys
 import time
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from embed import Embedder  # noqa: E402  pylint: disable=wrong-import-position
+# pylint: disable=wrong-import-position
+from embed import Embedder  # noqa: E402
+from indexfmt import (  # noqa: E402
+    ChunkKey,
+    changed_rfcs,
+    dequantise,
+    previous_vectors,
+    read_sources,
+)
 
 SHARD = 20_000
 
+#: Refuse to embed more than this share of the corpus on a hydrated run.
+#: A monthly update adds a few thousand chunks; anything approaching a full
+#: re-embed means the hydrate source did not match, and six silent hours is
+#: the wrong way to find that out.
+MAX_NEW_FRACTION = 0.25
 
-def read_texts(path: str) -> List[str]:
+
+def read_chunks(path: str) -> Tuple[List[str], List[ChunkKey]]:
+    """Chunk texts and their `(rfc, off, len)` keys, in file order."""
     texts: List[str] = []
+    keys: List[ChunkKey] = []
     with open(path, encoding="utf-8") as fh:
         for line in fh:
             line = line.strip()
-            if line:
-                texts.append(json.loads(line)["text"])
-    return texts
+            if not line:
+                continue
+            rec = json.loads(line)
+            texts.append(rec["text"])
+            keys.append((rec["rfc"], rec["offset"], rec["length"]))
+    return texts, keys
 
 
 def digest(text: str) -> bytes:
@@ -75,6 +103,56 @@ def load_cache(out: str) -> Dict[bytes, np.ndarray]:
         for i in range(len(vecs)):
             cache[raw[i].tobytes()] = vecs[i]
     return cache
+
+
+def hydrate(
+    index_dir: str,
+    sources: str,
+    keys: List[ChunkKey],
+    hashes: List[bytes],
+    cache: Dict[bytes, np.ndarray],
+) -> Dict[str, int]:
+    """Seed `cache` from a previous index, skipping RFCs that have changed.
+
+    Everything this needs is published: the vectors are in the cluster files
+    and the digests are in `sources.json` beside them, so a machine that has
+    never built the index before can still do an incremental build from a
+    release.
+    """
+    manifest_path = os.path.join(index_dir, "manifest.json")
+    if not os.path.exists(manifest_path):
+        raise SystemExit(f"--hydrate {index_dir}: no manifest.json")
+    with open(manifest_path, encoding="utf-8") as fh:
+        scale = float(json.load(fh)["quant"]["scale"])
+
+    old_digests = read_sources(os.path.join(index_dir, "sources.json"))
+    new_digests = read_sources(sources)
+    if not old_digests:
+        raise SystemExit(
+            f"--hydrate {index_dir}: no sources.json, so there is no way to "
+            f"tell which RFCs have been reissued since it was built. Rebuild "
+            f"with `make index-full`, or hydrate from a newer release."
+        )
+    if not new_digests:
+        raise SystemExit(f"--sources {sources}: missing or empty")
+
+    changed = changed_rfcs(old_digests, new_digests)
+    prev, skipped = previous_vectors(index_dir, changed)
+
+    reused = 0
+    for i, key in enumerate(keys):
+        if hashes[i] in cache:
+            continue
+        row = prev.get(key)
+        if row is not None:
+            cache[hashes[i]] = dequantise(row, scale)
+            reused += 1
+    return {
+        "reused": reused,
+        "available": len(prev),
+        "changed_rfcs": len(changed),
+        "skipped_rows": skipped,
+    }
 
 
 def write_shards(out: str, vecs: np.ndarray, hashes: List[bytes], shard: int) -> int:
@@ -105,19 +183,54 @@ def main() -> None:
     ap.add_argument("--variant", default="int8")
     ap.add_argument("--batch", type=int, default=32)
     ap.add_argument("--shard", type=int, default=SHARD)
+    ap.add_argument(
+        "--hydrate",
+        help="reuse vectors from this previously built index/ directory",
+    )
+    ap.add_argument(
+        "--sources",
+        default="var/sources.json",
+        help="this corpus's per-RFC digests, compared against the hydrate source",
+    )
+    ap.add_argument(
+        "--max-new",
+        type=float,
+        default=MAX_NEW_FRACTION,
+        help="abort a hydrated run that would embed more than this fraction",
+    )
     args = ap.parse_args()
 
-    texts = read_texts(args.chunks)
+    texts, keys = read_chunks(args.chunks)
     os.makedirs(args.out, exist_ok=True)
     hashes = [digest(t) for t in texts]
 
     cache = load_cache(args.out)
+    local = len(cache)
+    if args.hydrate:
+        stats = hydrate(args.hydrate, args.sources, keys, hashes, cache)
+        print(
+            f"hydrated {stats['reused']:,} vectors from {args.hydrate} "
+            f"({stats['available']:,} available, {stats['changed_rfcs']:,} RFCs "
+            f"changed so {stats['skipped_rows']:,} rows were left out)",
+            file=sys.stderr,
+        )
+
     todo = [i for i, h in enumerate(hashes) if h not in cache]
     print(
-        f"{len(texts):,} chunks, {len(cache):,} cached, {len(todo):,} to embed "
+        f"{len(texts):,} chunks, {local:,} cached locally, "
+        f"{len(cache) - local:,} hydrated, {len(todo):,} to embed "
         f"({args.model}/{args.variant})",
         file=sys.stderr,
     )
+    if args.hydrate and texts and len(todo) > args.max_new * len(texts):
+        raise SystemExit(
+            f"{len(todo):,} of {len(texts):,} chunks ({len(todo) / len(texts):.0%}) "
+            f"would be embedded, over the {args.max_new:.0%} limit for a hydrated "
+            f"run. That usually means {args.hydrate} is not the previous build of "
+            f"this corpus, or the chunker has changed and every offset moved. "
+            f"Re-run with --max-new 1 to embed anyway (hours), or use "
+            f"`make index-full`."
+        )
 
     if todo:
         emb = Embedder(args.model, args.variant)
@@ -151,7 +264,9 @@ def main() -> None:
             idx = int(f.split("-")[1].split(".")[0])
             if idx >= n:
                 os.remove(os.path.join(args.out, f))
-    print(f"done: {len(vecs):,} vectors in {n} shards under {args.out}", file=sys.stderr)
+    print(
+        f"done: {len(vecs):,} vectors in {n} shards under {args.out}", file=sys.stderr
+    )
 
 
 if __name__ == "__main__":

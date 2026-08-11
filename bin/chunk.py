@@ -19,6 +19,7 @@ Standard library only.
 
 import argparse
 import bisect
+import hashlib
 import json
 import multiprocessing
 import os
@@ -152,6 +153,7 @@ def is_reference_section(words):
             continue
         return False
     return True
+
 
 APOSTROPHES = "'’‘ʼ`"
 
@@ -377,7 +379,7 @@ MAX_SECTION_JUMP = 20
 
 
 def parse_number(label):
-    """"1.0" and "1" are the same section; RFCs use both spellings."""
+    """ "1.0" and "1" are the same section; RFCs use both spellings."""
     try:
         parts = [int(part) for part in label.split(".")]
     except ValueError:
@@ -768,7 +770,7 @@ def build(lines, headings, indent, ident, to_bytes, opts, salvage):
             sections.append((None, None, lines[:first]))
         for pos, head in enumerate(headings):
             stop = headings[pos + 1].index if pos + 1 < len(headings) else len(lines)
-            sections.append((head.label, head.title, lines[head.index + 1:stop]))
+            sections.append((head.label, head.title, lines[head.index + 1 : stop]))
     else:
         sections.append((None, None, lines))
 
@@ -922,15 +924,29 @@ def gather_paths(args):
     return paths
 
 
+def file_digest(path):
+    """SHA-256 of an RFC's text file, as published.
+
+    A later build compares these to tell whether an RFC has been reissued
+    (RFC 9920 s7.6 allows it), because that is the one thing that moves a
+    chunk's byte offsets without changing its RFC number.
+    """
+    digest = hashlib.sha256()
+    with open(path, "rb") as handle:
+        for block in iter(lambda: handle.read(1 << 20), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
 class Worker:
     def __init__(self, opts):
         self.opts = opts
 
     def __call__(self, path):
         try:
-            return path, chunk_file(path, self.opts)
+            return path, chunk_file(path, self.opts), file_digest(path)
         except Exception as exc:  # keep one bad file from killing the run
-            return path, exc
+            return path, exc, None
 
 
 def percentile(values, fraction):
@@ -955,24 +971,31 @@ def report(counts, lengths, empty, errors, opts, out):
     if total:
         print(
             "chunk chars:      mean %.0f  median %d  min %d  max %d"
-            % (statistics.mean(lengths), percentile(lengths, 0.5), lengths[0],
-               lengths[-1]),
+            % (
+                statistics.mean(lengths),
+                percentile(lengths, 0.5),
+                lengths[0],
+                lengths[-1],
+            ),
             file=out,
         )
         marks = [0.05, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99]
         print(
             "                  "
-            + "  ".join(
-                "p%d=%d" % (m * 100, percentile(lengths, m)) for m in marks
-            ),
+            + "  ".join("p%d=%d" % (m * 100, percentile(lengths, m)) for m in marks),
             file=out,
         )
         budget = opts.token_budget * opts.chars_per_token
         over = sum(1 for length in lengths if length > budget)
         print(
             "over %d tokens:   %d (%.2f%%)  [>%d chars at %g chars/token]"
-            % (opts.token_budget, over, 100.0 * over / total, budget,
-               opts.chars_per_token),
+            % (
+                opts.token_budget,
+                over,
+                100.0 * over / total,
+                budget,
+                opts.chars_per_token,
+            ),
             file=out,
         )
         over_cap = sum(1 for length in lengths if length > opts.cap)
@@ -988,8 +1011,7 @@ def report(counts, lengths, empty, errors, opts, out):
     if errors:
         print("errors:           %d" % len(errors), file=out)
         for path, exc in errors[:10]:
-            print("                  %s: %r" % (os.path.basename(path), exc),
-                  file=out)
+            print("                  %s: %r" % (os.path.basename(path), exc), file=out)
 
 
 def main():
@@ -1005,12 +1027,25 @@ def main():
         default=True,
         help="keep Acknowledgements/Contributors sections (dropped by default)",
     )
-    parser.add_argument("--stats", action="store_true",
-                        help="write a summary to stderr instead of JSONL")
+    parser.add_argument(
+        "--stats",
+        action="store_true",
+        help="write a summary to stderr instead of JSONL",
+    )
+    parser.add_argument(
+        "--sources",
+        help="also write {rfc: sha256} for the files chunked "
+        "(the shape bin/indexfmt.py reads)",
+    )
     parser.add_argument("--token-budget", type=int, default=512)
     parser.add_argument("--chars-per-token", type=float, default=4.0)
-    parser.add_argument("-j", "--jobs", type=int, default=0,
-                        help="worker processes (default: cpu count)")
+    parser.add_argument(
+        "-j",
+        "--jobs",
+        type=int,
+        default=0,
+        help="worker processes (default: cpu count)",
+    )
     opts = parser.parse_args()
 
     paths = gather_paths(opts.paths)
@@ -1028,11 +1063,13 @@ def main():
     lengths = []
     empty = []
     errors = []
+    digests = {}
     write = sys.stdout.write
-    for path, chunks in results:
+    for path, chunks, digest in results:
         if isinstance(chunks, Exception):
             errors.append((path, chunks))
             continue
+        digests[str(rfc_id(path))] = digest
         counts[path] = len(chunks)
         if not chunks:
             empty.append(path)
@@ -1044,6 +1081,14 @@ def main():
     if pool is not None:
         pool.close()
         pool.join()
+    if opts.sources:
+        tmp = opts.sources + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as handle:
+            json.dump(
+                {"digest": "sha256", "rfcs": digests}, handle, indent=1, sort_keys=True
+            )
+            handle.write("\n")
+        os.replace(tmp, opts.sources)
     if opts.stats:
         report(counts, lengths, empty, errors, opts, sys.stderr)
     elif errors:

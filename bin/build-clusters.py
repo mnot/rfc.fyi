@@ -32,68 +32,9 @@ Centroids are frozen. A later incremental run re-runs this script with
 existing partition instead of re-clustering, so cluster ids stay stable
 across builds. `assign` exposes the same computation on its own.
 
-
-FILE FORMATS
-============
-
-All integers are little-endian. Both binary files start with the same
-24-byte header:
-
-    offset  size  type      field
-    ------  ----  --------  ---------------------------------------------
-         0     4  char[4]   magic: "RFCV" centroids, "RFCC" cluster
-         4     2  uint16    format version (currently 1)
-         6     2  uint16    dims (384)
-         8     4  uint32    count -- rows in the vector block
-        12     4  uint32    ident -- cluster id; 0 in centroids.bin
-        16     4  uint32    meta_len -- bytes of JSON tail; 0 in centroids.bin
-        20     4  uint32    reserved (0)
-
-The vector block follows at offset 24: `count * dims` signed bytes,
-row-major, one row per vector. Dequantise with the `quant.scale` from
-manifest.json: `float = int8 * scale`. Rows are NOT re-normalised after
-quantisation; for ranking that does not matter, and the error it costs is
-reported as `quant.chunk_cosine_mean`.
-
-    // centroids.bin, whole file, ~1.5 MiB
-    const buf = await (await fetch('index/centroids.bin')).arrayBuffer()
-    const k = new DataView(buf).getUint32(8, true)
-    const cent = new Int8Array(buf, 24, k * 384)   // row j at j*384
-
-    // clusters/NNNN.bin, whole file, ~50 KiB
-    const buf = await (await fetch(`index/clusters/${id}.bin`)).arrayBuffer()
-    const dv = new DataView(buf)
-    const n = dv.getUint32(8, true)
-    const metaLen = dv.getUint32(16, true)
-    const vecs = new Int8Array(buf, 24, n * 384)   // chunk i at i*384
-    const meta = JSON.parse(new TextDecoder().decode(
-      new Uint8Array(buf, 24 + n * 384, metaLen)))
-
-The JSON tail is columnar: every array has `n` entries and index `i`
-describes the vector at row `i` of the block.
-
-    {"n":   111,                       // == header count
-     "id":  [12, 4053, ...],           // 0-based line number in chunks.jsonl
-     "rfc": [9110, "17a", ...],        // number, or string for the oddballs
-     "off": [48213, ...],              // byte offset into the RFC text file
-     "len": [1180, ...],               // byte length of that range
-     "sec": [3, -1, ...],              // index into "str", -1 = no section
-     "title": [7, 7, ...],             // index into "str"
-     "str": ["7.2", "Message Routing", ...]}
-
-`sec` and `title` are indices into a per-file string table because a
-cluster holds many chunks from the same section -- the chunker emits
-several per section, and they are near-duplicates, so they land together.
-Measured against real embeddings the table takes 23% off the tail. `id`
-is not needed to render a
-result; it is there so an incremental build can tell which chunks a
-re-chunked RFC replaced, and so `verify` can prove the partition covers
-every chunk exactly once.
-
-Chunks within a file are ordered by ascending `id`, and the partition is
-exactly `argmax` of the dot product against the *dequantised* centroids --
-the same arithmetic the browser does -- so a client that recomputes an
-assignment agrees with the build.
+The on-disk format -- both binary headers, the columnar JSON tail, and the
+`(rfc, off, len)` key an incremental build joins on -- is documented and
+implemented in `bin/indexfmt.py`, which `embed-corpus.py` also reads.
 """
 
 from __future__ import annotations
@@ -102,19 +43,28 @@ import argparse
 import json
 import math
 import os
-import struct
+import subprocess
 import sys
 import time
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 
-DIMS = 384
-FORMAT_VERSION = 1
-HEADER_SIZE = 24
-HEADER_STRUCT = "<4sHHIIII"
-MAGIC_CENTROIDS = b"RFCV"
-MAGIC_CLUSTER = b"RFCC"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# pylint: disable=wrong-import-position
+from indexfmt import (  # noqa: E402
+    DIMS,
+    FORMAT_VERSION,
+    build_id,
+    dequantise,
+    quantise,
+    read_centroids,
+    read_cluster,
+    read_sources,
+    write_centroids,
+    write_cluster,
+    write_sources,
+)
 
 MODEL_ID = "Xenova/bge-small-en-v1.5"
 MODEL_VARIANT = "int8"
@@ -194,14 +144,6 @@ class ShardArray:
 # --------------------------------------------------------------------------
 # Quantisation
 # --------------------------------------------------------------------------
-
-
-def quantise(vecs: np.ndarray, scale: float) -> np.ndarray:
-    return np.clip(np.rint(vecs / scale), -127, 127).astype(np.int8)
-
-
-def dequantise(q: np.ndarray, scale: float) -> np.ndarray:
-    return q.astype(np.float32) * np.float32(scale)
 
 
 def mean_cosine(vecs: np.ndarray, scale: float) -> float:
@@ -455,77 +397,6 @@ def split_oversized(
 
 
 # --------------------------------------------------------------------------
-# Serialisation
-# --------------------------------------------------------------------------
-
-
-def _header(magic: bytes, count: int, ident: int, meta_len: int) -> bytes:
-    return struct.pack(
-        HEADER_STRUCT, magic, FORMAT_VERSION, DIMS, count, ident, meta_len, 0
-    )
-
-
-def write_centroids(path: str, cent_q: np.ndarray) -> int:
-    blob = _header(MAGIC_CENTROIDS, cent_q.shape[0], 0, 0) + cent_q.tobytes()
-    tmp = path + ".tmp"
-    with open(tmp, "wb") as fh:
-        fh.write(blob)
-    os.replace(tmp, path)
-    return len(blob)
-
-
-def read_centroids(path: str) -> np.ndarray:
-    with open(path, "rb") as fh:
-        raw = fh.read()
-    magic, version, dims, count, _, _, _ = struct.unpack_from(HEADER_STRUCT, raw)
-    if magic != MAGIC_CENTROIDS:
-        raise SystemExit(f"{path}: bad magic {magic!r}")
-    if version != FORMAT_VERSION:
-        raise SystemExit(f"{path}: format version {version}, expected {FORMAT_VERSION}")
-    want = HEADER_SIZE + count * dims
-    if len(raw) != want:
-        raise SystemExit(f"{path}: {len(raw)} bytes, expected {want}")
-    return np.frombuffer(raw, dtype=np.int8, offset=HEADER_SIZE).reshape(count, dims)
-
-
-def write_cluster(
-    path: str, ident: int, vecs_q: np.ndarray, meta: Dict[str, Any]
-) -> int:
-    tail = json.dumps(meta, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
-    blob = (
-        _header(MAGIC_CLUSTER, vecs_q.shape[0], ident, len(tail))
-        + vecs_q.tobytes()
-        + tail
-    )
-    tmp = path + ".tmp"
-    with open(tmp, "wb") as fh:
-        fh.write(blob)
-    os.replace(tmp, path)
-    return len(blob)
-
-
-def read_cluster(path: str) -> Tuple[np.ndarray, Dict[str, Any], int]:
-    """Reference reader for `clusters/NNNN.bin`; mirrors the JS in the docstring."""
-    with open(path, "rb") as fh:
-        raw = fh.read()
-    magic, version, dims, count, ident, meta_len, _ = struct.unpack_from(
-        HEADER_STRUCT, raw
-    )
-    if magic != MAGIC_CLUSTER:
-        raise SystemExit(f"{path}: bad magic {magic!r}")
-    if version != FORMAT_VERSION:
-        raise SystemExit(f"{path}: format version {version}, expected {FORMAT_VERSION}")
-    end = HEADER_SIZE + count * dims
-    if len(raw) != end + meta_len:
-        raise SystemExit(f"{path}: {len(raw)} bytes, expected {end + meta_len}")
-    vecs = np.frombuffer(raw, dtype=np.int8, offset=HEADER_SIZE, count=count * dims)
-    meta = json.loads(raw[end:].decode("utf-8"))
-    if meta["n"] != count:
-        raise SystemExit(f"{path}: tail says n={meta['n']}, header says {count}")
-    return vecs.reshape(count, dims), meta, ident
-
-
-# --------------------------------------------------------------------------
 # Chunk metadata
 # --------------------------------------------------------------------------
 
@@ -569,6 +440,20 @@ def load_chunk_meta(path: str, limit: int = 0) -> Dict[str, List[Any]]:
     return {"rfc": rfc, "off": off, "len": length, "sec": sec, "title": title}
 
 
+def chunk_index(meta: Dict[str, List[Any]]) -> Dict[Tuple[Any, int, int], int]:
+    """`(rfc, off, len)` -> row number, for joining a cluster tail back.
+
+    The tail carries no row number: RFCs publish out of numeric order, so an
+    insertion renumbers every chunk after it and a row number recorded in a
+    previous build means something else in this one. The triple does not
+    move, which is what both `verify` and the incremental build join on.
+    """
+    out: Dict[Tuple[Any, int, int], int] = {}
+    for i, (rfc, off, length) in enumerate(zip(meta["rfc"], meta["off"], meta["len"])):
+        out[(rfc, off, length)] = i
+    return out
+
+
 def cluster_tail(meta: Dict[str, List[Any]], ids: np.ndarray) -> Dict[str, Any]:
     strs: List[str] = []
     seen: Dict[str, int] = {}
@@ -589,7 +474,6 @@ def cluster_tail(meta: Dict[str, List[Any]], ids: np.ndarray) -> Dict[str, Any]:
         title_idx.append(sid(meta["title"][i]))
     return {
         "n": int(ids.size),
-        "id": [int(i) for i in ids],
         "rfc": [meta["rfc"][i] for i in ids],
         "off": [meta["off"][i] for i in ids],
         "len": [meta["len"][i] for i in ids],
@@ -738,15 +622,35 @@ def human(n: float) -> str:
 # --------------------------------------------------------------------------
 
 
-def _frozen_scale(centroids_path: Optional[str]) -> Optional[float]:
-    """The scale the frozen centroids were written with, if we can find it."""
+def _previous_manifest(centroids_path: Optional[str]) -> Dict[str, Any]:
+    """The manifest sitting beside the frozen centroids, if there is one."""
     if not centroids_path:
-        return None
+        return {}
     sibling = os.path.join(os.path.dirname(centroids_path), "manifest.json")
     if not os.path.exists(sibling):
-        return None
+        return {}
     with open(sibling, encoding="utf-8") as fh:
-        return float(json.load(fh)["quant"]["scale"])
+        return dict(json.load(fh))
+
+
+def git_commit() -> Optional[str]:
+    """The commit this build was produced from, or None outside a checkout.
+
+    Recorded in the manifest because a consumer that wants a chunk's text
+    has to re-run the chunker and join on `(rfc, off, len)`, and that join
+    only holds if the chunker is the one that built the index.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            capture_output=True,
+            check=True,
+            text=True,
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    return out.stdout.strip() or None
 
 
 def cmd_build(args: argparse.Namespace) -> None:
@@ -775,7 +679,12 @@ def cmd_build(args: argparse.Namespace) -> None:
 
     sample = vecs.take(np.sort(rng.integers(0, len(vecs), size=min(50_000, len(vecs)))))
     scale, scale_tried = choose_scale(sample)
-    frozen = _frozen_scale(args.reuse_centroids)
+    previous = _previous_manifest(args.reuse_centroids)
+    frozen = (
+        float(previous["quant"]["scale"])
+        if previous.get("quant", {}).get("scale") is not None
+        else None
+    )
     if frozen is not None and frozen != scale:
         # Frozen centroids are int8; the scale is how they are read. Deriving
         # a fresh one from a grown corpus would move every centroid slightly
@@ -852,10 +761,28 @@ def cmd_build(args: argparse.Namespace) -> None:
         if written % 500 == 0:
             print(f"  wrote {written:,}/{k:,} clusters", file=sys.stderr, flush=True)
 
-    chunk_cos = mean_cosine(sample, scale)
+    # An incremental build's vectors are mostly the previous build's int8
+    # rows read back and dequantised, so round-tripping them through int8
+    # again is lossless by construction and this would report 1.0 -- an
+    # improvement that did not happen. Carry the figure from the build that
+    # measured it against real float32, and say which one that was.
+    # `candidates` is carried for the same reason: the scan reruns against
+    # data that has already been through this scale once, so it reports the
+    # clip point rather than the corpus's real dynamic range.
+    carried_from = None
+    if previous.get("quant", {}).get("chunk_cosine_mean") is not None:
+        chunk_cos = float(previous["quant"]["chunk_cosine_mean"])
+        scale_tried = previous["quant"].get("candidates", scale_tried)
+        carried_from = previous.get("build") or previous.get("built")
+    else:
+        chunk_cos = mean_cosine(sample, scale)
+
+    built = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     manifest = {
         "version": FORMAT_VERSION,
-        "built": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "built": built,
+        "build": build_id(built),
+        "source": {"commit": git_commit()},
         "model": {
             "id": MODEL_ID,
             "variant": MODEL_VARIANT,
@@ -870,6 +797,7 @@ def cmd_build(args: argparse.Namespace) -> None:
             "scale": scale,
             "clip": scale * 127.0,
             "chunk_cosine_mean": chunk_cos,
+            "chunk_cosine_from": carried_from,
             "centroid_cosine_mean": cent_cos,
             "candidates": scale_tried,
         },
@@ -890,6 +818,15 @@ def cmd_build(args: argparse.Namespace) -> None:
     with open(os.path.join(args.out, "manifest.json"), "w", encoding="utf-8") as fh:
         json.dump(manifest, fh, indent=2)
         fh.write("\n")
+
+    # Publish the per-RFC source digests alongside the index. The next build
+    # compares them to decide which RFCs it may reuse vectors for; a
+    # consumer joining on `(rfc, off, len)` can use them to tell that its own
+    # mirror has drifted from the text this index was built against.
+    if args.sources:
+        write_sources(
+            os.path.join(args.out, "sources.json"), read_sources(args.sources)
+        )
 
     total = cent_bytes + int(file_bytes.sum())
     print(
@@ -944,6 +881,28 @@ def cmd_verify(args: argparse.Namespace) -> None:
     n_chunks = manifest["chunks"]["count"]
     report: Dict[str, Any] = {"clusters": k, "chunks": n_chunks}
 
+    # The tail carries no row number, so rejoin it to chunks.jsonl on
+    # `(rfc, off, len)` -- the same join an incremental build does, which
+    # means checking coverage here also exercises that.
+    rows_by_key = chunk_index(load_chunk_meta(args.chunks, limit=n_chunks))
+    if len(rows_by_key) != n_chunks:
+        raise SystemExit(
+            f"{args.chunks}: {len(rows_by_key):,} distinct (rfc, off, len) for "
+            f"{n_chunks:,} chunks -- the key is not unique in this corpus"
+        )
+
+    def tail_rows(path: str, meta: Dict[str, Any]) -> np.ndarray:
+        try:
+            return np.array(
+                [
+                    rows_by_key[(rfc, off, length)]
+                    for rfc, off, length in zip(meta["rfc"], meta["off"], meta["len"])
+                ],
+                dtype=np.int64,
+            )
+        except KeyError as err:
+            raise SystemExit(f"{path}: chunk {err.args[0]} is not in {args.chunks}")
+
     # Coverage: every chunk in exactly one file, and the file it is in is
     # the one argmax puts it in.
     seen = np.zeros(n_chunks, dtype=np.int8)
@@ -957,9 +916,9 @@ def cmd_verify(args: argparse.Namespace) -> None:
         rows, meta, ident = read_cluster(path)
         if ident != cid:
             raise SystemExit(f"{path}: header cluster id {ident}, expected {cid}")
-        ids = np.array(meta["id"], dtype=np.int64)
+        ids = tail_rows(path, meta)
         if ids.size and not np.all(np.diff(ids) > 0):
-            raise SystemExit(f"{path}: ids are not strictly ascending")
+            raise SystemExit(f"{path}: chunks are not in ascending corpus order")
         for key in ("rfc", "off", "len", "sec", "title"):
             if len(meta[key]) != meta["n"]:
                 raise SystemExit(
@@ -982,12 +941,11 @@ def cmd_verify(args: argparse.Namespace) -> None:
     # against the float32 the embedder produced.
     cos: List[float] = []
     for cid in rng.choice(k, size=min(args.sample_clusters, k), replace=False):
-        rows, meta, _ = read_cluster(
-            os.path.join(args.out, "clusters", f"{int(cid):04d}.bin")
-        )
+        path = os.path.join(args.out, "clusters", f"{int(cid):04d}.bin")
+        rows, meta, _ = read_cluster(path)
         if not meta["n"]:
             continue
-        ids = np.array(meta["id"], dtype=np.int64)
+        ids = tail_rows(path, meta)
         orig = vecs.take(ids)
         back = dequantise(rows, scale)
         num = np.einsum("ij,ij->i", orig, back)
@@ -995,6 +953,14 @@ def cmd_verify(args: argparse.Namespace) -> None:
         cos.extend((num / np.clip(den, 1e-12, None)).tolist())
     arr = np.array(cos) if cos else np.zeros(1, dtype=np.float32)
     report["round_trip"] = {
+        # On a hydrated build the shards are the previous index's int8 rows
+        # dequantised, so requantising them is lossless and this reads 1.0.
+        # Say so, rather than let a vacuous number look like an improvement.
+        "measures": (
+            "hydrated vectors, already int8 -- not a fresh quantisation error"
+            if manifest.get("quant", {}).get("chunk_cosine_from")
+            else "float32 from the embedder against what was written"
+        ),
         "vectors": int(arr.size),
         "cosine_mean": float(arr.mean()),
         "cosine_min": float(arr.min()),
@@ -1056,6 +1022,10 @@ def main() -> None:
         help="freeze this centroids.bin and only assign (incremental build)",
     )
     b.add_argument(
+        "--sources",
+        help="per-RFC source digests from chunk.py, published with the index",
+    )
+    b.add_argument(
         "--allow-partial",
         action="store_true",
         help="index the embedded prefix when shards are incomplete",
@@ -1074,6 +1044,7 @@ def main() -> None:
 
     v = sub.add_parser("verify", help="check a built index and report its costs")
     v.add_argument("--out", default="index")
+    v.add_argument("--chunks", default="var/chunks.jsonl")
     v.add_argument("--embeddings", default="var/embeddings")
     v.add_argument("--nprobe", type=int, default=DEFAULT_NPROBE)
     v.add_argument("--sample-clusters", type=int, default=64)
