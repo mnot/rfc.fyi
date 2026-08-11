@@ -214,6 +214,9 @@ class RfcFyiUi {
     if (!titles || !full) return
     titles.classList.toggle('sort-active', !this.fullText)
     full.classList.toggle('sort-active', this.fullText)
+    // Which mode is active is otherwise conveyed by colour alone.
+    titles.setAttribute('aria-pressed', String(!this.fullText))
+    full.setAttribute('aria-pressed', String(this.fullText))
     // Full-text wants a phrase, not a keyword. Measured over the query set,
     // recall falls from 0.701 on a ~10-word phrase to 0.138 on a single
     // word -- so a placeholder inviting keywords steers people into the one
@@ -474,7 +477,7 @@ class RfcFyiUi {
         }
       } else {
         searchedRfcs = data.searchRfcs(this.searchWords)
-        relevantRfcs = taggedRfcs.intersection(searchedRfcs)
+        relevantRfcs = util.intersect(taggedRfcs, searchedRfcs)
         rfcList = Array.from(relevantRfcs)
         if (sortByRef === true) {
           rfcList.sort(this.refSort)
@@ -514,8 +517,8 @@ class RfcFyiUi {
     // tags
     if (!userInput) { // default screen
       const relevantTags = {
-        collection: new Set(data.tags?.collection ? data.tags.collection.keys() : []),
-        stream: new Set(data.tags?.stream ? data.tags.stream.keys() : [])
+        collection: new Set(util.ownKeys(data.tags?.collection)),
+        stream: new Set(util.ownKeys(data.tags?.stream))
       }
       this.showTags(relevantTags, true)
     } else if (this.activeTags.has('collection')) { // show a collection
@@ -661,7 +664,7 @@ class RfcFyiUi {
       const targetDiv = document.getElementById(tagType)
       this.tagTargets[tagType] = {}
       // render the tag list
-      const tagList = data.tags[tagType].keys()
+      const tagList = util.ownKeys(data.tags[tagType])
       tagList.sort()
       tagList.forEach(tagName => {
         const tagSpan = this.renderTag(tagType, tagName, targetDiv, this.clickTagHandlerFactory)
@@ -756,7 +759,7 @@ class RfcFyiUi {
       }
       header.style.display = showHeader && relevantTags[tagType].size > 0 ? 'block' : 'none'
       if (data.tags[tagType]) {
-        data.tags[tagType].forEach(tagName => {
+        util.forEachKey(data.tags[tagType], tagName => {
           const visibility = relevantTags[tagType].has(tagName) ? 'inline' : 'none'
           this.tagTargets[tagType][tagName].style.display = visibility
         })
