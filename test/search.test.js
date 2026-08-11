@@ -14,7 +14,7 @@
  * Run with `make test`, or `node --test test/`.
  */
 
-import { test } from 'node:test'
+import { test, afterEach } from 'node:test'
 import assert from 'node:assert/strict'
 
 import { SemanticSearch, SearchError, __test } from '../search.js'
@@ -87,6 +87,9 @@ function manifest (over = {}) {
  * A route may be a function, called with the request count, for the cases
  * where the same URL has to answer differently twice.
  */
+const realFetch = globalThis.fetch
+afterEach(() => { globalThis.fetch = realFetch })
+
 function stubFetch (routes) {
   const asked = []
   const counts = {}
@@ -150,13 +153,14 @@ test('topIndices matches a full sort over random input', () => {
     const len = 1 + Math.floor(rand() * 40)
     const scores = Array.from({ length: len }, () => Math.round(rand() * 20))
     const n = 1 + Math.floor(rand() * 12)
+    // Indices, not the scores they map to: comparing scores would pass for
+    // any tie order, and tie order is the property that has to hold.
     const want = scores
       .map((score, i) => ({ score, i }))
       .sort((a, b) => b.score - a.score || a.i - b.i)
       .slice(0, Math.min(n, len))
-      .map(e => e.score)
-    const got = topIndices(scores, n).map(i => scores[i])
-    assert.deepEqual(got, want, `scores=${scores} n=${n}`)
+      .map(e => e.i)
+    assert.deepEqual(topIndices(scores, n), want, `scores=${scores} n=${n}`)
   }
 })
 
@@ -203,7 +207,7 @@ test('readHeader reads the fields', () => {
 })
 
 for (const [name, buffer, expected] of [
-  ['too short', new ArrayBuffer(8), /too short to be an index file/],
+  ['one byte short', new ArrayBuffer(HEADER_BYTES - 1), /23 bytes, too short/],
   ['wrong magic', header('XXXX'), /magic "XXXX", expected "RFCV"/],
   ['wrong version', header('RFCV', { version: 2 }), /format version 2, expected 1/]
 ]) {
@@ -228,7 +232,6 @@ test('create resolves the pointer and loads the build it names', async () => {
   assert.equal(engine.clusterCount, 2)
   assert.equal(engine.nprobe, 7, 'nprobe comes from the manifest, not a constant')
   assert.ok(asked.includes('/index/current.json'))
-  assert.ok(asked.every(u => !u.startsWith('/index/clusters')), 'no flat-layout fetches')
 })
 
 test('create rejects a pointer that is not a build id', async () => {
@@ -325,4 +328,153 @@ test('a cluster with an unreadable tail is rejected', async () => {
   stubFetch(workingIndex({ [`${BUILD}/clusters/0001.bin`]: bad }))
   const engine = await SemanticSearch.create()
   await assert.rejects(engine._fetchCluster(1), /unreadable metadata tail/)
+})
+
+// --------------------------------------------------------------------------
+// search(): the scoring loop and the result mapping
+//
+// The path with the most arithmetic in it and, until now, no coverage: dot()
+// over the flat candidate list, _probe over the centroids, and the walk back
+// out through the tail's string table. A fake pipeline is all it needs -- the
+// model is the only reason this looked untestable.
+// --------------------------------------------------------------------------
+
+/** An engine over a two-cluster index, with a caller-supplied query vector. */
+async function engineWith (query, over = {}) {
+  stubFetch(workingIndex({
+    // Cluster 0 sits along x, cluster 1 along y; the centroids in
+    // workingIndex() point the same way, so a query picks a known cluster.
+    [`${BUILD}/clusters/0000.bin`]: clusterFile(0, [[127, 0, 0, 0], [90, 90, 0, 0]], {
+      n: 2,
+      rfc: [9111, 9110],
+      off: [10, 20],
+      len: [5, 6],
+      sec: [0, -1],
+      title: [1, 2],
+      str: ['3', 'Storing Responses', 'Abstract']
+    }),
+    [`${BUILD}/clusters/0001.bin`]: clusterFile(1, [[0, 127, 0, 0]], {
+      n: 1, rfc: [2616], off: [1], len: [2], sec: [0], title: [0], str: ['9.1']
+    }),
+    ...over
+  }))
+  const engine = await SemanticSearch.create()
+  engine.pipeline = async () => ({ data: new Float32Array(query) })
+  return engine
+}
+
+test('search scores every probed chunk and ranks them', async () => {
+  const engine = await engineWith([1, 0, 0, 0]) // pointing at cluster 0
+  const hits = await engine.search('anything', { nprobe: 2, limit: 10 })
+  assert.equal(hits.length, 3, 'every chunk in both probed clusters is a candidate')
+  assert.deepEqual(hits.map(h => h.rfc), [9111, 9110, 2616])
+  // Strictly descending, and scaled rather than raw int8.
+  assert.ok(hits[0].score > hits[1].score && hits[1].score > hits[2].score)
+  assert.ok(Math.abs(hits[0].score - 127 * SCALE) < 1e-6, `got ${hits[0].score}`)
+})
+
+test('search maps the tail back through its string table', async () => {
+  const engine = await engineWith([1, 0, 0, 0])
+  const [first, second] = await engine.search('anything', { nprobe: 1, limit: 10 })
+  assert.deepEqual(first, {
+    rfc: 9111, section: '3', title: 'Storing Responses', offset: 10, length: 5, score: first.score
+  })
+  // sec === -1 is the sentinel for a chunk with no section, not an index.
+  assert.equal(second.section, null, 'a -1 section must not index into str')
+  assert.equal(second.title, 'Abstract')
+})
+
+test('search honours limit and returns nothing for an empty query', async () => {
+  const engine = await engineWith([1, 0, 0, 0])
+  assert.equal((await engine.search('anything', { limit: 1 })).length, 1)
+  assert.deepEqual(await engine.search('   '), [])
+  assert.deepEqual(await engine.search('anything', { limit: 0 }), [])
+})
+
+test('nprobe decides how much of the index is looked at', async () => {
+  const engine = await engineWith([1, 0, 0, 0])
+  const one = await engine.search('anything', { nprobe: 1, limit: 10 })
+  assert.deepEqual(one.map(h => h.rfc), [9111, 9110], 'only cluster 0')
+  assert.equal(engine.stats.clusterFetches, 1)
+})
+
+test('a query pointing elsewhere probes the other cluster', async () => {
+  const engine = await engineWith([0, 1, 0, 0])
+  const hits = await engine.search('anything', { nprobe: 1, limit: 10 })
+  assert.deepEqual(hits.map(h => h.rfc), [2616], 'centroid selection follows the query')
+})
+
+// --------------------------------------------------------------------------
+// Cluster caching
+// --------------------------------------------------------------------------
+
+test('a cluster is fetched once and then reused', async () => {
+  const engine = await engineWith([1, 0, 0, 0])
+  await engine.search('a', { nprobe: 2, limit: 5 })
+  await engine.search('b', { nprobe: 2, limit: 5 })
+  assert.equal(engine.stats.clusterFetches, 2, 'two clusters, one fetch each')
+  assert.equal(engine.stats.clusterHits, 2, 'the second query hit both')
+})
+
+test('the cluster cache is bounded and evicts oldest first', async () => {
+  const engine = await engineWith([1, 0, 0, 0])
+  engine.maxCachedClusters = 1
+  await engine.search('a', { nprobe: 2, limit: 5 })
+  assert.equal(engine.clusters.size, 1, 'unbounded growth is tens of MB a session')
+  assert.ok(engine.clusters.has(1), 'the first inserted is the one dropped')
+})
+
+// --------------------------------------------------------------------------
+// Remaining validation
+// --------------------------------------------------------------------------
+
+test('a cluster from a different model is rejected', async () => {
+  const wrong = clusterFile(1, [[1, 2, 3, 4, 5, 6, 7, 8]], { ...TAIL, n: 1 })
+  new DataView(wrong).setUint16(6, 8, true) // dims, as a wider model would write
+  stubFetch(workingIndex({ [`${BUILD}/clusters/0001.bin`]: wrong }))
+  const engine = await SemanticSearch.create()
+  await assert.rejects(engine._fetchCluster(1), /8 dims, expected 4/)
+})
+
+test('a manifest without a usable scale is rejected', async () => {
+  // Every score would be zero, and the results would look merely bad.
+  for (const quant of [{}, { scale: 0 }, { scale: -1 }]) {
+    stubFetch(workingIndex({ [`${BUILD}/manifest.json`]: manifest({ quant }) }))
+    await assert.rejects(SemanticSearch.create(), /no usable quant.scale/)
+  }
+})
+
+test('an explicit basePath keeps its trailing slash out of every URL', async () => {
+  const asked = stubFetch(workingIndex())
+  await SemanticSearch.create({ basePath: `${BUILD}//` })
+  assert.ok(asked.includes(`${BUILD}/manifest.json`), `asked: ${asked}`)
+})
+
+test('every dimension contributes, including the last', async () => {
+  // The scoring loop's bound is the one arithmetic error that stays silent:
+  // dropping the final dimension leaves every result plausible and slightly
+  // wrong. Fixtures whose signal sits in dimension 0 cannot see it, so this
+  // one puts a chunk's entire weight in the last.
+  const engine = await engineWith([0, 0, 0, 1], {
+    [`${BUILD}/clusters/0000.bin`]: clusterFile(0, [[0, 0, 0, 127], [40, 0, 0, 0]], {
+      n: 2, rfc: [1, 2], off: [0, 0], len: [1, 1], sec: [-1, -1], title: [0, 0], str: ['x']
+    })
+  })
+  const hits = await engine.search('anything', { nprobe: 2, limit: 5 })
+  assert.equal(hits[0].rfc, 1, 'a vector aligned only on the last dimension must win')
+  assert.ok(Math.abs(hits[0].score - 127 * SCALE) < 1e-6, `got ${hits[0].score}`)
+})
+
+test('centroid selection reads every dimension too', async () => {
+  // Same bound, on the other caller: _probe scores the centroids.
+  stubFetch(workingIndex({
+    [`${BUILD}/centroids.bin`]: centroidsFile([[0, 0, 0, 0], [0, 0, 0, 127]]),
+    [`${BUILD}/clusters/0001.bin`]: clusterFile(1, [[1, 0, 0, 0]], {
+      n: 1, rfc: [7], off: [0], len: [1], sec: [-1], title: [0], str: ['x']
+    })
+  }))
+  const engine = await SemanticSearch.create()
+  engine.pipeline = async () => ({ data: new Float32Array([0, 0, 0, 1]) })
+  const hits = await engine.search('anything', { nprobe: 1, limit: 5 })
+  assert.deepEqual(hits.map(h => h.rfc), [7], 'must probe the cluster the last dimension points at')
 })
