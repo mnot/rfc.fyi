@@ -257,6 +257,12 @@ function clusterUrl (basePath, template, id) {
   return `${basePath}/${path}`
 }
 
+/* Exposed for tests only. These are the pieces worth checking in isolation:
+ * a binary parser, a hand-rolled bounded selection, and two small pure
+ * functions. Everything else needs the network and is covered through the
+ * public API. */
+export const __test = { readHeader, dequantise, topIndices, clusterUrl }
+
 export class SemanticSearch {
   /* Use `create()`. */
   constructor (options) {

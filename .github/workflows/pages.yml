@@ -126,6 +126,10 @@ jobs:
           echo "no usable index asset; building without full-text search"
           rm -rf index
         fi
+    # Before the site is assembled, so a broken parser fails the check rather
+    # than shipping. Node is preinstalled on the runner.
+    - name: Test
+      run: make test
     - name: Build site
       run: make site
     - name: Upload artifact

@@ -77,9 +77,13 @@ vendor/ort/ort-wasm-simd-threaded.jsep.wasm:
 server: site
 	cd _site && python -m http.server
 
+.PHONY: test
+test:
+	node --test test/*.test.js
+
 .PHONY: lint
 lint: client.js util.js data.js search.js bin/*.py eval/*.py
-	standard --fix client.js util.js data.js search.js
+	standard --fix client.js util.js data.js search.js test/*.js
 	black bin/*.py eval/*.py
 
 .PHONY: clean
