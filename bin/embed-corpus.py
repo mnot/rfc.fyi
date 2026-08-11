@@ -34,7 +34,7 @@ import json
 import os
 import sys
 import time
-from typing import Dict, List, Tuple
+from typing import Dict, Iterator, List, Tuple
 
 import numpy as np
 
@@ -78,20 +78,37 @@ def digest(text: str) -> bytes:
     return hashlib.sha256(text.encode("utf-8")).digest()
 
 
+#: Ordered output, one pair per shard: vectors and their hashes.
+VECS, VEC_KEYS = "shard-", "hashes-"
+#: A batch as it was embedded, written once and dropped when the run finishes.
+PENDING, PENDING_KEYS = "pending-", "pendkeys-"
+
+
+def _pairs(out: str) -> Iterator[Tuple[str, str]]:
+    for name in sorted(os.listdir(out)):
+        if name.startswith(VECS):
+            yield name, name.replace(VECS, VEC_KEYS, 1)
+        elif name.startswith(PENDING):
+            yield name, name.replace(PENDING, PENDING_KEYS, 1)
+
+
 def load_cache(out: str) -> Dict[bytes, np.ndarray]:
     """Every vector previously written, keyed by the hash of its source text.
 
-    Shards and their hash sidecars are written together; a shard without one
+    Vectors and their hash sidecars are written together; a file without one
     predates content keying and is ignored rather than trusted, since its
     rows can only be interpreted positionally.
+
+    Reads the ordered shards and any pending batches an interrupted run left
+    behind. A hash in both is the same vector, so the overlap is harmless.
     """
     cache: Dict[bytes, np.ndarray] = {}
-    for shard in sorted(f for f in os.listdir(out) if f.startswith("shard-")):
-        keys = os.path.join(out, shard.replace("shard-", "hashes-"))
-        if not os.path.exists(keys):
+    for vectors, keys in _pairs(out):
+        keys_path = os.path.join(out, keys)
+        if not os.path.exists(keys_path):
             continue
-        vecs = np.load(os.path.join(out, shard))
-        raw = np.load(keys)
+        vecs = np.load(os.path.join(out, vectors))
+        raw = np.load(keys_path)
         for i in range(len(vecs)):
             cache[raw[i].tobytes()] = vecs[i]
     return cache
@@ -157,23 +174,32 @@ def hydrate(
     }
 
 
+def write_pair(
+    out: str, vectors: str, keys: str, vecs: np.ndarray, hashes: List[bytes]
+) -> None:
+    for name, data in (
+        (vectors, vecs),
+        (keys, np.frombuffer(b"".join(hashes), dtype=np.uint8).reshape(-1, 32)),
+    ):
+        path = os.path.join(out, name)
+        tmp = path + ".tmp"
+        # Write through a handle: np.save appends `.npy` to a *path* that
+        # lacks it, which would land the file at `.npy.tmp.npy`.
+        with open(tmp, "wb") as fh:
+            np.save(fh, data)
+        os.replace(tmp, path)
+
+
 def write_shards(out: str, vecs: np.ndarray, hashes: List[bytes], shard: int) -> int:
     for s, lo in enumerate(range(0, len(vecs), shard)):
         hi = min(lo + shard, len(vecs))
-        for name, data in (
-            (f"shard-{s:04d}.npy", vecs[lo:hi]),
-            (
-                f"hashes-{s:04d}.npy",
-                np.frombuffer(b"".join(hashes[lo:hi]), dtype=np.uint8).reshape(-1, 32),
-            ),
-        ):
-            path = os.path.join(out, name)
-            tmp = path + ".tmp"
-            # Write through a handle: np.save appends `.npy` to a *path* that
-            # lacks it, which would land the file at `.npy.tmp.npy`.
-            with open(tmp, "wb") as fh:
-                np.save(fh, data)
-            os.replace(tmp, path)
+        write_pair(
+            out,
+            f"{VECS}{s:04d}.npy",
+            f"{VEC_KEYS}{s:04d}.npy",
+            vecs[lo:hi],
+            hashes[lo:hi],
+        )
     return (len(vecs) + shard - 1) // shard
 
 
@@ -253,19 +279,28 @@ def main() -> None:
                 file=sys.stderr,
                 flush=True,
             )
-            # Persist as we go, so an interrupted run keeps its work.
-            done_hashes = [h for h in hashes if h in cache]
-            partial = np.vstack([cache[h] for h in done_hashes])
-            write_shards(args.out, partial, done_hashes, args.shard)
+            # Persist this batch alone. Rewriting every shard after each one
+            # cost 8.1 GiB of writes over a full embed to save 0.67 GiB of
+            # vectors, and rebuilt the whole 700 MiB array 23 times to do it.
+            write_pair(
+                args.out,
+                f"{PENDING}{lo // args.shard:04d}.npy",
+                f"{PENDING_KEYS}{lo // args.shard:04d}.npy",
+                vecs,
+                [hashes[i] for i in part],
+            )
 
     vecs = np.vstack([cache[h] for h in hashes])
     n = write_shards(args.out, vecs, hashes, args.shard)
-    # Drop shards left over from a longer previous corpus.
     for f in sorted(os.listdir(args.out)):
-        if f.startswith(("shard-", "hashes-")):
-            idx = int(f.split("-")[1].split(".")[0])
-            if idx >= n:
+        # Shards left over from a longer previous corpus.
+        if f.startswith((VECS, VEC_KEYS)):
+            if int(f.split("-")[1].split(".")[0]) >= n:
                 os.remove(os.path.join(args.out, f))
+        # Pending batches, now that the ordered output covers them. Dropped
+        # last, so a crash before this point leaves them to be picked up.
+        elif f.startswith((PENDING, PENDING_KEYS)):
+            os.remove(os.path.join(args.out, f))
     print(
         f"done: {len(vecs):,} vectors in {n} shards under {args.out}", file=sys.stderr
     )
