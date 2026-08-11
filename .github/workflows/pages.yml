@@ -1,4 +1,7 @@
-name: Deploy Site
+# Named for what it does on every trigger, not just on main: pull requests
+# build and stop, so a broken build turns a check red rather than turning
+# production stale on the next push.
+name: Site
 
 on:
   push:
