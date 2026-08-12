@@ -15,7 +15,10 @@ from pathlib import Path
 
 # What bin/stamp-sw.py leaves behind. Matched by shape rather than imported:
 # the script's name is not a Python identifier.
-STAMPED = re.compile(r"CACHE_NAME = 'rfcfyi-v[0-9a-f]{12}'")
+STAMPED = {
+    "CACHE_NAME": re.compile(r"CACHE_NAME = 'rfcfyi-v[0-9a-f]{12}'"),
+    "VENDOR_CACHE": re.compile(r"VENDOR_CACHE = 'rfcfyi-vendor-[0-9a-f]{12}'"),
+}
 
 # Floors, not exact counts: the series only grows. These are here to catch an
 # empty or truncated result, not to track the real numbers.
@@ -66,8 +69,9 @@ def check(site, tags):
 
     # An unstamped worker publishes under the same cache name as the last
     # one, so no browser holding the previous build would ever install it.
-    if not STAMPED.search(worker):
-        errors.append("sw.js: cache name not stamped; bin/stamp-sw.py did not run")
+    for const, pattern in STAMPED.items():
+        if not pattern.search(worker):
+            errors.append(f"sw.js: {const} not stamped; bin/stamp-sw.py did not run")
 
     for name, floor in FLOORS.items():
         with open(site / name) as fh:

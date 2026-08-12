@@ -83,7 +83,17 @@ class BaseRequest extends Request {
   }
 }
 
-function load ({ hostname = 'rfc.fyi', fetch } = {}) {
+/* `build` stands in for a stamp: bin/stamp-sw.py writes these two names, and
+   two workers from different builds differ in exactly that. */
+function load ({
+  hostname = 'rfc.fyi',
+  fetch,
+  build = 'aaaaaaaaaaaa',
+  caches = new FakeCacheStorage() // shared between workers to model one origin
+} = {}) {
+  const source = SOURCE
+    .replace(/CACHE_NAME = '[^']*'/, `CACHE_NAME = 'rfcfyi-v${build}'`)
+    .replace(/VENDOR_CACHE = '[^']*'/, `VENDOR_CACHE = 'rfcfyi-vendor-${build}'`)
   const events = new Map()
   const self = {
     location: { origin: `https://${hostname}`, hostname },
@@ -93,12 +103,11 @@ function load ({ hostname = 'rfc.fyi', fetch } = {}) {
     skipWaitingCalled: false,
     claimCalled: false
   }
-  const caches = new FakeCacheStorage()
   const requested = []
   const network = fetch || (async () => new Response('from the network'))
 
   // eslint-disable-next-line no-new-func
-  new Function('self', 'caches', 'fetch', 'Request', 'Response', 'URL', 'console', SOURCE)(
+  new Function('self', 'caches', 'fetch', 'Request', 'Response', 'URL', 'console', source)(
     self,
     caches,
     (request, init) => {
@@ -111,8 +120,15 @@ function load ({ hostname = 'rfc.fyi', fetch } = {}) {
     { log: () => {} }
   )
 
-  const cacheName = SOURCE.match(/CACHE_NAME = '([^']*)'/)[1]
-  return { self, caches, events, requested, cacheName }
+  const named = (constant) => source.match(new RegExp(`${constant} = '([^']*)'`))[1]
+  return {
+    self,
+    caches,
+    events,
+    requested,
+    cacheName: named('CACHE_NAME'),
+    vendorCache: named('VENDOR_CACHE')
+  }
 }
 
 /* A fetch event, with the two lifetime hooks recorded rather than honoured.
@@ -138,11 +154,16 @@ async function dispatch (worker, url, init) {
   return { event, response }
 }
 
+async function lifecycle (worker, name) {
+  const event = { kept: [], waitUntil (promise) { event.kept.push(promise) } }
+  worker.events.get(name)(event)
+  await Promise.all(event.kept)
+  return event
+}
+
 async function installed (opts) {
   const worker = load(opts)
-  const event = { kept: [], waitUntil (promise) { event.kept.push(promise) } }
-  worker.events.get('install')(event)
-  await Promise.all(event.kept)
+  const event = await lifecycle(worker, 'install')
   return { worker, event }
 }
 
@@ -193,22 +214,73 @@ test('install does not skip waiting', async () => {
   assert.equal(worker.self.skipWaitingCalled, false)
 })
 
-test('activate reaps superseded site caches and nothing else', async () => {
+test('activate reaps superseded caches of ours and nothing else', async () => {
   const worker = load()
-  await worker.caches.open('rfcfyi-vdeadbeef0000')
+  await worker.caches.open('rfcfyi-vdeadbeef0000') // a previous build
+  await worker.caches.open('rfcfyi-v1786429966') // and one from before the hash
+  await worker.caches.open('rfcfyi-vendor-deadbeef0000')
   await worker.caches.open('rfcfyi-index')
-  await worker.caches.open('transformers-cache')
+  await worker.caches.open('transformers-cache') // not ours; holds the model
   await worker.caches.open(worker.cacheName)
+  await worker.caches.open(worker.vendorCache)
 
-  const event = { kept: [], waitUntil (promise) { event.kept.push(promise) } }
-  worker.events.get('activate')(event)
-  await Promise.all(event.kept)
+  await lifecycle(worker, 'activate')
 
   assert.deepEqual((await worker.caches.keys()).sort(), [
+    'rfcfyi-active',
     'rfcfyi-index',
+    'transformers-cache',
     worker.cacheName,
-    'transformers-cache'
+    worker.vendorCache
   ].sort())
+})
+
+test('a waiting worker reaps the caches of installs that never activated', async () => {
+  /* Without skipWaiting this worker can sit behind a live page for a long
+     time, and every deploy meanwhile leaves another ~4 MB precache behind.
+     Enough of them and the origin is evicted, model and index with it. */
+  const live = load({ build: 'aaaaaaaaaaaa' })
+  await lifecycle(live, 'install')
+  await lifecycle(live, 'activate')
+  // A build that installed while the page stayed open and was superseded
+  // before it could activate.
+  await live.caches.open('rfcfyi-vbbbbbbbbbbbb')
+
+  const next = load({ build: 'cccccccccccc', caches: live.caches })
+  await lifecycle(next, 'install')
+
+  const left = (await live.caches.keys()).sort()
+  assert.ok(!left.includes('rfcfyi-vbbbbbbbbbbbb'), 'the orphan is gone')
+  assert.ok(left.includes(live.cacheName), 'the live page keeps its cache')
+  assert.ok(left.includes(next.cacheName), 'and the new one keeps its own')
+})
+
+test('an installing worker reaps nothing when no active worker has spoken', async () => {
+  /* The record is written by activate. Its absence means a worker older
+     than this scheme is in charge, and reaping would strip the cache out
+     from under a page that is running right now. */
+  const worker = load()
+  await worker.caches.open('rfcfyi-v1786429966')
+  await lifecycle(worker, 'install')
+
+  assert.ok((await worker.caches.keys()).includes('rfcfyi-v1786429966'))
+})
+
+test('a failed install reaps nothing', async () => {
+  /* Reaping first would strip the worker still waiting to activate of the
+     cache it would have served from. */
+  const live = load({ build: 'aaaaaaaaaaaa' })
+  await lifecycle(live, 'activate')
+  await live.caches.open('rfcfyi-vbbbbbbbbbbbb')
+
+  const next = load({ build: 'cccccccccccc', caches: live.caches })
+  const cache = await next.caches.open(next.cacheName)
+  cache.addAll = async () => { throw new Error('offline mid-install') }
+  const event = { kept: [], waitUntil (promise) { event.kept.push(promise) } }
+  next.events.get('install')(event)
+  await assert.rejects(Promise.all(event.kept))
+
+  assert.ok((await live.caches.keys()).includes('rfcfyi-vbbbbbbbbbbbb'))
 })
 
 // --------------------------------------------------------------------------
@@ -237,27 +309,60 @@ test('a static asset absent from the cache is fetched and kept', async () => {
 })
 
 test('a navigation with a query string serves the cached markup', async () => {
-  /* cache.match is exact-URL, so a shared link like /?q=tls misses the
+  /* cache.match is exact-URL, so a shared link like /?search=tls misses the
      cached '/' and used to pair markup fetched now against scripts cached
      from an earlier build. */
   const { worker } = await installed()
-  const { response } = await dispatch(worker, '/?q=tls', { mode: 'navigate' })
+  const { response } = await dispatch(worker, '/?search=tls', { mode: 'navigate' })
 
   assert.equal(await response.text(), 'precached')
   assert.deepEqual(worker.requested, [])
 })
 
-test('vendor is cache-first too', async () => {
-  /* Nothing in its filenames carries a version -- the wasm keeps its name
-     across transformers.js releases -- so the cache name is what separates
-     one build's runtime from another's. bin/stamp-sw.py hashes it for that
-     reason. */
+test('a navigation to any other path is left to the network', async () => {
+  /* index.html loads client.js, style.css and manifest.json relatively, so
+     answering /anything/ with it gives a shell whose every asset resolves
+     under /anything/ and 404s. The site has no router; Pages' 404 is the
+     right answer. */
+  const { worker } = await installed()
+  const { event } = await dispatch(worker, '/rfc/9110', { mode: 'navigate' })
+
+  assert.equal(event.responded, null)
+  assert.deepEqual(worker.requested, [])
+})
+
+test('vendor has a cache of its own', async () => {
+  /* It moves only with TRANSFORMERS_VERSION. Sharing the site's name would
+     throw away 22 MB, most of it the ort wasm, on every stylesheet edit --
+     which is exactly what stamping the name on every build would now mean. */
   const worker = load()
-  await dispatch(worker, '/vendor/ort/ort-wasm-simd-threaded.jsep.wasm')
-  const { response } = await dispatch(worker, '/vendor/ort/ort-wasm-simd-threaded.jsep.wasm')
+  const wasm = '/vendor/ort/ort-wasm-simd-threaded.jsep.wasm'
+  const { event } = await dispatch(worker, wasm)
+  await Promise.all(event.kept)
+  const { response } = await dispatch(worker, wasm)
 
   assert.equal(await response.text(), 'from the network')
-  assert.deepEqual(worker.requested, ['/vendor/ort/ort-wasm-simd-threaded.jsep.wasm'])
+  assert.deepEqual(worker.requested, [wasm])
+  assert.deepEqual((await worker.caches.open(worker.vendorCache)).paths(), [wasm])
+  assert.deepEqual((await worker.caches.open(worker.cacheName)).paths(), [])
+})
+
+test('a cache-first write is kept alive', async () => {
+  /* respondWith settles the moment the response is returned, so without a
+     waitUntil the worker can be terminated before the put lands -- and the
+     21 MB wasm gets fetched again, and again. */
+  const worker = load()
+  const { event } = await dispatch(worker, '/vendor/ort/ort-wasm-simd-threaded.jsep.wasm')
+
+  assert.equal(event.kept.length, 1)
+})
+
+test('a cache-first miss that 404s is not stored', async () => {
+  const worker = load({ fetch: async () => new Response('nope', { status: 404 }) })
+  const { event } = await dispatch(worker, '/index/20260811/clusters/0042.bin')
+
+  assert.deepEqual(event.kept, [])
+  assert.deepEqual((await worker.caches.open('rfcfyi-index')).paths(), [])
 })
 
 test('data is served stale and the revalidation is kept alive', async () => {

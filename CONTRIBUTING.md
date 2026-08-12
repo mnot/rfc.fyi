@@ -41,11 +41,13 @@ has to be added there or it won't be published. `bin/check-site.py` guards the r
 the build if anything `sw.js` pre-caches is missing, if the service worker's cache name wasn't
 stamped, or if the data files come back implausibly empty.
 
-The service worker's `CACHE_NAME` is that cache's only version, and it is stamped into `_site` by
-`bin/stamp-sw.py` from a hash of everything the worker holds — there is nothing to bump by hand.
-The static set is served cache-first, so a change reaches a browser by installing a worker under
-a new name; refreshing files individually is what used to leave a client running one build's
-`client.js` against the next one's `util.js`. `test/sw.test.js` covers the routing.
+A service worker cache name is the only version its contents have, and `bin/stamp-sw.py` stamps
+both of them into `_site` from a hash of what each holds — there is nothing to bump by hand.
+`CACHE_NAME` covers the site and moves on any source change; `VENDOR_CACHE` covers `vendor/`
+alone, so a stylesheet edit doesn't evict the 21 MB wasm. Both are served cache-first, so a
+change reaches a browser by installing a worker under a new name; refreshing files individually
+is what used to leave a client running one build's `client.js` against the next one's `util.js`.
+`test/sw.test.js` covers the routing.
 
 Note that `make server` serves on localhost, where the worker is deliberately network-first, so
 none of that caching is exercised there. To see it, serve `_site` yourself and load it over a
