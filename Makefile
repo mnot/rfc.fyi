@@ -48,6 +48,9 @@ site: $(DATA) vendor
 	else \
 	  echo "no index/ -- publishing without full-text search"; \
 	fi
+	@# The cache name has to be stamped before the check, which rejects an
+	@# unstamped worker.
+	python bin/stamp-sw.py _site
 	python bin/check-site.py _site $(words $(tagfiles)) || { rm -rf _site; exit 1; }
 
 # Third-party runtime, fetched rather than committed. Same reasoning as the
@@ -89,13 +92,6 @@ lint: client.js util.js data.js search.js bin/*.py eval/*.py
 .PHONY: clean
 clean:
 	rm -rf _site var
-
-.PHONY: pwa-update
-pwa-update:
-	@VERSION=$$(date +%s); \
-	sed -i '' "s/CACHE_NAME = 'rfcfyi-v[0-9]*'/CACHE_NAME = 'rfcfyi-v$${VERSION}'/" sw.js; \
-	echo "PWA cache version updated to v$${VERSION}"
-
 
 # --- semantic index -------------------------------------------------------
 # Corpus text is a build input, never committed (see .gitignore). The full
