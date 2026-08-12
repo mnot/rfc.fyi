@@ -13,6 +13,13 @@ import re
 import sys
 from pathlib import Path
 
+# What bin/stamp-sw.py leaves behind. Matched by shape rather than imported:
+# the script's name is not a Python identifier.
+STAMPED = {
+    "CACHE_NAME": re.compile(r"CACHE_NAME = 'rfcfyi-v[0-9a-f]{12}'"),
+    "VENDOR_CACHE": re.compile(r"VENDOR_CACHE = 'rfcfyi-vendor-[0-9a-f]{12}'"),
+}
+
 # Floors, not exact counts: the series only grows. These are here to catch an
 # empty or truncated result, not to track the real numbers.
 FLOORS = {"var/rfcs.json": 9000, "var/refs.json": 9000}
@@ -52,11 +59,19 @@ def check(site, tags):
     site = Path(site)
     errors = []
 
+    worker = (site / "sw.js").read_text()
+
     # sw.js is the client's own list of what the page loads, so this catches
     # STATIC in the Makefile drifting away from what is actually needed.
-    for asset in sw_assets((site / "sw.js").read_text()):
+    for asset in sw_assets(worker):
         if asset and not (site / asset).exists():
             errors.append(f"{asset}: pre-cached by sw.js, missing from the site")
+
+    # An unstamped worker publishes under the same cache name as the last
+    # one, so no browser holding the previous build would ever install it.
+    for const, pattern in STAMPED.items():
+        if not pattern.search(worker):
+            errors.append(f"sw.js: {const} not stamped; bin/stamp-sw.py did not run")
 
     for name, floor in FLOORS.items():
         with open(site / name) as fh:
