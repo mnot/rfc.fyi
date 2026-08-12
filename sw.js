@@ -73,21 +73,36 @@ async function reapOrphans () {
   ]))
 }
 
+/* All of `paths`, or none of them: a partial pre-cache is the half-and-half
+   state this whole arrangement exists to prevent, so a failure here has to
+   fail the install.
+ *
+ * cache: 'reload' bypasses the HTTP cache. Pages serves everything with
+ * max-age=600, so a worker installing in the minutes after a deploy would
+ * otherwise fill its new cache from the previous build's responses -- and
+ * being cache-first, it would then keep them. The clients most likely to
+ * install just then are the ones reloading because the site looks broken.
+ *
+ * Spelt out with fetch and put rather than handed to cache.addAll as
+ * Requests carrying the same option, because that is the reading of addAll
+ * we would be relying on and a browser quietly ignoring it puts us straight
+ * back to seeding from the old build. fetch's own cache mode is not open to
+ * interpretation.
+ */
+async function precache (cache, paths) {
+  const fetched = await Promise.all(paths.map(async (path) => {
+    const response = await fetch(path, { cache: 'reload' })
+    if (!response.ok) throw new Error(`[SW] pre-cache ${path}: ${response.status}`)
+    return [path, response]
+  }))
+  return Promise.all(fetched.map(([path, response]) => cache.put(path, response)))
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME)
     console.log('[SW] Pre-caching static and data assets')
-    /* cache: 'reload' bypasses the HTTP cache. Pages serves everything with
-       max-age=600, so a worker installing in the minutes after a deploy
-       would otherwise fill its new cache from the previous build's
-       responses -- and being cache-first, it would then keep them. The
-       clients most likely to install just then are the ones reloading
-       because the site looks broken. */
-    await cache.addAll(
-      [...STATIC_ASSETS, ...DATA_ASSETS].map(
-        (path) => new Request(path, { cache: 'reload' })
-      )
-    )
+    await precache(cache, [...STATIC_ASSETS, ...DATA_ASSETS])
     // Only once this worker has a cache worth keeping: a reap before a
     // failed addAll would strip the worker still waiting to activate.
     await reapOrphans()

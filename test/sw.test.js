@@ -103,16 +103,25 @@ function load ({
     skipWaitingCalled: false,
     claimCalled: false
   }
-  const requested = []
-  const network = fetch || (async () => new Response('from the network'))
+  // Built before the worker is evaluated so the injected fetch can read
+  // `respond` through it; tests swap that between lifecycle phases.
+  const api = {
+    self,
+    caches,
+    events,
+    requested: [],
+    inits: [],
+    respond: fetch || (async () => new Response('from the network'))
+  }
 
   // eslint-disable-next-line no-new-func
   new Function('self', 'caches', 'fetch', 'Request', 'Response', 'URL', 'console', source)(
     self,
     caches,
     (request, init) => {
-      requested.push(new URL(FakeCache.url(request)).pathname)
-      return network(request, init)
+      api.requested.push(new URL(FakeCache.url(request)).pathname)
+      api.inits.push(init)
+      return api.respond(request, init)
     },
     BaseRequest,
     Response,
@@ -121,14 +130,9 @@ function load ({
   )
 
   const named = (constant) => source.match(new RegExp(`${constant} = '([^']*)'`))[1]
-  return {
-    self,
-    caches,
-    events,
-    requested,
-    cacheName: named('CACHE_NAME'),
-    vendorCache: named('VENDOR_CACHE')
-  }
+  api.cacheName = named('CACHE_NAME')
+  api.vendorCache = named('VENDOR_CACHE')
+  return api
 }
 
 /* A fetch event, with the two lifetime hooks recorded rather than honoured.
@@ -161,10 +165,19 @@ async function lifecycle (worker, name) {
   return event
 }
 
-async function installed (opts) {
-  const worker = load(opts)
+/* Install, then hand back a worker whose pre-cache is distinguishable from
+   anything fetched afterwards -- 'precached' came out of the cache, 'from
+   the network' did not -- with the install's own traffic set aside so a test
+   can assert on what happened after it. */
+async function installed (opts = {}) {
+  const worker = load({ ...opts, fetch: undefined })
+  worker.respond = async () => new Response('precached')
   const event = await lifecycle(worker, 'install')
-  return { worker, event }
+  const precache = { requested: [...worker.requested], inits: [...worker.inits] }
+  worker.requested.length = 0
+  worker.inits.length = 0
+  worker.respond = opts.fetch || (async () => new Response('from the network'))
+  return { worker, event, precache }
 }
 
 // --------------------------------------------------------------------------
@@ -194,16 +207,26 @@ test('install bypasses the HTTP cache', async () => {
   /* Pages serves max-age=600, so a worker installing just after a deploy
      would otherwise fill its new cache from the old build's responses and,
      being cache-first, keep them. */
-  const worker = load()
-  const seen = []
-  const event = { kept: [], waitUntil (promise) { event.kept.push(promise) } }
-  const cache = await worker.caches.open(worker.cacheName)
-  cache.addAll = async (requests) => requests.forEach((r) => seen.push(r.cache))
-  worker.events.get('install')(event)
-  await Promise.all(event.kept)
+  const { precache } = await installed()
 
-  assert.ok(seen.length > 0)
-  assert.deepEqual([...new Set(seen)], ['reload'])
+  assert.equal(precache.requested.length, 12)
+  assert.deepEqual([...new Set(precache.inits.map((init) => init.cache))], ['reload'])
+})
+
+test('a pre-cache that cannot be completed fails the install', async () => {
+  /* Half a build in the cache is the state all of this exists to prevent,
+     so it has to be an install failure rather than a worker that activates
+     holding some of one build and some of the last. */
+  const worker = load({
+    fetch: async (request) => new URL(FakeCache.url(request)).pathname === '/search.js'
+      ? new Response('nope', { status: 404 })
+      : new Response('precached')
+  })
+  const event = { kept: [], waitUntil (promise) { event.kept.push(promise) } }
+  worker.events.get('install')(event)
+  await assert.rejects(Promise.all(event.kept), /search\.js: 404/)
+
+  assert.deepEqual((await worker.caches.open(worker.cacheName)).paths(), [])
 })
 
 test('install does not skip waiting', async () => {
@@ -273,9 +296,11 @@ test('a failed install reaps nothing', async () => {
   await lifecycle(live, 'activate')
   await live.caches.open('rfcfyi-vbbbbbbbbbbbb')
 
-  const next = load({ build: 'cccccccccccc', caches: live.caches })
-  const cache = await next.caches.open(next.cacheName)
-  cache.addAll = async () => { throw new Error('offline mid-install') }
+  const next = load({
+    build: 'cccccccccccc',
+    caches: live.caches,
+    fetch: async () => { throw new Error('offline mid-install') }
+  })
   const event = { kept: [], waitUntil (promise) { event.kept.push(promise) } }
   next.events.get('install')(event)
   await assert.rejects(Promise.all(event.kept))
