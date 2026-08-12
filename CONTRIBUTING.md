@@ -38,8 +38,18 @@ is what gets published.
 
 `_site` is assembled from an explicit list of files in the Makefile, so a new root-level asset
 has to be added there or it won't be published. `bin/check-site.py` guards the result: it fails
-the build if anything `sw.js` pre-caches is missing, or if the data files come back implausibly
-empty.
+the build if anything `sw.js` pre-caches is missing, if the service worker's cache name wasn't
+stamped, or if the data files come back implausibly empty.
+
+The service worker's `CACHE_NAME` is that cache's only version, and it is stamped into `_site` by
+`bin/stamp-sw.py` from a hash of everything the worker holds — there is nothing to bump by hand.
+The static set is served cache-first, so a change reaches a browser by installing a worker under
+a new name; refreshing files individually is what used to leave a client running one build's
+`client.js` against the next one's `util.js`. `test/sw.test.js` covers the routing.
+
+Note that `make server` serves on localhost, where the worker is deliberately network-first, so
+none of that caching is exercised there. To see it, serve `_site` yourself and load it over a
+`*.localhost` hostname — a secure context, but not one the worker treats as development.
 
 JavaScript should be formatted according to
 [standard](https://github.com/standard/standard); try `make lint`.
