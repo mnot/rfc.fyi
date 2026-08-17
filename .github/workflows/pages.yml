@@ -79,7 +79,7 @@ jobs:
     # suite has no dependencies and runs in under a second, so there is no
     # reason for a broken parser to wait on an index download to say so.
     - name: Set up Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: "22"
     - name: Test
