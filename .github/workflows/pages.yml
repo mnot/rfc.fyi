@@ -50,7 +50,7 @@ jobs:
     - name: Look for a deploy of that signature
       id: seen
       if: steps.probe.outputs.signature != ''
-      uses: actions/cache/restore@v4
+      uses: actions/cache/restore@v6
       with:
         path: .upstream
         key: upstream-${{ steps.probe.outputs.signature }}
@@ -92,7 +92,7 @@ jobs:
     # delta-compress), so cache it: otherwise every deploy depends on a CDN
     # being up, which the index is carefully allowed not to be.
     - name: Cache vendored runtime
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: vendor
         key: vendor-${{ hashFiles('Makefile') }}
@@ -114,7 +114,7 @@ jobs:
     # cron reads it often enough to stay clear of the eviction window.
     - name: Cache the index asset
       if: steps.release.outputs.tag != ''
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: index.tar.gz
         key: index-asset-${{ steps.release.outputs.tag }}
@@ -175,7 +175,7 @@ jobs:
     - name: Note what was published
       run: date -u > .upstream
     - name: Record the upstream signature
-      uses: actions/cache/save@v4
+      uses: actions/cache/save@v6
       with:
         path: .upstream
         key: upstream-${{ needs.upstream.outputs.signature }}
